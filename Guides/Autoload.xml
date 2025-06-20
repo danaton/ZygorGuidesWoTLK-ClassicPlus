@@ -4,15 +4,12 @@
 	
 	<Script file="ZygorGuidesAlliance.lua"/>
 	<Script file="ZygorGuidesHorde.lua"/>
-	<Script file="ZygorGuidesAllianceCata.lua"/>
 	<Script file="ZygorDailiesAlliance.lua"/>
 	<Script file="ZygorDailiesHorde.lua"/>
 	<Script file="ZygorGoldAlliance.lua"/>
 	<Script file="ZygorGoldHorde.lua"/>
 	<Script file="ZygorDungeonAlliance.lua"/>
 	<Script file="ZygorDungeonHorde.lua"/>
-	<Script file="ZygorUAlliance.lua"/>
-	<Script file="ZygorUHorde.lua"/>
 
 	<Script file="ZygorGuidesAllianceTrial.lua"/>
 	<Script file="ZygorGuidesHordeTrial.lua"/>
@@ -21,9 +18,9 @@
 	<Script file="ZygorGoldAllianceTrial.lua"/>
 	<Script file="ZygorGoldHordeTrial.lua"/>
 
-	<Script file="Guide01.lua"/>
-	<Script file="Guide02.lua"/>
-	<Script file="Guide03.lua"/>
+	<Script file="DanatonGuidesAlliance.lua"/>
+	<Script file="DanatonQuestInstances.lua"/>
+	<Script file="DanatonInstancePath.lua"/>
 	<Script file="Guide04.lua"/>
 	<Script file="Guide05.lua"/>
 	<Script file="Guide06.lua"/>

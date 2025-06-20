@@ -214,6 +214,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		.talk Innkeeper Renee##5688
 		..turnin A Rogue's Deal (1)##8
 	step //44
+		goto 61.7,52
+		.talk Innkeeper Renee##5688
 		home Brill
 	step //45
 		goto 57.6,48.7
@@ -1317,7 +1319,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Tauren (1-13)",[
 		.talk Lunaclaw Spirit##12144
 		.goal Face Lunaclaw and earn the strength of body and heart it possesses.|q 6002/1
 		only Tauren Druid
-	step //126
+	step //
 		goto The Barrens,44.4,59.2
 		.talk Omusa Thunderhorn##10378
 		..fpath Camp Taurajo
@@ -3772,7 +3774,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 	step //121
 		'Go to Silvermoon City|goto Silvermoon City
 	step //122
-		goto Silvermoon City,79.5,58.5
+		goto 79.5,58.5
 		.talk Vinemaster Suntouched##16442
 		..buy Suntouched Special Reserve|get 1 Suntouched Special Reserve|q 9067/1
 	step //123
@@ -14617,8 +14619,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (66-68)"
 		goto 71.4,79.4
 		.' Click the Kil'sorrow Armaments
 		.get 10 Kil'sorrow Armaments|q 9928/1
-		.from Kil'sorrow Deathsworn##17148, Kil'sorrow Cultist##17147, Kil'sorrow Spellbinder##17146
-		.' Kill 10 Kil'sorrow Agents |q 9936/2
+		.kill Kil'sorrow Agents|n
+		.' Kill Kil'sorrow mobs
 		.' Use your Warmaul Ogre Banner on their corpses|use Warmaul Ogre Banner##25552
 		.' Plant 10 Warmaul Ogre Banners|goal 10 Warmaul Ogre Banner Planted|q 9927/1
 		info The Kil'sorrow Armaments look like skinny, square, tan boxes on the ground with a red axe logo on them.
