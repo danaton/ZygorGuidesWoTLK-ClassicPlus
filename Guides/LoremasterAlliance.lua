@@ -2,7 +2,287 @@
 if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Alliance" then return end
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Loremaster: Netherstorm",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\Elwynn Forest",[[
+author danaton
+description Coming Soon
+startlevel 20
+		step
+		.' For comfortable execution quest chain, it is recommended to be level 20+|tip Manually skip this step
+		step
+			goto Elwynn Forest,45.6,47.7
+			.talk Falkhaan Isenstrider##6774
+			..accept Rest and Relaxation##2158
+		step
+			goto Elwynn Forest,43.8,65.8
+			.talk Innkeeper Farley##295
+			..turnin Rest and Relaxation##2158
+		step
+			goto Elwynn Forest,43.3,65.7
+			.talk William Pestle##253
+			..accept Kobold Candles##60
+		step
+			goto Elwynn Forest,42.1,65.9
+			.talk Marshal Dughan##240
+			..accept The Fargodeep Mine##62
+		step
+			goto Elwynn Forest,42.1,67.3
+			.talk Remy "Two Times"##241
+			..accept Gold Dust Exchange##47
+		step
+			goto Elwynn Forest,43.2,89.6
+			.talk Maybell Maclure##251
+			..accept Young Lovers##106
+		step
+			.' Go To Low Entrance Mine|at 38.1,81.5
+			.' Scout through the Fargodeep Mine|at 40.75,81.70|q 62/1
+		step
+			goto Elwynn Forest,38.2,83.2
+			.from Kobold Miner##40+, Kobold Tunneler##475+, Kobold Geomancer##476+
+			.get 8 Large Candle##772|q 60/1
+			.get 10 Gold Dust##773|q 47/1
+		step
+			goto Elwynn Forest,34.7,84.5
+			.talk Ma Stonefield##244
+			..accept Princess Must Die!##88
+		step
+			goto Elwynn Forest,34.5,84.3
+			.talk "Auntie" Bernice Stonefield##246
+			..accept Lost Necklace##85
+		step
+			goto Elwynn Forest,29.8,86.0
+			.talk Tommy Joe Stonefield##252
+			..turnin Young Lovers##106
+			..accept Speak with Gramma##111
+		step
+			goto Elwynn Forest,34.9,83.9
+			.talk Gramma Stonefield##248
+			..turnin Speak with Gramma##111
+			..accept Note to William##107
+		step
+			goto Elwynn Forest,43.1,85.7
+			.talk Billy Maclure##247
+			..turnin Lost Necklace##85
+			..accept Pie for Billy##86
+		step
+			goto Elwynn Forest,41.8,86.9
+			.from Stonetusk Boar##113
+			.get 4 Chunk of Boar Meat##769|q 86/1
+		step
+			goto Elwynn Forest,34.5,84.3
+			.talk "Auntie" Bernice Stonefield##246
+			..turnin Pie for Billy##86
+			..accept Back to Billy##84
+		step
+			goto Elwynn Forest,43.1,85.7
+			.talk Billy Maclure##247
+			..turnin Back to Billy##84
+			..accept Goldtooth##87
+		step
+			.' Go To High Entrance Mine|at 39.09,82.5
+			.' Go To Left Tunnel|at 39.79,79.25
+			.from Goldtooth##327
+			.get Bernice's Necklace##981|q 87/1
+		step
+			goto Elwynn Forest,34.5,84.3
+			.talk "Auntie" Bernice Stonefield##246
+			..turnin Goldtooth##87
+		step
+			goto Elwynn Forest,42.1,67.3
+			.talk Remy "Two Times"##241
+			..turnin Gold Dust Exchange##47
+			..accept A Fishy Peril##40
+		step
+			goto Elwynn Forest,42.1,65.9
+			.talk Marshal Dughan##240
+			..turnin A Fishy Peril##40
+			..accept Further Concerns##35
+			..turnin The Fargodeep Mine##62
+			..accept The Jasperlode Mine##76
+		step
+			goto Elwynn Forest,43.3,65.7
+			.talk William Pestle##253
+			..turnin Kobold Candles##60
+			..accept Shipment to Stormwind##61
+			..turnin Note to William##107
+			..accept Collecting Kelp##112
+		step
+			goto Elwynn Forest,52.94,64.72
+			.from Murloc##285+, Murloc Streamrunner##735+
+			.get 4 Crystal Kelp Frond##1256|q 112/1
+		step
+			goto Elwynn Forest,61.8,54.2
+			.' Scout through the Jasperlode Mine|at 60.3,49.6|q 76/1
+		step
+			goto Elwynn Forest,67.8,42
+			.from Riverpaw Runt##97+, Riverpaw Outrunner##478+
+			..collect 1 Gold Pickup Schedule##1307|q 123 |future |sticky
+			..accept The Collector##123
+		step
+			goto Elwynn Forest,69.6,79.7
+			.from Princess##330+
+			.get Brass Collar##1006|q 88/1
+		step
+			goto Elwynn Forest,42.1,65.9
+			.talk Marshal Dughan##240
+			..turnin The Jasperlode Mine##76
+			..turnin The Collector##123
+			..accept Manhunt##147
+		step
+			goto Elwynn Forest,43.3,65.7
+			.talk William Pestle##253
+			..turnin Collecting Kelp##112
+			..accept The Escape##114
+		step
+			goto Elwynn Forest,34.7,84.5
+			.talk Ma Stonefield##244
+			..turnin Princess Must Die!##88
+		step
+			goto Elwynn Forest,43.2,89.6
+			.talk Maybell Maclure##251
+			..turnin The Escape##114
+		step
+			goto Elwynn Forest,74,72.2
+			.talk Guard Thomas##261
+			..turnin Further Concerns##35
+			..accept Find the Lost Guards##37
+			..accept Bounty on Murlocs##46
+			..accept Protect the Frontier##52
+		step
+			goto Elwynn Forest,72.7,60.3
+			.talk A half-eaten body|n
+			..turnin Find the Lost Guards##37
+			..accept Discover Rolf's Fate##45
+		step
+			goto Elwynn Forest,79.8,55.5
+			.talk Rolf's corpse|n
+			..turnin Discover Rolf's Fate##45
+			..accept Report to Thomas##71
+		step
+			goto Elwynn Forest,79.1,55.7
+			.from Murloc Forager##46+, Murloc Lurker##732+
+			.get 8 Torn Murloc Fin##780|q 46/1
+		step
+			goto Elwynn Forest,81.4,66.1
+			.talk Supervisor Raelen##10616
+			..accept A Bundle of Trouble##5545
+		step
+			goto Elwynn Forest,79.5,68.8
+			.talk Sara Timberlain##278
+			..accept Red Linen Goods##83
+		step
+			goto Elwynn Forest,81.3,60.6
+			.' Click the small stacks of wood at the base of trees|tip They look like little stacks of 3 firewood at the base of trees in this area.
+			.get 8 Bundle of Wood|q 5545/1
+		step
+			goto Elwynn Forest,82.6,59.1
+			.kill 8 Prowler|q 52/1
+			.kill 5 Young Forest Bear|q 52/2
+			.' Mobs POS 2|at 80,77.8
+		step
+			goto Elwynn Forest,71.1,80.6
+			.from Morgan the Collector##473+
+			.get The Collector's Ring##2239|q 147/1
+		step
+			goto Elwynn Forest,70.6,76.3
+			.from Defias Bandit##116+
+			.get 6 Red Linen Bandana|q 83/1
+			..collect 1 Westfall Deed##1972+|q 184 |future |sticky |tip Try to drop or manually skip
+			..accept Furlbrow's Deed##184
+			.' Mobs POS 2|at 74.7,51.6
+		step
+			goto Elwynn Forest,74,72.2
+			.talk Guard Thomas##261
+			..turnin Bounty on Murlocs##46
+			..turnin Report to Thomas##71
+			..turnin Protect the Frontier##52
+			..accept Deliver Thomas' Report##39
+		step
+			goto Elwynn Forest,79.5,68.8
+			.talk Sara Timberlain##278
+			..turnin Red Linen Goods##83
+		step
+			goto Elwynn Forest,81.4,66.1
+			.talk Supervisor Raelen##10616
+			..turnin A Bundle of Trouble##5545
+		step
+			goto Elwynn Forest,42.1,65.9
+			.talk Marshal Dughan##240
+			..accept Westbrook Garrison Needs Help!##239
+			..turnin Deliver Thomas' Report##39
+			..accept Cloth and Leather Armor##59
+			..turnin Manhunt##147
+		step
+			goto Elwynn Forest,41.7,65.5
+			.talk Smith Argus##514
+			..accept Elmore's Task##1097
+		step
+			goto Stormwind City,63.8,73.6
+			.talk Renato Gallina##1432
+			..accept Wine Shop Advert##332
+		step
+			goto Stormwind City,63.2,74.4
+			.talk Morgan Pestle##279
+			..turnin Shipment to Stormwind##61
+		step
+			goto Stormwind City,62.3,67.9
+			.talk Harlan Bagley##1427
+			..accept Harlan Needs a Resupply##333
+		step
+			goto Stormwind City,59.7,33.8
+			.talk Grimand Elmore##1416
+			..turnin Elmore's Task##1097
+		//step
+		step
+			goto Stormwind City,58.1,67.5
+			.talk Rema Schneider##1428
+			..turnin Harlan Needs a Resupply##333
+			..accept Package for Thurman##334
+		step
+			goto Stormwind City,60.3,76.8
+			.talk Suzetta Gallina##1431
+			..turnin Wine Shop Advert##332
+		step
+			goto Stormwind City,52.6,83.4
+			.talk Thurman Schneider##1429
+			..turnin Package for Thurman##334
+		//heartstone step rec
+		step
+			goto Elwynn Forest,24.2,74.4
+			.talk Deputy Rainer##963
+			..turnin Westbrook Garrison Needs Help!##239
+			..accept Riverpaw Gnoll Bounty##11
+		step
+			goto Elwynn Forest,24.5,74.7
+			.talk Wanted Poster|n
+			..accept Wanted: "Hogger"##176
+		step
+			goto Elwynn Forest,26.4,93.7
+			.from Hogger##448+
+			.get 1 Huge Gnoll Claw##1931|q 176/1
+			goto Elwynn Forest,26.8,86.3
+			.from Riverpaw Outrunner##478+, Riverpaw Runt##97+
+			.get 8 Painted Gnoll Armband|q 11/1
+		step
+			goto Elwynn Forest,24.2,74.4
+			.talk Deputy Rainer##963
+			..turnin Riverpaw Gnoll Bounty##11
+		step
+			goto Westfall,60,19.4
+			.talk Farmer Furlbrow##237
+			..turnin Furlbrow's Deed##184
+		step
+			goto Elwynn Forest,42.1,65.9
+			.talk Marshal Dughan##240
+			..turnin Wanted: "Hogger"##176
+		step
+			goto Elwynn Forest,79.5,68.8
+			.talk Sara Timberlain##278
+			..turnin Cloth and Leather Armor##59
+		step
+			.' Completed!|tip Use next guide - Westfall
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Netherstorm",[[
 author danaton
 description Coming Soon
 		step //

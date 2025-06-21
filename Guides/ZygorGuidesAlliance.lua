@@ -354,7 +354,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Human (1-13)"
 		.get 6 Red Linen Bandana|q 83/1
 	step //81
 		goto 69.7,79.5
-		'Kill Princess
+		.from Princess##330+
 		.get Brass Collar##1006|q 88/1
 	step //82
 		goto 74,72.2
@@ -23164,7 +23164,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (78
 		..accept Blowing Hodir's Horn##12977
 	step //202
 		goto 72.1,51.8
-		.kill Niffelem Forefathers and Restless Frostborn Ghosts|n
+		.kill 5 Niffelem Forefathers##29974|q 12977/1
+		.kill 5 Restless Frostborn Ghosts##30144|q 12977/2
 		.' Use Hodir's Horn on their corpses|use Hodir's Horn##42164
 		.' Free 5 Niffelem Forefathers|goal 5 Niffelem Forefather freed|q 12977/1
 		.' Free 5 Restless Frostborn|goal 5 Restless Frostborn freed|q 12977/2
@@ -23205,7 +23206,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (78
 		..accept Polishing the Helm##13006
 	step //211
 		goto 55.6,63.4
-		.kill Viscous Oils inside this cave|n
+		.from Viscous Oil##30325+
 		.get 5 Viscous Oil|q 13006/1
 		.' Use your Everfrost Razor on Dead Icemaw Bears|use Everfrost Razor##42732
 		.collect 1 Icemaw Bear Flank##42733|q 13011
@@ -23324,6 +23325,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (78
 		..accept Ancient Relics##12870
 	step //236
 		goto 28.7,74.4
+		.talk Gunda Boldhammer##29926
 		home Frosthold
 	step //237
 		goto 29.2,74.9
@@ -23345,7 +23347,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (78
 		.' Get 10 Relics of Ulduar|goal 10 Relic of Ulduar|q 12870/1
 	step //241
 		'Go outside to 44.5,60.4|goto 44.5,60.4
-		.kill Ice Steppe Rhinos|n
+		.from Ice Steppe Rhinos##29469+
 		.collect 8 Fresh Ice Rhino Meat##41340|q 12865
 	step //242
 		goto 36.1,64.1
@@ -23396,7 +23398,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (78
 		..accept Pieces to the Puzzle##12858
 	step //252
 		goto 37.6,43.5
-		.kill Library Guardians|n
+		.from Library Guardians##29724+
 		.collect 6 Inventor's Disk Fragment##41130|n
 		.' Click the Inventor's Disk Fragments in your bags to combine them|use Inventor's Disk Fragment##41130
 		.get The Inventor's Disk|q 12858/1

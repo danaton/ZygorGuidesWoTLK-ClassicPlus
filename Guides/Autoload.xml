@@ -21,7 +21,7 @@
 	<Script file="DanatonGuidesAlliance.lua"/>
 	<Script file="DanatonQuestInstances.lua"/>
 	<Script file="DanatonInstancePath.lua"/>
-	<Script file="Guide04.lua"/>
+	<Script file="LoremasterAlliance.lua"/>
 	<Script file="Guide05.lua"/>
 	<Script file="Guide06.lua"/>
 	<Script file="Guide07.lua"/>

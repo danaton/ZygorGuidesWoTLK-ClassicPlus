@@ -41,7 +41,7 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Deadmines (15)",
 	step //9
 	goto Stormwind,78.55,70.87
 	.talk Master Mathias Shaw##332
-	...turnin The Defias Brotherhood##135
+	..turnin The Defias Brotherhood##135
 	..accept The Defias Brotherhood##141
 	step //10
 	goto Westfall,56.32,47.54
@@ -202,50 +202,41 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Uldaman (35)",[[
 	goto Loch Modan,66.00,65.4
 	.talk Prospector Ironband##1344
 	..turnin Ironband Wants You!##707
-	step //4
-	goto Loch Modan,66.00,65.4
-	.talk Prospector Ironband##1344
 	..accept Find Agmond##738
-	step //5
+	step //4
 	goto Badlands,50.90,62.30
 	.talk Battered Dwarven Skeleton##2875
 	..turnin Find Agmond##738
-	step //6
-	goto Badlands,50.90,62.30
-	.talk Battered Dwarven Skeleton##2875
 	..accept Murdaloc##739
-	step //7
+	step //5
 	goto Badlands,50.70,67.70
 	.kill 1 Murdaloc|q 739/1
-	step //8
+	step //6
 	goto Badlands,51.01,70.61
 	.kill 12 Stonevault Bonesnapper|q 739/2
 	step //9
 	goto Badlands,51.20,76.60
 	.talk Theldurin the Lost##2785
 	..accept Solution to Doom##709
-	step //10
+	step //7
 	goto Badlands,42.50,52.90
 	.talk Rigglefuzz##2817
 	..accept Power Stones##2418	
-	step //11
+	step //8
 	goto Badlands,53.00,33.9
 	.' Click the Crumpled Map|tip Laying on the ground under a white canopy.
 	..accept A Sign of Hope##720
-	step //12
+	step //9
 	goto Badlands,53.38,43.33
 	.talk Prospector Ryedol##2910
 	..turnin A Sign of Hope##720
 	..accept A Sign of Hope##721
-	step //13
+	step //10
 	goto Loch Modan,66.00,65.4
 	.talk Prospector Ironband##1344
 	..turnin Murdaloc##739
-	step //14
-	goto Loch Modan,66.00,65.4
-	.talk Prospector Ironband##1344
 	..accept Agmonds Fate##704
-	step //15
+	step //11
 	goto Badlands,45.96,11.58
 	.' Kill mobs in cave
 	.kill 8 Shadowforge Surveyor|q 2418/1
@@ -316,9 +307,15 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Zul'Farrak (40)"
 	goto Tanaris,66.98,22.38
 	.talk Yeh'kinya##8579
 	..accept Screecher Spirits##3520
+	//step //16
+	//goto Feralas,46.6,48.2
+	//.kill 3 Rogue Vale Screechers|n
+	//.' Use Yeh'kinya's Bramble on their corpses|use Yeh'kinya's Bramble##10699
+	//.' Talk to their spirits that appear to collect their spirits
+	//.' Collect 3 Screecher Spirits|goal 3 Screecher Spirits Collected|q 3520/1
 	step //16
 	goto Feralas,46.6,48.2
-	.kill 3 Rogue Vale Screechers|n
+	.from Vale Screecher##5307+, Rogue Vale Screecher##5308+
 	.' Use Yeh'kinya's Bramble on their corpses|use Yeh'kinya's Bramble##10699
 	.' Talk to their spirits that appear to collect their spirits
 	.' Collect 3 Screecher Spirits|goal 3 Screecher Spirits Collected|q 3520/1
