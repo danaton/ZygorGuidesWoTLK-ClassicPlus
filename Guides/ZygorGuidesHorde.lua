@@ -1479,6 +1479,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Tauren (1-13)",[
 		.talk Devrak##3615
 		..fpath Crossroads
 	step //166
+		goto 52.0,29.9
+		.talk Innkeeper Boorand Plainswind##3934
 		home the Crossroads
 	step //167
 		'Go northeast to Durotar|goto Durotar
@@ -3412,6 +3414,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		.talk Innkeeper Delaniel##15433
 		..turnin Completing the Delivery##8350
 	step //41
+		goto 48.1,47.7
+		.talk Innkeeper Delaniel##15433 
 		home Falconwing Square
 	step //42
 		goto 48.2,46
@@ -4965,6 +4969,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		.talk Gazrog##3464
 		..accept Raptor Thieves##869
 	step //5
+		goto 52.0,29.9
+		.talk Innkeeper Boorand Plainswind##3934
 		home the Crossroads
 	step //6
 		goto 51.5,30.3
@@ -5473,15 +5479,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		..accept Rot Hide Ichor##443
 	step //123
 		goto 65.8,29.4
-		.kill Rot Hide Gnolls|n
+		.from Rot Hide Brute##1939+, Rot Hide Plague Weaver##1940+, Rot Hide Savage##1942+, Raging Rot Hide##1943+
 		..get 8 Rot Hide Ichor|q 443/1
 	step //124
 		goto 54.7,48.4
-		.kill Moonrage Gluttons|n
+		.from Moonrage Glutton##1779+
 		.get 6 Glutton Shackle|q 423/1
 	step //125
 		Go inside the mine at 56.5,46.0
-		.kill Moonrage Darksouls|n
+		.from Moonrage Darksoul##1782+
 		.get 3 Darksoul Shackle|q 423/2
 	step //126
 		Leave the mine|goto 56.5,46.0,0.5
@@ -5524,15 +5530,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		..accept Ambermill Investigations##479
 	step //135
 		goto 72.1,35.7
-		.kill Lake Skulkers|n
+		.from Lake Skulker##1953+, Elder Lake Skulker##1954+
 		.get 6 Lake Skulker Moss|q 451/1
 	step //136
 		goto 76.6,32.3
-		.kill Vile Fin Murlocs|n
+		.from Vile Fin Shredder##1767+, Vile Fin Tidehunter##1768+, Vile Fin Oracle##1908+, Vile Fin Lakestalker##1909+, Vile Fin Shorecreeper##1957+, Vile Fin Tidecaller##1958+
 		.get Hardened Tumor|q 451/3
 	step //137
 		goto 77.8,27.0
-		.kill Lake Creepers|n
+		.from Lake Creeper##1955+, Elder Lake Creeper##1956+
 		.get 6 Lake Creeper Moss|q 451/2
 	step //138
 		Go inside the mine at 56.5,46.0
@@ -5585,8 +5591,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		'Go northwest to Orgrimmar|goto Orgrimmar
 	step //153
 		Fly to the Crossroads|goto The Barrens,51.7,30.2,2|noway
-        step //154
-		home The Crossroads
+    step //154
+		goto 52.0,29.9
+		.talk Innkeeper Boorand Plainswind##3934
+		home the Crossroads
 	step //155
 		goto 51.5,30.9
 		.talk Thork##3429
@@ -8405,6 +8413,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (35-40)",
 	step //111
 		'Fly to the Crossroads|goto The Barrens,51.5,30.4,0.1|noway|c
 	step //112
+		goto 52.0,29.9
+		.talk Innkeeper Boorand Plainswind##3934
 		home The Crossroads
 	step //113
 		'Fly to Freewind Post|goto Thousand Needles,45.0,49.1,0.1|noway|c
