@@ -282,6 +282,133 @@ startlevel 20
 			.' Completed!|tip Use next guide - Westfall
 ]])
 
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\Stormwind beta Chain",[[
+author danaton
+description Coming Soon
+startlevel 60
+		step//redridge
+			goto Stormwind City,55,54.2
+			.talk Brother Kristoff##1444
+			..accept Speaking of Fortitude##343
+		step//duskwood
+			goto Stormwind City,49.6,44.5
+			.talk Thomas##4982
+			..accept The Missing Diplomat(1)##1274
+		step//west plaguelands
+			goto Stormwind City,80,38.5
+			.talk King Varian Wrynn##29611
+			..accept The First and the Last##6182
+		step//duskwood
+			goto Stormwind City,80.3,44.1
+			.talk Bishop DeLavey##4960
+			..turnin The Missing Diplomat(1)##1274
+			..accept The Missing Diplomat(2)##1241
+		step//redridge
+			goto Stormwind City,77.1,30.2
+			.talk Milton Sheaf##1440
+			..turnin Speaking of Fortitude##343
+			..accept Brother Paxton##344
+		step//west plaguelands
+			goto Stormwind City,78.3,70.7
+			.talk Master Mathias Shaw##332
+			..turnin The First and the Last##6182
+			..accept Honor the Dead##6183
+			..turnin Honor the Dead##6183
+		step//duskwood
+			goto Stormwind City,76.3,85.1
+			.talk Jorgen##4959
+			..turnin The Missing Diplomat(2)##1241
+			..accept The Missing Diplomat(3)##1242
+		step//duskwood
+			goto Stormwind City,66,74.1
+			.talk Elling Trias##482
+			..turnin The Missing Diplomat(3)##1242
+		step//redridge
+			goto Elwynn Forest,49.6,40.4
+			.talk Brother Paxton##951
+			..turnin Brother Paxton##344
+		step
+			goto Stormwind City,51.8,74.3
+			.talk Mazen Mac'Nadir##338
+			..accept Mazen's Behest##1363
+		step
+			goto Stormwind City,51.4,73.8
+			.talk Acolyte Dellis##5386
+			..turnin Mazen's Behest##1363
+		step
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\Westfall",[[
+author danaton
+description Coming Soon
+startlevel 25
+		step
+			.' First completed Elwynn Forest guide|tip Manually skip this step
+		step
+			goto Stormwind City,57.7,47.9
+			.talk Baros Alexston##1646
+			..accept Humble Beginnings##399
+		step
+			goto Elwynn Forest,24.2,74.4
+			.talk Deputy Raine##963
+			..accept Report to Gryan Stoutmantle##109
+		step
+			goto Westfall,60,19.4
+			.talk Farmer Furlbrow##237
+			..accept The Forgotten Heirloom##64
+			.talk Verna Furlbrow##238
+			..accept Westfall Stew(1)##36
+			..accept Poor Old Blanchy##151
+		step
+			goto Westfall,49.42,19.23
+			.get 1 Furlbrow's Pocket Watch|q 64/1|tip Inside the house
+		step
+			.get 8 Handful of Oats|q 151/1
+			Position 1|at 50.10,19.58
+			Position 2|at 49.34,17.95
+			Position-spot 3|at 48.45,20.31|tip Inside the building
+			Position 4|at 54.01,24.94
+			Position 5|at 56.67,18.89
+			Position 6|at 57.36,19.45|tip In the cart
+			Position-spot 7|at 58.33,18.26|tip On the field you can find from 2 to 4 Handful of Oats	
+		step
+			goto Westfall,60,19.4
+			.talk Verna Furlbrow##238
+			..turnin Poor Old Blanchy##151
+			.talk Farmer Furlbrow##237
+			..turnin The Forgotten Heirloom##64
+		step
+			goto Westfall,56.0,31.2
+			.talk Farmer Saldean##233
+			..accept The Killing Fields##9
+		step
+			goto Westfall,56.4,30.5
+			.talk Salma Saldean##235
+			..turnin Westfall Stew(1)##36
+			..accept Westfall Stew(2)##38
+			..accept Goretusk Liver Pie##22
+		step
+			goto Westfall,51.1,21.8
+			.kill 20 Harvest Watcher|q 9/1
+			.get 3 Okra|q 38/4|tip Do not sell to vendor!
+			.from Harvest Watcher##114+
+			.collect 5 Flask of Oil##814|q 103/1 |future
+			.' You can find more Harvest Watchers|at 53.5,29.4|n
+			.' And a big spot on this field|at 44.87,35.68
+		step
+			goto Westfall,59.02,33.34
+			.from Young Goretusk##454+, Goretusk##157+, Great Goretusk##547+
+			.get 8 Goretusk Liver##723|q 22/1|tip Do not sell to vendor!
+			.get 3 Goretusk Snout##731|q 38/3|tip Do not sell to vendor!
+			Position 1|at 51.01,36.09
+			Position 2|at 59.60,43.53
+		step
+			goto Westfall,59.05,61.74
+			.from Young Fleshripper##199+, Fleshripper##1109+, Greater Fleshripper##154+
+			.get 3 Stringy Vulture Meat##729|q 38/1|tip Do not sell to vendor!
+		step
+]])
+
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Netherstorm",[[
 author danaton
 description Coming Soon

@@ -628,34 +628,38 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackrock Depth 
 	..turnin Dark Iron Legacy##3801
 	..accept Dark Iron Legacy##3802
 ]])
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Stratholme (55-58)",[[
+ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Stratholme (55)",[[
 	startlevel 55
-	step //1
-	goto Eastern Plaguelands,75.63,53.89
-	.talk Duke Nicholas Zverenhoff##11039
-	..accept The Archivist##5251
-	step //2
-	goto Eastern Plaguelands,75.70,53.72
-	.talk Betina Bigglezink##11035
-	..accept The Flesh Does Not Lie##5212
-	step //3
-	goto Eastern Plaguelands,75.92,51.99
-	.talk Leonid Barthalomew the Revered##11036
-	..accept Houses of the Holy##5243
-	step //4
-	goto Eastern Plaguelands,74.87,52.12
-	.talk Smokey LaRue##11033
-	..accept The Great Fras Siabi##5214
-	step //5
-	goto Eastern Plaguelands,73.83,57.90
-	.talk Caretaker Alen##11038
-	..accept The Restless Souls##5281
-	step //6
-	goto Eastern Plaguelands,11.34,28.83
-	.talk Egan##11140
-	..turnin The Restless Souls##5281
-	..accept The Restless Souls##5282
-	step //7
+	step
+		goto Eastern Plaguelands,75.63,53.89
+		.talk Duke Nicholas Zverenhoff##11039
+		..accept The Archivist##5251
+	step
+		goto Eastern Plaguelands,75.70,53.72
+		.talk Betina Bigglezink##11035
+		..accept The Flesh Does Not Lie##5212
+	step
+		goto Eastern Plaguelands,75.7,52.6
+		.talk Rohan the Assassin##16131
+		..accept Bonescythe Digs##9126
+	step
+		goto Eastern Plaguelands,75.92,51.99
+		.talk Leonid Barthalomew the Revered##11036
+		..accept Houses of the Holy##5243
+	step
+		goto Eastern Plaguelands,74.87,52.12
+		.talk Smokey LaRue##11033
+		..accept The Great Fras Siabi##5214
+	step
+		goto Eastern Plaguelands,73.83,57.90
+		.talk Caretaker Alen##11038
+		..accept The Restless Souls##5281
+	step
+		goto Eastern Plaguelands,11.34,28.83
+		.talk Egan##11140
+		..turnin The Restless Souls##5281
+		..accept The Restless Souls##5282
+	step
 	goto Eastern Plaguelands,27.1,12.8
 	.' Go To Instance!
 ]])
@@ -686,74 +690,74 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Scholomance (58)
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Hellfire Citadel: Hellfire Ramparts (59)",[[
 	startlevel 59
-	step //1
+	step
 	'. Hellfire Ramparts first dungeon in the Hellfire Citadel questline chain.|tip Manually skip this step
-	step //2
-	goto Hellfire Peninsula,56.6,66.7
-	.talk Force Commander Danath Trollbane##16819
-	..accept The Legion Reborn##10141
-	..accept Know your Enemy##10160
-	step //3
-	goto Hellfire Peninsula,61.7,60.9
-	.talk Sergeant Altumus##19309
-	..turnin The Legion Reborn##10141
-	..accept The Path of Anguish##10142
-	step //4
-	goto Hellfire Peninsula,65.8,54.1
-	.kill 1 Dreadcaller|q 10142/1
-	.kill 4 Flamewaker Imp|q 10142/2
-	.kill 6 Infernal Warbringer|q 10142/3
-	step //5
-	goto Hellfire Peninsula,61.7,60.8
-	.talk Sergeant Altumus##19309
-	..turnin The Path of Anguish##10142
-	..accept Expedition Point##10143
-	step //6
-	goto Hellfire Peninsula,71.3,62.8
-	.talk Forward Commander Kingston##19310
-	..turnin Expedition Point##10143
-	step //7
-	goto Hellfire Peninsula,50.9,60.2
-	.talk Lieutenant Amadi##16820
-	..turnin Know your Enemy##10160
-	..accept Fel Orc Scavengers##10482
-	step //8
-	goto Hellfire Peninsula,60.4,52.1
-	.kill 20 Bonechewer Orc|q 10482/1
-	step //9
-	goto Hellfire Peninsula,50.9,60.2
-	.talk Lieutenant Amadi##16820
-	..turnin Fel Orc Scavengers##10482
-	..accept Ill Omens##10483
-	step //10
-	goto Hellfire Peninsula,65.8,67.2
-	.from Bleeding Hollow Grunt##16871+, Bleeding Hollow Dark Shaman##16873+, Bleeding Hollow Peon##16907+
-	.get Cursed Talisman|q 10483/1
-	step //11
-	goto Hellfire Peninsula,71,63.4
-	.talk Corporal Ironridge##21133
-	..turnin Ill Omens##10483
-	step //12
-	goto Hellfire Peninsula,56.7,66.3
-	.talk Lieutenant Chadwick##17557
-	..accept Weaken the Ramparts##9575
-	step //13
-	goto Hellfire Peninsula,47.7,53.54
-	.' Go To Instance!|tip Good luck!
+	step
+		goto Hellfire Peninsula,56.6,66.7
+		.talk Force Commander Danath Trollbane##16819
+		..accept The Legion Reborn##10141
+		..accept Know your Enemy##10160
+	step
+		goto Hellfire Peninsula,61.7,60.9
+		.talk Sergeant Altumus##19309
+		..turnin The Legion Reborn##10141
+		..accept The Path of Anguish##10142
+	step
+		goto Hellfire Peninsula,65.8,54.1
+		.kill 1 Dreadcaller|q 10142/1
+		.kill 4 Flamewaker Imp|q 10142/2
+		.kill 6 Infernal Warbringer|q 10142/3
+	step
+		goto Hellfire Peninsula,61.7,60.8
+		.talk Sergeant Altumus##19309
+		..turnin The Path of Anguish##10142
+		..accept Expedition Point##10143
+	step
+		goto Hellfire Peninsula,50.9,60.2
+		.talk Lieutenant Amadi##16820
+		..turnin Know your Enemy##10160
+		..accept Fel Orc Scavengers##10482
+	step
+		goto Hellfire Peninsula,60.4,52.1
+		.kill 20 Bonechewer Orc|q 10482/1
+	step
+		goto Hellfire Peninsula,50.9,60.2
+		.talk Lieutenant Amadi##16820
+		..turnin Fel Orc Scavengers##10482
+		..accept Ill Omens##10483
+	step
+		goto Hellfire Peninsula,65.8,67.2
+		.from Bleeding Hollow Grunt##16871+, Bleeding Hollow Dark Shaman##16873+, Bleeding Hollow Peon##16907+
+		.get Cursed Talisman|q 10483/1
+	step
+		goto Hellfire Peninsula,71,63.4
+		.talk Corporal Ironridge##21133
+		..turnin Ill Omens##10483
+	step
+		goto Hellfire Peninsula,71.3,62.8
+		.talk Forward Commander Kingston##19310
+		..turnin Expedition Point##10143
+	step
+		goto Hellfire Peninsula,56.7,66.3
+		.talk Lieutenant Chadwick##17557
+		..accept Weaken the Ramparts##9575
+	step
+		goto Hellfire Peninsula,47.7,53.54
+		.' Go To Instance!|tip Good luck!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Hellfire Citadel: The Blood Furnace (59)",[[
 	startlevel 59
-	step //1
-	.' You must complete Hellfire Ramparts questline before proceeding with this chain.
-	.' Next line will check the condition|tip Manually skip this step
-	..turnin Weaken the Ramparts##9575
-	step //2
-	goto Hellfire Peninsula,56.4,66.7
-	.talk Gunny##17479
-	..accept Heart of Rage##9607
-	step //3
-	goto Hellfire Peninsula,46.05,51.76
-	.' Go To Instance!|tip Good luck!
+	step
+		.' You must complete Hellfire Ramparts questline before proceeding with this chain.
+		.' Next line will check the condition|tip Manually skip this step
+		..turnin Weaken the Ramparts##9575
+	step
+		goto Hellfire Peninsula,56.4,66.7
+		.talk Gunny##17479
+		..accept Heart of Rage##9607
+	step
+		goto Hellfire Peninsula,46.05,51.76
+		.' Go To Instance!|tip Good luck!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Hellfire Citadel: The Shattered Halls (67)",[[
 	startlevel 67
