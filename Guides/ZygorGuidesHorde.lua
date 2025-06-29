@@ -3550,6 +3550,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		.talk Marniel Amberlight##15397
 		..accept Ranger Sareyn##9358
 	step //70
+		goto 43.7,71.2
+		.talk Marniel Amberlight##15397
 		home Fairbreeze Village
 	step //71
 		goto 43.3,70.8
