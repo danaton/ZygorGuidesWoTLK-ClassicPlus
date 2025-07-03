@@ -1415,6 +1415,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 	step //153
 		ding 11
 	step //154
+		goto Darkshore,36.3,45.6
+		.talk Caylais Moonfeather##3841
 		'Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
 	step //155
 		goto Teldrassil,56.3,92.4
@@ -6117,9 +6119,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (20-25
 	step //115
 		'Go southwest to Talondeep path at 42.3,71.1|goto Ashenvale,42.3,71.1|n
 		.' Go through the tunnel to Stonetalon Mountains|goto Stonetalon Mountains,78.2,42.9,0.5|noway|c
+	step
+		goto The Barrens,63,37.2
+		.talk Sputtervalve##3442
+		..accept Ziz Fizziks##1483
 	step //116
 		goto Stonetalon Mountains,59,62.6
 		.talk Ziz Fizziks##4201
+		..turnin Ziz Fizziks##1483
 		..accept Super Reaper 6000##1093
 	step //117
 		goto 59.7,67
@@ -7176,7 +7183,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //43
 		goto 85.1,43.4
 		.talk Suralais Farwind##22935
-		..fpath Forest Song
+		..fpath Forest Song, Ashenvale
 	step //44
 		goto 78.3,44.8
 		.talk Anilia##3920
@@ -10389,7 +10396,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 		.' The path up to Thorium Point starts here|goto Searing Gorge,31.7,33.4,0.5|noway|c
 	step //21
 		goto 37.6,26.5
-		.' Click the Wanted/Missing/Lost & Found Poster|tip Next to some boxes.
+		.talk Wanted/Missing/Lost & Found##001000
 		..accept JOB OPPORTUNITY: Culling the Competition##7729
 		..accept STOLEN: Smithing Tuyere and Lookout's Spyglass##7728
 		..accept WANTED: Overseer Maltorius##7701

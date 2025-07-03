@@ -409,6 +409,649 @@ startlevel 25
 		step
 ]])
 
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Darkshore",[[
+author danaton
+description This guide contain quest-chain (67 quests) for Darkshore location.
+startlevel 20
+		step
+			.' For comfortable execution quest chain, it is recommended to be level 20+|tip Manually skip this step
+		step
+			goto Darnassus,31.2,84.5
+			.talk Chief Archaeologist Greywhisker##2912
+			..accept Trouble In Darkshore?##730
+		step
+			goto Darkshore,36.6,45.6
+			.talk Gwennyth Bly'Leggonde##10219
+			..accept Washed Ashore##3524
+		step
+			goto Darkshore,37,44.1
+			.talk Wizbang Cranktoggle##3666
+			..accept Buzzbox 827##983
+		step
+			goto Darkshore,37.4,41.8
+			.talk Archaeologist Hollee##2913
+			..turnin Trouble In Darkshore?##730
+		step
+			goto Darkshore,36.3,50.8
+			.collect Sea Creature Bones##12242|q 3524/1
+		step
+			goto Darkshore,36.19,46.52
+			.from Pygmy Tide Crawler##2231+, Tide Crawler##2232+, Young Reef Crawler##2234+
+			.get 6 Crawler Leg##5385|q 983/1
+			Position 1|at 36.4,49.9
+			Position 2|at 36.63,56
+		step
+			goto Darkshore,36.64,46.29
+			.talk Buzzbox 827##991002
+			..turnin Buzzbox 827##983
+			..accept Buzzbox 411##1001
+		step
+			goto Darkshore,36.6,45.6
+			.talk Gwennyth Bly'Leggonde##10219
+			..turnin Washed Ashore##3524
+			..accept Washed Ashore##4681
+		step
+			goto Darkshore,31.8,46.3
+			.collect Sea Turtle Remains##12289|q 4681/1
+		step
+			goto Darkshore,33,52.3
+			.from Darkshore Thresher##2185+, Elder Darkshore Thresher##2187+
+			.get 3 Thresher Eye##5412|q 1001/1
+			Position-spot|at 33.85,35.08
+		step
+			goto Darkshore,36.6,45.6
+			.talk Gwennyth Bly'Leggonde##10219
+			..turnin Washed Ashore##4681
+		step
+			goto Darkshore,37.7,43.4
+			.talk Sentinel Glynda Nal'Shea##2930
+			..accept The Red Crystal##4811
+		step
+			goto Darkshore,38.8,43.4
+			.talk Tharnariun Treetender##3701
+			..accept Plagued Lands##2118
+		step
+			goto Darkshore,39.4,43.5
+			.talk Terenthis##3693
+			..accept How Big a Threat? (1)##984
+		step
+			goto Darkshore,38.4,52.9
+			.' Use Tharnariun's Hope on a Rabid Thistle Bear|use Tharnariun's Hope##7586
+			.' Capture a Rabid Thistle Bear|goal Rabid Thistle Bear Captured|q 2118/1
+		step
+			goto Darkshore,39.6,52.9
+			.' Find a corrupt furbolg camp at this spot|goal Find a corrupt furbolg camp|q 984/1
+		step
+			goto Darkshore,47.4,48.7
+			.' Walk up next to the big red crystal at the top of this hill
+			.' Locate the large, red crystal on Darkshore's eastern mountain range|goal Locate the large, red crystal on Darkshore's eastern mountain range|q 4811/1
+		step
+			goto Darkshore,38.8,43.4
+			.talk Tharnariun Treetender##3701
+			..turnin Plagued Lands##2118
+			..accept Cleansing of the Infected##2138
+		step
+			goto Darkshore,39.4,43.5
+			.talk Terenthis##3693
+			..turnin How Big a Threat? (1)##984
+			..accept How Big a Threat? (2)##985
+		step
+			goto Darkshore,37.7,43.4
+			.talk Sentinel Glynda Nal'Shea##2930
+			..turnin The Red Crystal##4811
+			..accept As Water Cascades##4812
+		step
+			goto Darkshore,37.8,44.1
+			.' Use your Empty Water Tube in your bags in the moonwell water|use Empty Water Tube##14338
+			.get Moonwell Water Tube|q 4812/1
+		step
+			goto Darkshore,40.3,53
+			.kill 8 Blackwood Pathfinder|q 985/1
+			.kill 5 Blackwood Windtalker|q 985/2
+		step
+			goto Darkshore,47.3,48.7
+			.talk Mysterious Red Crystal##991006
+			..turnin As Water Cascades##4812
+			..accept The Fragments Within##4813
+		step
+			goto Darkshore,39.4,43.5
+			.talk Terenthis##3693
+			..turnin How Big a Threat? (2)##985
+			..accept Thundris Windweaver##4761
+		step
+			goto Darkshore,37.7,43.4
+			.talk Sentinel Glynda Nal'Shea##2930
+			..turnin The Fragments Within##4813
+		step
+			goto Darkshore,37.3,43.6
+			.talk Barithras Moonshade##3583
+			..accept Cave Mushrooms##947
+		step
+			goto Darkshore,37.4,40.1
+			.talk Thundris Windweaver##3649
+			..turnin Thundris Windweaver##4761
+			..accept The Cliffspring River##4762
+			..accept Bashal'Aran (1)##954
+		step
+			goto Darkshore,38.1,41.2
+			.talk Gorbold Steelhand##6301
+			..accept Deep Ocean, Vast Sea##982
+		step
+			goto Darkshore,44.2,36.3
+			.talk Asterion##3650
+			..turnin Bashal'Aran (1)##954
+			..accept Bashal'Aran (2)##955
+		step
+			goto Darkshore,44.6,36.9
+			.from Wild Grell##2190+, Vile Sprite##2189+
+			.get 8 Grell Earring|q 955/1
+		step
+			goto Darkshore,44.2,36.3
+			.talk Asterion##3650
+			..turnin Bashal'Aran (2)##955
+			..accept Bashal'Aran (3)##956
+		step
+			goto Darkshore,47.4,36.8
+			.from Deth'ryll Satyrs##2212+
+			.get Ancient Moonstone Seal|q 956/1
+		step
+			goto Darkshore,44.2,36.3
+			.talk Asterion##3650
+			..turnin Bashal'Aran (3)##956
+			..accept Bashal'Aran (4)##957
+		step
+			goto Darkshore,41.9,31.5
+			.talk Beached Sea Creature##991008
+			..accept Beached Sea Creature##4723
+		step
+			goto Darkshore,42,28.6
+			.talk Buzzbox 411##991003
+			..turnin Buzzbox 411##1001
+			..accept Buzzbox 323##1002
+		step
+			.' Go underwater to 39.6,27.5|goto 39.6,27.5
+			.' Click the Mist Veil's Lockbox|tip It's a small grey chest at the very bottom of the ship.
+			.get Mist Veil's Lockbox|q 982/2
+		step
+			.' Go underwater to 38.2,28.8|goto 38.2,28.8
+			.' Click the Silver Dawning's Lockbox|tip It's a small grey chest at the very bottom of this ship.
+			.get Silver Dawning's Lockbox|q 982/1
+		step
+			.' Jump down into the water below the bridge to 50.9,25.7|goto 50.9,25.7
+			.' Use your Empty Sampling Tube at the bottom of this waterfall|use Empty Sampling Tube##12350
+			.get Cliffspring River Sample|q 4762/1
+		step
+			goto Darkshore,55.64,36.13
+			.' Сan be found on the upper level of the cave
+			.get 1 Death Cap|q 947/2
+		step
+			goto Darkshore,55.1,33.6
+			.' Inside the cave
+			.get 5 Scaber Stalk|q 947/1
+		step
+			goto Darkshore,48.4,30.7
+			.kill 20 Rabid Thistle Bear|q 2138/1
+			.from Moonstalker##2069+
+			.get 6 Moonstalker Fang|q 1002/1
+		step
+			goto Darkshore,51.3,24.6
+			.talk Buzzbox 323##991004
+			..turnin Buzzbox 323##1002
+			..accept Buzzbox 525##1003
+		step
+			goto Darkshore,44.2,20.6
+			.talk Beached Sea Turtle##991009
+			..accept Beached Sea Turtle##4725
+		step
+			.' Hearth to Auberdine|goto Darkshore,37,44.10|use Hearthstone##6948|noway|c
+		step
+			goto Darkshore,35.7,43.7
+			.talk Cerellean Whiteclaw##3644
+			..accept For Love Eternal##963
+		step
+			goto Darkshore,36.6,45.6
+			.talk Gwennyth Bly'Leggonde##10219
+			..turnin Beached Sea Creature##4723
+			..turnin Beached Sea Turtle##4725
+		step
+			goto Darkshore,36.1,44.9
+			.talk Gubber Blump##10216
+			..accept Fruit of the Sea##1138
+		step
+			goto Darkshore,37.2,44.2
+			.talk WANTED: Murkdeep!##991010
+			..accept WANTED: Murkdeep!##4740
+		step
+			goto Darkshore,37.3,43.6
+			.talk Barithras Moonshade##3583
+			..turnin Cave Mushrooms##947
+			..accept Onu##948
+		step
+			goto Darkshore,38.8,43.4
+			.talk Tharnariun Treetender##3701
+			..turnin Cleansing of the Infected##2138
+			..accept Tharnariun's Hope##2139
+		step
+			goto Darkshore,39.4,43.5
+			.talk Terenthis##3693
+			..accept A Lost Master (1)##986
+		step
+			goto Darkshore,39,43.6
+			.talk Sentinel Elissa Starbreeze##3657
+			..accept The Tower of Althalaxx (1)##965
+		step
+			goto Darkshore,38.1,41.2
+			.talk Gorbold Steelhand##6301
+			..turnin Deep Ocean, Vast Sea##982
+		step
+			goto Darkshore,37.4,40.1
+			.talk Thundris Windweaver##3649
+			..turnin The Cliffspring River##4762
+			..accept Tools of the Highborne##958
+			..accept The Blackwood Corrupted##4763
+		step
+			goto Darkshore,37.8,44
+			.' Use Empty Cleansing Bowl on a Moonwell|use Empty Cleansing Bowl##12346
+			.' Manually skip this step!
+		step
+			goto Darkshore,52.4,35.9|n
+			.' The path up to Tharnariun's Hope starts here|goto Darkshore,52.4,35.9,0.5|noway|c
+		step
+			goto Darkshore,51.5,38.2
+			.kill Den Mother|q 2139/1
+		step
+			goto Darkshore,50.7,34.9
+			.collect 1 Blackwood Grain Sample##12342|q 4763/1
+			.' Manually skip this step
+		step
+			goto Darkshore,51.8,33.5
+			.collect 1 Blackwood Nut Sample##12343|q 4763/1
+			.' Manually skip this step
+		step
+			goto Darkshore,52.9,33.4
+			.collect 1 Blackwood Fruit Sample##12341|q 4763/1
+			.' Manually skip this step
+		step
+			goto Darkshore,52.43,33.37
+			.' Use EFilled Cleansing Bowl on a Bonfire|use Filled Cleansing Bowl##12347
+			.kill 1 Xabraxxis##10373|q 4763/1
+			.collect Talisman of Corruption##12355|q 4763/1
+		step
+			goto Darkshore,55,24.9
+			.talk Balthule Shadowstrike##3661
+			..turnin The Tower of Althalaxx (1)##965
+			..accept The Tower of Althalaxx (2)##966
+		step
+			goto Darkshore,55.2,26.4
+			.from Dark Strand Fanatic##2336+
+			.get 4 Worn Parchment|q 966/1
+		step
+			goto Darkshore,55,24.9
+			.talk Balthule Shadowstrike##3661
+			..turnin The Tower of Althalaxx (2)##966
+			..accept The Tower of Althalaxx (3)##967
+		step
+			goto Darkshore,53.1,18.1
+			.talk Beached Sea Turtle##001009
+			..accept Beached Sea Turtle##4727
+		step
+			goto Darkshore,37.4,40.1
+			.talk Thundris Windweaver##3649
+			..turnin The Blackwood Corrupted##4763
+			..accept Onward to Ashenvale##10752
+		step
+			goto Darkshore,36.6,45.6
+			.talk Gwennyth Bly'Leggonde##10219
+			..turnin Beached Sea Turtle##4727
+		step
+			goto Darkshore,38.8,43.4
+			.talk Tharnariun Treetender##3701
+			..turnin Tharnariun's Hope##2139
+		step
+			goto Darkshore,40.3,59.7
+			.talk Sentinel Tysha Moonblade##3639
+			..accept The Fall of Ameth'Aran##953
+		step
+			goto Darkshore,42.4,61.8
+			.' Click the Ancient Flame|tip It's a stone podium with a green coming out of the top of it, inside a dark colored broken gazebo.
+			.' Destroy the seal at the ancient flame|goal Destroy the seal at the ancient flame|q 957/1
+		step
+			goto Darkshore,42.6,63.1
+			.' Click the Fall of Ameth'Aran|tip It's a stone tablet standing upright on the ground.
+			.' Read the Fall of Ameth'Aran|goal Read the Fall of Ameth'Aran|q 953/2
+		step
+			goto Darkshore,43.3,59.7
+			.from Anaya Dawnrunner##3667
+			.get Anaya's Pendant|q 963/1
+		step
+			goto Darkshore,43.3,58.7
+			.' Click the Lay of Ameth'Aran |tip It's a stone tablet laying flat on the ground.
+			.' Read the Lay of Ameth'Aran |q 953/1
+		step
+			goto Darkshore,41.5,59.1
+			.from Cursed Highborne##2176+, Writhing Highborne##2177+, Wailing Highborne##2178+
+			.get 7 Highborne Relic|q 958/1
+		step
+			goto Darkshore,40.3,59.7
+			.talk Sentinel Tysha Moonblade##3639
+			..turnin The Fall of Ameth'Aran##953
+		step
+			goto Darkshore,36,70.9
+			.talk Beached Sea Creature##001008
+			..accept Beached Sea Creature##4728
+		step
+			goto Darkshore,36.3,76.7
+			.kill Murkdeep##10323|q 4740/1
+		step
+			goto Darkshore,34.9,80
+			.from Reef Crawler##2235+, Encrusted Tide Crawler##2233+
+			.get 6 Fine Crab Chunks|q 1138/1
+		step
+			goto Darkshore,31.7,83.7
+			.talk Beached Sea Turtle##001009
+			..accept Beached Sea Turtle##4731
+		step
+			goto Darkshore,37.6,82.4
+			.from Grizzled Thistle Bear##2165+
+			.get 4 Grizzled Scalp|q 1003/1
+			.from Moonstalker Sire##2237+, Moonstalker Matriarch##2071+
+			.get 5 Fine Moonstalker Pelt|q 986/1
+		step
+			goto Darkshore,41.4,80.6
+			.talk Buzzbox 525##991005
+			..turnin Buzzbox 525##1003
+		step
+			goto Darkshore,37.1,62.2
+			.talk Beached Sea Turtle##001009
+			..accept Beached Sea Turtle##4722
+		step
+			goto Darkshore,36.6,45.6
+			.talk Gwennyth Bly'Leggonde##10219
+			..turnin Beached Sea Turtle##4722
+			..turnin Beached Sea Creature##4728
+			..turnin Beached Sea Turtle##4731
+		step
+			goto Darkshore,36.1,44.9
+			.talk Gubber Blump##10216
+			..turnin Fruit of the Sea##1138
+		step
+			goto Darkshore,35.7,43.7
+			.talk Cerellean Whiteclaw##3644
+			..turnin For Love Eternal##963
+		step
+			goto Darkshore,37.7,43.4
+			.talk Sentinel Glynda Nal'Shea##2930
+			..turnin WANTED: Murkdeep!##4740
+		step
+			goto Darkshore,39.4,43.5
+			.talk Terenthis##3693
+			..turnin A Lost Master (1)##986
+			..accept A Lost Master (2)##993
+		step
+			goto Darkshore,37.4,40.1
+			.talk Thundris Windweaver##3649
+			..turnin Tools of the Highborne##958
+		step
+			goto Darkshore,37.4,41.8
+			.talk Archaeologist Hollee##2913
+			..accept The Absent Minded Prospector (1)##729
+		step
+			goto Darkshore,44.2,36.3
+			.talk Asterion##3650
+			..turnin Bashal'Aran (4)##957
+		step
+			goto Darkshore,43.5,76.3
+			.talk Onu##3616
+			..turnin Onu##948
+			..accept The Master's Glaive##944
+		step
+			goto Darkshore,38.5,86.2
+			.' Clear the mobs around the table
+			.' Jump on the table with the remains on it
+			.' Click your Phial of Scrying in your bags|use Phial of Scrying##5251
+			.' Create the Scrying Bowl
+			.' Click the Scrying Bowl
+			..turnin The Master's Glaive##944
+			..accept The Twilight Camp##949
+			.' Click the Twilight Tome
+			..turnin The Twilight Camp##949
+			..accept Return to Onu##950
+		step
+			goto Darkshore,38.7,87.4
+			.talk Therylune##3584
+			..accept Therylune's Escape##945
+			.from Twilight Disciple##2338+, Twilight Thug##2339+
+			.collect Book: The Powers Below##5352|q 1143/1 |future
+			..accept The Powers Below##968|use Book: The Powers Below##5352
+			.' Escort Therylune away from the Master's Glaive|goal Escort Therylune away from the Master's Glaive|q 945/1	
+		step
+			goto Darkshore,35.7,83.7
+			.talk Prospector Remtravel##2917
+			..turnin The Absent Minded Prospector (1)##729
+			..accept The Absent Minded Prospector (2)##731
+		step
+			goto Darkshore,36.31,86.19
+			.' Prospector Remtravel as he searches for the mysterious fossil|q 731/1
+		step
+			goto Darkshore,32.7,80.8
+			.talk Beached Sea Creature##001008
+			..accept Beached Sea Creature##4730
+		step
+			goto Darkshore,31.2,85.6
+			.talk Beached Sea Turtle##001009
+			..accept Beached Sea Turtle##4732
+		step
+			goto Darkshore,45,85.3
+			.talk Volcor##3692
+			..turnin A Lost Master (2)##993
+			..accept Escape Through Force##994
+			.goal Protect Volcor until you reach the road|q 994/1
+		step
+			goto Darkshore,43.5,76.3
+			.talk Onu##3616
+			..turnin Return to Onu##950
+			..accept Mathystra Relics##951
+		step
+			goto Darkshore,44.4,76.4
+			.talk Kerlonian Evershade##11218
+			..accept The Sleeper Has Awakened##5321
+			.' Click Kerlonian's Chest next to him
+			.collect Horn of Awakening##13536|q 5321/2
+		step
+			goto Ashenvale,26.8,36.8
+			.' Escort Kerlonian Evershade south to Ashenvale, then south to Maestra's Post|goal Escort Kerlonian Evershade to Maestra's Post|q 5321/1|tip Do NOT follow the road. Walk in the forest as much as you can. This will allow you to avoid the ambushes along the way.
+			.' Use your Horn of Awakening on Kerlonian Evershade when he falls asleep to wake him up|use Horn of Awakening##13536
+		step
+			goto Ashenvale,27.3,35.6
+			.talk Liladris Moonriver##11219
+			..turnin The Sleeper Has Awakened##5321
+		step
+			goto Ashenvale,26.2,38.6
+			.talk Delgren the Purifier##3663
+			..turnin The Tower of Althalaxx (3)##967
+			..accept The Tower of Althalaxx (4)##970
+		step
+			goto Ashenvale,32.7,28.7
+			.from Dark Strand Cultist##3725+, Dark Strand Adept##3728+, Dark Strand Excavator##3730+, Dark Strand Enforcer##3727+
+			.get Glowing Soul Gem|q 970/1
+		step
+			goto Ashenvale,26.2,38.6
+			.talk Delgren the Purifier##3663
+			..turnin The Tower of Althalaxx (4)##970
+			..accept The Tower of Althalaxx (5)##973
+		step
+			goto Ashenvale,22.7,51.9
+			.talk Therysil##3585
+			..turnin Therylune's Escape##945
+		step
+			ding 23
+		step
+			goto Ashenvale,25.3,60.7
+			.' Go to Path-Up|at 25.88,63.11
+			.from Ilkrud Magthrull##3664+
+			.get Ilkrud Magthrulls Tome|q 973/1
+		step
+			goto Ashenvale,36.6,49.6
+			.talk Raene Wolfrunner##3691
+			..turnin Onward to Ashenvale##10752
+		step
+			goto Ashenvale,34.4,48
+			.talk Daelyshia##4267
+			..fpath Astranaar, Ashenvale
+		step
+			goto Ashenvale,26.2,38.6
+			.talk Delgren the Purifier##3663
+			..turnin The Tower of Althalaxx (5)##973
+			..accept The Tower of Althalaxx (6)##1140
+		step
+			goto Ashenvale,66.63,56.90
+			.' Move Path Here|at 72.21,49.83
+			.' Free the Highborne soul in Night Run|q 1140/1
+		step
+			goto Ashenvale,81.6,48.6
+			.' Free the Highborne soul in Satyrnaar|q 1140/2
+		step
+			goto Ashenvale,85.1,43.4
+			.talk Suralais Farwind##22935
+			..fpath Forest Song, Ashenvale
+		step
+			goto Ashenvale,85.1,43.4
+			.talk Suralais Farwind##22935
+			.'Fly to Astranaar, Ashenvale|goto Ashenvale,35.5,50.2,5|noway|c
+		step
+			goto Ashenvale,26.2,38.6
+			.talk Delgren the Purifier##3663
+			..turnin The Tower of Althalaxx (6)##1140
+			..accept The Tower of Althalaxx (7)##1167
+		step
+			goto Ashenvale,34.4,48
+			.talk Daelyshia##4267
+			.'Fly to Auberdine, Darkshore|goto Darkshore,36.4,45.6,0.3|noway|c
+		step
+			goto Darkshore,36.6,45.6
+			.talk Gwennyth Bly'Leggonde##10219
+			..turnin Beached Sea Creature##4730
+			..turnin Beached Sea Turtle##4732
+		step
+			goto Darkshore,37.4,41.8
+			.talk Archaeologist Hollee##2913
+			..turnin The Absent Minded Prospector (2)##731
+			..accept The Absent Minded Prospector (3)##741
+		step
+			goto Darkshore,39.4,43.5
+			.talk Terenthis##3693
+			..turnin Escape Through Force##994
+		step
+			goto Darkshore,55,24.9
+			.talk Balthule Shadowstrike##3661
+			..turnin The Tower of Althalaxx (7)##1167
+			..accept The Tower of Althalaxx (8)##1143
+		step
+			ding 28
+		step
+			goto Darkshore,56,26.3
+			.from Athrikus Narassin##3660
+			.get Athrikus Narassin's Head|q 1143/1
+		step
+			goto Darkshore,55,24.9
+			.talk Balthule Shadowstrike##3661
+			..turnin The Tower of Althalaxx (8)##1143
+			..accept The Tower of Althalaxx (9)##981
+		step
+			goto Darkshore,56.7,13.5
+			.talk Gelkak Gyromast##6667
+			..accept Gyromast's Retrieval##2098
+		step
+			goto Darkshore,52.8,19.5
+			.from Encrusted Tide Crawler##2233+, Raging Reef Crawler##2236+
+			.get Bottom of Gelkak's Key|q 2098/3
+		step
+			goto Darkshore,60.9,10.3
+			.from Giant Foreststrider##2323
+			.get Top of Gelkak's Key|q 2098/1
+		step
+			goto Darkshore,55.22,12.56
+			.from Greymist Oracle##2207+, Greymist Tidehunter##2208+
+			.get Middle of Gelkak's Key|q 2098/2
+		step
+			goto Darkshore,56.7,13.5
+			.talk Gelkak Gyromast##6667
+			..turnin Gyromast's Retrieval##2098
+			..accept Gyromast's Revenge##2078
+		step
+			goto Darkshore,55.8,18.3
+			.talk The Threshwackonator 4100##6669
+			.' Lead it back Threshwackonator 4100 to Gelkak|at 56.7,13.5|q 2078/1
+		step
+			goto Darkshore,56.7,13.5
+			.talk Gelkak Gyromast##6667
+			..turnin Gyromast's Revenge##2078
+		step
+			goto Darkshore,58.3,21.9
+			.collect 6 Mathystra Relic##5273|q 951/1
+		step
+			.' Hearth to Auberdine|goto Darkshore,37,44.10|use Hearthstone##6948|noway|c
+		step
+			goto Darkshore,39.3,44.08
+			.talk Sentinel Selarin##3694
+			..accept Trek to Ashenvale##990
+		step
+			goto Darkshore,43.5,76.3
+			.talk Onu##3616
+			..turnin Mathystra Relics##951
+		step
+			goto Darkshore,31.3,87.4
+			.talk Beached Sea Creature##001008
+			..accept Beached Sea Creature##4733
+		step
+			goto Ashenvale,26.2,38.6
+			.talk Delgren the Purifier##3663
+			..turnin The Tower of Althalaxx (9)##981
+		step
+			goto Ashenvale,36.6,49.6
+			.talk Raene Wolfrunner##3691
+			..turnin Trek to Ashenvale##990
+		step
+			goto Ashenvale,34.4,48
+			.talk Daelyshia##4267
+			.'Fly to Auberdine, Darkshore|goto Darkshore,36.4,45.6,0.3|noway|c
+		step
+			goto Darkshore,36.6,45.6
+			.talk Gwennyth Bly'Leggonde##10219
+			..turnin Beached Sea Creature##4733
+		step
+			goto Darkshore,36.3,45.6
+			.talk Caylais Moonfeather##3841
+			.' Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+		step
+			goto Darnassus,31.2,84.5
+			.talk Chief Archaeologist Greywhisker##2912
+			..turnin The Absent Minded Prospector (3)##741
+			..accept The Absent Minded Prospector (4)##942
+		step
+			goto Ironforge,50.8,5.6
+			.talk Gerrig Bonegrip##2786
+			..turnin The Powers Below##968
+		step
+			goto Wetlands,10.8,60.4
+			.talk Archaeologist Flagongut##2911
+			..turnin The Absent Minded Prospector (4)##942
+			..accept The Absent Minded Prospector (5)##943
+		step
+			goto Wetlands,38.9,52.2
+			.' In cave on Hill
+			.collect Flagongut's Fossil##5234|q 943/2
+		step
+			goto Wetlands,34.46,47.13
+			.from Mottled Raptor##1020+, Mottled Screecher##1021+, Mottled Scytheclaw##1022+, Mottled Razormaw##1023+
+			.' Drop chance 10% on Raptor
+			.get Stone of Relu##5233|q 943/1
+		step
+			goto Wetlands,10.8,60.4
+			.talk Archaeologist Flagongut##2911
+			..turnin The Absent Minded Prospector (5)##943
+]])
+
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Netherstorm",[[
 author danaton
 description Coming Soon

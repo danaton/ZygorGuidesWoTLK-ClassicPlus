@@ -189,58 +189,72 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Stormwind Jail (
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Uldaman (35)",[[
 	startlevel 35
-	step //1
+	step
 	goto Ironforge,74.70,11.80
 	.talk Prospector Stormpike##1356
 	..accept Ironband Wants You!##707
 	..accept The Lost Dwarves##2398
-	step //2
+	step
 	goto Ironforge,74.21,9.41
 	.talk Krom Stoutarm##6294
 	..accept Reclaimed Treasures##1360
-	step //3
+	step
 	goto Loch Modan,66.00,65.4
 	.talk Prospector Ironband##1344
 	..turnin Ironband Wants You!##707
 	..accept Find Agmond##738
-	step //4
-	goto Badlands,50.90,62.30
-	.talk Battered Dwarven Skeleton##2875
-	..turnin Find Agmond##738
-	..accept Murdaloc##739
-	step //5
-	goto Badlands,50.70,67.70
-	.kill 1 Murdaloc|q 739/1
-	step //6
-	goto Badlands,51.01,70.61
-	.kill 12 Stonevault Bonesnapper|q 739/2
-	step //9
-	goto Badlands,51.20,76.60
-	.talk Theldurin the Lost##2785
-	..accept Solution to Doom##709
-	step //7
-	goto Badlands,42.50,52.90
-	.talk Rigglefuzz##2817
-	..accept Power Stones##2418	
-	step //8
+	step
 	goto Badlands,53.00,33.9
 	.' Click the Crumpled Map|tip Laying on the ground under a white canopy.
 	..accept A Sign of Hope##720
-	step //9
+	step
 	goto Badlands,53.38,43.33
 	.talk Prospector Ryedol##2910
 	..turnin A Sign of Hope##720
 	..accept A Sign of Hope##721
-	step //10
+	step
+	goto Badlands,50.90,62.30
+	.talk Battered Dwarven Skeleton##991001
+	..turnin Find Agmond##738
+	..accept Murdaloc##739
+	step
+	goto Badlands,50.70,67.70
+	.kill 1 Murdaloc|q 739/1
+	.kill 12 Stonevault Bonesnapper|q 739/2
+	step
+	goto Badlands,51.20,76.60
+	.talk Theldurin the Lost##2785
+	..accept Solution to Doom##709
+	step
+	goto Badlands,42.50,52.90
+	.talk Rigglefuzz##2817
+	..accept Power Stones##2418	
+	step
 	goto Loch Modan,66.00,65.4
 	.talk Prospector Ironband##1344
 	..turnin Murdaloc##739
 	..accept Agmonds Fate##704
-	step //11
-	goto Badlands,45.96,11.58
+	step
+	goto Badlands,37.9,10.58
+	.talk Hammertoe Grez##2909
+	..turnin A Sign of Hope##721
+	..accept Amulet of Secrets##722
+	step 
+	goto Badlands,39.23,18.53
+	.collect 1 Tablet of Ryun'eh##4631|q 709/1
+	step
+	goto Badlands,35.55,23.45
+	.collect 1 Krom Stoutarm's Treasure##8027|q 1360/1
+	step
+	goto Badlands,35.3,13.4
+	.' Collect Carved Urn
+	.collect 4 Carved Stone Urn##4610|q 704/1
 	.' Kill mobs in cave
 	.kill 8 Shadowforge Surveyor|q 2418/1
 	.kill 8 Shadowforge Digger|q 2418/2
+	step
+	goto Badlands,35.22,10.66
+	.' Go To Uldaman Instance!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Zul'Farrak (40)",[[
 	startlevel 40
@@ -326,7 +340,7 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Zul'Farrak (40)"
 	..accept The Prophecy of Mosh'aru##3527
 	step //18
 	goto Tanaris,38.74,20.05
-	.' Go To Instance!
+	.' Go To Zul'Farrak Instance!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Maraudon (45)",[[
 	startlevel 45
