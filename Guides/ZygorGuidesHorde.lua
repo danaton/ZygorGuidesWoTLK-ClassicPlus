@@ -922,6 +922,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Tauren (1-13)",[
 		.talk Innkeeper Kauth##6747
 		..turnin A Task Unfinished##1656
 	step //42
+		goto 46.6,61.1
+		.talk Innkeeper Kauth##6747
 		home Bloodhoof Village
 	step //43
 		goto 56.11,71.4
@@ -6338,6 +6340,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 		..turnin Jorn Skyseer##3261
 		..accept Ishamuhale##882
 	step //131
+		goto 45.6,59.0
+		.talk Innkeeper Byula##7714
 		home Camp Taurajo
 	step //132
 		goto 45,62.2
@@ -6432,6 +6436,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 		.talk Maggran Earthbinder##11860
 		..accept Calling in the Reserves##5881
 	step //155
+		goto Stonetalon Mountains,47.5,62.1
+		.talk Innkeeper Jayka##7731
 		home Sun Rock Retreat
 	step //156
 		goto 47.2,64.2
@@ -6521,6 +6527,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 		..turnin Ishamuhale##882
 		..accept Enraged Thunder Lizards##907
 	step //177
+		goto 45.6,59.0
+		.talk Innkeeper Byula##7714
 		home Camp Taurajo
 	step //178
 		ding 24
@@ -6848,6 +6856,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 		.talk Maggran Earthbinder##11860
 		..turnin Bloodfury Bloodline##6283
 	step //60
+		goto Stonetalon Mountains,47.5,62.1
+		.talk Innkeeper Jayka##7731
 		home Sun Rock Retreat
 	step //61
 		'Fly to Thunder Bluff|goto Thunder Bluff
@@ -7150,6 +7160,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 		..turnin Ordanus##1088
 		..accept The Den##1089
 	step //132
+		goto Stonetalon Mountains,47.5,62.1
+		.talk Innkeeper Jayka##7731
 		home Sun Rock Retreat
 	step //133
 		goto 29.9,15.2

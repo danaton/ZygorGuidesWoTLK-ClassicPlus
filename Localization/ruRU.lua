@@ -23,12 +23,12 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 
 	['welcome_guides'] = "%d guides are loaded.",
 
-	["opt_guide"] = "Select a guide:",
-	["opt_guide_steps"] = "Steps: %d",
-	["opt_guide_author"] = "Author: %s",
-	["opt_guide_next"] = "Next in series: %s",
+	["opt_guide"] = "Выберите руководство:",
+	["opt_guide_steps"] = "Этапов: %d",
+	["opt_guide_author"] = "Автор: %s",
+	["opt_guide_next"] = "Следующее руководство: %s",
 
-	["opt_report"] = "Report a buggy step",
+	["opt_report"] = "Сообщить об ошибке",
 	["opt_report_desc"] = "Create a bug report containing the details of the currently displayed step. Copy/paste it and email to the guide authors.",
 
 	["opt_visible"] = "Показывать окно руководства Zygor Guides Viewer",
@@ -50,17 +50,6 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	--["opt_showallsteps"] = "Collapsed mode",
 	--["opt_showallsteps_desc"] = "Display only the current step and some next steps, instead of the whole guide",
 
-
-	["opt_group_map"] = "Путевые точки",
-	["opt_group_map_desc"] = "Эти настройки определяют, как Zygor Guides Viewer взаимодействует с надстройками для обработки карт.",
-	["opt_group_map_waypointing"] = "Waypointing addon",
-	["opt_group_map_waypointing_desc"] = "Select the addon that you'd like to handle the waypoints for Zygor Guides Viewer.",
-	["opt_group_addons_builtin"] = "Built-in waypointing",
-	["opt_group_addons_tomtom"] = "TomTom",
-	["opt_group_addons_cart2"] = "Cartographer 2",
-	["opt_group_addons_cart3"] = "Cartographer 3",
-	["opt_group_addons_metamap"] = "MetaMap",
-	["opt_group_addons_none"] = "none",
 	["opt_debug"] = "Debug",
 	["opt_debug_desc"] = "Display debug info.",
 	["opt_debugging"] = "Debugging",
@@ -94,7 +83,7 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	["report_notitle"] = "|cffff8888(unnamed guide?)|r",
 	["report_noauthor"] = "|cffff8888(no address available)|r",
 
-	["minimap_tooltip"] = COLOR_TIP_MOUSE.."ЛКМ|r, чтобы переключить окно|n"..COLOR_TIP_MOUSE.."ПКМ|r, чтобы настроить параметры|n", --..COLOR_TIP_MOUSE.."Drag|r to move icon"
+	["minimap_tooltip"] = COLOR_TIP_MOUSE.."ЛКМ|r, чтобы переключить видимость|n"..COLOR_TIP_MOUSE.."ПКМ|r, чтобы настроить параметры|n", --..COLOR_TIP_MOUSE.."Drag|r to move icon"
 
 	["waypointaddon_set"] = "Waypointing addon selected: %s",
 	["waypointaddon_connecting"] = "Connecting to waypointing addon: %s",
@@ -114,8 +103,8 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	['frame_unlocked'] = "Окно разблокировано",
 	['frame_lock'] = COLOR_TIP_MOUSE.."ЛКМ|r, чтобы заблокировать",
 	['frame_settings'] = "Опции",
-	['frame_settings1'] = COLOR_TIP_MOUSE.."ЛКМ|r, чтобы установить основные параметры",
-	['frame_settings2'] = COLOR_TIP_MOUSE.."ПКМ|r, чтобы настроить параметры",
+	['frame_settings1'] = COLOR_TIP_MOUSE.."ЛКМ|r, чтобы установить параметры окна",
+	['frame_settings2'] = COLOR_TIP_MOUSE.."ПКМ|r, чтобы открыть настройки",
 	['frame_minimized'] = "Showing |cffffffff%d|r step(s)",
 	['frame_maximized'] = "Showing all steps",
 	['frame_minimize'] = COLOR_TIP_MOUSE.."Click|r to show only |cffffffff%d|r",
@@ -241,7 +230,7 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	["opt_fontsecsize_desc"] = "Установите предпочтительный размер дополнительного текста, который используется для отображения дополнительных описаний и заметок.",
 	['opt_windowlocked'] = "Зафиксировать окно",
 	['opt_windowlocked_desc'] = "Окно руководства будет зафиксировано, для предотвращения случайных перемещений.\nКнопки внутри окна руководства останутся активными.",
-	["opt_miniresizeup"] = "Перевернуть окно руководства",
+	["opt_miniresizeup"] = "Перевернуть окно",
 	["opt_miniresizeup_desc"] = "Переворачивает окно вверх дном, заставляя его расширяться вверх, а не вниз. Полезно, если вы размещаете его внизу экрана.",
 	
 	["opt_group_step"] = "Цели этапов",
@@ -272,16 +261,16 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	["opt_goalbackprogress"] = "Применять цвета статусов к шагам в этапе",
 	["opt_goalbackprogress_desc"] = "Если цель шага в этапе может иметь процент завершенности, она будет отмечена промежуточным цветом (между цветов \"Частично\" и \"Завершено\").|nЕсли параметр выключен, цель будет отображаться только с использованием цветов \"Незавершено\" и \"Завершено\".",
 
-	["opt_flash_desc"] = "Progress notification:",
-	["opt_goalupdateflash"] = "Flash goal on progress",
-	["opt_goalupdateflash_desc"] = "Use a visual 'flash' indication when a single goal is progressed.",
+	["opt_flash_desc"] = "Уведомление о прогрессе:",
+	["opt_goalupdateflash"] = "Подсветить шаг при прогрессе",
+	["opt_goalupdateflash_desc"] = "Если шаг этапа изменит свой статус, Вы будете оповещены визуальной вспышкой.",
 	["opt_goalcompletionflash"] = "Flash goal on completion",
 	["opt_goalcompletionflash_desc"] = "Use a visual 'flash' indication when a single goal completes.",
-	["opt_flashborder"] = "Flash window on step completion",
-	["opt_flashborder_desc"] = "Flash the whole window whenever a step is completed.",
+	["opt_flashborder"] = "Подсветить окно при заверщении этапа",
+	["opt_flashborder_desc"] = "Когда этап будет завершен, окно руководства будет кратковременно подсвечено.",
 	
-	['opt_resetwindow'] = "Reset window",
-	['opt_resetwindow_desc'] = "If you accidentally move the guide window off-screen and can't move it back, this button resets it to the screen center.",
+	['opt_resetwindow'] = "Сбросить положение",
+	['opt_resetwindow_desc'] = "Если Вы случайно переместите окно за пределы экрана и не сможете вернуть его обратно, эта кнопка сбросит положение окна на центр.",
 	
 -- Динамичный прогресс
     ['opt_group_progress'] = "Динамичный прогресс",
@@ -305,9 +294,32 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 
     ['opt_group_progress_bottomdesc'] = "Динамический прогресс работает путем пометки заданий как \"устаревших\", когда вы опережаете уровни руководства. Цепочки заданий помечаются как устаревшие, только если устарела вся цепочка. \n\nДля новых игроков это помогает использовать руководства, пропуская низкоуровневый контент, останавливаясь на заданиях, которые все равно будут получены позже. Если вы хотите начать следовать руководству, загрузите стартовое руководство для своей расы и позвольте аддону пропустить определенную часть, пока не окажетесь в разделе, соответсвующем вашему уровню. \n\nДля опытных игроков это гарантирует, что руководство не замедлит Вас, давая вам низкоуровневые квесты, если вы качаетесь быстрее, чем ожидает руководство (например, если Вы ходите в подземелья или используете бонус отдыха). Вы можете установить, насколько далеко от руководства Вы хотите быть, прежде чем аддон начнет пропускать цепочки заданий.",    
 
+-- Путевые точки
+	["opt_group_map"] = "Путевые точки",
+	["opt_group_map_desc"] = "Эти настройки определяют, как Zygor Guides Viewer взаимодействует с надстройками для обработки карт.",
+	["opt_group_map_waypointing"] = "Waypointing addon",
+	["opt_group_addons_builtin"] = "Built-in waypointing",
+	["opt_group_map_waypointing_desc"] = "Select the addon that you'd like to handle the waypoints for Zygor Guides Viewer.",
+		["opt_group_addons_tomtom"] = "TomTom",
+		["opt_group_addons_cart2"] = "Cartographer 2",
+		["opt_group_addons_cart3"] = "Cartographer 3",
+		["opt_group_addons_metamap"] = "MetaMap",
+		["opt_group_addons_none"] = "none",
+	['opt_group_map_hidearrowwithguide'] = "Hide arrow when closing viewer",
+	['opt_group_map_hidearrowwithguide_desc'] = "Select this to make the arrow follow the guide window's visibility.\nLeave unchecked if you want the arrow to stay visible when you hide the guides.",
+-- empty
+-- empty2
+
+	['opt_group_mapinternal'] = "Internal waypointer",
+	['opt_arrowfreeze'] = "Arrow click-through",
+	['opt_arrowfreeze_desc'] = "Make the pointer arrow ignore all mouse actions. Uncheck to enable dragging the arrow.",
+	['opt_arrowmeters'] = "Метрическая система",
+	['opt_arrowmeters_desc'] = "Используются метры и километры, вместо ярдов и милей.",
+
+
 -- Расширенные функции
 	['opt_group_convenience'] = "Расширенные функции",
-	['opt_group_convenience_desc'] = "Расширенные функции, для ускорения взаимодействия.",
+	['opt_group_convenience_desc'] = "Расширенные функции, для ускорения взаимодействия с игрой.",
 	['opt_autoaccept'] = "Автоматически принимать задания",
 	['opt_autoaccept_desc'] = "Аддон автоматически принимает задания, указанные в активном этапе руководства.\n|cffffaa88Эта функция значительно ускоряет процесс квестинга, но сам процесс может показаться запутанным.|r",
 	['opt_autoturnin'] = "Автоматически сдавать задания",
