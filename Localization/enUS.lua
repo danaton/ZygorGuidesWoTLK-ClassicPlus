@@ -74,6 +74,12 @@ ZygorGuidesViewer_L("Main", "enUS", function() return {
 	["opt_debugging_desc"] = "Debugging options.",
 	--["opt_browse"] = "Toggle windows",
 	 --["opt_browse_desc"] = "Toggle the visibility of either of Zygor's Guides windows.",
+	["opt_group_map_showminimapicons"] = "Show minimap icons",
+	["opt_group_map_showminimapicons_desc"] = "Show icons on the minimap",
+	["opt_group_map_iconalpha"] = "Icon alpha",
+	["opt_group_map_iconalpha_desc"] = "Alpha transparency of map note icons",
+	["opt_group_map_iconsize"] = "Icon size",
+	["opt_group_map_iconsize_desc"] = "Size of the icons on the map",
 
 	["opt_autoskip"] = "Advance automatically",
 	["opt_autoskip_desc"] = "Automatically skip to the next step, when all conditions are completed. You might still have to manually skip some steps that have completion conditions too complex for the guide to detect reliably.",
@@ -382,12 +388,6 @@ ZygorGuidesViewer_L("Main", "enUS", function() return {
 
 	['gold_missing_nospotsinrange'] = "No gold spots within range.",
 	['gold_missing_noguidesloaded'] = "No gold guides are loaded!",
-
-	['gold_header_drop'] = "Drops from |cffffdddd%s|r:",
-	['gold_header_ore'] = "Ore deposits:",
-	['gold_header_herb'] = "Herbs:",
-	['gold_header_skin'] = "Skins:",
-	['gold_header_vendor'] = "Buy:", -- from |cffddffdd%s|r:",
 
 } end)
 

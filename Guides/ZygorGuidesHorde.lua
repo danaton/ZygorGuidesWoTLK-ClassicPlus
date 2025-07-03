@@ -3943,7 +3943,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..turnin Prove Your Worth##421
 		..accept Arugal's Folly (1)##422
 	step //162
-		goto 52,28
+		goto 52.82,28.46
 		.Go inside the house and click the Dusty Spellbooks on the second floor
 		..get Remedy of Arugal##3155|q 422/1
 	step //163
@@ -3966,7 +3966,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept Wild Hearts##429
 	step //167
 		goto 57.5,15.9
-		.from Mottled Worg##1766, Worg##1765
+		.from Worg##1765, Mottled Worg##1766
 		.get 6 Discolored Worg Heart|q 429/1
 	step //168
 		goto 56.2,9.2
@@ -4968,6 +4968,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		.talk Zargh##3489
 		..accept Meats to Orgrimmar##6365
 		only Orc,Troll
+	step
+		goto Thunder Bluff,61.5,80.9
+		.talk Melor Stonehoof##3441
+		..accept Sergra Darkthorn##860
+	step
+		goto Thunder Bluff,78.6,28.6
+		.talk Arch Druid Hamuul Runetotem##5769
+		..accept The Barrens Oases##886
 	step //4
 		goto 51.9,30.3
 		.talk Gazrog##3464
@@ -5022,10 +5030,12 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		goto 52.2,31
 		.talk Sergra Darkthorn##3338
 		..turnin Crossroads Conscription##842
+		..turnin Sergra Darkthorn##860
 		..accept Plainstrider Menace##844
 	step //16
 		goto 52.3,31.9
 		.talk Tonga Runetotem##3448
+		..turnin The Barrens Oases##886
 		..accept The Forgotten Pools##870
 	step //17
 		goto 52.6,29.8
@@ -7682,6 +7692,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		.talk Taiga Wisemane##11624
 		..accept Hand of Iruxos##5381
 	step //113
+		goto Desolace,24.1,68.2
+		.talk Innkeeper Sikewa##11106
 		home Shadowprey Village
 	step //114
 		goto 23.3,72.9
@@ -7841,7 +7853,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 	step //151
 		'Fly to Camp Taurajo|goto The Barrens,44.5,59.1,0.1|noway|c
 	step //152
-		'Go southeast to Dustwallow Marsh|goto Dustwallow Marsh
+		'Go to Dustwallow Marsh|goto Dustwallow Marsh
+	step
+		goto Dustwallow Marsh,36.4,31.9
+		.talk Krog##4926
+		..accept Inspecting the Ruins##11124
+	step
+		goto Dustwallow Marsh,29.7,47.5
+		.talk Inspector Tarem##23567
+		..turnin Inspecting the Ruins##11124
 	step //153
 		goto Dustwallow Marsh,29.7,47.6
 		.' Click the Hoofprints
@@ -7904,6 +7924,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		.talk Crank Fizzlebub##2498
 		..accept Singing Blue Shards##605
 	step //167
+		goto Stranglethorn Vale,27.0,77.3
+		.talk Innkeeper Skindle##6807
 		home Booty Bay
 	step //168
 		goto 27,77.2
