@@ -1402,6 +1402,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..turnin The Bounty of Teldrassil##6341
 		..accept Flight to Auberdine##6342
 	step //150
+		goto 58.4,94
+		.talk Vesprystus##3838
 		'Fly to Auberdine|goto Darkshore,36.4,45.6,0.5|noway|c
 	step //151
 		goto Darkshore,36.6,45.6
@@ -12340,6 +12342,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 		..turnin Arrival in Outland##10288
 		..accept Journey to Honor Hold##10140
 	step //6
+		goto 87.4,52.4
+		.talk Amish Wildhammer##18931
 		'Fly to Honor Hold|goto Hellfire Peninsula,54.6,62.6,0.5|noway|c
 	step //7
 		goto 54.5,62.8
@@ -12347,6 +12351,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 		..turnin Journey to Honor Hold##10140
 		..accept Force Commander Danath##10254
 	step //8
+		goto Hellfire Peninsula,54.2,63.6
+		.talk Sid Limbardi##16826
 		home Honor Hold
 	step //9
 		goto 56.6,66.7
@@ -12402,14 +12408,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 		..accept Disrupt Their Reinforcements##10144
 	step //19
 		goto 72.0,59.6
-		.kill the demons here|n
+		.from Netherhound##16950+, Wrathguard##18975+, Doomwhisperer##18981+, Fel Handler##19190+
 		.collect 4 Demonic Rune Stone##28513|q 10144
 	step //20
 		goto 72.7,59
 		.' Stand inside the portal and click it to destroy it|goal Disrupt Portal Kaalez|q 10144/2
 	step //21
 		goto 71.7,56.4
-		.kill the demons here|n
+		.from Netherhound##16950+, Wrathguard##18975+, Doomwhisperer##18981+, Fel Handler##19190+
 		.collect 4 Demonic Rune Stone##28513|q 10144
 	step //22
 		goto 71.4,55.2
@@ -12437,7 +12443,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 	step //27
 		goto 78.4,34.9
 		.talk Runetog Wildhammer##20234
-		..fpath Shatter Point
+		..fpath Shatter Point, Hellfire Peninsula
 	step //28
 		goto 78.4,34.9
 		.talk Runetog Wildhammer##20234
@@ -12463,7 +12469,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 		..accept Go to the Front##10382
 	step //32
 		goto 78.3,34.5|n
-		.talk Gryphoneer Windbellow|tip Right next to an Armored Gryphon Destroyer.
+		.talk Gryphoneer Windbellow##20235
 		..'Fly to Honor Point|goto Hellfire Peninsula,68.7,28.2,1|noway|c
 	step //33
 		goto 68.3,28.6
@@ -12523,7 +12529,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 		.' Use your Flaming Torch on the Western Thrower to burn it|goal Western Thrower Burned|q 10078/4|use Flaming Torch##26002|tip It's a big catapult.
 	step //48
 		goto 65.8,67.2
-		.kill Bleeding Hollow orcs|n
+		.from Bleeding Hollow Grunt##16871, Bleeding Hollow Peon##16907, Bleeding Hollow Necrolyte##19422, Bleeding Hollow Tormentor##19424
 		.get Cursed Talisman|q 10483/1
 	step //49
 		goto 71,63.4
@@ -12548,7 +12554,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 	step //53
 		goto 41.2,84.4
 		.' Click Ravenger Eggs|tip They look like big white eggs on the ground around this area.
-		.kill Razorfury Ravagers|n
+		.from Razorfang Hatchling##16932+, Razorfang Ravager##16933+, Quillfang Skitterer##19189+
 		.get 12 Ravager Egg|q 9349/1
 	step //54
 		goto 49.2,74.8
@@ -12557,7 +12563,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 		..accept Helboar, the Other White Meat##9361
 	step //55
 		goto 50.2,74.8
-		.kill Helboars|n
+		.from Deranged Helboar##16863
 		.get Tainted Helboar Meat|n
 		.' Use your Purification Mixture on the Tainted Helboar Meat|use Purification Mixture##23268|tip The meat won't become purified every time, it can become toxic as well.
 		.get 8 Purified Helboar Meat|q 9361/1
@@ -12568,7 +12574,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 		..accept Smooth as Butter##9356
 	step //57
 		goto 58.1,71.3
-		.kill vultures|n
+		.from Bonestripper Buzzard##16972
 		.get 12 Plump Buzzard Wing|q 9356/1
 		.get 30 Zeppelin Debris|q 10161/1|tip They look like scraps of metal all over the ground.
 	step //58
@@ -12579,10 +12585,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 		.talk Legassi##19344
 		..turnin Smooth as Butter##9356
 	step //59
-		goto 47.8,65.8
-		.kill 15 Marauding Crust Burster|q 9355/1|tip They are under the jumping piles of rocks, they come up to fight when you get close to the jumping rocks.
-		.kill Marauding Crustbusters|n
-		.get Eroded Leather Case|n
+		goto Hellfire Peninsula,47.8,65.8
+		.kill 15 Marauding Crust Burster##16857|q 9355/1|tip They are under the jumping piles of rocks, they come up to fight when you get close to the jumping rocks.
+		.from Marauding Crust Burster##16857
+		.get Eroded Leather Case##23338|q 9373
 		.' Click the Eroded Leather Case|use Eroded Leather Case##23338
 		..accept Missing Missive##9373
 	step //60
@@ -12623,11 +12629,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 		..turnin The Temple of Telhamat##10093
 		..accept The Pools of Aggonar##9426
 	step //68
+		goto Hellfire Peninsula,23.3,36.4
+		.talk Caregiver Ophera##18906
 		home Temple of Telhamat
 	step //69
 		goto 25.2,37.2
 		.talk Kuma##18785
-		..fpath Temple of Telhamat
+		..fpath Temple of Telhamat,Hellfire Peninsula
 	step //70
 		goto 26.9,37.4
 		.' Click Sedai's Corpse|tip Right down the hill from the Temple of Telhamat Flight Path.
@@ -12643,7 +12651,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 		ding 61
 	step //73
 		goto 34.6,34.7
-		.kill Mag'har Grunts and Debilitated Mag'har Grunts|n
+		.from Mag'har Grunt##16846+, Debilitated Mag'har Grunt##16847+
 		.get 10 Mag'har Ancestral Beads|q 9424/1
 	step //74
 		goto 38.9,29.1
@@ -12684,7 +12692,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 		..accept Demonic Contamination##9372
 	step //81
 		goto 18.4,54.7
-		.kill Hulking Helboars|n
+		.from Hulking Helboar##16880
 		.get 6 Helboar Blood Sample|q 9372/1
 	step //82
 		goto 15.7,52
@@ -12800,7 +12808,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 		.' You can find 2 more Stonescythe Alphas at 33.7,62.1|n
 	step //106
 		goto 49.5,81.8
-		.kill voidwalkers|n
+		.from Rogue Voidwalker##16974+, Uncontrolled Voidwalker##16975+
 		.get 10 Condensed Voidwalker Essence|q 9351/1
 		.' Use your Sanctified Crystal on an Uncontrolled Voidwalker when it's almost dead|use Sanctified Crystal##23417
 		.' Click the red floating crystal over its corpse
@@ -12854,8 +12862,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (62-64
 		.talk Honor Guard Wesilow##16827
 		..turnin Looking to the Leadership##10057
 	step //3
-		goto 64.2,71.8
-		.kill Bleeding Hollow Orcs|n
+		goto Hellfire Peninsula,64.2,71.8
+		.from Bleeding Hollow Grunt##16871+, Bleeding Hollow Dark Shaman##16873+, Bleeding Hollow Peon##16907+, Bleeding Hollow Necrolyte##19422+
 		.get 12 Cursed Talisman|q 10484/1
 	step //4
 		goto 71,63.4

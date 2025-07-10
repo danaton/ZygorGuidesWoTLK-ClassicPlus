@@ -4,10 +4,100 @@ if UnitFactionGroup("player")~="Alliance" then return end
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\Elwynn Forest",[[
 author danaton
-description Coming Soon
+description This guide contain quest-chain (45 quests) for Elwynn Forest location.
 startlevel 20
 		step
 		.' For comfortable execution quest chain, it is recommended to be level 20+|tip Manually skip this step
+		step
+			goto Elwynn Forest,48.1,43.6
+			.talk Deputy Willem##823
+			..accept A Threat Within##783
+		step
+			goto Elwynn Forest,48.9,41.6
+			.talk Marshal McBride##197
+			..turnin A Threat Within##783
+			..accept Kobold Camp Cleanup##7
+		step
+			goto Elwynn Forest,48.1,43.6
+			.talk Deputy Willem##823
+			..accept Eagan Peltskinner##5261
+		step
+			goto Elwynn Forest,48.9,40.2
+			.talk Eagan Peltskinner##196
+			..turnin Eagan Peltskinner##5261
+			..accept Wolves Across the Border##33
+		step
+			goto Elwynn Forest,47.4,39.7
+			.from Diseased Young Wolf##299+
+			.get 8 Diseased Wolf Pelt|q 33/1
+		step
+			goto Elwynn Forest,47.9,37.1
+			.kill 8 Kobold Vermin|q 7/1
+		step
+			goto Elwynn Forest,48.9,40.2
+			.talk Eagan Peltskinner##196
+			..turnin Wolves Across the Border##33
+		step
+			goto Elwynn Forest,48.9,41.6
+			.talk Marshal McBride##197
+			..turnin Kobold Camp Cleanup##7
+			..accept Investigate Echo Ridge##15
+		step
+			goto Elwynn Forest,48.1,43.6
+			.talk Deputy Willem##823
+			..accept Brotherhood of Thieves##18
+		step
+			goto Elwynn Forest,51.3,37.0
+			.kill 10 Kobold Workers|q 15/1
+		step
+			goto Elwynn Forest,54.3,41
+			.from Defias Thug##38+
+			.get 12 Red Burlap Bandana|q 18/1
+		step
+			goto Elwynn Forest,48.1,43.6
+			.talk Deputy Willem##823
+			..turnin Brotherhood of Thieves##18
+			..accept Milly Osworth##3903
+			..accept Bounty on Garrick Padfoot##6
+		step
+			goto Elwynn Forest,48.9,41.6
+			.talk Marshal McBride##197
+			..turnin Investigate Echo Ridge##15
+			..accept Skirmish at Echo Ridge##21
+		step
+			goto Elwynn Forest,50.7,39.3
+			.talk Milly Osworth##9296
+			..turnin Milly Osworth##3903
+			..accept Milly's Harvest##3904
+		step
+			goto Elwynn Forest,53.6,47.3
+			.' Click Milly's Harvest barrels around the vineyard|tip Milly's Harvest look like barrels of grapes.
+			.get 8 Milly's Harvest|q 3904/1
+		step
+			goto Elwynn Forest,57.5,48.3
+			.from Garrick Padfoot##103
+			.get Garrick's Head|q 6/1
+		step
+			goto Elwynn Forest,50.7,39.3
+			.talk Milly Osworth##9296
+			..turnin Milly's Harvest##3904
+			..accept Grape Manifest##3905
+		step
+			goto Elwynn Forest,48.1,43.6
+			.talk Deputy Willem##823
+			..turnin Bounty on Garrick Padfoot##6
+		step
+			goto Elwynn Forest,49.5,41.6
+			.talk Brother Neals##952
+			..turnin Grape Manifest##3905
+		step
+			goto Elwynn Forest,47.7,32
+			.kill 12 Kobold Laborer##80|q 21/1
+		step
+			goto Elwynn Forest,48.9,41.6
+			.talk Marshal McBride##197
+			..turnin Skirmish at Echo Ridge##21
+			..accept Report to Goldshire##54
 		step
 			goto Elwynn Forest,45.6,47.7
 			.talk Falkhaan Isenstrider##6774
@@ -23,6 +113,7 @@ startlevel 20
 		step
 			goto Elwynn Forest,42.1,65.9
 			.talk Marshal Dughan##240
+			..turnin Report to Goldshire##54
 			..accept The Fargodeep Mine##62
 		step
 			goto Elwynn Forest,42.1,67.3
@@ -113,11 +204,6 @@ startlevel 20
 			goto Elwynn Forest,61.8,54.2
 			.' Scout through the Jasperlode Mine|at 60.3,49.6|q 76/1
 		step
-			goto Elwynn Forest,67.8,42
-			.from Riverpaw Runt##97+, Riverpaw Outrunner##478+
-			..collect 1 Gold Pickup Schedule##1307|q 123 |future |sticky
-			..accept The Collector##123
-		step
 			goto Elwynn Forest,69.6,79.7
 			.from Princess##330+
 			.get Brass Collar##1006|q 88/1
@@ -125,8 +211,7 @@ startlevel 20
 			goto Elwynn Forest,42.1,65.9
 			.talk Marshal Dughan##240
 			..turnin The Jasperlode Mine##76
-			..turnin The Collector##123
-			..accept Manhunt##147
+			..accept Westbrook Garrison Needs Help!##239
 		step
 			goto Elwynn Forest,43.3,65.7
 			.talk William Pestle##253
@@ -136,6 +221,35 @@ startlevel 20
 			goto Elwynn Forest,34.7,84.5
 			.talk Ma Stonefield##244
 			..turnin Princess Must Die!##88
+		step
+			goto Elwynn Forest,24.56,78.22
+			.' Click Wanted Poster
+			..accept Wanted: "Hogger"##176
+		step
+			goto Elwynn Forest,24.2,74.4
+			.talk Deputy Rainer##963
+			..turnin Westbrook Garrison Needs Help!##239
+			..accept Riverpaw Gnoll Bounty##11
+		step
+			goto Elwynn Forest,26.4,93.6
+			.from Hogger##448+
+			.get 1 Huge Gnoll Claw##1931|q 176/1
+		step
+			goto Elwynn Forest,26.5,86.6
+			.from Riverpaw Runt##97+, Riverpaw Outrunner##478+
+			.get 8 Painted Gnoll Armband##782|q 11/1
+			..collect 1 Gold Pickup Schedule##1307|q 123 |future |sticky
+			..accept The Collector##123
+		step
+			goto Elwynn Forest,24.2,74.4
+			.talk Deputy Rainer##963
+			..turnin Riverpaw Gnoll Bounty##11
+		step
+			goto Elwynn Forest,42.1,65.9
+			.talk Marshal Dughan##240
+			..turnin The Collector##123
+			..accept Manhunt##147
+			..turnin Wanted: "Hogger"##176
 		step
 			goto Elwynn Forest,43.2,89.6
 			.talk Maybell Maclure##251
@@ -207,7 +321,6 @@ startlevel 20
 		step
 			goto Elwynn Forest,42.1,65.9
 			.talk Marshal Dughan##240
-			..accept Westbrook Garrison Needs Help!##239
 			..turnin Deliver Thomas' Report##39
 			..accept Cloth and Leather Armor##59
 			..turnin Manhunt##147
@@ -216,60 +329,13 @@ startlevel 20
 			.talk Smith Argus##514
 			..accept Elmore's Task##1097
 		step
-			goto Stormwind City,63.8,73.6
-			.talk Renato Gallina##1432
-			..accept Wine Shop Advert##332
-		step
 			goto Stormwind City,63.2,74.4
 			.talk Morgan Pestle##279
 			..turnin Shipment to Stormwind##61
 		step
-			goto Stormwind City,62.3,67.9
-			.talk Harlan Bagley##1427
-			..accept Harlan Needs a Resupply##333
-		step
 			goto Stormwind City,59.7,33.8
 			.talk Grimand Elmore##1416
 			..turnin Elmore's Task##1097
-		//step
-		step
-			goto Stormwind City,58.1,67.5
-			.talk Rema Schneider##1428
-			..turnin Harlan Needs a Resupply##333
-			..accept Package for Thurman##334
-		step
-			goto Stormwind City,60.3,76.8
-			.talk Suzetta Gallina##1431
-			..turnin Wine Shop Advert##332
-		step
-			goto Stormwind City,52.6,83.4
-			.talk Thurman Schneider##1429
-			..turnin Package for Thurman##334
-		//heartstone step rec
-		step
-			goto Elwynn Forest,24.2,74.4
-			.talk Deputy Rainer##963
-			..turnin Westbrook Garrison Needs Help!##239
-			..accept Riverpaw Gnoll Bounty##11
-		step
-			goto Elwynn Forest,24.5,74.7
-			.talk Wanted Poster|n
-			..accept Wanted: "Hogger"##176
-		step
-			goto Elwynn Forest,26.4,93.7
-			.from Hogger##448+
-			.get 1 Huge Gnoll Claw##1931|q 176/1
-			goto Elwynn Forest,26.8,86.3
-			.from Riverpaw Outrunner##478+, Riverpaw Runt##97+
-			.get 8 Painted Gnoll Armband|q 11/1
-		step
-			goto Elwynn Forest,24.2,74.4
-			.talk Deputy Rainer##963
-			..turnin Riverpaw Gnoll Bounty##11
-		step
-			goto Westfall,60,19.4
-			.talk Farmer Furlbrow##237
-			..turnin Furlbrow's Deed##184
 		step
 			goto Elwynn Forest,42.1,65.9
 			.talk Marshal Dughan##240
@@ -278,6 +344,10 @@ startlevel 20
 			goto Elwynn Forest,79.5,68.8
 			.talk Sara Timberlain##278
 			..turnin Cloth and Leather Armor##59
+		step
+			goto Westfall,60,19.4
+			.talk Farmer Furlbrow##237
+			..turnin Furlbrow's Deed##184
 		step
 			.' Completed!|tip Use next guide - Westfall
 ]])
@@ -393,6 +463,8 @@ startlevel 25
 			.get 3 Okra|q 38/4|tip Do not sell to vendor!
 			.from Harvest Watcher##114+
 			.collect 5 Flask of Oil##814|q 103/1 |future
+			.' Flask of Oil needed on the future! Do not sell to vendor!
+			.collect 5 Hops##1274|q 117/1|future
 			.' You can find more Harvest Watchers|at 53.5,29.4|n
 			.' And a big spot on this field|at 44.87,35.68
 		step
@@ -400,13 +472,565 @@ startlevel 25
 			.from Young Goretusk##454+, Goretusk##157+, Great Goretusk##547+
 			.get 8 Goretusk Liver##723|q 22/1|tip Do not sell to vendor!
 			.get 3 Goretusk Snout##731|q 38/3|tip Do not sell to vendor!
-			Position 1|at 51.01,36.09
-			Position 2|at 59.60,43.53
+			.' Position 1|at 51.01,36.09
+			.' Position 2|at 59.60,43.53
 		step
 			goto Westfall,59.05,61.74
 			.from Young Fleshripper##199+, Fleshripper##1109+, Greater Fleshripper##154+
 			.get 3 Stringy Vulture Meat##729|q 38/1|tip Do not sell to vendor!
 		step
+			goto Westfall,56.0,31.2
+			.talk Farmer Saldean##233
+			..turnin The Killing Fields##9
+		step
+			goto Westfall,56.4,30.5
+			.talk Salma Saldean##235
+			..turnin Goretusk Liver Pie##22
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin Report to Gryan Stoutmantle##109
+			..accept The People's Militia (1)##12
+			.talk Captain Danuvin##821
+			..accept Patrolling Westfall##102
+		step
+			goto Westfall,54,53
+			.talk Scout Galiaan##878
+			..accept Red Leather Bandanas##153
+		step
+			goto Westfall,50.97,46.86
+			.kill 15 Defias Trapper##504|q 12/1
+			.kill 15 Defias Smuggler##95|q 12/2
+			.collect 15 Red Leather Bandana##829|q 153/1
+			.' Position 1|at 48.65,46.42
+			.' Position 2|at 46.42,38.59
+			.' Position 3|at 50.79,40.61
+		step
+			goto Westfall,57.19,13.32
+			.from Riverpaw Gnoll##117, Riverpaw Brute##124, Riverpaw Overseer##125, Riverpaw Bandit##452, Riverpaw Mystic##453, Riverpaw Scout##500, Riverpaw Herbalist##501
+			.get 8 Gnoll Paw##725|q 102/1
+			.' Position 1|at 52.07,15.41
+			.' Position 2|at 44.9,15
+		step
+			goto Westfall,55.17,9.90
+			.from Murloc Coastrunner##126, Murloc Tidehunter##127, Murloc Warrior##171, Murloc Minor Oracle##456, Murloc Hunter##458, Murloc Raider##515, Murloc Oracle##517
+			.get 3 Murloc Eye|q 38/2
+			.' Position 1|at 44.3,9.07
+			.' Position 2|at 35.20,21.60
+			.' Position 3|at 27.6,40.5
+			.' Position 4|at 27.56,70.08
+			.' Wait drop on murloc Sanders' Treasure Map
+			..accept Captain Sanders' Hidden Treasure (1)##136|use Captain Sanders' Treasure Map##1357
+		step
+			goto Westfall,56.4,30.5
+			.talk Salma Saldean##235
+			..turnin Westfall Stew(2)##38
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin The People's Militia (1)##12
+			..accept The People's Militia (2)##13
+		step
+			goto Westfall,56.4,47.6
+			.talk Captain Danuvin##821
+			..turnin Patrolling Westfall##102
+		step
+			goto Westfall,54,53
+			.talk Scout Galiaan##878
+			..turnin Red Leather Bandanas##153
+		step
+			goto Westfall,36.4,56.67
+			.' Open chest in destroying home
+			.collect A Simple Compass##1998|q 399/1
+		step
+			goto Westfall,25.9,47.8
+			.' Click Footlocker
+			..turnin Captain Sanders' Hidden Treasure (1)##136
+			..accept Captain Sanders' Hidden Treasure (2)##138
+		step
+			goto Westfall,40.5,47.8
+			.' Click Broken Barrel
+			..turnin Captain Sanders' Hidden Treasure (2)##138
+			..accept Captain Sanders' Hidden Treasure (3)##139
+		step
+			goto Westfall,40.6,17
+			.' Click Old Jug
+			..turnin Captain Sanders' Hidden Treasure (3)##139
+			..accept Captain Sanders' Hidden Treasure (4)##140
+		step
+			goto Westfall,26,16.9
+			.' Click Locked Chest
+			..turnin Captain Sanders' Hidden Treasure (4)##140
+		step
+			goto Westfall,31.4,44.5
+			.kill 15 Defias Looter|q 13/2
+			.kill 15 Defias Pillager|q 13/1
+			.' Position 1|at 37.1,54.8
+			.' Position 2|at 43,69
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin The People's Militia (2)##13
+			..accept The People's Militia (3)##14
+		step
+			goto Westfall,52.6,72.3
+			.kill 15 Defias Highwayman|q 14/1
+			.kill 5 Defias Pathstalker|q 14/2
+			.kill 5 Defias Knuckleduster|q 14/3
+		step
+			goto Westfall,44.6,80.3
+			.talk Grimbooze Thunderbrew##239
+			..accept Sweet Amber##48
+			..accept Thunderbrew Lager##117
+		step
+			goto Westfall,47.19,67.48
+			.from Harvest Golem##36, Harvest Watcher##114
+			.get 5 Hops##1274|q 117/1
+			.' Position 1|at 38.9,52.6
+		step
+			goto Westfall,44.6,80.3
+			.talk Grimbooze Thunderbrew##239
+			..turnin Thunderbrew Lager##117
+		step
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Teldrassil",[[
+author danaton
+description This guide contain quest-chain (47 quests) for Teldrassil Night Elf location.
+startlevel 20
+		step
+			goto Teldrassil,58.7,44.3
+			.talk Conservator Ilthalaine##2079
+			..accept The Balance of Nature (1)##456
+		step
+			goto Teldrassil,58.5,45.9
+			.kill 7 Young Nightsaber|q 456/1
+			.kill 4 Young Thistle Boar|q 456/2
+		step
+			goto Teldrassil,58.7,44.3
+			.talk Conservator Ilthalaine##2079
+			..turnin The Balance of Nature (1)##456
+			..accept The Balance of Nature (2)##457
+		step
+			goto Teldrassil,59.9,42.5
+			.talk Melithar Staghelm##2077
+			..accept The Woodland Protector (1)##458
+		step
+			goto Teldrassil,60.9,42
+			.talk Dirania Silvershine##8583
+			..accept A Good Friend##4495
+		step
+			goto Teldrassil,57.6,45.3
+			.talk Tarindrella##1992
+			..turnin The Woodland Protector (1)##458
+			..accept The Woodland Protector (2)##459
+		step
+			goto Teldrassil,56.5,45.5
+			.from Grell##1988+, Grellkin##1989+
+			.get 8 Fel Moss|q 459/1
+			.' POS-Spot|at Teldrassil,54.47,39.24
+		step
+			goto Teldrassil,57.6,45.3
+			.talk Tarindrella##1992
+			..turnin The Woodland Protector (2)##459
+		step
+			goto Teldrassil,57.8,41.7
+			.talk Gilshalan Windwalker##2082
+			..accept Webwood Venom##916
+		step
+			goto Teldrassil,58.8,36.8
+			.kill 7 Mangy Nightsaber|q 457/1
+			.kill 7 Thistle Boar|q 457/2
+		step
+			goto Teldrassil,58.3,32.9
+			.from Webwood Spider##1986+
+			.get 10 Webwood Venom Sac|q 916/1
+		step
+			goto Teldrassil,54.6,33
+			.talk Iverron##8584
+			..turnin A Good Friend##4495
+			..accept A Friend in Need##3519
+		step
+			goto Teldrassil,57.8,41.7
+			.talk Gilshalan Windwalker##2082
+			..turnin Webwood Venom##916
+			..accept Webwood Egg##917
+		step
+			goto Teldrassil,58.7,44.3
+			.talk Conservator Ilthalaine##2079
+			..turnin The Balance of Nature (2)##457
+		step
+			goto Teldrassil,60.9,42
+			.talk Dirania Silvershine##8583
+			..turnin A Friend in Need##3519
+			..accept Iverron's Antidote (1)##3521
+		step
+			goto Teldrassil,55.2,39.6
+			.from Grell##1988+, Grellkin##1989+
+			.get 7 Hyacinth Mushroom|q 3521/1
+		step
+			goto Teldrassil,57.7,38.5
+			.' Click Moonpetal Lilies|tip The Moonpetal Lillies look like tall flower with orange petals around the pond here.
+			.get 4 Moonpetal Lily|q 3521/2
+		step
+			goto Teldrassil,56.7,32.1
+			.from Webwood Spider##1986+
+			.get Webwood Ichor|q 3521/3
+		step
+			.'Go into the cave at 56.8,31.7|goto 56.8,31.7|n
+			.' Follow the path in the middle, then go left
+			.' Go up to the ledge above|goto Teldrassil,55.8,25.5,0.5|c
+		step
+			goto Teldrassil,56.7,26.4
+			.' Click a Webwood Egg
+			.get Webwood Egg|q 917/1
+		step
+			goto Teldrassil,57.8,41.7
+			.talk Gilshalan Windwalker##2082
+			..turnin Webwood Egg##917
+			..accept Tenaron's Summons##920
+		step
+			.'Follow the ramp to the top of the tree|goto Teldrassil,59.4,39.0,0.5|noway|c
+		step
+			goto Teldrassil,59.1,39.4
+			.talk Tenaron Stormgrip##3514
+			..turnin Tenaron's Summons##920
+			..accept Crown of the Earth (1)##921
+		step
+			goto Teldrassil,60.9,42
+			.talk Dirania Silvershine##8583
+			..turnin Iverron's Antidote (1)##3521
+			..accept Iverron's Antidote (2)##3522
+		step
+			goto Teldrassil,54.6,33
+			.talk Iverron##8584
+			..turnin Iverron's Antidote (2)##3522
+		step
+			goto Teldrassil,59.9,33.1
+			.' Use your Crystal Phial in the moonwell water|use Crystal Phial##5185
+			.get Filled Crystal Phial|q 921/1
+		step
+			goto Teldrassil,59.1,39.4
+			.talk Tenaron Stormgrip##3514
+			..'Go to the top of the big tree
+			..turnin Crown of the Earth (1)##921
+			..accept Crown of the Earth (2)##928
+		step
+			goto Teldrassil,61.2,47.6
+			.talk Porthannius##6780
+			..accept Dolanaar Delivery##2159
+		step
+			goto Teldrassil,60.4,56.3
+			.talk Zenn Foulhoof##2150
+			..accept Zenn's Bidding##488
+		step
+			goto Teldrassil,63.8,54.2
+			.from Strigid Owl##1995+
+			.get 3 Strigid Owl Feather|q 488/2
+		step
+			goto Teldrassil,60.6,58.2
+			.from Webwood Lurker##1998+
+			.get 3 Webwood Spider Silk|q 488/3
+			.from Nightsaber##2042+
+			.get 3 Nightsaber Fang|q 488/1
+		step
+			goto Teldrassil,60.4,56.3
+			.talk Zenn Foulhoof##2150
+			..turnin Zenn's Bidding##488
+		step
+			goto Teldrassil,56.1,57.7
+			.talk Syral Bladeleaf##2083
+			..accept Seek Redemption!##489
+			..accept Denalan's Earth##997
+		step
+			goto Teldrassil,56,57.3
+			.talk Athridas Bearmantle##2078
+			..accept A Troubling Breeze##475
+		step
+			goto Teldrassil,55.6,56.9
+			.talk Tallonkai Swiftroot##3567
+			..accept The Emerald Dreamcatcher##2438
+			..accept Twisted Hatred##932
+		step
+			goto Teldrassil,55.6,59.8
+			.talk Innkeeper Keldamyr##6736
+			..turnin Dolanaar Delivery##2159
+		step
+			goto Teldrassil,56.1,61.7
+			.talk Corithras Moonrage##3515
+			..turnin Crown of the Earth (2)##928
+			..accept Crown of the Earth (3)##929
+		step
+			goto Teldrassil,63.3,58.1
+			.' Use your Jade Phial in the moonwell water|use Jade Phial##5619
+			.get Filled Jade Phial|q 929/1
+		step
+			goto Teldrassil,66.3,58.5
+			.talk Gaerolas Talvethren##2107
+			..turnin A Troubling Breeze##475
+			..accept Gnarlpine Corruption##476
+		step
+			goto Teldrassil,68,59.6
+			.' Click Tallonkai's Dresser|tip To the right in the small house.
+			.get Emerald Dreamcatcher|q 2438/1
+		step
+			goto Teldrassil,63.6,62.3
+			.' Click Fel Cones|tip They are big, brown, green smoking pine cones at the base of trees.
+			.get 3 Fel Cone|q 489/1
+		step
+			goto Teldrassil,56,57.3
+			.talk Athridas Bearmantle##2078
+			..turnin Gnarlpine Corruption##476
+			..accept The Relics of Wakening##483
+		step
+			goto Teldrassil,55.6,56.9
+			.talk Tallonkai Swiftroot##3567
+			..turnin The Emerald Dreamcatcher##2438
+			..accept Ferocitas the Dream Eater##2459
+		step
+			goto Teldrassil,56.1,61.7
+			.talk Corithras Moonrage##3515
+			..turnin Crown of the Earth (3)##929
+			..accept Crown of the Earth (4)##933
+		step
+			goto Teldrassil,60.4,56.3
+			.talk Zenn Foulhoof##2150
+			..turnin Seek Redemption!##489
+		step
+			goto Teldrassil,60.9,68.5
+			.talk Denalan##2080
+			..turnin Denalan's Earth##997
+			..accept Timberling Seeds##918
+			..accept Timberling Sprouts##919
+		step
+			goto Teldrassil,61.2,66.8
+			.from Timberling##2022+
+			.get 8 Timberling Seed|q 918/1
+			.' Click Timberling Sprouts|tip They are brown and green bulbs on the ground.
+			.get 12 Timberling Sprout|q 919/1
+		step
+			goto Teldrassil,60.9,68.5
+			.talk Denalan##2080
+			..turnin Timberling Seeds##918
+			..accept Rellian Greenspyre##922
+			..turnin Timberling Sprouts##919
+		step
+			goto Teldrassil,68.3,53.7
+			.kill 7 Gnarlpine Mystic|q 2459/1
+		step
+			goto Teldrassil,69.4,53.3
+			.from Ferocitas the Dream Eater##7234
+			.get Gnarlpine Necklace|n
+			.' Click the Gnarlpine Necklace|use Gnarlpine Necklace##8049
+			.get Tallonkai's Jewel|q 2459/2
+		step
+			.'Go to the top of the tower to 55.6,56.9|goto 55.6,56.9
+			.talk Tallonkai Swiftroot##3567
+			..turnin Ferocitas the Dream Eater##2459
+		step
+			goto Teldrassil,52.4,56.5
+			.talk Moon Priestess Amara##2151
+			..accept The Road to Darnassus##487
+		step
+			goto Teldrassil,46.7,53.5
+			.kill 6 Gnarlpine Ambusher|q 487/1
+		step
+			.'Go southwest into the cave at 44.4,57.8|goto Teldrassil,44.4,57.8,0.5|c
+		step
+			goto Teldrassil,43.7,61.2
+			.' Click the Chest of the Black Feather|tip On the top floor of the cave, across the bridge to the right, in the small room, on the right on the ground.
+			.get Black Feather Quill|q 483/2
+		step
+			goto Teldrassil,44.4,60.7
+			.' Click the Chest of Nesting|tip On the top floor of the cave, across the middle bridge, on the ground to the right in the small room.
+			.get Rune of Nesting|q 483/4
+		step
+			.'Go downstairs to 44.9,61.6|goto 44.9,61.6
+			.talk Oben Rageclaw##7317
+			..accept The Sleeping Druid##2541
+		step
+			.'Go to the next room over to 45.6,58.7|goto 45.6,58.7
+			.from Gnarlpine Shaman##2009+
+			.get Shaman Voodoo Charm|q 2541/1
+		step
+			goto Teldrassil,45.7,57.4
+			.' Click the Chest of the Raven Claw|tip At the bottom of the cave, up across the bridge, on a ledge.
+			.get Raven Claw Talisman|q 483/1
+		step
+			goto Teldrassil,44.9,61.6
+			.talk Oben Rageclaw##7317
+			..turnin The Sleeping Druid##2541
+			..accept Druid of the Claw##2561
+		step
+			goto 45.6,58.7
+			.kill Rageclaw##7318|n
+			.' Use the Voodoo Charm on his corpse|use Voodoo Charm##8149
+			.' Release Oben Rageclaw's spirit|goal Release Oben Rageclaw's spirit|q 2561/1
+		step
+			.'Go through the tunnel back to where Oben Rageclaw is to 44.7,62.5|goto 44.7,62.5
+			.' Click the Chest of the Sky|tip Down the path at the bottom of the cave, next to Greenpaw.
+			.get Sapphire of Sky|q 483/3
+		step
+			.'Go back up the path to 44.9,61.6|goto 44.9,61.6
+			.talk Oben Rageclaw##7317
+			..turnin Druid of the Claw##2561
+		step
+			goto Teldrassil,42.4,67.1
+			.' Use your Tourmaline Phial in the moonwell water|use Tourmaline Phial##5621
+			.get Filled Tourmaline Phial|q 933/1
+		step
+			goto Teldrassil,42.6,76.1
+			.' Click the Strange Fruited Plant|tip It looks like a big pink glowing plant.
+			..accept The Glowing Fruit##930
+		step
+			goto Teldrassil,60.9,68.5
+			.talk Denalan##2080
+			..turnin The Glowing Fruit##930
+		step
+			goto Teldrassil,56,57.3
+			.talk Athridas Bearmantle##2078
+			..turnin The Relics of Wakening##483
+			..accept Ursal the Mauler##486
+		step
+			.'Go north to Fel Rock|goto Teldrassil,54.7,52.8,0.5|c
+		step
+			.'Go inside the cave to 52.8,50.2|goto 52.8,50.2
+			.from Lord Melenas##2038
+			.get Melenas' Head|q 932/1
+		step
+			'Go outside and go to the top of the tower to 55.6,56.9|goto 55.6,56.9
+			.talk Tallonkai Swiftroot##3567
+			..turnin Twisted Hatred##932
+		step
+			goto Teldrassil,56.1,61.7
+			.talk Corithras Moonrage##3515
+			..turnin Crown of the Earth (4)##933
+			..accept Crown of the Earth (5)##7383
+		step
+			goto Teldrassil,52.4,56.5
+			.talk Moon Priestess Amara##2151
+			..turnin The Road to Darnassus##487
+		step
+			goto Teldrassil,38.3,34.4
+			.talk Sentinel Arynia Cloudsbreak##3519
+			..accept The Enchanted Glade##937
+		step
+			goto Teldrassil,38.4,34.1
+			.' Click the Amethyst Phial in your bags|use Amethyst Phial##18152
+			.get Filled Amethyst Phial|q 7383/1
+		step
+			goto 37.4,37.3
+			.from Bloodfeather Rogue##2017+, Bloodfeather Sorceress##2018+, Bloodfeather Harpy##2015+
+			.get 6 Bloodfeather Belt|q 937/1
+		step
+			goto Teldrassil,38.3,34.4
+			.talk Sentinel Arynia Cloudsbreak##3519
+			..turnin The Enchanted Glade##937
+			..accept Teldrassil##940
+		step
+			goto Teldrassil,34.7,29
+			.' Click the Strange Fronded Plant|tip It's a big glowing pink plant up on a hill.
+			..accept The Shimmering Frond##931
+		step
+			goto Teldrassil,31.5,31.6
+			.talk Mist##3568
+			..accept Mist##938
+		step
+			goto Teldrassil,38.3,34.4
+			.' Lead Mist safely to Sentinel Arynia Cloudsbreak|goal Lead Mist safely to Sentinel Arynia Cloudsbreak|q 938/1
+		step
+			goto Teldrassil,38.3,34.4
+			.talk Sentinel Arynia Cloudsbreak##3519
+			..turnin Mist##938
+		step
+			goto Teldrassil,39.2,80.1
+			.kill Ursal the Mauler##2039|q 486/1
+		step
+			goto Teldrassil,60.9,68.5
+			.talk Denalan##2080
+			..turnin The Shimmering Frond##931
+		step
+			goto Teldrassil,56.1,61.7
+			.talk Corithras Moonrage##3515
+			..turnin Crown of the Earth (5)##7383
+			..accept Crown of the Earth (6)##935
+		step
+			goto Teldrassil,56,57.3
+			.talk Athridas Bearmantle##2078
+			..turnin Ursal the Mauler##486
+		step
+			goto Darnassus,70.7,45.4
+			.talk Mydrannul##4241
+			..accept Nessa Shadowsong##6344
+		step
+			goto Darnassus,38.2,21.6
+			.talk Rellian Greenspyre##3517
+			..turnin Rellian Greenspyre##922
+			..accept Tumors##923
+		step
+			goto Darnassus,35.1,9.1
+			.talk Arch Druid Fandral Staghelm##3516
+			..turnin Crown of the Earth (6)##935
+			..turnin Teldrassil##940
+			..accept Grove of the Ancients##952
+		step
+			goto Teldrassil,42.5,33
+			.from Timberling Trampler##2027+, Timberling Mire Beast##2029+, Elder Timberling##2030+
+			.get 5 Mossy Tumor##5170|q 923/1
+		step
+			goto Darnassus,38.2,21.6
+			.talk Rellian Greenspyre##3517
+			..turnin Tumors##923
+			..accept Return to Denalan##2498
+		step
+			goto Teldrassil,60.9,68.5
+			.talk Denalan##2080
+			..turnin Return to Denalan##2498
+			..accept Oakenscowl#2499
+		step
+			goto Teldrassil,53.8,75.1
+			.from Oakenscowl##2166
+			.get 1 Gargantuan Tumor##8136|q 2499/1
+		step
+			goto Teldrassil,60.9,68.5
+			.talk Denalan##2080
+			..turnin Oakenscowl##2499
+		step
+			.' Go into the pink portal to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+		step
+			goto Teldrassil,56.3,92.4
+			.talk Nessa Shadowsong##10118
+			..turnin Nessa Shadowsong##6344
+			..accept The Bounty of Teldrassil##6341
+		step
+			goto Teldrassil,58.4,94
+			.talk Vesprystus##3838
+			..turnin The Bounty of Teldrassil##6341
+			..accept Flight to Auberdine##6342
+		step
+			goto Teldrassil,58.4,94
+			.talk Vesprystus##3838
+			.'Fly to Auberdine|goto Darkshore,36.4,45.6,0.5|noway|c
+		step
+			goto Darkshore,36.8,44.3
+			.talk Laird##4200
+			..turnin Flight to Auberdine##6342
+			..accept Return to Nessa##6343
+		step
+			goto Darkshore,36.3,45.6
+			.talk Caylais Moonfeather##3841
+			.'Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+		step
+			goto Teldrassil,56.3,92.4
+			.talk Nessa Shadowsong##10118
+			..turnin Return to Nessa##6343
+		step
+			goto Darkshore,43.6,76.3
+			.talk Onu##3616
+			..turnin Grove of the Ancients##952
+			.' This quest can be turning in the following quest-guide - Darkshore
+		step
+			.' Completed!|tip Use next guide - Darkshore
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Darkshore",[[
@@ -1050,6 +1674,767 @@ startlevel 20
 			goto Wetlands,10.8,60.4
 			.talk Archaeologist Flagongut##2911
 			..turnin The Absent Minded Prospector (5)##943
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Hellfire Peninsula",[[
+author danaton
+description This guide contain quest-chain (81 quests) for Hellfire Peninsula location.
+startlevel 70
+		step
+			.'Go inside Nethergarde Keep at 63.5,17|goto Blasted Lands,63.5,17
+			.talk Bernie Heisten##3546
+			..buy 1 Nethergarde Bitter|q 9563/1
+			.' Manually skip this step! For future quest needed!
+		step
+			goto 58.3,55.9
+			.talk Watch Commander Relthorn Netherwane##16841
+			..accept Through the Dark Portal##10119
+		step
+			.'Go into the big green portal to the Outlands|goto Hellfire Peninsula|noway|c
+		step
+			goto Hellfire Peninsula,87.3,50.7
+			.talk Commander Duron##19229
+			..turnin Through the Dark Portal##10119
+			..accept Arrival in Outland##10288
+		step
+			goto Hellfire Peninsula,87.4,52.4
+			.talk Amish Wildhammer##18931
+			..turnin Arrival in Outland##10288
+			..accept Journey to Honor Hold##10140
+		step
+			goto Hellfire Peninsula,87.4,52.4
+			.talk Amish Wildhammer##18931
+			.'Fly to Honor Hold|goto Hellfire Peninsula,54.6,62.6,0.5|noway|c
+		step
+			goto Hellfire Peninsula,54.5,62.8
+			.talk Marshal Isildor##19308
+			..turnin Journey to Honor Hold##10140
+			..accept Force Commander Danath##10254
+		step
+			goto Hellfire Peninsula,54.2,63.6
+			.talk Sid Limbardi##16826
+			home Honor Hold
+		step
+			goto Hellfire Peninsula,56.6,66.7
+			.talk Force Commander Danath Trollbane##16819
+			..turnin Force Commander Danath##10254
+			..accept The Legion Reborn##10141
+			..accept Know your Enemy##10160
+		step
+			goto Hellfire Peninsula,51.2,60
+			.talk Dumphry##21209
+			..accept Waste Not, Want Not##10055
+		step
+			goto Hellfire Peninsula,50.9,60.2
+			.talk Lieutenant Amadi##16820
+			..turnin Know your Enemy##10160
+			..accept Fel Orc Scavengers##10482
+		step
+			goto Hellfire Peninsula,61.7,60.8
+			.talk Sergeant Altumus##19309
+			..turnin The Legion Reborn##10141
+			..accept The Path of Anguish##10142
+		step
+			goto Hellfire Peninsula,60.4,52.1
+			.' Click the Salvaged Metal and Wood|They are scraps on the ground around this area.
+			.get 8 Salvaged Metal|q 10055/1
+			.get 8 Salvaged Wood|q 10055/2
+			.kill 20 Bonechewer Orc|q 10482/1
+		step
+			goto Hellfire Peninsula,65.8,54.1
+			.' Be on the lookout for the giant Fel Reaver
+			.kill 1 Dreadcaller|q 10142/1
+			.kill 4 Flamewaker Imp|q 10142/2
+			.kill 6 Infernal Warbringer|q 10142/3
+		step
+			goto Hellfire Peninsula,61.7,60.8
+			.talk Sergeant Altumus##19309
+			..turnin The Path of Anguish##10142
+			..accept Expedition Point##10143
+		step
+			goto Hellfire Peninsula,51.2,60
+			.talk Dumphry##21209
+			..turnin Waste Not, Want Not##10055
+			..accept Laying Waste to the Unwanted##10078
+		step
+			goto Hellfire Peninsula,50.9,60.2
+			.talk Lieutenant Amadi##16820
+			..turnin Fel Orc Scavengers##10482
+			..accept Ill Omens##10483
+		step
+			goto Hellfire Peninsula,71.3,62.8
+			.talk Forward Commander Kingston##19310
+			..turnin Expedition Point##10143
+			..accept Disrupt Their Reinforcements##10144
+		step
+			goto Hellfire Peninsula,72.0,59.6
+			.from Netherhound##16950+, Wrathguard##18975+, Doomwhisperer##18981+, Fel Handler##19190+
+			.collect 4 Demonic Rune Stone##28513|q 10144
+		step
+			goto Hellfire Peninsula,72.7,59
+			.' Stand inside the portal and click it to destroy it|goal Disrupt Portal Kaalez|q 10144/2
+		step
+			goto Hellfire Peninsula,71.7,56.4
+			.from Netherhound##16950+, Wrathguard##18975+, Doomwhisperer##18981+, Fel Handler##19190+
+			.collect 4 Demonic Rune Stone##28513|q 10144
+		step
+			goto Hellfire Peninsula,71.4,55.2
+			.' Stand inside the portal and click it to destroy it|goal Disrupt Portal Grimh|q 10144/1
+		step
+			goto Hellfire Peninsula,71.3,62.8
+			.talk Forward Commander Kingston##19310
+			..turnin Disrupt Their Reinforcements##10144
+			..accept Mission: The Murketh and Shaadraz Gateways##10146
+		step
+			goto Hellfire Peninsula,71.3,62.8
+			.talk Wing Commander Dabir'ee##19409
+			..'Take the flight
+			..'Click the bomb in your bags, bomb Gateway Shaadraz|goal Gateway Shaadraz Destroyed|q 10146/2|use Seaforium PU-36 Explosive Nether Modulator##28038
+			..'Click the bomb in your bags, bomb Gateway Murketh|goal Gateway Murketh Destroyed|q 10146/1|use Seaforium PU-36 Explosive Nether Modulator##28038
+		step
+			goto Hellfire Peninsula,71.4,62.7
+			.talk Forward Commander Kingston##19310
+			..turnin Mission: The Murketh and Shaadraz Gateways##10146
+			..accept Shatter Point##10340
+		step
+			goto Hellfire Peninsula,71.4,62.5
+			.talk Wing Commander Dabir'ee##19409
+			..'Fly to Shatter Point|goto Hellfire Peninsula,78.5,35.1,1|noway|c
+		step
+			goto Hellfire Peninsula,78.4,34.9
+			.talk Runetog Wildhammer##20234
+			..fpath Shatter Point, Hellfire Peninsula
+		step
+			goto Hellfire Peninsula,78.4,34.9
+			.talk Runetog Wildhammer##20234
+			..turnin Shatter Point##10340
+			..accept Wing Commander Gryphongar##10344
+		step
+			goto Hellfire Peninsula,79.3,33.9
+			.talk Wing Commander Gryphongar##20232
+			..turnin Wing Commander Gryphongar##10344
+			..accept Mission: The Abyssal Shelf##10163
+		step
+			goto Hellfire Peninsula,78.3,34.5
+			.talk Gryphoneer Windbellow##20235
+			.' Take a flight to the Abyssal Shelf
+			.' Use the Area 52 Special bomb in your bags to bomb the mobs|use Area 52 Special##28132|tip If you don't complete this in the first run, you can keep flying until it's done.
+			..kill 20 Gan'arg Peon|q 10163/1
+			..kill 5 Mo'arg Overseer|q 10163/2
+			..'Destroy 5 Fel Cannons|goal 5 Fel Cannon Destroyed|q 10163/3
+		step
+			goto Hellfire Peninsula,79.3,33.9
+			.talk Wing Commander Gryphongar##20232
+			..turnin Mission: The Abyssal Shelf##10163
+			..accept Go to the Front##10382
+		step
+			goto Hellfire Peninsula,78.3,34.5|n
+			.talk Gryphoneer Windbellow##20235
+			..'Fly to Honor Point|goto Hellfire Peninsula,68.7,28.2,1|noway|c
+		step
+			goto Hellfire Peninsula,68.3,28.6
+			.talk Field Marshal Brock##20793
+			..turnin Go to the Front##10382
+			..accept Disruption - Forge Camp: Mageddon##10394
+		step
+			goto Hellfire Peninsula,64.8,31.9
+			.kill Razorsaw##20798|q 10394/2
+			.' Wanders, resurrection time 5 minutes
+		step
+			goto Hellfire Peninsula,59.14,32.20
+			.kill 10 Gan'arg Servant##16947|q 10394/1
+		step
+			goto Hellfire Peninsula,68.3,28.6
+			.talk Field Marshal Brock##20793
+			..turnin Disruption - Forge Camp: Mageddon##10394
+			..accept Enemy of my Enemy...##10396
+		step
+			goto Hellfire Peninsula,63.4,32.5
+			.kill 3 Fel Cannon MKI##22461|q 10396/1
+			.' Spot 2|at 57.8,32.1
+			.' Spot 3|at 52.4,82.1
+		step
+			goto Hellfire Peninsula,68.3,28.6
+			.talk Field Marshal Brock##20793
+			..turnin Enemy of my Enemy...##10396
+			..accept Invasion Point: Annihilator##10397
+		step
+			goto Hellfire Peninsula,53.1,26.5
+			.from Warbringer Arix'Amal##19298
+			.get Burning Legion Gate Key##29795|q 10397/3
+		step
+			.' Use Burning Legion Missive|use Burning Legion Missive##29588
+			..accept The Dark Missive##10395
+		step
+			goto Hellfire Peninsula,53,27.6
+			.' Close Burning Legion Gate|q 10397/2
+		step
+			goto Hellfire Peninsula,51.4,30.5
+			.talk Foreman Razelcraz##16915
+			..accept Outland Sucks!##10236
+		step
+			goto Hellfire Peninsula,48.64,38.58
+			.collect 6 Shredder Spare Parts##28554|q 10236/1
+			.' Spot 2|at 46.7,42.3
+		step
+			goto Hellfire Peninsula,51.4,30.5
+			.talk Foreman Razelcraz##16915
+			..turnin Outland Sucks!##10236
+			..accept How to Serve Goblins##10238
+		step
+			goto Hellfire Peninsula,45.12,41
+			.' Rescue Manni|q 10238/1
+		step
+			goto Hellfire Peninsula,46.46,45.15
+			.' Rescue Moh|q 10238/2
+		step
+			goto Hellfire Peninsula,47.53,46.62
+			.' Rescue Jakk|q 10238/3
+		step
+			goto Hellfire Peninsula,51.4,30.5
+			.talk Foreman Razelcraz##16915
+			..turnin How to Serve Goblins##10238
+			..accept Shizz Work##10629
+		step
+			goto Hellfire Peninsula,49.3,29.6
+			.' Use Felhound Whistle|use Felhound Whistle##30803
+			.from Deranged Helboar##16863
+			.collect Shredder Keys##30794|q 10629/1
+			.' Use the Felhound Whistle to summon a Fel Guard Hound. Take the Fel Guard Hound for a walk and kill some Deranged Helboars. Search for the Shredder Keys in the Fel Guard Hound's "leavings."
+		step
+			goto Hellfire Peninsula,51.4,30.5
+			.talk Foreman Razelcraz##16915
+			..turnin Shizz Work##10629
+			..accept Beneath Thrallmar##10630
+		step
+			goto Hellfire Peninsula,54.4,31.6
+			.kill Urga'zz##18976|q 10630/1
+			.' Urga'zz inside the mine.
+		step
+			goto Hellfire Peninsula,51.4,30.5
+			.talk Foreman Razelcraz##16915
+			..turnin Beneath Thrallmar##10630
+		step
+			goto Hellfire Peninsula,68.3,28.6
+			.talk Field Marshal Brock##20793
+			..turnin Invasion Point: Annihilator##10397
+		step
+			goto Hellfire Peninsula,54.3,63.4
+			.talk Father Malgor Devidicus##16825
+			..accept An Old Gift##10058
+			.talk Sid Limbardi##16826
+			..accept The Longbeards##9558
+		step
+			goto Hellfire Peninsula,56.7,66.5
+			.talk Warp-Scryer Kryv##16839
+			..turnin The Dark Missive##10395
+			..accept The Heart of Darkness##10399
+			..accept The Path of Glory##10047
+			.talk Force Commander Danath Trollbane##16819
+			..accept Overlord##10400
+		step
+			goto Hellfire Peninsula,50.9,60.2
+			.talk Honor Guard Wesilow##16827
+			..accept Unyielding Souls##10050
+		step
+			goto Hellfire Peninsula,52,62.6
+			.talk Foreman Biggums##16837
+			..accept A Job for an Intelligent Man##9355
+			..accept When This Mine's a-Rockin'##10079
+		step
+			.'Go inside the cave to 54.9,62.9|goto 54.9,62.9
+			.kill 12 Gan'arg Sapper|q 10079/1
+		step
+			.'Go outside the cave to 52,62.6|goto 52,62.6
+			.talk Foreman Biggums##16837
+			..turnin When This Mine's a-Rockin'##10079
+			..accept The Mastermind##10099
+		step
+			.'Go inside the cave to 56.3,61.4|goto 56.3,61.4
+			.kill Z'kral|q 10099/1|tip He is all the way at the bottom of the cave way in the back of the big room.
+		step
+			'Go outside the cave to 52,62.6|goto 52,62.6
+			.talk Foreman Biggums##16837
+			..turnin The Mastermind##10099
+		step
+			goto Hellfire Peninsula,66.1,48.8
+			.' Click the Trampled Skeletons|tip They look like little brown ribcages and spines.  You will find them on the grey road.  They are very easy to miss, but once you find one you will find them really fast.
+			.' Cleanse 8 Trampled Skeletons|goal 8 Cleanse Trampled Skeleton|q 10047/1
+		step
+			goto Hellfire Peninsula,58.7,47
+			.' Use your Flaming Torch on the Eastern Thrower to burn it|goal Eastern Thrower Burned|q 10078/1|use Flaming Torch##26002|tip It's a big catapult.
+		step
+			goto Hellfire Peninsula,55.9,46.7
+			.' Use your Flaming Torch on the Central Eastern Thrower to burn it|goal Central Eastern Thrower Burned|q 10078/2|use Flaming Torch##26002|tip It's a big catapult.
+		step
+			goto Hellfire Peninsula,53.5,47.2
+			.' Use your Flaming Torch on the Central Western Thrower to burn it|goal Central Western Thrower Burned|q 10078/3|use Flaming Torch##26002|tip It's a big catapult.
+		step
+			goto Hellfire Peninsula,52.8,47.1
+			.' Use your Flaming Torch on the Western Thrower to burn it|goal Western Thrower Burned|q 10078/4|use Flaming Torch##26002|tip It's a big catapult.
+		step
+			goto Hellfire Peninsula,65.8,67.2
+			.from Bleeding Hollow Grunt##16871, Bleeding Hollow Peon##16907, Bleeding Hollow Necrolyte##19422, Bleeding Hollow Tormentor##19424
+			.get Cursed Talisman|q 10483/1
+		step
+			goto Hellfire Peninsula,71,63.4
+			.talk Corporal Ironridge##21133
+			..turnin Ill Omens##10483
+			..accept Cursed Talismans##10484
+		step
+			goto Hellfire Peninsula,55,86.8
+			.' Click the small book|tip It's a small white book laying on the steps of the house.
+			.get Mysteries of the Light|q 10058/1
+		step
+			goto Hellfire Peninsula,58,79
+			.kill 10 Unyielding Sorcerer|q 10050/2
+			.kill 5 Unyielding Knight|q 10050/3
+			.kill 12 Unyielding Footman|q 10050/1
+		step
+			goto Hellfire Peninsula,49.2,74.8
+			.talk "Screaming" Screed Luckheed##19367
+			..accept In Case of Emergency...##10161
+			.talk Legassi##19344
+			..accept Ravager Egg Roundup##9349
+		step
+			goto Hellfire Peninsula,41.2,84.4
+			.' Click Ravenger Eggs|tip They look like big white eggs on the ground around this area.
+			.from Razorfang Hatchling##16932+, Razorfang Ravager##16933+, Quillfang Skitterer##19189+
+			.get 12 Ravager Egg|q 9349/1
+		step
+			goto Hellfire Peninsula,49.2,74.8
+			.talk Legassi##19344
+			..turnin Ravager Egg Roundup##9349
+			..accept Helboar, the Other White Meat##9361
+		step
+			goto Hellfire Peninsula,50.2,74.8
+			.from Deranged Helboar##16863
+			.get Tainted Helboar Meat|n
+			.' Use your Purification Mixture on the Tainted Helboar Meat|use Purification Mixture##23268|tip The meat won't become purified every time, it can become toxic as well.
+			.get 8 Purified Helboar Meat|q 9361/1
+		step
+			goto Hellfire Peninsula,49.2,74.8
+			.talk Legassi##19344
+			..turnin Helboar, the Other White Meat##9361
+			..accept Smooth as Butter##9356
+		step
+			goto Hellfire Peninsula,58.1,71.3
+			.from Bonestripper Buzzard##16972
+			.get 12 Plump Buzzard Wing|q 9356/1
+			.get 30 Zeppelin Debris|q 10161/1|tip They look like scraps of metal all over the ground.
+		step
+			goto Hellfire Peninsula,49.2,74.8
+			.talk "Screaming" Screed Luckheed##19367
+			..turnin In Case of Emergency...##10161
+			..accept Voidwalkers Gone Wild##9351
+			.talk Legassi##19344
+			..turnin Smooth as Butter##9356
+		step
+			goto Hellfire Peninsula,47.8,65.8
+			.kill 15 Marauding Crust Burster##16857|q 9355/1|tip They are under the jumping piles of rocks, they come up to fight when you get close to the jumping rocks.
+			.from Marauding Crust Burster##16857
+			.get Eroded Leather Case##23338|q 9373
+			.' Click the Eroded Leather Case|use Eroded Leather Case##23338
+			..accept Missing Missive##9373
+		step
+			goto Hellfire Peninsula,52,62.6
+			.talk Foreman Biggums##16837
+			..turnin A Job for an Intelligent Man##9355
+		step
+			goto Hellfire Peninsula,51.2,60
+			.talk Dumphry##21209
+			..turnin Laying Waste to the Unwanted##10078
+		step
+			goto Hellfire Peninsula,50.9,60.2
+			.talk Honor Guard Wesilow##16827
+			..turnin Unyielding Souls##10050
+			..accept Looking to the Leadership##10057
+		step
+			goto Hellfire Peninsula,54.3,63.4
+			.talk Father Malgor Devidicus##16825
+			..turnin An Old Gift##10058
+		step
+			goto Hellfire Peninsula,56.7,66.5
+			.talk Warp-Scryer Kryv##16839
+			..turnin The Path of Glory##10047
+			..accept The Temple of Telhamat##10093
+		step
+			goto Hellfire Peninsula,23.1,40.3
+			.talk Anchorite Obadei##16834
+			..accept In Search of Sedai##9390
+			.talk Ikan##16799
+			..accept Cruel Taskmasters##9399
+		step
+			goto Hellfire Peninsula,23.4,39.7
+			.talk Scout Vanura##16797
+			..accept Deadly Predators##9398
+		step
+			goto Hellfire Peninsula,23.4,36.5
+			.talk Amaan the Wise##16796
+			..turnin The Temple of Telhamat##10093
+			..accept The Pools of Aggonar##9426
+		step
+			goto Hellfire Peninsula,25.2,37.2
+			.talk Kuma##18785
+			..fpath Temple of Telhamat,Hellfire Peninsula
+		step
+			goto Hellfire Peninsula,26.9,37.4
+			.' Click Sedai's Corpse|tip Right down the hill from the Temple of Telhamat Flight Path.
+			..turnin In Search of Sedai##9390
+			..accept Return to Obadei##9423
+		step
+			goto Hellfire Peninsula,23.1,40.3
+			.talk Anchorite Obadei##16834
+			..turnin Return to Obadei##9423
+			.talk Makuru##16833
+			..accept Makuru's Vengeance##9424
+		step
+			goto Hellfire Peninsula,34.6,34.7
+			.from Mag'har Grunt##16846+, Debilitated Mag'har Grunt##16847+
+			.get 10 Mag'har Ancestral Beads|q 9424/1
+		step
+			goto Hellfire Peninsula,43.8,31.6
+			.kill Arazzius the Cruel##19191|q 10400/1
+		step
+			goto Hellfire Peninsula,38.9,29.1
+			.kill 6 Terrorfiend|q 9426/1
+			.kill 6 Blistering Rot|q 9426/2
+			.kill 10 Terrorfiend|q 10399/1
+		step
+			goto Hellfire Peninsula,23.1,40.3
+			.talk Makuru##16833
+			..turnin Makuru's Vengeance##9424
+			.talk Anchorite Obadei##16834
+			..accept Atonement##9543
+		step
+			goto Hellfire Peninsula,23.4,36.5
+			.talk Amaan the Wise##16796
+			..turnin Atonement##9543
+			..accept Sha'naar Relics##9430
+			..turnin The Pools of Aggonar##9426
+			..accept Cleansing the Waters##9427
+			..accept Helping the Cenarion Post##10443
+		step
+			goto Hellfire Peninsula,23.2,36.7
+			.talk Elsaana##17006
+			..accept An Ambitious Plan##9383
+		step
+			goto Hellfire Peninsula,40.3,30.9
+			.' Get close to the ribcage of the skeleton and next to the poisoned water
+			.' Empty your Cleansing Vial in this spot|use Cleansing Vial##23361
+			.' Kill Aggonis|goal Aggonar's Presence Cleansed|q 9427/1
+		step
+			goto Hellfire Peninsula,23.4,36.5
+			.talk Amaan the Wise##16796
+			..turnin Cleansing the Waters##9427
+		step
+			goto Hellfire Peninsula,15.7,52
+			.talk Thiah Redmane##16991
+			..turnin Missing Missive##9373
+			..turnin Helping the Cenarion Post##10443
+			..accept Demonic Contamination##9372
+		step
+			goto Hellfire Peninsula,18.4,54.7
+			.from Hulking Helboar##16880
+			.get 6 Helboar Blood Sample|q 9372/1
+		step
+			goto Hellfire Peninsula,15.7,52
+			.talk Thiah Redmane##16991
+			..turnin Demonic Contamination##9372
+			..accept Testing the Antidote##10255
+		step
+			goto Hellfire Peninsula,25,54
+			.' Use the Cenarion Antidote on a Hulking Helboar|use Cenarion Antidote##23337
+			.' Administer the Antidote|goal Administer Antidote|q 10255/1
+		step
+			goto Hellfire Peninsula,15.7,52
+			.talk Thiah Redmane##16991
+			..turnin Testing the Antidote##10255
+		step
+			goto Hellfire Peninsula,15.1,55.7
+			.kill 4 Illidari Taskmaster|q 9399/1|tip If you kill the taskmaster first, his friends leave you alone.
+			.get 10 Sha'naar Relic|q 9430/1|tip The Sha'naar Relics look like little blue vases on the ground.
+		step
+			goto Hellfire Peninsula,15.6,58.8
+			.talk Akoru the Firecaller##20678
+			..accept Naladu##10403
+		step
+			goto Hellfire Peninsula,16.3,65.1
+			.talk Naladu##19361
+			..turnin Naladu##10403
+			..accept A Traitor Among Us##10367
+		step
+			goto Hellfire Peninsula,14.3,63.5
+			.' Click the metal coffer on the floor in the big red hut
+			.get Sha'naar Key|q 10367/1
+		step
+			goto Hellfire Peninsula,16.3,65.1
+			.talk Naladu##19361
+			..turnin A Traitor Among Us##10367
+			..accept The Dreghood Elders##10368
+		step
+			goto Hellfire Peninsula,15.6,58.8
+			.talk Akoru the Firecaller##20678
+			..' Free Akoru the Firecaller|goal Akoru Freed|q 10368/2
+		step
+			goto Hellfire Peninsula,13,58.4
+			.talk Aylaan the Waterwaker##20679
+			..' Free Aylaan the Waterwaker|goal Aylaan Freed|q 10368/3
+		step
+			goto Hellfire Peninsula,13.1,61
+			.talk Morod the Windstirrer##20677
+			..' Free Morod the Windstirrer|goal Morod Freed|q 10368/1
+		step
+			goto Hellfire Peninsula,16.3,65.1
+			.talk Naladu##19361
+			..turnin The Dreghood Elders##10368
+			..accept Arzeth's Demise##10369
+		step
+			goto Hellfire Peninsula,14.4,62.3
+			.' Wait until Arzeth the Merciless is up top of the stairs by himself
+			.' Use the Staff of the Dreghood Elders on Arzeth the Merciless|use Staff of the Dreghood Elders##29513
+			.kill Arzeth the Powerless|q 10369/1
+		step
+			goto Hellfire Peninsula,16.3,65.1
+			.talk Naladu##19361
+			..turnin Arzeth's Demise##10369
+		step
+			goto Hellfire Peninsula,24,72.1
+			.talk Gremni Longbeard##16850
+			..turnin The Longbeards##9558
+			..accept The Arakkoa Threat##9417
+			..accept Rampaging Ravagers##9385
+			.talk Mirren Longbeard##16851
+			..accept Gaining Mirren's Trust##9563
+			..turnin Gaining Mirren's Trust##9563
+			..accept The Finest Down##9420
+		step
+			goto Hellfire Peninsula,25.6,70.3
+			.kill 4 Haal'eshi Windwalker|q 9417/1
+			.kill 6 Haal'eshi Talonguard|q 9417/2
+			.' Click the Kaliri nests and kill Kaliri birds|tip The nests look like little brown nests with pink eggs in them.
+			.get 8 Kaliri Feather|q 9420/1
+		step
+			goto 26.1,77.1|n
+			.' The path up to Avruu starts here|goto Hellfire Peninsula,26.1,77.1,0.5|noway|c
+		step
+			goto Hellfire Peninsula,25.7,75.1
+			.from Avruu##17084
+			.get Avruu's Orb|n
+			.' Click Avruu's Orb|use Avruu's Orb##23580
+			..accept Avruu's Orb##9418
+		step
+			goto Hellfire Peninsula,29,81.5
+			.' Click the Haal'eshi Altar|tip It looks like an orb sitting in a claw thing, right in front of a big purple hut.
+			.' Fight Aeranas until he's almost dead
+			.talk Aeranas##17085
+			..turnin Avruu's Orb##9418
+		step
+			goto Hellfire Peninsula,24,72.1
+			.talk Gremni Longbeard##16850
+			..turnin The Arakkoa Threat##9417
+			.talk Mirren Longbeard##16851
+			..turnin The Finest Down##9420
+		step
+			goto Hellfire Peninsula,23.7,69.2
+			.kill 10 Quillfang Ravager|q 9385/1
+		step
+			goto Hellfire Peninsula,24,72.1
+			.talk Gremni Longbeard##16850
+			..turnin Rampaging Ravagers##9385
+		step
+			goto Hellfire Peninsula,26.9,69.5
+			.kill 8 Stonescythe Whelp|q 9398/2
+		step
+			goto Hellfire Peninsula,32.1,59.3
+			.kill 4 Stonescythe Alpha|q 9398/1
+			.' You can find 2 more Stonescythe Alphas at 33.7,62.1|n
+		step
+			goto Hellfire Peninsula,49.5,81.8
+			.from Rogue Voidwalker##16974+, Uncontrolled Voidwalker##16975+
+			.get 10 Condensed Voidwalker Essence|q 9351/1
+			.' Use your Sanctified Crystal on an Uncontrolled Voidwalker when it's almost dead|use Sanctified Crystal##23417
+			.' Click the red floating crystal over its corpse
+			.get Glowing Sanctified Crystal|q 9383/1
+		step
+			goto Hellfire Peninsula,53.6,81.1
+			.kill Arch Mage Xintor|q 10057/1|tip Near a bunch of practice fighting dummies.
+		step
+			goto Hellfire Peninsula,54.7,83.7
+			.kill Lieutenant Commander Thalvos|q 10057/2|tip Walking around on a black platform thing. He's a blue ghost dwarf.
+		step
+			goto Hellfire Peninsula,49.2,74.8
+			.talk "Screaming" Screed Luckheed##19367
+			..turnin Voidwalkers Gone Wild##9351
+		step
+			goto Hellfire Peninsula,50.9,60.4
+			.talk Honor Guard Wesilow##16827
+			..turnin Looking to the Leadership##10057
+		step
+			goto Hellfire Peninsula,56.7,66.5
+			.talk Warp-Scryer Kryv##16839
+			..turnin The Heart of Darkness##10399
+			.talk Force Commander Danath Trollbane##16819
+			..turnin Overlord##10400
+		step
+			goto Hellfire Peninsula,64.2,71.8
+			.from Bleeding Hollow Grunt##16871+, Bleeding Hollow Dark Shaman##16873+, Bleeding Hollow Peon##16907+, Bleeding Hollow Necrolyte##19422+
+			.get 12 Cursed Talisman|q 10484/1
+		step
+			goto Hellfire Peninsula,71,63.4
+			.talk Corporal Ironridge##21133
+			..turnin Cursed Talismans##10484
+			..accept Warlord of the Bleeding Hollow##10485
+		step
+			goto Hellfire Peninsula,71.3,62.8
+			.talk Wing Commander Dabir'ee##19409
+			..accept Zeth'Gor Must Burn!##10895
+		step
+			goto Hellfire Peninsula,70.1,69.1
+			.' Use your Smoke Beacon under the tower|use Smoke Beacon##31739
+			.' Mark the Forge Tower|goal Forge Tower Marked|q 10895/3
+		step
+			goto Hellfire Peninsula,70.9,71.3
+			.' Use your Smoke Beacon under the tower|use Smoke Beacon##31739
+			.' Mark the Foothill Tower|goal Foothill Tower Marked|q 10895/4
+		step
+			goto Hellfire Peninsula,70.1,76.9
+			.from Warlord Morkh##16964
+			.get Morkh's Shattered Armor|q 10485/1
+		step
+			goto Hellfire Peninsula,66.4,76.6
+			.' Use your Smoke Beacon under the tower|use Smoke Beacon##31739
+			.' Mark the Southern Tower|goal Southern Tower Marked|q 10895/2
+		step
+			goto Hellfire Peninsula,67.9,67
+			.' Use your Smoke Beacon under the tower|use Smoke Beacon##31739
+			.' Mark the Northern Tower|goal Northern Tower Marked|q 10895/1
+		step
+			goto Hellfire Peninsula,71,63.4
+			.talk Corporal Ironridge##21133
+			..turnin Warlord of the Bleeding Hollow##10485
+			..accept Return to Honor Hold##10903
+		step
+			goto Hellfire Peninsula,71.3,62.8
+			.talk Wing Commander Dabir'ee##19409
+			..turnin Zeth'Gor Must Burn!##10895
+		step
+			goto Hellfire Peninsula,54.3,63.6
+			.talk Assistant Klatu##22430
+			..turnin Return to Honor Hold##10903
+			..accept Fel Spirits##10909
+			..accept Digging for Prayer Beads##10916
+		step
+			.'Go outside and behind the inn to 54.2,63.3|goto 54.2,63.3
+			.' Click Fei Fei's Cache|tip It's a small mound of dirt behind the inn.
+			.get Draenei Prayer Beads|q 10916/1
+		step
+			goto Hellfire Peninsula,45,75
+			.' Use the Anchorite Relic in your bags|use Anchorite Relic##31772
+			.' Pull orcs to the relic
+			.' Kill the orcs and a Fel Spirit will spawn
+			.' Kill 10 Fel Spirits|goal 10 Jules Avenged|q 10909/1
+		step
+			goto Hellfire Peninsula,54.3,63.6
+			.talk Assistant Klatu##22430
+			..turnin Fel Spirits##10909
+			..turnin Digging for Prayer Beads##10916
+			..accept The Exorcism of Colonel Jules##10935
+		step
+			goto Hellfire Peninsula,54.0,63.5
+			.talk Anchorite Barada##22431
+			..'Click 'I am ready...'
+			..'Target the purple skulls and oozes
+			..'Use the Ritual Prayer Beads when enemies are in the room|use Ritual Prayer Beads##31828
+			..'After the exorcism is done, talk Colonel Jules on the bed to save him|goal Colonel Jules Saved|q 10935/1
+		step
+			goto Hellfire Peninsula,54.3,63.6
+			.talk Assistant Klatu##22430
+			..turnin The Exorcism of Colonel Jules##10935
+			..accept Trollbane is Looking for You##10936
+		step
+			goto Hellfire Peninsula,56.6,66.7
+			.talk Force Commander Danath Trollbane##16819
+			..turnin Trollbane is Looking for You##10936
+		step
+			goto Hellfire Peninsula,23.1,40.3
+			.talk Ikan##16799
+			..turnin Cruel Taskmasters##9399
+			..accept The Rock Flayer Matriarch##9490
+		step
+			goto Hellfire Peninsula,23.4,39.7
+			.talk Scout Vanura##16797
+			..turnin Deadly Predators##9398
+		step
+			goto Hellfire Peninsula,23.4,36.5
+			.talk Amaan the Wise##16796
+			..turnin Sha'naar Relics##9430
+			..accept The Seer's Relic##9545
+			.talk Elsaana##17006
+			..turnin An Ambitious Plan##9383
+		step
+			goto Hellfire Peninsula,26.9,37.4
+			.' Use the Seer's Relic on Sedai's Corpse|use Seer's Relic##23645|tip Right down the hill from the Temple of Telhamat Flight Path.
+			.' See the vision|goal Vision Granted|q 9545/1
+		step
+			goto Hellfire Peninsula,23.4,36.5
+			.talk Amaan the Wise##16796
+			..turnin The Seer's Relic##9545
+		step
+			goto Hellfire Peninsula,33.4,65.1
+			.' Inside the Cave
+			.from Blacktalon the Savage##17057
+			.get 1 Blacktalon's Claws##23687|q 9490/1
+		step
+			goto Hellfire Peninsula,15.7,52
+			.talk Amythiel Mistwalker##16885
+			..accept The Cenarion Expedition##9912
+			.talk Mahuram Stouthoof##16888
+			..accept Keep Thornfang Hill Clear!##10159
+		step
+			goto Hellfire Peninsula,15.6,52
+			.talk Tola'thion##19293
+			..accept Colossal Menace##10132
+		step
+			goto Hellfire Peninsula,15.7,40.7
+			.kill 5 Raging Colossus##19188|q 10132/1
+			..accept Crimson Crystal Clue##10134|use Crimson Crystal Shard##29476
+		step
+			goto Hellfire Peninsula,23.1,40.3
+			.talk Ikan##16799
+			..turnin The Rock Flayer Matriarch##9490
+		step
+			goto Hellfire Peninsula,12.3,49.9
+			.kill 8 Thornfang Ravager|q 10159/1
+			.kill 8 Thornfang Venomspitter|q 10159/2
+		step
+			goto Hellfire Peninsula,15.6,52
+			.talk Tola'thion##19293
+			..turnin Colossal Menace##10132
+			.turnin Crimson Crystal Clue##10134
+			..accept The Earthbinder##10349
+		step
+			goto Hellfire Peninsula,15.7,52
+			.talk Mahuram Stouthoof##16888
+			..turnin Keep Thornfang Hill Clear!##10159
+		step
+			goto Hellfire Peninsula,16,51.6
+			.talk Earthbinder Galandria Nightbreeze##19294
+			..turnin The Earthbinder##10349
+			..accept Natural Remedies##10351
+		step
+			goto Hellfire Peninsula,13.63,39.11
+			.' Use the Seed of Revitalization at the Earthbinder's Circle|use Seed of Revitalization##29478|q 10351/1
+		step
+			goto Hellfire Peninsula,16,51.6
+			.talk Earthbinder Galandria Nightbreeze##19294
+			..turnin Natural Remedies##10351
+		step
+			goto Zangarmarsh,78.4,62
+			.talk Ysiel Windsinger##17841
+			..turnin The Cenarion Expedition##9912
+		step
+			.' Congratulations! Achievement received!
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Netherstorm",[[

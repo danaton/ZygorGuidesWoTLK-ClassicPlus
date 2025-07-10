@@ -19,10 +19,10 @@
 	<Script file="ZygorGoldHordeTrial.lua"/>
 
 	<Script file="DanatonGuidesAlliance.lua"/>
-	<Script file="DanatonQuestInstances.lua"/>
+	<Script file="DanatonQuestInstancesA.lua"/>
+	<Script file="DanatonQuestInstancesH.lua"/>
 	<Script file="DanatonInstancePath.lua"/>
 	<Script file="LoremasterAlliance.lua"/>
-	<Script file="Guide05.lua"/>
 	<Script file="Guide06.lua"/>
 	<Script file="Guide07.lua"/>
 	<Script file="Guide08.lua"/>

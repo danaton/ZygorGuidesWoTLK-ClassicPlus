@@ -1,7 +1,6 @@
-## Interface: 40000
-## Notes: Free multi-purpose leveling guide viewer.|n|nDesigned for use with Zygor Guides, but supporting user-supplied guides as well.
-## Note-frFR: 
-## Notes-esES: 
+## Interface: 30300
+## Notes: Free multi-purpose leveling guide viewer.|n|nDesigned for use with Zygor Guides, but supporting user-supplied guides as well. 
+## Notes-ruRU: ZygorGuidesViewer - аддон для эффективной прокачки уровней персонажа.|n|nПредназначен для использования руководств Zygor, но также поддерживает пользовательские руководства.
 ## Title: |cffffff88Z|cffffee66y|cffffdd44g|cffffcc22o|cffffbb00r|r Guides Viewer
 ## qqqTitle: |cffffff88Z|cffffee66y|cffffdd44g|cffffcc22o|cffffbb00r|r Guides Viewer |TInterface\AddOns\ZygorGuidesViewer\Skin\gnome:48:48:0:0|t
 ## Author: Sinus Pi

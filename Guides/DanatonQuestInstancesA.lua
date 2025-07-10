@@ -4,257 +4,355 @@ if UnitFactionGroup("player")~="Alliance" then return end
 
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Deadmines (15)",[[
 	startlevel 15
-	step //1
-	goto Ironforge,69.18,50.57
-	.talk Gnoarn##6569
-	..accept Speak with Shoni##2041
-	step //2
-	goto Stormwind,62.60,34.10
-	.talk Shoni##6579
-	..turnin Speak with Shoni##2041
-	..accept Underground Assault##2040
-	step //3
-	.goto Stormwind,70.09,40.95
-	.talk Wilder Thistlenettle##656
-	..accept Oh Brother...##167
-	..accept Collecting Memories##168
-	step //4
-	.goto Westfall,56.32,47.54
-	.talk Marshal Gryan Stoutmantle##234
-	..accept The Defias Brotherhood##65
-	step //5
-	goto Westfall,52.89,53.66
-	.talk Innkeeper Heather##8931
-	home Sentinel Hill
-	step //6
-	goto Redridge Mountains,26.49,45.33
-	.talk Wiley the Black##266
-	..turnin The Defias Brotherhood##65
-	..accept The Defias Brotherhood##132
-	step //7
-	'Hearth to Sentinel Hill|goto Westfall,52.89,53.66,3|use Hearthstone##6948|noway|c
-	step //8
-	goto Westfall,56.32,47.54
-	.talk Marshal Gryan Stoutmantle##234
-	..turnin The Defias Brotherhood##132
-	..accept The Defias Brotherhood##135
-	step //9
-	goto Stormwind,78.55,70.87
-	.talk Master Mathias Shaw##332
-	..turnin The Defias Brotherhood##135
-	..accept The Defias Brotherhood##141
-	step //10
-	goto Westfall,56.32,47.54
-	.talk Marshal Gryan Stoutmantle##234
-	..turnin The Defias Brotherhood##141
-	..accept The Defias Brotherhood##142
-	step //11
-	goto Westfall,45.70,68.57
-	..kill Defias Messenger|n
-	.get 1 A Mysterious Message|q 142/1
-	.' End move POS 36.23,43.97|n
-	step //12
-	goto Westfall,56.32,47.54
-	.talk Marshal Gryan Stoutmantle##234
-	..turnin The Defias Brotherhood##142
-	step //13
-	goto Westfall,55.68,47.51
-	.talk The Defias Traitor##467
-	..accept The Defias Brotherhood##155
-	step //14
-	'Follow the Defias Traitor.
-	goto Westfall,42.56,71.71
-	.' Escort The Defias Traitor to discover where VanCleef is hiding.|goal The Defias Brotherhood|q 155/1
-	step //15
-	goto Westfall,56.32,47.54
-	.talk Marshal Gryan Stoutmantle##234
-	..turnin The Defias Brotherhood##155
-	..accept The Defias Brotherhood##166
-	step //16
-	goto Westfall,56.7,47.5
-	.talk Scout Riell##820
-	..accept Red Silk Bandanas##214
+		step //1
+			goto Ironforge,69.18,50.57
+			.talk Gnoarn##6569
+			..accept Speak with Shoni##2041
+		step //2
+			goto Stormwind,62.60,34.10
+			.talk Shoni##6579
+			..turnin Speak with Shoni##2041
+			..accept Underground Assault##2040
+		step //3
+			.goto Stormwind,70.09,40.95
+			.talk Wilder Thistlenettle##656
+			..accept Oh Brother...##167
+			..accept Collecting Memories##168
+		step //4
+			.goto Westfall,56.32,47.54
+			.talk Marshal Gryan Stoutmantle##234
+			..accept The Defias Brotherhood##65
+		step //5
+			goto Westfall,52.89,53.66
+			.talk Innkeeper Heather##8931
+			home Sentinel Hill
+		step //6
+			goto Redridge Mountains,26.49,45.33
+			.talk Wiley the Black##266
+			..turnin The Defias Brotherhood##65
+			..accept The Defias Brotherhood##132
+		step //7
+			.'Hearth to Sentinel Hill|goto Westfall,52.89,53.66,3|use Hearthstone##6948|noway|c
+		step //8
+			goto Westfall,56.32,47.54
+			.talk Marshal Gryan Stoutmantle##234
+			..turnin The Defias Brotherhood##132
+			..accept The Defias Brotherhood##135
+		step //9
+			goto Stormwind,78.55,70.87
+			.talk Master Mathias Shaw##332
+			..turnin The Defias Brotherhood##135
+			..accept The Defias Brotherhood##141
+		step //10
+			goto Westfall,56.32,47.54
+			.talk Marshal Gryan Stoutmantle##234
+			..turnin The Defias Brotherhood##141
+			..accept The Defias Brotherhood##142
+		step //11
+			goto Westfall,45.70,68.57
+			.from Defias Messenger##550
+			.get 1 A Mysterious Message|q 142/1
+			.' End move POS 36.23,43.97|n
+		step //12
+			goto Westfall,56.32,47.54
+			.talk Marshal Gryan Stoutmantle##234
+			..turnin The Defias Brotherhood##142
+		step //13
+			goto Westfall,55.68,47.51
+			.talk The Defias Traitor##467
+			..accept The Defias Brotherhood##155
+		step //14
+			.'Follow the Defias Traitor.
+			goto Westfall,42.56,71.71
+			.' Escort The Defias Traitor to discover where VanCleef is hiding.|goal The Defias Brotherhood|q 155/1
+		step //15
+			goto Westfall,56.32,47.54
+			.talk Marshal Gryan Stoutmantle##234
+			..turnin The Defias Brotherhood##155
+			..accept The Defias Brotherhood##166
+		step //16
+			goto Westfall,56.7,47.5
+			.talk Scout Riell##820
+			..accept Red Silk Bandanas##214
+]])
+ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Wailing Caverns (15)",[[
+	startlevel 15
+		step
+			goto The Barrens,62.4,37.6
+			.talk Mebok Mizzyrix##3446
+			..accept Raptor Horns##865
+		step
+			goto The Barrens,45.5,13.9
+			.from Sunscale Scytheclaw##3256+
+			.get 5 Intact Raptor Horn|q 865/1
+			.' Position-spot 2|at 61,31.58
+		step
+			goto The Barrens,62.4,37.6
+			.talk Mebok Mizzyrix##3446
+			..turnin Raptor Horns##865
+			..accept Smart Drinks##1491
+		step
+			goto The Barrens,63.1,37.6
+			.talk Crane Operator Bigglefuzz##3665
+			..accept Trouble at the Docks##959
+		step
+			goto The Barrens,46,35.7
+			.talk Ebru##5768
+			..accept Deviate Eradication##1487
+			.talk Nalpak##5767
+			..accept Deviate Hides##1486
+		step
+			goto The Barrens,47.73,34.82
+			.' Go To Instance!|tip Good luck!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackfathom Deeps (20)",[[
 	startlevel 20
-	step //1
-	goto Ironforge,50.8,5.6
-	.talk Gerrig Bonegrip##2786
-	..accept Knowledge in the Deeps##971
-	step //2
-	goto Stormwind,36.2,67.6
-	.talk Argos Nightwhisper##4984
-	..accept The Corruption Abroad##3765
-	step //3
-	goto Darnassus,55.3,24.5
-	.talk Argent Guard Manados##4784
-	..accept Twilight Falls##1199
-	.talk Dawnwatcher Shaedlass##4786
-	..accept In Search of Thaelrid##1198
-	step //4
-	goto Darkshore,38.3,43.0
-	.talk Gershala Nightwhisper##8997
-	..turnin The Corruption Abroad##3765
-	..accept Researching the Corruption##1275
-	step //5
-	goto Darkshore,31.1,95.9
-	.' Go To Instance!
+		step
+			goto Ironforge,50.8,5.6
+			.talk Gerrig Bonegrip##2786
+			..accept Knowledge in the Deeps##971
+		step
+			goto Stormwind,36.2,67.6
+			.talk Argos Nightwhisper##4984
+			..accept The Corruption Abroad##3765
+		step
+			goto Darnassus,55.3,24.5
+			.talk Argent Guard Manados##4784
+			..accept Twilight Falls##1199
+			.talk Dawnwatcher Shaedlass##4786
+			..accept In Search of Thaelrid##1198
+		step
+			goto Darkshore,38.3,43.0
+			.talk Gershala Nightwhisper##8997
+			..turnin The Corruption Abroad##3765
+			..accept Researching the Corruption##1275
+		step
+			goto Darkshore,31.1,95.9
+			.' Go To Instance!
+]])
+ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Razorfen Kraul (23)",[[
+	startlevel 23
+		step
+			goto Stormwind,80.6,59.9
+			.talk Wu Shen##5479
+			..accept Yorus Barleybrew##1698
+			only Warrior
+		step
+			.goto Redridge Mountains,26.6,44.7
+			.talk Yorus Barleybrew##6166
+			..turnin Yorus Barleybrew##1698
+			..accept The Rethban Gauntlet##1699
+			only Warrior
+		step
+			.goto Redridge Mountains,19.1,24.7
+			.' Enter the Rethban Caverns, reach the first fork|q 1699/1
+			only Warrior
+		step
+			.goto Redridge Mountains,26.6,44.7
+			.talk Yorus Barleybrew##6166
+			..turnin The Rethban Gauntlet##1699
+			..accept The Shieldsmith##1702
+			only Warrior
+		step
+			goto Stormwind,64.6,37.2
+			.talk Furen Longbeard##5413
+			..turnin The Shieldsmith##1702
+			..accept Fire Hardened Mail##1701
+			only Warrior
+		step
+			goto The Barrens,62.4,37.6
+			.talk Mebok Mizzyrix##3446
+			..accept Blueleaf Tubers##1221
+		step
+			goto Thousand Needles,30.7,24.3
+			.' Click to Journal
+			..accept Lonebrow's Journal##1100
+		step
+			goto Feralas,89.6,46.6
+			.talk Falfindel Waywarder##4048
+			..turnin Lonebrow's Journal##1100
+			..accept The Crone of the Kraul##1101
+		step
+			goto The Barrens,40.6,88.7
+			.' Go To Instance!
+			.talk Heralath Fallowbrook##4510
+			..accept Mortality Wanes##1142
+			.talk Willix the Importer##4508
+			..accept Willix the Importer##1144
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Gnomregan (25)",[[
 	startlevel 25
-	step //1
-	goto Darnassus,59.50,45.40
-	.talk Mathiel##6142
-	..accept Klockmorts Essentials##2925
-	step //2
-	goto Stonetalon Mountains,59.50,67.10
-	.talk Gaxim Rustfizzle##4077
-	..accept Castpipes Task##2931
-	step //3
-	goto Stormwind,51.10,48.40
-	.talk Brother Sarno##7917
-	..accept Tinkmaster Overspark##2923
-	step //4
-	goto Stormwind,62.60,34.10
-	.talk Shoni##6579
-	..accept Gyrodrillmatic Excavationators##2928
-	step //5
-	goto Ironforge,69.80,48.10
-	.talk Master Mechanic Castpipe##7950
-	..turnin Castpipes Task##2931
-	..accept Data Rescue##2930
-	step //6
-	goto Ironforge,67.90,46.10
-	.talk Klockmort Spannerspan##6169
-	..turnin Klockmorts Essentials##2925
-	..accept Essential Artificials##2924
-	step //7
-	goto Ironforge,68.80,49.00
-	.talk High Tinker Mekkatorque##7937
-	..accept The Grand Betrayal##2929
-	step //8
-	goto Ironforge,69.50,50.30
-	.talk Tinkmaster Overspark##7944
-	..turnin Tinkmaster Overspark##2923
-	..accept Save Techbots Brain!##2922
-	step //9
-	goto Ironforge,69.18,50.57
-	.talk Gnoarn##6569
-	..accept The Day After##2927
-	step //10
-	goto Dun Morogh,45.90,49.40
-	.talk Ozzie Togglevolt##1268
-	..turnin The Day After##2927
-	..accept Gnogain##2926
-	step //11
-	goto Dun Morogh,17.74,39.17
-	.' Go To Instance!
+		step //1
+			goto Darnassus,59.50,45.40
+			.talk Mathiel##6142
+			..accept Klockmorts Essentials##2925
+		step //2
+			goto Stonetalon Mountains,59.50,67.10
+			.talk Gaxim Rustfizzle##4077
+			..accept Castpipes Task##2931
+		step //3
+			goto Stormwind,51.10,48.40
+			.talk Brother Sarno##7917
+			..accept Tinkmaster Overspark##2923
+		step //4
+			goto Stormwind,62.60,34.10
+			.talk Shoni##6579
+			..accept Gyrodrillmatic Excavationators##2928
+		step //5
+			goto Ironforge,69.80,48.10
+			.talk Master Mechanic Castpipe##7950
+			..turnin Castpipes Task##2931
+			..accept Data Rescue##2930
+		step //6
+			goto Ironforge,67.90,46.10
+			.talk Klockmort Spannerspan##6169
+			..turnin Klockmorts Essentials##2925
+			..accept Essential Artificials##2924
+		step //7
+			goto Ironforge,68.80,49.00
+			.talk High Tinker Mekkatorque##7937
+			..accept The Grand Betrayal##2929
+		step //8
+			goto Ironforge,69.50,50.30
+			.talk Tinkmaster Overspark##7944
+			..turnin Tinkmaster Overspark##2923
+			..accept Save Techbots Brain!##2922
+		step //9
+			goto Ironforge,69.18,50.57
+			.talk Gnoarn##6569
+			..accept The Day After##2927
+		step //10
+			goto Dun Morogh,45.90,49.40
+			.talk Ozzie Togglevolt##1268
+			..turnin The Day After##2927
+			..accept Gnogain##2926
+		step //11
+			goto Dun Morogh,17.74,39.17
+			.' Go To Instance!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Stormwind Jail (25)",[[
 	startlevel 25
-	step //1
-	goto Wetlands,49.67,18.25
-	.talk Motley Garmason##1074
-	..accept The Dark Iron War##303
-	step //2
-	goto Wetlands,62.2,28.3
-	.kill 10 Dark Iron Dwarf|q 303/1
-	.kill 5 Dark Iron Tunneler|q 303/2
-	.kill 5 Dark Iron Saboteur|q 303/3
-	.kill 5 Dark Iron Demolitionist|q 303/4
-	step //3
-	goto Wetlands,49.67,18.25
-	.talk Motley Garmason##1074
-	..turnin The Dark Iron War##303
-	..accept The Fury Runs Deep##378
-	step //4
-	goto Redridge Mountains,26.25,46.58
-	.talk Guard Berton##859
-	..accept What Comes Around...##386
-	step //5
-	goto Duskwood,71.90,47.80
-	.talk Councilman Millstipe##270
-	..accept Crime and Punishment##377
-	step //6
-	goto Stormwind,75.88,61.90
-	.talk Nikova Raskol##1721
-	..accept The Color of Blood##388
-	step //7
-	goto Stormwind,51.50,69.30
-	.talk Warden Thelwater##1719
-	..accept Quell The Uprising##387
-	step //8
-	goto Stormwind,50.49,66.41
-	.' Go To Instance!
+		step
+			goto Wetlands,49.67,18.25
+			.talk Motley Garmason##1074
+			..accept The Dark Iron War##303
+		step
+			goto Wetlands,62.2,28.3
+			.kill 10 Dark Iron Dwarf|q 303/1
+			.kill 5 Dark Iron Tunneler|q 303/2
+			.kill 5 Dark Iron Saboteur|q 303/3
+			.kill 5 Dark Iron Demolitionist|q 303/4
+		step
+			goto Wetlands,49.67,18.25
+			.talk Motley Garmason##1074
+			..turnin The Dark Iron War##303
+			..accept The Fury Runs Deep##378
+		step
+			goto Redridge Mountains,26.25,46.58
+			.talk Guard Berton##859
+			..accept What Comes Around...##386
+		step
+			goto Duskwood,71.90,47.80
+			.talk Councilman Millstipe##270
+			..accept Crime and Punishment##377
+		step
+			goto Stormwind,75.88,61.90
+			.talk Nikova Raskol##1721
+			..accept The Color of Blood##388
+		step
+			goto Stormwind,51.50,69.30
+			.talk Warden Thelwater##1719
+			..accept Quell The Uprising##387
+		step
+			goto Stormwind,50.49,66.41
+			.' Go To Instance!
+]])
+ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Razorfen Downs (32)",[[
+	startlevel 32
+		step
+			goto Stormwind,50.3,45.5
+			.talk Archbishop Benedictus##1284
+			..accept Bring the Light##3636
+		step
+			.goto The Barrens,49,94.9
+			.talk Myriam Moonsinger##12866
+			..accept A Host of Evil##6626
+		step
+			goto The Barrens,48.60,90.95
+			.' Go To Instance!
+			.talk Belnistrasz##8516
+			..accept Scourge of the Downs##3523
+			..turnin Scourge of the Downs##3523
+			..accept Extinguishing the Idol##3525
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Uldaman (35)",[[
 	startlevel 35
-	step
-	goto Ironforge,74.70,11.80
-	.talk Prospector Stormpike##1356
-	..accept Ironband Wants You!##707
-	..accept The Lost Dwarves##2398
-	step
-	goto Ironforge,74.21,9.41
-	.talk Krom Stoutarm##6294
-	..accept Reclaimed Treasures##1360
-	step
-	goto Loch Modan,66.00,65.4
-	.talk Prospector Ironband##1344
-	..turnin Ironband Wants You!##707
-	..accept Find Agmond##738
-	step
-	goto Badlands,53.00,33.9
-	.' Click the Crumpled Map|tip Laying on the ground under a white canopy.
-	..accept A Sign of Hope##720
-	step
-	goto Badlands,53.38,43.33
-	.talk Prospector Ryedol##2910
-	..turnin A Sign of Hope##720
-	..accept A Sign of Hope##721
-	step
-	goto Badlands,50.90,62.30
-	.talk Battered Dwarven Skeleton##991001
-	..turnin Find Agmond##738
-	..accept Murdaloc##739
-	step
-	goto Badlands,50.70,67.70
-	.kill 1 Murdaloc|q 739/1
-	.kill 12 Stonevault Bonesnapper|q 739/2
-	step
-	goto Badlands,51.20,76.60
-	.talk Theldurin the Lost##2785
-	..accept Solution to Doom##709
-	step
-	goto Badlands,42.50,52.90
-	.talk Rigglefuzz##2817
-	..accept Power Stones##2418	
-	step
-	goto Loch Modan,66.00,65.4
-	.talk Prospector Ironband##1344
-	..turnin Murdaloc##739
-	..accept Agmonds Fate##704
-	step
-	goto Badlands,37.9,10.58
-	.talk Hammertoe Grez##2909
-	..turnin A Sign of Hope##721
-	..accept Amulet of Secrets##722
-	step 
-	goto Badlands,39.23,18.53
-	.collect 1 Tablet of Ryun'eh##4631|q 709/1
-	step
-	goto Badlands,35.55,23.45
-	.collect 1 Krom Stoutarm's Treasure##8027|q 1360/1
-	step
-	goto Badlands,35.3,13.4
-	.' Collect Carved Urn
-	.collect 4 Carved Stone Urn##4610|q 704/1
-	.' Kill mobs in cave
-	.kill 8 Shadowforge Surveyor|q 2418/1
-	.kill 8 Shadowforge Digger|q 2418/2
-	step
-	goto Badlands,35.22,10.66
-	.' Go To Uldaman Instance!
+		step
+			goto Ironforge,74.70,11.80
+			.talk Prospector Stormpike##1356
+			..accept Ironband Wants You!##707
+			..accept The Lost Dwarves##2398
+		step
+			goto Ironforge,74.21,9.41
+			.talk Krom Stoutarm##6294
+			..accept Reclaimed Treasures##1360
+		step
+			goto Loch Modan,66.00,65.4
+			.talk Prospector Ironband##1344
+			..turnin Ironband Wants You!##707
+			..accept Find Agmond##738
+		step
+			goto Badlands,53.00,33.9
+			.' Click the Crumpled Map|tip Laying on the ground under a white canopy.
+			..accept A Sign of Hope##720
+		step
+			goto Badlands,53.38,43.33
+			.talk Prospector Ryedol##2910
+			..turnin A Sign of Hope##720
+			..accept A Sign of Hope##721
+		step
+			goto Badlands,50.90,62.30
+			.talk Battered Dwarven Skeleton##991001
+			..turnin Find Agmond##738
+			..accept Murdaloc##739
+		step
+			goto Badlands,50.70,67.70
+			.kill 1 Murdaloc|q 739/1
+			.kill 12 Stonevault Bonesnapper|q 739/2
+		step
+			goto Badlands,51.20,76.60
+			.talk Theldurin the Lost##2785
+			..accept Solution to Doom##709
+		step
+			goto Badlands,42.50,52.90
+			.talk Rigglefuzz##2817
+			..accept Power Stones##2418	
+		step
+			goto Loch Modan,66.00,65.4
+			.talk Prospector Ironband##1344
+			..turnin Murdaloc##739
+			..accept Agmonds Fate##704
+		step
+			goto Badlands,37.9,10.58
+			.talk Hammertoe Grez##2909
+			..turnin A Sign of Hope##721
+			..accept Amulet of Secrets##722
+		step 
+			goto Badlands,39.23,18.53
+			.collect 1 Tablet of Ryun'eh##4631|q 709/1
+		step
+			goto Badlands,35.55,23.45
+			.collect 1 Krom Stoutarm's Treasure##8027|q 1360/1
+		step
+			goto Badlands,35.3,13.4
+			.' Collect Carved Urn
+			.collect 4 Carved Stone Urn##4610|q 704/1
+			.' Kill mobs in cave
+			.kill 8 Shadowforge Surveyor|q 2418/1
+			.kill 8 Shadowforge Digger|q 2418/2
+		step
+			goto Badlands,35.22,10.66
+			.' Go To Uldaman Instance!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Zul'Farrak (40)",[[
 	startlevel 40
@@ -679,24 +777,24 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Stratholme (55)"
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackrock Spire (57)",[[
 	startlevel 57
-	step //1
-	.' First you need to complete quest chain on Sunken Temple!|tip Manually skip this step
-	step //2
-	goto Winterspring,61.60,38.50
-	.talk Felnok Steelspring##10468
-	..accept Tinkee Steamboil##4909
-	step //3
-	goto Winterspring,63.60,73.80
-	.talk Lorax##10918
-	..accept The Demon Forge##5127
-	step //4
-	goto Stormwind,76.90,47.80
-	.talk Count Remington Ridgewell##2285
-	..accept Mayara Brightwing##4766
-	step //5
-	goto Burning Steppes,85.50,69.30
-	.talk Helendis Riverhorn##9562
-	..accept Put Her Down##4701
+		step
+			.' First you need to complete quest chain on Sunken Temple!|tip Manually skip this step
+		step
+			goto Winterspring,61.60,38.50
+			.talk Felnok Steelspring##10468
+			..accept Tinkee Steamboil##4909
+		step
+			goto Winterspring,63.60,73.80
+			.talk Lorax##10918
+			..accept The Demon Forge##5127
+		step
+			goto Stormwind,76.90,47.80
+			.talk Count Remington Ridgewell##2285
+			..accept Mayara Brightwing##4766
+		step
+			goto Burning Steppes,85.50,69.30
+			.talk Helendis Riverhorn##9562
+			..accept Put Her Down##4701
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Scholomance (58)",[[
 	startlevel 58
