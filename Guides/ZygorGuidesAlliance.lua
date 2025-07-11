@@ -13190,7 +13190,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (62-64
 		..accept Diaphanous Wings##9790
 	step //75
 		goto 79.7,70.1
-		.kill Umbraglow Stingers|n
+		.from Umbraglow Stinger##18132, Marshlight Bleeder##18133
 		.get 8 Diaphanous Wing|q 9790/1
 	step //76
 		goto 82.6,43.7
@@ -13297,7 +13297,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (62-64
 	step //98
 		goto 41.3,29
 		.talk Halu##22485
-		..fpath Orebor Harborage
+		..fpath Orebor Harborage, Zangarmarsh
 	step //99
 		goto 41.2,28.7
 		.talk Timothy Daniels##18019
@@ -13345,6 +13345,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (62-64
 		..turnin Wanted: Chieftain Mummaki##10116
 		..turnin Daggerfen Deviance##10115
 	step //109
+		goto Zangarmarsh,41.9,26.2
+		.talk Innkeeper Kerp##18908
 		home Orebor Harborage
 	step //110
 		goto 41.6,27.3

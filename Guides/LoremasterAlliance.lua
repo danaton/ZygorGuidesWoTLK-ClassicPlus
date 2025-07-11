@@ -2568,14 +2568,15 @@ startlevel 70
 			..accept The Cenarion Expedition##9912
 		step
 			goto Zangarmarsh,80.4,64.2
-			.talk Lauranna Thar'well##17909
-			..accept Plants of Zangarmarsh##9802
 			.talk Ikeyen##17956
 			..accept The Umbrafen Tribe##9747
+			.talk Lauranna Thar'well##17909
+			..accept Plants of Zangarmarsh##9802
 		step
-			goto Zangarmarsh,79.1,65.3
-			.talk Warden Hamoot##17858
-			..accept A Warm Welcome##9728
+			goto Zangarmarsh,79.1,64.9
+			.' Click Wanted Poster
+			..accept Leader of the Darkcrest##9730
+			..accept Leader of the Bloodscale##9817
 		step
 			goto Zangarmarsh,78.5,63.1
 			.talk Lethyn Moonfire##17834
@@ -2585,33 +2586,39 @@ startlevel 70
 			.talk Ysiel Windsinger##17841
 			..turnin The Cenarion Expedition##9912
 			..accept Disturbance at Umbrafen Lake##9716
+			..accept Warden Hamoot##9778
 		step
-			goto Zangarmarsh,80.1,73.3
+			goto Zangarmarsh,79.1,65.3
+			.talk Warden Hamoot##17858
+			..turnin Warden Hamoot##9778
+			..accept A Warm Welcome##9728
+		step
+			goto Zangarmarsh,82,74.6
 			.kill Boglash|q 9895/1|tip I found Boglash here. He is a tall alien looking thing with really long legs. He walks around in the water, so some searching may be necessary.
+		step // del this step
 			.kill Boglash and Fen Striders|n|tip It's easier if you just run around in the water all around the east part of Zangarmarsh.
 			.collect 6 Fertile Spores##24449|q 9806/1|future
 			.kill all mobs in this area|n
 			.get 10 Unidentified Plant Parts|q 9802/1
-		step
+		step // move this step
 			goto Zangarmarsh,80.4,64.2
 			.talk Lauranna Thar'well##17909
 			..turnin Plants of Zangarmarsh##9802
 		step
-			goto Zangarmarsh,78.5,63.1
-			.talk Lethyn Moonfire##17834
-			..turnin The Dying Balance##9895
-		step
 			goto Zangarmarsh,85.3,90.9
 			.kill Kataru|q 9747/1|tip In the big building, all the way at the top.
 		step
-			goto Zangarmarsh,84.8,84.4
+			goto Zangarmarsh,85.4,82
 			.kill 6 Umbrafen Oracle|q 9747/2
 			.kill 8 Umbrafen Seer|q 9747/3
 			.kill 6 Umbrafen Witchdoctor|q 9747/4
+			.' Position 1|at Zangarmarsh,84.4,89.15
+			.' Position 2|at Zangarmarsh,82.85,85.3
 		step
 			goto Zangarmarsh,83.4,85.5
 			.talk Kayra Longmane##17969
 			..accept Escape from Umbrafen##9752
+			goto Zangarmarsh,79.84,71.3
 			.'Escort Kayra Longmane|goal Escort Kayra Longmane to safety|q 9752/1
 		step
 			goto Zangarmarsh,80.4,64.2
@@ -2625,6 +2632,11 @@ startlevel 70
 			.talk Windcaller Blackhoof##18070
 			..accept Safeguarding the Watchers##9894
 		step
+			goto Zangarmarsh,78.5,63.1
+			.talk Lethyn Moonfire##17834
+			..turnin The Dying Balance##9895
+			..accept Watcher Leesa'oh##9697
+		step
 			goto Zangarmarsh,78.4,62
 			.talk Ysiel Windsinger##17841
 			..turnin Escape from Umbrafen##9752
@@ -2636,7 +2648,8 @@ startlevel 70
 			.' Click Ikeyen's Belongings|tip A little tan metal chest sitting on a beg flat rock.
 			.get Ikeyen's Belongings|q 9788/1
 		step
-			.'Go northeast inside the cave to 72.5,94.0|goto 72.5,94.0
+			goto Zangarmarsh,72.5,94.0
+			.'Go northeast inside the cave
 			.kill Lord Klaq|q 9894/1|tip On the bottom level of the cave, in the small round room all the way in the back.
 		step
 			goto Zangarmarsh,75.7,90.2
@@ -2645,12 +2658,353 @@ startlevel 70
 		step
 			goto Zangarmarsh,70.9,82.1
 			.' Stand here to Investigate Umbrafen Lake|goal Umbrafen Lake Investigated|q 9716/1
-			.kill nagas|n
-			.get 30 Naga Claws|q 9728/1
+			.from Darkcrest Slaver##19946, Darkcrest Sorceress##19947
+			.get 3 Naga Claws##24280|q 9728/1
+		step
+			goto Zangarmarsh,65.1,68.7
+			.kill Rajah Haghazed##18046|q 9730/1
+			.from Darkcrest Taskmaster##18086, Darkcrest Siren##18087
+			.get 8 Naga Claws##24280|q 9728/1
+		step
+			goto Zangarmarsh,65.2,40.9
+			.kill Rajis Fyashe##18044|q 9817/1
+			.from Bloodscale Overseer##20088, Bloodscale Wavecaller##20089
+			.get 15 Naga Claws##24280|q 9728/1
+		step
+			goto Zangarmarsh,62.5,40.9
+			.from Darkcrest Taskmaster##18086, Darkcrest Siren##18087, Darkcrest Slaver##19946, Darkcrest Sorceress##19947, Bloodscale Overseer##20088, Bloodscale Wavecaller##20089
+			.get 30 Naga Claws##24280|q 9728/1
+			.get 10 Unidentified Plant Parts|q 9802/1
+		step
+			goto Zangarmarsh,78.4,62
+			.talk Ysiel Windsinger##17841
+			..turnin Disturbance at Umbrafen Lake##9716
+			..accept As the Crow Flies##9718
+			.' Use the Stormcrow Amulet in your bags|use Stormcrow Amulet##25465
+			.' Watch yourself fly as a crow
+			.talk Ysiel Windsinger##17841
+			..turnin As the Crow Flies##9718
+			..accept Balance Must Be Preserved##9720
+		step
+			goto Zangarmarsh,79.1,65.3
+			.talk Warden Hamoot##17858
+			..turnin A Warm Welcome##9728
+			..turnin Leader of the Darkcrest##9730
+			..turnin Leader of the Bloodscale##9817
+		step
+			goto Zangarmarsh,80.4,64.2
+			.talk Lauranna Thar'well##17909
+			..turnin Plants of Zangarmarsh##9802
+			..turnin Saving the Sporeloks##10096
+			.talk Ikeyen##17956
+			..turnin A Damp, Dark Place##9788
 		step
 			goto Zangarmarsh,80.4,64.7
 			.talk Windcaller Blackhoof##18070
+			..accept Blessings of the Ancients##9785
 			..turnin Safeguarding the Watchers##9894
+		step
+			goto Zangarmarsh,81.1,63.9
+			.talk Ashyen##17900
+			.' Get the Mark of Lore|q 9785/1
+		step
+			goto Zangarmarsh,79,67.4
+			.talk Keleth##17901
+			.' Get the Mark of War|q 9785/2
+		step
+			goto Zangarmarsh,80.4,64.7
+			.talk Windcaller Blackhoof##18070
+			..turnin Blessings of the Ancients##9785
+		step
+			goto Zangarmarsh,67.8,51.5
+			.talk Munci##18788
+			..fpath Telredor, Zangarmarsh
+		step
+			goto Zangarmarsh,68.3,50.1
+			.talk Vindicator Idaar##18004
+			..accept The Dead Mire##9782
+		step
+			goto Zangarmarsh,68.2,49.4
+			.talk Anchorite Ahuurn##18003
+			..accept The Orebor Harborage##9776
+			..accept The Boha'mu Ruins##9786
+		step
+			goto Zangarmarsh,68.6,48.7
+			.talk Ruam##18007
+			..accept Fulgor Spores##9777
+		step
+			goto Zangarmarsh,67.7,48
+			.talk Haalrun##18005
+			..accept Too Many Mouths to Feed##9781
+			.talk Noraani##18006
+			..accept Menacing Marshfangs##9791
+		step
+			goto Zangarmarsh,71.3,46.9
+			.' Click the little green glowing mushrooms around this area
+			.get 6 Fulgor Spore|q 9777/1
+			.' Position 1 (Lift)|at Zangarmarsh,70.06,50.95
+			.' Position 2 (Graveyard)|at Zangarmarsh,65.15,51.3
+		step
+			goto Zangarmarsh,62,40.83
+			.' Use your Ironvine Seeds on the Lagoon Pump Controls|use Ironvine Seeds##24355|tip The pump controls look like a little box with some levers on it.
+			.' Serpent Lake Controls Disabled|q 9720/3
+			.' Kill Steam Pump Overseers, Bloodscale Overseers, and Bloodscale Wavecallers
+			.get Drain Schematics|n
+			.' Click the Drain Schematics in your bags|use Drain Schematics##24330
+			..accept Drain Schematics##9731
+		step
+			goto Zangarmarsh,80.7,43.4
+			.' Click the Dead Mire Soil mound
+			.get Dead Mire Soil Sample|q 9782/1
+		step
+			goto Zangarmarsh,85.3,50.35
+			.kill 10 Marshfang Ripper|q 9791/1
+		step
+			goto Zangarmarsh,68.3,50.1
+			.talk Vindicator Idaar##18004
+			..turnin The Dead Mire##9782
+			..accept An Unnatural Drought##9783
+		step
+			goto Zangarmarsh,68.6,48.7
+			.talk Ruam##18007
+			..turnin Fulgor Spores##9777
+		step
+			goto Zangarmarsh,67.7,48
+			.talk Noraani##18006
+			..turnin Menacing Marshfangs##9791
+			..accept Umbrafen Eel Filets##9780
+		step
+			goto Zangarmarsh,68.6,49.4
+			.talk Prospector Conall##18295
+			..accept Unfinished Business##9901
+		step
+			goto Zangarmarsh,78.44,44.43
+			.kill Sporewing|q 9901/1|tip He looks like a Sporebat.
+		step
+			goto Zangarmarsh,78.3,45.2
+			.kill 12 Withered Giant|q 9783/1
+			.get Withered Basidium|n
+			.' Click the Withered Basidium|use Withered Basidium##24483
+			..accept Withered Basidium##9827
+		step
+			goto Zangarmarsh,68.3,50.1
+			.talk Vindicator Idaar##18004
+			..turnin An Unnatural Drought##9783
+		step
+			goto Zangarmarsh,68.6,49.4
+			.talk Prospector Conall##18295
+			..turnin Unfinished Business##9901
+			..accept Blacksting's Bane##9896
+		step
+			goto Zangarmarsh,68.6,48.7
+			.talk Ruam##18007
+			..turnin Withered Basidium##9827
+			..accept Withered Flesh##10355
+		step
+			goto Zangarmarsh,82.6,43.7
+			.from Parched Hydra##20324
+			.get 5 Parched Hydra Sample|q 10355/1
+			.from Withered Bog Lord##19402
+			.get 5 Withered Bog Lord Sample|q 10355/2
+		step
+			goto Zangarmarsh,68.6,48.7
+			.talk Ruam##18007
+			..turnin Withered Flesh##10355
+		step
+			goto Zangarmarsh,74.2,60.7
+			.kill 10 Mire Hydra|q 9781/1
+			goto Zangarmarsh,75.75,63.9
+			.from Umbrafen Eel##18138
+			.get 8 Eel Filet|q 9780/1
+		step
+			goto Zangarmarsh,63.13,64.11
+			.' Use your Ironvine Seeds on the Lagoon Pump Controls|use Ironvine Seeds##24355|tip The pump controls look like a little box with some levers on it.
+			.' Lagoon Controls Disabled|q 9720/4
+		step
+			goto Zangarmarsh,70.6,80.3
+			.' Use your Ironvine Seeds on the Lagoon Pump Controls|use Ironvine Seeds##24355|tip The pump controls look like a little box with some levers on it.
+			.' Umbrafen Lake Controls Disabled|q 9720/1
+		step
+			goto Zangarmarsh,67.7,48
+			.talk Haalrun##18005
+			..turnin Too Many Mouths to Feed##9781
+			..accept Diaphanous Wings##9790
+			.talk Noraani##18006
+			..turnin Umbrafen Eel Filets##9780
+		step
+			goto Zangarmarsh,69.9,60.9
+			.from Umbraglow Stinger##18132, Marshlight Bleeder##18133
+			.get 8 Diaphanous Wing|q 9790/1
+			.' Position 1 (drop-chance 27%)|at Zangarmarsh,72.44,57.48
+			.' Position 2 (drop-chance 27%)|at Zangarmarsh,71.2,67.99
+			.' Position 3 (drop-chance 27%)|at Zangarmarsh,78.2,70.2
+			.' Position 4 (drop-chance 27%)|at Zangarmarsh,78.7,80.2
+			.' Position 5 (drop-chance 27%)|at Zangarmarsh,67.84,76.7
+			.' Position 6 (drop-chance 27%)|at Zangarmarsh,63.5,71.5
+			.' Position 7 (80% drop-chance)|at Zangarmarsh,15.7,38.7
+		step
+			goto Zangarmarsh,67.7,48
+			.talk Haalrun##18005
+			..turnin Diaphanous Wings##9790
+		step
+			goto Zangarmarsh,50.4,40.8
+			.' Locate the drain in Serpent Lake|q 9731/1|tip Swim straight down at this spot.
+		step
+			goto Zangarmarsh,49.5,59.2
+			.from Blacksting##18283
+			.get Blacksting's Stinger|q 9896/1
+		step
+			goto Zangarmarsh,44.5,66.1
+			.' The path up to 'The Boha'mu Ruins' starts here|goto Zangarmarsh,44.5,66.1,0.5|noway|c
+		step
+			goto Zangarmarsh,44.1,68.8
+			.' Explore the Boha'mu Ruins|goal Explore the Boha'mu Ruins|q 9786/1
+		step
+			goto Zangarmarsh,32.8,59.1
+			.from "Count" Ungula##18285
+			.get "Count" Ungula's Mandible|n
+			.' Click "Count" Ungula's Mandible|use "Count" Ungula's Mandible##25459
+			..accept The Count of the Marshes##9911
+		step
+			goto Zangarmarsh,23.3,66.2
+			.talk Watcher Leesa'oh##17831
+			..turnin Watcher Leesa'oh##9697
+			..accept Observing the Sporelings##9701
+			..turnin The Count of the Marshes##9911
+		step
+			goto Zangarmarsh,19.1,63.9
+			.talk Fahssn##17923
+			..accept The Sporelings' Plight##9739
+			..accept Natural Enemies##9743
+			..turnin Natural Enemies##9743
+		step
+			goto Zangarmarsh,14.5,61.6
+			.collect 40 Mature Spore Sac##24290|q 9739|tip They look like pink balls tied to a little string bobbing on the ground.  You need 30 extra to turn in for Sporeggar reputation, so you can accept quests. |future
+		step
+			goto Zangarmarsh,13.6,59.8
+			.' Go here to Investigate the Spawning Glen|goal Investigate the Spawning Glen|q 9701/1
+		step
+			goto Zangarmarsh,19.1,63.9
+			.talk Fahssn##17923
+			..turnin The Sporelings' Plight##9739
+			..'Turn in all your Mature Spore Sacs
+			..'Turn in all your Bog Lord Tendrils
+			..accept Sporeggar##9919
+		step
+			goto Zangarmarsh,23.3,66.2
+			.talk Watcher Leesa'oh##17831
+			..turnin Observing the Sporelings##9701
+			..accept A Question of Gluttony##9702
+		step
+			goto Zangarmarsh,27,63.3
+			.' Click the Discarded Nutriments|tip They look like green glowing mushroom stalks on the ground.
+			.get 10 Discarded Nutriment|q 9702/1
+		step
+			goto Zangarmarsh,23.3,66.2
+			.talk Watcher Leesa'oh##17831
+			..turnin A Question of Gluttony##9702
+			..accept Familiar Fungi##9708
+		step
+			goto Zangarmarsh,19.7,52.1
+			.talk Msshi'fn##17924
+			..turnin Sporeggar##9919
+		step
+			goto Zangarmarsh,19.5,50
+			.talk Gzhun'tt##17856
+			..accept Now That We're Friends...##9726
+			.' The Player's standing with Sporeggar is Friendly
+		step
+			goto Zangarmarsh,19.2,49.4
+			.talk Gshaff##17925
+			..accept Fertile Spores##9806
+			..turnin Fertile Spores##9806
+		step
+			goto Zangarmarsh,25.4,42.9
+			.' Use your Ironvine Seeds on the Serpent Lake Controls|use Ironvine Seeds##24355|tip The pump controls look like a little box with some levers on it.
+			.' Marshlight Lake Controls Disabled|q 9720/2
+		step
+			goto Zangarmarsh,26.8,43
+			.kill 12 Bloodscale Slavedriver|q 9726/1
+			.kill 6 Bloodscale Enchantress|q 9726/2
+		step
+			goto Zangarmarsh,19.5,50
+			.talk Gzhun'tt##17856
+			..turnin Now That We're Friends...##9726
+		step
+			goto Zangarmarsh,41.3,29
+			.talk Halu##22485
+			..fpath Orebor Harborage, Zangarmarsh
+		step
+			goto Zangarmarsh,41.2,28.7
+			.talk Timothy Daniels##18019
+			..accept Secrets of the Daggerfen##9848
+		step
+			goto Zangarmarsh,41.7,27.3
+			.' Click the Wanted Poster|tip On a pink crystal post.
+			..accept Wanted: Chieftain Mummaki##10116
+		step
+			goto Zangarmarsh,41.9,27.2
+			.talk Ikuti##18008
+			..turnin The Orebor Harborage##9776
+			..accept Ango'rosh Encroachment##9835
+			..accept Daggerfen Deviance##10115
+		step
+			goto Zangarmarsh,26.4,22.8
+			.' Click the Daggerfen Poison Vial|tip Little clear bottle with white liquid in it, sitting on the ground next to a hut.
+			.get Daggerfen Poison Vial|q 9848/2
+		step
+			goto Zangarmarsh,24.4,27
+			.' Click the Daggerfen Poison Manual|tip At the top of the big tower, to the right as you reach the top, on the floor.
+			.get Daggerfen Poison Manual|q 9848/1
+		step
+			goto Zangarmarsh,23.8,26.8
+			.from Chieftain Mummaki##19174
+			.get Chieftain Mummaki's Totem|q 10116/1
+		step
+			goto Zangarmarsh,28.2,22.1
+			.kill 3 Daggerfen Assassin|q 10115/1
+			.kill 15 Daggerfen Muckdweller|q 10115/2
+		step
+			goto Zangarmarsh,29.6,28.3
+			.kill 5 Ango'rosh Shaman|q 9835/1
+			.kill 10 Ango'rosh Ogre|q 9835/2
+			.get 15 Mushroom Sample|q 9708/1
+		step
+			goto Zangarmarsh,41.2,28.7
+			.talk Timothy Daniels##18019
+			..turnin Secrets of the Daggerfen##9848
+		step
+			goto Zangarmarsh,41.9,27.2
+			.talk Ikuti##18008
+			..turnin Ango'rosh Encroachment##9835
+			..accept Overlord Gorefist##9839
+			..turnin Wanted: Chieftain Mummaki##10116
+			..turnin Daggerfen Deviance##10115
+		step
+			goto Zangarmarsh,41.6,27.3
+			.talk Maktu##18010
+			..accept Natural Armor##9834
+		step
+			goto Zangarmarsh,40.8,28.7
+			.talk Puluu##18009
+			..accept Stinger Venom##9830
+			..accept Lines of Communication##9833
+			..accept The Terror of Marshlight Lake##9902
+		step
+			goto Zangarmarsh,48.1,38.4
+			.kill Fenclaw Thrashers|n
+			.get 8 Fenclaw Hide|q 9834/1
+		step
+			goto Zangarmarsh,50.4,40.8
+			.' Locate the drain in Serpent Lake|q 9731/1|tip Swim straight down at this spot.
+		step
+			goto Zangarmarsh,35.9,58.6
+			.kill 12 Marshfang Slicer|q 9833/1
+		step
+			goto Zangarmarsh,23.3,66.2
+			.talk Watcher Leesa'oh##17831
+			..turnin Familiar Fungi##9708
+			..accept Stealing Back the Mushrooms##9709
 		step
 ]])
 
