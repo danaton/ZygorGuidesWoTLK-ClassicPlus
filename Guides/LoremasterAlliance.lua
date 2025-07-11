@@ -352,7 +352,7 @@ startlevel 20
 			.' Completed!|tip Use next guide - Westfall
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\Stormwind beta Chain",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[Alpha] Stormwind City",[[
 author danaton
 description Coming Soon
 startlevel 60
@@ -410,7 +410,7 @@ startlevel 60
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\Westfall",[[
 author danaton
-description Coming Soon
+description This guide contain quest-chain (26 quests + 4 if Human race) for Westfall location.
 startlevel 25
 		step
 			.' First completed Elwynn Forest guide|tip Manually skip this step
@@ -580,7 +580,6 @@ startlevel 25
 		step
 			goto Westfall,44.6,80.3
 			.talk Grimbooze Thunderbrew##239
-			..accept Sweet Amber##48
 			..accept Thunderbrew Lager##117
 		step
 			goto Westfall,47.19,67.48
@@ -592,6 +591,126 @@ startlevel 25
 			.talk Grimbooze Thunderbrew##239
 			..turnin Thunderbrew Lager##117
 		step
+			goto Westfall,30,86
+			.talk Captain Grayson##392
+			..accept Keeper of the Flame##103
+			..accept The Coastal Menace##104
+			..accept The Coast Isn't Clear##152
+		step
+			goto Westfall,34.7,85.3
+			.from Old Murk-Eye##391
+			.get Scale of Old Murk-Eye##3636|q 104/1
+			.' Waypoint start position|at 26.4,66
+		step
+			goto Westfall,34.65,85
+			.kill 7 Murloc Coastrunner##126|q 152/1
+			.kill 7 Murloc Warrior##171|q 152/2
+			.kill 7 Murloc Tidehunter##127|q 152/3
+			.kill 7 Murloc Oracle##517|q 152/4
+			.' Position 1|at 27.56,70.08
+			.' Position 2|at 27.6,40.5
+			.' Position 3|at 35.20,21.60
+			.' Position 4|at 44.3,9.07
+			.' Position 5|at 55.7,9.8
+		step
+			goto Westfall,51.7,21.7
+			.from Harvest Golem##36, Harvest Watcher##114, Harvest Reaper##115
+			.get 5 Flask of Oil##814|q 103/1
+			.' Position 1|at 53.3,33.6
+			.' Position 2|at 43.8,36.5
+			.' Position 3|at 39.1,52.1
+		step
+			goto Westfall,30,86
+			.talk Captain Grayson##392
+			..turnin Keeper of the Flame##103
+			..turnin The Coastal Menace##104
+			..turnin The Coast Isn't Clear##152
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin The People's Militia (3)##14
+			..accept The Defias Brotherhood (1)##65
+		step
+			goto Westfall,57,47.2
+			.talk Quartermaster Lewis##491
+			..accept A Swift Message##6181
+		only Human
+		step
+			goto Westfall,56.6,52.6
+			.talk Thor##523
+			..turnin A Swift Message##6181
+			..accept Continue to Stormwind##6281
+			.' Fly to Stormwind, Elwynn Forest|goto Stormwind|noway|c
+		only Human
+		step
+			goto Stormwind,77.2,61
+			.talk Osric Strang##1323
+			..turnin Continue to Stormwind##6281
+			..accept Dungar Longdrink##6261
+		only Human
+		step
+			goto Stormwind,57.7,47.9
+			.talk Baros Alexston##1646
+			..turnin Humble Beginnings##399
+		step
+			goto Stormwind,71,72.5
+			.talk Dungar Longdrink##352
+			..turnin Dungar Longdrink##6261
+			..accept Return to Lewis##6285
+		only Human
+		step
+			goto Stormwind,71,72.5
+			.talk Dungar Longdrink##352
+			.' Fly to Lakeshire, Redridge Mountains|goto Redridge Mountains|noway|c
+		step
+			goto Redridge Mountains,26.5,45.3
+			.talk Wiley the Black##266
+			..turnin The Defias Brotherhood (1)##65
+			..accept The Defias Brotherhood (2)##132
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin The Defias Brotherhood (2)##132
+			..accept The Defias Brotherhood (3)##135
+		step
+			goto Westfall,57,47.2
+			.talk Quartermaster Lewis##491
+			..turnin Return to Lewis##6285
+		only Human
+		step
+			goto Stormwind,78.3,70.7
+			.talk Master Mathias Shaw##332
+			..turnin The Defias Brotherhood (3)##135
+			..accept The Defias Brotherhood (4)##141
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin The Defias Brotherhood (4)##141
+			..accept The Defias Brotherhood (5)##142
+		step
+			goto Westfall,45.70,68.57
+			.from Defias Messenger##550
+			.get 1 A Mysterious Message|q 142/1
+			.' End move POS 36.23,43.97|n
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin The Defias Brotherhood (5)##142
+		step
+			goto Westfall,55.68,47.51
+			.talk The Defias Traitor##467
+			..accept The Defias Brotherhood##155
+		step
+			.'Follow the Defias Traitor.
+			goto Westfall,42.56,71.71
+			.' Escort The Defias Traitor to discover where VanCleef is hiding.|goal The Defias Brotherhood|q 155/1
+		step
+			goto Westfall,56.32,47.54
+			.talk Marshal Gryan Stoutmantle##234
+			..turnin The Defias Brotherhood##155
+		step
+			.' Next, I recommend running Quest-Instance Guides: Deadmines (15)
+			.' Completed!|tip Use next guide - Redridge Mountains
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Teldrassil",[[
@@ -2435,6 +2554,104 @@ startlevel 70
 			..turnin The Cenarion Expedition##9912
 		step
 			.' Congratulations! Achievement received!
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Zangarmarsh",[[
+author danaton
+description Contain quests?
+startlevel 70
+		step
+			.' It is recommended that you complete guide first: Hellfire Peninsula|tip Manually skip this step
+		step
+			goto Hellfire Peninsula,15.7,52
+			.talk Amythiel Mistwalker##16885
+			..accept The Cenarion Expedition##9912
+		step
+			goto Zangarmarsh,80.4,64.2
+			.talk Lauranna Thar'well##17909
+			..accept Plants of Zangarmarsh##9802
+			.talk Ikeyen##17956
+			..accept The Umbrafen Tribe##9747
+		step
+			goto Zangarmarsh,79.1,65.3
+			.talk Warden Hamoot##17858
+			..accept A Warm Welcome##9728
+		step
+			goto Zangarmarsh,78.5,63.1
+			.talk Lethyn Moonfire##17834
+			..accept The Dying Balance##9895
+		step
+			goto Zangarmarsh,78.4,62
+			.talk Ysiel Windsinger##17841
+			..turnin The Cenarion Expedition##9912
+			..accept Disturbance at Umbrafen Lake##9716
+		step
+			goto Zangarmarsh,80.1,73.3
+			.kill Boglash|q 9895/1|tip I found Boglash here. He is a tall alien looking thing with really long legs. He walks around in the water, so some searching may be necessary.
+			.kill Boglash and Fen Striders|n|tip It's easier if you just run around in the water all around the east part of Zangarmarsh.
+			.collect 6 Fertile Spores##24449|q 9806/1|future
+			.kill all mobs in this area|n
+			.get 10 Unidentified Plant Parts|q 9802/1
+		step
+			goto Zangarmarsh,80.4,64.2
+			.talk Lauranna Thar'well##17909
+			..turnin Plants of Zangarmarsh##9802
+		step
+			goto Zangarmarsh,78.5,63.1
+			.talk Lethyn Moonfire##17834
+			..turnin The Dying Balance##9895
+		step
+			goto Zangarmarsh,85.3,90.9
+			.kill Kataru|q 9747/1|tip In the big building, all the way at the top.
+		step
+			goto Zangarmarsh,84.8,84.4
+			.kill 6 Umbrafen Oracle|q 9747/2
+			.kill 8 Umbrafen Seer|q 9747/3
+			.kill 6 Umbrafen Witchdoctor|q 9747/4
+		step
+			goto Zangarmarsh,83.4,85.5
+			.talk Kayra Longmane##17969
+			..accept Escape from Umbrafen##9752
+			.'Escort Kayra Longmane|goal Escort Kayra Longmane to safety|q 9752/1
+		step
+			goto Zangarmarsh,80.4,64.2
+			.talk Ikeyen##17956
+			..turnin The Umbrafen Tribe##9747
+			..accept A Damp, Dark Place##9788
+			.talk Lauranna Thar'well##17909
+			..accept Saving the Sporeloks##10096
+		step
+			goto Zangarmarsh,80.4,64.7
+			.talk Windcaller Blackhoof##18070
+			..accept Safeguarding the Watchers##9894
+		step
+			goto Zangarmarsh,78.4,62
+			.talk Ysiel Windsinger##17841
+			..turnin Escape from Umbrafen##9752
+		step
+			goto Zangarmarsh,74.7,91.6
+			.' The path to 'Ikeyen's Belongings' starts here|goto Zangarmarsh,74.7,91.6,0.3|noway|c
+		step
+			.'Go southwest inside the cave to 70.5,97.9|goto 70.5,97.9
+			.' Click Ikeyen's Belongings|tip A little tan metal chest sitting on a beg flat rock.
+			.get Ikeyen's Belongings|q 9788/1
+		step
+			.'Go northeast inside the cave to 72.5,94.0|goto 72.5,94.0
+			.kill Lord Klaq|q 9894/1|tip On the bottom level of the cave, in the small round room all the way in the back.
+		step
+			goto Zangarmarsh,75.7,90.2
+			.kill 10 Marsh Lurker|q 10096/2
+			.kill 10 Marsh Dredger|q 10096/1
+		step
+			goto Zangarmarsh,70.9,82.1
+			.' Stand here to Investigate Umbrafen Lake|goal Umbrafen Lake Investigated|q 9716/1
+			.kill nagas|n
+			.get 30 Naga Claws|q 9728/1
+		step
+			goto Zangarmarsh,80.4,64.7
+			.talk Windcaller Blackhoof##18070
+			..turnin Safeguarding the Watchers##9894
+		step
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Netherstorm",[[
