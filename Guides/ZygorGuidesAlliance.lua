@@ -13359,8 +13359,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (62-64
 		..accept Lines of Communication##9833
 		..accept The Terror of Marshlight Lake##9902
 	step //112
-		goto 48.1,38.4
-		.kill Fenclaw Thrashers|n
+		goto Zangarmarsh,53.7,41.6
+		.from Fenclaw Thrasher##18214
 		.get 8 Fenclaw Hide|q 9834/1
 	step //113
 		goto 50.4,40.8
@@ -13378,7 +13378,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (62-64
 		.kill Terrorclaw|q 9902/1|tip On a little island.
 	step //117
 		goto 17.3,38.4
-		.kill Marshlight Bleeders|n|tip They are all around this area on the land, to the north and south.
+		.from Marshlight Bleeder##18133|tip They are all around this area on the land, to the north and south.
 		.get 6 Marshlight Bleeder Venom|q 9830/1
 		.' You'll be able to find more around 19.6,33.3
 	step //118
@@ -13444,10 +13444,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (64-66
 		..turnin Idols of the Feralfen##9787
 		..accept Gathering the Reagents##9801
 	step //9
-		goto 63.3,52.1
-		.kill Spore Bats|n
+		goto Zangarmarsh,63.3,52.1
+		.from Sporebat##18128
 		.get 4 Sporebat Eye|q 9801/1
-		.kill Fen Striders|n
+		.from Fen Strider##18134
 		.get 4 Fen Strider Tentacle|q 9801/2
 	step //10
 		goto 68.2,49.4
@@ -13528,12 +13528,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (64-66
 		..turnin Ishanah##10554
 		..accept Restoring the Light##10021
 	step //30
+		goto Shattrath City,28.3,49.4
+		.talk Minalei##19046
 		home Shattrath City
 	step //31
 		'Go outside to Terokkar Forest|goto Terokkar Forest|noway|c
 	step //32
 		goto Terokkar Forest,38.6,8.5
-		.kill Shimmerscale Eels|n
+		.from Shimmerscale Eel##18750
 		.get 8 Pristine Shimmerscale Eel|q 10037/1
 	step //33
 		goto 44.3,26.3
@@ -13561,11 +13563,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (64-66
 		..turnin It's Watching You!##9951
 	step //39
 		goto 44.1,23.8
-		.kill Vicious Teromoths|n
+		.from Vicious Teromoth##18437
 		.get 4 Vicious Teromoth Sample|q 9968/2
 	step //40
 		goto 45.8,29.8
-		.kill Teromoths|n
+		.from Teromoth##18468
 		.get 4 Teromoth Sample|q 9968/1
 	step //41
 		goto 44.3,26.3
@@ -13649,7 +13651,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (64-66
 	step //60
 		goto 32.2,52.8
 		.kill 8 Cabal Skirmisher|q 10878/1
-		.kill Cabal orcs|n
+		.from Cabal Abjurist##21660, Cabal Skirmisher##21661, Cabal Tomb-Raider##21662
 		.get 10 Mark of Kil'jaeden|q 10325/1
 		.get Cabal Orders|n
 		.' Click the Cabal Orders|use Cabal Orders##31707

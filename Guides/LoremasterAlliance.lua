@@ -2558,7 +2558,7 @@ startlevel 70
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Zangarmarsh",[[
 author danaton
-description Contain quests?
+description This guide contain quest-chain (57 quests) for Zangarmarsh location.
 startlevel 70
 		step
 			.' It is recommended that you complete guide first: Hellfire Peninsula|tip Manually skip this step
@@ -2991,8 +2991,8 @@ startlevel 70
 			..accept Lines of Communication##9833
 			..accept The Terror of Marshlight Lake##9902
 		step
-			goto Zangarmarsh,48.1,38.4
-			.kill Fenclaw Thrashers|n
+			goto Zangarmarsh,53.7,41.6
+			.from Fenclaw Thrasher##18214
 			.get 8 Fenclaw Hide|q 9834/1
 		step
 			goto Zangarmarsh,50.4,40.8
@@ -3006,11 +3006,292 @@ startlevel 70
 			..turnin Familiar Fungi##9708
 			..accept Stealing Back the Mushrooms##9709
 		step
+			goto Zangarmarsh,22.4,46.1
+			.kill Terrorclaw|q 9902/1|tip On a little island.
+		step
+			goto Zangarmarsh,17.3,38.4
+			.from Marshlight Bleeder##18133|tip They are all around this area on the land, to the north and south.
+			.get 6 Marshlight Bleeder Venom|q 9830/1
+			.' You'll be able to find more around 19.6,33.3
+		step
+			goto Zangarmarsh,17.3,10.2
+			.kill 10 Ango'rosh Mauler|q 9839/2
+			.' Click the brown crates and kill ogres around this area
+			.get 10 Box of Mushrooms|q 9709/1
+		step
+			goto Zangarmarsh,18.3,7.7
+			.kill 1 Overlord Gorefist|q 9839/1|tip Follow the path up the hill. Overlord Gorefist is inside the small house on the left.
+		step
+			goto Zangarmarsh,40.8,28.7
+			.talk Puluu##18009
+			..turnin Stinger Venom##9830
+			..turnin Lines of Communication##9833
+			..turnin The Terror of Marshlight Lake##9902
+		step
+			goto Zangarmarsh,41.6,27.3
+			.talk Maktu##18010
+			..turnin Natural Armor##9834
+			..accept Maktu's Revenge##9905
+		step
+			goto Zangarmarsh,41.9,27.2
+			.talk Ikuti##18008
+			..turnin Overlord Gorefist##9839
+		step
+			goto Zangarmarsh,42.2,41.4
+			.kill Mragesh|q 9905/1|tip He is a big brown hydra underwater.
+		step
+			goto Zangarmarsh,23.3,66.2
+			.talk Watcher Leesa'oh##17831
+			..turnin Stealing Back the Mushrooms##9709
+			..'Don't follow her when she walks away
+		step
+			goto Zangarmarsh,41.6,27.3
+			.talk Maktu##18010
+			..turnin Maktu's Revenge##9905
+		step
+			goto Zangarmarsh,68.2,49.4
+			.talk Anchorite Ahuurn##18003
+			..turnin The Boha'mu Ruins##9786
+			..accept Idols of the Feralfen##9787
+		step
+			goto Zangarmarsh,68.6,49.4
+			.talk Prospector Conall##18295
+			..turnin Blacksting's Bane##9896
+		step
+			goto Zangarmarsh,49.3,60.6
+			.' Click the Feralfen Idols|tip They are small grey and green eagle statues on the ground.
+			.get 6 Feralfen Idol|q 9787/1
+		step
+			goto Zangarmarsh,68.2,49.4
+			.talk Anchorite Ahuurn##18003
+			..turnin Idols of the Feralfen##9787
+			..accept Gathering the Reagents##9801
+		step
+			goto Zangarmarsh,63.3,52.1
+			.from Sporebat##18128
+			.get 4 Sporebat Eye|q 9801/1
+			.from Fen Strider##18134
+			.get 4 Fen Strider Tentacle|q 9801/2
+		step
+			goto Zangarmarsh,68.2,49.4
+			.talk Anchorite Ahuurn##18003
+			..turnin Gathering the Reagents##9801
+			..accept Messenger to the Feralfen##9803
+		step
+			goto Zangarmarsh,44.6,66.1
+			.' Drink Ahuurn's Elixir|use Ahuurn's Elixir##24428
+			.' Walk up the big steps
+			.talk Elder Kuruti##18197
+			.' Get Elder Kuruti's Response|goal Elder Kuruti's Response|q 9803/1
+		step
+			goto Zangarmarsh,68.2,49.4
+			.talk Anchorite Ahuurn##18003
+			..turnin Messenger to the Feralfen##9803
+		step
+			goto Zangarmarsh,78.4,62
+			.talk Ysiel Windsinger##17841
+			..turnin Balance Must Be Preserved##9720
+			..turnin Drain Schematics##9731
+			..accept Warning the Cenarion Circle##9724
+		step
+			goto Hellfire Peninsula,15.7,52
+			.talk Amythiel Mistwalker##16885
+			..turnin Warning the Cenarion Circle##9724
+			..accept Return to the Marsh##9732
+		step
+			goto Zangarmarsh,78.4,62
+			.talk Ysiel Windsinger##17841
+			..turnin Return to the Marsh##9732
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Terokkar Forest",[[
+author danaton
+description coming soon
+	startlevel 70
+		step
+			.' It is recommended that you complete guide first: Zangarmarsh|tip Manually skip this step
+		step
+			goto Zangarmarsh,78.5,63.1
+			.talk Lethyn Moonfire##17834
+			..accept What's Wrong at Cenarion Thicket?##9957
+		step
+			goto Zangarmarsh,68.3,50.1
+			.talk Vindicator Idaar##18004
+			..accept The Fate of Tuurem##9793
+		step
+			goto Shattrath City,61.2,12.6
+			.talk the Haggard War Veteran##19684
+			..accept A'dal##10210
+		step
+			goto Shattrath City,54,44.8
+			.talk A'dal##18481
+			..turnin A'dal##10210
+		step
+			goto Shattrath City,54.8,44.3
+			.talk Khadgar##18166
+			..accept City of Light##10211
+			.' Follow the pink voidwalker
+		step
+			.' Follow the pink voidwalker until the tour is over|goal City of Light|q 10211/1
+		step
+			goto Shattrath City,54.8,44.3
+			.talk Khadgar##18166
+			..turnin City of Light##10211
+			..accept Allegiance to the Aldor##10551 |instant
+			..accept Ishanah##10554
+		step
+			goto Shattrath City,30.7,34.6
+			.talk Adyen the Lightwarden##18537
+			..accept Marks of Kil'jaeden##10325
+		step
+			goto Shattrath City,24,29.7
+			.talk Ishanah##18538
+			..turnin Ishanah##10554
+			..accept Restoring the Light##10021
+		step
+			goto Shattrath City,62.8,15.9
+			.talk Seth##18653
+			..accept Rather Be Fishin'##10037
+		step
+			goto Terokkar Forest,37.4,51.5
+			.talk Kirrik the Awakened##22272
+			..accept Speak with Rilak the Redeemed##10908
+		step
+			goto Shattrath City,52.5,21
+			.talk Rilak the Redeemed##22292
+			..turnin Speak with Rilak the Redeemed##10908
+			..accept The Eyes of Skettis##10847
+		step
+			goto Terokkar Forest,38.6,8.5
+			.from Shimmerscale Eel##18750
+			.get 8 Pristine Shimmerscale Eel|q 10037/1
+		step
+			goto Terokkar Forest,44.3,26.3
+			.talk Earthbinder Tavgren##18446
+			..turnin What's Wrong at Cenarion Thicket?##9957
+			..accept Strange Energy##9968
+			..accept Clues in the Thicket##9971
+		step
+			goto Terokkar Forest,45,22.5
+			.talk Warden Treelos##18424
+			..accept It's Watching You!##9951
+		step
+			goto Terokkar Forest,45.1,21.8
+			.' Examine the Strange Object|goal Strange Object examined|q 9971/1|tip Inside the building, looks like a white ball on the floor next to a dead guy.
+		step
+			goto Terokkar Forest,43.4,22.1
+			.kill Naphthal'ar|q 9951/1|tip At the top of the big tower.
+		step
+			goto Terokkar Forest,45,22.5
+			.talk Warden Treelos##18424
+			..turnin It's Watching You!##9951
+		step
+			goto Terokkar Forest,44.3,26.3
+			.talk Earthbinder Tavgren##18446
+			..turnin Clues in the Thicket##9971
+		step
+			goto Terokkar Forest,44.1,23.8
+			.from Vicious Teromoth##18437
+			.get 4 Vicious Teromoth Sample|q 9968/2
+		step
+			goto Terokkar Forest,45.8,29.8
+			.from Teromoth##18468
+			.get 4 Teromoth Sample|q 9968/1
+		step
+			goto Terokkar Forest,44.3,26.3
+			.talk Earthbinder Tavgren##18446
+			..turnin Strange Energy##9968
+			..accept By Any Means Necessary##9978
+		step
+			goto Terokkar Forest,47.1,27
+			.' Fight Empoor until he's almost dead
+			.talk Empoor##18482
+			..turnin By Any Means Necessary##9978
+			..accept Wind Trader Lathrai##9979
+		step
+			goto Terokkar Forest,49.2,20.3
+			.' Click the Eastern Altar
+			.' Purify the Eastern Altar|goal Eastern Altar|q 10021/2
+		step
+			goto Terokkar Forest,49.9,16.5|n
+			.' The path up to the Eye of Veil Reskk starts here|goto Terokkar Forest,49.9,16.5,0.3|noway|c
+		step
+			goto Terokkar Forest,50.1,19.4
+			.' Click the Eye of Veil Reskk|tip Looks like a big white orb at the top of the tower across the hanging bridge.
+			.get Eye of Veil Reskk|q 10847/1
+		step
+			goto Terokkar Forest,50.7,16.6
+			.' Click the Northern Altar
+			.' Purify the Northern Altar|goal Northern Altar|q 10021/1
+		step
+			goto Terokkar Forest,48.1,14.5
+			.' Click the Western Altar
+			.' Purify the Western Altar|goal Western Altar|q 10021/3
+		step
+			goto Terokkar Forest,57.9,23.2
+			.' Click the Eye of Veil Shienor|tip Climb the path inside the other tree, run across the bridge, looks like a big white orb on the ground.
+			.get Eye of Veil Shienor|q 10847/2
+		step
+			goto Shattrath City,72.2,30.7
+			.talk Wind Trader Lathrai##18484
+			..turnin Wind Trader Lathrai##9979
+			..accept A Personal Favor##10112
+		step
+			goto Shattrath City,64,15.5
+			.talk Seth##18653
+			..turnin Rather Be Fishin'##10037
+		step
+			goto Shattrath City,52.5,21
+			.talk Rilak the Redeemed##22292
+			..turnin The Eyes of Skettis##10847
+			..accept Seek Out Kirrik##10849
+		step
+			goto Shattrath City,24,29.7
+			.talk Ishanah##18538
+			..turnin Restoring the Light##10021
+		step
+			goto Terokkar Forest,37.4,51.5
+			.talk Kirrik the Awakened##22272
+			..turnin Seek Out Kirrik##10849
+			..accept Veil Skith: Darkstone of Terokk##10839
+		step
+			goto Terokkar Forest,37.7,51.3
+			.talk Ethan##22365
+			..accept Missing Friends##10852
+		step
+			goto Terokkar Forest,38.2,50.5
+			.talk Mekeda##22370
+			..accept Before Darkness Falls##10878
+		step
+			goto Terokkar Forest,37.9,51.7
+			.talk Lakotae##22420
+			..accept The Infested Protectors##10896
+		step
+			goto Terokkar Forest,35.2,48.8
+			.kill 25 Infested Root-Walker##22095|q 10896/1
+			.kill 25 Wood Mite|q 10896/1
+			.' You can find more Infested Root-walkers at 39.1,47.0|n
+		step
+			goto Terokkar Forest,32.2,52.8
+			.kill 8 Cabal Skirmisher|q 10878/1
+			.from Cabal Abjurist##21660, Cabal Skirmisher##21661, Cabal Tomb-Raider##21662
+			.get 10 Mark of Kil'jaeden|q 10325/1
+			.get Cabal Orders|n
+			.' Click the Cabal Orders|use Cabal Orders##31707
+			..accept Cabal Orders##10880
+		step
+			goto Terokkar Forest,37.4,51.2
+			.talk Mekeda##22370
+			..turnin Cabal Orders##10880
+			..accept The Shadow Tomb##10881
+		step
+			
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Netherstorm",[[
 author danaton
-description Coming Soon
+description This guide contain quest-chain (120 quests) for Netherstorm location.
+	startlevel 70
 		step //
 			goto Shattrath City,75.8,29.2
 			.talk Arcanist Savan##23272
