@@ -13673,6 +13673,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (64-66
 		goto 37.4,51.2
 		.talk Mekeda##22370
 		..turnin Before Darkness Falls##10878
+	step
+		goto Terokkar Forest,31.3,52.65
+		.' Go To Shadow Tomb Entrance|goto Terokkar Forest,31.3,52.65|noway|c
 	step //65
 		goto 29.7,51.7
 		.' Click the Cabal Chest|tip Inside the Shadow Tomb, inside a Cabal Chest in the back left of the room on the ground.
@@ -13686,20 +13689,20 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (64-66
 		.' Click the Cabal Chest|tip Inside the Shadow Tomb, inside a Cabal Chest in the back right of the room on the ground.
 		.get Scroll of Atalor|q 10881/3
 	step //68
-		'Go outside to 37.4,51.2|goto 37.4,51.2
+		goto Terokkar Forest,37.4,51.2
 		.talk Mekeda##22370
 		..turnin The Shadow Tomb##10881
 	step //69
+		goto 30.8,42.1
+		.' Use the Rod of Purification on the Darkstone of Terokk|use Rod of Purification##31610
+		.' Purify the Darkstone of Terokk|goal Attempt to purify the Darkstone of Terrok|q 10839/1
+	step //70
 		goto 32.3,41.7
-		.kill arakkoas|n
+		.from Skithian Dreadhawk##18452,Skithian Windripper##18453
 		.get 5 Lathrai's Stolen Goods|q 10112/1
 		.get Veil Skith Prison Keys|n
 		.' Click the yellow cages around this area
 		.' Rescue 12 Children|goal 12 Children Rescued|q 10852/1
-	step //70
-		goto 30.8,42.1
-		.' Use the Rod of Purification on the Darkstone of Terokk|use Rod of Purification##31610
-		.' Purify the Darkstone of Terokk|goal Attempt to purify the Darkstone of Terrok|q 10839/1
 	step //71
 		goto 37.4,51.5
 		.talk Kirrik the Awakened##22272
@@ -13840,11 +13843,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (64-66
 		..turnin The Fate of Tuurem##9793
 		..accept Magical Disturbances##10026
 	step //103
+		goto Terokkar Forest,56.7,53.3
+		.talk Innkeeper Biribi##19296
 		home Allerian Stronghold
 	step //104
 		goto 59.4,55.4
 		.talk Furnan Skysoar##18809
-		..fpath Allerian Stronghold
+		..fpath Allerian Stronghold, Terokkar Forest
 	step //105
 		'Fly to Shattrath City|goto Shattrath City|noway|c
 	step //106

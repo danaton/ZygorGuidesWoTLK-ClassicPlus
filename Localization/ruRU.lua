@@ -33,7 +33,7 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	["opt_guide_next"] = "Следующее руководство: %s",
 
 	["opt_report"] = "Сообщить об ошибке",
-	["opt_report_desc"] = "Отправьте баг-репорт, содержащий все детали текущего этапа руководства. Скопируйте все данные из окна и отправьте на электронную почту автора руководста.",
+	["opt_report_desc"] = "Создайте форму баг-репорта, содержащую текущие детали игры. Скопируйте все данные из окна и отправьте на электронную почту автора руководста.",
 
 	["opt_visible"] = "Показывать окно руководства Zygor Guides Viewer",
 	["opt_visible_desc"] = "",
@@ -109,15 +109,17 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	['frame_settings'] = "Опции",
 	['frame_settings1'] = COLOR_TIP_MOUSE.."ЛКМ|r, чтобы установить параметры окна",
 	['frame_settings2'] = COLOR_TIP_MOUSE.."ПКМ|r, чтобы открыть настройки",
-	['frame_minimized'] = "Showing |cffffffff%d|r step(s)",
-	['frame_maximized'] = "Showing all steps",
-	['frame_minimize'] = COLOR_TIP_MOUSE.."Click|r to show only |cffffffff%d|r",
-	['frame_maximize'] = COLOR_TIP_MOUSE.."Click|r to show all",
+	['frame_minimized'] = "Отображается |cffffffff%d|r этап(ы)",
+	['frame_maximized'] = "Отображаются все этапы",
+	['frame_minimize'] = COLOR_TIP_MOUSE.."ЛКМ|r, чтобы отобразить только |cffffffff%d|r",
+	['frame_maximize'] = COLOR_TIP_MOUSE.."ЛКМ|r, чтобы показать все",
+	['frame_minright'] = COLOR_TIP_MOUSE.."ПКМ|r, чтобы установить кол-во этапов",
 	['frame_stepnav_prev'] = "Предыдущий этап",
 	['frame_stepnav_prev_click'] = COLOR_TIP_MOUSE.."ЛКМ|r, чтобы вернуться",
+	['frame_stepnav_prev_right'] = COLOR_TIP_MOUSE.."ПКМ|r, чтобы отмотать назад",
 	['frame_stepnav_next'] = "Следующий этап",
 	['frame_stepnav_next_click'] = COLOR_TIP_MOUSE.."ЛКМ|r, чтобы пропустить",
-	['frame_stepnav_next_right'] = COLOR_TIP_MOUSE.."Right-click|r to fast-forward",
+	['frame_stepnav_next_right'] = COLOR_TIP_MOUSE.."ПКМ|r, чтобы перемотать вперед",
 	['frame_section'] = "Текущий гайд",
 	['frame_section_click'] = COLOR_TIP_MOUSE.."Нажмите|r чтобы выбрать",
 
@@ -137,7 +139,7 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	["coords"] = "%d,%d",
 	["map_coords"] = "%s %d,%d",
 
-	["stepgoal_home"] = "Set home location to %s",
+	["stepgoal_home"] = "Сделайте своим домом %s",
 	["stepgoal_flightpath"] = "Get the %s flight path",
 
 	["stepgoal_accept"] = "Возьмите %s", -- ok
@@ -159,7 +161,7 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	["stepgoal_fpath"] = "Откройте маршрут: %s",
 	["stepgoal_use"] = "Употребите %s",
 	["stepgoal_home"] = "Сделайте %s своим домом",
-	["stepgoal_petaction"] = "Use pet action %s",
+	["stepgoal_petaction"] = "Используйте способность питомца %s",
 	["stepgoal_havebuff"] = "Gain buff/debuff '%s'",
 	["stepgoal_nobuff"] = "Lose buff/debuff '%s'",
 	["stepgoal_invehicle"] = "Enter vehicle",
@@ -319,8 +321,8 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	['opt_arrowfreeze_desc'] = "Стрелка указателя будет игнорировать все взаимодействия с мышкой. Снимите флажок, чтобы перемещать стрелку указателя по экрану.",
 	['opt_arrowmeters'] = "Метрическая система",
 	['opt_arrowmeters_desc'] = "Используются метры и километры, вместо ярдов и милей.",
-	['opt_arrowcolordir'] = "Colour by direction",
-	['opt_arrowcolordir_desc'] = "Colour the arrow's gem green when pointing at the destination.\n\nDeselect to let the gem turn green when approaching the destination.",
+	['opt_arrowcolordir'] = "Цвет направления",
+	['opt_arrowcolordir_desc'] = "Указатель направления всегда будет зеленым.\n\nСнимите флажок и указатель направления будет постепенно зеленеть при приблежении к месту назначения.",
 	['opt_arrowscale'] = "Размер указателя",
 	['opt_arrowscale_desc'] = "Установите желаемый размер указателя навигации.",
 	['opt_arrowfontsize'] = "Размер текста указателя",
@@ -329,8 +331,8 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	['opt_foglight_desc'] = "Неисследованные области на карте, будут открыты для удобства навигации.",
 	['opt_minimapzoom'] = "Приближать миникарту",
 	['opt_minimapzoom_desc'] = "Миникарта автоматически будет приближена, как только Вы достигните нужного местоположения из руководства.",
-	['opt_audiocues'] = "Audible cues",
-	['opt_audiocues_desc'] = "Provides audible navigation signals, used when leaving your character flying forward for more than 5 seconds.\nWith these, you can safely turn to face the target waypoint, start flying forward, and Alt-Tab out or something.\nWhen arriving at the destination, a 'boat bell' sound is played. When the destination is no longer straight ahead and you're going to miss it, a 'warning zap' is played.",
+	['opt_audiocues'] = "Звуковые сигналы",
+	['opt_audiocues_desc'] = "Издает звуковые сигналы при движении по стрелке направления.\nС помощью этой функции вы можете повернуться лицом к целевой точке маршрута, начать автоматическое движение вперед и свернуть World of Warcraft.\nПри достижении точки маршрута, будет воспроизведен звук \"корабельного колокола\". Когда пункт назначения окажется позади или Вы его пропустите, будет вопроизведен \"предупреждающий сигнал\".",
 
 -- Расширенные функции
 	['opt_group_convenience'] = "Расширенные функции",
