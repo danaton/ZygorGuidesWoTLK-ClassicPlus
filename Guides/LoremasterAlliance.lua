@@ -3106,7 +3106,7 @@ startlevel 70
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Terokkar Forest",[[
 author danaton
-description coming soon
+description This guide contain quest-chain for Terokkar Forest (64/63 quests) and Skettis location.
 	startlevel 70
 		step
 			.' It is recommended that you complete guide first: Zangarmarsh|tip Manually skip this step
@@ -3153,6 +3153,12 @@ description coming soon
 			.talk Seth##18653
 			..accept Rather Be Fishin'##10037
 		step
+			.goto Shattrath City,64.3,42.3
+			.talk Yuula##23449
+			.' Required Riding Skill 225 to accept quest
+			.' This step start Skettis Quest-Chain
+			..accept Threat from Above##11096
+		step
 			goto Terokkar Forest,37.4,51.5
 			.talk Kirrik the Awakened##22272
 			..accept Speak with Rilak the Redeemed##10908
@@ -3161,6 +3167,10 @@ description coming soon
 			.talk Rilak the Redeemed##22292
 			..turnin Speak with Rilak the Redeemed##10908
 			..accept The Eyes of Skettis##10847
+		step
+			goto Terokkar Forest,22.25,13.8
+			.from Gordunni Back-Breaker##22143, Gordunni Elementalist##22144, Gordunni Head-Splitter##22148
+			.kill 20 Gordunni Ogre|q 11096/1
 		step
 			goto Terokkar Forest,38.6,8.5
 			.from Shimmerscale Eel##18750
@@ -3232,6 +3242,11 @@ description coming soon
 			.' Click the Eye of Veil Shienor|tip Climb the path inside the other tree, run across the bridge, looks like a big white orb on the ground.
 			.get Eye of Veil Shienor|q 10847/2
 		step
+			.goto Shattrath City,64.3,42.3
+			.talk Yuula##23449
+			..turnin Threat from Above##11096
+			..accept To Skettis!##11098
+		step
 			goto Shattrath City,72.2,30.7
 			.talk Wind Trader Lathrai##18484
 			..turnin Wind Trader Lathrai##9979
@@ -3267,10 +3282,26 @@ description coming soon
 			.talk Lakotae##22420
 			..accept The Infested Protectors##10896
 		step
+			goto Terokkar Forest,37.5,50.8
+			.talk High Priest Orglum##22278
+			..accept The Tomb of Lights##10840
+		step
 			goto Terokkar Forest,35.2,48.8
-			.kill 25 Infested Root-Walker##22095|q 10896/1
+			.kill Infested Root-Walker##22095 |n
 			.kill 25 Wood Mite|q 10896/1
 			.' You can find more Infested Root-walkers at 39.1,47.0|n
+		step
+			goto Terokkar Forest,47.08,56.42
+			.kill 10 Ethereal Nethermancer##21370|q 10840/1
+			.kill 10 Ethereal Plunderer##21368|q 10840/2
+		step
+			goto Terokkar Forest,31.27,52.66
+			.' Enter the tunnel and move to the end
+			.talk Akuno##22377|at 30.61,49.06
+			..accept Escaping the Tomb##10887
+		step
+			goto Terokkar Forest,34.08,51.72
+			Escort and help Akuno find his way to the Refugee Caravan|q 10887/1
 		step
 			goto Terokkar Forest,32.2,52.8
 			.kill 8 Cabal Skirmisher|q 10878/1
@@ -3280,14 +3311,23 @@ description coming soon
 			.' Click the Cabal Orders|use Cabal Orders##31707
 			..accept Cabal Orders##10880
 		step
+			goto Terokkar Forest,37.5,50.8
+			.talk High Priest Orglum##22278
+			..turnin The Tomb of Lights##10840
+		step
 			goto Terokkar Forest,37.4,51.2
 			.talk Mekeda##22370
 			..turnin Cabal Orders##10880
+			..turnin Escaping the Tomb##10887
 			..accept The Shadow Tomb##10881
 		step
 			goto Terokkar Forest,37.9,51.7
 			.talk Lakotae##22420
 			..turnin The Infested Protectors##10896
+		step
+			goto Terokkar Forest,37.1,49.5
+			.talk Soolaveen##18675
+			..accept Recover the Bones##10030
 		step
 			goto Terokkar Forest,39.4,55.1
 			.kill 4 Cabal Spell-weaver|q 10878/2
@@ -3298,7 +3338,7 @@ description coming soon
 			..turnin Before Darkness Falls##10878
 		step
 			goto Terokkar Forest,31.3,52.65
-			.' Go To Shadow Tomb Entrance|goto Terokkar Forest,31.3,52.65|noway|c
+			.' Go To Shadow Tomb Entrance|goto Terokkar Forest,31.3,52.65|noway|c|q 10881
 		step
 			goto Terokkar Forest,29.7,51.7
 			.' Click the Cabal Chest|tip Inside the Shadow Tomb, inside a Cabal Chest in the back left of the room on the ground.
@@ -3336,31 +3376,60 @@ description coming soon
 			.talk Ethan##22365
 			..turnin Missing Friends##10852
 		step
-			goto Terokkar Forest,30.2,51.1
+			goto Terokkar Forest,29.5,51.4
 			.kill 4 Deathtalon Spirit|q 10848/1
 			.kill 4 Screeching Spirit|q 10848/2
 			.kill 2 Spirit Raven|q 10848/3
+		step
+			goto Terokkar Forest,32.5,56.6
+			.collect 10 Restless Bones##25842|q 10030/1
+		step
+			goto Terokkar Forest,35.1,66.2
+			.talk Ramdor the Mad##19417
+			..turnin Recover the Bones##10030
+			..accept Helping the Lost Find Their Way##10031
 		step
 			goto Terokkar Forest,37.4,51.5
 			.talk Kirrik the Awakened##22272
 			..turnin Veil Rhaze: Unliving Evil##10848
 			..accept Veil Lithic: Preemptive Strike##10861
 		step
+			goto Terokkar Forest,37.5,50.8
+			.talk High Priest Orglum##22278
+			..accept Vengeful Souls##10842
+		step
+			goto Terokkar Forest,47,55.4
+			.' Enter the tunnel
+			.kill 5 Vengeful Draenei##21636|q 10842/1
+		step
+			goto Terokkar Forest,37.5,50.8
+			.talk High Priest Orglum##22278
+			..turnin Vengeful Souls##10842
+		step
 			goto Terokkar Forest,24.2,70.5
 			.' Open the purple glowing, brown eggs on the ground around this area
 			.' Redeem 3 Hatchlings|goal 3 Hatchlings Redeemed|q 10861/1
 			.kill 3 Malevolent Hatchling|q 10861/2
+		step
+			goto Terokkar Forest,31.4,75.7
+			.talk Scout Navrin##22364
+			..accept Taken in the Night##10873
 		step
 			goto Terokkar Forest,31,76.1
 			.talk Commander Ra'vaj##22446
 			..accept An Improper Burial##10913
 			.talk Chief Archaeologist Letoll##22458
 			..accept Digging Through Bones##10922
-			..'Escort the Archaeologists|goal Protect the Explorers|q 10922/1
+			.' Escort the Archaeologists|goal Protect the Explorers|q 10922/1
 		step
 			goto Terokkar Forest,31,76.1
 			.talk Dwarfowitz##22481
 			..turnin Digging Through Bones##10922
+			..accept Fumping##10929
+		step
+			goto Terokkar Forest,31.1,76.5
+			.talk Oakun##22456
+			..accept The Dread Relic##10877
 		step
 			goto Terokkar Forest,35,76.5
 			.' Use your Sha'tari Torch on corpses|use Sha'tari Torch##31769
@@ -3378,10 +3447,81 @@ description coming soon
 			.kill 5 Auchenai Doomsayer|q 10914/2
 			.' Position 2|at 48.1,67.15
 		step
+			goto Terokkar Forest,43.9,76.4
+			.collect 1 Dread Relic##31697|q 10877/1
+		step
+			goto Terokkar Forest,48.64,73.66
+			.kill 10 Lost Spirit##18460|q 10031/1
+			.kill 10 Broken Skeleton##16805|q 10031/2
+		step
+			goto Terokkar Forest,49.7,76.2
+			.talk Vindicator Haylen##22462
+			..accept For the Fallen##10920
+		step
+			goto Terokkar Forest,52.8,78.15
+			.kill 6 Netherweb Victim##22355|q 10873/1
+		step
+			goto Terokkar Forest,53.76,72.32
+			.talk Skywing##22424
+			..accept Skywing##10898
+		step
+			goto Terokkar Forest,55.63,69.55
+			.' Escort Skywing|q 10898/1|tip Follow Skywing and protect him.
+			.kill Luanga the Imprisoner##18533|q 10898/1
+		step
+			goto Terokkar Forest,53.9,58.8
+			.kill 20 Dreadfang Widow##18467|q 10920/1
+			.' Widow-spot 1|at 25.3,65.3
+		step
+			goto Terokkar Forest,49.7,76.2
+			.talk Vindicator Haylen##22462
+			..turnin For the Fallen##10920
+			..accept Terokkarantula##10921
+		step
+			goto Terokkar Forest,54.3,81.8
+			.kill Terokkarantula##20682|q 10921/1
+		step
+			goto Terokkar Forest,49.7,76.2
+			.talk Vindicator Haylen##22462
+			..turnin Terokkarantula##10921
+			..accept Return to Sha'tari Base Camp##10926
+		step
+			goto Terokkar Forest,42.06,76.39
+			.' Use Fumper|use Fumper##31810
+			.from Mature Bone Sifter##22482
+			.get 8 Mature Bone Sifter Carcass##31814|q 10929/1
+		step
+			goto Terokkar Forest,31.4,75.7
+			.talk Scout Navrin##22364
+			..turnin Taken in the Night##10873
+			..turnin Return to Sha'tari Base Camp##10926	
+		step
 			goto Terokkar Forest,31,76.1
 			.talk Commander Ra'vaj##22446
 			..turnin A Hero Is Needed##10914
 			..accept The Fallen Exarch##10915
+		step
+			goto Terokkar Forest,31,76.1
+			.talk Dwarfowitz##22481
+			..turnin Fumping##10929
+			..accept The Big Bone Worm##10930
+		step
+			goto Terokkar Forest,31.1,76.5
+			.talk Oakun##22456
+			..turnin The Dread Relic##10877
+			..accept Evil Draws Near##10923
+		step
+			goto Terokkar Forest,47.17,76.9
+			.kill Decrepit Clefthoof##22105 |n
+			.' Use Fumper on Clefthoof corpse|use Fumper##31825
+			.from Hai'shulud##22038
+			.get Enormous Bone Worm Organs##31826|q 10930/1
+		step
+			goto Terokkar Forest,48.9,67.9
+			.from Auchenai Death-Speaker##21242, Auchenai Doomsayer##21285
+			.collect 20 Doom Skull##31812|q 10923
+			.use Dread Relic##31811|at 48.7,67.17
+			.kill Teribus the Cursed##22441|q 10923/1
 		step
 			goto Terokkar Forest,35.9,65.7
 			.' Click the black coffin up the steps
@@ -3391,18 +3531,22 @@ description coming soon
 			.talk Commander Ra'vaj##22446
 			..turnin The Fallen Exarch##10915
 		step
+			goto Terokkar Forest,31,76.1
+			.talk Dwarfowitz##22481
+			..turnin The Big Bone Worm##10930
+		step
+			goto Terokkar Forest,31.1,76.5
+			.talk Oakun##22456
+			..turnin Evil Draws Near##10923
+		step
 			goto Terokkar Forest,37.4,51.5
 			.talk Kirrik the Awakened##22272
 			..turnin Veil Lithic: Preemptive Strike##10861
 			..accept Veil Shalas: Signal Fires##10874
 		step
-			goto Terokkar Forest,37.5,50.8
-			.talk High Priest Orglum##22278
-			..accept The Tomb of Lights##10840
-		step
-			goto Terokkar Forest,46.3,56.5
-			.kill 10 Ethereal Nethermancer|q 10840/1
-			.kill 10 Ethereal Plunderer|q 10840/2
+			goto Terokkar Forest,37.1,49.5
+			.talk Soolaveen##18675
+			..turnin Helping the Lost Find Their Way##10031
 		step
 			goto Terokkar Forest,54.9,66.0|n
 			.' The path up to Veil Shalas starts here|goto Terokkar Forest,54.9,66.0,0.5|noway|c
@@ -3436,8 +3580,6 @@ description coming soon
 			.talk Kirrik the Awakened##22272
 			..turnin Veil Shalas: Signal Fires##10874
 			..accept Return to Shattrath##10889
-			.talk High Priest Orglum##22278
-			..turnin The Tomb of Lights##10840
 		step
 			goto Terokkar Forest,57.6,54.7
 			.' Click the Wanted Poster|tip Right in front of the town hall building, next to light post.
@@ -3474,13 +3616,16 @@ description coming soon
 			goto Shattrath City,52.6,21
 			.talk Rilak the Redeemed##22292
 			..turnin Return to Shattrath##10889
+			..turnin Skywing##10898
 			.' You are about to fight three waves of birds and a bird boss. Make sure you're ready.
 			.talk Defender Grashna##22373
 			..accept The Skettis Offensive##10879
 		step
 			goto Shattrath City,52.6,21
 			.' Kill the little birds that come to attack
+			.kill Minion of Terokk##22376 |n
 			.' Kill the big bird that attacks last
+			.kill Avatar of Terokk##22375 |n
 			.' Thwart the Attack|goal Attack thwarted|q 10879/1
 		step
 			goto Shattrath City,52.6,21
@@ -3619,6 +3764,20 @@ description coming soon
 			goto Terokkar Forest,58.1,53.4
 			.talk Taela Everstride##18704
 			..turnin Wanted: Bonelashers Dead!##10033
+			..accept Torgos!##10035
+		step
+			goto Terokkar Forest,43.2,51.6
+			.from Trachela##21515
+			.collect Trachela's Carcass##30618|q 10035|c
+		step
+			goto Terokkar Forest,26.9,55.7
+			.' Use Trachela's Carcass|use Trachela's Carcass##30618
+			.from Torgos##18707
+			.get Tail Feather of Torgos##25852|q 10035/1
+		step
+			goto Terokkar Forest,58.1,53.4
+			.talk Taela Everstride##18704
+			..turnin Torgos!##10035
 		step
 			goto Terokkar Forest,69.7,44.2
 			.talk Lieutenant Meridian##21006
@@ -3685,90 +3844,6 @@ description coming soon
 			goto Terokkar Forest,44.3,26.3
 			.talk Earthbinder Tavgren##18446
 			..turnin Letting Earthbinder Tavgren Know##10005
-		step // skywing chain
-			goto Terokkar Forest,53.76,72.32
-			.talk Skywing##22424
-			..accept Skywing##10898
-		step // skywing chain
-			goto Terokkar Forest,55.63,69.55
-			.' Escort Skywing|q 10898/1|tip Follow Skywing and protect him.
-			.kill Luanga the Imprisoner##18533|q 10898/1
-		step // haylen chain
-			goto Terokkar Forest,49.7,76.2
-			.talk Vindicator Haylen##22462
-			..accept For the Fallen##10920
-		step // haylen chain
-			goto Terokkar Forest,53.9,58.8
-			.kill 20 Dreadfang Widow##18467|q 10920/1
-			.' Widow-spot 1|at 25.3,65.3
-		step // haylen chain
-			goto Terokkar Forest,49.7,76.2
-			.talk Vindicator Haylen##22462
-			..turnin For the Fallen##10920
-			..accept Terokkarantula##10921
-		step // haylen chain
-			goto Terokkar Forest,54.3,81.8
-			.kill Terokkarantula##20682|q 10921/1
-		step // haylen chain
-			goto Terokkar Forest,49.7,76.2
-			.talk Vindicator Haylen##22462
-			..turnin Terokkarantula##10921
-			..accept Return to Sha'tari Base Camp##10926
-		step // haylen chain
-			goto Terokkar Forest,31.4,75.7
-			.talk Scout Navrin##22364
-			..turnin Return to Sha'tari Base Camp##10926
-		step // navrin chain
-			goto Terokkar Forest,31.4,75.7
-			.talk Scout Navrin##22364
-			..accept Taken in the Night##10873
-		step // navrin chain
-			goto Terokkar Forest,31.1,76.5
-			.talk Oakun##22456
-			..accept The Dread Relic##10877
-		step // navrin chain
-			goto Terokkar Forest,43.9,76.4
-			.collect 1 Dread Relic##31697|q 10877/1
-		step // navrin chain
-			goto Terokkar Forest,52.8,78.15
-			.kill 6 Netherweb Victim##22355|q 10873/1
-		step // navrin chain
-			goto Terokkar Forest,31.1,76.5
-			.talk Oakun##22456
-			..turnin The Dread Relic##10877
-			..accept Evil Draws Near##10923
-		step // navrin chain
-			goto Terokkar Forest,31.4,75.7
-			.talk Scout Navrin##22364
-			..turnin Taken in the Night##10873
-		step // navrin chain
-			goto Terokkar Forest,48.9,67.9
-			.from Auchenai Death-Speaker##21242, Auchenai Doomsayer##21285
-			.collect 20 Doom Skull##31812| sticky
-			.use Dread Relic##31811|at 48.7,67.17
-			.kill Teribus the Cursed##22441|q 10923/1
-		step // navrin chain
-			goto Terokkar Forest,31.1,76.5
-			.talk Oakun##22456
-			..turnin Evil Draws Near##10923
-		step //skywing chain
-			.goto Shattrath City,52.5,21
-			.talk Rilak the Redeemed##22292
-			..turnin Skywing##10898
-		step // yuula chain
-			.goto Shattrath City,64.3,42.3
-			.talk Yuula##23449
-			.' Required Riding Skill 225
-			..accept Threat from Above##11096
-		step // yuula chain
-			goto Terokkar Forest,22.25,13.8
-			.from Gordunni Back-Breaker##22143, Gordunni Elementalist##22144, Gordunni Head-Splitter##22148
-			.kill 20 Gordunni Ogre|q 11096/1
-		step // yuula chain
-			.goto Shattrath City,64.3,42.3
-			.talk Yuula##23449
-			..turnin Threat from Above##11096
-			..accept To Skettis!##11098
 		step // yuula chain
 			goto Terokkar Forest,64.5,66.7
 			.talk Sky Sergeant Doryn##23048
@@ -3849,13 +3924,1056 @@ description coming soon
 			.use Shabby Arakkoa Disguise##32741|q 11029/1
 			.talk Sahaak##23363
 			.buy Adversarial Bloodlines##32742|q 11029/1
-		step
+		step // yuula chain
 			goto Terokkar Forest,64.2,67
 			.talk Hazzik##23306
 			..turnin A Shabby Disguise##11029
 			..accept Adversarial Blood##11885
 		step // yuula chain
-			
+			goto Terokkar Forest,64.1,66.9
+			.talk Severin##23042
+			.' Get Elixir of Shadows|tip Manually skip this step|q 11885/1
+		step // yuula chain
+			goto Terokkar Forest,69.64,74.73
+			.' Drink Elixir of Shadows|havebuff spell_shadow_detectinvisibility
+			.from Time-Lost Skettis Reaver##21651, Time-Lost Skettis High Priest##21787, Time-Lost Skettis Worshipper##21763
+			.collect 10 Time-Lost Scroll##32620|q 11885/1|sticky
+			.' Use Skull Piles and Summon Akkarai
+			.kill Darkscreecher Akkarai##23161|q 11885/1
+		step // yuula chain
+			goto Terokkar Forest,70.05,79.47
+			.' Drink Elixir of Shadows|havebuff spell_shadow_detectinvisibility
+			.from Time-Lost Skettis Reaver##21651, Time-Lost Skettis High Priest##21787, Time-Lost Skettis Worshipper##21763
+			.collect 10 Time-Lost Scroll##32620|q 11885/1|sticky
+			.' Use Skull Piles and Summon Karrog
+			.kill Karrog##23165|q 11885/2
+		step // yuula chain
+			goto Terokkar Forest,70.23,83.32
+			.' Drink Elixir of Shadows|havebuff spell_shadow_detectinvisibility
+			.from Time-Lost Skettis Reaver##21651, Time-Lost Skettis High Priest##21787, Time-Lost Skettis Worshipper##21763
+			.collect 10 Time-Lost Scroll##32620|q 11885/1|sticky
+			.' Use Skull Piles and Summon Gezzarak
+			.kill Gezzarak the Huntress##23163|q 11885/3
+		step // yuula chain
+			goto Terokkar Forest,72.24,88.14
+			.' Drink Elixir of Shadows|havebuff spell_shadow_detectinvisibility
+			.from Time-Lost Skettis Reaver##21651, Time-Lost Skettis High Priest##21787, Time-Lost Skettis Worshipper##21763
+			.collect 10 Time-Lost Scroll##32620|q 11885/1|sticky
+			.' Use Skull Piles and Summon Vakkiz
+			.kill Vakkiz the Windrager##23162|q 11885/4
+		step // yuula chain
+			goto Terokkar Forest,64.2,67
+			.talk Hazzik##23306
+			..turnin Adversarial Blood##11885
+		step // yuula chain
+			goto Terokkar Forest,64.1,66.9
+			.talk Sky Commander Adaris##23038
+			..accept Terokk's Downfall##11073
+		step // yuula chain
+			goto Terokkar Forest,66.22,77.45
+			.' Use Skull Piles and Summon Terokk
+			.kill Terokk##21838|q 11073/1
+		step // yuula chain
+			goto Terokkar Forest,64.1,66.9
+			.talk Sky Commander Adaris##23038
+			..turnin Terokk's Downfall##11073	
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Nagrand",[[
+author danaton
+description This guide contain quest-chain (75 quests) for Nagrand location.
+startlevel 70
+		step
+			goto Zangarmarsh,41.21,28.67
+			.talk Timothy Daniels##18019
+			..accept Secrets of the Daggerfen##9848
+		step
+			goto Zangarmarsh,41.74,27.26
+			.' Click Wanted Poster
+			..accept Wanted: Chieftain Mummaki##10116
+		step
+			goto Zangarmarsh,41.95,27.19
+			.talk Ikuti##18008
+			..turnin The Orebor Harborage##9776
+			..accept Ango'rosh Encroachment##9835
+			..accept Daggerfen Deviance##10115
+		step
+			goto Zangarmarsh,26.41,22.84
+			.collect Daggerfen Poison Vial##24500|q 9848/2
+		step
+			goto Zangarmarsh,24.40,27.00
+			.collect Daggerfen Poison Manual##24499|q 9848/1|tip At the top of the tower.
+		step
+			goto Zangarmarsh,23.78,26.75
+			.from Chieftain Mummaki##19174|tip At the top of the tower.
+			.get Chieftain Mummaki's Totem##27943|q 10116/1
+		step
+			goto Zangarmarsh,25.20,25.34
+			.kill 3 Daggerfen Assassin##18116|q 10115/1
+			.kill 15 Daggerfen Muckdweller##18115|q 10115/2
+		step
+			goto Zangarmarsh,31.46,30.06
+			.kill 5 Ango'rosh Shaman##18118|q 9835/1
+			.kill 10 Ango'rosh Ogre##18117|q 9835/2
+		step
+			goto Zangarmarsh,41.21,28.67
+			.talk Timothy Daniels##18019
+			..turnin Secrets of the Daggerfen##9848
+		step
+			goto Zangarmarsh,41.94,27.19
+			.talk Ikuti##18008
+			..turnin Ango'rosh Encroachment##9835
+			..accept Overlord Gorefist##9839
+			..turnin Wanted: Chieftain Mummaki##10116
+			..turnin Daggerfen Deviance##10115
+		step
+			goto Nagrand,71.57,40.52
+			.talk Shado 'Fitz' Farstrider##18200
+			..accept Windroc Mastery##9854
+		step
+			goto Nagrand,71.52,40.82
+			.talk Hemet Nesingwary##18180
+			..accept Clefthoof Mastery##9789
+		step
+			goto Nagrand,71.38,40.62
+			.talk Harold Lane##18218
+			..accept Talbuk Mastery##9857
+		step
+			goto Nagrand,71.29,47.09
+			.kill 12 Talbuk Stag##17130|q 9857/1
+			.' You can find more around [65.37,47.19]
+		step
+			goto Nagrand,71.29,47.09
+			.kill 12 Clefthoof##18205|q 9789/1
+			.' You can find more around [65.37,47.19]
+		step
+			goto Nagrand,71.29,47.09
+			.kill 12 Windroc##17128|q 9854/1
+			.' You can find more around [65.37,47.19]
+		step
+			goto Nagrand,71.29,47.09
+			.from Wild Elekk##18334+
+			.get 3 Pair of Ivory Tusks##25463|q 9914 |future
+			.' You can find more around [65.37,47.19]
+		step
+			goto Nagrand,65.37,47.19
+			.from Dust Howler##17158
+			..accept The Howling Wind##9861|tip You will eventually automatically accept this quest after looting.
+		step
+			goto Nagrand,71.57,40.52
+			.talk Shado 'Fitz' Farstrider##18200
+			..turnin Windroc Mastery##9854 
+			..accept Windroc Mastery##9855
+		step
+			goto Nagrand,71.52,40.82
+			.talk Hemet Nesingwary##18180
+			..turnin Clefthoof Mastery##9789
+			..accept Clefthoof Mastery##9850
+		step
+			goto Nagrand,71.38,40.62
+			.talk Harold Lane##18218
+			..turnin Talbuk Mastery##9857
+			..accept Talbuk Mastery##9858
+		step
+			goto Nagrand,60.51,22.37
+			.talk Elementalist Morgh##18074
+			..turnin The Howling Wind##9861
+			..accept Murkblood Corrupters##9862
+		step
+			goto Nagrand,60.66,22.66
+			.talk Elementalist Untrag##18071
+			..accept The Underneath##9818
+		step
+			goto Nagrand,60.80,22.38
+			.talk Elementalist Lo'ap##18073
+			..accept A Rare Bean##9800
+			..accept Muck Diving##9815
+		step
+			goto Nagrand,61.26,22.26
+			.talk Gordawg##18099
+			..turnin The Underneath##9818
+			..accept The Tortured Earth##9819
+		step
+			goto Nagrand,55.7,22.0
+			.collect 8 Digested Caracoli##24419|q 9800/1|tip They look like piles of poo on the ground around this area.
+		step
+			goto Nagrand,55.7,22.0
+			.kill 12 Talbuk Thorngrazer##17131|q 9858/1
+		step
+			goto Nagrand,51.6,30.8
+			.kill 12 Clefthoof Bull##17132|q 9850/1
+			.' You can find more around [45.91,30.57]
+		step
+			goto Nagrand,51.94,34.78
+			.talk Consortium Recruiter##18335
+			..accept The Consortium Needs You!##9913
+		step
+			goto Nagrand,42.33,39.53
+			.from Muck Spawn##17154+
+			.get 5 Muck-ridden Core##24469|q 9815/1
+		step
+			goto Nagrand,32.20,43.26
+			.kill 5 Murkblood Putrifier##18202|q 9862/1
+		step
+			goto Nagrand,30.78,58.14
+			.talk Zerid##18276
+			..accept Gava'xi##9900
+			..accept Matters of Security##9925
+		step
+			goto Nagrand,31.36,57.80
+			.talk Gezhe##18265
+			..turnin The Consortium Needs You!##9913 
+			..accept Stealing from Thieves##9882
+		step
+			goto Nagrand,31.77,56.78
+			.talk Shadrek##18333
+			..accept A Head Full of Ivory##9914
+		step
+			goto Nagrand,31.77,56.78
+			.talk Shadrek##18333
+			..turnin A Head Full of Ivory##9914
+		step
+			goto Nagrand,35.03,65.00
+			.collect 10 Oshu'gun Crystal Fragment##25416|q 9882/1|tip They look like green and white crystals on the ground around this area.
+			.' You can find more around [41.21,70.42]
+		step
+			goto Nagrand,39.98,74.63
+			.kill 8 Voidspawn##17981|q 9925/1
+		step
+			goto Nagrand,42.40,73.49
+			.kill Gava'xi##18298|q 9900/1|tip He spawns here and walks around this area.
+		step
+			goto Nagrand,48.4,61.5
+			.kill 12 Ravenous Windroc##18220|q 9855/1
+		step
+			goto Nagrand,30.78,58.14
+			.talk Zerid##18276
+			..turnin Gava'xi##9900
+			..turnin Matters of Security##9925
+		step
+			goto Nagrand,31.36,57.80
+			.talk Gezhe##18265
+			..turnin Stealing from Thieves##9882 
+		step
+			goto Nagrand,54.15,69.52
+			.talk Huntress Kima##18416
+			..accept The Ravaged Caravan##9956
+			..accept He Called Himself Altruis...##9982
+		step
+			goto Nagrand,55.05,70.54
+			.talk Huntress Bintook##18353
+			..accept Do My Eyes Deceive Me##9917
+		step
+			goto Nagrand,55.51,68.78
+			.talk Elementalist Ioki##18233
+			..accept The Throne of the Elements##9869
+		step
+			goto Nagrand,54.68,70.73
+			.' Click Telaar Bulletin Board
+			..accept Wanted: Giselda the Crone##9936
+			..accept Wanted: Zorbo the Advisor##9940
+		step
+			goto Nagrand,54.74,70.88
+			.talk Warden Moi'bff Jill##18408
+			..turnin A Message to Telaar##9792
+			..accept Fierce Enemies##10476
+		step
+			goto Nagrand,54.48,72.08
+			.talk Otonbu the Sage##18222
+			..accept Stopping the Spread##9874
+		step
+			goto Nagrand,54.46,72.30
+			.talk Poli'lukluk the Wiser##18224
+			..accept Solving the Problem##9878
+		step
+			goto Nagrand,54.17,75.06
+			.talk Furgu##18789
+			.fpath Telaar, Nagrand
+		step
+			goto Nagrand,54.36,74.42
+			.talk Caregiver Isel##18914
+			home Telaar
+		step
+			goto Nagrand,61.68,67.11
+			.talk Wazat##19035
+			..accept I Must Have Them!##10109
+		step
+			goto Nagrand,62.35,72.14
+			.from Boulderfist Hunter##18352
+			.get Boulderfist Plans##25468|q 9917/1
+		step
+			goto Nagrand,64.66,71.01
+			.kill 10 Tortured Earth Spirit##17156|q 9819/1
+			.' You can find more around [57.62,61.64]
+		step
+			goto Nagrand,71.16,82.35
+			.kill Giselda the Crone##18391|q 9936/1 
+		step
+			goto Nagrand,72.56,70.70
+			.talk Corki##18369
+			..accept HELP!##9923
+		step
+			goto Nagrand,72.98,70.48
+			.from Boulderfist Crusher##17134, Boulderfist Mystic##17135
+			.get Boulderfist Key##25490|q 9923
+		step
+			goto Nagrand,72.56,70.70
+			.' Free Corki|q 9923/1
+		step
+			goto Nagrand,73.01,68.95
+			.' kill Boulderfist enemies around this area
+			.get 10 Obsidian Warbeads##25433 |q 10476/1
+		step
+			goto Nagrand,65.5,46.9
+			.from Dust Howler##17158+
+			.get 3 Air Elemental Gas##27807|q 10109/1
+			.' You can find more around [69.7,44.7]
+		step
+			goto Nagrand,71.38,40.62
+			.talk Harold Lane##18218
+			..turnin Talbuk Mastery##9858
+			..accept Talbuk Mastery##9859
+		step
+			goto Nagrand,71.52,40.82
+			.talk Hemet Nesingwary##18180
+			..turnin Clefthoof Mastery##9850
+			..accept Clefthoof Mastery##9851
+		step
+			goto Nagrand,71.57,40.52
+			.talk Shado 'Fitz' Farstrider##18200
+			..turnin Windroc Mastery##9855
+			..accept Windroc Mastery##9856
+		step
+			goto Nagrand,61.8,24.4
+			.talk Gordawg##18099
+			..turnin The Tortured Earth##9819
+			..accept Eating Damnation##9821
+		step
+			goto Nagrand,60.80,22.38
+			.talk Elementalist Lo'ap##18073
+			..turnin A Rare Bean##9800
+			..accept Agitated Spirits of Skysong##9804
+			..turnin Muck Diving##9815
+		step
+			goto Nagrand,60.66,22.10
+			.talk Elementalist Sharvak##18072
+			..turnin The Throne of the Elements##9869
+		step
+			goto Nagrand,60.51,22.37
+			.talk Elementalist Morgh##18074
+			..turnin Murkblood Corrupters##9862
+		step
+			goto Nagrand,59.7,27.3
+			.kill 8 Lake Spirit##17153|q 9804/1
+		step
+			goto Nagrand,60.80,22.38
+			.talk Elementalist Lo'ap##18073
+			..turnin Agitated Spirits of Skysong##9804
+			..accept Blessing of Incineratus##9805
+		step
+			goto Nagrand,52,20.2
+			.from Enraged Crusher##18062+
+			.get 10 Enraged Crusher Core##24473|q 9821/1
+		step
+			goto Nagrand,61.8,24.4
+			.talk Gordawg##18099
+			..turnin Eating Damnation##9821
+			..accept Shattering the Veil##9849
+		step
+			goto Nagrand,46.48,18.20
+			.kill Zorbo the Advisor##18413|q 9940/1
+			.info Inside the small cave.
+		step
+			goto Nagrand,45.37,22.12
+			.kill 10 Warmaul Shaman##18064|q 9940/2
+		step
+			goto Nagrand,45.37,22.12
+			.kill 10 Warmaul Reaver##17138|q 9940/3 
+		step
+			goto Nagrand,34.1,26.5
+			.from Gutripper##18257
+			.info He looks like a big black bird that flies around this area.|tip He sometimes flies high in the air.
+			.get Eye of Gutripper##24513|q 9856/1
+		step
+			goto Nagrand,25.70,27.61
+			.' Click Telaar Supply Crate
+			.info They look like grey metal boxes on the ground around this area.
+			.collect 10 Telaar Supply Crate##25647|q 9956/1
+		step
+			goto Nagrand,26.85,45.95
+			.from Bach'lor##18258
+			.info He looks like a larger grey talbuk that walks around this area.
+			.get Hoof of Bach'lor##24523|q 9859/1
+		step
+			goto Nagrand,27.33,43.08
+			.talk Altruis the Sufferer##18417
+			..turnin He Called Himself Altruis...##9982
+			..accept Survey the Land##9991
+		step
+			.' Survey the Forge Camps|q 9991/1
+		step
+			goto Nagrand,27.33,43.08
+			.talk Altruis the Sufferer##18417
+			..turnin Survey the Land##9991
+			..accept Buying Time##9999
+		step
+			goto Nagrand,20.05,51.43
+			.kill 2 Felguard Legionnaire##17152|q 9999/1
+		step
+			goto Nagrand,20.05,51.43
+			.kill 3 Mo'arg Engineer##16945|q 9999/2
+		step
+			goto Nagrand,20.05,51.43
+			.kill 8 Gan'arg Tinkerer##17151 |q 9999/3
+		step
+			goto Nagrand,27.33,43.08
+			.talk Altruis the Sufferer##18417
+			..turnin Buying Time##9999
+			..accept The Master Planner##10001
+		step
+			goto Nagrand,23.61,34.64
+			.from Mo'arg Master Planner##18567
+			.get The Master Planner's Blueprints##25751|q 10001/1
+		step
+			goto Nagrand,27.33,43.08
+			.talk Altruis the Sufferer##18417
+			..turnin The Master Planner##10001
+			..accept Patience and Understanding##10004 
+		step
+			goto Nagrand,33.58,48.00
+			.' Use the Torch of Liquid Fire|use Torch of Liquid Fire##24560
+			.info Use it on Sunspring Villager Corpses underwater around this area.
+			.' Burn 10 Sunspring Villager Corpses|q 9874/1
+		step
+			goto Nagrand,31.9,42.9
+			.kill 10 Murkblood Scavenger##18207|q 9878/1
+			.kill 5 Murkblood Raider##18203|q 9878/2
+		step
+			goto Nagrand,29.86,78.76
+			.' Use Gordawg's Boulder|use Gordawg's Boulder##24501
+			.info Use it on Shattered Rumblers around this area.
+			.kill 30 Minion of Gurok##18181|q 9849/1
+			.info They spawn after you.		
+		step
+			goto Nagrand,35.63,64.82
+			.from Banthar##18259
+			.info He looks like a huge red colored clefthoof that walks around this area.
+			.get Horn of Banthar##24496|q 9851/1
+		step
+			goto Nagrand,54.15,69.52
+			.talk Huntress Kima##18416
+			..turnin The Ravaged Caravan##9956
+		step
+			goto Nagrand,54.47,72.31
+			.talk Poli'lukluk the Wiser##18224
+			..turnin Solving the Problem##9878
+		step
+			goto Nagrand,54.48,72.09
+			.talk Otonbu the Sage##18222
+			..turnin Stopping the Spread##9874 
+		step
+			goto Nagrand,54.74,70.87
+			.talk Warden Moi'bff Jill##18408
+			..turnin Fierce Enemies##10476
+			..turnin Wanted: Giselda the Crone##9936
+			..turnin Wanted: Zorbo the Advisor##9940
+			..accept Wanted: Durn the Hungerer##9938
+		step
+			goto Nagrand,55.05,70.53
+			.talk Huntress Bintook##18353
+			..turnin Do My Eyes Deceive Me##9917
+			..accept Not On My Watch!##9918
+		step
+			goto Nagrand,55.48,68.71
+			.talk Arechron##18183
+			..turnin HELP!##9923
+			..accept Corki's Gone Missing Again!##9924
+		step
+			goto Nagrand,34.76,60.56
+			.kill Durn the Hungerer##18411|q 9938/1
+			.info He looks like a huge brown colored enemy that walks around this area.
+		step
+			goto Nagrand,54.74,70.87
+			.talk Warden Moi'bff Jill##18408
+			..turnin Wanted: Durn the Hungerer##9938
+		step
+			goto Nagrand,61.68,67.11
+			.talk Wazat##19035
+			..turnin I Must Have Them!##10109
+			..accept Bring Me The Egg!##10111
+		step
+			goto Nagrand,61.34,66.99
+			.' Click Mysterious Egg
+			.info It looks like a big white egg with light blue spots on it in a nest in the tree.
+			.' Attempt to Steal the Egg|q 10111/1
+		step
+			goto Nagrand,61.56,66.50
+			.from Windroc Matriarch##19055
+			.info She takes a while to fly down to you.
+			.get Severed Talon of the Matriarch##27841|q 10111/2
+		step
+			goto Nagrand,61.68,67.11
+			.talk Wazat##19035
+			..turnin Bring Me The Egg!##10111
+		step
+			goto Nagrand,62.74,71.49
+			.' Kill Lump
+			.info He will eventually turn friendly.
+			.talk Lump##18351
+			.' Tell him "I need answers, ogre!"
+			.' Interrogate Lump|q 9918/1
+		step
+			goto Nagrand,55.05,70.53
+			.talk Huntress Bintook##18353
+			..turnin Not On My Watch!##9918
+			..accept Mo'mor the Breaker##9920
+		step
+			goto Nagrand,54.61,72.21
+			.talk Mo'mor the Breaker##18223
+			..turnin Mo'mor the Breaker##9920
+			..accept The Ruins of Burning Blade##9921
+		step
+			goto Nagrand,72.9,69.8
+			.kill 8 Boulderfist Crusher##17134|q 9921/1
+			.' You can find more around [74.82,64.19]
+		step
+			goto Nagrand,72.9,69.8
+			.kill 8 Boulderfist Mystic##17135|q 9921/2
+			.' You can find more around [74.82,64.19]
+		step
+			goto Nagrand,72.75,54.70
+			.' Use the Living Fire |use Living Fire##24467
+			.info Use it inside the hut.
+			.' Destroy the Eastern Hut|q 9805/4
+		step
+			goto Nagrand,71.22,53.26
+			.' Use the Living Fire|use Living Fire##24467
+			.info Use it inside the hut.
+			.' Destroy the Southern Hut|q 9805/3 
+		step
+			goto Nagrand,70.76,51.13
+			.' Use the Living Fire |use Living Fire##24467
+			.info Use it inside the hut.
+			.' Destroy the Western Hut|q 9805/2
+		step
+			goto Nagrand,72.40,50.36
+			.' Use the Living Fire |use Living Fire##24467
+			.info Use it inside the hut.
+			.' Destroy the Large Hut|q 9805/1
+		step
+			goto Nagrand,71.38,40.63
+			.talk Harold Lane##18218
+			..turnin Talbuk Mastery##9859 
+		step
+			goto Nagrand,71.52,40.82
+			.talk Hemet Nesingwary##18180
+			..turnin Clefthoof Mastery##9851
+		step
+			goto Nagrand,71.57,40.53
+			.talk Shado 'Fitz' Farstrider##18200
+			..turnin Windroc Mastery##9856
+		step
+			goto Nagrand,71.52,40.81
+			.talk Hemet Nesingwary##18180
+			..accept The Ultimate Bloodsport##9852
+		step
+			goto Nagrand,61.8,24.4
+			.talk Gordawg##18099
+			..turnin Shattering the Veil##9849
+			..accept Gurok the Usurper##9853
+		step
+			goto Nagrand,60.80,22.38
+			.talk Elementalist Lo'ap##18073
+			..turnin Blessing of Incineratus##9805
+			..accept The Spirit Polluted##9810
+		step
+			goto Nagrand,54.61,72.21
+			.talk Mo'mor the Breaker##18223
+			..turnin The Ruins of Burning Blade##9921
+			..accept The Twin Clefts of Nagrand##9922
+		step
+			goto Nagrand,44.38,65.14
+			.from Tusker##18290
+			.info He walks around this small area.
+			.get Heart of Tusker##24505|q 9852/1
+		step
+			goto Nagrand,33.03,50.88
+			.kill Watoosun's Polluted Essence##18145|q 9810/1
+			.info Underwater.
+		step
+			goto Nagrand,33.8,48.9
+			.kill 8 Lake Surger##17155 |q 9810/2
+			.info Underwater around this area.
+		step
+			goto Nagrand,40.95,33.09
+			.from Boulderfist Warrior##17136, Boulderfist Mage##17137
+			.collect Northwind Cleft Key##25509|q 9924
+		step
+			goto Nagrand,40.76,31.44
+			.' Click Corki's Prison
+			.info Inside the cave.
+			.' Free Corki Again |q 9924/1 |goto 39.26,27.46
+		step
+			goto Nagrand,40.95,33.09
+			.kill 10 Boulderfist Warrior##17136|q 9922/1
+		step
+			goto Nagrand,40.95,33.09
+			.kill 10 Boulderfist Mage##17137|q 9922/2
+		step
+			goto Nagrand,60.80,22.38
+			.talk Elementalist Lo'ap##18073
+			..turnin The Spirit Polluted##9810
+		step
+			goto Nagrand,71.52,40.82
+			.talk Hemet Nesingwary##18180
+			..turnin The Ultimate Bloodsport##9852
+		step
+			goto Nagrand,54.61,72.21
+			.talk Mo'mor the Breaker##18223
+			..turnin The Twin Clefts of Nagrand##9922 
+			..accept Diplomatic Measures##10108
+		step
+			goto Nagrand,55.48,68.71
+			.talk Arechron##18183
+			..turnin Corki's Gone Missing Again!##9924
+			..accept Corki's Ransom##9954
+		step
+			goto Nagrand,73.81,62.60
+			.talk Lantresor of the Blade##18261
+			.' Tell him "I have killed many of your ogres, Lantresor. I have no fear."
+			.' Hear the Tale of the Blademaster|q 10108/1
+		step
+			goto Nagrand,73.81,62.60
+			.talk Lantresor of the Blade##18261
+			..turnin Diplomatic Measures##10108
+			..accept Armaments for Deception##9928
+			..accept Ruthless Cunning##9927
+		step
+			goto Nagrand,71.4,79.4
+			.' Kill Kil'sorrow enemies around this area
+			.' Use the Warmaul Ogre Banners|use Warmaul Ogre Banner##25552
+			.info Use it near Kil'sorrow enemy corpses.
+			.' Plant 10 Warmaul Ogre Banners|q 9927/1
+		step
+			goto Nagrand,71.4,79.4
+			.' Click Kil'sorrow Armament
+			.info They look like boxes with red axes on them on the ground and inside buildings around this area.
+			.collect 10 Kil'sorrow Armaments##25554|q 9928/1
+		step
+			goto Nagrand,73.81,62.60
+			.talk Lantresor of the Blade##18261
+			..turnin Armaments for Deception##9928
+			..turnin Ruthless Cunning##9927
+			..accept Returning the Favor##9931
+			..accept Body of Evidence##9932
+		step
+			goto Nagrand,46.66,24.32
+			.' Use the Damp Woolen Blanket|use Damp Woolen Blanket##25658
+			.info Use it next to the Blazing Warmaul Pyre.
+			.' Plant the Kil'sorrow Bodies|q 9932/1
+			.info Protect the 2 Boulderfist Saboteurs as they plant the bodies around this area.
+		step
+			goto Nagrand,46.97,23.51
+			.from Warmaul Reaver##17138, Warmaul Shaman##18064
+			.' Use the Kil'sorrow Banners|use Kil'sorrow Banner##25555
+			.info Use it near Warmaul enemy corpses.
+			.' Plant 10 Kil'sorrow Banners|q 9931/1
+		step
+			goto Nagrand,46.97,23.51
+			.from Warmaul Reaver##17138, Warmaul Shaman##18064
+			.collect 7 Warmaul Skull##24502|q 9853/1
+		step
+			goto Nagrand,29.06,25.01
+			.' Use the Warmaul Skulls |use Warmaul Skull##24502
+			.info Up on the mountain.
+			.from Gurok the Usurper##18182
+			.get Gurok's Earthen Head##24503|q 9853/1 
+		step
+			goto Nagrand,26.96,23.61
+			.talk Corki##18445
+			..turnin Corki's Ransom##9954|goto 29.52,26.02
+			..accept Cho'war the Pillager##9955
+		step
+			goto Nagrand,26.97,12.03
+			.from Cho'war the Pillager##18423
+			.info Inside the cave.
+			.get Cho'war's Key##25648|q 9955/1|goto 25.91,13.72
+		step
+			goto Nagrand,26.96,23.61
+			.' Click Corki's Prison
+			.info Inside the cave.
+			.' Free Corki|q 9955/1 |goto 29.52,26.02
+		step
+			goto Nagrand,55.48,68.71
+			.talk Arechron##18183
+			..turnin Cho'war the Pillager##9955
+		step
+			goto Nagrand,73.81,62.60
+			.talk Lantresor of the Blade##18261
+			..turnin Returning the Favor##9931
+			..turnin Body of Evidence##9932
+			..accept Message to Telaar##9933
+		step
+			goto Nagrand,55.48,68.71
+			.talk Arechron##18183
+			..turnin Message to Telaar##9933
+		step
+			goto Nagrand,61.8,24.4
+			.talk Gordawg##18099
+			.info He walks around this area.
+			..turnin Gurok the Usurper##9853
+		step
+			goto Nagrand,33.18,42.31
+			.talk Kurenai Captive##18209
+			..accept The Totem of Kar'dash##9879
+		step
+			goto Nagrand,31.57,38.77
+			Free the Kurenai Captive|q 9879/1
+			.info Follow Kurenai Captive and protect him as he walks.
+		step
+			goto Nagrand,39.9,57.6
+			.' Kill Murkblood Invader
+			.info They are a group of 3 riding on elephants along this road.
+			.info They walk on this road back and forth.
+			..accept Murkblood Invaders##9871
+		step
+			goto Nagrand,55.48,68.71
+			.talk Arechron##18183
+			..turnin The Totem of Kar'dash##9879
+			..turnin Murkblood Invaders##9871
+			..accept Ortor My Old Friend...##9873
+		step
+			goto Nagrand,30.85,42.36
+			.kill Ortor of Murkblood##18204|q 9873/1
+			.info Inside the building.
+		step
+			goto Nagrand,55.48,68.71
+			.talk Arechron##18183
+			..turnin Ortor My Old Friend...##9873
+		step
+			goto Terokkar Forest,37.24,65.61 
+			.talk Ha'lei##19697
+			..accept I See Dead Draenei##10227|goto Terokkar Forest,35.09,65.09
+		step
+			goto Terokkar Forest,35.14,66.27
+			.talk Ramdor the Mad##19417
+			..turnin I See Dead Draenei##10227 
+			..accept Ezekiel##10228
+		step
+			goto Shattrath City,61.62,40.74
+			.talk Ezekiel##19715
+			..turnin Ezekiel##10228
+			..accept What Book? I Don't See Any Book.##10231
+		step
+			goto Shattrath City,43.63,29.77
+			.talk "Dirty" Larry##19720
+			.' Tell him "Ezekiel said that you might have a certain book..."
+			.' Kill "Dirty" Larry
+			.info He will eventually turn friendly.
+			.' Beat Down "Dirty" Larry and Get the Information|q 10231/1
+		step
+			goto Shattrath City,43.63,29.78
+			.talk "Dirty" Larry##19720
+			..turnin What Book? I Don't See Any Book.##10231
+			..accept The Master's Grand Design?##10251
+		step
+			goto Shattrath City,74.07,32.84
+			.talk Sal'salabim##18584
+			.' Tell him "Altruis sent me. He said that you could help me."
+			.kill Sal'salabim##18584 |n
+			.info He will eventually turn friendly.
+			.' Persuade Sal'salabim|q 10004/1 |goto 77.30,34.88
+		step
+			goto Shattrath City,77.30,34.88
+			.talk Sal'salabim##18584
+			..turnin Patience and Understanding##10004
+			..accept Crackin' Some Skulls##10009
+		step
+			goto Shattrath City,75.02,31.45
+			.talk Raliq the Drunk##18585
+			.' Tell him "I have been sent by Sal'salabim to collect a debt that you owne. Pay up or I'm going to have to hurt you."
+			.from Raliq the Drunk##18585
+			.get Raliq's Debt##25767|q 10009/1
+		step
+			goto Zangarmarsh,80.80,91.12
+			.talk Coosh'coosh##18586
+			.' Tell him "I have been sent by Sal'salabim to collect a debt that you owne. Pay up or I'm going to have to hurt you."
+			.from Coosh'coosh##18586
+			.get Coosh'coosh's Debt##25768|q 10009/2 
+		step
+			goto Terokkar Forest,27.24,58.08
+			.talk Floon##18588
+			.' Tell him "I have been sent by Sal'salabim to collect a debt that you owne. Pay up or I'm going to have to hurt you."
+			.from Floon##18588
+			.get Floon's Debt##25769|q 10009/3
+		step
+			goto Shattrath City,77.30,34.88
+			.talk Sal'salabim##18584
+			..turnin Crackin' Some Skulls##10009
+			..accept It's Just That Easy?##10010
+		step
+			goto Nagrand,51.82,56.85
+			.talk Nitrin the Learned##19844
+			..turnin The Master's Grand Design?##10251
+			..accept Vision of the Dead##10252
+		step
+			goto Nagrand,30.5,65.9
+			.from Aged Clefthoof##17133
+			.get Aged Clefthoof Blubber##28668|q 10252/3
+		step
+			goto Nagrand,23.14,53.16
+			.from Mountain Gronn##19201
+			.get Mountain Gronn Eyeball##28665|q 10252/1
+		step
+			goto Nagrand,27.34,43.09
+			.talk Altruis the Sufferer##18417
+			..turnin It's Just That Easy?##10010 
+			..accept Forge Camp: Annihilated##10011
+		step
+			goto Nagrand,30.9,32.9
+			.from Greater Windroc##17129
+			.get Flawless Greater Windroc Beak##28667|q 10252/2
+			.' You can find more around 1: [33.25,26.30]
+			.' You can find more around 2: [35.91,28.69]
+		step
+			goto Nagrand,24.99,36.09
+			.from Overseer of Hate##18535
+			.get Fel Cannon Activator##25770|q 10011
+		step
+			goto Nagrand,25.08,35.98
+			.' Use the Fel Cannon Activator|use Fel Cannon Activator##25770
+			.info Use it next to Fel Cannon: Hate.
+			.' Destroy Forge Camp: Hate|q 10011/1
+		step
+			goto Nagrand,19.62,51.09
+			.from Overseer of Fear##18536
+			.get Fel Cannon Activator##25771|q 10011/2
+		step
+			goto Nagrand,19.36,50.78
+			.' Use the Fel Cannon Activator |use Fel Cannon Activator##25771
+			.info Use it next to Fel Cannon: Fear.
+			.' Destroy Forge Camp: Fear|q 10011/2 
+		step
+			goto Nagrand,27.34,43.09
+			.talk Altruis the Sufferer##18417
+			..turnin Forge Camp: Annihilated##10011
+		step
+			goto Nagrand,51.82,56.85
+			.talk Nitrin the Learned##19844
+			..turnin Vision of the Dead##10252
+		step
+			goto Nagrand,55.41,68.69
+			.talk Seer Jovar##23268
+			..accept A Mystifying Vision##11042
+			..accept Visions of Destruction##11044
+		step
+			goto Shadowmoon Valley,39.50,53.73
+			.talk Wing Commander Nuainn##21357
+			..turnin Visions of Destruction##11044 
+		step
+			goto Shadowmoon Valley,61.20,29.23
+			.talk Exarch Onaala##21860
+			..accept Karabor Training Grounds##10587
+			only if rep ('The Aldor') >= Neutral
+		step
+			goto Shadowmoon Valley,68.69,52.49
+			.from Demon Hunter Supplicant##21179, Demon Hunter Initiate##21180
+			.get 8 Sunfury Glaive##30679|q 10587/1
+			only if rep ('The Aldor') >= Neutral
+		step
+			goto Shadowmoon Valley,61.20,29.23
+			.talk Exarch Onaala##21860
+			..turnin Karabor Training Grounds##10587
+			..accept A Necessary Distraction##10637
+			only if rep ('The Aldor') >= Neutral
+		step
+			goto Shadowmoon Valley,72.15,50.85
+			.from Sunfury Warlock##21503, Sunfury Summoner##21505
+			.info Only Sunfury Warlocks and Sunfury Summoners will drop the quest item.
+			.get Scroll of Demonic Unbanishing##30811|q 10637|c
+			only if rep ('The Aldor') >= Neutral
+		step
+			goto Shadowmoon Valley,69.81,51.41
+			.' Use the Scroll of Demonic Unbanishing |use Scroll of Demonic Unbanishing##30811
+			.info Use it on Azaloth.
+			.info If the enemies around him are alive, try to get to him without killing them, if you can.
+			.info They will fight Azaloth for you once you free him.
+			.' Free Azaloth|q 10637/1
+			only if rep ('The Aldor') >= Neutral
+		step
+			goto Shadowmoon Valley,61.20,29.23
+			.talk Exarch Onaala##21860
+			..turnin A Necessary Distraction##10637
+			..accept Altruis##10640
+			only if rep ('The Aldor') >= Neutral
+		step
+			goto Shadowmoon Valley,55.73,58.17
+			.talk Larissa Sunstrike##21954
+			..accept Karabor Training Grounds##10687
+			only if rep ('The Scryers') >= Neutral
+		step
+			goto Shadowmoon Valley,68.69,52.49
+			.from Demon Hunter Supplicant##21179, Demon Hunter Initiate##21180
+			.get 8 Sunfury Glaive##30679|q 10687/1
+			only if rep ('The Scryers') >= Neutral
+		step
+			goto Shadowmoon Valley,55.73,58.17
+			.talk Larissa Sunstrike##21954
+			..turnin Karabor Training Grounds##10687
+			..accept A Necessary Distraction##10688
+			only if rep ('The Scryers') >= Neutral
+		step
+			goto Shadowmoon Valley,72.15,50.85
+			.from Sunfury Warlock##21503, Sunfury Summoner##21505
+			.info Only Sunfury Warlocks and Sunfury Summoners will drop the quest item.
+			.get Scroll of Demonic Unbanishing##30811|q 10688
+			only if rep ('The Scryers') >= Neutral
+		step
+			goto Shadowmoon Valley,69.81,51.41
+			.' Use the Scroll of Demonic Unbanishing|use Scroll of Demonic Unbanishing##30811
+			.info Use it on Azaloth.
+			.info If the enemies around him are alive, try to get to him without killing them, if you can.
+			.info They will fight Azaloth for you once you free him.
+			.' Free Azaloth|q 10688/1 
+			only if rep ('The Scryers') >= Neutral
+		step
+			goto Shadowmoon Valley,55.73,58.17
+			.talk Larissa Sunstrike##21954
+			..turnin A Necessary Distraction##10688 
+			..accept Altruis##10689
+			only if rep ('The Scryers') >= Neutral
+		step
+			goto Nagrand,27.34,43.09 
+			.talk Altruis the Sufferer##18417
+			..turnin Altruis##10640
+			only if rep ('The Aldor') >= Neutral
+		step
+			goto Nagrand,27.34,43.09 
+			.talk Altruis the Sufferer##18417
+			..turnin Altruis##10689
+			only if rep ('The Scryers') >= Neutral
+		step
+			goto Nagrand,27.34,43.09 
+			.talk Altruis the Sufferer##18417
+			..accept Against the Legion##10641
+			..accept Against the Illidari##10668
+			..accept Against All Odds##10669
+		step
+			goto Zangarmarsh,16.22,40.67
+			Use the Imbued Silver Spear|use Imbued Silver Spear##30853
+			.kill Xeleth##21894|q 10669/1
+		step
+			goto Netherstorm,32.73,64.96
+			.talk Rocket-Chief Fuselage##19570
+			..turnin A Mystifying Vision##11042
+		step
+			goto Netherstorm,39.61,20.44
+			.from Wrath Priestess##18859
+			.get Freshly Drawn Blood##30850|q 10641
+		step
+			goto Netherstorm,39.61,20.44
+			.' Use the Freshly Drawn Blood|use Freshly Drawn Blood##30850
+			.info It only last 1 minute, then it disappears, so use it quickly.
+			.kill Avatar of Sathal##21925|q 10641/1
+		step
+			goto Shadowmoon Valley,28.29,49.94
+			.kill Lothros##21928|q 10668/1
+			.info He walks around this area.
+		step
+			goto Nagrand,27.34,43.09
+			.talk Altruis the Sufferer##18417
+			..turnin Against the Legion##10641
+			..turnin Against the Illidari##10668
+			..turnin Against All Odds##10669
+			..accept Illidan's Pupil##10646
+		step
+			goto Nagrand,27.34,43.09
+			.talk Altruis the Sufferer##18417
+			.' Tell him "Tell me about the demon hunter training grounds at the Ruins of Karabor."
+			.' Listen to Illidan's Pupil|q 10646/1
+		step
+			goto Nagrand,27.34,43.09
+			.talk Altruis the Sufferer##18417
+			..turnin Illidan's Pupil##10646
+		step
+			goto Nagrand,42.78,20.73
+			.talk Gurgthock##18471
+			..accept The Ring of Blood: Brokentoe##9962
+			.info This is a group quest.
+		step
+			goto Nagrand,43.43,20.57
+			.kill Brokentoe##18398 |n
+			.' Defeat Brokentoe|q 9962/1
+		step
+			goto Nagrand,42.78,20.68
+			.talk Wodin the Troll-Servant##22893
+			..turnin The Ring of Blood: Brokentoe##9962
+		step
+			goto Nagrand,42.78,20.73
+			.talk Gurgthock##18471
+			..accept The Ring of Blood: The Blue Brothers##9967
+			.info This is a group quest.
+		step
+			goto Nagrand,43.43,20.57
+			.kill Murkblood Twin##18399 |n
+			.' Defeat The Blue Brothers|q 9967/1
+		step
+			goto Nagrand,42.78,20.68
+			.talk Wodin the Troll-Servant##22893
+			..turnin The Ring of Blood: The Blue Brothers##9967
+		step
+			goto Nagrand,42.78,20.73
+			.talk Gurgthock##18471
+			..accept The Ring of Blood: Rokdar the Sundered Lord##9970
+			.info This is a group quest.
+		step
+			goto Nagrand,43.43,20.57
+			.kill Rokdar the Sundered Lord##18400 |n
+			.' Defeat Rokdar the Sundered Lord|q 9970/1
+		step
+			goto Nagrand,42.78,20.68
+			.talk Wodin the Troll-Servant##22893
+			..turnin The Ring of Blood: Rokdar the Sundered Lord##9970
+		step
+			goto Nagrand,42.78,20.73
+			.talk Gurgthock##18471
+			..accept The Ring of Blood: Skra'gath##9972
+			.info This is a group quest.
+		step
+			goto Nagrand,43.43,20.57
+			.kill Skra'gath##18401 |n
+			Defeat Skra'gath|q 9972/1
+		step
+			goto Nagrand,42.78,20.68
+			.talk Wodin the Troll-Servant##22893
+			..turnin The Ring of Blood: Skra'gath##9972
+		step
+			goto Nagrand,42.78,20.73
+			.talk Gurgthock##18471
+			..accept The Ring of Blood: The Warmaul Champion##9973
+			.info This is a group quest.
+		step
+			goto Nagrand,43.43,20.57
+			.kill Warmaul Champion##18402 |n
+			Defeat the Warmaul Champion|q 9973/1
+		step
+			goto Nagrand,42.78,20.68
+			.talk Wodin the Troll-Servant##22893
+			..turnin The Ring of Blood: The Warmaul Champion##9973
+		step
+			goto Nagrand,42.78,20.73
+			.talk Gurgthock##18471
+			..accept The Ring of Blood: The Final Challenge##9977
+			.info This is a group quest.
+		step
+			goto Nagrand,43.43,20.57
+			.kill Mogor##18069 |n
+			.info You will have to kill him twice.
+			Defeat Mogor, Hero of the Warmaul|q 9977/1
+		step
+			goto Nagrand,42.78,20.68
+			.talk Wodin the Troll-Servant##22893
+			..turnin The Ring of Blood: The Final Challenge##9977
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Netherstorm",[[

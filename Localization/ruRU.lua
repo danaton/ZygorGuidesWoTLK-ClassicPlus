@@ -152,7 +152,7 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	["stepgoal_get"] = "Соберите %s",
 	["stepgoal_get #"] = "Соберите %s %s",
 	["stepgoal_ding"] = "Вам нужно уже быть %s уровня.|n     Гриндуйте.",
-	["stepgoal_go to"] = "Идите к %s",
+	["stepgoal_go to"] = "Идите в %s",
 	["stepgoal_also at"] = "Тоже на %s",
 	["stepgoal_hearth to"] = "Вернитесь домой - %s",
 	["stepgoal_collect #"] = "Возьмите %s %s",
