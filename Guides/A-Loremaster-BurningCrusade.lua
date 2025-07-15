@@ -1,1800 +1,6 @@
-﻿local ZygorGuidesViewer=ZygorGuidesViewer
+local ZygorGuidesViewer=ZygorGuidesViewer
 if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Alliance" then return end
-
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\Elwynn Forest",[[
-author danaton
-description This guide contain quest-chain (45 quests) for Elwynn Forest location.
-startlevel 20
-		step
-		.' For comfortable execution quest chain, it is recommended to be level 20+|tip Manually skip this step
-		step
-			goto Elwynn Forest,48.1,43.6
-			.talk Deputy Willem##823
-			..accept A Threat Within##783
-		step
-			goto Elwynn Forest,48.9,41.6
-			.talk Marshal McBride##197
-			..turnin A Threat Within##783
-			..accept Kobold Camp Cleanup##7
-		step
-			goto Elwynn Forest,48.1,43.6
-			.talk Deputy Willem##823
-			..accept Eagan Peltskinner##5261
-		step
-			goto Elwynn Forest,48.9,40.2
-			.talk Eagan Peltskinner##196
-			..turnin Eagan Peltskinner##5261
-			..accept Wolves Across the Border##33
-		step
-			goto Elwynn Forest,47.4,39.7
-			.from Diseased Young Wolf##299+
-			.get 8 Diseased Wolf Pelt|q 33/1
-		step
-			goto Elwynn Forest,47.9,37.1
-			.kill 8 Kobold Vermin|q 7/1
-		step
-			goto Elwynn Forest,48.9,40.2
-			.talk Eagan Peltskinner##196
-			..turnin Wolves Across the Border##33
-		step
-			goto Elwynn Forest,48.9,41.6
-			.talk Marshal McBride##197
-			..turnin Kobold Camp Cleanup##7
-			..accept Investigate Echo Ridge##15
-		step
-			goto Elwynn Forest,48.1,43.6
-			.talk Deputy Willem##823
-			..accept Brotherhood of Thieves##18
-		step
-			goto Elwynn Forest,51.3,37.0
-			.kill 10 Kobold Workers|q 15/1
-		step
-			goto Elwynn Forest,54.3,41
-			.from Defias Thug##38+
-			.get 12 Red Burlap Bandana|q 18/1
-		step
-			goto Elwynn Forest,48.1,43.6
-			.talk Deputy Willem##823
-			..turnin Brotherhood of Thieves##18
-			..accept Milly Osworth##3903
-			..accept Bounty on Garrick Padfoot##6
-		step
-			goto Elwynn Forest,48.9,41.6
-			.talk Marshal McBride##197
-			..turnin Investigate Echo Ridge##15
-			..accept Skirmish at Echo Ridge##21
-		step
-			goto Elwynn Forest,50.7,39.3
-			.talk Milly Osworth##9296
-			..turnin Milly Osworth##3903
-			..accept Milly's Harvest##3904
-		step
-			goto Elwynn Forest,53.6,47.3
-			.' Click Milly's Harvest barrels around the vineyard|tip Milly's Harvest look like barrels of grapes.
-			.get 8 Milly's Harvest|q 3904/1
-		step
-			goto Elwynn Forest,57.5,48.3
-			.from Garrick Padfoot##103
-			.get Garrick's Head|q 6/1
-		step
-			goto Elwynn Forest,50.7,39.3
-			.talk Milly Osworth##9296
-			..turnin Milly's Harvest##3904
-			..accept Grape Manifest##3905
-		step
-			goto Elwynn Forest,48.1,43.6
-			.talk Deputy Willem##823
-			..turnin Bounty on Garrick Padfoot##6
-		step
-			goto Elwynn Forest,49.5,41.6
-			.talk Brother Neals##952
-			..turnin Grape Manifest##3905
-		step
-			goto Elwynn Forest,47.7,32
-			.kill 12 Kobold Laborer##80|q 21/1
-		step
-			goto Elwynn Forest,48.9,41.6
-			.talk Marshal McBride##197
-			..turnin Skirmish at Echo Ridge##21
-			..accept Report to Goldshire##54
-		step
-			goto Elwynn Forest,45.6,47.7
-			.talk Falkhaan Isenstrider##6774
-			..accept Rest and Relaxation##2158
-		step
-			goto Elwynn Forest,43.8,65.8
-			.talk Innkeeper Farley##295
-			..turnin Rest and Relaxation##2158
-		step
-			goto Elwynn Forest,43.3,65.7
-			.talk William Pestle##253
-			..accept Kobold Candles##60
-		step
-			goto Elwynn Forest,42.1,65.9
-			.talk Marshal Dughan##240
-			..turnin Report to Goldshire##54
-			..accept The Fargodeep Mine##62
-		step
-			goto Elwynn Forest,42.1,67.3
-			.talk Remy "Two Times"##241
-			..accept Gold Dust Exchange##47
-		step
-			goto Elwynn Forest,43.2,89.6
-			.talk Maybell Maclure##251
-			..accept Young Lovers##106
-		step
-			.' Go To Low Entrance Mine|at 38.1,81.5
-			.' Scout through the Fargodeep Mine|at 40.75,81.70|q 62/1
-		step
-			goto Elwynn Forest,38.2,83.2
-			.from Kobold Miner##40+, Kobold Tunneler##475+, Kobold Geomancer##476+
-			.get 8 Large Candle##772|q 60/1
-			.get 10 Gold Dust##773|q 47/1
-		step
-			goto Elwynn Forest,34.7,84.5
-			.talk Ma Stonefield##244
-			..accept Princess Must Die!##88
-		step
-			goto Elwynn Forest,34.5,84.3
-			.talk "Auntie" Bernice Stonefield##246
-			..accept Lost Necklace##85
-		step
-			goto Elwynn Forest,29.8,86.0
-			.talk Tommy Joe Stonefield##252
-			..turnin Young Lovers##106
-			..accept Speak with Gramma##111
-		step
-			goto Elwynn Forest,34.9,83.9
-			.talk Gramma Stonefield##248
-			..turnin Speak with Gramma##111
-			..accept Note to William##107
-		step
-			goto Elwynn Forest,43.1,85.7
-			.talk Billy Maclure##247
-			..turnin Lost Necklace##85
-			..accept Pie for Billy##86
-		step
-			goto Elwynn Forest,41.8,86.9
-			.from Stonetusk Boar##113
-			.get 4 Chunk of Boar Meat##769|q 86/1
-		step
-			goto Elwynn Forest,34.5,84.3
-			.talk "Auntie" Bernice Stonefield##246
-			..turnin Pie for Billy##86
-			..accept Back to Billy##84
-		step
-			goto Elwynn Forest,43.1,85.7
-			.talk Billy Maclure##247
-			..turnin Back to Billy##84
-			..accept Goldtooth##87
-		step
-			.' Go To High Entrance Mine|at 39.09,82.5
-			.' Go To Left Tunnel|at 39.79,79.25
-			.from Goldtooth##327
-			.get Bernice's Necklace##981|q 87/1
-		step
-			goto Elwynn Forest,34.5,84.3
-			.talk "Auntie" Bernice Stonefield##246
-			..turnin Goldtooth##87
-		step
-			goto Elwynn Forest,42.1,67.3
-			.talk Remy "Two Times"##241
-			..turnin Gold Dust Exchange##47
-			..accept A Fishy Peril##40
-		step
-			goto Elwynn Forest,42.1,65.9
-			.talk Marshal Dughan##240
-			..turnin A Fishy Peril##40
-			..accept Further Concerns##35
-			..turnin The Fargodeep Mine##62
-			..accept The Jasperlode Mine##76
-		step
-			goto Elwynn Forest,43.3,65.7
-			.talk William Pestle##253
-			..turnin Kobold Candles##60
-			..accept Shipment to Stormwind##61
-			..turnin Note to William##107
-			..accept Collecting Kelp##112
-		step
-			goto Elwynn Forest,52.94,64.72
-			.from Murloc##285+, Murloc Streamrunner##735+
-			.get 4 Crystal Kelp Frond##1256|q 112/1
-		step
-			goto Elwynn Forest,61.8,54.2
-			.' Scout through the Jasperlode Mine|at 60.3,49.6|q 76/1
-		step
-			goto Elwynn Forest,69.6,79.7
-			.from Princess##330+
-			.get Brass Collar##1006|q 88/1
-		step
-			goto Elwynn Forest,42.1,65.9
-			.talk Marshal Dughan##240
-			..turnin The Jasperlode Mine##76
-			..accept Westbrook Garrison Needs Help!##239
-		step
-			goto Elwynn Forest,43.3,65.7
-			.talk William Pestle##253
-			..turnin Collecting Kelp##112
-			..accept The Escape##114
-		step
-			goto Elwynn Forest,34.7,84.5
-			.talk Ma Stonefield##244
-			..turnin Princess Must Die!##88
-		step
-			goto Elwynn Forest,24.56,78.22
-			.' Click Wanted Poster
-			..accept Wanted: "Hogger"##176
-		step
-			goto Elwynn Forest,24.2,74.4
-			.talk Deputy Rainer##963
-			..turnin Westbrook Garrison Needs Help!##239
-			..accept Riverpaw Gnoll Bounty##11
-		step
-			goto Elwynn Forest,26.4,93.6
-			.from Hogger##448+
-			.get 1 Huge Gnoll Claw##1931|q 176/1
-		step
-			goto Elwynn Forest,26.5,86.6
-			.from Riverpaw Runt##97+, Riverpaw Outrunner##478+
-			.get 8 Painted Gnoll Armband##782|q 11/1
-			..collect 1 Gold Pickup Schedule##1307|q 123 |future |sticky
-			..accept The Collector##123
-		step
-			goto Elwynn Forest,24.2,74.4
-			.talk Deputy Rainer##963
-			..turnin Riverpaw Gnoll Bounty##11
-		step
-			goto Elwynn Forest,42.1,65.9
-			.talk Marshal Dughan##240
-			..turnin The Collector##123
-			..accept Manhunt##147
-			..turnin Wanted: "Hogger"##176
-		step
-			goto Elwynn Forest,43.2,89.6
-			.talk Maybell Maclure##251
-			..turnin The Escape##114
-		step
-			goto Elwynn Forest,74,72.2
-			.talk Guard Thomas##261
-			..turnin Further Concerns##35
-			..accept Find the Lost Guards##37
-			..accept Bounty on Murlocs##46
-			..accept Protect the Frontier##52
-		step
-			goto Elwynn Forest,72.7,60.3
-			.talk A half-eaten body|n
-			..turnin Find the Lost Guards##37
-			..accept Discover Rolf's Fate##45
-		step
-			goto Elwynn Forest,79.8,55.5
-			.talk Rolf's corpse|n
-			..turnin Discover Rolf's Fate##45
-			..accept Report to Thomas##71
-		step
-			goto Elwynn Forest,79.1,55.7
-			.from Murloc Forager##46+, Murloc Lurker##732+
-			.get 8 Torn Murloc Fin##780|q 46/1
-		step
-			goto Elwynn Forest,81.4,66.1
-			.talk Supervisor Raelen##10616
-			..accept A Bundle of Trouble##5545
-		step
-			goto Elwynn Forest,79.5,68.8
-			.talk Sara Timberlain##278
-			..accept Red Linen Goods##83
-		step
-			goto Elwynn Forest,81.3,60.6
-			.' Click the small stacks of wood at the base of trees|tip They look like little stacks of 3 firewood at the base of trees in this area.
-			.get 8 Bundle of Wood|q 5545/1
-		step
-			goto Elwynn Forest,82.6,59.1
-			.kill 8 Prowler|q 52/1
-			.kill 5 Young Forest Bear|q 52/2
-			.' Mobs POS 2|at 80,77.8
-		step
-			goto Elwynn Forest,71.1,80.6
-			.from Morgan the Collector##473+
-			.get The Collector's Ring##2239|q 147/1
-		step
-			goto Elwynn Forest,70.6,76.3
-			.from Defias Bandit##116+
-			.get 6 Red Linen Bandana|q 83/1
-			..collect 1 Westfall Deed##1972+|q 184 |future |sticky |tip Try to drop or manually skip
-			..accept Furlbrow's Deed##184
-			.' Mobs POS 2|at 74.7,51.6
-		step
-			goto Elwynn Forest,74,72.2
-			.talk Guard Thomas##261
-			..turnin Bounty on Murlocs##46
-			..turnin Report to Thomas##71
-			..turnin Protect the Frontier##52
-			..accept Deliver Thomas' Report##39
-		step
-			goto Elwynn Forest,79.5,68.8
-			.talk Sara Timberlain##278
-			..turnin Red Linen Goods##83
-		step
-			goto Elwynn Forest,81.4,66.1
-			.talk Supervisor Raelen##10616
-			..turnin A Bundle of Trouble##5545
-		step
-			goto Elwynn Forest,42.1,65.9
-			.talk Marshal Dughan##240
-			..turnin Deliver Thomas' Report##39
-			..accept Cloth and Leather Armor##59
-			..turnin Manhunt##147
-		step
-			goto Elwynn Forest,41.7,65.5
-			.talk Smith Argus##514
-			..accept Elmore's Task##1097
-		step
-			goto Stormwind City,63.2,74.4
-			.talk Morgan Pestle##279
-			..turnin Shipment to Stormwind##61
-		step
-			goto Stormwind City,59.7,33.8
-			.talk Grimand Elmore##1416
-			..turnin Elmore's Task##1097
-		step
-			goto Elwynn Forest,42.1,65.9
-			.talk Marshal Dughan##240
-			..turnin Wanted: "Hogger"##176
-		step
-			goto Elwynn Forest,79.5,68.8
-			.talk Sara Timberlain##278
-			..turnin Cloth and Leather Armor##59
-		step
-			goto Westfall,60,19.4
-			.talk Farmer Furlbrow##237
-			..turnin Furlbrow's Deed##184
-		step
-			.' Completed!|tip Use next guide - Westfall
-]])
-
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[Alpha] Stormwind City",[[
-author danaton
-description Coming Soon
-startlevel 60
-		step//redridge
-			goto Stormwind City,55,54.2
-			.talk Brother Kristoff##1444
-			..accept Speaking of Fortitude##343
-		step//duskwood
-			goto Stormwind City,49.6,44.5
-			.talk Thomas##4982
-			..accept The Missing Diplomat(1)##1274
-		step//west plaguelands
-			goto Stormwind City,80,38.5
-			.talk King Varian Wrynn##29611
-			..accept The First and the Last##6182
-		step//duskwood
-			goto Stormwind City,80.3,44.1
-			.talk Bishop DeLavey##4960
-			..turnin The Missing Diplomat(1)##1274
-			..accept The Missing Diplomat(2)##1241
-		step//redridge
-			goto Stormwind City,77.1,30.2
-			.talk Milton Sheaf##1440
-			..turnin Speaking of Fortitude##343
-			..accept Brother Paxton##344
-		step//west plaguelands
-			goto Stormwind City,78.3,70.7
-			.talk Master Mathias Shaw##332
-			..turnin The First and the Last##6182
-			..accept Honor the Dead##6183
-			..turnin Honor the Dead##6183
-		step//duskwood
-			goto Stormwind City,76.3,85.1
-			.talk Jorgen##4959
-			..turnin The Missing Diplomat(2)##1241
-			..accept The Missing Diplomat(3)##1242
-		step//duskwood
-			goto Stormwind City,66,74.1
-			.talk Elling Trias##482
-			..turnin The Missing Diplomat(3)##1242
-		step//redridge
-			goto Elwynn Forest,49.6,40.4
-			.talk Brother Paxton##951
-			..turnin Brother Paxton##344
-		step
-			goto Stormwind City,51.8,74.3
-			.talk Mazen Mac'Nadir##338
-			..accept Mazen's Behest##1363
-		step
-			goto Stormwind City,51.4,73.8
-			.talk Acolyte Dellis##5386
-			..turnin Mazen's Behest##1363
-		step
-]])
-
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\Westfall",[[
-author danaton
-description This guide contain quest-chain (26 quests + 4 if Human race) for Westfall location.
-startlevel 25
-		step
-			.' First completed Elwynn Forest guide|tip Manually skip this step
-		step
-			goto Stormwind City,57.7,47.9
-			.talk Baros Alexston##1646
-			..accept Humble Beginnings##399
-		step
-			goto Elwynn Forest,24.2,74.4
-			.talk Deputy Raine##963
-			..accept Report to Gryan Stoutmantle##109
-		step
-			goto Westfall,60,19.4
-			.talk Farmer Furlbrow##237
-			..accept The Forgotten Heirloom##64
-			.talk Verna Furlbrow##238
-			..accept Westfall Stew(1)##36
-			..accept Poor Old Blanchy##151
-		step
-			goto Westfall,49.42,19.23
-			.get 1 Furlbrow's Pocket Watch|q 64/1|tip Inside the house
-		step
-			.get 8 Handful of Oats|q 151/1
-			Position 1|at 50.10,19.58
-			Position 2|at 49.34,17.95
-			Position-spot 3|at 48.45,20.31|tip Inside the building
-			Position 4|at 54.01,24.94
-			Position 5|at 56.67,18.89
-			Position 6|at 57.36,19.45|tip In the cart
-			Position-spot 7|at 58.33,18.26|tip On the field you can find from 2 to 4 Handful of Oats	
-		step
-			goto Westfall,60,19.4
-			.talk Verna Furlbrow##238
-			..turnin Poor Old Blanchy##151
-			.talk Farmer Furlbrow##237
-			..turnin The Forgotten Heirloom##64
-		step
-			goto Westfall,56.0,31.2
-			.talk Farmer Saldean##233
-			..accept The Killing Fields##9
-		step
-			goto Westfall,56.4,30.5
-			.talk Salma Saldean##235
-			..turnin Westfall Stew(1)##36
-			..accept Westfall Stew(2)##38
-			..accept Goretusk Liver Pie##22
-		step
-			goto Westfall,51.1,21.8
-			.kill 20 Harvest Watcher|q 9/1
-			.get 3 Okra|q 38/4|tip Do not sell to vendor!
-			.from Harvest Watcher##114+
-			.collect 5 Flask of Oil##814|q 103/1 |future
-			.' Flask of Oil needed on the future! Do not sell to vendor!
-			.collect 5 Hops##1274|q 117/1|future
-			.' You can find more Harvest Watchers|at 53.5,29.4|n
-			.' And a big spot on this field|at 44.87,35.68
-		step
-			goto Westfall,59.02,33.34
-			.from Young Goretusk##454+, Goretusk##157+, Great Goretusk##547+
-			.get 8 Goretusk Liver##723|q 22/1|tip Do not sell to vendor!
-			.get 3 Goretusk Snout##731|q 38/3|tip Do not sell to vendor!
-			.' Position 1|at 51.01,36.09
-			.' Position 2|at 59.60,43.53
-		step
-			goto Westfall,59.05,61.74
-			.from Young Fleshripper##199+, Fleshripper##1109+, Greater Fleshripper##154+
-			.get 3 Stringy Vulture Meat##729|q 38/1|tip Do not sell to vendor!
-		step
-			goto Westfall,56.0,31.2
-			.talk Farmer Saldean##233
-			..turnin The Killing Fields##9
-		step
-			goto Westfall,56.4,30.5
-			.talk Salma Saldean##235
-			..turnin Goretusk Liver Pie##22
-		step
-			goto Westfall,56.3,47.5
-			.talk Gryan Stoutmantle##234
-			..turnin Report to Gryan Stoutmantle##109
-			..accept The People's Militia (1)##12
-			.talk Captain Danuvin##821
-			..accept Patrolling Westfall##102
-		step
-			goto Westfall,54,53
-			.talk Scout Galiaan##878
-			..accept Red Leather Bandanas##153
-		step
-			goto Westfall,50.97,46.86
-			.kill 15 Defias Trapper##504|q 12/1
-			.kill 15 Defias Smuggler##95|q 12/2
-			.collect 15 Red Leather Bandana##829|q 153/1
-			.' Position 1|at 48.65,46.42
-			.' Position 2|at 46.42,38.59
-			.' Position 3|at 50.79,40.61
-		step
-			goto Westfall,57.19,13.32
-			.from Riverpaw Gnoll##117, Riverpaw Brute##124, Riverpaw Overseer##125, Riverpaw Bandit##452, Riverpaw Mystic##453, Riverpaw Scout##500, Riverpaw Herbalist##501
-			.get 8 Gnoll Paw##725|q 102/1
-			.' Position 1|at 52.07,15.41
-			.' Position 2|at 44.9,15
-		step
-			goto Westfall,55.17,9.90
-			.from Murloc Coastrunner##126, Murloc Tidehunter##127, Murloc Warrior##171, Murloc Minor Oracle##456, Murloc Hunter##458, Murloc Raider##515, Murloc Oracle##517
-			.get 3 Murloc Eye|q 38/2
-			.' Position 1|at 44.3,9.07
-			.' Position 2|at 35.20,21.60
-			.' Position 3|at 27.6,40.5
-			.' Position 4|at 27.56,70.08
-			.' Wait drop on murloc Sanders' Treasure Map
-			..accept Captain Sanders' Hidden Treasure (1)##136|use Captain Sanders' Treasure Map##1357
-		step
-			goto Westfall,56.4,30.5
-			.talk Salma Saldean##235
-			..turnin Westfall Stew(2)##38
-		step
-			goto Westfall,56.3,47.5
-			.talk Gryan Stoutmantle##234
-			..turnin The People's Militia (1)##12
-			..accept The People's Militia (2)##13
-		step
-			goto Westfall,56.4,47.6
-			.talk Captain Danuvin##821
-			..turnin Patrolling Westfall##102
-		step
-			goto Westfall,54,53
-			.talk Scout Galiaan##878
-			..turnin Red Leather Bandanas##153
-		step
-			goto Westfall,36.4,56.67
-			.' Open chest in destroying home
-			.collect A Simple Compass##1998|q 399/1
-		step
-			goto Westfall,25.9,47.8
-			.' Click Footlocker
-			..turnin Captain Sanders' Hidden Treasure (1)##136
-			..accept Captain Sanders' Hidden Treasure (2)##138
-		step
-			goto Westfall,40.5,47.8
-			.' Click Broken Barrel
-			..turnin Captain Sanders' Hidden Treasure (2)##138
-			..accept Captain Sanders' Hidden Treasure (3)##139
-		step
-			goto Westfall,40.6,17
-			.' Click Old Jug
-			..turnin Captain Sanders' Hidden Treasure (3)##139
-			..accept Captain Sanders' Hidden Treasure (4)##140
-		step
-			goto Westfall,26,16.9
-			.' Click Locked Chest
-			..turnin Captain Sanders' Hidden Treasure (4)##140
-		step
-			goto Westfall,31.4,44.5
-			.kill 15 Defias Looter|q 13/2
-			.kill 15 Defias Pillager|q 13/1
-			.' Position 1|at 37.1,54.8
-			.' Position 2|at 43,69
-		step
-			goto Westfall,56.3,47.5
-			.talk Gryan Stoutmantle##234
-			..turnin The People's Militia (2)##13
-			..accept The People's Militia (3)##14
-		step
-			goto Westfall,52.6,72.3
-			.kill 15 Defias Highwayman|q 14/1
-			.kill 5 Defias Pathstalker|q 14/2
-			.kill 5 Defias Knuckleduster|q 14/3
-		step
-			goto Westfall,44.6,80.3
-			.talk Grimbooze Thunderbrew##239
-			..accept Thunderbrew Lager##117
-		step
-			goto Westfall,47.19,67.48
-			.from Harvest Golem##36, Harvest Watcher##114
-			.get 5 Hops##1274|q 117/1
-			.' Position 1|at 38.9,52.6
-		step
-			goto Westfall,44.6,80.3
-			.talk Grimbooze Thunderbrew##239
-			..turnin Thunderbrew Lager##117
-		step
-			goto Westfall,30,86
-			.talk Captain Grayson##392
-			..accept Keeper of the Flame##103
-			..accept The Coastal Menace##104
-			..accept The Coast Isn't Clear##152
-		step
-			goto Westfall,34.7,85.3
-			.from Old Murk-Eye##391
-			.get Scale of Old Murk-Eye##3636|q 104/1
-			.' Waypoint start position|at 26.4,66
-		step
-			goto Westfall,34.65,85
-			.kill 7 Murloc Coastrunner##126|q 152/1
-			.kill 7 Murloc Warrior##171|q 152/2
-			.kill 7 Murloc Tidehunter##127|q 152/3
-			.kill 7 Murloc Oracle##517|q 152/4
-			.' Position 1|at 27.56,70.08
-			.' Position 2|at 27.6,40.5
-			.' Position 3|at 35.20,21.60
-			.' Position 4|at 44.3,9.07
-			.' Position 5|at 55.7,9.8
-		step
-			goto Westfall,51.7,21.7
-			.from Harvest Golem##36, Harvest Watcher##114, Harvest Reaper##115
-			.get 5 Flask of Oil##814|q 103/1
-			.' Position 1|at 53.3,33.6
-			.' Position 2|at 43.8,36.5
-			.' Position 3|at 39.1,52.1
-		step
-			goto Westfall,30,86
-			.talk Captain Grayson##392
-			..turnin Keeper of the Flame##103
-			..turnin The Coastal Menace##104
-			..turnin The Coast Isn't Clear##152
-		step
-			goto Westfall,56.3,47.5
-			.talk Gryan Stoutmantle##234
-			..turnin The People's Militia (3)##14
-			..accept The Defias Brotherhood (1)##65
-		step
-			goto Westfall,57,47.2
-			.talk Quartermaster Lewis##491
-			..accept A Swift Message##6181
-		only Human
-		step
-			goto Westfall,56.6,52.6
-			.talk Thor##523
-			..turnin A Swift Message##6181
-			..accept Continue to Stormwind##6281
-			.' Fly to Stormwind, Elwynn Forest|goto Stormwind|noway|c
-		only Human
-		step
-			goto Stormwind,77.2,61
-			.talk Osric Strang##1323
-			..turnin Continue to Stormwind##6281
-			..accept Dungar Longdrink##6261
-		only Human
-		step
-			goto Stormwind,57.7,47.9
-			.talk Baros Alexston##1646
-			..turnin Humble Beginnings##399
-		step
-			goto Stormwind,71,72.5
-			.talk Dungar Longdrink##352
-			..turnin Dungar Longdrink##6261
-			..accept Return to Lewis##6285
-		only Human
-		step
-			goto Stormwind,71,72.5
-			.talk Dungar Longdrink##352
-			.' Fly to Lakeshire, Redridge Mountains|goto Redridge Mountains|noway|c
-		step
-			goto Redridge Mountains,26.5,45.3
-			.talk Wiley the Black##266
-			..turnin The Defias Brotherhood (1)##65
-			..accept The Defias Brotherhood (2)##132
-		step
-			goto Westfall,56.3,47.5
-			.talk Gryan Stoutmantle##234
-			..turnin The Defias Brotherhood (2)##132
-			..accept The Defias Brotherhood (3)##135
-		step
-			goto Westfall,57,47.2
-			.talk Quartermaster Lewis##491
-			..turnin Return to Lewis##6285
-		only Human
-		step
-			goto Stormwind,78.3,70.7
-			.talk Master Mathias Shaw##332
-			..turnin The Defias Brotherhood (3)##135
-			..accept The Defias Brotherhood (4)##141
-		step
-			goto Westfall,56.3,47.5
-			.talk Gryan Stoutmantle##234
-			..turnin The Defias Brotherhood (4)##141
-			..accept The Defias Brotherhood (5)##142
-		step
-			goto Westfall,45.70,68.57
-			.from Defias Messenger##550
-			.get 1 A Mysterious Message|q 142/1
-			.' End move POS 36.23,43.97|n
-		step
-			goto Westfall,56.3,47.5
-			.talk Gryan Stoutmantle##234
-			..turnin The Defias Brotherhood (5)##142
-		step
-			goto Westfall,55.68,47.51
-			.talk The Defias Traitor##467
-			..accept The Defias Brotherhood##155
-		step
-			.'Follow the Defias Traitor.
-			goto Westfall,42.56,71.71
-			.' Escort The Defias Traitor to discover where VanCleef is hiding.|goal The Defias Brotherhood|q 155/1
-		step
-			goto Westfall,56.32,47.54
-			.talk Marshal Gryan Stoutmantle##234
-			..turnin The Defias Brotherhood##155
-		step
-			.' Next, I recommend running Quest-Instance Guides: Deadmines (15)
-			.' Completed!|tip Use next guide - Redridge Mountains
-]])
-
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Teldrassil",[[
-author danaton
-description This guide contain quest-chain (47 quests) for Teldrassil Night Elf location.
-startlevel 20
-		step
-			goto Teldrassil,58.7,44.3
-			.talk Conservator Ilthalaine##2079
-			..accept The Balance of Nature (1)##456
-		step
-			goto Teldrassil,58.5,45.9
-			.kill 7 Young Nightsaber|q 456/1
-			.kill 4 Young Thistle Boar|q 456/2
-		step
-			goto Teldrassil,58.7,44.3
-			.talk Conservator Ilthalaine##2079
-			..turnin The Balance of Nature (1)##456
-			..accept The Balance of Nature (2)##457
-		step
-			goto Teldrassil,59.9,42.5
-			.talk Melithar Staghelm##2077
-			..accept The Woodland Protector (1)##458
-		step
-			goto Teldrassil,60.9,42
-			.talk Dirania Silvershine##8583
-			..accept A Good Friend##4495
-		step
-			goto Teldrassil,57.6,45.3
-			.talk Tarindrella##1992
-			..turnin The Woodland Protector (1)##458
-			..accept The Woodland Protector (2)##459
-		step
-			goto Teldrassil,56.5,45.5
-			.from Grell##1988+, Grellkin##1989+
-			.get 8 Fel Moss|q 459/1
-			.' POS-Spot|at Teldrassil,54.47,39.24
-		step
-			goto Teldrassil,57.6,45.3
-			.talk Tarindrella##1992
-			..turnin The Woodland Protector (2)##459
-		step
-			goto Teldrassil,57.8,41.7
-			.talk Gilshalan Windwalker##2082
-			..accept Webwood Venom##916
-		step
-			goto Teldrassil,58.8,36.8
-			.kill 7 Mangy Nightsaber|q 457/1
-			.kill 7 Thistle Boar|q 457/2
-		step
-			goto Teldrassil,58.3,32.9
-			.from Webwood Spider##1986+
-			.get 10 Webwood Venom Sac|q 916/1
-		step
-			goto Teldrassil,54.6,33
-			.talk Iverron##8584
-			..turnin A Good Friend##4495
-			..accept A Friend in Need##3519
-		step
-			goto Teldrassil,57.8,41.7
-			.talk Gilshalan Windwalker##2082
-			..turnin Webwood Venom##916
-			..accept Webwood Egg##917
-		step
-			goto Teldrassil,58.7,44.3
-			.talk Conservator Ilthalaine##2079
-			..turnin The Balance of Nature (2)##457
-		step
-			goto Teldrassil,60.9,42
-			.talk Dirania Silvershine##8583
-			..turnin A Friend in Need##3519
-			..accept Iverron's Antidote (1)##3521
-		step
-			goto Teldrassil,55.2,39.6
-			.from Grell##1988+, Grellkin##1989+
-			.get 7 Hyacinth Mushroom|q 3521/1
-		step
-			goto Teldrassil,57.7,38.5
-			.' Click Moonpetal Lilies|tip The Moonpetal Lillies look like tall flower with orange petals around the pond here.
-			.get 4 Moonpetal Lily|q 3521/2
-		step
-			goto Teldrassil,56.7,32.1
-			.from Webwood Spider##1986+
-			.get Webwood Ichor|q 3521/3
-		step
-			.'Go into the cave at 56.8,31.7|goto 56.8,31.7|n
-			.' Follow the path in the middle, then go left
-			.' Go up to the ledge above|goto Teldrassil,55.8,25.5,0.5|c
-		step
-			goto Teldrassil,56.7,26.4
-			.' Click a Webwood Egg
-			.get Webwood Egg|q 917/1
-		step
-			goto Teldrassil,57.8,41.7
-			.talk Gilshalan Windwalker##2082
-			..turnin Webwood Egg##917
-			..accept Tenaron's Summons##920
-		step
-			.'Follow the ramp to the top of the tree|goto Teldrassil,59.4,39.0,0.5|noway|c
-		step
-			goto Teldrassil,59.1,39.4
-			.talk Tenaron Stormgrip##3514
-			..turnin Tenaron's Summons##920
-			..accept Crown of the Earth (1)##921
-		step
-			goto Teldrassil,60.9,42
-			.talk Dirania Silvershine##8583
-			..turnin Iverron's Antidote (1)##3521
-			..accept Iverron's Antidote (2)##3522
-		step
-			goto Teldrassil,54.6,33
-			.talk Iverron##8584
-			..turnin Iverron's Antidote (2)##3522
-		step
-			goto Teldrassil,59.9,33.1
-			.' Use your Crystal Phial in the moonwell water|use Crystal Phial##5185
-			.get Filled Crystal Phial|q 921/1
-		step
-			goto Teldrassil,59.1,39.4
-			.talk Tenaron Stormgrip##3514
-			..'Go to the top of the big tree
-			..turnin Crown of the Earth (1)##921
-			..accept Crown of the Earth (2)##928
-		step
-			goto Teldrassil,61.2,47.6
-			.talk Porthannius##6780
-			..accept Dolanaar Delivery##2159
-		step
-			goto Teldrassil,60.4,56.3
-			.talk Zenn Foulhoof##2150
-			..accept Zenn's Bidding##488
-		step
-			goto Teldrassil,63.8,54.2
-			.from Strigid Owl##1995+
-			.get 3 Strigid Owl Feather|q 488/2
-		step
-			goto Teldrassil,60.6,58.2
-			.from Webwood Lurker##1998+
-			.get 3 Webwood Spider Silk|q 488/3
-			.from Nightsaber##2042+
-			.get 3 Nightsaber Fang|q 488/1
-		step
-			goto Teldrassil,60.4,56.3
-			.talk Zenn Foulhoof##2150
-			..turnin Zenn's Bidding##488
-		step
-			goto Teldrassil,56.1,57.7
-			.talk Syral Bladeleaf##2083
-			..accept Seek Redemption!##489
-			..accept Denalan's Earth##997
-		step
-			goto Teldrassil,56,57.3
-			.talk Athridas Bearmantle##2078
-			..accept A Troubling Breeze##475
-		step
-			goto Teldrassil,55.6,56.9
-			.talk Tallonkai Swiftroot##3567
-			..accept The Emerald Dreamcatcher##2438
-			..accept Twisted Hatred##932
-		step
-			goto Teldrassil,55.6,59.8
-			.talk Innkeeper Keldamyr##6736
-			..turnin Dolanaar Delivery##2159
-		step
-			goto Teldrassil,56.1,61.7
-			.talk Corithras Moonrage##3515
-			..turnin Crown of the Earth (2)##928
-			..accept Crown of the Earth (3)##929
-		step
-			goto Teldrassil,63.3,58.1
-			.' Use your Jade Phial in the moonwell water|use Jade Phial##5619
-			.get Filled Jade Phial|q 929/1
-		step
-			goto Teldrassil,66.3,58.5
-			.talk Gaerolas Talvethren##2107
-			..turnin A Troubling Breeze##475
-			..accept Gnarlpine Corruption##476
-		step
-			goto Teldrassil,68,59.6
-			.' Click Tallonkai's Dresser|tip To the right in the small house.
-			.get Emerald Dreamcatcher|q 2438/1
-		step
-			goto Teldrassil,63.6,62.3
-			.' Click Fel Cones|tip They are big, brown, green smoking pine cones at the base of trees.
-			.get 3 Fel Cone|q 489/1
-		step
-			goto Teldrassil,56,57.3
-			.talk Athridas Bearmantle##2078
-			..turnin Gnarlpine Corruption##476
-			..accept The Relics of Wakening##483
-		step
-			goto Teldrassil,55.6,56.9
-			.talk Tallonkai Swiftroot##3567
-			..turnin The Emerald Dreamcatcher##2438
-			..accept Ferocitas the Dream Eater##2459
-		step
-			goto Teldrassil,56.1,61.7
-			.talk Corithras Moonrage##3515
-			..turnin Crown of the Earth (3)##929
-			..accept Crown of the Earth (4)##933
-		step
-			goto Teldrassil,60.4,56.3
-			.talk Zenn Foulhoof##2150
-			..turnin Seek Redemption!##489
-		step
-			goto Teldrassil,60.9,68.5
-			.talk Denalan##2080
-			..turnin Denalan's Earth##997
-			..accept Timberling Seeds##918
-			..accept Timberling Sprouts##919
-		step
-			goto Teldrassil,61.2,66.8
-			.from Timberling##2022+
-			.get 8 Timberling Seed|q 918/1
-			.' Click Timberling Sprouts|tip They are brown and green bulbs on the ground.
-			.get 12 Timberling Sprout|q 919/1
-		step
-			goto Teldrassil,60.9,68.5
-			.talk Denalan##2080
-			..turnin Timberling Seeds##918
-			..accept Rellian Greenspyre##922
-			..turnin Timberling Sprouts##919
-		step
-			goto Teldrassil,68.3,53.7
-			.kill 7 Gnarlpine Mystic|q 2459/1
-		step
-			goto Teldrassil,69.4,53.3
-			.from Ferocitas the Dream Eater##7234
-			.get Gnarlpine Necklace|n
-			.' Click the Gnarlpine Necklace|use Gnarlpine Necklace##8049
-			.get Tallonkai's Jewel|q 2459/2
-		step
-			.'Go to the top of the tower to 55.6,56.9|goto 55.6,56.9
-			.talk Tallonkai Swiftroot##3567
-			..turnin Ferocitas the Dream Eater##2459
-		step
-			goto Teldrassil,52.4,56.5
-			.talk Moon Priestess Amara##2151
-			..accept The Road to Darnassus##487
-		step
-			goto Teldrassil,46.7,53.5
-			.kill 6 Gnarlpine Ambusher|q 487/1
-		step
-			.'Go southwest into the cave at 44.4,57.8|goto Teldrassil,44.4,57.8,0.5|c
-		step
-			goto Teldrassil,43.7,61.2
-			.' Click the Chest of the Black Feather|tip On the top floor of the cave, across the bridge to the right, in the small room, on the right on the ground.
-			.get Black Feather Quill|q 483/2
-		step
-			goto Teldrassil,44.4,60.7
-			.' Click the Chest of Nesting|tip On the top floor of the cave, across the middle bridge, on the ground to the right in the small room.
-			.get Rune of Nesting|q 483/4
-		step
-			.'Go downstairs to 44.9,61.6|goto 44.9,61.6
-			.talk Oben Rageclaw##7317
-			..accept The Sleeping Druid##2541
-		step
-			.'Go to the next room over to 45.6,58.7|goto 45.6,58.7
-			.from Gnarlpine Shaman##2009+
-			.get Shaman Voodoo Charm|q 2541/1
-		step
-			goto Teldrassil,45.7,57.4
-			.' Click the Chest of the Raven Claw|tip At the bottom of the cave, up across the bridge, on a ledge.
-			.get Raven Claw Talisman|q 483/1
-		step
-			goto Teldrassil,44.9,61.6
-			.talk Oben Rageclaw##7317
-			..turnin The Sleeping Druid##2541
-			..accept Druid of the Claw##2561
-		step
-			goto 45.6,58.7
-			.kill Rageclaw##7318|n
-			.' Use the Voodoo Charm on his corpse|use Voodoo Charm##8149
-			.' Release Oben Rageclaw's spirit|goal Release Oben Rageclaw's spirit|q 2561/1
-		step
-			.'Go through the tunnel back to where Oben Rageclaw is to 44.7,62.5|goto 44.7,62.5
-			.' Click the Chest of the Sky|tip Down the path at the bottom of the cave, next to Greenpaw.
-			.get Sapphire of Sky|q 483/3
-		step
-			.'Go back up the path to 44.9,61.6|goto 44.9,61.6
-			.talk Oben Rageclaw##7317
-			..turnin Druid of the Claw##2561
-		step
-			goto Teldrassil,42.4,67.1
-			.' Use your Tourmaline Phial in the moonwell water|use Tourmaline Phial##5621
-			.get Filled Tourmaline Phial|q 933/1
-		step
-			goto Teldrassil,42.6,76.1
-			.' Click the Strange Fruited Plant|tip It looks like a big pink glowing plant.
-			..accept The Glowing Fruit##930
-		step
-			goto Teldrassil,60.9,68.5
-			.talk Denalan##2080
-			..turnin The Glowing Fruit##930
-		step
-			goto Teldrassil,56,57.3
-			.talk Athridas Bearmantle##2078
-			..turnin The Relics of Wakening##483
-			..accept Ursal the Mauler##486
-		step
-			.'Go north to Fel Rock|goto Teldrassil,54.7,52.8,0.5|c
-		step
-			.'Go inside the cave to 52.8,50.2|goto 52.8,50.2
-			.from Lord Melenas##2038
-			.get Melenas' Head|q 932/1
-		step
-			'Go outside and go to the top of the tower to 55.6,56.9|goto 55.6,56.9
-			.talk Tallonkai Swiftroot##3567
-			..turnin Twisted Hatred##932
-		step
-			goto Teldrassil,56.1,61.7
-			.talk Corithras Moonrage##3515
-			..turnin Crown of the Earth (4)##933
-			..accept Crown of the Earth (5)##7383
-		step
-			goto Teldrassil,52.4,56.5
-			.talk Moon Priestess Amara##2151
-			..turnin The Road to Darnassus##487
-		step
-			goto Teldrassil,38.3,34.4
-			.talk Sentinel Arynia Cloudsbreak##3519
-			..accept The Enchanted Glade##937
-		step
-			goto Teldrassil,38.4,34.1
-			.' Click the Amethyst Phial in your bags|use Amethyst Phial##18152
-			.get Filled Amethyst Phial|q 7383/1
-		step
-			goto 37.4,37.3
-			.from Bloodfeather Rogue##2017+, Bloodfeather Sorceress##2018+, Bloodfeather Harpy##2015+
-			.get 6 Bloodfeather Belt|q 937/1
-		step
-			goto Teldrassil,38.3,34.4
-			.talk Sentinel Arynia Cloudsbreak##3519
-			..turnin The Enchanted Glade##937
-			..accept Teldrassil##940
-		step
-			goto Teldrassil,34.7,29
-			.' Click the Strange Fronded Plant|tip It's a big glowing pink plant up on a hill.
-			..accept The Shimmering Frond##931
-		step
-			goto Teldrassil,31.5,31.6
-			.talk Mist##3568
-			..accept Mist##938
-		step
-			goto Teldrassil,38.3,34.4
-			.' Lead Mist safely to Sentinel Arynia Cloudsbreak|goal Lead Mist safely to Sentinel Arynia Cloudsbreak|q 938/1
-		step
-			goto Teldrassil,38.3,34.4
-			.talk Sentinel Arynia Cloudsbreak##3519
-			..turnin Mist##938
-		step
-			goto Teldrassil,39.2,80.1
-			.kill Ursal the Mauler##2039|q 486/1
-		step
-			goto Teldrassil,60.9,68.5
-			.talk Denalan##2080
-			..turnin The Shimmering Frond##931
-		step
-			goto Teldrassil,56.1,61.7
-			.talk Corithras Moonrage##3515
-			..turnin Crown of the Earth (5)##7383
-			..accept Crown of the Earth (6)##935
-		step
-			goto Teldrassil,56,57.3
-			.talk Athridas Bearmantle##2078
-			..turnin Ursal the Mauler##486
-		step
-			goto Darnassus,70.7,45.4
-			.talk Mydrannul##4241
-			..accept Nessa Shadowsong##6344
-		step
-			goto Darnassus,38.2,21.6
-			.talk Rellian Greenspyre##3517
-			..turnin Rellian Greenspyre##922
-			..accept Tumors##923
-		step
-			goto Darnassus,35.1,9.1
-			.talk Arch Druid Fandral Staghelm##3516
-			..turnin Crown of the Earth (6)##935
-			..turnin Teldrassil##940
-			..accept Grove of the Ancients##952
-		step
-			goto Teldrassil,42.5,33
-			.from Timberling Trampler##2027+, Timberling Mire Beast##2029+, Elder Timberling##2030+
-			.get 5 Mossy Tumor##5170|q 923/1
-		step
-			goto Darnassus,38.2,21.6
-			.talk Rellian Greenspyre##3517
-			..turnin Tumors##923
-			..accept Return to Denalan##2498
-		step
-			goto Teldrassil,60.9,68.5
-			.talk Denalan##2080
-			..turnin Return to Denalan##2498
-			..accept Oakenscowl#2499
-		step
-			goto Teldrassil,53.8,75.1
-			.from Oakenscowl##2166
-			.get 1 Gargantuan Tumor##8136|q 2499/1
-		step
-			goto Teldrassil,60.9,68.5
-			.talk Denalan##2080
-			..turnin Oakenscowl##2499
-		step
-			.' Go into the pink portal to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
-		step
-			goto Teldrassil,56.3,92.4
-			.talk Nessa Shadowsong##10118
-			..turnin Nessa Shadowsong##6344
-			..accept The Bounty of Teldrassil##6341
-		step
-			goto Teldrassil,58.4,94
-			.talk Vesprystus##3838
-			..turnin The Bounty of Teldrassil##6341
-			..accept Flight to Auberdine##6342
-		step
-			goto Teldrassil,58.4,94
-			.talk Vesprystus##3838
-			.'Fly to Auberdine|goto Darkshore,36.4,45.6,0.5|noway|c
-		step
-			goto Darkshore,36.8,44.3
-			.talk Laird##4200
-			..turnin Flight to Auberdine##6342
-			..accept Return to Nessa##6343
-		step
-			goto Darkshore,36.3,45.6
-			.talk Caylais Moonfeather##3841
-			.'Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
-		step
-			goto Teldrassil,56.3,92.4
-			.talk Nessa Shadowsong##10118
-			..turnin Return to Nessa##6343
-		step
-			goto Darkshore,43.6,76.3
-			.talk Onu##3616
-			..turnin Grove of the Ancients##952
-			.' This quest can be turning in the following quest-guide - Darkshore
-		step
-			.' Completed!|tip Use next guide - Darkshore
-]])
-
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Darkshore",[[
-author danaton
-description This guide contain quest-chain (67 quests) for Darkshore location.
-startlevel 20
-		step
-			.' For comfortable execution quest chain, it is recommended to be level 20+|tip Manually skip this step
-		step
-			goto Darnassus,31.2,84.5
-			.talk Chief Archaeologist Greywhisker##2912
-			..accept Trouble In Darkshore?##730
-		step
-			goto Darkshore,36.6,45.6
-			.talk Gwennyth Bly'Leggonde##10219
-			..accept Washed Ashore##3524
-		step
-			goto Darkshore,37,44.1
-			.talk Wizbang Cranktoggle##3666
-			..accept Buzzbox 827##983
-		step
-			goto Darkshore,37.4,41.8
-			.talk Archaeologist Hollee##2913
-			..turnin Trouble In Darkshore?##730
-		step
-			goto Darkshore,36.3,50.8
-			.collect Sea Creature Bones##12242|q 3524/1
-		step
-			goto Darkshore,36.19,46.52
-			.from Pygmy Tide Crawler##2231+, Tide Crawler##2232+, Young Reef Crawler##2234+
-			.get 6 Crawler Leg##5385|q 983/1
-			Position 1|at 36.4,49.9
-			Position 2|at 36.63,56
-		step
-			goto Darkshore,36.64,46.29
-			.talk Buzzbox 827##991002
-			..turnin Buzzbox 827##983
-			..accept Buzzbox 411##1001
-		step
-			goto Darkshore,36.6,45.6
-			.talk Gwennyth Bly'Leggonde##10219
-			..turnin Washed Ashore##3524
-			..accept Washed Ashore##4681
-		step
-			goto Darkshore,31.8,46.3
-			.collect Sea Turtle Remains##12289|q 4681/1
-		step
-			goto Darkshore,33,52.3
-			.from Darkshore Thresher##2185+, Elder Darkshore Thresher##2187+
-			.get 3 Thresher Eye##5412|q 1001/1
-			Position-spot|at 33.85,35.08
-		step
-			goto Darkshore,36.6,45.6
-			.talk Gwennyth Bly'Leggonde##10219
-			..turnin Washed Ashore##4681
-		step
-			goto Darkshore,37.7,43.4
-			.talk Sentinel Glynda Nal'Shea##2930
-			..accept The Red Crystal##4811
-		step
-			goto Darkshore,38.8,43.4
-			.talk Tharnariun Treetender##3701
-			..accept Plagued Lands##2118
-		step
-			goto Darkshore,39.4,43.5
-			.talk Terenthis##3693
-			..accept How Big a Threat? (1)##984
-		step
-			goto Darkshore,38.4,52.9
-			.' Use Tharnariun's Hope on a Rabid Thistle Bear|use Tharnariun's Hope##7586
-			.' Capture a Rabid Thistle Bear|goal Rabid Thistle Bear Captured|q 2118/1
-		step
-			goto Darkshore,39.6,52.9
-			.' Find a corrupt furbolg camp at this spot|goal Find a corrupt furbolg camp|q 984/1
-		step
-			goto Darkshore,47.4,48.7
-			.' Walk up next to the big red crystal at the top of this hill
-			.' Locate the large, red crystal on Darkshore's eastern mountain range|goal Locate the large, red crystal on Darkshore's eastern mountain range|q 4811/1
-		step
-			goto Darkshore,38.8,43.4
-			.talk Tharnariun Treetender##3701
-			..turnin Plagued Lands##2118
-			..accept Cleansing of the Infected##2138
-		step
-			goto Darkshore,39.4,43.5
-			.talk Terenthis##3693
-			..turnin How Big a Threat? (1)##984
-			..accept How Big a Threat? (2)##985
-		step
-			goto Darkshore,37.7,43.4
-			.talk Sentinel Glynda Nal'Shea##2930
-			..turnin The Red Crystal##4811
-			..accept As Water Cascades##4812
-		step
-			goto Darkshore,37.8,44.1
-			.' Use your Empty Water Tube in your bags in the moonwell water|use Empty Water Tube##14338
-			.get Moonwell Water Tube|q 4812/1
-		step
-			goto Darkshore,40.3,53
-			.kill 8 Blackwood Pathfinder|q 985/1
-			.kill 5 Blackwood Windtalker|q 985/2
-		step
-			goto Darkshore,47.3,48.7
-			.talk Mysterious Red Crystal##991006
-			..turnin As Water Cascades##4812
-			..accept The Fragments Within##4813
-		step
-			goto Darkshore,39.4,43.5
-			.talk Terenthis##3693
-			..turnin How Big a Threat? (2)##985
-			..accept Thundris Windweaver##4761
-		step
-			goto Darkshore,37.7,43.4
-			.talk Sentinel Glynda Nal'Shea##2930
-			..turnin The Fragments Within##4813
-		step
-			goto Darkshore,37.3,43.6
-			.talk Barithras Moonshade##3583
-			..accept Cave Mushrooms##947
-		step
-			goto Darkshore,37.4,40.1
-			.talk Thundris Windweaver##3649
-			..turnin Thundris Windweaver##4761
-			..accept The Cliffspring River##4762
-			..accept Bashal'Aran (1)##954
-		step
-			goto Darkshore,38.1,41.2
-			.talk Gorbold Steelhand##6301
-			..accept Deep Ocean, Vast Sea##982
-		step
-			goto Darkshore,44.2,36.3
-			.talk Asterion##3650
-			..turnin Bashal'Aran (1)##954
-			..accept Bashal'Aran (2)##955
-		step
-			goto Darkshore,44.6,36.9
-			.from Wild Grell##2190+, Vile Sprite##2189+
-			.get 8 Grell Earring|q 955/1
-		step
-			goto Darkshore,44.2,36.3
-			.talk Asterion##3650
-			..turnin Bashal'Aran (2)##955
-			..accept Bashal'Aran (3)##956
-		step
-			goto Darkshore,47.4,36.8
-			.from Deth'ryll Satyrs##2212+
-			.get Ancient Moonstone Seal|q 956/1
-		step
-			goto Darkshore,44.2,36.3
-			.talk Asterion##3650
-			..turnin Bashal'Aran (3)##956
-			..accept Bashal'Aran (4)##957
-		step
-			goto Darkshore,41.9,31.5
-			.talk Beached Sea Creature##991008
-			..accept Beached Sea Creature##4723
-		step
-			goto Darkshore,42,28.6
-			.talk Buzzbox 411##991003
-			..turnin Buzzbox 411##1001
-			..accept Buzzbox 323##1002
-		step
-			.' Go underwater to 39.6,27.5|goto 39.6,27.5
-			.' Click the Mist Veil's Lockbox|tip It's a small grey chest at the very bottom of the ship.
-			.get Mist Veil's Lockbox|q 982/2
-		step
-			.' Go underwater to 38.2,28.8|goto 38.2,28.8
-			.' Click the Silver Dawning's Lockbox|tip It's a small grey chest at the very bottom of this ship.
-			.get Silver Dawning's Lockbox|q 982/1
-		step
-			.' Jump down into the water below the bridge to 50.9,25.7|goto 50.9,25.7
-			.' Use your Empty Sampling Tube at the bottom of this waterfall|use Empty Sampling Tube##12350
-			.get Cliffspring River Sample|q 4762/1
-		step
-			goto Darkshore,55.64,36.13
-			.' Сan be found on the upper level of the cave
-			.get 1 Death Cap|q 947/2
-		step
-			goto Darkshore,55.1,33.6
-			.' Inside the cave
-			.get 5 Scaber Stalk|q 947/1
-		step
-			goto Darkshore,48.4,30.7
-			.kill 20 Rabid Thistle Bear|q 2138/1
-			.from Moonstalker##2069+
-			.get 6 Moonstalker Fang|q 1002/1
-		step
-			goto Darkshore,51.3,24.6
-			.talk Buzzbox 323##991004
-			..turnin Buzzbox 323##1002
-			..accept Buzzbox 525##1003
-		step
-			goto Darkshore,44.2,20.6
-			.talk Beached Sea Turtle##991009
-			..accept Beached Sea Turtle##4725
-		step
-			.' Hearth to Auberdine|goto Darkshore,37,44.10|use Hearthstone##6948|noway|c
-		step
-			goto Darkshore,35.7,43.7
-			.talk Cerellean Whiteclaw##3644
-			..accept For Love Eternal##963
-		step
-			goto Darkshore,36.6,45.6
-			.talk Gwennyth Bly'Leggonde##10219
-			..turnin Beached Sea Creature##4723
-			..turnin Beached Sea Turtle##4725
-		step
-			goto Darkshore,36.1,44.9
-			.talk Gubber Blump##10216
-			..accept Fruit of the Sea##1138
-		step
-			goto Darkshore,37.2,44.2
-			.talk WANTED: Murkdeep!##991010
-			..accept WANTED: Murkdeep!##4740
-		step
-			goto Darkshore,37.3,43.6
-			.talk Barithras Moonshade##3583
-			..turnin Cave Mushrooms##947
-			..accept Onu##948
-		step
-			goto Darkshore,38.8,43.4
-			.talk Tharnariun Treetender##3701
-			..turnin Cleansing of the Infected##2138
-			..accept Tharnariun's Hope##2139
-		step
-			goto Darkshore,39.4,43.5
-			.talk Terenthis##3693
-			..accept A Lost Master (1)##986
-		step
-			goto Darkshore,39,43.6
-			.talk Sentinel Elissa Starbreeze##3657
-			..accept The Tower of Althalaxx (1)##965
-		step
-			goto Darkshore,38.1,41.2
-			.talk Gorbold Steelhand##6301
-			..turnin Deep Ocean, Vast Sea##982
-		step
-			goto Darkshore,37.4,40.1
-			.talk Thundris Windweaver##3649
-			..turnin The Cliffspring River##4762
-			..accept Tools of the Highborne##958
-			..accept The Blackwood Corrupted##4763
-		step
-			goto Darkshore,37.8,44
-			.' Use Empty Cleansing Bowl on a Moonwell|use Empty Cleansing Bowl##12346
-			.' Manually skip this step!
-		step
-			goto Darkshore,52.4,35.9|n
-			.' The path up to Tharnariun's Hope starts here|goto Darkshore,52.4,35.9,0.5|noway|c
-		step
-			goto Darkshore,51.5,38.2
-			.kill Den Mother|q 2139/1
-		step
-			goto Darkshore,50.7,34.9
-			.collect 1 Blackwood Grain Sample##12342|q 4763/1
-			.' Manually skip this step
-		step
-			goto Darkshore,51.8,33.5
-			.collect 1 Blackwood Nut Sample##12343|q 4763/1
-			.' Manually skip this step
-		step
-			goto Darkshore,52.9,33.4
-			.collect 1 Blackwood Fruit Sample##12341|q 4763/1
-			.' Manually skip this step
-		step
-			goto Darkshore,52.43,33.37
-			.' Use EFilled Cleansing Bowl on a Bonfire|use Filled Cleansing Bowl##12347
-			.kill 1 Xabraxxis##10373|q 4763/1
-			.collect Talisman of Corruption##12355|q 4763/1
-		step
-			goto Darkshore,55,24.9
-			.talk Balthule Shadowstrike##3661
-			..turnin The Tower of Althalaxx (1)##965
-			..accept The Tower of Althalaxx (2)##966
-		step
-			goto Darkshore,55.2,26.4
-			.from Dark Strand Fanatic##2336+
-			.get 4 Worn Parchment|q 966/1
-		step
-			goto Darkshore,55,24.9
-			.talk Balthule Shadowstrike##3661
-			..turnin The Tower of Althalaxx (2)##966
-			..accept The Tower of Althalaxx (3)##967
-		step
-			goto Darkshore,53.1,18.1
-			.talk Beached Sea Turtle##001009
-			..accept Beached Sea Turtle##4727
-		step
-			goto Darkshore,37.4,40.1
-			.talk Thundris Windweaver##3649
-			..turnin The Blackwood Corrupted##4763
-			..accept Onward to Ashenvale##10752
-		step
-			goto Darkshore,36.6,45.6
-			.talk Gwennyth Bly'Leggonde##10219
-			..turnin Beached Sea Turtle##4727
-		step
-			goto Darkshore,38.8,43.4
-			.talk Tharnariun Treetender##3701
-			..turnin Tharnariun's Hope##2139
-		step
-			goto Darkshore,40.3,59.7
-			.talk Sentinel Tysha Moonblade##3639
-			..accept The Fall of Ameth'Aran##953
-		step
-			goto Darkshore,42.4,61.8
-			.' Click the Ancient Flame|tip It's a stone podium with a green coming out of the top of it, inside a dark colored broken gazebo.
-			.' Destroy the seal at the ancient flame|goal Destroy the seal at the ancient flame|q 957/1
-		step
-			goto Darkshore,42.6,63.1
-			.' Click the Fall of Ameth'Aran|tip It's a stone tablet standing upright on the ground.
-			.' Read the Fall of Ameth'Aran|goal Read the Fall of Ameth'Aran|q 953/2
-		step
-			goto Darkshore,43.3,59.7
-			.from Anaya Dawnrunner##3667
-			.get Anaya's Pendant|q 963/1
-		step
-			goto Darkshore,43.3,58.7
-			.' Click the Lay of Ameth'Aran |tip It's a stone tablet laying flat on the ground.
-			.' Read the Lay of Ameth'Aran |q 953/1
-		step
-			goto Darkshore,41.5,59.1
-			.from Cursed Highborne##2176+, Writhing Highborne##2177+, Wailing Highborne##2178+
-			.get 7 Highborne Relic|q 958/1
-		step
-			goto Darkshore,40.3,59.7
-			.talk Sentinel Tysha Moonblade##3639
-			..turnin The Fall of Ameth'Aran##953
-		step
-			goto Darkshore,36,70.9
-			.talk Beached Sea Creature##001008
-			..accept Beached Sea Creature##4728
-		step
-			goto Darkshore,36.3,76.7
-			.kill Murkdeep##10323|q 4740/1
-		step
-			goto Darkshore,34.9,80
-			.from Reef Crawler##2235+, Encrusted Tide Crawler##2233+
-			.get 6 Fine Crab Chunks|q 1138/1
-		step
-			goto Darkshore,31.7,83.7
-			.talk Beached Sea Turtle##001009
-			..accept Beached Sea Turtle##4731
-		step
-			goto Darkshore,37.6,82.4
-			.from Grizzled Thistle Bear##2165+
-			.get 4 Grizzled Scalp|q 1003/1
-			.from Moonstalker Sire##2237+, Moonstalker Matriarch##2071+
-			.get 5 Fine Moonstalker Pelt|q 986/1
-		step
-			goto Darkshore,41.4,80.6
-			.talk Buzzbox 525##991005
-			..turnin Buzzbox 525##1003
-		step
-			goto Darkshore,37.1,62.2
-			.talk Beached Sea Turtle##001009
-			..accept Beached Sea Turtle##4722
-		step
-			goto Darkshore,36.6,45.6
-			.talk Gwennyth Bly'Leggonde##10219
-			..turnin Beached Sea Turtle##4722
-			..turnin Beached Sea Creature##4728
-			..turnin Beached Sea Turtle##4731
-		step
-			goto Darkshore,36.1,44.9
-			.talk Gubber Blump##10216
-			..turnin Fruit of the Sea##1138
-		step
-			goto Darkshore,35.7,43.7
-			.talk Cerellean Whiteclaw##3644
-			..turnin For Love Eternal##963
-		step
-			goto Darkshore,37.7,43.4
-			.talk Sentinel Glynda Nal'Shea##2930
-			..turnin WANTED: Murkdeep!##4740
-		step
-			goto Darkshore,39.4,43.5
-			.talk Terenthis##3693
-			..turnin A Lost Master (1)##986
-			..accept A Lost Master (2)##993
-		step
-			goto Darkshore,37.4,40.1
-			.talk Thundris Windweaver##3649
-			..turnin Tools of the Highborne##958
-		step
-			goto Darkshore,37.4,41.8
-			.talk Archaeologist Hollee##2913
-			..accept The Absent Minded Prospector (1)##729
-		step
-			goto Darkshore,44.2,36.3
-			.talk Asterion##3650
-			..turnin Bashal'Aran (4)##957
-		step
-			goto Darkshore,43.5,76.3
-			.talk Onu##3616
-			..turnin Onu##948
-			..accept The Master's Glaive##944
-		step
-			goto Darkshore,38.5,86.2
-			.' Clear the mobs around the table
-			.' Jump on the table with the remains on it
-			.' Click your Phial of Scrying in your bags|use Phial of Scrying##5251
-			.' Create the Scrying Bowl
-			.' Click the Scrying Bowl
-			..turnin The Master's Glaive##944
-			..accept The Twilight Camp##949
-			.' Click the Twilight Tome
-			..turnin The Twilight Camp##949
-			..accept Return to Onu##950
-		step
-			goto Darkshore,38.7,87.4
-			.talk Therylune##3584
-			..accept Therylune's Escape##945
-			.from Twilight Disciple##2338+, Twilight Thug##2339+
-			.collect Book: The Powers Below##5352|q 1143/1 |future
-			..accept The Powers Below##968|use Book: The Powers Below##5352
-			.' Escort Therylune away from the Master's Glaive|goal Escort Therylune away from the Master's Glaive|q 945/1	
-		step
-			goto Darkshore,35.7,83.7
-			.talk Prospector Remtravel##2917
-			..turnin The Absent Minded Prospector (1)##729
-			..accept The Absent Minded Prospector (2)##731
-		step
-			goto Darkshore,36.31,86.19
-			.' Prospector Remtravel as he searches for the mysterious fossil|q 731/1
-		step
-			goto Darkshore,32.7,80.8
-			.talk Beached Sea Creature##001008
-			..accept Beached Sea Creature##4730
-		step
-			goto Darkshore,31.2,85.6
-			.talk Beached Sea Turtle##001009
-			..accept Beached Sea Turtle##4732
-		step
-			goto Darkshore,45,85.3
-			.talk Volcor##3692
-			..turnin A Lost Master (2)##993
-			..accept Escape Through Force##994
-			.goal Protect Volcor until you reach the road|q 994/1
-		step
-			goto Darkshore,43.5,76.3
-			.talk Onu##3616
-			..turnin Return to Onu##950
-			..accept Mathystra Relics##951
-		step
-			goto Darkshore,44.4,76.4
-			.talk Kerlonian Evershade##11218
-			..accept The Sleeper Has Awakened##5321
-			.' Click Kerlonian's Chest next to him
-			.collect Horn of Awakening##13536|q 5321/2
-		step
-			goto Ashenvale,26.8,36.8
-			.' Escort Kerlonian Evershade south to Ashenvale, then south to Maestra's Post|goal Escort Kerlonian Evershade to Maestra's Post|q 5321/1|tip Do NOT follow the road. Walk in the forest as much as you can. This will allow you to avoid the ambushes along the way.
-			.' Use your Horn of Awakening on Kerlonian Evershade when he falls asleep to wake him up|use Horn of Awakening##13536
-		step
-			goto Ashenvale,27.3,35.6
-			.talk Liladris Moonriver##11219
-			..turnin The Sleeper Has Awakened##5321
-		step
-			goto Ashenvale,26.2,38.6
-			.talk Delgren the Purifier##3663
-			..turnin The Tower of Althalaxx (3)##967
-			..accept The Tower of Althalaxx (4)##970
-		step
-			goto Ashenvale,32.7,28.7
-			.from Dark Strand Cultist##3725+, Dark Strand Adept##3728+, Dark Strand Excavator##3730+, Dark Strand Enforcer##3727+
-			.get Glowing Soul Gem|q 970/1
-		step
-			goto Ashenvale,26.2,38.6
-			.talk Delgren the Purifier##3663
-			..turnin The Tower of Althalaxx (4)##970
-			..accept The Tower of Althalaxx (5)##973
-		step
-			goto Ashenvale,22.7,51.9
-			.talk Therysil##3585
-			..turnin Therylune's Escape##945
-		step
-			ding 23
-		step
-			goto Ashenvale,25.3,60.7
-			.' Go to Path-Up|at 25.88,63.11
-			.from Ilkrud Magthrull##3664+
-			.get Ilkrud Magthrulls Tome|q 973/1
-		step
-			goto Ashenvale,36.6,49.6
-			.talk Raene Wolfrunner##3691
-			..turnin Onward to Ashenvale##10752
-		step
-			goto Ashenvale,34.4,48
-			.talk Daelyshia##4267
-			..fpath Astranaar, Ashenvale
-		step
-			goto Ashenvale,26.2,38.6
-			.talk Delgren the Purifier##3663
-			..turnin The Tower of Althalaxx (5)##973
-			..accept The Tower of Althalaxx (6)##1140
-		step
-			goto Ashenvale,66.63,56.90
-			.' Move Path Here|at 72.21,49.83
-			.' Free the Highborne soul in Night Run|q 1140/1
-		step
-			goto Ashenvale,81.6,48.6
-			.' Free the Highborne soul in Satyrnaar|q 1140/2
-		step
-			goto Ashenvale,85.1,43.4
-			.talk Suralais Farwind##22935
-			..fpath Forest Song, Ashenvale
-		step
-			goto Ashenvale,85.1,43.4
-			.talk Suralais Farwind##22935
-			.'Fly to Astranaar, Ashenvale|goto Ashenvale,35.5,50.2,5|noway|c
-		step
-			goto Ashenvale,26.2,38.6
-			.talk Delgren the Purifier##3663
-			..turnin The Tower of Althalaxx (6)##1140
-			..accept The Tower of Althalaxx (7)##1167
-		step
-			goto Ashenvale,34.4,48
-			.talk Daelyshia##4267
-			.'Fly to Auberdine, Darkshore|goto Darkshore,36.4,45.6,0.3|noway|c
-		step
-			goto Darkshore,36.6,45.6
-			.talk Gwennyth Bly'Leggonde##10219
-			..turnin Beached Sea Creature##4730
-			..turnin Beached Sea Turtle##4732
-		step
-			goto Darkshore,37.4,41.8
-			.talk Archaeologist Hollee##2913
-			..turnin The Absent Minded Prospector (2)##731
-			..accept The Absent Minded Prospector (3)##741
-		step
-			goto Darkshore,39.4,43.5
-			.talk Terenthis##3693
-			..turnin Escape Through Force##994
-		step
-			goto Darkshore,55,24.9
-			.talk Balthule Shadowstrike##3661
-			..turnin The Tower of Althalaxx (7)##1167
-			..accept The Tower of Althalaxx (8)##1143
-		step
-			ding 28
-		step
-			goto Darkshore,56,26.3
-			.from Athrikus Narassin##3660
-			.get Athrikus Narassin's Head|q 1143/1
-		step
-			goto Darkshore,55,24.9
-			.talk Balthule Shadowstrike##3661
-			..turnin The Tower of Althalaxx (8)##1143
-			..accept The Tower of Althalaxx (9)##981
-		step
-			goto Darkshore,56.7,13.5
-			.talk Gelkak Gyromast##6667
-			..accept Gyromast's Retrieval##2098
-		step
-			goto Darkshore,52.8,19.5
-			.from Encrusted Tide Crawler##2233+, Raging Reef Crawler##2236+
-			.get Bottom of Gelkak's Key|q 2098/3
-		step
-			goto Darkshore,60.9,10.3
-			.from Giant Foreststrider##2323
-			.get Top of Gelkak's Key|q 2098/1
-		step
-			goto Darkshore,55.22,12.56
-			.from Greymist Oracle##2207+, Greymist Tidehunter##2208+
-			.get Middle of Gelkak's Key|q 2098/2
-		step
-			goto Darkshore,56.7,13.5
-			.talk Gelkak Gyromast##6667
-			..turnin Gyromast's Retrieval##2098
-			..accept Gyromast's Revenge##2078
-		step
-			goto Darkshore,55.8,18.3
-			.talk The Threshwackonator 4100##6669
-			.' Lead it back Threshwackonator 4100 to Gelkak|at 56.7,13.5|q 2078/1
-		step
-			goto Darkshore,56.7,13.5
-			.talk Gelkak Gyromast##6667
-			..turnin Gyromast's Revenge##2078
-		step
-			goto Darkshore,58.3,21.9
-			.collect 6 Mathystra Relic##5273|q 951/1
-		step
-			.' Hearth to Auberdine|goto Darkshore,37,44.10|use Hearthstone##6948|noway|c
-		step
-			goto Darkshore,39.3,44.08
-			.talk Sentinel Selarin##3694
-			..accept Trek to Ashenvale##990
-		step
-			goto Darkshore,43.5,76.3
-			.talk Onu##3616
-			..turnin Mathystra Relics##951
-		step
-			goto Darkshore,31.3,87.4
-			.talk Beached Sea Creature##001008
-			..accept Beached Sea Creature##4733
-		step
-			goto Ashenvale,26.2,38.6
-			.talk Delgren the Purifier##3663
-			..turnin The Tower of Althalaxx (9)##981
-		step
-			goto Ashenvale,36.6,49.6
-			.talk Raene Wolfrunner##3691
-			..turnin Trek to Ashenvale##990
-		step
-			goto Ashenvale,34.4,48
-			.talk Daelyshia##4267
-			.'Fly to Auberdine, Darkshore|goto Darkshore,36.4,45.6,0.3|noway|c
-		step
-			goto Darkshore,36.6,45.6
-			.talk Gwennyth Bly'Leggonde##10219
-			..turnin Beached Sea Creature##4733
-		step
-			goto Darkshore,36.3,45.6
-			.talk Caylais Moonfeather##3841
-			.' Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
-		step
-			goto Darnassus,31.2,84.5
-			.talk Chief Archaeologist Greywhisker##2912
-			..turnin The Absent Minded Prospector (3)##741
-			..accept The Absent Minded Prospector (4)##942
-		step
-			goto Ironforge,50.8,5.6
-			.talk Gerrig Bonegrip##2786
-			..turnin The Powers Below##968
-		step
-			goto Wetlands,10.8,60.4
-			.talk Archaeologist Flagongut##2911
-			..turnin The Absent Minded Prospector (4)##942
-			..accept The Absent Minded Prospector (5)##943
-		step
-			goto Wetlands,38.9,52.2
-			.' In cave on Hill
-			.collect Flagongut's Fossil##5234|q 943/2
-		step
-			goto Wetlands,34.46,47.13
-			.from Mottled Raptor##1020+, Mottled Screecher##1021+, Mottled Scytheclaw##1022+, Mottled Razormaw##1023+
-			.' Drop chance 10% on Raptor
-			.get Stone of Relu##5233|q 943/1
-		step
-			goto Wetlands,10.8,60.4
-			.talk Archaeologist Flagongut##2911
-			..turnin The Absent Minded Prospector (5)##943
-]])
-
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Hellfire Peninsula",[[
 author danaton
 description This guide contain quest-chain (81 quests) for Hellfire Peninsula location.
@@ -4976,6 +3182,1274 @@ startlevel 70
 			..turnin The Ring of Blood: The Final Challenge##9977
 ]])
 
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Blade's Edge Mountains",[[
+author danaton
+description This guide contain quest-chain for Blade's Edge Mountains (86 quests) location.
+	startlevel 70
+		step
+			goto Zangarmarsh,41.22,28.67
+			.talk Timothy Daniels##18019
+			..accept No Time for Curiosity##9794
+		step
+			goto Blade's Edge Mountains,32.20,91.11
+			.talk Sentinel Moonwhisper##22488
+			..accept Killing the Crawlers##10927
+		step
+			goto Blade's Edge Mountains,35.13,85.18
+			.kill 6 Cavern Crawler##22044|q 10927/1
+		step
+			goto Blade's Edge Mountains,36.3,67.8
+			.talk Kialon Nightblade##18098
+			..turnin No Time for Curiosity##9794
+		step
+			goto Blade's Edge Mountains,36.6,67.3
+			.' Click Wanted Poster
+			..accept The Den Mother##10690
+		step
+			goto Blade's Edge Mountains,36.2,67.1
+			.talk Rina Moonspring##21066
+			..accept The Encroaching Wilderness##10455
+		step
+			goto Blade's Edge Mountains,36.54,66.45
+			.talk Commander Skyshadow##21158
+			..turnin Killing the Crawlers##10927
+			..accept The Bloodmaul Ogres##10502
+		step
+			goto Blade's Edge Mountains,37.07,65.62
+			.talk Daranelle##21469
+			..accept Malaise##10555
+		step
+			goto Blade's Edge Mountains,37.41,65.04
+			.talk Bronwyn Stouthammer##21197
+			..accept Into the Draenethyst Mine##10510
+		step
+			goto Blade's Edge Mountains,37.40,64.66
+			.talk Borgrim Stouthammer##21151
+			..accept Strange Brew##10511
+		step
+			goto Blade's Edge Mountains,38.68,69.16
+			.kill 12 Grovestalker Lynx##21022|q 10455/1
+		step
+			goto Blade's Edge Mountains,35.77,75.08
+			.from Lashh'an Matriarch##20113, Lashh'an Talonite##19943, Lashh'an Wing Guard##19944, Lashh'an Windwalker##19945
+			.get 18 Plucked Lashh'an Feather##30529|q 10555/1
+		step
+			goto Blade's Edge Mountains,34.30,77.39
+			.' Interact with Lashh'an Tome
+			.info Up on the wooden platform.
+			..turnin Malaise##10555
+			..accept Scratches##10556
+		step
+			goto Blade's Edge Mountains,35.22,77.31
+			Use the Fistful of Feathers|use Fistful of Feathers##30530
+			.info Use it inside the Lashh'an Summoning Circle.
+			Begin Channeling the Lashh'an|havebuff Ability_Hunter_Pet_DragonHawk|q 10556
+			.info DO NOT MOUNT after receiving the buff, or you will lose the buff.
+		step
+			goto Blade's Edge Mountains,36.22,67.13
+			.talk Rina Moonspring##21066
+			..turnin The Encroaching Wilderness##10455
+			..accept Marauding Wolves##10456
+		step
+			goto Blade's Edge Mountains,37.07,65.62
+			.talk Daranelle##21469
+			.info DO NOT MOUNT, or you will lose the buff.
+			Have Daranelle Analyze the Kaliri Aura|q 10556/1
+		step
+			goto Blade's Edge Mountains,37.07,65.62
+			.talk Daranelle##21469
+			.info DO NOT MOUNT, or you will lose the buff.
+			..turnin Scratches##10556
+		step
+			goto Blade's Edge Mountains,42.45,83.28
+			.' Collect Draenethyst Mine Crystal
+			.info They look like huge colorful crystals on the ground around this area inside the cave.
+			.info You can mount again now.
+			.collect 5 Draenethyst Mine Crystal##30315|q 10510/1
+		step
+			goto Blade's Edge Mountains,46.05,78.13
+			.from Bloodmaul Brewmaster##19957
+			.' Collect Bloodmaul Brew Keg on ground
+			.info They look like brown barrels on the ground and inside buildings around this area.
+			.get 11 Bloodmaul Brutebane Brew##29443|q 10511/1
+			.' You can find more around [43.15,80.63]
+		step
+			goto Blade's Edge Mountains,46.05,78.13
+			.' Kill Bloodmaul enemies around this area
+			.kill 30 Bloodmaul Ogres|q 10502/1
+			.' You can find more around [43.15,80.63]
+		step
+			goto Blade's Edge Mountains,37.41,65.04
+			.talk Bronwyn Stouthammer##21197
+			..turnin Into the Draenethyst Mine##10510
+		step
+			goto Blade's Edge Mountains,37.40,64.66
+			.talk Borgrim Stouthammer##21151
+			..turnin Strange Brew##10511
+			..accept Getting the Bladespire Tanked##10512
+		step
+			goto Blade's Edge Mountains,36.54,66.45
+			.talk Commander Skyshadow##21158
+			..turnin The Bloodmaul Ogres##10502
+			..accept The Bladespire Ogres##10504
+		step
+			goto Blade's Edge Mountains,51.62,74.96
+			.kill Rema##21956|q 10690/1
+		step
+			goto Blade's Edge Mountains,52.24,67.47
+			.from Thunderlord Dire Wolf##20748
+			.get 4 Thunderlord Dire Wolf Tail##30184|q 10456/1
+		step
+			goto Blade's Edge Mountains,36.54,66.45
+			.talk Commander Skyshadow##21158
+			..turnin The Den Mother##10690
+		step
+			goto Blade's Edge Mountains,36.21,67.13
+			.talk Rina Moonspring##21066
+			..turnin Marauding Wolves##10456
+			..accept Protecting Our Own##10457
+		step
+			goto Blade's Edge Mountains,38.30,70.10
+			.' Interact with Grove Seedling
+			.info They look like ball plants on the ground around this area.
+			.' Summon 5 Living Grove Defenders|q 10457/1
+		step
+			goto Blade's Edge Mountains,36.21,67.13
+			.talk Rina Moonspring##21066
+			..turnin Protecting Our Own##10457
+			..accept A Dire Situation##10506
+		step
+			goto Blade's Edge Mountains,43.06,80.75
+			.' Use Rina's Diminution Powder |use Rina's Diminution Powder##30251
+			.info Use it on Bloodmaul Dire Wolves around this area.
+			Weaken 5 Bloodmaul Dire Wolves|q 10506/1
+			.' You can find more around [45.01,73.52]
+		step
+			goto Blade's Edge Mountains,44.03,51.88
+			.talk Vindicator Vuuleen##21277
+			..accept The Trappings of a Vindicator##10516
+		step
+			goto Blade's Edge Mountains,39.05,52.76
+			.' Use the Bloodmaul Brutebane Keg|use Bloodmaul Brutebane Keg##30353
+			.info Pull the 2 non-elite guards one at a time and kill them first.
+			.info Kill any non-elite ogres near the doorway before using the Bloodmaul Brutebane Keg.
+			.info This will pull Droggam outside the building without his elite guards.
+			.from Droggam##20731
+			.info Inside the building.
+			.get Vindicator Vuuleen's Blade##30413|q 10516/1
+		step
+			goto Blade's Edge Mountains,42.39,58.74
+			Enter the building|at 41.99,57.33
+			.' Use the Bloodmaul Brutebane Keg|use Bloodmaul Brutebane Keg##30353
+			.info Pull the 2 non-elite guards one at a time and kill them first.
+			.info Kill any non-elite ogres near the doorway before using the Bloodmaul Brutebane Keg.
+			.info This will pull Mugdorg outside the building without his elite guards.
+			.info When he starts running to the brew, run outside of the building so that he doesn't start attacking you too early.
+			.info He is a ranged enemy, so if he attacks too early and he's close to his guards, they will attack as well.
+			.from Mugdorg##20726
+			.info Inside the building.
+			.get Vindicator Vuuleen's Shield##30415|q 10516/2
+		step
+			goto Blade's Edge Mountains,41.73,54.84
+			.' Use the Bloodmaul Brutebane Keg|use Bloodmaul Brutebane Keg##30353
+			.info Use it near Bladespire enemies around this area.
+			.' Get 5 Bladespire Ogres drunk|q 10512/1
+		step
+			goto Blade's Edge Mountains,41.73,54.84
+			.kill 30 Bladespire Ogres|q 10504/1
+		step
+			goto Blade's Edge Mountains,44.03,51.88
+			.talk Vindicator Vuuleen##21277
+			..turnin The Trappings of a Vindicator##10516
+			..accept Gorr'Dim, Your Time Has Come...##10517
+		step
+			goto Blade's Edge Mountains,39.46,49.14
+			Enter the building|at 40.12,49.79
+			.' Use the Bloodmaul Brutebane Keg |use Bloodmaul Brutebane Keg##30353
+			.info Pull the 2 non-elite guards one at a time and 			.kill them first.
+			.info Kill any non-elite ogres near the doorway before using the Bloodmaul Brutebane Keg.
+			.info This will pull Gorr'dim outside the building without his elite guards.
+			.info When he starts running to the brew, run outside of the building so that he doesn't start attacking you too early.
+			.info He is a ranged enemy, so if he attacks too early and he's close to his guards, they will attack as well.
+			.kill Gorr'dim##20732|q 10517/1
+			.info Inside the building.
+		step
+			goto Blade's Edge Mountains,44.03,51.88
+			.talk Vindicator Vuuleen##21277
+			..turnin Gorr'Dim, Your Time Has Come...##10517
+			..accept Planting the Banner##10518
+		step
+			goto Blade's Edge Mountains,41.29,46.72
+			Enter the building|at 41.36,47.17
+			.from Bladespire Champion##21296
+			.info Inside the building.
+			.get Bladespire Clan Banner##30416|q 10518/1
+		step
+			goto Blade's Edge Mountains,46.56,74.71
+			.' Use the Bladespire Clan Banner|use Bladespire Clan Banner##30416
+			.info At the top of the tower.
+			.info Don't place the banner if another player's banner is already present, or you will need to restart the quest.
+			.' Kill the enemies that attack in waves
+			.from Gurn Grubnosh##20116
+			.get Helm of Gurn Grubnosh##30417|q 10518/2
+		step
+			goto Blade's Edge Mountains,37.40,64.66
+			.talk Borgrim Stouthammer##21151
+			..turnin Getting the Bladespire Tanked##10512
+		step
+			goto Blade's Edge Mountains,36.54,66.45
+			.talk Commander Skyshadow##21158
+			..turnin Planting the Banner##10518
+			..turnin The Bladespire Ogres##10504
+			..accept Where Did Those Darn Gnomes Go?##10580
+		step
+			goto Blade's Edge Mountains,36.21,67.13
+			.talk Rina Moonspring##21066
+			..turnin A Dire Situation##10506
+		step
+			goto Blade's Edge Mountains,55.1,72.8
+			.talk R-3D0##21690
+			..turnin Where Did Those Darn Gnomes Go?##10580
+			..accept Follow the Breadcrumbs##10581
+		step
+			goto Blade's Edge Mountains,60.23,68.95
+			.talk Nickwinkle the Metro-Gnome##21755
+			..accept Crystal Clear##10608
+		step
+			goto Blade's Edge Mountains,60.53,68.97
+			.talk Toshley##21691
+			..turnin Follow the Breadcrumbs##10581
+			..accept Picking Up Some Power Converters##10584
+		step
+			goto Blade's Edge Mountains,60.98,68.11
+			.talk Fizit "Doc" Clocktock##21110
+			..accept What Came First, the Drake or the Egg?##10609
+		step
+			goto Blade's Edge Mountains,60.28,68.38
+			.talk Tally Zapnabber##21460
+			..accept Test Flight: The Zephyrium Capacitorium##10557
+		step
+			goto Blade's Edge Mountains,60.18,68.79
+			.talk Rally Zapnabber##21461
+			.' Tell him "I'm ready for my test flight!"
+			.' Test the Zephyrium Capacitorium|q 10557/1
+		step
+			goto Blade's Edge Mountains,60.28,68.38
+			.talk Tally Zapnabber##21460
+			..turnin Test Flight: The Zephyrium Capacitorium##10557
+			..accept Test Flight: The Singing Ridge##10710
+		step
+			goto Blade's Edge Mountains,57.67,57.77
+			.' Interact with Power Converter
+			.info They look like small metal objects with electricty inside them on the ground around this area.
+			.' Use the Protovoltaic Magnetocollector|use Protovoltaic Magnetocollector##30656
+			.info Use it on the Electromentals that spawn.
+			.from Electromental##21729
+			.get 5 Electromentals|q 10584/1
+		step
+			goto Blade's Edge Mountains,60.53,68.96
+			.talk Toshley##21691
+			..turnin Picking Up Some Power Converters##10584
+			..accept Ride the Lightning##10657
+		step
+			goto Blade's Edge Mountains,60.40,68.76
+			.talk Dizzy Dina##21824
+			..accept Ridgespine Menace##10620
+		step
+			goto Blade's Edge Mountains,60.37,68.10
+			.talk Razak Ironsides##21118
+			..accept Cutting Your Teeth##10632
+		step
+			goto Blade's Edge Mountains,60.18,68.79
+			.' Use Tally's Waiver (Unsigned) |use Tally's Waiver (Unsigned)##30540
+			.collect Tally's Waiver (Signed)##30539|q 10710
+		step
+			goto Blade's Edge Mountains,60.18,68.79
+			.talk Rally Zapnabber##21461
+			.' Tell him "Take me to Singing Ridge."
+			.' Throw Caution to the Wind|q 10710/1
+		step
+			goto Blade's Edge Mountains,68.27,69.34
+			.from Scalewing Serpent##20749
+			.get 5 Scalewing Lightning Gland##30849|q 10657/2 
+		step
+			goto Blade's Edge Mountains,68.27,69.34
+			.' Use the Repolarized Magneto Sphere |use Repolarized Magneto Sphere##30818
+			.info Use it when fighting Scalewing Serpents around this area.
+			.info Allow them to use their Lightning Strike ability on you.
+			.info Put your pet on passive, if you have one, to make this go faster.
+			.' Absorb 25 Lightning Strikes|q 10657/1
+		step
+			goto Blade's Edge Mountains,66.17,56.94
+			.from Daggermaw Lashtail##20751+
+			.get 5 Extra Sharp Daggermaw Tooth##30798|q 10632/1
+		step
+			goto Blade's Edge Mountains,66.17,56.94
+			.kill 10 Ridgespine Stalker##20714|q 10620/1
+			.info They are usually stealthed near the spikey rocks around this area.
+		step
+			goto Blade's Edge Mountains,66.03,76.18
+			.' Click Nether Drake Egg
+			.info They look like big blue eggs with white crystals on them on the ground around this area.
+			.' Use the Temporal Phase Modulator|use Temporal Phase Modulator##30742
+			.info Use it on the Nether Whelps that spawn.
+			.info You can use the Temporal Phase Modulator repeatedly on the same enemy
+			.info This allows you to keep changing the type of drake it is to suit what you need.
+			.from Proto-Nether Drake##21821
+			.get 3 Proto-Nether Drake Essence##30743|q 10609/1 
+		step
+			goto Blade's Edge Mountains,66.03,76.18
+			.' Click Nether Drake Egg
+			.info They look like big blue eggs with white crystals on them on the ground around this area.
+			.' Use the Temporal Phase Modulator|use Temporal Phase Modulator##30742
+			.info Use it on the Nether Whelps that spawn.
+			.info You can use the Temporal Phase Modulator repeatedly on the same enemy
+			.info This allows you to keep changing the type of drake it is to suit what you need.
+			.from Adolescent Nether Drake##21817+
+			.get 3 Adolescent Nether Drake Essence##30782|q 10609/2
+		step
+			goto Blade's Edge Mountains,66.03,76.18
+			.' Click Nether Drake Egg
+			.info They look like big blue eggs with white crystals on them on the ground around this area.
+			.' Use the Temporal Phase Modulator|use Temporal Phase Modulator##30742
+			.info Use it on the Nether Whelps that spawn.
+			.info You can use the Temporal Phase Modulator repeatedly on the same enemy
+			.info This allows you to keep changing the type of drake it is to suit what you need.
+			.from Mature Nether Drake##21820+
+			.get 3 Mature Nether Drake Essence##30783|q 10609/3
+		step
+			goto Blade's Edge Mountains,66.03,76.18
+			.kill 10 Crystal Flayer##21189|q 10608/1
+		step
+			goto Blade's Edge Mountains,60.98,68.11
+			.talk Fizit "Doc" Clocktock##21110
+			..turnin What Came First, the Drake or the Egg?##10609
+		step
+			goto Blade's Edge Mountains,60.37,68.10
+			.talk Razak Ironsides##21118
+			..turnin Cutting Your Teeth##10632
+		step
+			goto Blade's Edge Mountains,60.28,68.38
+			.talk Tally Zapnabber##21460
+			..turnin Test Flight: The Singing Ridge##10710
+		step
+			goto Blade's Edge Mountains,60.53,68.97
+			.talk Toshley##21691
+			..turnin Ride the Lightning##10657
+			..accept Trapping the Light Fantastic##10674
+		step
+			goto Blade's Edge Mountains,60.40,68.76
+			.talk Dizzy Dina##21824
+			..turnin Ridgespine Menace##10620
+			..accept More than a Pound of Flesh##10671
+		step
+			goto Blade's Edge Mountains,60.22,68.94
+			.talk Nickwinkle the Metro-Gnome##21755
+			..turnin Crystal Clear##10608
+			..accept Gauging the Resonant Frequency##10594
+		step
+			goto Blade's Edge Mountains,60.28,68.39
+			.talk Tally Zapnabber##21460
+			..accept Test Flight: Razaan's Landing##10711
+		step
+			goto Blade's Edge Mountains,61.2,76.1
+			.' Use the Oscillating Frequency Scanners|use Oscillating Frequency Scanners##30701
+			.info Use it multiple times.
+			.info Try to place them a little far apart, and so that the lines overlap each other a lot.
+			.info Stand in the middle of the design you made.
+			.' Gauge the Singing Crystal Resonant Frequency|q 10594/1
+		step
+			goto Blade's Edge Mountains,60.23,68.94
+			.talk Nickwinkle the Metro-Gnome##21755
+			..turnin Gauging the Resonant Frequency##10594
+		step
+			goto Blade's Edge Mountains,60.18,68.79
+			.talk Rally Zapnabber##21461
+			.' Tell him "Send me to Razaan's Landing!"
+			.' Reach the Sky's Limit|q 10711/1
+		step
+			goto Blade's Edge Mountains,65.56,46.50
+			.' Use the Multi-Spectrum Light Trap |use Multi-Spectrum Light Trap##30852
+			.info Use it at the foot of this pole repeatedly.
+			.' Trap 15 Razaani Light Orbs|q 10674/1
+		step
+			goto Blade's Edge Mountains,66.97,44.23
+			.from Fiendling Flesh Beast##20668
+			.get 5 Ether-Energized Flesh##30840|q 10671/1
+		step
+			goto Blade's Edge Mountains,60.28,68.39
+			.talk Tally Zapnabber##21460
+			..turnin Test Flight: Razaan's Landing##10711
+		step
+			goto Blade's Edge Mountains,60.53,68.96
+			.talk Toshley##21691
+			..turnin Trapping the Light Fantastic##10674
+			..accept Show Them Gnome Mercy!##10675
+		step
+			goto Blade's Edge Mountains,60.40,68.76
+			.talk Dizzy Dina##21824
+			..turnin More than a Pound of Flesh##10671
+		step
+			goto Blade's Edge Mountains,60.18,68.79
+			.talk Rally Zapnabber##21461
+			.' Tell him "I want to fly to an old location!"
+			.' Tell him "Send me to Razaan's Landing!"
+			.' Begin Flying to Razaan's Landing|goto 60.18,68.79 > 50|noway |c |q 10675
+		step
+			goto Blade's Edge Mountains,66.40,44.09
+			.from Razaani Raider##20601, Razaani Nexus Stalker##20609, Razaani Spell-Thief##20614
+			.info Kill them near the portal until Nexus-Prince Razaan appears.
+			.from Nexus-Prince Razaan##21057
+			.' Click Collection of Souls
+			.info It appears above Nexus-Prince Razaan's corpse.
+			.get Collection of Souls##30890|q 10675/1
+		step
+			goto Blade's Edge Mountains,60.53,68.97
+			.talk Toshley##21691
+			..turnin Show Them Gnome Mercy!##10675
+		step
+			goto Blade's Edge Mountains,60.28,68.39
+			.talk Tally Zapnabber##21460
+			..accept Test Flight: Ruuan Weald##10712
+		step
+			goto Blade's Edge Mountains,60.18,68.79
+			.talk Rally Zapnabber##21461
+			.' Tell him "Take me to Ruuan."
+			.' Launch to Ruuan Weald|q 10712/2
+		step
+			.' While Flying to Ruuan Weald:
+			.' Use the Nether-Weather Vane|use Nether-Weather Vane##31124
+			.' Spin the Nether-Weather Vane|q 10712/1
+		step
+			goto Blade's Edge Mountains,61.98,39.48
+			.talk Tree Warden Chawn##22007
+			..accept A Time for Negotiation...##10682
+		step
+			goto Blade's Edge Mountains,61.25,38.47
+			.talk Mosswood the Ancient##22053
+			..accept Little Embers##10770
+			..accept From the Ashes##10771
+		step
+			goto Blade's Edge Mountains,62.16,39.11
+			.talk Timeon##21782
+			..accept Creating the Pendant##10567
+		step
+			goto Blade's Edge Mountains,61.99,37.99
+			.talk Commander Haephus Stonewall##22149
+			..accept A Date with Dorgok##10795
+		step
+			goto Blade's Edge Mountains,61.99,37.94
+			.talk Lieutenant Fairweather##22150
+			..accept Crush the Bloodmaul Camp!##10796
+		step
+			goto Blade's Edge Mountains,62.59,38.28
+			.talk Faradrella##22133
+			..accept Culling the Wild##10753
+		step
+			goto Blade's Edge Mountains,62.65,40.38
+			.talk O'Mally Zapnabber##22020
+			..turnin Test Flight: Ruuan Weald##10712
+		step
+			goto Blade's Edge Mountains,70.94,28.43
+			.kill Fel Corrupter##21300 |n
+			..accept Damaged Mask##10810|use Damaged Mask##31384
+			.' You can find more|at 73.4,28.8
+			.' You can find more|at 74.1,25.7
+			.' You can find more|at 69,33.1
+			.' You can find more|at 69.3,35.8
+			.' You can find more|at 71.8,34.8
+			.' You can find more|at 71.4,42.8
+		step
+			goto Blade's Edge Mountains,71.02,30.90
+			.kill 4 Felsworn Scalewing##21123 |q 10753/1
+		step
+			goto Blade's Edge Mountains,71.02,30.90
+			.kill 4 Felsworn Daggermaw##21124|q 10753/2
+		step
+			goto Blade's Edge Mountains,71.02,30.90
+			.kill 2 Fel Corrupter##21300|q 10753/3
+		step
+			goto Blade's Edge Mountains,71.66,22.39
+			.' Сlick Fertile Volcanic Soil
+			.' Plant in the Southern Volcanic Soil|q 10771/1
+		step
+			goto Blade's Edge Mountains,71.60,20.33
+			.' Сlick Fertile Volcanic Soil
+			.' Plant in the Central Volcanic Soil|q 10771/2
+		step
+			goto Blade's Edge Mountains,71.59,18.51
+			.' Сlick Fertile Volcanic Soil
+			.' Plant in the Northern Volcanic Soil|q 10771/3
+		step
+			goto Blade's Edge Mountains,71.46,20.95
+			.kill 8 Scorch Imp##21021|q 10770/1 
+		step
+			goto Blade's Edge Mountains,65.04,31.57
+			.from Ruuan'ok Cloudgazer##19985, Ruuan'ok Ravenguard##19987
+			.collect 6 Ruuan'ok Claw##30704|q 10567
+		step
+			goto Blade's Edge Mountains,64.47,33.11
+			.' Use the Ruuan'ok Claws|use Ruuan'ok Claw##30704
+			.info Use them inside the glowing circle.
+			.' Watch the dialogue
+			.info It flies down to you.
+			.from Harbinger of the Raven##21767
+			.get Harbinger's Pendant##30706|q 10567/1
+		step
+			goto Blade's Edge Mountains,62.59,38.28
+			.talk Faradrella##22133
+			..turnin Culling the Wild##10753
+		step
+			goto Blade's Edge Mountains,62.65,40.38
+			.talk O'Mally Zapnabber##22020
+			..turnin Damaged Mask##10810
+			..accept Mystery Mask##10812
+		step
+			goto Blade's Edge Mountains,62.54,39.91
+			.talk Wildlord Antelarion##22127
+			..turnin Mystery Mask##10812 
+			..accept Felsworn Gas Mask##10819
+		step
+			goto Blade's Edge Mountains,62.16,39.11
+			.talk Timeon##21782
+			..turnin Creating the Pendant##10567
+			..accept Whispers of the Raven God##10607
+		step
+			goto Blade's Edge Mountains,61.26,38.48
+			.talk Mosswood the Ancient##22053
+			..turnin Little Embers##10770
+			..turnin From the Ashes##10771
+		step
+			goto Blade's Edge Mountains,59.37,37.97
+			.talk Overseer Nuaar##21981
+			.info He looks like a neutral Draenei that walks around this large area.
+			.' Tell him "Overseer, I am here to negotiate on behalf of the Cenarion Expedition."
+			.' Negotiate with Overseer Nuaar|q 10682/1
+			.' You can also find him around|at 62.83,27.89
+		step
+			goto Blade's Edge Mountains,61.99,39.48
+			.talk Tree Warden Chawn##22007
+			..turnin A Time for Negotiation...##10682
+			..accept ...and a Time for Action##10713
+		step
+			goto Blade's Edge Mountains,61.94,39.45
+			.talk Samia Inkling##21983
+			..accept Poaching from Poachers##10717
+		step
+			goto Blade's Edge Mountains,59.37,37.97
+			.from Wyrmcult Poacher##21809, Wyrmcult Hewer##21810
+			.' After looting use Meeting Note|use Meeting Note##31120
+			..accept Did You Get The Note?##10719
+			.' You can find more around|at 62.83,27.89
+		step
+			goto Blade's Edge Mountains,59.37,37.97
+			.kill 10 Wyrmcult Hewer##21810|q 10713/1
+			.' You can find more around|at 62.83,27.89
+		step
+			goto Blade's Edge Mountains,59.37,37.97
+			.from Wyrmcult Poacher##21809
+			.get 5 Wyrmcult Net##31119|q 10717/1
+			.' You can find more around|at 62.83,27.89
+		step
+			goto Blade's Edge Mountains,61.94,39.45
+			.talk Samia Inkling##21983
+			..turnin Poaching from Poachers##10717
+			..accept Whelps of the Wyrmcult##10747
+		step
+			goto Blade's Edge Mountains,61.99,39.48
+			.talk Tree Warden Chawn##22007
+			..turnin ...and a Time for Action##10713
+			..turnin Did You Get The Note?##10719
+			..accept Wyrmskull Watcher##10894
+		step
+			goto Blade's Edge Mountains,62.54,39.91
+			.talk Wildlord Antelarion##22127
+			.' Ask him "The Felsworn Gas Mask was destroyed, do you have another one?"
+			.collect Felsworn Gas Mask##31366|q 10819
+		step
+			goto Blade's Edge Mountains,73.25,40.03
+			.' Equip the Felsworn Gas Mask|q 10819
+			.' Manual skip this step
+		step
+			goto Blade's Edge Mountains,73.25,40.03
+			.' Interact with Legion Communicator
+			..turnin Felsworn Gas Mask##10819
+			..accept Deceive thy Enemy##10820
+		step
+			.' Equip your Regular Head Armor|q 10820
+			.' Manual skip this step
+		step
+			goto Blade's Edge Mountains,74.92,40.16
+			.kill 4 Doomforge Attendant##19961|q 10820/1
+		step
+			goto Blade's Edge Mountains,74.92,40.16
+			.kill 4 Doomforge Engineer##19960|q 10820/2
+		step
+			goto Blade's Edge Mountains,73.25,40.03
+			.' Equip the Felsworn Gas Mask|q 10820
+			.' Manual skip this step
+		step
+			goto Blade's Edge Mountains,73.25,40.03
+			.' Interact with Legion Communicator
+			..turnin Deceive thy Enemy##10820
+			..accept You're Fired!##10821
+		step
+			.' Equip your Regular Head Armor|q 10821
+			.' Manual skip this step
+		step
+			goto Blade's Edge Mountains,73.43,41.10
+			.from Anger Guard##16952
+			.collect 5 Camp Anger Key##31536|q 10821
+		step
+			goto Blade's Edge Mountains,73.54,43.42
+			.' Interact with Legion Obelisk
+			.' Activate the Legion Obelisk|q 10821
+			.' Manual skip this step after activating the Legion Obelisk
+		step
+			goto Blade's Edge Mountains,75.26,41.73
+			.' Interact with Legion Obelisk
+			.' Activate the Legion Obelisk|q 10821
+			.' Manual skip this step after activating the Legion Obelisk
+		step
+			goto Blade's Edge Mountains,73.90,41.07
+			.' Interact with Legion Obelisk
+			.' Activate the Legion Obelisk|q 10821
+			.' Manual skip this step after activating the Legion Obelisk
+		step
+			goto Blade's Edge Mountains,75.39,40.52
+			.' Interact with Legion Obelisk
+			.' Activate the Legion Obelisk|q 10821
+			.' Manual skip this step after activating the Legion Obelisk
+		step
+			goto Blade's Edge Mountains,74.00,39.90
+			.' Interact with Legion Obelisk
+			.' Activate the Legion Obelisk|q 10821
+			.' Manual skip this step after activating the Legion Obelisk
+		step
+			goto Blade's Edge Mountains,74.31,42.51
+			.kill Doomcryer##19963|q 10821/1
+			.info It takes a bit for her to appear.
+			.info She appears after the 5 green lines connect to the top of this structure.
+		step
+			goto Blade's Edge Mountains,62.54,39.91
+			.talk Wildlord Antelarion##22127
+			..turnin You're Fired!##10821 
+			..accept Death's Door##10910
+		step
+			goto Blade's Edge Mountains,65.24,70.65
+			.' Use the Druid Signal|use Druid Signal##31763
+			.info Use it in the Death's Door area.
+			.' Next to you:
+			.talk Evergrove Druid##22423
+			..turnin Death's Door##10910
+			..accept Harvesting the Fel Ammunition##10904
+		step
+			goto Blade's Edge Mountains,64.39,69.60
+			.from Death's Watch##21516, Death's Might##21519
+			.get 5 Fel Cannonball##31757|q 10904/1
+		step
+			goto Blade's Edge Mountains,65.24,70.65
+			.' Use the Druid Signal|use Druid Signal##31763
+			.info Use it in the Death's Door area.
+			.' Next to you:
+			.talk Evergrove Druid##22423.
+			..turnin Harvesting the Fel Ammunition##10904
+			..accept Fire At Will!##10911
+		step
+			goto Blade's Edge Mountains,64.80,68.32
+			.' Use the Naturalized Ammunition|use Naturalized Ammunition##31807
+			.info Use it next to the Death's Door Fel Cannon.
+			.info Use the Artillery on the Warp-Gate ability on your pet action bar.
+			.info You will have to use the ability 7 times.
+			.info Kill the enemies that spawn nearby while you wait for the ability to recharge.
+			.' Destroy the South Warp-Gate|q 10911/1
+		step
+			goto Blade's Edge Mountains,61.97,60.31
+			.' Use the Naturalized Ammunition|use Naturalized Ammunition##31807
+			.info Use it next to the Death's Door Fel Cannon.
+			.info Use the Artillery on the Warp-Gate ability on your pet action bar.
+			.info You will have to use the ability 7 times.
+			.info kill the enemies that spawn nearby while you wait for the ability to recharge.
+			.' Destroy the North Warp-Gate|q 10911/2
+		step
+			goto Blade's Edge Mountains,61.75,59.97
+			.' Use the Druid Signal|use Druid Signal##31763
+			.info Use it in the Death's Door area.
+			.' Next to you:
+			.talk Evergrove Druid##22423
+			.info He flies down next to you after a few seconds.
+			..turnin Fire At Will!##10911
+			..accept The Hound-Master##10912
+		step
+			goto Blade's Edge Mountains,63.60,59.14
+			.' Use the Evergrove Wand|use Evergrove Wand##31809
+			.info Use it on Baelmon the Hound-Master.
+			.info This will call for allies to help you fight.
+			.kill Baelmon the Hound-Master##19747|q 10912/1
+			.info Don't worry that he's elite, you should be able to kill him easily.
+		step
+			goto Blade's Edge Mountains,62.54,39.91
+			.talk Wildlord Antelarion##22127
+			.info He walks around this area.
+			..turnin The Hound-Master##10912
+		step
+			goto Blade's Edge Mountains,55.14,24.05
+			.kill Dorgok##20753|q 10795/1
+			.info At the top of the tower.
+			.' Use Gorgrom's Favor|use Gorgrom's Favor##31363
+			..accept Favor of the Gronn##10797
+			.info You must already have the "A Date with Dorgok" accepted to be able to accept this quest.
+		step
+			goto Blade's Edge Mountains,56.2,26.7
+			.kill 10 Bloodmaul Mauler##19993|q 10796/1
+			.kill 5 Bloodmaul Warlock##19994|q 10796/2
+			.' You can find more around|at 55.08,32.71
+		step
+			goto Blade's Edge Mountains,61.98,37.94
+			.talk Lieutenant Fairweather##22150
+			..turnin Crush the Bloodmaul Camp!##10796
+		step
+			goto Blade's Edge Mountains,61.99,37.99
+			.talk Commander Haephus Stonewall##22149
+			..turnin Favor of the Gronn##10797
+			..accept Pay the Baron a Visit##10798
+			..turnin A Date with Dorgok##10795
+		step
+			goto Blade's Edge Mountains,53.25,41.17
+			.talk Baron Sablemane##22103
+			..turnin Pay the Baron a Visit##10798
+			..accept Into the Churning Gulch##10799
+		step
+			goto Blade's Edge Mountains,46.88,44.68
+			.from Greater Crust Burster##21380, Young Crust Burster##21381
+			.get 7 Crust Burster Venom Gland##31132|q 10799/1
+		step
+			goto Blade's Edge Mountains,53.25,41.17
+			.talk Baron Sablemane##22103
+			..turnin Into the Churning Gulch##10799
+			..accept Goodnight, Gronn##10800
+		step
+			goto Blade's Edge Mountains,60.20,47.61
+			.' Use Sablemane's Sleeping Powder|use Sablemane's Sleeping Powder##31403
+			.info Use it on Grulloc nearby.
+			.' Manual skip this step after putting Grulloc to Sleep|q 10800
+		step
+			goto Blade's Edge Mountains,60.85,47.78
+			.' Collect Grulloc's Sack
+			.collect Grulloc's Sack##31349|q 10800/1
+		step
+			goto Blade's Edge Mountains,53.25,41.17
+			.talk Baron Sablemane##22103
+			..turnin Goodnight, Gronn##10800
+			..accept It's a Trap!##10801
+		step
+			goto Blade's Edge Mountains,61.99,37.99
+			.talk Commander Haephus Stonewall##22149
+			..turnin It's a Trap!##10801
+			..accept Gorgrom the Dragon-Eater##10802
+		step
+			goto Blade's Edge Mountains,61.98,37.94
+			.talk Lieutenant Fairweather##22150
+			..accept Slaughter at Boulder'mok##10803
+		step
+			goto Blade's Edge Mountains,50.25,36.15
+			.talk Watcher Moonshade##22386
+			..turnin Wyrmskull Watcher##10894
+			..accept Longtail is the Lynchpin##10893
+		step
+			goto Blade's Edge Mountains,45.63,32.86
+			.kill Draaca Longtail##22396|q 10893/1
+			.info She walks up and down this path inside the tunnel.
+		step
+			goto Blade's Edge Mountains,50.25,36.15
+			.talk Watcher Moonshade##22386
+			..turnin Longtail is the Lynchpin##10893
+			..accept Meeting at the Blackwing Coven##10722
+		step
+			goto Blade's Edge Mountains,41.26,21.01
+			.from Grishna Falconwing##19988, Grishna Harbinger##19989, Grishna Scorncrow##19990
+			.info You must be within melee range of killing an enemy to receive the buff.
+			.info Anytime the buff wears off while in this area, kill Grishna enemies to get it again.
+			.' Gain the Understanding of Ravenspeech|havebuff Ability_Hunter_Pet_Dragonhawk|q 10747 |future
+		step
+			goto Blade's Edge Mountains,40.67,18.66
+			.' Receive the Third Prophecy|q 10607/3
+			.info You must have the Understanding Ravenspeech buff.
+			.info kill Grishna enemies around this area to get the buff again.
+			.info You must be within melee range of killing an enemy to receive the buff.
+		step
+			goto Blade's Edge Mountains,39.03,17.23
+			.' Receive the First Prophecy|q 10607/1
+			.info Up on the wooden platform.
+			.info You must have the Understanding Ravenspeech buff.
+			.info kill Grishna enemies around this area to get the buff again.
+			.info You must be within melee range of killing an enemy to receive the buff.
+		step
+			goto Blade's Edge Mountains,42.46,21.63
+			.' Receive the Second Prophecy|q 10607/2
+			.info Up on the wooden platform.
+			.info You must have the Understanding Ravenspeech buff.
+			.info kill Grishna enemies around this area to get the buff again.
+			.info You must be within melee range of killing an enemy to receive the buff.
+		step
+			goto Blade's Edge Mountains,40.19,23.02
+			.' Receive the Fourth Prophecy|q 10607/4
+			.info You must have the Understanding Ravenspeech buff.
+			.info kill Grishna enemies around this area to get the buff again.
+			.info You must be within melee range of killing an enemy to receive the buff.
+		step
+			goto Blade's Edge Mountains,41.26,21.01
+			.from Grishna Falconwing##19988, Grishna Harbinger##19989, Grishna Scorncrow##19990
+			.' Use Orb of the Grishna|use Orb of the Grishna##31489
+			..accept The Truth Unorbed##10825
+		step
+			goto Blade's Edge Mountains,30.54,23.14
+			.from Boulder'mok Brute##21046, Boulder'mok Shaman##21047
+			.collect 3 Grisly Totem##31754|q 10803
+		step
+			goto Blade's Edge Mountains,30.54,23.14
+			.kill 5 Boulder'mok Brute##21046|q 10803/1
+			.kill 3 Boulder'mok Shaman##21047|q 10803/2
+		step
+			goto Blade's Edge Mountains,30.59,22.19
+			.' Interact with Gorgrom's Altar
+			.' Watch the dialogue
+			.kill Gorgrom##21514 |n
+			.' Use the Grisly Totems|use Grisly Totem##31754
+			.info Use them on his corpse.
+			.' Plant 3 Grisly Totems|q 10802/1
+		step
+			goto Blade's Edge Mountains,32.92,34.59
+			.from Wyrmcult Zealot##21382, Wyrmcult Acolyte##21383, Wyrmcult Scout##21637
+			.info Inside and outside the cave.
+			.collect 5 Costume Scraps##31121|q 10722
+		step
+			.' Use the Costume Scraps|use Costume Scraps##31121
+			.collect 1 Overseer Disguise##31122|q 10722
+		step
+			goto Blade's Edge Mountains,32.92,34.59
+			.' Use the Blackwhelp Net|use Blackwhelp Net##31129
+			.info Use it on Wyrmcult Blackwhelps inside the cave.
+			.info Walk next to the brown spiked eggs inside the cave to spawn more Wyrmcult Blackwhelps.
+			.' Capture 10 Wyrmcult Blackwhelps|q 10747/1 
+		step
+			goto Blade's Edge Mountains,32.05,37.36
+			.' Use the Overseer Disguise|use Overseer Disguise##31122
+			.info Wait to use it at this location.
+			.' Wear the Overseer Disguise|havebuff inv_chest_wolf|q 10722
+		step
+			goto Blade's Edge Mountains,32.64,37.49
+			.talk Kolphis Darkscale##22019
+			.' Tell him "I'm fine, thank you. You asked for me?"
+			.' Attend the Meeting with Kolphis Darkscale|q 10722/1 
+		step
+			goto Blade's Edge Mountains,61.99,37.94
+			.talk Lieutenant Fairweather##22150
+			..turnin Slaughter at Boulder'mok##10803
+		step
+			goto Blade's Edge Mountains,61.99,37.99
+			.talk Commander Haephus Stonewall##22149
+			..turnin Gorgrom the Dragon-Eater##10802
+			..accept Baron Sablemane Has Requested Your Presence##10818
+		step
+			goto Blade's Edge Mountains,62.16,39.10
+			.talk Timeon##21782
+			..turnin Whispers of the Raven God##10607
+		step
+			goto Blade's Edge Mountains,61.94,39.45
+			.talk Samia Inkling##21983
+			..turnin Whelps of the Wyrmcult##10747
+		step
+			goto Blade's Edge Mountains,61.98,39.47
+			.talk Tree Warden Chawn##22007
+			..turnin Meeting at the Blackwing Coven##10722
+			..accept Maxnar Must Die!##10748
+			..turnin The Truth Unorbed##10825
+			..accept Treebole Must Know##10829
+		step
+			goto Blade's Edge Mountains,53.25,41.17
+			.talk Baron Sablemane##22103
+			..turnin Baron Sablemane Has Requested Your Presence##10818
+			..accept Massacre at Gruul's Lair##10805
+		step
+			goto Blade's Edge Mountains,36.65,22.88
+			.talk Treebole##22215
+			..turnin Treebole Must Know##10829
+			..accept Exorcising the Trees##10830
+		step
+			goto Blade's Edge Mountains,39.3,20.2
+			.' Collect Grishnath Orb
+			.info They look like metal hook stands with purple balls at the top of them on the ground, inside huts, and up on the wooden platforms around this area.
+			.collect 5 Grishnath Orb##31495|q 10830
+		step
+			goto Blade's Edge Mountains,35.23,24.51
+			.from Dire Raven##21042
+			.collect 5 Dire Pinfeather##31517|q 10830
+		step
+			.' Use the Grishnath Orbs|use Grishnath Orb##31495
+			.info You will need to use them 5 times.
+			.collect 5 Exorcism Feather##31518|q 10830
+		step
+			goto Blade's Edge Mountains,34.48,28.92
+			.' Use the Exorcism Feathers|use Exorcism Feather##31518
+			.info Use them on Raven's Wood Leafbeards around this area.
+			.kill Koi-Koi Spirit##22226 |n
+			.info They spawn after using the Exorcism Feathers.
+			.info Do not kill the Raven's Wood Leafbeards.
+			.' Exorcise 5 Raven's Wood Leafbeards|q 10830/1
+		step
+			goto Blade's Edge Mountains,36.65,22.88
+			.talk Treebole##22215
+			..turnin Exorcising the Trees##10830
+		step
+			goto Blade's Edge Mountains,33.90,35.33
+			.' Enter the cave|at 32.03,33.84
+			.kill Maxnar the Ashmaw##21389|q 10748/1
+			.info Inside the cave.
+		step
+			goto Blade's Edge Mountains,61.98,39.48
+			.talk Tree Warden Chawn##22007
+			..turnin Maxnar Must Die!##10748
+		step
+			goto Blade's Edge Mountains,55.42,45.25
+			.talk Chort##22995
+			..accept Mog'dorg the Wizened##10989
+		step
+			goto Blade's Edge Mountains,55.48,44.86
+			.talk Mog'dorg the Wizened##22941
+			.info At the top of the tower.
+			..turnin Mog'dorg the Wizened##10989
+			..accept Grulloc Has Two Skulls##10995
+			..accept Maggoc's Treasure Chest##10996
+			..accept Even Gronn Have Standards##10997
+		step
+			goto Blade's Edge Mountains,60.98,47.66
+			.from Grulloc##20216
+			.' Collect Grulloc's Dragon Skull
+			.info It appears after you kill Grulloc.
+			.get Grulloc's Dragon Skull##32379|q 10995/1
+		step
+			goto Blade's Edge Mountains,60.16,56.12
+			.from Maggoc##20600
+			.info He looks like a brown giant that walks along this path around this area.
+			.' Open Maggoc's Treasure Chest
+			.info It appears after you kill Maggoc.
+			.get Maggoc's Treasure Chest##32380|q 10996/1
+		step
+			goto Blade's Edge Mountains,55.48,44.86
+			.talk Mog'dorg the Wizened##22941
+			..turnin Grulloc Has Two Skulls##10995
+			..turnin Maggoc's Treasure Chest##10996
+		step
+			goto Terokkar Forest,20.44,17.64
+			.from Slaag##22199
+			.' Collect Slaag's Standard
+			.info It appears after you kill Slaag.
+			.get Slaag's Standard##32382|q 10997/1
+		step
+			goto Blade's Edge Mountains,55.48,44.86
+			.talk Mog'dorg the Wizened##22941
+			..turnin Even Gronn Have Standards##10997
+			..accept Grim(oire) Business##10998
+		step
+			goto Blade's Edge Mountains,77.52,31.20
+			.from Vim'gol the Vile##22911
+			.info Stand inside one of the circles of fire nearby on the ground to summon him.
+			.get Vim'gol's Vile Grimoire##32358|q 10998/1
+			.info It appears after you kill Vim'gol the Vile.
+		step
+			goto Blade's Edge Mountains,66.65,20.13
+			.kill Fingrom##20757|q 10805/4
+			.info Inside in building.
+		step
+			goto Blade's Edge Mountains,64.78,21.58
+			.kill 10 Bladespire Enforcer##19997|q 10805/1
+			.kill 5 Bladespire Battlemage##19996|q 10805/2
+			.kill 5 Bladespire Ravager##20729|q 10805/3
+		step
+			goto Blade's Edge Mountains,53.25,41.17
+			.talk Baron Sablemane##22103
+			..turnin Massacre at Gruul's Lair##10805
+			..accept Showdown##10806
+		step
+			goto Blade's Edge Mountains,55.48,44.86
+			.talk Mog'dorg the Wizened##22941
+			..turnin Grim(oire) Business##10998
+			..accept Into the Soulgrinder##11000
+		step
+			goto Blade's Edge Mountains,60.00,24.14
+			.' Use Vim'gol's Grimoire|use Vim'gol's Grimoire##32467
+			.info Use it while standing on the stone table.
+			.kill Sundered Spirit##22912 |n
+			.info Protect The Soulgrinder.
+			.info It appears after you use Vim'gol's Grimoire.
+			.kill Skulloc Soulgrinder##22910 |n
+			.info It takes a little while for him to spawn.
+			.collect Skulloc's Soul##32383|q 11000/1
+			.info It appears after you kill Skulloc Soulgrinder.
+		step
+			goto Blade's Edge Mountains,64.16,18.49
+			.' Use the Sablemane Signet|use Sablemane's Signet##31808
+			.' Watch the dialogue
+			.kill Goc##20555|q 10806/1
+		step
+			goto Blade's Edge Mountains,53.25,41.17
+			.talk Baron Sablemane##22103
+			..turnin Showdown##10806
+		step
+			goto Blade's Edge Mountains,55.48,44.86
+			.talk Mog'dorg the Wizened##22941
+			..turnin Into the Soulgrinder##11000
+			..accept Ogre Heaven##11009
+		step
+			goto Blade's Edge Mountains,28.8,57.4
+			.talk Chu'a'lor##23233
+			..turnin Ogre Heaven##11009
+			..accept The Crystals##11025
+		step
+			goto Blade's Edge Mountains,29.17,65.22
+			.from Apexis Flayer##22175, Shard-Hide Boar##22180
+			.info They look like groups of crystals blending in with the bigger clusters of crystals around this area.
+			.info Run your mouse cursor over the groups of crystals around this area to find them easier.
+			.get 5 Apexis Shard##32569|q 11025/1
+		step
+			goto Blade's Edge Mountains,28.75,57.37
+			.talk Chu'a'lor##23233
+			..turnin The Crystals##11025
+			..accept An Apexis Relic##11058
+		step
+			goto Blade's Edge Mountains,28.38,57.64
+			.talk Torkus##23316
+			..accept Our Boy Wants To Be A Skyguard Ranger##11030
+		step
+			goto Blade's Edge Mountains,29.2,65.2
+			.from Apexis Flayer##22175, Shard-Hide Boar##22180
+			.info They look like groups of crystals blending in with the bigger clusters of crystals around this area.
+			.info Run your mouse cursor over the groups of crystals around this area to find them easier.
+			.collect 1 Apexis Shard##32569|q 11058
+		step
+			goto Blade's Edge Mountains,27.67,68.09
+			.' Interact Apexis Relic
+			.' Choose "Insert an Apexis Shard, and begin!"
+			.' Repeat the Color Patterns Shown
+			.info Ignore the floating crystal now, focus on the crystals on the ground.
+			.info You will be shown a color sequence.
+			.info Once the sequence is done, you have to click the stones on the ground in the same order.
+			.info It's random every time, and you'll have to repeat 6 sequences.
+			.info It helps to stand directly under the floating crystal and move your camera up so you are looking down at the top of your head.
+			.' Attain the Apexis Vibrations|q 11058/1
+			.info If you fail, you will need to collect another Apexis Shard around this area and try again.
+		step
+			goto Blade's Edge Mountains,28.75,57.37
+			.talk Chu'a'lor##23233
+			..turnin An Apexis Relic##11058
+		step
+			goto Blade's Edge Mountains,29.2,65.2
+			.from Apexis Flayer##22175, Shard-Hide Boar##22180
+			.info They look like groups of crystals blending in with the bigger clusters of crystals around this area.
+			.info Run your mouse cursor over the groups of crystals around this area to find them easier.
+			.collect 10 Apexis Shard##32569|q 11030
+		step
+			goto Blade's Edge Mountains,32.81,40.55
+			.' Interact with Fel Crystalforge
+			.' Choose "Purchase 1 Unstable Flask of the Beast for the cost of 10 Apexis Shards"
+			.collect Unstable Flask of the Beast##32598|q 11030/1
+		step
+			goto Blade's Edge Mountains,28.38,57.64
+			.talk Torkus##23316
+			..turnin Our Boy Wants To Be A Skyguard Ranger##11030
+			..accept A Father's Duty##11061
+		step
+			goto Blade's Edge Mountains,28.75,57.37
+			.talk Chu'a'lor##23233
+			..accept The Skyguard Outpost##11062
+		step
+			goto Blade's Edge Mountains,27.40,52.69
+			.talk Sky Commander Keller##23334
+			..turnin The Skyguard Outpost##11062
+		step
+			goto Blade's Edge Mountains,27.57,52.90
+			.talk Sky Sergeant Vanderlip##23120
+			..accept Bombing Run##11010
+			only !Druid
+		step
+			goto Blade's Edge Mountains,27.57,52.90
+			.talk Sky Sergeant Vanderlip##23120
+			..accept Bombing Run##11102
+			only Druid
+		step
+			goto Blade's Edge Mountains,34.80,41.26
+			.' Use the Skyguard Bombs|use Skyguard Bombs##32456
+			.info You can use them while flying.
+			.info Use them on Fel Cannonballs Stacks.
+			.info They look like piles of gray stones on the ground next to Legion Flak Cannons around this area.
+			.' Destroy 15 Fel Cannonball Stacks|q 11010/1
+			only !Druid
+		step
+			goto Blade's Edge Mountains,34.80,41.26
+			.' Use the Skyguard Bombs|use Skyguard Bombs##32456
+			.info You can use them while flying.
+			.info Use them on Fel Cannonballs Stacks.
+			.info They look like piles of gray stones on the ground next to Legion Flak Cannons around this area.
+			.' Destroy 15 Fel Cannonball Stacks|q 11102/1
+			only Druid
+		step
+			goto Blade's Edge Mountains,27.57,52.90
+			.talk Sky Sergeant Vanderlip##23120
+			..turnin Bombing Run##11010
+			only !Druid
+		step
+			goto Blade's Edge Mountains,27.57,52.90
+			.talk Sky Sergeant Vanderlip##23120
+			..turnin Bombing Run##11102
+			only Druid
+		step
+			goto Blade's Edge Mountains,27.57,52.90
+			.talk Sky Sergeant Vanderlip##23120
+			..accept Bomb Them Again!##11023
+		step
+			goto Blade's Edge Mountains,27.40,52.69
+			.talk Sky Commander Keller##23334
+			..accept Assault on Bash'ir Landing!##11119
+		step
+			goto Blade's Edge Mountains,27.90,52.17
+			.talk Aether-tech Apprentice##23473
+			..turnin Assault on Bash'ir Landing!##11119
+		step
+			goto Blade's Edge Mountains,27.95,51.46
+			.talk Skyguard Khatie##23335
+			..accept Wrangle Some Aether Rays!##11065
+		step
+			goto Blade's Edge Mountains,34.80,41.26
+			.' Use the Skyguard Bombs|use Skyguard Bombs##32456
+			.info You can use them while flying.
+			.info Use them on Fel Cannonballs Stacks.
+			.info They look like piles of gray stones on the ground next to Legion Flak Cannons around this area.
+			.' Destroy 15 Fel Cannonball Stacks|q 11023/1
+			only !Quest.GetQuestCompleted(11091)
+		step
+			goto Blade's Edge Mountains,27.57,52.90
+			.talk Sky Sergeant Vanderlip##23120
+			..turnin Bomb Them Again!##11023
+			only !Quest.GetQuestCompleted(11091)
+		step
+			goto Blade's Edge Mountains,29.12,67.87
+			.' Use the Wrangling Rope|use Wrangling Rope##32698
+			.info Use it on Aether Rays around this area.
+			.' Wrangle 5 Aether Rays|q 11065/1
+		step
+			goto Blade's Edge Mountains,28.75,57.37
+			.talk Chu'a'lor##23233
+			..accept Guardian of the Monument##11059
+		step
+			goto Blade's Edge Mountains,27.95,51.46
+			.talk Skyguard Khatie##23335
+			..turnin Wrangle Some Aether Rays!##11065
+		step
+			goto Blade's Edge Mountains,27.95,51.46
+			.talk Skyguard Khatie##23335
+			..accept Wrangle More Aether Rays!##11066
+			only !Quest.GetQuestCompleted(11091)
+		step
+			goto Blade's Edge Mountains,29.12,67.87
+			.' Use the Wrangling Rope|use Wrangling Rope##32698
+			.info Use it on Aether Rays around this area.
+			.' Wrangle 5 Aether Rays|q 11066/1
+			only !Quest.GetQuestCompleted(11091)
+		step
+			goto Blade's Edge Mountains,27.95,51.46
+			.talk Skyguard Khatie##23335
+			..turnin Wrangle More Aether Rays!##11066
+			only !Quest.GetQuestCompleted(11091)
+		step
+			goto Blade's Edge Mountains,27.40,52.69
+			.talk Sky Commander Keller##23334
+			..accept To Rule The Skies##11078
+		step
+			goto Blade's Edge Mountains,29.2,65.2
+			.from Apexis Flayer##22175, Shard-Hide Boar##22180
+			.' Collect Apexis Shard Formations
+			.info They look like groups of crystals blending in with the bigger clusters of crystals around this area.
+			.info Run your mouse cursor over the groups of crystals around this area to find them easier.
+			.collect 35 Apexis Shard##32569|q 11059
+		step
+			goto Blade's Edge Mountains,31.76,63.79
+			.' Interact with Apexis Monument
+			.' Choose "Insert 35 Apexis Shards, and begin!"
+			.info Don't do anything for the game, fail on purpose.
+			.info This makes the Apexis Guardian appear faster.
+			.from Apexis Guardian##22275
+			.info He appears nearby.
+			.get Apexis Guardian's Head##32697|q 11059/1 
+		step
+			goto Blade's Edge Mountains,28.75,57.37
+			.talk Chu'a'lor##23233
+			..turnin Guardian of the Monument##11059
+		step
+			goto Blade's Edge Mountains,29.2,65.2
+			.from Apexis Flayer##22175, Shard-Hide Boar##22180
+			.' Collect Apexis Shard Formations
+			.info They look like groups of crystals blending in with the bigger clusters of crystals around this area.
+			.info Run your mouse cursor over the groups of crystals around this area to find them easier.
+			.collect 35 Apexis Shard##32569|q 11078
+		step
+			goto Blade's Edge Mountains,27.18,64.80
+			.' Interact with Rivendark's Egg
+			.' Choose "Place 35 Apexis Shards near the dragon egg to crack it open."
+			.from Rivendark##23061
+			.get Dragon Teeth##32732|q 11078/1
+		step
+			goto Blade's Edge Mountains,29.2,65.2
+			.from Apexis Flayer##22175, Shard-Hide Boar##22180
+			.' Collect Apexis Shard Formations
+			.info They look like groups of crystals blending in with the bigger clusters of crystals around this area.
+			.info Run your mouse cursor over the groups of crystals around this area to find them easier.
+			.collect 10 Apexis Shard##32569|q 11061
+		step
+			goto Blade's Edge Mountains,27.40,52.69
+			.talk Sky Commander Keller##23334
+			..turnin To Rule The Skies##11078
+		step
+			goto Blade's Edge Mountains,54.42,10.80
+			.' Interact with Bash'ir Crystalforge
+			.' Choose "Purchase 1 Unstable Flask of the Sorcerer for the cost of 10 Apexis Shards"
+			.collect Unstable Flask of the Sorcerer##32601|q 11061/1
+		step
+			goto Blade's Edge Mountains,28.38,57.64
+			.talk Torkus##23316
+			..turnin A Father's Duty##11061
+		step
+			goto Blade's Edge Mountains,28.48,58.07
+			.talk Gahk##23300
+			..accept A Fel Whip For Gahk##11079 
+		step
+			goto Blade's Edge Mountains,29.2,65.2
+			.from Apexis Flayer##22175, Shard-Hide Boar##22180
+			.' Collect Apexis Shard Formations
+			.info They look like groups of crystals blending in with the bigger clusters of crystals around this area.
+			.info Run your mouse cursor over the groups of crystals around this area to find them easier.
+			.collect 35 Apexis Shard##32569|q 11079
+		step
+			goto Blade's Edge Mountains,33.87,44.21
+			.' Click Fel Crystal Prism
+			.' Choose "Place 35 Apexis Shards into the prism."
+			.' kill the enemy that spawns
+			.info The enemy that spawns is random between 4 different demons.
+			.collect Fel Whip##32733|q 11079/1 
+		step
+			goto Blade's Edge Mountains,28.48,58.07
+			.talk Gahk##23300
+			..turnin A Fel Whip For Gahk##11079
+		step
+			goto Blade's Edge Mountains,28.75,57.37
+			.talk Chu'a'lor##23233
+			..accept A Special Thank You##11091
+		step
+			goto Blade's Edge Mountains,27.97,58.84
+			.talk Jho'nass##23428
+			..turnin A Special Thank You##11091
+]])
+
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Netherstorm",[[
 author danaton
 description This guide contain quest-chain (120 quests) for Netherstorm location.
@@ -5000,10 +4474,10 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Recharging the Batteries##10190
 		step
 			goto Netherstorm,26.5,51.9
-			.from Weaken Phase Hunters##18879+
+			.from Weaken Phase Hunters##18879
 			.' You will see a message in your chat window saying 'Phase Hunter is very weak'
-			.' Use your Battery Recharging Blaster |use Battery Recharging Blaster##28369
-			.' Battery Charge Level (10) |q 10190/1
+			.' Use your Battery Recharging Blaster|use Battery Recharging Blaster##28369
+			.' Battery Charge Level|q 10190/1
 		step
 			goto Netherstorm,31.5,56.6
 			.talk Bot-Specialist Alley##19578
@@ -5029,10 +4503,6 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Distraction at Manaforge B'naar##10241
 			only if rep ('The Aldor') >= Neutral
 		step
-			goto Netherstorm,32.0,64.4
-			.talk Innkeeper Remi Dodoso##19571
-			home Area 52
-		step
 			goto Netherstorm,32.4,64.2
 			.talk Nether-Stalker Khay'ji##19880
 			..turnin Assisting the Consortium##10263
@@ -5049,15 +4519,15 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 		step
 			goto Netherstorm,33.1,60
 			.from Shaleskin Flayer##20210
-			.' You can find more Flayers at [29.5,63.4]
-			.get 5 Shaleskin Shale |q 10342/1
+			.' You can find more Flayers|at 29.5,63.4
+			.get 5 Shaleskin Shale|q 10342/1
 		step
 			goto Netherstorm,31.5,56.6
 			.talk Maxx A. Million Mk. V##19589
 			..accept Mark V is Alive!##10191
-			.' Escort Maxx A. Million Mk. V to safety through the ruins |q 10191/1
-			.' Click the red glowing crystals on the ground while escorting Maxx A. Million Mk. V
-			.get 10 Etherlithium Matrix Crystal |q 10186/1
+			.' Escort Maxx A. Million Mk. V to safety through the ruins|q 10191/1
+			.info Click the red glowing crystals on the ground while escorting Maxx A. Million Mk. V
+			.get 10 Etherlithium Matrix Crystal|q 10186/1
 		step
 			goto Netherstorm,31.5,56.6
 			.talk Bot-Specialist Alley##19578
@@ -5081,7 +4551,7 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 		step
 			goto Netherstorm,34.8,59.1
 			.from Mana Wraith##18864+
-			.get 7 Mana Wraith Essence |q 10224/1
+			.get 7 Mana Wraith Essence|q 10224/1
 		step
 			goto Netherstorm,32.4,66.8
 			.talk Chief Engineer Trep##19709
@@ -5089,45 +4559,46 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Elemental Power Extraction##10226
 		step
 			goto Netherstorm,27.8,65
-			.from Captain Arathyn##19635 |tip He walks around this area on a big purple bird.
-			.get B'naar Personnel Roster |q 10189/1
+			.from Captain Arathyn##19635
+			.info He walks around this area on a big purple bird.
+			.get B'naar Personnel Roster|q 10189/1
 			only if rep ('The Scryers') >= Neutral
 		step
 			goto Netherstorm,26.3,66.7
-			.kill 8 Sunfury Magister##18855+ |q 10241/1
-			.kill 8 Sunfury Bloodwarder##18853+ |q 10241/2
+			.kill 8 Sunfury Magister##18855|q 10241/1
+			.kill 8 Sunfury Bloodwarder##18853|q 10241/2
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,35.4,76.5
 			.' Use the Elemental Power Extractor on Sundered Rumblers and Warp Aberrations |use Elemental Power Extractor##28547
-			.from Sundered Rumbler##18881+, Warp Aberration##18865+
-			.get 5 Elemental Power |q 10226/1
+			.from Sundered Rumbler##18881, Warp Aberration##18865
+			.get 5 Elemental Power|q 10226/1
 		step
 			goto Netherstorm,40.3,72.9
-			.' Retrieve the Multi-Spectrum Terrain Analyzer |q 10203/3
+			.' Retrieve the Multi-Spectrum Terrain Analyzer|q 10203/3
 		step
 			goto Netherstorm,41,73.8
-			.' Retrieve the Hyper Rotational Dig-A-Matic |q 10203/1
+			.' Retrieve the Hyper Rotational Dig-A-Matic|q 10203/1
 		step
 			goto Netherstorm,42.4,72.8
 			.from Pentatharon##20215
-			.get Arklon Crystal Artifact |q 10265/1
+			.get Arklon Crystal Artifact|q 10265/1
 		step
 			goto Netherstorm,42.5,72.2
-			.' Retrieve the Big Wagon Full of Explosives |q 10203/4
+			.' Retrieve the Big Wagon Full of Explosives|q 10203/4
 		step
 			goto Netherstorm,41.4,71.8
-			.' Retrieve the Servo-Pneumatic Dredging Claw |q 10203/2
+			.' Retrieve the Servo-Pneumatic Dredging Claw|q 10203/2
 		step
 			goto Netherstorm,40.9,72.5
-			.' Stand next to the broken, smoking altar on the small hill
-			.' Use your Conjuring Powder to summon Ekkorash |use Conjuring Powder##29207
+			.info Stand next to the broken, smoking altar on the small hill
+			.' Use your Conjuring Powder to summon Ekkorash|use Conjuring Powder##29207
 			.from Ekkorash the Inquisitor##19493
-			.get Archmage Vargoth's Staff |q 10173/1
+			.get Archmage Vargoth's Staff|q 10173/1
 		step
 			goto Netherstorm,44.6,72.1
-			.from Nether Ray##18880+
-			.get 5 Nether Ray Stinger |q 10199/1
+			.from Nether Ray##18880
+			.get 5 Nether Ray Stinger|q 10199/1
 		step
 			goto Netherstorm,34.2,68.1
 			.talk Lead Sapper Blastfizzle##19634
@@ -5173,15 +4644,14 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,33.5,53
-			.kill Disembodied Ghost |n
-			.get 4 Flawless Crystal Shard |q 10300/1
 			.from Disembodied Vindicator##18872, Disembodied Protector##18873, Disembodied Exarch##21058
+			.get 4 Flawless Crystal Shard|q 10300/1
 		step
 			goto Netherstorm,35,59.6
-			.' Dr. Boom sends out little walking bombs that blow up |tip When you see a clear passage to Dr. Boom, click the Boom's Doom in your bags, then run close enough to Dr. Boom so you can put the green circle under him, then click to throw the bomb.
-			.' If you have a flying mount you can attack Dr. Boom from atop a barrel here [34.7,59.5]
-			.' Click Boom's Doom in your bags |use Boom's Doom##29429
-			.kill Dr. Boom##20284 |q 10221/1
+			.info Dr. Boom sends out little walking bombs that blow up |tip When you see a clear passage to Dr. Boom, click the Boom's Doom in your bags, then run close enough to Dr. Boom so you can put the green circle under him, then click to throw the bomb.
+			.' If you have a flying mount you can attack Dr. Boom from atop a barrel here|at 34.7,59.5
+			.' Click Boom's Doom in your bags|use Boom's Doom##29429
+			.kill Dr. Boom##20284|q 10221/1
 		step
 			goto Netherstorm,31.4,66.2
 			.talk Ravandwyr##19217
@@ -5195,50 +4665,50 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			goto Netherstorm,26.3,66.7
 			.from Sunfury Magister##18855+
 			.collect Bloodgem Shard |n
-			.' Use the Bloodgem Shard next to a floating crystal |use Bloodgem Shard##28452
-			.' Siphon the Bloodgem Crystal |q 10204/1
-			.kill 8 Sunfury Geologist##19779+ |q 10193/3
+			.' Use the Bloodgem Shard next to a floating crystal|use Bloodgem Shard##28452
+			.' Siphon the Bloodgem Crystal|q 10204/1
+			.kill 8 Sunfury Geologist##19779|q 10193/3
 			only if rep ('The Scryers') >= Neutral
 		step
 			goto Netherstorm,23.2,68.1
-			.kill 2 Sunfury Warp-Master##18857+ |q 10193/1
-			.kill 6 Sunfury Warp-Engineer##18852+ |q 10193/2
+			.kill 2 Sunfury Warp-Master##18857|q 10193/1
+			.kill 6 Sunfury Warp-Engineer##18852|q 10193/2
 			only if rep ('The Scryers') >= Neutral
 		step
 			goto Netherstorm,25.7,60.6
-			.' Stand next to the Northern Pipeline
-			.' Use your Warp-Attuned Orb |use Warp-Attuned Orb##29324
-			.' Measure the Northern Pipeline |q 10313/1
+			.info Stand next to the Northern Pipeline.
+			.' Use your Warp-Attuned Orb|use Warp-Attuned Orb##29324
+			.' Measure the Northern Pipeline|q 10313/1
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,20.9,66.9
-			.' Stand next to the Western Pipeline
-			.' Use your Warp-Attuned Orb |use Warp-Attuned Orb##29324
-			.' Measure the Western Pipeline |q 10313/4
+			.info Stand next to the Western Pipeline.
+			.' Use your Warp-Attuned Orb|use Warp-Attuned Orb##29324
+			.' Measure the Western Pipeline|q 10313/4
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,20.7,70.7
-			.' Stand next to the Southern Pipeline
-			.' Use your Warp-Attuned Orb |use Warp-Attuned Orb##29324
-			.' Measure the Southern Pipeline |q 10313/3
+			.info Stand next to the Southern Pipeline.
+			.' Use your Warp-Attuned Orb|use Warp-Attuned Orb##29324
+			.' Measure the Southern Pipeline|q 10313/3
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,23.2,68.2
-			.' Click the B'naar Control Console |tip Inside the doorway northeast of the Southern Pipeline, to the left.
+			.' Interact with B'naar Control Console |tip Inside the doorway northeast of the Southern Pipeline, to the left.
 			..turnin Naaru Technology##10243
 			..accept B'naar Console Transcription##10245
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,29,72.7
-			.' Stand next to the Eastern Pipeline
-			.' Use your Warp-Attuned Orb |use Warp-Attuned Orb##29324
-			.' Measure the Eastern Pipeline |q 10313/2
+			.info Stand next to the Eastern Pipeline.
+			.' Use your Warp-Attuned Orb|use Warp-Attuned Orb##29324
+			.' Measure the Eastern Pipeline|q 10313/2
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,30.2,75.5
-			.from Zaxxis Raider##18875+, Zaxxis Stalker##19642+
-			.get 10 Zaxxis Insignia |q 10262/1
-			.get 10 Ethereal Technology |q 10206/1
+			.from Zaxxis Raider##18875, Zaxxis Stalker##19642
+			.get 10 Zaxxis Insignia|q 10262/1
+			.get 10 Ethereal Technology|q 10206/1
 		step
 			goto Netherstorm,33,64.7
 			.talk Papa Wheeler##19645
@@ -5267,32 +4737,31 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 		step
 			goto Netherstorm,23.9,70.7
 			.from Overseer Theredis##20416
-			.get B'naar Access Crystal |q 10329/2
+			.get B'naar Access Crystal|q 10329/2
 			only if rep ('The Scryers') >= Neutral
 		step
 			goto Netherstorm,23.2,68.1
 			.' Click B'naar Control Console
 			.' Click "<Begin emergency shutdown>"
 			.' Kill the technicians as they come to try to save the Manaforge
-			..'Only takes 2 minutes
-			.' Shut Down Manaforge B'naar |q 10329/1
+			.'Only takes 2 minutes
+			.' Shut Down Manaforge B'naar|q 10329/1
 			only if rep ('The Scryers') >= Neutral
 		step
-			'Go inside Manaforge B'naar to 23.3,68.6 |goto 23.9,70.7
+			goto Netherstorm,23.3,68.6
+			.' Go inside Manaforge B'naar|at 23.9,70.7
 			.from Overseer Theredis##20416
 			.get B'naar Access Crystal |q 10299/2
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,23.2,68.1
-			.' Kill all Warp-Engineers in the nearest area to make your life easier.
-			.' Click B'naar Control Console
-			.' Click "<Begin emergency shutdown>"
-			.' Kill the technicians as they come to try to save the Manaforge
-			..'Only takes 2 minutes
-			.' Shut Down Manaforge B'naar |q 10299/1
+			.info Kill all Warp-Engineers in the nearest area to make your life easier.
+			.' Interact with B'naar Control Console
+			.' Choose "<Begin emergency shutdown>"
+			.info Kill the technicians as they come to try to save the Manaforge
+			.info Only takes 2 minutes.
+			.' Shut Down Manaforge B'naar|q 10299/1
 			only if rep ('The Aldor') >= Neutral
-		step
-			'Hearth to Area 52 |goto Netherstorm,32.3,65.5,3 |use Hearthstone##6948 |noway |c
 		step
 			goto Netherstorm,32.1,64.2
 			.talk Anchorite Karja##19467
@@ -5309,7 +4778,7 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			only if rep ('The Scryers') >= Neutral
 		step
 			goto Netherstorm,28.2,79.4
-			.kill Warp-Raider Nesaad##19641 |q 10205/1
+			.kill Warp-Raider Nesaad##19641|q 10205/1
 		step
 			goto Netherstorm,32.4,64.2
 			.talk Nether-Stalker Khay'ji##19880
@@ -5320,8 +4789,8 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			.talk Veronia##20162
 			..turnin Stealth Flight##10194
 			..accept Behind Enemy Lines##10652
-			..' Tell her you're as ready as you'll ever be.
-			..'You will fly to Manaforge Coruu |goto 48.0,86.0,2 |noway |c |q 10652
+			.' Tell her you're as ready as you'll ever be.
+			.' You will fly to Manaforge Coruu |goto 48.0,86.0,2 |noway |c |q 10652
 			only if rep ('The Scryers') >= Neutral
 		step
 			goto Netherstorm,48.2,86.6
@@ -5331,18 +4800,20 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			only if rep ('The Scryers') >= Neutral
 		step
 			goto Netherstorm,47.7,84.9
-			.kill Sunfury Arcanist##20134+ |n
-			.get Sunfury Arcanist Robes |q 10197/3
+			.kill Sunfury Arcanist##20134 |n
+			.get Sunfury Arcanist Robes|q 10197/3
 			only if rep ('The Scryers') >= Neutral
 		step
-			'Go inside Manaforge Coruu to 49,81.5 |goto 49,81.5
-			.kill Sunfury Researcher##20136+ |n
-			.get Sunfury Researcher Gloves |q 10197/1
+			goto Netherstorm,49,81.5
+			.' Go inside Manaforge Coruu|at 49,81.5
+			.from Sunfury Researcher##20136
+			.get Sunfury Researcher Gloves|q 10197/1
 			only if rep ('The Scryers') >= Neutral
 		step
-			'Go outside to 50.8,83.2 |goto 50.8,83.2
+			goto Netherstorm,50.8,83.2
+			.' Go outside to|at 50.8,83.2
 			.from Sunfury Guardsmen##18850
-			.get Sunfury Guardsman Medallion |q 10197/2
+			.get Sunfury Guardsman Medallion|q 10197/2
 			only if rep ('The Scryers') >= Neutral
 		step
 			goto Netherstorm,48.2,86.6
@@ -5351,32 +4822,36 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Information Gathering##10198
 			only if rep ('The Scryers') >= Neutral
 		step
-			'Use the Sunfury Disguise in your bags |havebuff Sunfury Disguise |use Sunfury Disguise##28607
+			'Use the Sunfury Disguise in your bags|havebuff Sunfury Disguise|use Sunfury Disguise##28607
 			only if rep ('The Scryers') >= Neutral
 		step
-			'Go inside Manaforge Coruu to 48.2,84.1 |goto 48.2,84.1
-			.' Be careful to avoid the Arcane Annihilator, he can see through the disguise and will attack you. |modelnpc Arcane Annihilator##18856
+			goto Netherstorm,48.2,84.1
+			.'Go inside Manaforge Coruu|at 48.2,84.1
+			.' Be careful to avoid the Arcane Annihilator, he can see through the disguise and will attack you.
 			.' Stand between the 2 blood elves at the back of the room with a bunch blood elves lined up in it
 			.' Listen to them talk
-			.' Gather the Information |q 10198/1
+			.' Gather the Information|q 10198/1
 			only if rep ('The Scryers') >= Neutral
 		step
-			'Go outside to 48.2,86.6 |goto 48.2,86.6
+			goto Netherstorm,48.2,86.6
+			.'Go outside|at 48.2,86.6
 			.talk Caledis Brightdawn##19840
 			..turnin Information Gathering##10198
 			..accept Shutting Down Manaforge Coruu##10330
 			only if rep ('The Scryers') >= Neutral
 		step
-			'Go inside Manaforge Coruu to 49,81.5 |goto 49,81.5
+			goto Netherstorm,49,81.5
+			.'Go inside Manaforge Coruu|at 49,81.5
 			.from Overseer Seylanna##20397
-			.get Coruu Access Crystal |q 10330/2
+			.collect 1 Coruu Access Crystal##29396|q 10330/2
 			.' Click Coruu Control Console
 			.' Click "<Begin emergency shutdown>"
 			.' Kill the technicians as they come to try to save the Manaforge
 			.' Shut Down Manaforge Coruu |q 10330/1
 			only if rep ('The Scryers') >= Neutral
 		step
-			'Go outside to 48.2,86.6 |goto 48.2,86.6
+			goto Netherstorm,48.2,86.6
+			'Go outside|at 48.2,86.6
 			.talk Caledis Brightdawn##19840
 			..turnin Shutting Down Manaforge Coruu##10330
 			..accept Return to Thalodien##10200
@@ -5386,15 +4861,16 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			.kill 8 Sunfury Arcanist##20134 |q 10246/2
 			only if rep ('The Aldor') >= Neutral
 		step
-			'Go inside Manaforge Coruu to 49,81.5 |goto 49,81.5
-			.kill 5 Sunfury Researcher##20136+ |q 10246/1
-			.' Kill Overseer Seylanna
-			.' Collect Coruu Access Crystal |q 10321 |sticky
-			.' Click Coruu Control Console
-			..' Click "<Begin emergency shutdown>"
+			goto Netherstorm,49,81.5
+			.' Go inside Manaforge Coruu|at 49,81.5
+			.kill 5 Sunfury Researcher##20136|q 10246/1
+			.from Overseer Seylanna##20397
+			.collect 1 Coruu Access Crystal##29396|q 10321 |sticky
+			.' Interact wit Coruu Control Console
+			.' Choose "<Begin emergency shutdown>"
 			.' Kill the technicians as they come to try to save the Manaforge
-			..'Only takes 2 minutes
-			.' Shut Down Manaforge Coruu |goal Manaforge Coruu Shut Down |q 10321/1
+			.info Only takes 2 minutes
+			.' Shut Down Manaforge Coruu|goal Manaforge Coruu Shut Down|q 10321/1
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,57.7,85.2
@@ -5421,43 +4897,48 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			.talk Bessy##20415
 			..turnin Needs More Cowbell##10334
 			..accept When the Cows Come Home##10337
-			.' Escort Bessy to Thadell |q 10337/1 |tip When escorting Bessy, let her get hit first, or else she won't help you fight.
+			.' Escort Bessy to Thadell|at 57.7,84.9|q 10337/1
+			.info When escorting Bessy, let her get hit first, or else she won't help you fight.
 		step
 			goto Netherstorm,57.7,85.2
 			.talk Thadell##20464
 			..turnin When the Cows Come Home##10337
 		step
 			goto Netherstorm,58.4,88.3
-			.from Abjurist Belmara##19546 |tip She walks around this area, some searching may be necessary.
-			.' Collect Belmara's Tome |n
-			.' Click Belmara's Tome in your bags |use Belmara's Tome##29234
+			.from Abjurist Belmara##19546
+			.info She walks around this area, some searching may be necessary.
+			.collect 1 Belmara's Tome##29234|sticky
+			.' Click Belmara's Tome in your bags|use Belmara's Tome##29234
 			..accept Abjurist Belmara##10305
 		step
 			goto Netherstorm,59.6,87.7
-			.from Cohlien Frostweaver##19545 |tip He walks around this area, some searching may be necessary.
-			.' Collect Cohlien's Cap |n
-			.' Click Cohlien's Cap in your bags |use Cohlien's Cap##29236
+			.from Cohlien Frostweaver##19545 
+			.info He walks around this area, some searching may be necessary.
+			.collect 1 Cohlien's Cap##29236|sticky
+			.' Click Cohlien's Cap in your bags|use Cohlien's Cap##29236
 			..accept Cohlien Frostweaver##10307
 		step
 			goto Netherstorm,60.4,88
-			.from Battle-Mage Dathric##19543 |tip He is inside the building that looks like a town hall
-			.' Collect Dathric's Blade |n
-			.' Click Dathric's Blade |use Dathric's Blade##29233
+			.from Battle-Mage Dathric##19543
+			.info He is inside the building that looks like a town hall
+			.collect 1 Dathric's Blade##29233|sticky
+			.' Click Dathric's Blade|use Dathric's Blade##29233
 			..accept Battle-Mage Dathric##10182
 		step
 			goto Netherstorm,59.9,85.6
-			.from Conjurer Luminrath##19544 |tip He walks around this area, some searching may be necessary.
-			.' Collect Luminrath's Mantle |n
-			.' Click Luminrath's Mantle in your bags |use Luminrath's Mantle##29235
+			.from Conjurer Luminrath##19544
+			.info He walks around this area, some searching may be necessary.
+			.collect 1 Luminrath's Mantle##29235|sticky
+			.' Click Luminrath's Mantle in your bags|use Luminrath's Mantle##29235
 			..accept Conjurer Luminrath##10306
 		step
 			goto Netherstorm,61,85
-			.from Kirin'Var Apprentice##20409+
-			.get Smithing Hammer |q 10331/1
+			.from Kirin'Var Apprentice##20409
+			.get Smithing Hammer|q 10331/1
 		step
 			goto Netherstorm,59.5,88.3
-			.from Severed Spirit##19881+, Severed Defender##20934+
-			.' Kill 20 Severed Spirits |q 10184/1
+			.from Severed Spirit##19881, Severed Defender##20934
+			.' Kill 20 Severed Spirits|q 10184/1
 		step
 			goto Netherstorm,57.7,85.2
 			.talk Apprentice Andrethan##20463
@@ -5476,33 +4957,33 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			.talk Apprentice Andrethan##20463
 			..turnin Master Smith Rhonsus##10332
 		step
-			goto Netherstorm,56.9,86.8
-			.' Go inside the little house
-			.' Click Dathric's Blade when standing next to the Weapon Rack |use Dathric's Blade##28351
-			.' Put Dathric's Spirit to Rest |q 10182/1
+			goto Netherstorm,56.7,86.57
+			.info Go inside the little house.
+			.' Click Dathric's Blade when standing next to the Weapon Rack|use Dathric's Blade##28351
+			.' Put Dathric's Spirit to Rest|q 10182/1
 		step
 			goto Netherstorm,56.4,87.8
-			.' Go inside the little house
-			.' Click Luminrath's Mantle when standing next to the Dresser |use Luminrath's Mantle##28352
-			.' Put Luminrath's Spirit to Rest |q 10306/1
+			.info  Go inside the little house.
+			.' Click Luminrath's Mantle when standing next to the Dresser|use Luminrath's Mantle##28352
+			.' Put Luminrath's Spirit to Rest|q 10306/1
 		step
 			goto Netherstorm,55.7,87.2
 			.' Click Mana Bomb Fragment
-			.get Mana Bomb Fragment |q 10343/1
+			.get Mana Bomb Fragment|q 10343/1
 		step
 			goto Netherstorm,55.1,87.5
-			.' Click Cohlien's Cap when standing next to the Foot Locker |use Cohlien's Cap##28353
-			.' Put Cohlien's Spirit to Rest |q 10307/1
+			.' Click Cohlien's Cap when standing next to the Foot Locker|use Cohlien's Cap##28353
+			.' Put Cohlien's Spirit to Rest|q 10307/1
 		step
 			goto Netherstorm,55.5,86.5
-			.' Go inside the house with a huge log laying diagonally into it
-			.' Click Belmara's Tome when standing next to the Bookshelf |use Belmara's Tome##28336
-			.' Put Belmara's Spirit to Rest |q 10305/1
+			.info Go inside the house with a huge log laying diagonally into it
+			.' Click Belmara's Tome when standing next to the Bookshelf|use Belmara's Tome##28336
+			.' Put Belmara's Spirit to Rest|q 10305/1
 		step
 			goto Netherstorm,55.7,87.1
-			.from Mageslayer##18866++, Mana Seeker##18867++
-			.kill 10 Mana Seekers##18867+ |q 10185/1
-			.kill 10 Mageslayers##18866+ |q 10185/2
+			.from Mageslayer##18866, Mana Seeker##18867
+			.kill 10 Mana Seekers##18867|q 10185/1
+			.kill 10 Mageslayers##18866|q 10185/2
 		step
 			goto Netherstorm,57.5,86.3
 			.talk Custodian Dieworth##19488
@@ -5516,8 +4997,9 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Potential Energy Source##10239
 		step
 			goto Netherstorm,60.4,88
-			.from Battle-Mage Dathric##19543 |tip He is inside the building that looks like a town hall
-			.get Annals of Kirin'Var |q 10312/1
+			.from Battle-Mage Dathric##19543
+			.info He is inside the building that looks like a town hall
+			.get Annals of Kirin'Var|q 10312/1
 		step
 			goto Netherstorm,57.5,86.3
 			.talk Custodian Dieworth##19488
@@ -5525,14 +5007,14 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Searching for Evidence##10316
 		step
 			goto Netherstorm,60.3,78
-			.' Go inside the barn
+			.' Go inside the barn.
 			.' Click Necromantic Focus
 			..turnin Searching for Evidence##10316
 			..accept A Lingering Suspicion##10314
 		step
 			goto Netherstorm,59.8,79.5
-			.from Kirin'Var Spectre##21065+, Kirin'Var Ghost##20512+
-			.get 10 Loathsome Remnant |q 10314/1
+			.from Kirin'Var Spectre##21065, Kirin'Var Ghost##20512
+			.get 10 Loathsome Remnant|q 10314/1
 		step
 			goto Netherstorm,57.5,86.3
 			.talk Custodian Dieworth##19488
@@ -5541,20 +5023,21 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 		step
 			goto Netherstorm,59.9,80.4
 			.' Click Suspicious Outhouse
-			.get Naberius's Phylactery |q 10319/1
+			.get Naberius's Phylactery|q 10319/1
 		step
 			goto Netherstorm,57.5,86.3
 			.talk Custodian Dieworth##19488
 			..turnin Capturing the Phylactery##10319
 		step
 			goto Netherstorm,51.1,82.5
-			.' Click Energy Isolation Cube
-			.get 10 Energy Isolation Cube |q 10239/1
-			.from Spellbinder Maryana##19593 |tip She wanders around outside in this area, so some searching may be necessary.
-			.get Sigil of Krasus |q 10188/1
+			.' Click Energy Isolation Cube.
+			.get 10 Energy Isolation Cube|q 10239/1
+			.from Spellbinder Maryana##19593
+			.info She wanders around outside in this area, so some searching may be necessary.
+			.get Sigil of Krasus|q 10188/1
 		step
 			goto Netherstorm,51.1,80.7
-			.' Use Archmage Vargoth's Staff |use Archmage Vargoth's Staff##28455
+			.' Use Archmage Vargoth's Staff|use Archmage Vargoth's Staff##28455
 			.talk Image of Archmage Vargoth##19644
 			..turnin The Sigil of Krasus##10188
 			..accept Krasus's Compendium##10192
@@ -5565,17 +5048,17 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 		step
 			goto Netherstorm,57.6,89.6
 			.' Click Krasus' Compendium - Chapter 2
-			.get Krasus's Compendium - Chapter 2 |q 10192/2
+			.get Krasus's Compendium - Chapter 2|q 10192/2
 		step
 			goto Netherstorm,58.6,89.2
 			.' Click Krasus' Compendium - Chapter 1
-			.get Krasus's Compendium - Chapter 1 |q 10192/1
+			.get Krasus's Compendium - Chapter 1|q 10192/1
 		step
 			goto Netherstorm,58.8,87.9
 			.' Click Krasus' Compendium - Chapter 3
-			.get Krasus's Compendium - Chapter 3 |q 10192/3
+			.get Krasus's Compendium - Chapter 3|q 10192/3
 		step
-			.' Use Archmage Vargoth's Staff |use Archmage Vargoth's Staff##28455
+			.' Use Archmage Vargoth's Staff|use Archmage Vargoth's Staff##28455
 			.talk Image of Archmage Vargoth##19644
 			..turnin Krasus's Compendium##10192
 			..accept Unlocking the Compendium##10301
@@ -5590,30 +5073,31 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept The Sunfury Garrison##10222
 		step
 			goto Netherstorm,59.3,85.4
-			.' Use the Rune Activation Device next to the Kirin'Var Rune |use Rune Activation Device##28725
-			.' Activate Eastern Rune |q 10240/1
+			.' Use the Rune Activation Device next to the Kirin'Var Rune|use Rune Activation Device##28725
+			.' Activate Eastern Rune|q 10240/1
 		step
 			goto Netherstorm,57.3,82.9
-			.' Use the Rune Activation Device next to the Kirin'Var Rune |use Rune Activation Device##28725
-			.' Activate Northeastern Rune |q 10240/2
+			.' Use the Rune Activation Device next to the Kirin'Var Rune|use Rune Activation Device##28725
+			.' Activate Northeastern Rune|q 10240/2
 		step
 			goto Netherstorm,54.3,86.1
-			.' Use the Rune Activation Device next to the Kirin'Var Rune |use Rune Activation Device##28725
-			.' Activate Western Rune |q 10240/3
+			.' Use the Rune Activation Device next to the Kirin'Var Rune|use Rune Activation Device##28725
+			.' Activate Western Rune|q 10240/3
 		step
 			goto Netherstorm,55.2,79.7
-			.from Sunfury Flamekeeper##20221+
-			.' Collect Flaming Torch
-			.' Use the Flaming Torch on Sunfury Ballistas and Tents |use Flaming Torch##28550
-			.' Destroy 4 Sunfury Ballistas |q 10233/1 |tip They look sort of like catapults all around this area.
-			.' Destroy 4 Sunfury Tents |q 10233/2
-			..kill 10 Sunfury Archer##19707+ |q 10222/1
+			.from Sunfury Flamekeeper##20221
+			.collect 1 Flaming Torch##28550
+			.' Use the Flaming Torch on Sunfury Ballistas and Tents|use Flaming Torch##28550
+			.' Destroy 4 Sunfury Ballistas|q 10233/1
+			.info They look sort of like catapults all around this area.
+			.' Destroy 4 Sunfury Tents|q 10233/2
+			..kill 10 Sunfury Archer##19707|q 10222/1
 		step
 			goto Netherstorm,56.6,78.2
-			.from Spellreaver Marathelle##19926+
-			..get Heliotrope Oculus |q 10301/1
+			.from Spellreaver Marathelle##19926
+			..get Heliotrope Oculus|q 10301/1
 		step
-			.'Use Archmage Vargoth's Staff |use Archmage Vargoth's Staff##28455
+			.'Use Archmage Vargoth's Staff|use Archmage Vargoth's Staff##28455
 			.talk Image of Archmage Vargoth##19644
 			..turnin Unlocking the Compendium##10301
 			..accept Summoner Kanthin's Prize##10209
@@ -5629,13 +5113,13 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..turnin Building a Perimeter##10240
 		step
 			goto Netherstorm,56.0,66.8
-			..kill Master Daellis Dawnstrike##19705 |q 10223/1
+			..kill Master Daellis Dawnstrike##19705|q 10223/1
 		step
 			goto Netherstorm,59.2,62.9
 			.from Summoner Kanthin##19657
-			.get Stone of Glacius##28479 |q 10209/1
+			.get Stone of Glacius##28479|q 10209/1
 		step
-			.'Use Archmage Vargoth's Staff |use Archmage Vargoth's Staff##28455
+			.'Use Archmage Vargoth's Staff|use Archmage Vargoth's Staff##28455
 			.talk Image of Archmage Vargoth##19644
 			..turnin Summoner Kanthin's Prize##10209
 			..accept Ar'kelos the Guardian##10176
@@ -5645,17 +5129,15 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..turnin Down With Daellis##10223
 		step
 			goto Netherstorm,58.1,86.5
-			..kill Ar'kelos##19494 |q 10176/1
+			..kill Ar'kelos##19494|q 10176/1
 		step
 			goto Netherstorm,58.3,86.4
 			.talk Archmage Vargoth##19481
 			..turnin Ar'kelos the Guardian##10176
 		step
-			.' Use Archmage Vargoth's Staff |use Archmage Vargoth's Staff##28455
+			.' Use Archmage Vargoth's Staff|use Archmage Vargoth's Staff##28455
 			.talk Image of Archmage Vargoth##19644
 			..turnin Ar'kelos the Guardian##10176
-		step
-			.' Hearth to Area 52 |goto Netherstorm,32.3,65.5,3 |use Hearthstone##6948 |noway |c
 		step
 			goto Netherstorm,32,64
 			.talk Spymaster Thalodien##19468
@@ -5703,20 +5185,20 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Keeping Up Appearances##10433
 		step
 			goto Netherstorm,48.2,55.0
-			.' Click Diagnostic Equipment
-			.get Diagnostic Results |q 10417/1
+			.' Collect Diagnostic Equipment
+			.get Diagnostic Results|q 10417/1
 		step
 			goto Netherstorm,48.2,53.9
-			.' Click Ivory Bell
-			.get 15 Ivory Bell |q 10348/1
+			.' Collect Ivory Bell
+			.get 15 Ivory Bell|q 10348/1
 			.from Ripfang Lynx##20671
-			.get 10 Ripfang Lynx Pelt |q 10433/1
+			.get 10 Ripfang Lynx Pelt|q 10433/1
 		step
 			goto Netherstorm,48.8,59.3
-			.kill 15 Gan'arg Engineer##16948+ |q 10232/2
-			.kill 5 Mo'arg Doomsmith##16944+ |q 10232/1
-			.' Click Fel Reaver Part
-			.get 10 Fel Reaver Parts |q 10234/1
+			.kill 15 Gan'arg Engineer##16948|q 10232/2
+			.kill 5 Mo'arg Doomsmith##16944|q 10232/1
+			.' Collect Fel Reaver Part
+			.get 10 Fel Reaver Parts|q 10234/1
 		step
 			goto Netherstorm,46.6,56.5
 			.talk Mama Wheeler##19728
@@ -5734,52 +5216,54 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..turnin Keeping Up Appearances##10433
 		step
 			goto Netherstorm,46.8,53.9
-			.kill 8 Barbscale Crocolisk##20773+ |q 10418/1
+			.kill 8 Barbscale Crocolisk##20773|q 10418/1
 		step
 			goto Netherstorm,50.7,57.1
 			.from Doomclaw##19738
-			..get Doomclaw's Hand |q 10235/1
+			..get Doomclaw's Hand|q 10235/1
 		step
 			goto Netherstorm,57.9,63.4
-			.kill Sunfury Conjurer##20139 |n
+			.from Sunfury Conjurer##20139
 			.get 1 Sunfury Arcane Briefing|q 10328/2
-			.kill Sunfury Bowmen and Sunfury Centurions|n
+			.from Sunfury Bowman##20207, Sunfury Centurion##20140
 			.get 1 Sunfury Military Briefing|q 10328/1
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,57.9,63.4
-			.kill 8 Sunfury Conjurer##20139+ |q 10341/1
-			.kill 6 Sunfury Bowmen##20207+ |q 10341/2
-			.kill 4 Sunfury Centurions##20140+ |q 10341/3
+			.kill 8 Sunfury Conjurer##20139|q 10341/1
+			.kill 6 Sunfury Bowmen##20207|q 10341/2
+			.kill 4 Sunfury Centurions##20140|q 10341/3
 			only if rep ('The Scryers') >= Neutral
 		step
 			goto Netherstorm,57.6,63.9
-			.' Click Box Surveying Equipment
-			.get 10 Box of Surveying Equipment |q 10267/1
+			.' Collect Box Surveying Equipment
+			.get 10 Box of Surveying Equipment|q 10267/1
 		step
-			'Go inside Manaforge Duro to [60.0,68.5] |goto 60.0,68.5
+			goto Netherstorm,60.0,68.5
+			.' Go inside Manaforge Duro|at 61.1,65.5
 			.from Overseer Athanel##20435
 			.get 1 Duro Access Crystal|q 10322/2
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,59.1,66.8
-			.' Click Duro Control Console
-			.' Click "<Begin emergency shutdown>"
+			.' Interact Duro Control Console
+			.' Choose "<Begin emergency shutdown>"
 			.' Kill the technicians as they come to try to save the Manaforge
-			..'Only takes 2 minutes
-			.' Shut Down Manaforge Duro |q 10322/1
+			.' Only takes 2 minutes
+			.' Shut Down Manaforge Duro|q 10322/1
 			only if rep ('The Aldor') >= Neutral
 		step
-			'Go inside Manaforge Duro to 60.0,68.5 |goto 60.0,68.5
+			goto Netherstorm,60.0,68.5
+			.' Go inside Manaforge Duro|at 61.1,65.5
 			.from Overseer Athanel##20435
 			.get 1 Duro Access Crystal|q 10338/2
 			only if rep ('The Scryers') >= Neutral
 		step
 			goto Netherstorm,59.1,66.8
-			.' Click Duro Control Console
-			.' Click "<Begin emergency shutdown>"
+			.' Interact Duro Control Console
+			.' Choose "<Begin emergency shutdown>"
 			.' Kill the technicians as they come to try to save the Manaforge
-			..'Only takes 2 minutes
+			.' Only takes 2 minutes
 			.' Shut Down Manaforge Duro |q 10338/1
 			only if rep ('The Scryers') >= Neutral
 		step
@@ -5801,8 +5285,6 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			.talk Gahruj##20066
 			..turnin Rightful Repossession##10267
 			..accept An Audience with the Prince##10268
-		step
-			'Hearth to Area 52 |goto Netherstorm,32.3,65.5,3 |use Hearthstone##6948 |noway |c
 		step
 			goto Netherstorm,33.0,64.7
 			.talk Papa Wheeler##19645
@@ -5860,19 +5342,19 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			.talk Nether-Stalker Oazul##20341
 			..accept Neutralizing the Nethermancers##10315
 		step
-			.' Go inside Manaforge Ara to [27.1,39.2] |goto 27.1,39.2
-			.kill 3 Mo'arg Warp-Master##20326+ |q 10380/3
+			goto Netherstorm,27.1,39.2
+			.kill 3 Mo'arg Warp-Master##20326|q 10380/3
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,30.8,40.8
-			.kill 15 Sunfury Nethermancer##20248+ |q 10315/1
+			.kill 15 Sunfury Nethermancer##20248|q 10315/1
 		step
 			goto Netherstorm,30.8,40.8
-			.kill 3 Daughter of Destiny##18860+ |q 10380/2
+			.kill 3 Daughter of Destiny##18860|q 10380/2
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,26.4,44.0
-			.' The entrance to Trelleum Mine starts here |goto 26.4,44.0,0.5 |noway |c
+			.' The entrance to Trelleum Mine starts here|goto 26.4,44.0,0.5 |noway |q 10317
 		step
 			goto Netherstorm,26.4,42.3
 			.talk Foreman Sundown##20393
@@ -5880,14 +5362,14 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Dealing with the Overmaster##10318
 		step
 			goto Netherstorm,26.8,36.0
-			..kill Overmaster Grindgarr##20803+ |q 10318/1
+			..kill Overmaster Grindgarr##20803|q 10318/1
 		step
-			goto Netherstorm,26.4,43.7 |n
-			.' Leave the Mine |goto 26.4,43.7,0.5 |noway |c
+			goto Netherstorm,26.4,43.7
+			.' Leave the Mine|goto 26.4,43.7,0.5 |noway |q 10315
 		step
 			goto Netherstorm,26.4,42.3
-			.kill 6 Gan'arg Warp-Tinker##20285+ |q 10380/1
-			.kill 6 Mo'arg Warp-Master##20326 |q 10380/3
+			.kill 6 Gan'arg Warp-Tinker##20285|q 10380/1
+			.kill 6 Mo'arg Warp-Master##20326|q 10380/3
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,34.5,37.8
@@ -5904,9 +5386,6 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Aldor No More##10381
 			only if rep ('The Aldor') >= Neutral
 		step
-			'Hearth to Area 52 |goto Netherstorm,32.3,65.5,3 |use Hearthstone##6948 |noway |c
-			only if rep ('The Aldor') >= Neutral
-		step
 			goto Netherstorm,32.1,64.2
 			.talk Exarch Orelis##19466
 			..turnin Aldor No More##10381
@@ -5919,7 +5398,7 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			goto Netherstorm,38.0,25.5
 			.talk Inactive Fel Reaver##22293
 			..turnin Nether Gas In a Fel Fire Engine##10850
-			.' Destroy Inactive Fel Reaver |n |q 10855/1
+			.' Destroy Inactive Fel Reaver|q 10855/1
 		step
 			goto Netherstorm,44.7,34.9
 			.talk Nether-Stalker Nauthis##20471
@@ -5927,31 +5406,31 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept The Best Defense##10856
 		step
 			goto Netherstorm,47.6,26.8
-			.' Use Diagnostic Device next to the generator |use Diagnostic Device##29803
-			.' Get the Diagnostic Results |q 10424/1
+			.' Use Diagnostic Device next to the generator|use Diagnostic Device##29803
+			.' Get the Diagnostic Results|q 10424/1
 		step
 			goto Netherstorm,41.9,23.6
-			..kill 12 Wrathbringer##18858+ |q 10856/1
+			..kill 12 Wrathbringer##18858|q 10856/1
 		step
 			goto Netherstorm,44.2,12.6
-			.' Click Dome Generator Segment
-			..get 10 Dome Generator Segment |q 10435/1
+			.' Collect Dome Generator Segment
+			..get 10 Dome Generator Segment|q 10435/1
 		step
 			goto Netherstorm,51.6,20.5
-			.' Use Surveying Markers next to this Draenei Banner |use Surveying Markers##29445
-			.' Place Surveying Marker One |q 10335/1
+			.' Use Surveying Markers next to this Draenei Banner|use Surveying Markers##29445
+			.' Place Surveying Marker One|q 10335/1
 		step
 			goto Netherstorm,54.5,22.8
-			.' Use Surveying Markers next to this Draenei Banner |use Surveying Markers##29445
-			.' Place Surveying Marker Two |q 10335/2
+			.' Use Surveying Markers next to this Draenei Banner|use Surveying Markers##29445
+			.' Place Surveying Marker Two|q 10335/2
 		step
 			goto Netherstorm,55.8,20.0
-			.' Use Surveying Markers next to this Draenei Banner |use Surveying Markers##29445
-			.' Place Surveying Marker Three |q 10335/3
+			.' Use Surveying Markers next to this Draenei Banner|use Surveying Markers##29445
+			.' Place Surveying Marker Three|q 10335/3
 		step
 			goto Netherstorm,51.7,20.4
-			..kill 10 Hound of Culuthas##20141+ |q 10336/1
-			..kill 5 Eye of Culuthas##20394+ |q 10336/2
+			..kill 10 Hound of Culuthas##20141|q 10336/1
+			..kill 5 Eye of Culuthas##20394|q 10336/2
 		step
 			goto Netherstorm,43.5,35.2
 			.talk Ghabar##20811
@@ -5973,19 +5452,19 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..turnin Retrieving the Goods##10435
 		step
 			goto Netherstorm,39.2,20.0
-			.' Use the Mental Interference Rod on Cyber-Rage Forgelord |use Mental Interference Rod##31678
-			.' Use the Detonate Teleporter ability next to teleporters at [39.1,20.5]
-			.' Destroy the Western Teleporter |q 10857/1
+			.' Use the Mental Interference Rod on Cyber-Rage Forgelord|use Mental Interference Rod##31678
+			.' Use the Detonate Teleporter ability next to teleporters|at 39.1,20.5
+			.' Destroy the Western Teleporter|q 10857/1
 		step
 			goto Netherstorm,41.2,19.4
-			.' Use the Mental Interference Rod on Cyber-Rage Forgelord |use Mental Interference Rod##31678
-			.' Use the Detonate Teleporter ability next to teleporters at [41.2,19.4]
-			.' Destroy the Central Teleporter |q 10857/2
+			.' Use the Mental Interference Rod on Cyber-Rage Forgelord|use Mental Interference Rod##31678
+			.' Use the Detonate Teleporter ability next to teleporters
+			.' Destroy the Central Teleporter|q 10857/2
 		step
 			goto Netherstorm,42.2,20.9
-			.' Use the Mental Interference Rod on Cyber-Rage Forgelord |use Mental Interference Rod##31678
-			.' Use the Detonate Teleporter ability next to teleporters at [42.2,20.9]
-			.' Destroy the Eastern Teleporter |q 10857/3
+			.' Use the Mental Interference Rod on Cyber-Rage Forgelord|use Mental Interference Rod##31678
+			.' Use the Detonate Teleporter ability next to teleporters
+			.' Destroy the Eastern Teleporter|q 10857/3
 		step
 			goto Netherstorm,44.7,14.6
 			.talk Tashar##20913
@@ -5993,7 +5472,7 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept All Clear!##10436
 		step
 			goto Netherstorm,45.6,11.2
-			..kill 12 Scythetooth Raptor##20634+ |q 10436/1
+			..kill 12 Scythetooth Raptor##20634|q 10436/1
 		step
 			goto Netherstorm,44.7,14.6
 			.talk Tashar##20913
@@ -6013,9 +5492,9 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Flora of the Eco-Domes##10426
 		step
 			goto Netherstorm,41.2,32.2
-			.' Use Energy Field Modulator on Farahlon Lashers |use Energy Field Modulator##29818
-			.from Mutated Farahlon Lasher##20774+
-			.' Test Energy Modulator 10 times |q 10426/1
+			.' Use Energy Field Modulator on Farahlon Lashers|use Energy Field Modulator##29818
+			.from Mutated Farahlon Lasher##20774
+			.' Test Energy Modulator 10 times|q 10426/1
 		step
 			goto Netherstorm,42.3,32.6
 			.talk Aurine Moonblaze##20871
@@ -6024,8 +5503,8 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 		step
 			goto Netherstorm,40.4,35.5
 			.from Talbuk Doe##20610+, Talbuk Sire##20777
-			.' Use the Talbuk Tagger on Talbuks when they are below 20 percent health. |use Talbuk##29817
-			.' Tag 12 Talbuk |q 10427/1
+			.' Use the Talbuk Tagger on Talbuks when they are below 20 percent health|use Talbuk##29817
+			.' Tag 12 Talbuk|q 10427/1
 		step
 			goto Netherstorm,42.3,32.6
 			.talk ##20871
@@ -6033,8 +5512,8 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept When Nature Goes Too Far##10429
 		step
 			goto Netherstorm,44.3,28.5
-			.from Markaru##20775+
-			..get Hulking Hydra Heart |q 10429/1
+			.from Markaru##20775
+			..get Hulking Hydra Heart|q 10429/1
 		step
 			goto Netherstorm,42.3,32.6
 			.talk Aurine Moonblaze##20871
@@ -6046,9 +5525,9 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Triangulation Point One##10269
 		step
 			goto Netherstorm,66.8,34.8
-			.' Use the Triangulation Device in your bags |use Triangulation Device##28962
+			.' Use the Triangulation Device in your bags|use Triangulation Device##28962
 			.' A red arrow will appear showing you where to go.
-			.' Discover the first triangulation point |q 10269/1
+			.' Discover the first triangulation point|q 10269/1
 		step
 			goto Netherstorm,58.3,31.3
 			.talk Dealer Hazzin##20092
@@ -6076,10 +5555,11 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Recipe for Destruction##10437
 		step
 			goto Netherstorm,57.1,36.5
-			..kill Captain Zovax##20727 |q 10339/4 |tip He walks around this area.
-			..kill 5 Ethereum Assassin##20452+ |q 10339/1
-			..kill 5 Ethereum Shocktrooper##20453+ |q 10339/2
-			..kill 2 Ethereum Researcher##20456+ |q 10339/3
+			..kill Captain Zovax##20727|q 10339/4
+			.info He walks around this area.
+			..kill 5 Ethereum Assassin##20452|q 10339/1
+			..kill 5 Ethereum Shocktrooper##20453|q 10339/2
+			..kill 2 Ethereum Researcher##20456|q 10339/3
 		step
 			goto Netherstorm,56.8,38.7
 			.' Click the Ethereum Transponder Zeta
@@ -6089,18 +5569,19 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 		step
 			goto Netherstorm,55.8,39.9
 			.' Click Ethereum Data Cell
-			..get Ethereum Data Cell |q 10384/1
+			..get Ethereum Data Cell|q 10384/1
 		step
 			goto Netherstorm,53.3,41.5
-			.from Warden Icoshock##20770+
-			.' Collect The Warden's Key [54.5,41.1]
-			.' Click Captain Tyralius's Prison |tip It looks like a glowing pink orb
-			.' Free Captain Tyralius |q 10422/1
+			.from Warden Icoshock##20770
+			.' Collect The Warden's Key|at 54.5,41.1
+			.' Click Captain Tyralius's Prison
+			.info It looks like a glowing pink orb
+			.' Free Captain Tyralius|q 10422/1
 		step
 			goto Netherstorm,55.2,42.8
-			.' Use Navuud's Concoction in your bags |use Navuud's Concoction##29737
+			.' Use Navuud's Concoction in your bags|use Navuud's Concoction##29737
 			.' While under the effects of the Electro-Shock Therapy buff do the following: |tip This buff lasts for 60 minutes. High levels will need to use melee since the effect only works by random chance.
-			..kill 30 Void Waste Globule##20805+ |q 10411/2
+			..kill 30 Void Waste Globule##20805|q 10411/2
 		step
 			goto Netherstorm,56.8,38.7
 			.' Click the Ethereum Transponder Zeta
@@ -6109,11 +5590,11 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Potential for Brain Damage = High##10385
 		step
 			goto Netherstorm,56.5,38.6
-			.from Ethereum Shocktrooper##20453+, Ethereum Assassin##20452+
+			.from Ethereum Shocktrooper##20453, Ethereum Assassin##20452
 			.' Collect Ethereum Essence|n
-			.' Use Ethereum Essence in your bags to see Ethereum Relays |use Ethereum Essence##29482
-			.from Ethereum Relay##20619+
-			.get 15 Ethereum Relay Data |q 10385/1
+			.' Use Ethereum Essence in your bags to see Ethereum Relays|use Ethereum Essence##29482
+			.from Ethereum Relay##20619
+			.get 15 Ethereum Relay Data|q 10385/1
 		step
 			goto Netherstorm,56.8,38.7
 			.' Click the Ethereum Transponder Zeta
@@ -6122,8 +5603,8 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept S-A-B-O-T-A-G-E##10405
 		step
 			goto Netherstorm,55.8,40.5
-			.from  Ethereum Overlord##20459+, Ethereum Archon##20458+
-			..get Prepared Ethereum Wrapping |q 10405/1
+			.from  Ethereum Overlord##20459, Ethereum Archon##20458
+			..get Prepared Ethereum Wrapping|q 10405/1
 		step
 			goto Netherstorm,56.8,38.7
 			.' Click the Ethereum Transponder Zeta
@@ -6131,8 +5612,10 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..turnin S-A-B-O-T-A-G-E##10405
 			..accept Delivering the Message##10406
 		step
-			.' Escort the Ethereum Demolitionist while he sabotages the Ethereum Conduit |tip If you have trouble with this, clear the path first before accepting the escort quest.
-			.' Sabotage Ethereum Conduit |q 10406/1
+			goto Netherstorm,56.3,42.9
+			.' Escort the Ethereum Demolitionist while he sabotages the Ethereum Conduit
+			.info If you have trouble with this, clear the path first before accepting the escort quest.
+			.' Sabotage Ethereum Conduit|q 10406/1
 		step
 			goto Netherstorm,56.8,38.7
 			.' Click the Ethereum Transponder Zeta
@@ -6140,12 +5623,13 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..turnin Delivering the Message##10406
 		step
 			goto Netherstorm,57.1,37.6
-			.from Ethereum Gladiator##20854 |tip He is fighting a Captured Protectorate Vanguard. Killing him will unlock an escort quest If he is not here you will have to wait for him to respawn.
+			.from Ethereum Gladiator##20854
+			.info He is fighting a Captured Protectorate Vanguard. Killing him will unlock an escort quest If he is not here you will have to wait for him to respawn.
 			.talk Captured Protectorate Vanguard##20763
 			..accept Escape from the Staging Grounds##10425
 		step
-			'Escort the Captured Protectorate Vanguard to Protectorate Watch Post
-			.' Escort Captured Protectorate Vanguard |q 10425/1
+			.' Escort the Captured Protectorate Vanguard to Protectorate Watch Post.
+			.' Escort Captured Protectorate Vanguard|q 10425/1
 		step
 			goto Netherstorm,59.5,32.4
 			.talk Commander Ameer##20448
@@ -6155,25 +5639,28 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			.talk Flesh Handler Viridius##20450
 			..turnin Captain Tyralius##10422
 		step
-			goto Netherstorm,62.5,34.7
-			.from Voidshrieker##18870+, Unstable Voidwraith##18869+
-			..get 8 Fragment of Dimensius |q 10437/1
+			goto Netherstorm,65.65,39.85
+			.from Voidshrieker##18870, Unstable Voidwraith##18869
+			.get 8 Fragment of Dimensius|q 10437/1
 		step
 			goto Netherstorm,59.5,39.9
-			.' Use Navuud's Concoction in your bags |use Navuud's Concoction##29737
-			.' While under the effects of the Electro-Shock Therapy buff do the following: |tip This buff lasts for 60 minutes. High levels will need to use melee since the effect only works by random chance.
-			..kill 30 Seeping Sludge Globule##20806+ |q 10411/1
+			.' Use Navuud's Concoction in your bags|use Navuud's Concoction##29737
+			.' While under the effects of the Electro-Shock Therapy buff do the following:
+			.info This buff lasts for 60 minutes. High levels will need to use melee since the effect only works by random chance.
+			..kill 30 Seeping Sludge Globule##20806|q 10411/1
 		step
 			goto Netherstorm,59.4,45.0
 			.talk Agent Araxes##20551
 			..accept The Flesh Lies...##10345
 		step
-			goto Netherstorm,61.0,45.6 |n
-			'The entrance to the Access Shaft Zeon cave starts here. |goto 61.0,45.6,0.5 |noway |c
+			goto Netherstorm,61.0,45.6
+			.'The entrance to the Access Shaft Zeon cave starts here. |goto 61.0,45.6,0.5 |noway |c
 		step
-			.' Go inside the cave to 59.8,42.6 |goto 59.8,42.6
-			.' Use the Protectorate Igniter in your bags on Withered Corpses |use Protectorate Igniter##29473
-			.' Use 12 Withered Corpses Burned |q 10345/1 |tip If you get to close they will turn into fleshbeasts. There are more corpses inside the cave.
+			goto Netherstorm,59.8,42.6
+			.' Go inside the cave to 59.8,42.6 
+			.' Use the Protectorate Igniter in your bags on Withered Corpses|use Protectorate Igniter##29473
+			.' Use 12 Withered Corpses Burned|q 10345/1
+			.info If you get to close they will turn into fleshbeasts. There are more corpses inside the cave.
 		step
 			goto Netherstorm,60.9,41.5
 			.talk Agent Ya-six##20552
@@ -6181,13 +5668,13 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 		step
 			goto Netherstorm,61.0,41.5
 			.' Click Teleporter Power Pack
-			..get Teleporter Power Pack |q 10270/1
+			..get Teleporter Power Pack|q 10270/1
 		step
 			goto Netherstorm,60.1,40.1
-			..kill Arconus the Insatiable##20554 |q 10353/1
+			..kill Arconus the Insatiable##20554|q 10353/1
 		step
 			goto Netherstorm,61.1,45.4 |n
-			'Leave the Access Shaft Zeon |goto 61.1,45.4,0.5 |noway |c
+			.' Leave the Access Shaft Zeon |goto 61.1,45.4,0.5 |noway |c
 		step
 			goto Netherstorm,59.4,45.0
 			.talk Agent Araxes##20551
@@ -6209,8 +5696,8 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			goto Netherstorm,60.2,31.7
 			.talk Protectorate Nether Drake##20903
 			.' Tell the dragon you are ready to fly.
-			.' Use the Phase Disruptor in your bags while flying around the Void Conduit |use Phase Disruptor##29778
-			.' Destroy the Void Conduit |q 10438/1
+			.' Use the Phase Disruptor in your bags while flying around the Void Conduit|use Phase Disruptor##29778
+			.' Destroy the Void Conduit|q 10438/1
 		step
 			goto Netherstorm,60.1,31.7
 			.talk Professor Dabiri##20907
@@ -6224,8 +5711,9 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Getting Down to Business##10271
 		step
 			goto Netherstorm,71.8,38.7
-			.' Use your Essence Gatherer on Nether Drakes and Nether Dragons around this area |use Essence Gatherer##69825 |tip Be careful not to agro them, use the Essence Gatherer in combat.
-			..get 8 Nether Dragon Essence |q 10271/1
+			.' Use your Essence Gatherer on Nether Drakes and Nether Dragons around this area|use Essence Gatherer##69825
+			.info Be careful not to agro them, use the Essence Gatherer in combat.
+			.get 8 Nether Dragon Essence|q 10271/1
 		step
 			goto Netherstorm,70.9,38.8
 			.talk Shrouded Figure##20154
@@ -6239,7 +5727,7 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 		step
 			goto Netherstorm,72.0,38.4
 			.' Click Nether Dragonkin Egg
-			..get 15 Nether Dragonkin Egg |q 10272/1
+			..get 15 Nether Dragonkin Egg|q 10272/1
 		step
 			goto Netherstorm,71.2,35.1
 			.talk Tyri##20110
@@ -6249,24 +5737,21 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			goto Netherstorm,58.3,31.7
 			.talk Wind Trader Marid##20071
 			.' Tell him, "Wind Trader Marid, I've returned with more information..."
-			..kill Wind Trader Marid##20071 |q 10273/1
+			.kill Wind Trader Marid##20071|q 10273/1|at 60,30.9
 		step
 			goto Netherstorm,71.2,35.1
 			.talk Tyri##20110
 			..turnin Troublesome Distractions##10273
 		step
-			'Hearth to Area 52 |goto Netherstorm,32.3,65.5,3 |use Hearthstone##6948 |noway |c
-		step
 			goto Netherstorm,29.1,40.5
-			.' Use the Triangulation Device in your bags |use Triangulation Device##29018
+			.' Use the Triangulation Device in your bags|use Triangulation Device##29018
 			.' A red arrow will appear showing you where to go.
-			.' Discover the second triangulation point |q 10275/1
+			.' Discover the second triangulation point|q 10275/1
 		step
 			goto Netherstorm,34.6,38.0
 			.talk Wind Trader Tuluman##20112
 			..turnin Triangulation Point Two##10275
 		step
-			.' -
 			goto Netherstorm,57.5,86.4
 			.talk Custodian Dieworth##19488
 			..accept The Sunfury Garrison##10222
@@ -6278,20 +5763,20 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Finding the Keymaster##10256
 		step
 			goto Netherstorm,62.8,78.9
-			..kill Naberius##20483 |q 10320/1
+			.kill Naberius##20483|q 10320/1
 		step
 			goto Netherstorm,51.9,70.7
-			.from Apex##19940+ |He is a giant with purple crystals on his back who patrols around this area. Some searching may be required.
-			.' Collect Apex's Crystal Focus
-			.' Skip this step if complete
+			.from Apex##19940
+			.info He is a giant with purple crystals on his back who patrols around this area. Some searching may be required.
+			.collect 1 Apex's Crystal Focus##28786|q 10256
 		step
 			goto Netherstorm,57.5,86.4
 			.talk Custodian Dieworth##19488
 			..turnin Destroy Naberius!##10320
 		step
 			goto Netherstorm,58.4,86.3
-			.' Use Apex's Crystal Focus next to Archmage Vargoth's Orb |use Apex's Crystal Focus##28786
-			.' Discover the Keymaster's identity |q 10256/1
+			.' Use Apex's Crystal Focus next to Archmage Vargoth's Orb|use Apex's Crystal Focus##28786
+			.' Discover the Keymaster's identity|q 10256/1
 		step
 			goto Netherstorm,58.3,86.4
 			.talk Archmage Vargoth##19481
@@ -6307,7 +5792,7 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Sabotage the Warp-Gate!##10310
 		step
 			.' Escort Drijya while he sabotages the warp-gate.
-			.' Burning Legion warp-gate sabotaged |q 10310/1
+			.' Burning Legion warp-gate sabotaged|q 10310/1
 		step
 			goto Netherstorm,46.7,56.9
 			.talk Gahruj##20066
@@ -6328,9 +5813,9 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept You, Robot##10248
 		step
 			goto Netherstorm,37.4,63.7
-			.' Use Scrap Reaver X6000 Controller |use Scrap Reaver X6000 Controller##28634
-			.from Negatron##19851+
-			.' Complete the Scrap Reaver X6000 Test |q 10248/1
+			.' Use Scrap Reaver X6000 Controller|use Scrap Reaver X6000 Controller##28634
+			.from Negatron##19851
+			.' Complete the Scrap Reaver X6000 Test|q 10248/1
 		step
 			goto Netherstorm,37.3,63.8
 			.talk Doctor Vomisa, Ph.T.##19832
@@ -6338,7 +5823,8 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Back to the Chief!##10249
 		step
 			goto Netherstorm,32.1,64.7
-			.' Click the Wanted Poster |It is a wooden poster just outside of the inn.
+			.' Click the Wanted Poster
+			.info It is a wooden poster just outside of the inn.
 			..accept Wanted: Annihilator Servo!##10261
 			..accept Breaking Down Netherock##10701
 		step
@@ -6356,11 +5842,13 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			only if rep ('The Scryers') >= Neutral
 		step
 			goto Netherstorm,20.4,68.9
-			.from Arcane Annihilator##18856 |tip He is a gold elite robot that patrols around Manaforge B'naar. Some searching may be required.
-			..get Annihilator Servo |q 10261/1
+			.from Arcane Annihilator##18856
+			.info He is a gold elite robot that patrols around Manaforge B'naar. Some searching may be required.
+			..get Annihilator Servo|q 10261/1
 		step
 			goto Netherstorm,19.2,74.6
-			.kill Netherock##20772 |q 10701/1 |tip He is a giant with purple crystals on his back who spawns here and walks southeast along the cliff edge near Manaforge B'naar.
+			.kill Netherock##20772|q 10701/1
+			.info He is a giant with purple crystals on his back who spawns here and walks southeast along the cliff edge near Manaforge B'naar.
 		step
 			goto Netherstorm,32.7,65.0
 			.talk Rocket-Chief Fuselage##19570
@@ -6370,26 +5858,28 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			.talk Papa Wheeler##19645
 			..turnin Wanted: Annihilator Servo!##10261
 		step
-			.' Go inside of Manaforge Ara to [26.7,36.8] |goto 26.7,36.8
-			.from Overseer Azarad##20685 |tip He walks around inside Manaforge Ara and stops in at this small side room.
-			.get Ara Access Crystal##29411 |q 10323/2
+			goto Netherstorm,25.92,41.6
+			.' Go inside of Manaforge Ara to [26,38.9]
+			.from Overseer Azarad##20685
+			.info He walks around inside Manaforge Ara and stops in at this small side room.
+			.get Ara Access Crystal##29411|q 10323/2
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,26.0,38.8
-			.' Click the Ara Control Console
-			.' Click "<Begin emergency shutdown>"
+			.' Interact with the Ara Control Console
+			.' Choose "<Begin emergency shutdown>"
 			.' Kill the technicians as they come to try to save the Manaforge
-			..'Only takes 2 minutes
-			.' Shut Down Manaforge Duro |goal Manaforge Duro Shut Down |q 10323/1
+			.info Only takes 2 minutes.
+			.' Shut Down Manaforge Duro|goal Manaforge Duro Shut Down|q 10323/1
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Netherstorm,37.1,27.8
 			.from Forgemaster Morug##20800
-			..get First Half of Socrethar's Stone |q 10407/1
+			.get First Half of Socrethar's Stone|q 10407/1
 		step
 			goto Netherstorm,40.8,19.6
 			.from Silroth##20801+
-			..get Second Half of Socrethar's Stone |q 10407/2
+			.get Second Half of Socrethar's Stone|q 10407/2
 		step
 			goto Netherstorm,32.0,64.2
 			.talk Anchorite Karja##19467
@@ -6397,8 +5887,6 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..turnin Socrethar's Shadow##10407
 			..accept Ishanah's Help##10410
 			only if rep ('The Aldor') >= Neutral
-		step
-			'Hearth to The Stormspire |goto Netherstorm,43.4,36.1,0.5 |use Hearthstone##6948 |noway |c
 		step
 			goto Netherstorm,44.0,36.0
 			.talk Zuben Elgenubi##20067
@@ -6410,12 +5898,13 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Full Triangle##10276
 		step
 			goto Netherstorm,44.5,21.6
-			.from Farahlon Breaker##18886+ |tip If you're careful you can avoid having to fight the Farahkib Shardlings
-			..get 4 Raw Farahlite |q 10290/1
+			.from Farahlon Breaker##18886
+			.info If you're careful you can avoid having to fight the Farahkib Shardlings
+			..get 4 Raw Farahlite|q 10290/1
 		step
 			goto Netherstorm,53.5,21.5
-			.from Culuthas##20138+
-			..get Ata'mal Crystal |q 10276/1
+			.from Culuthas##20138
+			.get Ata'mal Crystal|q 10276/1
 		step
 			goto Netherstorm,60.1,31.7
 			.talk Professor Dabiri##20907
@@ -6424,13 +5913,13 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 		step
 			goto Netherstorm,60.6,32.1
 			.talk Captain Saeed##20985
-			.' Speak to Captain Saeed |q 10439/2
+			.' Speak to Captain Saeed|q 10439/2
 			.' Tell him, "Let's go!"
 		step
 			.' Follow Captain Saeed and his men to 60.8,39.3 |goto 60.8,39.3
 			.talk Captain Saeed##20985
 			.' Tell him, "I am ready"
-			..kill Dimensius the All-Devouring##19554 |q 10439/1
+			.kill Dimensius the All-Devouring##19554|q 10439/1
 		step
 			goto Netherstorm,60.1,31.7
 			.talk Professor Dabiri##20907
@@ -6442,8 +5931,8 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			..accept Nexus-King Salhadaar##10408
 		step
 			goto Netherstorm,53.7,42.4
-			.' Use Protectorate Disruptor next to each of the three huge force fields protecting Nexus-King Salhadaar. |use Protectorate Disruptor##29618
-			..kill Nexus-King Salhadaar##20454+ |q 10408/1
+			.' Use Protectorate Disruptor next to each of the three huge force fields protecting Nexus-King Salhadaar.|use Protectorate Disruptor##29618
+			..kill Nexus-King Salhadaar##20454|q 10408/1
 		step
 			goto Netherstorm,56.8,38.7
 			.' Click the Ethereum Transponder Zeta
@@ -6471,7 +5960,7 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 		step
 			goto Netherstorm,49.7,17.5
 			.from Cragskaar##20202
-			.get Farahlite Core |q 10293/1
+			.get Farahlite Core|q 10293/1
 		step
 			goto Netherstorm,44.1,36.0
 			.talk Zuben Elgenubi##20067
