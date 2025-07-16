@@ -713,6 +713,483 @@ startlevel 25
 			.' Completed!|tip Use next guide - Redridge Mountains
 ]])
 
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Azuremyst Isle",[[
+author danaton
+description This guide contain quest-chain (55 quests) for Azuremyst Isle location.
+startlevel 20
+		step
+			goto Azuremyst Isle,80.4,45.9
+			.talk Proenitus##16477
+			..accept Replenishing the Healing Crystals##9369
+			only !Draenei
+		step
+			goto Azuremyst Isle,78.6,45.4
+			.from Vale Moth##16520
+			.get 8 Vial of Moth Blood|q 9369/1
+			only !Draenei
+		step
+			goto Azuremyst Isle,80.4,45.9
+			.talk Proenitus##16477
+			..turnin Replenishing the Healing Crystals##9369
+			only !Draenei
+		step
+			goto Azuremyst Isle,80.4,45.9
+			.talk Proenitus##16477
+			..accept Urgent Delivery!##9409
+		step
+			goto Azuremyst Isle,80.1,48.8
+			.talk Zalduun##16502
+			..turnin Urgent Delivery!##9409
+		step
+			goto Azuremyst Isle,80.4,45.9
+			.talk Proenitus##16477
+			..accept Botanist Taerix##9371
+		step
+			goto Azuremyst Isle,79.1,46.5
+			.talk Botanist Taerix##16514
+			..turnin Botanist Taerix##9371
+			..accept Volatile Mutations##10302
+		step
+			goto Azuremyst Isle,78.94,42.7
+			.kill 8 Volatile Mutation|q 10302/1
+		step
+			goto Azuremyst Isle,79.1,46.5
+			.talk Botanist Taerix##16514
+			..turnin Volatile Mutations##10302
+			..accept What Must Be Done...##9293
+			.talk Apprentice Vishael##20233
+			..accept Botanical Legwork##9799
+		step
+			goto Azuremyst Isle,74.9,50.4
+			.from Mutated Root Lasher##16517
+			.get 10 Lasher Sample|q 9293/1
+			.get 3 Corrupted Flower|q 9799/1
+			.info The Corrupted Flowers are tall red flowers around this area.
+		step
+			goto Azuremyst Isle,79.1,46.5
+			.talk Botanist Taerix##16514
+			..turnin What Must Be Done...##9293
+			..accept Healing the Lake##9294
+			.talk Apprentice Vishael##20233
+			..turnin Botanical Legwork##9799
+		step
+			goto Azuremyst Isle,77.3,58.7
+			.' Interact with Irradiated Power Crystal
+			.info It's a huge purple crystal sitting in the lake.
+			.' Disperse the Neutralizing Agent|q 9294/1
+		step
+			goto Azuremyst Isle,79.1,46.5
+			.talk Botanist Taerix##16514
+			..turnin Healing the Lake##9294
+			..accept Vindicator Aldar##10304
+		step
+			goto Azuremyst Isle,79.5,51.4
+			.talk Technician Zhanaa##17071
+			..accept Spare Parts##9305
+		step
+			goto Azuremyst Isle,79.5,51.6
+			.talk Vindicator Aldar##16535
+			..turnin Vindicator Aldar##10304
+			..accept Inoculation##9303
+		step
+			goto Azuremyst Isle,84.7,65.6
+			.' Go through the tunnel into the small clearing|at 82.93,61.52
+			.' Collect the Emitter Spare Parts
+			.info They look like purple crystal guns sitting on the ground.
+			.get 4 Emitter Spare Part|q 9305/1
+		step
+			goto Azuremyst Isle,85.32,67.5
+			.' Use your Inoculating Crystal on Nestlewood Owlkins|use Inoculating Crystal##22962
+			.' Inoculate 6 Nestlewood Owlkins|q 9303/1
+		step
+			goto Azuremyst Isle,79.5,51.4
+			.talk Vindicator Aldar##16535
+			..turnin Inoculation##9303
+			..accept The Missing Scout##9309
+		step
+			goto Azuremyst Isle,79.5,51.4
+			.talk Technician Zhanaa##17071
+			..turnin Spare Parts##9305
+		step
+			goto Azuremyst Isle,72,60.8
+			.talk Tolaan##16546
+			..turnin The Missing Scout##9309
+			..accept The Blood Elves##10303
+		step
+			goto Azuremyst Isle,71,63
+			.kill 10 Blood Elf Scout|q 10303/1
+		step
+			goto Azuremyst Isle,72,60.8
+			.talk Tolaan##16546
+			..turnin The Blood Elves##10303
+			..accept Blood Elf Spy##9311
+		step
+			goto Azuremyst Isle,69.3,65.7
+			.kill Surveyor Candress##16522|q 9311/1
+			.'Get the Blood Elf Plans
+			.' Click the Blood Elf Plans|use Blood Elf Plans##24414
+			..accept Blood Elf Plans##9798
+		step
+			goto Azuremyst Isle,79.5,51.4
+			.talk Vindicator Aldar##16535
+			..turnin Blood Elf Spy##9311
+			..turnin Blood Elf Plans##9798
+			..accept The Emitter##9312
+		step
+			goto Azuremyst Isle,79.5,51.4
+			.talk Technician Zhanaa##17071
+			..turnin The Emitter##9312
+			..accept Travel to Azure Watch##9313
+		step
+			goto Azuremyst Isle,64.5,54
+			.talk Aeun##16554
+			..accept Word from Azure Watch##9314
+		step
+			goto Azuremyst Isle,61.1,54.2
+			.talk Diktynna##17101
+			..accept Red Snapper - Very Tasty!##9452
+		step
+			goto Azuremyst Isle,61.9,51.6
+			.' Use your Draenei Fishing Net next to the Schools of Red Snapper|use Draenei Fishing Net##23654
+			.info They look like little round schools of fish in the water.
+			.get 10 Red Snapper|q 9452/1
+		step
+			goto Azuremyst Isle,61.1,54.2
+			.talk Diktynna##17101
+			..turnin Red Snapper - Very Tasty!##9452
+			..accept Find Acteon!##9453
+		step
+			goto Azuremyst Isle,49.8,51.9
+			.talk Acteon##17110
+			..turnin Find Acteon!##9453
+			..accept The Great Moongraze Hunt (1)##9454
+		step
+			goto Azuremyst Isle,48.7,50.3
+			.talk Technician Dyvuun##16551
+			..turnin Travel to Azure Watch##9313
+		step
+			goto Azuremyst Isle,48.3,49.2
+			.talk Caregiver Chellan##16553
+			..turnin Word from Azure Watch##9314
+		step
+			goto Azuremyst Isle,52.9,61.44
+			.from Blood Elf Bandit##17591|n
+			.collect 1 Blood Elf Communication##23910|q 9616
+			..accept Bandits!##9616|use Blood Elf Communication##23910
+		step
+			goto Azuremyst Isle,50.3,56.6
+			.from Moongraze Stag##17200
+			.get 6 Moongraze Stag Tenderloin|q 9454/1
+			.' You can find more|at 56.32,63.79
+		step
+			goto Azuremyst Isle,47,70.2
+			.talk Admiral Odesyus##17240
+			..accept A Small Start##9506
+		step
+			goto Azuremyst Isle,46.7,70.5
+			.talk "Cookie" McWeaksauce##17246
+			..accept Cookie's Jumbo Gumbo##9512
+		step
+			goto Azuremyst Isle,47.6,73
+			.from Skittering Crawler##17216
+			.get 6 Skittering Crawler Meat|q 9512/1
+		step
+			goto Azuremyst Isle,46.7,70.5
+			.talk "Cookie" McWeaksauce##17246
+			..turnin Cookie's Jumbo Gumbo##9512
+		step
+			goto Azuremyst Isle,49.8,51.9
+			.talk Acteon##17110
+			..turnin The Great Moongraze Hunt (1)##9454
+			..accept The Great Moongraze Hunt (2)##10324
+		step
+			goto Azuremyst Isle,49.40,51.0
+			.talk Cryptographer Aurren##17232
+			..accept Learning the Language##9538
+			.' Click the Stillpine Furbolg Language Primer in your bags|use Stillpine Furbolg Language Primer##23818
+			.' Click the Totem of Akida next to Cryptographer Aurren
+			.info In the middle of town, next to the giant bone altar thing with the huge pink crystal in it.
+			..turnin Learning the Language##9538
+			..accept Totem of Coo##9539
+		step
+			goto Azuremyst Isle,47.1,50.6
+			.talk Exarch Menelaous##17116
+			..turnin Bandits!##9616
+		step
+			goto Azuremyst Isle,50,44.2
+			.kill Infected Nightstalker Runt##17202|n
+			.collect 1 Faintly Glowing Crystal##23678|q 9455
+			..accept Strange Findings##9455|use Faintly Glowing Crystal##23678
+		step
+			goto Azuremyst Isle,55.2,41.6
+			.talk Totem of Coo##17361
+			..turnin Totem of Coo##9539
+			..accept Totem of Tikti##9540
+		step
+			goto Azuremyst Isle,64.5,39.8
+			.talk Totem of Tikti##17362
+			..turnin Totem of Tikti##9540
+			..accept Totem of Yor##9541
+		step
+			goto Azuremyst Isle,63,67.9
+			.talk Totem of Yor##17363
+			..turnin Totem of Yor##9541
+			..accept Totem of Vark##9542
+		step
+			goto Azuremyst Isle,59.6,67.6
+			.' Collect the Nautical Compass under the blue canopy with a green stripe on it
+			.get Nautical Compass##23738|q 9506/1
+		step
+			goto Azuremyst Isle,58.6,66.4
+			.' Collect the Nautical Map sitting on a box under a green canopy
+			.get Nautical Map##23739|q 9506/2
+		step
+			goto Azuremyst Isle,47,70.2
+			.talk Admiral Odesyus##17240
+			..turnin A Small Start##9506
+			..accept I've Got a Plant##9530
+		step
+			goto Azuremyst Isle,47,70.2
+			.talk Priestess Kyleen Il'dinare##17241
+			..accept Reclaiming the Ruins##9513
+		step
+			goto Azuremyst Isle,47.2,70
+			.talk Archaeologist Adamant Ironheart##17242
+			..accept Precious and Fragile Things Need Special Handling##9523
+		step
+			goto Azuremyst Isle,46.53,65.99
+			.' Collect a Hollowed Out Tree
+			.info They look like tall, skinny tree stumps around this area.
+			.get Hollowed Out Tree|q 9530/1
+		step
+			goto Azuremyst Isle,49,51.1
+			.talk Dulvi##17488
+			..accept The Missing Fisherman##10428
+		step
+			goto Azuremyst Isle,47.1,50.6
+			.talk Exarch Menelaous##17116
+			..turnin Strange Findings##9455
+			..accept Nightstalker Clean Up, Isle 2...##9456
+		step
+			goto Azuremyst Isle,50.6,46.2
+			.from Moongraze Buck##17201
+			.get 6 Moongraze Buck Hide|q 10324/1
+			.' You can find more 1|at 52.72,42.38
+			.' You can find more 2|at 55.05,29.83
+		step
+			goto Azuremyst Isle,44.15,40.15
+			.kill 8 Infected Nightstalker Runt|q 9456/1
+		step
+			goto Azuremyst Isle,49.8,51.9
+			.talk Acteon##17110
+			..turnin The Great Moongraze Hunt (2)##10324
+		step
+			goto Azuremyst Isle,47.1,50.6
+			.talk Exarch Menelaous##17116
+			..turnin Nightstalker Clean Up, Isle 2...##9456
+		step
+			goto Azuremyst Isle,41.15,66.45
+			.' Collect the small piles of purple leaves
+			.get 5 Pile of Leaves|q 9530/2
+		step
+			goto Azuremyst Isle,47,70.2
+			.talk Admiral Odesyus##17240
+			..turnin I've Got a Plant##9530
+			..accept Tree's Company##9531
+		step
+			goto Azuremyst Isle,28.1,62.4
+			.talk Totem of Vark##17364
+			..turnin Totem of Vark##9542
+			..accept The Prophecy of Akida##9544
+		step
+			goto Azuremyst Isle,28.5,66.4
+			.from Bristlelimb Ursa##17185, Bristlelimb Windcaller##17184, Bristlelimb Furbolg##17183
+			.collect 8 Bristlelimb Key##23801|n
+			.' Click the yellow cages
+			.' Free 8 Stillpine Captives|goal 8 Stillpine Captive Freed|q 9544/1
+		step
+			goto Azuremyst Isle,18.5,84.3
+			.' Use your Tree Disguise Kit next to the Naga Flag on the beach|use Tree Disguise Kit##23792
+			.' Watch the conversation
+			.' Uncover the Traitor|q 9531/1		
+		step
+			goto Azuremyst Isle,13.6,73.2
+			.talk Magwin##17312
+			..accept A Cry For Help##9528
+		step
+			goto Azuremyst Isle,16.6,94.5
+			.' Escort Magwin through the island to her home|q 9528/1
+		step
+			goto Azuremyst Isle,16.6,94.5
+			.talk Cowlen##17311
+			..turnin A Cry For Help##9528
+			..turnin The Missing Fisherman##10428
+			..accept All That Remains##9527
+		step
+			goto Azuremyst Isle,14.8,92
+			.from Raving Owlbeast##17188, Aberrant Owlbeast##17187, Deranged Owlbeast##17186
+			.get Remains of Cowlen's Family|q 9527/1
+		step
+			goto Azuremyst Isle,16.6,94.5
+			.talk Cowlen##17311
+			..turnin All That Remains##9527
+		step
+			goto Azuremyst Isle,36.1,77
+			.' Click the white glowing orbs
+			.get 8 Ancient Relic|q 9523/1
+			.kill 5 Wrathscale Myrmidon|q 9513/1
+			.kill 5 Wrathscale Naga|q 9513/2
+			.kill 5 Wrathscale Siren|q 9513/3
+			.from Wrathscale Myrmidon##17194, Wrathscale Naga##17193, Wrathscale Siren##17195
+			.' Get a Rune Covered Tablet
+			.' Click the Rune Covered Tablet
+			..accept Rune Covered Tablet##9514|use Rune Covered Tablet##23759
+		step
+			goto Azuremyst Isle,47,70.2
+			.talk Admiral Odesyus##17240
+			..turnin Tree's Company##9531
+			..accept Show Gnomercy##9537
+		step
+			goto Azuremyst Isle,47,70.2
+			.talk Priestess Kyleen Il'dinare##17241
+			..turnin Reclaiming the Ruins##9513
+			..turnin Rune Covered Tablet##9514
+			..accept Warlord Sriss'tiz##9515
+		step
+			goto Azuremyst Isle,47.2,70
+			.talk Archaeologist Adamant Ironheart##17242
+			..turnin Precious and Fragile Things Need Special Handling##9523
+		step
+			goto Azuremyst Isle,48.2,72.5
+			.from Engineer "Spark" Overgrind##17243
+			.get Traitor's Communication|q 9537/1
+		step
+			goto Azuremyst Isle,47,70.2
+			.talk Admiral Odesyus##17240
+			..turnin Show Gnomercy##9537
+			..accept Deliver Them From Evil...##9602
+		step
+			goto Azuremyst Isle,25.2,74.2
+			.' Follow the path to the bottom of the cave|at 27.12,76.91
+			.kill Warlord Sriss'tiz|q 9515/1
+		step
+			goto Azuremyst Isle,47,70.2
+			.talk Priestess Kyleen Il'dinare##17241
+			..turnin Warlord Sriss'tiz##9515
+		step
+			goto Azuremyst Isle,49.41,51.0
+			.talk Arugoo the Stillpine##17114
+			..turnin The Prophecy of Akida##9544
+			..accept Stillpine Hold##9559
+		step
+			goto Azuremyst Isle,47.1,50.6
+			.talk Exarch Menelaous##17116
+			..turnin Deliver Them From Evil...##9602
+		step
+			goto Azuremyst Isle,46.7,20.6
+			.talk High Chief Stillpine##17440
+			..turnin Stillpine Hold##9559
+			..accept Search Stillpine Hold##9565
+		step
+			goto Azuremyst Isle,44.8,23.9
+			.talk Moordo##17442
+			..accept Beasts of the Apocalypse!##9560
+		step
+			goto Azuremyst Isle,44.7,23.6
+			.talk Gurf##17441
+			..accept Murlocs... Why Here? Why Now?##9562
+		step
+			goto Azuremyst Isle,55.3,19.18
+			.from Ravager Specimen##17199
+			.get 8 Ravager Hide##23845|q 9560/1
+		step
+			goto Azuremyst Isle,44.8,23.9
+			.talk Moordo##17442
+			..turnin Beasts of the Apocalypse!##9560
+		step
+			goto Azuremyst Isle,33.8,25.7
+			.from Siltfin Murloc##17190, Siltfin Oracle##17191, Siltfin Hunter##17192
+			.' Click the Stillpine Grain bags near the murloc huts
+			.get 5 Stillpine Grain|q 9562/1
+			.from Murgurgala##17475
+			.' Get Gurf's Dignity|n
+			.' Click Gurf's Dignity|use Gurf's Dignity##23850
+			..accept Gurf's Dignity##9564
+		step
+			goto Azuremyst Isle,44.7,23.6
+			.talk Gurf##17441
+			..turnin Murlocs... Why Here? Why Now?##9562
+			..turnin Gurf's Dignity##9564
+		step
+			goto Azuremyst Isle,46.9,21.2
+			.talk Stillpine the Younger##17445
+			..accept Chieftain Oomooroo##9573
+		step
+			goto Azuremyst Isle,50.5,11.5
+			.' Go inside the big cave|at 45.3,19.5
+			.' Go to lower tunnel|at 46.7,15.56
+			.' Interact with the Blood Crystal
+			.info It's a huge red crystal on a little dirt island in the water.
+			..turnin Search Stillpine Hold##9565
+			..accept Blood Crystals##9566
+		step
+			goto Azuremyst Isle,47.4,16.0
+			.' Go upstairs in the cave
+			.kill 9 Crazed Wildkin|q 9573/2
+		step
+			goto Azuremyst Isle,47.4,14.1
+			.kill Chieftain Oomooroo##17448|q 9573/1
+		step
+			goto Azuremyst Isle,46.7,20.6
+			.' Go outside the cave
+			.talk High Chief Stillpine##17440
+			..turnin Blood Crystals##9566
+		step
+			goto Azuremyst Isle,46.9,21.2
+			.talk Stillpine the Younger##17445
+			..turnin Chieftain Oomooroo##9573
+		step
+			goto Azuremyst Isle,47,22.3
+			.talk Kurz the Revelator##17443
+			..accept The Kurken is Lurkin'##9570
+		step
+			goto Azuremyst Isle,49.9,13.0
+			.' Go inside the big cave
+			.from The Kurken##17447
+			.get The Kurken's Hide|q 9570/1
+		step
+			goto Azuremyst Isle,47.0,22.3
+			.' Go outside the cave
+			.talk Kurz the Revelator##17443
+			..turnin The Kurken is Lurkin'##9570
+			..accept The Kurken's Hide##9571
+		step
+			goto Azuremyst Isle,44.8,23.9
+			.talk Moordo##17442
+			..turnin The Kurken's Hide##9571
+		step
+			goto Azuremyst Isle,46.7,20.6
+			.talk High Chief Stillpine##17440
+			..accept Warn Your People##9622
+		step
+			goto Azuremyst Isle,47.1,50.6
+			.talk Exarch Menelaous##17116
+			..turnin Warn Your People##9622
+			..accept Coming of Age##9623
+		step
+			goto The Exodar,81.5,51.4
+			.talk Torallius the Pack Handler##17584
+			..turnin Coming of Age##9623
+			..accept Elekks Are Serious Business##9625
+		step
+			goto Bloodmyst Isle,63,87.9
+			.talk Vorkhan the Elekk Herder##17586
+			..turnin Elekks Are Serious Business##9625
+		step
+			.' Congratulations! +55 quests for achievement "Loremaster Kalimdor".
+			.' Recomended next to use guide "Bloodmyst Isle".
+]])
+
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Teldrassil",[[
 author danaton
 description This guide contain quest-chain (47 quests) for Teldrassil Night Elf location.
