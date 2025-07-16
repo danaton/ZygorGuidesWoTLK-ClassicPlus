@@ -125,7 +125,7 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 
 
 	['tooltip_tip'] = COLOR_TIP_HINT.."%s|r",
-	['tooltip_waypoint'] = COLOR_TIP_MOUSE.."Click|r"..COLOR_TIP.." to set waypoint: |cffffaa00%s|r",
+	['tooltip_waypoint'] = COLOR_TIP_MOUSE.."ЛКМ|r"..COLOR_TIP..", чтобы установить направление: |cffffaa00%s|r",
 	['tooltip_waypoint_coords'] = "Локация: |cffffaa00%s|r",
 
 	["title_noguide"] = "Zygor Guides Viewer (no guide loaded)",

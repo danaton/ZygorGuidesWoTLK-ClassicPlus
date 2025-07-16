@@ -6111,7 +6111,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (20-25
 	step //113
 		goto 49.4,69.3
 		.from Befouled Water Elemental##3917+
-		.collect 5 Intact Elemental Bracer##12220
+		.collect 5 Intact Elemental Bracer##12220|q 1016
 		.' Use your Divining Scroll on the Intact Elemental Bracers|use Divining Scroll##5456
 		.get Divined Scroll|q 1016/1
 	step //114

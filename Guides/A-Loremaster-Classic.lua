@@ -1190,6 +1190,726 @@ startlevel 20
 			.' Recomended next to use guide "Bloodmyst Isle".
 ]])
 
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Bloodmyst Isle",[[
+author danaton
+description This guide contain quest-chain (63 quests) for Bloodmyst Isle location.
+startlevel 20
+		step
+			goto The Exodar,81.51,51.46
+			.talk Torallius the Pack Handler##17584
+			..accept Elekks Are Serious Business##9625
+		step
+			goto Bloodmyst Isle,63.04,87.91
+			.talk Vorkhan the Elekk Herder##17586
+			..turnin Elekks Are Serious Business##9625
+			..accept Alien Predators##9634
+		step
+			goto Bloodmyst Isle,63.00,87.55
+			.talk Kessel##17649
+			..accept The Kessel Run##9663
+		step
+			goto Azuremyst Isle,46.68,20.62
+			.talk High Chief Stillpine##17440
+			.' Warn High Chief Stillpine|q 9663/1
+		step
+			goto Azuremyst Isle,47.11,50.60
+			.talk Exarch Menelaous##17116
+			.' Warn Exarch Menelaous|q 9663/2
+		step
+			goto Azuremyst Isle,47.04,70.21
+			.talk Admiral Odesyus##17240
+			.' Warn Admiral Odesyus|q 9663/3
+			..accept The Bloodcurse Legacy##9751
+		step
+			goto Bloodmyst Isle,63.00,87.54
+			.talk Kessel##17649
+			..turnin The Kessel Run##9663
+			..accept Declaration of Power##9666
+		step
+			goto Bloodmyst Isle,63.43,88.78
+			.talk Aonar##17599
+			..accept A Favorite Treat##9624
+		step
+			goto Bloodmyst Isle,59.39,89.75
+			.kill 10 Bloodmyst Hatchling##17525|q 9634/1
+		step
+			goto Bloodmyst Isle,59.39,89.75
+			.collect 10 Sand Pear##23927|q 9624/1
+			.info They look like small light brown pears on the ground near trees around this area.
+			.' You can find more Sand Pear|at 67.2,86.3
+		step
+			goto Bloodmyst Isle,63.04,87.90
+			.talk Vorkhan the Elekk Herder##17586
+			..turnin Alien Predators##9634
+		step
+			goto Bloodmyst Isle,63.43,88.78
+			.talk Aonar##17599
+			..turnin A Favorite Treat##9624
+		step
+			goto Bloodmyst Isle,68.26,81.09
+			.talk Princess Stillpine##17682
+			..accept Saving Princess Stillpine##9667
+		step
+			goto Bloodmyst Isle,64.21,76.71
+			.from Bristlelimb Shaman##17320, Bristlelimb Warrior##17321
+			.info Eventually, High Chief Bristelimb will yell in the chat box and spawn at this location.
+			.from High Chief Bristlelimb##17702
+			.info He walks around this small area after he spawns.
+			.collect 1 The High Chief's Key##24099|q 9667 
+		step
+			goto Bloodmyst Isle,68.86,68.25
+			.kill Lord Xiz##17701|q 9666/1
+			.info He walks back and forth around this small area.
+		step
+			goto Bloodmyst Isle,68.86,68.25
+			.' Use the Draenei Banner on Lord Xiz's corpse |use Draenei Banner##24084
+			.info His corpse will be at the location you killed him.
+			.' Declare Your Power|q 9666/2
+		step
+			goto Bloodmyst Isle,68.26,80.89
+			.' Interact with Princess Stillpine's Cage
+			.' Save Princess Stillpine|q 9667/1
+		step
+			goto Bloodmyst Isle,63.00,87.54
+			.talk Kessel##17649
+			..turnin Declaration of Power##9666
+			..accept Report to Exarch Admetius##9668
+		step
+			goto Bloodmyst Isle,55.23,59.11
+			.' Click Wanted Poster
+			..accept WANTED: Deathclaw##9646
+		step
+			goto Bloodmyst Isle,53.25,57.75
+			.talk Morae##17434
+			..accept Catch and Release##9629
+		step
+			goto Bloodmyst Isle,55.15,55.95
+			.talk Stillpine Ambassador Frasaboo##18803
+			..turnin Saving Princess Stillpine##9667
+		step
+			goto Bloodmyst Isle,56.43,56.82
+			.talk Jessera of Mac'Aree##17663
+			..accept Mac'Aree Mushroom Menagerie##9648
+		step
+			goto Bloodmyst Isle,52.7,53.2
+			.talk Exarch Admetius##17658
+			..turnin Report to Exarch Admetius##9668
+			..accept What Argus Means to Me##9693
+		step
+			goto Bloodmyst Isle,52.6,53.2
+			.talk Harbinger Mikolaas##17423
+			..accept Learning from the Crystals##9581
+		step
+			goto Bloodmyst Isle,55.43,55.27
+			.talk Vindicator Boros##17684
+			..turnin What Argus Means to Me##9693
+			..accept Blood Watch##9694
+		step
+			goto Bloodmyst Isle,60.7,42.0
+			.' Collect Ruinous Polyspore
+			.info They look like brown mushrooms on the ground around this area.
+			.collect Ruinous Polyspore##24042|q 9648/3
+		step
+			goto Bloodmyst Isle,62.3,53.0
+			.' Collect Blood Mushroom
+			.info They look like orange glowing mushrooms on the ground around this area.
+			.collect Blood Mushroom##24040|q 9648/2
+		step
+			goto Bloodmyst Isle,61.35,67.99
+			.' Collect Aquatic Stinkhorn
+			.info They look like big mushrooms with spikes on them underwater in the red water around this area.
+			.collect Aquatic Stinkhorn##24041|q 9648/1
+		step
+			goto Bloodmyst Isle,58.20,83.35
+			.' Use the Crystal Mining Pick on Impact Site Crystal|use Crystal Mining Pick##23875
+			.collect Impact Site Crystal Sample##23878|q 9581/1
+		step
+			goto Bloodmyst Isle,47.8,94.4
+			.kill Cruelfin##17496 |n
+			.info He looks like an orange murloc that walks along the beach around this area.
+			..accept Cruelfin's Necklace##9576|use Red Crystal Pendant##23870
+		step
+			goto Bloodmyst Isle,47.8,94.4
+			.' Use the Murloc Tagger on Blacksilt Scouts|use Murloc Tagger##23995
+			.info They look like purple murlocs around this area.
+			.' Tag 6 Blacksilt Scouts|q 9629/1
+		step
+			goto Bloodmyst Isle,44.4,82.4
+			.' Click Fel Cone Fungus
+			.info They look like big brown mushrooms on the ground around this area.
+			.collect Fel Cone Fungus##24043|q 9648/4
+		step
+			goto Bloodmyst Isle,56.4,56.8
+			.talk Jessera of Mac'Aree##17663
+			..turnin Mac'Aree Mushroom Menagerie##9648
+		step
+			goto Bloodmyst Isle,53.24,57.74
+			.talk Morae##17434
+			..turnin Catch and Release##9629
+			..accept Victims of Corruption##9574
+			..turnin Cruelfin's Necklace##9576
+		step
+			goto Bloodmyst Isle,55.1,58.0
+			.talk Vindicator Aalesia##17433
+			..accept Know Thine Enemy##9567
+		step
+			goto Bloodmyst Isle,55.43,55.27
+			.talk Vindicator Boros##17684
+			..accept Irradiated Crystal Shards##9641
+		step
+			goto Bloodmyst Isle,56.33,54.23
+			.talk Prospector Nachlan##18804
+			..accept Explorers' League, Is That Something for Gnomes?##10063
+		step
+			goto Bloodmyst Isle,52.6,53.2
+			.talk Harbinger Mikolaas##17423
+			..turnin Learning from the Crystals##9581
+			..accept The Missing Survey Team##9620
+		step
+			goto Bloodmyst Isle,49.5,47.4
+			.kill 10 Sunhawk Spy##17604|q 9694/1
+		step
+			goto Bloodmyst Isle,55.43,55.25
+			.talk Vindicator Boros##17684
+			..turnin Blood Watch##9694
+		step
+			goto Bloodmyst Isle,61.25,48.38
+			.talk Draenei Cartographer##17600
+			..turnin The Missing Survey Team##9620
+			..accept Salvaging the Data##9628
+		step
+			goto Bloodmyst Isle,62.62,47.94
+			.from Wrathscale Marauder##17334, Wrathscale Sorceress##17336
+			.info They are all around this whole area.
+			.info It will likely take a while before this item drops.
+			.collect Survey Data Crystal##23932|q 9628/1
+		step
+			goto Bloodmyst Isle,62.62,47.94
+			.from Wrathscale Marauder##17334, Wrathscale Sorceress##17336
+			.info They are all around this whole area.
+			.collect 10 Irradiated Crystal Shard##23984|q 9641/1
+		step
+			goto Bloodmyst Isle,52.6,53.2
+			.talk Harbinger Mikolaas##17423
+			..turnin Salvaging the Data##9628
+			..accept The Second Sample##9584
+		step
+			goto Bloodmyst Isle,55.42,55.27
+			.talk Vindicator Boros##17684
+			..turnin Irradiated Crystal Shards##9641
+		step
+			goto Bloodmyst Isle,55.09,57.99
+			.talk Vindicator Aalesia##17433
+			..accept On the Offensive##9568
+		step
+			goto Bloodmyst Isle,50.9,74
+			.from Corrupted Treant##17352
+			.get 6 Crystallized Bark##23869|q 9574/1
+		step
+			goto Bloodmyst Isle,36.50,71.36
+			.' Collect Nazzivus Monument Glyph
+			.collect Nazzivus Monument Glyph##23859|q 9567/1
+		step
+			goto Bloodmyst Isle,36.64,73.50
+			.kill Tzerak##17528 |n
+			.info He looks like a felguard that walks around the whole Nazzivian area.
+			..accept Signs of the Legion##9594|use Tzerak's Armor Plate##23900
+		step
+			goto Bloodmyst Isle,37.7,76.7
+			.kill 8 Nazzivus Satyr##17337|q 9594/1
+			.kill 8 Nazzivus Felsworn##17339|q 9594/2
+		step
+			goto Bloodmyst Isle,37.8,75
+			.kill 10 Nazzivus Satyr##17337|q 9568/1
+			.kill 5 Nazzivus Rogue##17338|q 9568/2
+			.kill 5 Nazzivus Felsworn##17339|q 9568/3
+		step
+			goto Bloodmyst Isle,55.09,57.99
+			.talk Vindicator Aalesia##17433
+			..turnin Know Thine Enemy##9567
+			.info Watch the dialogue.
+			..turnin Signs of the Legion##9594
+			..turnin On the Offensive##9568
+			..accept Containing the Threat##9569
+		step
+			goto Bloodmyst Isle,53.24,57.74
+			.talk Morae##17434
+			..turnin Victims of Corruption##9574
+		step
+			goto Bloodmyst Isle,55.86,57.00
+			.talk Tracker Lyceon##17642
+			..accept The Bear Necessities##9580
+			..accept Constrictor Vines##9643
+		step
+			goto Bloodmyst Isle,55.43,55.27
+			.talk Vindicator Boros##17684
+			..accept Intercepting the Message##9779
+		step
+			goto Bloodmyst Isle,45.67,47.74
+			.' Use the Crystal Mining Pick|use Crystal Mining Pick##23876
+			.collect Altered Crystal Sample##23879|q 9584/1
+		step
+			goto Bloodmyst Isle,45.67,47.74
+			.from Sunhawk Spy##17604
+			.get Sunhawk Missive##24399|q 9779/1 
+		step
+			goto Bloodmyst Isle,52.59,53.21
+			.talk Harbinger Mikolaas##17423
+			..turnin The Second Sample##9584
+			..accept The Final Sample##9585
+			..accept Talk to the Hand##10064
+		step
+			goto Bloodmyst Isle,41.11,49.92
+			.from Elder Brown Bear##17348+
+			.get 8 Elder Brown Bear Flank##24026|q 9580/1
+		step
+			goto Bloodmyst Isle,41.11,49.92
+			.from Mutated Constrictor##17344
+			.get 6 Thorny Constrictor Vine##23994|q 9643/1
+		step
+			goto Bloodmyst Isle,41.91,29.53
+			.kill Zevrax##17494|q 9569/1
+		step
+			goto Bloodmyst Isle,41.31,30.69
+			.' Use the Crystal Mining Pick |use Crystal Mining Pick##23877
+			.info It looks like a huge red crystal in the ground.
+			.collect Axxarien Crystal Sample##23880|q 9585/1
+		step
+			goto Bloodmyst Isle,41.46,33.50
+			.kill 5 Axxarien Shadowstalker##17340|q 9569/2
+		step
+			goto Bloodmyst Isle,41.46,33.50
+			.kill 5 Axxarien Hellcaller##17342|q 9569/3
+		step
+			goto Bloodmyst Isle,41.46,33.50
+			.' Click Corrupted Crystal
+			.info They look like big red crystals on the ground around this area.
+			.collect 5 Corrupted Crystal##23863|q 9569/4
+		step
+			goto Bloodmyst Isle,37.1,30.3
+			.from Deathclaw##17661
+			.info It looks like a brown bear that walks around this small area.
+			.get Deathclaw's Paw##24025|q 9646/1
+		step
+			goto Bloodmyst Isle,55.09,57.99
+			.talk Vindicator Aalesia##17433
+			..turnin Containing the Threat##9569
+		step
+			goto Bloodmyst Isle,55.86,57.00
+			.talk Tracker Lyceon##17642
+			..turnin The Bear Necessities##9580
+			..turnin Constrictor Vines##9643
+			..accept Culling the Flutterers##9647
+		step
+			goto Bloodmyst Isle,55.43,55.27
+			.talk Vindicator Boros##17684
+			..turnin Intercepting the Message##9779
+			..accept Translations...##9696
+		step
+			goto Bloodmyst Isle,54.66,53.96
+			.talk Anchorite Paetheus##17424
+			..accept Newfound Allies##9632
+		step
+			goto Bloodmyst Isle,54.43,54.45
+			.talk Interrogator Elysis##17825
+			..turnin Translations...##9696
+			..accept Audience with the Prophet##9698
+		step
+			goto Bloodmyst Isle,54.33,55.60
+			.talk Messenger Hermesius##17703
+			..accept Urgent Delivery##9671
+		step
+			goto Bloodmyst Isle,52.59,53.21
+			.talk Harbinger Mikolaas##17423
+			..turnin WANTED: Deathclaw##9646
+			..turnin The Final Sample##9585
+			..accept Talk to the Hand##10064
+		step
+			goto The Exodar,32.9,54.4
+			.talk Prophet Velen##17468
+			..turnin Audience with the Prophet##9698
+			..accept Truth or Fiction##9699
+		step
+			goto Bloodmyst Isle,55.43,55.27
+			.talk Vindicator Boros##17684
+			..turnin Truth or Fiction##9699
+			..accept I Shoot Magic Into the Darkness##9700
+		step
+			goto Bloodmyst Isle,48.06,34.68
+			.kill 10 Royal Blue Flutterer##17350|q 9647/1
+			.' You can find more|at 34.8,44
+		step
+			goto Bloodmyst Isle,52.5,22.3
+			Confirm the Sun Portal Site|q 9700/1
+		step
+			goto Bloodmyst Isle,52.5,22.3
+			.kill 5 Void Anomaly##17550|q 9700/2
+		step
+			goto Bloodmyst Isle,42.15,21.23
+			.talk Clopper Wizbang##17421
+			..turnin Explorers' League, Is That Something for Gnomes?##10063
+			..accept Pilfered Equipment##9548
+			..accept Artifacts of the Blacksilt##9549
+		step
+			goto Bloodmyst Isle,40.4,20.1
+			.' Collect Clopper's Equipment
+			.info It looks like a wooden crate on the ground next to a murloc hut.
+			.info It can spawn in any of the little murloc camps along the beach around this area.
+			.collect Clopper's Equipment##23830|q 9548/1 
+		step
+			goto Bloodmyst Isle,38.7,21.2
+			.from Blacksilt Seer##17330
+			.get 3 Crude Murloc Idol##23834|q 9549/1
+			.from Blacksilt Shorestriker##17328
+			.get 6 Crude Murloc Knife##23833|q 9549/2
+		step
+			goto Bloodmyst Isle,42.15,21.23
+			.talk Clopper Wizbang##17421
+			..turnin Pilfered Equipment##9548
+			..turnin Artifacts of the Blacksilt##9549
+			.' Use Weathered Treasure Map|use Weathered Treasure Map##23837
+			..accept A Map to Where?##9550|use Weathered Treasure Map##23837
+		step
+			goto Bloodmyst Isle,55.85,57.00
+			.talk Tracker Lyceon##17642
+			..turnin Culling the Flutterers##9647
+		step
+			goto Bloodmyst Isle,56.43,56.82
+			.talk Jessera of Mac'Aree##17663
+			..accept Ysera's Tears##9649
+		step
+			goto Bloodmyst Isle,55.43,55.28
+			.talk Vindicator Boros##17684
+			..turnin I Shoot Magic Into the Darkness##9700
+		step
+			goto Bloodmyst Isle,61.16,41.89
+			.' Interact with Battered Ancient Book
+			..turnin A Map to Where?##9550
+			..accept Deciphering the Book##9557
+		step
+			goto Bloodmyst Isle,54.67,53.94
+			.talk Anchorite Paetheus##17424
+			..turnin Deciphering the Book##9557
+		step
+			goto Bloodmyst Isle,54.67,53.94
+			.' Watch the dialogue
+			.talk Anchorite Paetheus##17424
+			..accept Nolkai's Words##9561
+		step
+			goto Bloodmyst Isle,53.25,57.03
+			.talk Achelus##17676
+			..accept The Missing Expedition##9669
+		step
+			goto Bloodmyst Isle,53.24,57.74
+			.talk Morae##17434
+			..accept Searching for Galaen##9578
+		step
+			goto Bloodmyst Isle,61.18,49.64
+			.' Interact with Mound of Dirt
+			..turnin Nolkai's Words##9561
+		step
+			goto Bloodmyst Isle,74.06,33.92
+			.talk Prince Toreth##17674
+			..accept Restoring Sanctity##9687
+		step
+			goto Bloodmyst Isle,59.9,35.7
+			.' Collect Dragon Bone
+			.info They look like orange and white spiked bones planted in the ground around this area.
+			.info You can find more the west.
+			.collect 8 Dragon Bone##24185|q 9687/1
+		step
+			goto Bloodmyst Isle,74.06,33.92
+			.talk Prince Toreth##17674
+			..turnin Restoring Sanctity##9687
+			..accept Into the Dream##9688
+		step
+			goto Bloodmyst Isle,71.39,28.34
+			.' Collect Ysera's Tear
+			.info They look like a green mushrooms on the ground around this area.
+			.info You can usually find 2 without going up the mountain.
+			.info If you can't, though, you can find more by following the path up the mountain nearby.
+			.collect 2 Ysera's Tear##24049|q 9649/1
+		step
+			goto Bloodmyst Isle,75.4,29.6
+			.kill 5 Veridian Whelp##17588|q 9688/1
+		step
+			goto Bloodmyst Isle,75.4,29.6
+			.kill 5 Veridian Broodling##17589|q 9688/2
+		step
+			goto Bloodmyst Isle,74.06,33.92
+			.talk Prince Toreth##17674
+			..turnin Into the Dream##9688
+			..accept Razormaw##9689
+		step
+			goto Bloodmyst Isle,72.67,20.78
+			.' Interact with Ever-burning Pyre
+			.info Keepclicking it until Razormaw flies down to fight you.
+			.kill Razormaw##17592|q 9689/1
+		step
+			goto Bloodmyst Isle,74.06,33.92
+			.talk Prince Toreth##17674
+			..turnin Razormaw##9689
+		step
+			goto Bloodmyst Isle,79.15,22.65
+			.talk Captain Edward Hanes##17712
+			..turnin The Bloodcurse Legacy##9751
+			..accept The Bloodcursed Naga##9674
+		step
+			goto Bloodmyst Isle,81.21,21.85
+			.kill 10 Bloodcursed Naga##17713|q 9674/1
+			.info Underwater around this area.
+		step
+			goto Bloodmyst Isle,79.15,22.65
+			.talk Captain Edward Hanes##17712
+			..turnin The Bloodcursed Naga##9674
+			..accept The Hopeless Ones...##9682
+		step
+			goto Bloodmyst Isle,85.7,14.3
+			.from Bloodcursed Voyager##17714
+			.info Underwater around this area.
+			.get 4 Bloodcursed Soul##24153|q 9682/1
+		step
+			goto Bloodmyst Isle,79.15,22.65
+			.talk Captain Edward Hanes##17712
+			..turnin The Hopeless Ones...##9682
+			..accept Ending the Bloodcurse##9683
+		step
+			goto Bloodmyst Isle,85.94,54.32
+			.' Interact with Statue of Queen Azshara
+			.kill Atoph the Bloodcursed##17715|q 9683/1
+		step
+			goto Bloodmyst Isle,79.15,22.65
+			.talk Captain Edward Hanes##17712
+			..turnin Ending the Bloodcurse##9683
+		step
+			goto Bloodmyst Isle,56.43,56.82
+			.talk Jessera of Mac'Aree##17663
+			..turnin Ysera's Tears##9649
+		step
+			goto Bloodmyst Isle,55.63,55.23
+			.talk Vindicator Kuros##17843
+			..accept The Cryo-Core##9703
+		step
+			goto Bloodmyst Isle,37.5,61.2
+			.talk Galaen's Corpse##17508
+			..turnin Searching for Galaen##9578
+			..accept Galaen's Fate##9579
+		step
+			goto Bloodmyst Isle,37.56,61.24
+			.' Interact with Galaen's Journal
+			.info Inside the building.
+			..accept Galaen's Journal - The Fate of Vindicator Saruan##9706
+		step
+			goto Bloodmyst Isle,39.6,58.9
+			.from Sunhawk Reclaimer##17606
+			.get Galaen's Amulet##23873|q 9579/1
+		step
+			goto Bloodmyst Isle,39.6,58.9
+			.from Sunhawk Reclaimer##17606
+			.' Collect Medical Supplies
+			.info They look like silver metal boxes on the ground around this area.
+			.get 12 Medical Supplies##24236|q 9703/1
+		step
+			goto Bloodmyst Isle,53.24,57.74
+			.talk Morae##17434
+			..turnin Galaen's Fate##9579
+		step
+			goto Bloodmyst Isle,55.63,55.23
+			.talk Vindicator Kuros##17843
+			..turnin The Cryo-Core##9703
+			..turnin Galaen's Journal - The Fate of Vindicator Saruan##9706
+			..accept Matis the Cruel##9711
+		step
+			goto Bloodmyst Isle,55.56,55.40
+			.talk Vindicator Aesom##17844
+			..accept Don't Drink the Water##9748
+		step
+			goto Bloodmyst Isle,39.6,45.3
+			.' Use the Flare Gun on Matis the Cruel |use Flare Gun##24278
+			.info Use it before you engage him.
+			.info He walks along this road.
+			.kill Matis the Cruel##17664 |n
+			.info Don't kill him, just get him to low health.
+			.info The NPC that appears will fight him for you.
+			.' Capture Matis the Cruel|q 9711/1
+		step
+			goto Bloodmyst Isle,34.41,33.71
+			.' Use the Water Sample Flask|use Water Sample Flask##24318
+			.info Use it at the bottom of the red waterfall.
+			.collect Bloodmyst Water Sample##24317|q 9748/1
+		step
+			goto Bloodmyst Isle,55.55,55.39
+			.talk Vindicator Aesom##17844
+			..turnin Don't Drink the Water##9748
+			..accept Limits of Physical Exhaustion##9746
+		step
+			goto Bloodmyst Isle,55.64,55.22
+			.talk Vindicator Kuros##17843
+			..turnin Matis the Cruel##9711
+		step
+			goto Bloodmyst Isle,25.07,54.14
+			.kill 10 Sunhawk Pyromancer##17608|q 9746/1
+			.kill 10 Sunhawk Defender##17607|q 9746/2
+		step
+			goto Bloodmyst Isle,55.55,55.40
+			.talk Vindicator Aesom##17844
+			..turnin Limits of Physical Exhaustion##9746
+			..accept The Sun Gate##9740				
+		step
+			goto Bloodmyst Isle,18.93,63.63
+			.' Destroy the Sun Gate|q 9740/1
+			.info It looks like a big purple portal floating above the red lake.
+		step
+			goto Bloodmyst Isle,55.56,55.40
+			.talk Vindicator Aesom##17844
+			..turnin The Sun Gate##9740
+		step
+			goto Bloodmyst Isle,55.55,55.41
+			.talk Vindicator Aesom##17844
+			..accept What We Know...##9753
+			only Draenei
+		step
+			goto Bloodmyst Isle,52.7,53.2
+			.talk Exarch Admetius##17658
+			..turnin What We Know...##9753 
+			..accept What We Don't Know...##9756
+			only Draenei
+		step
+			goto Bloodmyst Isle,54.42,54.27
+			.talk Captured Sunhawk Agent##17824
+			.' Tell him "I'm a prisoner, what does it look like? The draenei filth captured me as I exited the sun gate. They killed our portal controllers and destroyed the gate. The Sun King will be most displeased with this turn of events."
+			.' Recover the Sunhawk Information|q 9756/1
+			only Draenei
+		step
+			goto Bloodmyst Isle,52.7,53.2
+			.talk Exarch Admetius##17658
+			..turnin What We Don't Know...##9756
+			..accept Vindicator's Rest##9760
+			only Draenei
+		step
+			goto Bloodmyst Isle,30.75,46.85
+			.talk Vindicator Corin##17986
+			..turnin Vindicator's Rest##9760
+			..accept Clearing the Way##9761
+			only Draenei
+		step
+			goto Bloodmyst Isle,30.26,45.92
+			.talk Scout Jorli##17927
+			..turnin Talk to the Hand##10064
+			..accept Cutting a Path##10065
+		step
+			goto Bloodmyst Isle,30.23,45.86
+			.talk Scout Loryi##17926
+			..accept Critters of the Void##9741
+		step
+			goto Bloodmyst Isle,30.75,46.85
+			.talk Vindicator Corin##17986
+			..turnin Vindicator's Rest##9760
+			..accept Clearing the Way##9761
+			only Draenei
+		step
+			goto Bloodmyst Isle,30.75,46.85
+			.talk Vindicator Corin##17986
+			..accept Oh, the Tangled Webs They Weave##10066
+			..accept Fouled Water Spirits##10067
+		step
+			goto Bloodmyst Isle,31.5,55.8
+			.kill 8 Mutated Tangler##17346|q 10066/1
+		step
+			goto Bloodmyst Isle,31.5,55.8
+			.kill 10 Enraged Ravager##17527|q 10065/1
+		step
+			goto Bloodmyst Isle,20.26,61.65
+			.kill 12 Void Critter##17887|q 9741/1
+		step
+			goto Bloodmyst Isle,19.22,54.70
+			.kill 8 Sunhawk Saboteur##17609|q 9761/2
+			only Draenei
+		step
+			goto Bloodmyst Isle,19.5,53.9
+			.kill 8 Sunhawk Agent##17610|q 9761/1
+			only Draenei
+		step
+			goto Bloodmyst Isle,30.75,46.85
+			.talk Vindicator Corin##17986
+			..turnin Clearing the Way##9761
+			only Draenei
+		step
+			goto Bloodmyst Isle,30.75,46.85
+			.talk Vindicator Corin##17986
+			..turnin Oh, the Tangled Webs They Weave##10066
+		step
+			goto Bloodmyst Isle,30.26,45.92
+			.talk Scout Jorli##17927
+			..turnin Cutting a Path##10065
+		step
+			goto Bloodmyst Isle,30.7,40.3
+			.kill 6 Fouled Water Spirit##17358|q 10067/1
+		step
+			goto Bloodmyst Isle,30.75,46.85
+			.talk Vindicator Corin##17986
+			..turnin Fouled Water Spirits##10067
+		step
+			goto Bloodmyst Isle,30.83,46.65
+			.talk Demolitionist Legoso##17982
+			..accept Ending Their World##9759
+			only Draenei
+		step
+			goto Bloodmyst Isle,14.25,53.67
+			.kill Sironas##17678 |n
+			.info Follow Demolitionist Legoso and protect him.
+			.info Stay close to him.
+			.' Watch the dialogue
+			.' Destroy the Vector Coil and Slay Sironas|q 9759/1
+			only Draenei
+		step
+			goto Bloodmyst Isle,24.86,34.38
+			.talk Researcher Cornelius##17686
+			..accept They're Alive! Maybe...##9670
+		step
+			goto Bloodmyst Isle,18.19,37.78
+			.kill Zarakh##17683|q 9669/3
+		step
+			goto Bloodmyst Isle,18.19,37.78
+			.kill Webbed Creature##17680 |n
+			.info They look like wriggling white cocoons on the ground around this area.
+			.' Free 5 Expedition Researchers|q 9670/1
+		step
+			goto Bloodmyst Isle,18.19,37.78
+			.kill 8 Myst Leecher##17523|q 9669/1
+		step
+			goto Bloodmyst Isle,18.19,37.78
+			.kill 8 Myst Spinner##17522|q 9669/2
+		step
+			goto Bloodmyst Isle,24.87,34.37
+			.talk Researcher Cornelius##17686
+			..turnin They're Alive! Maybe...##9670
+		step
+			goto Bloodmyst Isle,53.25,57.04
+			.talk Achelus##17676
+			..turnin The Missing Expedition##9669
+		step
+			goto Bloodmyst Isle,52.68,53.23
+			.talk Exarch Admetius##17658
+			..turnin Ending Their World##9759
+			only Draenei
+		step
+			goto Bloodmyst Isle,55.55,55.40
+			.talk Vindicator Aesom##17844
+			..turnin Critters of the Void##9741
+		step
+			goto Azuremyst Isle,24.18,54.35
+			.talk Huntress Kella Nightbow##17614
+			..turnin Newfound Allies##9632
+			..accept The Way to Auberdine##9633
+		step
+			goto Darkshore,37.4,40.1
+			.talk Thundris Windweaver##3649
+			..turnin The Way to Auberdine##9633
+		step
+			.' Congratulations! +63 quests for achievement "Loremaster Kalimdor".
+]])
+
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Teldrassil",[[
 author danaton
 description This guide contain quest-chain (47 quests) for Teldrassil Night Elf location.
@@ -2272,3 +2992,479 @@ startlevel 20
 			..turnin The Absent Minded Prospector (5)##943
 ]])
 
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Ashenvale",[[
+author danaton
+description This guide contain quest-chain (48 quests) for Ashenvale location.
+startlevel 30
+		step
+			.' First you need complete quest-guide: "Darkshore".
+		step
+			goto Darnassus,38.7,81.3
+			.talk Emissary Valustraa##17105
+			..accept Travel to Astranaar##9432
+			only Draenei
+		step
+			goto Darkshore,37.4,40.1
+			.talk Thundris Windweaver##3649
+			..accept Onward to Ashenvale##10752
+		step
+			goto Darkshore,38.7,87.4
+			.talk Therylune##3584
+			..accept Therylune's Escape##945
+			.' Escort Therylune away from the Master's Glaive|q 945/1
+		step
+			goto Darkshore,44.4,76.4
+			.talk Kerlonian Evershade##11218
+			..accept The Sleeper Has Awakened##5321
+			.' Click Kerlonian's Chest next to him
+			.collect Horn of Awakening##13536|q 5321/2
+		step
+			goto Ashenvale,26.8,36.8
+			.' Escort Kerlonian Evershade south to Ashenvale, then south to Maestra's Post|q 5321/1
+			.info Do NOT follow the road. Walk in the forest as much as you can. This will allow you to avoid the ambushes along the way.
+			.' Use your Horn of Awakening on Kerlonian Evershade when he falls asleep to wake him up|use Horn of Awakening##13536
+		step
+			goto Ashenvale,27.3,35.6
+			.talk Liladris Moonriver##11219
+			..turnin The Sleeper Has Awakened##5321
+		step
+			goto Ashenvale,26.4,38.6
+			.talk Orendil Broadleaf##3847
+			..accept Bathran's Hair##1010
+		step
+			goto Ashenvale,29.6,24
+			.' Collect the Plant Bundles
+			.info They look like little white straw teepees on the ground around this area.
+			.get 5 Bathran's Hair|q 1010/1
+		step
+			goto Ashenvale,26.4,38.6
+			.talk Orendil Broadleaf##3847
+			..turnin Bathran's Hair##1010
+			..accept Orendil's Cure##1020
+		step
+			goto Ashenvale,26.2,38.9
+			.talk Feero Ironhand##4484
+			..accept Supplies to Auberdine##976
+		step
+			goto Ashenvale,28.6,14.6
+			.' Protect Feero Ironhand|q 976/1
+			.kill Aligar the Tormentor##3898 |n
+			.kill Balizar the Umbrage##3899 |n
+		step
+			goto Ashenvale,26.2,38.9
+			.talk Delgren the Purifier##3663
+			..turnin Supplies to Auberdine##976
+		step
+			goto Ashenvale,22.7,51.9
+			.talk Therysil##3585
+			..turnin Therylune's Escape##945
+		step
+			goto Ashenvale,34.9,49.7
+			.talk Vindicator Palanaar##17106
+			..turnin Travel to Astranaar##9432
+			only Draenei
+		step
+			goto Ashenvale,36.6,49.6
+			.talk Raene Wolfrunner##3691
+			..turnin Onward to Ashenvale##10752
+			..accept Raene's Cleansing (1)##991
+			..accept Culling the Threat##1054
+		step
+			goto Ashenvale,34.6,48.8
+			.talk Shindrell Swiftfire##3845
+			..accept The Zoram Strand##1008
+		step
+			goto Ashenvale,37.4,51.8
+			.talk Pelturas Whitemoon##3894
+			..turnin Orendil's Cure##1020
+			..accept Elune's Tear##1033
+		step
+			.' The path to 'Elune's Tear' starts here|goto Ashenvale,44.0,55.0|noway|q 1033
+		step
+			goto Ashenvale,46.2,46
+			.' Collect an Elune's Tear
+			.info They look like big white pearls at the base of the tree on the island in the middle of the lake.
+			.get Elune's Tear|q 1033/1
+		step
+			goto Ashenvale,36.23,33.37
+			.from Dal Bloodclaw##3987
+			.get Dal Bloodclaw's Skull|q 1054/1
+		step
+			goto Ashenvale,36.6,49.6
+			.talk Raene Wolfrunner##3691
+			..turnin Culling the Threat##1054
+		step
+			goto Ashenvale,37.4,51.8
+			.talk Pelturas Whitemoon##3894
+			..turnin Elune's Tear##1033
+			..accept The Ruins of Stardust##1034
+		step
+			goto Ashenvale,33.7,66.5
+			.' Collect Stardust Covered Bushes
+			.info They look like sparkling bushes around this area.
+			.get 5 Handful of Stardust|q 1034/1
+		step
+			goto Ashenvale,37.4,51.8
+			.talk Pelturas Whitemoon##3894
+			..turnin The Ruins of Stardust##1034
+			..accept Fallen Sky Lake##1035
+		step
+			goto Ashenvale,20.3,42.3
+			.' Interact with Teronis Corpse
+			.info Teronis' Corpse is on the little island in the middle of the lake.
+			..turnin Raene's Cleansing (1)##991
+			..accept Raene's Cleansing (2)##1023
+			.from Saltspittle Warrior##3739, Saltspittle Puddlejumper##3737, Saltspittle Muckdweller##3740, Saltspittle Oracle##3742
+			.get Glowing Gem|q 1023/1
+		step
+			goto Ashenvale,14.8,31.3
+			.talk Talen##3846
+			..accept The Ancient Statuette##1007
+		step
+			goto Ashenvale,14.2,20.6
+			.' Collect the Ancient Statuette
+			.info Looks like a stone figurine on the ground.
+			.get Ancient Statuette|q 1007/1
+		step
+			goto Ashenvale,14.8,31.3
+			.talk Talen##3846
+			..turnin The Ancient Statuette##1007
+			..accept Ruuzel##1009
+		step
+			goto Ashenvale,7.4,12.6
+			.from Ruuzel##3943
+			.get Ring of Zoram|q 1009/1
+		step
+			goto Ashenvale,14.2,26.8
+			.from Wrathtail Sorceress##3717, Wrathtail Wave Rider##3713
+			.get 20 Wrathtail Head|q 1008/1
+		step
+			goto Ashenvale,14.8,31.3
+			.talk Talen##3846
+			..turnin Ruuzel##1009
+		step
+			goto Ashenvale,34.7,48.8
+			.talk Shindrell Swiftfire##3845
+			..turnin The Zoram Strand##1008
+			..accept Kayneth Stillwind##4581
+		step
+			goto Ashenvale,34.9,49.7
+			.talk Vindicator Palanaar##17106
+			..accept A Helping Hand##9533
+		step
+			goto Ashenvale,36.6,49.6
+			.talk Raene Wolfrunner##3691
+			..turnin Raene's Cleansing (2)##1023
+			..accept Raene's Cleansing (3)##1024
+			..accept An Aggressive Defense##1025
+		step
+			goto Ashenvale,53.5,46.3
+			.talk Shael'dryn##3916
+			..turnin Raene's Cleansing (3)##1024
+			..accept Raene's Cleansing (4)##1026
+		step
+			goto Ashenvale,50.9,60.2
+			.kill 1 Foulweald Den Watcher|q 1025/1
+			.kill 2 Foulweald Ursa|q 1025/2
+			.kill 10 Foulweald Totemic|q 1025/3
+			.kill 12 Foulweald Warrior|q 1025/4
+		step
+			goto Ashenvale,49.8,67.2
+			.talk Sentinel Velene Starstrike##3885
+			..accept Elemental Bracers##1016
+		step
+			goto Ashenvale,49.4,69.3
+			.from Befouled Water Elemental##3917+
+			.collect 5 Intact Elemental Bracer##12220|q 1016|sticky
+			.' Use your Divining Scroll on the Intact Elemental Bracers|use Divining Scroll##5456
+			.get Divined Scroll|q 1016/1
+		step
+			goto Ashenvale,49.8,67.2
+			.talk Sentinel Velene Starstrike##3885
+			..turnin Elemental Bracers##1016
+			..accept Mage Summoner##1017
+		step
+			goto Ashenvale,66.7,82.2
+			.from Shadethicket Oracle##3931
+			.get Fallen Moonstone|q 1035/1
+		step
+			goto Ashenvale,85.2,44.7
+			.talk Kayneth Stillwind##3848
+			..turnin Kayneth Stillwind##4581
+			..accept Forsaken Diseases##1011
+			..accept The Lost Chalice##9519
+		step
+			goto Ashenvale,86,44.1
+			.talk Sentinel Melyria Frostshadow##3880
+			..accept The Howling Vale##1022
+		step
+			goto Ashenvale,86,44.4
+			.talk Sentinel Luciel Starwhisper##17287
+			..accept Report from the Northern Front##9521
+		step
+			goto Ashenvale,86.8,44.8
+			.talk Architect Nemos##17291
+			..turnin A Helping Hand##9533
+			..accept A Shameful Waste##9517
+		step
+			goto Ashenvale,87.1,43.5
+			.talk Illiyana##3901
+			..accept Vile Satyr! Dryads in Danger!##1021
+		step
+			goto Ashenvale,78.3,44.8
+			.talk Anilia##3920
+			..turnin Vile Satyr! Dryads in Danger!##1021
+			..accept The Branch of Cenarius##1031
+		step
+			goto Ashenvale,78,42.6
+			.from Geltharis##4619
+			.get Branch of Cenarius|q 1031/1
+		step
+			goto Ashenvale,81.3,49.1
+			.' Collect the Chalice of Elune
+			.info It's a blue glowing pedestal sitting ont he right side of the red tower thing.
+			.get Chalice of Elune|q 9519/1
+		step
+			goto Ashenvale,80.3,49.1
+			.' Collect the Tainted Wood bundles
+			.info They look like little bundles of wood on the ground around this area.
+			.get 5 Satyrnaar Fel Wood|q 9517/2
+		step
+			goto Ashenvale,75.3,72.3
+			.' Collect the Bottle of Disease on the table
+			.get Bottle of Disease|q 1011/1
+		step
+			goto Ashenvale,61.9,83.9
+			.talk Sentinel Farsong##14733
+			..turnin Report from the Northern Front##9521
+		step
+			goto Ashenvale,54.4,35.4
+			.from Withered Ancient##3919, Crazed Ancient##3834
+			.collect Wooden Key##5475|q 1026|sticky
+			.' Open the small chest here
+			.get Iron Shaft|q 1026/1
+		step
+			goto Ashenvale,50.5,39.1
+			.' Collect the Tome of Mel'Thandris
+			.info Through the cave, down the path, sitting on a little round table.
+			.' View the Tome of Mel'Thandris|q 1022/1
+		step
+			goto Ashenvale,53.5,46.3
+			.talk Shael'dryn##3916
+			..turnin Raene's Cleansing (4)##1026
+			..accept Raene's Cleansing (5)##1027
+		step
+			goto Ashenvale,74.1,73.6
+			.from Rotting Slime##3928
+			.' Click the Rusty Chest that spawns
+			.get Iron Pommel|q 1027/1
+		step
+			goto Ashenvale,53.5,46.3
+			.talk Shael'dryn##3916
+			..turnin Raene's Cleansing (5)##1027
+			..accept Raene's Cleansing (6)##1028
+		step
+			goto Ashenvale,56.4,49.2
+			.' Interact with the Hidden Shrine
+			.info Follow the path up the mountain. It's a little stone shrine in a hollowed out tree. The path dead ends into the Hidden Shrine.
+			..turnin Raene's Cleansing (6)##1028
+			..accept Raene's Cleansing (7)##1055
+		step
+			goto Ashenvale,53.5,46.3
+			.talk Shael'dryn##3916
+			..turnin Raene's Cleansing (7)##1055
+			..accept Raene's Cleansing (8)##1029
+		step
+			goto Ashenvale,37.4,51.8
+			.talk Pelturas Whitemoon##3894
+			..turnin Fallen Sky Lake##1035
+		step
+			goto Ashenvale,36.6,49.6
+			.talk Raene Wolfrunner##3691
+			..turnin An Aggressive Defense##1025
+			..turnin Raene's Cleansing (8)##1029
+			..accept Raene's Cleansing (9)##1030
+		step
+			goto Ashenvale,50.8,75.1
+			.' Use Dartol's Rod of Transformation|use Dartol's Rod of Transformation##5462
+			.talk Krolg##3897
+			..turnin Raene's Cleansing (9)##1030
+			..accept Raene's Cleansing (10)##1045
+		step
+			goto Ashenvale,54.7,79.6
+			.from Ran Bloodtooth##3696
+			.get 1 Ran Bloodtooth's Skull##5388|q 1045/3
+			.kill 4 Bloodtooth Guard##3932|q 1045/2
+		step
+			goto Ashenvale,50.8,75.1
+			.' Use Dartol's Rod of Transformation|use Dartol's Rod of Transformation##5462
+			.talk Krolg##3897
+			..turnin Raene's Cleansing (10)##1045
+			..accept Raene's Cleansing (11)##1046
+		step
+			goto Ashenvale,36.6,49.6
+			.talk Raene Wolfrunner##3691
+			..turnin Raene's Cleansing (11)##1046
+		step
+			goto 86.4,46.5
+			.talk Gnarl##17310
+			..accept Reclaiming Felfire Hill##9526
+		step
+			goto Ashenvale,85.2,44.7
+			.talk Kayneth Stillwind##3848
+			..turnin Forsaken Diseases##1011
+			..turnin The Lost Chalice##9519
+			..accept Insane Druids##1012
+		step
+			goto Ashenvale,86,44.1
+			.talk Sentinel Melyria Frostshadow##3880
+			..turnin The Howling Vale##1022
+			..accept Velinde Starsong##1037
+		step
+			goto Ashenvale,86,44.4
+			.talk Sentinel Luciel Starwhisper##17287
+			..accept Agents of Destruction##9518
+		step
+			goto Ashenvale,86.5,43.6
+			.talk Vindicator Vedaar##17303
+			..accept Destroy the Legion##9516
+		step
+			goto Ashenvale,87.1,43.5
+			.talk Illiyana##3901
+			..turnin The Branch of Cenarius##1031
+			..accept Satyr Slaying!##1032
+		step
+			goto Ashenvale,79,46.2
+			.from Xavian Felsworn##3755, Xavian Betrayer##3754, Xavian Rogue##3752, Xavian Hellcaller##3757
+			.get 16 Satyr Horns|q 1032/1
+		step
+			goto Ashenvale,88.8,59.5
+			.kill Overseer Gorthak##17304|q 9518/1
+		step
+			goto Ashenvale,86.4,52.9
+			.' Collect the Lumber Piles
+			.info The Lumber Piles look like stacked planks of wood around this area.
+			.get 15 Warsong Lumber|q 9517/1
+			.kill 2 Warsong Shredder|q 9518/2
+			.kill 5 Horde Deforester|q 9518/3
+			.kill 10 Horde Scout|q 9518/4
+		step
+			goto Ashenvale,83.8,67.7
+			.kill 6 Mannoroc Lasher|q 9516/1
+			.kill 6 Roaming Felguard|q 9516/2
+			.kill 6 Searing Infernal|q 9516/3
+			.' Interact with the Fertile Dirt Mounds
+			.' Plant 8 Tree Seedlings|goal 8 Tree Seedling Planted|q 9526/1
+			.get Diabolical Plans|n
+			.' Click the Diabolical Plans|use Diabolical Plans##23777
+			..accept Diabolical Plans##9520
+		step
+			.' Start to Going Down this tunnel|goto Ashenvale,75.7,75.3|noway|q 1012
+		step
+			goto Ashenvale,77.1,74
+			.kill Taneel Darkwood##3940|q 1012/1
+		step
+			.' Jump Down Here|goto Ashenvale,77.44,75.14|noway|q 1012
+		step
+			goto Ashenvale,78,72.7
+			.kill Uthil Mooncall##3941|q 1012/2
+		step
+			goto Ashenvale,75.1,74.2
+			.kill Mavoris Cloudsbreak##3942|q 1012/3
+		step
+			goto The Barrens,48.2,19.1
+			.from Sarilus Foulborne##3986
+			.info At the very top of the mountain.
+			.get 1 Sarilus Foulborne's Head##5537|q 1017/1
+		step
+			goto Ashenvale,49.8,67.2
+			.talk Sentinel Velene Starstrike##3885
+			..turnin Mage Summoner##1017
+		step
+			goto Ashenvale,86.4,46.5
+			.talk Gnarl##17310
+			..turnin A Shameful Waste##9517
+			..turnin Reclaiming Felfire Hill##9526
+		step
+			goto Ashenvale,85.2,44.7
+			.talk Kayneth Stillwind##3848
+			..turnin Insane Druids##1012
+		step
+			goto Ashenvale,86,44.1
+			.talk Sentinel Luciel Starwhisper##17287
+			..turnin Agents of Destruction##9518
+		step
+			goto Ashenvale,86.5,43.6
+			.talk Vindicator Vedaar##17303
+			..turnin Destroy the Legion##9516
+			..turnin Diabolical Plans##9520
+			..accept Never Again!##9522
+		step
+			goto Ashenvale,87.1,43.5
+			.talk Illiyana##3901
+			..turnin Satyr Slaying!##1032
+		step
+			.' Go To Canyon|goto Ashenvale,84.19,71.85|noway|q 9522
+		step
+			goto Ashenvale,89.8,76.7
+			.kill Gorgannon##17300|q 9522/1
+		step
+			goto Ashenvale,79,84.7
+			.kill Diathorus the Seeker##6072|q 9522/2
+		step
+			goto Ashenvale,86.5,43.6
+			.talk Vindicator Vedaar##17303
+			..turnin Never Again!##9522
+		step
+			goto Darnassus,61.8,39.2
+			.talk Thyn'tel Bladeweaver##8026
+			..turnin Velinde Starsong##1037
+			..accept Velinde's Effects##1038
+		step
+			goto Darnassus,62.3,83.3
+			.collect 1 Velinde's Journal##5520|q 1038/1
+		step
+			goto Darnassus,61.8,39.2
+			.talk Thyn'tel Bladeweaver##8026
+			..turnin Velinde's Effects##1038
+			..accept The Barrens Port##1039
+		step
+			goto The Barrens,63.4,38.5
+			.talk Wharfmaster Dizzywig##3453
+			..turnin The Barrens Port##1039
+			..accept Passage to Booty Bay##1040
+		step
+			.' Ride the boat to Booty Bay|goto Stranglethorn Vale|noway|q 1040
+		step
+			goto Stranglethorn Vale,27.4,74.1
+			.talk Caravaneer Ruzzgot##3945
+			..turnin Passage to Booty Bay##1040
+			..accept The Caravan Road##1041
+		step
+			goto Duskwood,72.5,46.9
+			.talk Clerk Daltry##267
+			..turnin The Caravan Road##1041
+			..accept The Carevin Family##1042
+		step
+			goto Duskwood,75.3,49
+			.talk Jonathan Carevin##661
+			..turnin The Carevin Family##1042
+			..accept The Scythe of Elune##1043
+		step
+			goto Duskwood,73.5,79.1
+			.' Find evidence of the Scythe of Elune|q 1043/1
+			.info Interact with Mound of Dirt
+		step
+			goto Duskwood,75.3,49
+			.talk Jonathan Carevin##661
+			..turnin The Scythe of Elune##1043
+			..accept Answered Questions##1044
+		step
+			goto Darnassus,61.8,39.2
+			.talk Thyn'tel Bladeweaver##8026
+			..turnin Answered Questions##1044
+		step
+			.' Congratulations! +48 quests for achievement "Loremaster Kalimdor".
+]])
+
+ZygorGuidesViewer.AllianceInstalled=true
