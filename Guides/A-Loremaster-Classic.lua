@@ -3467,4 +3467,217 @@ startlevel 30
 			.' Congratulations! +48 quests for achievement "Loremaster Kalimdor".
 ]])
 
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Stonetalon Mountains",[[
+author danaton
+description This guide contain quest-chain (28 quests) for Stonetalon Mountains location.
+startlevel 30
+		step
+			goto Stormwind,53,86.6
+			.talk Collin Mauren##4078
+			..accept Retrieval for Mauren##1078
+		step
+			goto Ashenvale,34.7,48.8
+			.talk Shindrell Swiftfire##3845
+			..accept Pridewings of Stonetalon##1134
+		step
+			goto Ashenvale,34.9,49.8
+			.talk Sentinel Thenysil##4079
+			..accept On Guard in Stonetalon (1)##1070
+		step
+			goto Ashenvale,35.8,49.1
+			.talk Faldreas Goeth'Shael##3996
+			..accept Journey to Stonetalon Peak##1056
+		step
+			goto The Barrens,63,37.2
+			.talk Sputtervalve##3442
+			..accept Ziz Fizziks##1483
+		step
+			goto Stonetalon Mountains,59.9,66.8
+			.talk Kaela Shadowspear##4080
+			..turnin On Guard in Stonetalon (1)##1070
+			..accept On Guard in Stonetalon (2)##1085
+		step
+			goto Stonetalon Mountains,59.5,67.1
+			.talk Gaxim Rustfizzle##4077
+			..turnin On Guard in Stonetalon (2)##1085
+			..accept A Gnome's Respite##1071
+		step
+			goto Stonetalon Mountains,59,62.6
+			.talk Ziz Fizziks##4201
+			..turnin Ziz Fizziks##1483
+			..accept Super Reaper 6000##1093
+		step
+			goto Stonetalon Mountains,71.9,60
+			.talk Piznik##4276
+			..accept Gerenzo's Orders (1)##1090
+		step
+			.' Keep Piznik safe while he mines the mysterious ore|q 1090/1
+		step
+			goto Stonetalon Mountains,71.9,60
+			.talk Piznik##4276
+			..turnin Gerenzo's Orders (1)##1090
+			..accept Gerenzo's Orders (2)##1092
+		step
+			goto Stonetalon Mountains,63.8,53.75
+			.from Venture Co. Operator##3988
+			.get Super Reaper 6000 Blueprints |q 1093/1
+			.' You can find more|at Stonetalon Mountains,72.56,56.43
+		step
+			goto Stonetalon Mountains,61.7,55.5
+			.kill 10 Venture Co. Logger|q 1071/1
+			.kill 10 Venture Co. Deforester|q 1071/2
+		step
+			goto Stonetalon Mountains,59,62.6
+			.talk Ziz Fizziks##4201
+			..turnin Gerenzo's Orders (2)##1092
+			..turnin Super Reaper 6000##1093
+			..accept Further Instructions (1)##1094
+		step
+			goto Stonetalon Mountains,59.7,67
+			.talk Gaxim Rustfizzle##4077
+			..turnin A Gnome's Respite##1071
+			..accept An Old Colleague##1072
+			..accept A Scroll from Mauren##1075
+		step
+			goto Stonetalon Mountains,53.4,42.7
+			.from Pridewing Wyvern##4012, Pridewing Consort##4014
+			.get 12 Pridewing Venom Sac|q 1134/1
+		step
+			goto Stonetalon Mountains,37.1,8.1
+			.talk Keeper Albagorm##3994
+			..turnin Journey to Stonetalon Peak##1056
+			..accept Reclaiming the Charred Vale (1)##1057
+		step
+			goto Stonetalon Mountains,31.3,60.4
+			.kill 7 Bloodfury Harpy##4022|q 1057/1
+			.kill 7 Bloodfury Ambusher##4025|q 1057/2
+		step
+			goto Stonetalon Mountains,35.3,67.6
+			.kill 7 Bloodfury Slayer##4024|q 1057/3
+			.kill 7 Bloodfury Roguefeather##4023|q 1057/4
+		step
+			goto Stonetalon Mountains,30.9,69.8
+			.from Scorched Basilisk##4041, Singed Basilisk##4042, Blackened Basilisk##4044
+			.get 8 Crystalized Scales##5675|q 1078/1
+		step
+			goto Stonetalon Mountains,37.1,8.1
+			.talk Keeper Albagorm##3994
+			..turnin Reclaiming the Charred Vale (1)##1057
+			..accept Reclaiming the Charred Vale (2)##1059
+		step
+			goto Stonetalon Mountains,36.4,7.2
+			.talk Teloren##4407
+			.' Fly to Astranaar, Ashenvale|goto Ashenvale|noway|q 1134
+		step
+			goto Ashenvale,34.7,48.8
+			.talk Shindrell Swiftfire##3845
+			..turnin Pridewings of Stonetalon##1134
+		step
+			goto The Barrens,63,37.2
+			.talk Sputtervalve##3442
+			..turnin Further Instructions (1)##1094
+			..accept Further Instructions (2)##1095
+		step
+			goto Stonetalon Mountains,59,62.6
+			.talk Ziz Fizziks##4201
+			..turnin Further Instructions (2)##1095
+			..accept Gerenzo Wrenchwhistle##1096
+		step
+			goto Stonetalon Mountains,64.5,40.3
+			.from Gerenzo Wrenchwhistle##4202
+			.get 1 Gerenzo's Mechanical Arm##5736|q 1096/1
+			.' Path Up here|at 69.05,39.95
+		step
+			goto Stonetalon Mountains,59,62.6
+			.talk Ziz Fizziks##4201
+			..turnin Gerenzo Wrenchwhistle##1096
+		step
+			goto Feralas,89.6,46.6
+			.talk Falfindel Waywarder##4048
+			..turnin Reclaiming the Charred Vale (2)##1059
+		step
+			goto Stormwind,53,86.6
+			.talk Collin Mauren##4078
+			..turnin A Scroll from Mauren##1075
+			..turnin Retrieval for Mauren##1078
+			..accept Devils in Westfall##1076
+		step
+			goto Westfall,54.6,41.2
+			.from Dust Devil##832
+			.get 1 Dust Devil Debris##5669|q 1076/1
+			.' You can find more|at 43.71,41.42
+			.' You can find more|at 46.05,48.2
+		step
+			goto Stormwind,53,86.6
+			.talk Collin Mauren##4078
+			..turnin Devils in Westfall##1076
+			..accept Special Delivery for Gaxim##1077
+		step
+			goto Ironforge,72.1,51.9
+			.talk Lomac Gearstrip##4081
+			..turnin An Old Colleague##1072
+			..accept Ineptitude + Chemicals = Fun (1)##1073
+		step
+			goto Ironforge,24.2,74.7
+			.talk Auctioneer Redmuse##8720
+			.buy 4 Minor Mana Potion##2455|q 1073/1
+			.buy 2 Elixir of Minor Fortitude##2458|q 1073/2
+		step
+			goto Ironforge,72.1,51.9
+			.talk Lomac Gearstrip##4081
+			..turnin Ineptitude + Chemicals = Fun (1)##1073
+			..accept Ineptitude + Chemicals = Fun (2)##1074
+		step
+			goto Stonetalon Mountains,59.7,67
+			.talk Gaxim Rustfizzle##4077
+			..turnin Ineptitude + Chemicals = Fun (2)##1074
+			..turnin Special Delivery for Gaxim##1077
+			..accept Covert Ops - Alpha##1079
+			..accept Covert Ops - Beta##1080
+		step
+			goto Stonetalon Mountains,66.1,51.3
+			.collect 1 Venture Co. Engineering Plans##5718|q 1079/1
+			.info Lying on the crate.
+		step
+			goto Stonetalon Mountains,74.5,59.3
+			.collect 1 Venture Co. Letters##5717|q 1080/1
+			.info Lying on the crate.
+		step
+			goto Stonetalon Mountains,59.7,67
+			.talk Gaxim Rustfizzle##4077
+			..turnin Covert Ops - Alpha##1079
+			..turnin Covert Ops - Beta##1080
+			..accept Kaela's Update##1091
+		step
+			goto Stonetalon Mountains,59.9,66.8
+			.talk Kaela Shadowspear##4080
+			..turnin Kaela's Update##1091
+			..accept Enraged Spirits##1083
+			..accept Wounded Ancients##1084
+		step
+			goto Stonetalon Mountains,33.9,69.9
+			.from Charred Ancient##4028, Blackened Ancient##4029, Vengeful Ancient##4030
+			.get 1 Corroded Shrapnel##5664|q 1084/1
+		step
+			goto Stonetalon Mountains,33.9,69.9
+			.from Rogue Flame Spirit##4036, Burning Ravager##4037, Burning Destroyer##4038
+			.get 8 Smoldering Embers##5659|q 1083/1
+		step
+			goto Stonetalon Mountains,59.9,66.8
+			.talk Kaela Shadowspear##4080
+			..turnin Enraged Spirits##1083
+			..turnin Wounded Ancients##1084
+			..accept Update for Sentinel Thenysil##1082
+		step
+			goto Ashenvale,34.9,49.8
+			.talk Sentinel Thenysil##4079
+			..turnin Update for Sentinel Thenysil##1082
+			..accept Reception from Tyrande##1081
+		step
+			goto Darnassus,39.1,81.6
+			.talk Tyrande Whisperwind##7999
+			..turnin Reception from Tyrande##1081
+		step
+			.' Congratulations! +28 quests for achievement "Loremaster Kalimdor".
+]])
 ZygorGuidesViewer.AllianceInstalled=true
