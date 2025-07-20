@@ -2,7 +2,7 @@
 if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Alliance" then return end
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\Elwynn Forest",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[20] Elwynn Forest",[[
 author danaton
 description This guide contain quest-chain (45 quests) for Elwynn Forest location.
 startlevel 20
@@ -408,10 +408,10 @@ startlevel 60
 		step
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\Westfall",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[30] Westfall",[[
 author danaton
 description This guide contain quest-chain (26 quests + 4 if Human race) for Westfall location.
-startlevel 25
+startlevel 30
 		step
 			.' First completed Elwynn Forest guide|tip Manually skip this step
 		step
@@ -713,7 +713,7 @@ startlevel 25
 			.' Completed!|tip Use next guide - Redridge Mountains
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Azuremyst Isle",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[20] Azuremyst Isle",[[
 author danaton
 description This guide contain quest-chain (55 quests) for Azuremyst Isle location.
 startlevel 20
@@ -1190,10 +1190,10 @@ startlevel 20
 			.' Recomended next to use guide "Bloodmyst Isle".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Bloodmyst Isle",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[30] Bloodmyst Isle",[[
 author danaton
 description This guide contain quest-chain (63 quests) for Bloodmyst Isle location.
-startlevel 20
+startlevel 30
 		step
 			goto The Exodar,81.51,51.46
 			.talk Torallius the Pack Handler##17584
@@ -1910,7 +1910,7 @@ startlevel 20
 			.' Congratulations! +63 quests for achievement "Loremaster Kalimdor".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Teldrassil",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[20] Teldrassil",[[
 author danaton
 description This guide contain quest-chain (47 quests) for Teldrassil Night Elf location.
 startlevel 20
@@ -2349,10 +2349,10 @@ startlevel 20
 			.' Completed!|tip Use next guide - Darkshore
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Darkshore",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[30] Darkshore",[[
 author danaton
 description This guide contain quest-chain (67 quests) for Darkshore location.
-startlevel 20
+startlevel 30
 		step
 			.' For comfortable execution quest chain, it is recommended to be level 20+|tip Manually skip this step
 		step
@@ -2824,8 +2824,6 @@ startlevel 20
 			.talk Therysil##3585
 			..turnin Therylune's Escape##945
 		step
-			ding 23
-		step
 			goto Ashenvale,25.3,60.7
 			.' Go to Path-Up|at 25.88,63.11
 			.from Ilkrud Magthrull##3664+
@@ -2992,10 +2990,10 @@ startlevel 20
 			..turnin The Absent Minded Prospector (5)##943
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Ashenvale",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[40] Ashenvale",[[
 author danaton
 description This guide contain quest-chain (48 quests) for Ashenvale location.
-startlevel 30
+startlevel 40
 		step
 			.' First you need complete quest-guide: "Darkshore".
 		step
@@ -3467,7 +3465,7 @@ startlevel 30
 			.' Congratulations! +48 quests for achievement "Loremaster Kalimdor".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\Stonetalon Mountains",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[30] Stonetalon Mountains",[[
 author danaton
 description This guide contain quest-chain (28 quests) for Stonetalon Mountains location.
 startlevel 30
@@ -3679,5 +3677,445 @@ startlevel 30
 			..turnin Reception from Tyrande##1081
 		step
 			.' Congratulations! +28 quests for achievement "Loremaster Kalimdor".
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Felwood",[[
+author danaton
+description This guide contain quest-chain (36 quests) for Felwood location.
+startlevel 60
+		step
+			goto Ironforge,75.77,23.37
+			.talk Laris Geardawdle##9616
+			..accept A Little Slime Goes a Long Way (1)##4512
+		step
+			.' Open Container in your bag|use Package of Empty Ooze Containers##11912
+			.collect 6 Empty Cursed Ooze Jar##11914|q 4512
+			.collect 6 Empty Tainted Ooze Jar##11948|q 4512
+		step
+			goto Un'Goro Crater,30.93,50.43
+			.talk Krakle##10302
+			..accept Finding the Source##974
+		step
+			goto Un'Goro Crater,49.70,45.74
+			.use Krakle's Thermometer##12472
+			.info At the top of the mountain.
+			.' Find the Hottest Area of Fire Plume Ridge|q 974/1
+		step
+			goto Un'Goro Crater,30.93,50.44
+			.talk Krakle##10302
+			..turnin Finding the Source##974
+			..accept The New Springs##980
+		step
+			goto Felwood,53.82,86.71
+			.talk Arathandris Silversky##9528
+			..accept Cleansing Felwood##4101
+		step
+			goto Felwood,51.21,82.11
+			.talk Greta Mosshoof##10922
+			..accept Forces of Jaedenar##5155
+		step
+			goto Felwood,51.35,81.51
+			.talk Eridan Bluewind##9116
+			..accept The Corruption of the Jadefire##4421
+		step
+			goto Felwood,41.22,71.29
+			.kill Cursed Ooze##7086|n
+			.use Empty Cursed Ooze Jar##11914
+			.info Use them on their corpses.
+			.collect 6 Filled Cursed Ooze Jar##11947|q 4512/1
+			.' You can find more around (1)|at 38.97,72.26
+			.' You can find more around (2)|at 40.06,67.15
+			.' You can find more around (3)|at 41.93,67.38
+		step
+			goto Felwood,32.24,67.10
+			.kill Xavathras##9454|q 4421/4
+		step
+			goto Felwood,32.90,66.62
+			.kill 11 Jadefire Felsworn##7109|q 4421/1
+			.' You can find more around (1)|at 41.87,85.18
+			.kill 9 Jadefire Shadowstalker##7110|q 4421/2
+			.info They are stealthed around this area.
+			.kill 9 Jadefire Rogue##7106|q 4421/3
+			.' You can find more around (2)|at 37.36,67.64
+		step
+			goto Felwood,40.76,59.25
+			.kill Tainted Ooze##7092|n
+			.use Empty Tainted Ooze Jar##11948
+			.info Use them on their corpses.
+			.collect 6 Filled Tainted Ooze Jar##11949|q 4512/2
+			.' You can find more around|at 40.28,55.59
+		step
+			goto Felwood,38.87,58.49
+			.kill 4 Jaedenar Hound##7125|q 5155/1
+			.info You can find more in the caves nearby in this area.
+			.' You can find more around (1)|at 37.87,60.72
+			.' You can find more around (2)|at 35.12,60.26
+		step
+			goto Felwood,38.87,58.49
+			.kill 4 Jaedenar Guardian##7113|q 5155/2
+			.info You can find more in the caves nearby in this area.
+			.' You can find more around (1)|at 37.87,60.72
+			.' You can find more around (2)|at 35.12,60.26
+		step
+			goto Felwood,38.87,58.49
+			.kill 6 Jaedenar Adept##7115|q 5155/3
+			.info You can find more in the caves nearby in this area.
+			.' You can find more around (1)|at 37.87,60.72
+			.' You can find more around (2)|at 35.12,60.26
+		step
+			goto Felwood,38.87,58.49
+			.kill 6 Jaedenar Cultist##7112|q 5155/4
+			.info You can find more in the caves nearby in this area.
+			You can find more around (1)|at 37.87,60.72
+			You can find more around (2)|at 35.12,60.26
+		step
+			goto Felwood,51.21,82.11
+			.talk Greta Mosshoof##10922
+			..turnin Forces of Jaedenar##5155
+			..accept Collection of the Corrupt Water##5157
+		step
+			goto Felwood,51.35,81.51
+			.talk Eridan Bluewind##9116
+			..turnin The Corruption of the Jadefire##4421
+			..accept Further Corruption##4906
+		step
+			goto Felwood,50.89,81.62
+			.talk Taronn Redfeather##10921
+			..accept Verifying the Corruption##5156
+		step
+			goto Felwood,51,81.6
+			.talk Ivy Leafrunner##10924
+			..accept To Winterspring!##5249
+		step
+			goto Felwood,50.93,85.01
+			.talk Grazle##11554
+			..accept Timbermaw Ally##8460
+		step
+			goto Felwood,48.32,92.99
+			.kill 6 Deadwood Warrior##7153|q 8460/1
+			.kill 6 Deadwood Pathfinder##7155|q 8460/2
+			.kill 6 Deadwood Gardener##7154|q 8460/3
+			.' You can find more around (1)|at 46.51,88.13
+			.' You can find more around (2)|at 48.77,89.62
+		step
+			goto Felwood,50.93,85.02
+			.talk Grazle##11554
+			..turnin Timbermaw Ally##8460
+			..accept Speak to Nafien##8462
+		step
+			goto Felwood,48.32,92.99
+			.from Deadwood Warrior##7153, Deadwood Gardener##7154, Deadwood Pathfinder##7155
+			.' Reach Unfriendly Reputation with the Timbermaw Hold Faction
+			.info You are about to go through a long tunnel soon, full of level 52-54 enemies.
+			.info If you are not at least Unfriendly with this faction, you will be attacked.
+			.' You can find more around (1)|at 46.51,88.13
+			.' You can find more around (2)|at 48.77,89.62
+			only if rep("Timbermaw Hold")>=Unfriendly
+		step
+			goto Felwood,35.20,59.87
+			.use the Empty Canteen##12922
+			.collect Corrupt Moonwell Water##12907|q 5157/1
+		step
+			goto Felwood,41.54,42.98
+			.' Explore the Craters in Shatter Scar Vale|q 5156/1
+			.info Be careful to avoid the elite Infernal Sentries around this area.
+		step
+			goto Felwood,41.36,41.19
+			.kill 2 Entropic Beast##9878|q 5156/2
+			.info Be careful to avoid the elite Infernal Sentries around this area.
+			.' You can find more around|at 43.63,40.55
+		step
+			goto Felwood,41.36,41.19
+			.kill 2 Entropic Horror##9879|q 5156/3
+			.info Be careful to avoid the elite Infernal Sentries around this area.
+			.' You can find more around|at 43.63,40.55
+		step
+			goto Felwood,39.07,22.35
+			.kill Xavaric##10648|q 4906/4
+			.collect Flute of Xavaric##11668|q 939 |future
+			..accept Flute of Xavaric##939|use Flute of Xavaric##11668
+		step
+			goto Felwood,40.73,19.72
+			.kill 8 Jadefire Hellcaller##7111|q 4906/1
+			.kill 8 Jadefire Betrayer##7108|q 4906/2
+			.kill 8 Jadefire Trickster##7107|q 4906/3
+			.collect 5 Jadefire Felbind##11674|q 939/1
+			.info They share spawn points with the others, so kill those also, if you can't find any.
+			.' You can find more around (1)|at 42.87,15.21
+			.' You can find more around (2)|at 39.10,21.69
+		step
+			goto Felwood,55.78,16.85
+			.from Warpwood Moss Flayer##7100, Warpwood Shredder##7101
+			.info Inside and outside the cave.
+			.get 15 Blood Amber##11503|q 4101/1
+		step
+			goto Felwood,51.21,82.11
+			.talk Greta Mosshoof##10922
+			..turnin Collection of the Corrupt Water##5157
+			..accept Seeking Spiritual Aid##5158
+		step
+			goto Felwood,51.35,81.51
+			.talk Eridan Bluewind##9116
+			..turnin Flute of Xavaric##939
+			..accept Felbound Ancients##4441
+			..turnin Further Corruption##4906
+		step
+			goto Felwood,50.89,81.62
+			.talk Taronn Redfeather##10921
+			..turnin Verifying the Corruption##5156
+		step
+			goto Felwood,53.82,86.71
+			.talk Arathandris Silversky##9528
+			..turnin Cleansing Felwood##4101 
+		step
+			goto Felwood,53.82,86.71
+			.talk Arathandris Silversky##9528
+			.' Tell her "I need a Cenarion beacon."
+			.collect 1 Cenarion Beacon##11511|q 5882|future
+		step
+			goto Felwood,48.32,92.99
+			.from Deadwood Warrior##7153, Deadwood Gardener##7154, Deadwood Pathfinder##7155
+			.collect 6 Corrupted Soul Shard##11515|q 5882 |future
+			.' You can find more around (1)|at 46.51,88.13
+			.' You can find more around (2)|at 48.77,89.62
+		step
+			goto Felwood,53.82,86.71
+			.talk Arathandris Silversky##9528
+			..accept Salve via Hunting##5887|instant
+		step
+			goto Darnassus,39.51,83.92
+			.use Eridan's Vial##11682
+			.info Inside the building.
+			.collect Vial of Blessed Water##5646|q 4441/1
+		step
+			goto The Barrens,65.83,43.78
+			.talk Islen Waterseer##5901
+			..turnin Seeking Spiritual Aid##5158
+			..accept Cleansed Water Returns to Felwood##5159
+		step
+			goto Felwood,51.21,82.11
+			.talk Greta Mosshoof##10922
+			..turnin Cleansed Water Returns to Felwood##5159
+			..accept Dousing the Flames of Protection##5165
+		step
+			goto Felwood,51.35,81.51
+			.talk Eridan Bluewind##9116
+			..turnin Felbound Ancients##4441
+			..accept Purified!##4442
+			..turnin Purified!##4442
+		step // move
+			goto Felwood,51.1,81.8
+			.talk Kelek Skykeeper##10920
+			..turnin Words of the High Chief##5128
+		step
+			goto Felwood,36.27,56.29
+			.' Interact with Brazier of Pain
+			.info Downstairs inside the cave, on the top level.
+			.' Extinguish the Brazier of Pain|q 5165/1
+		step
+			goto Felwood,36.48,55.18
+			.' Interact with Brazier of Hatred
+			.info Downstairs inside the cave, on the top level.
+			.' Extinguish the Brazier of Hatred|q 5165/2
+		step
+			goto Felwood,37.93,54.3
+			.' Interact with Brazier of Malice
+			.info Downstairs inside the cave, on the bottom level.
+			.' Extinguish the Brazier of Malice|q 5165/3
+		step
+			goto Felwood,36.73,53.26
+			.' Interact with Brazier of Suffering
+			.info Downstairs inside the cave, on the bottom level.
+			.' Extinguish the Brazier of Suffering|q 5165/4
+		step
+			goto Felwood,36.29,55.96
+			.from Jaedenar Enforcer##7114, Jaedenar Darkweaver##7118, Jaedenar Warlock##7120, Jaedenar Legionnaire##9862
+			.info All around inside the cave, on both levels.
+			.info Once you get this item, you will accept a quest from it that you will turn in on the top level of the cave.
+			.collect Blood Red Key##13140|q 5202 |future
+			..accept A Strange Red Key##5202|use the Blood Red Key##13140
+		step
+			goto Felwood,36.21,55.50
+			.talk Captured Arko'narin##11016
+			.info Downstairs inside the cave, on the top level.
+			..turnin A Strange Red Key##5202
+			..accept Rescue From Jaedenar##5203
+		step
+			.' Protect Arko'narin out of Shadow Hold|q 5203/1
+		step
+			goto Felwood,51.21,82.11
+			.talk Greta Mosshoof##10922
+			..turnin Dousing the Flames of Protection##5165
+			..accept A Final Blow##5242
+		step
+			goto Felwood,51.3,82
+			.talk Jessir Moonbow##11019
+			..turnin Rescue From Jaedenar##5203
+			..accept Retribution of the Light##5204
+		step
+			goto Felwood,35.4,58.7
+			.kill Rakaiah##9518|at 38.27,50.55|q 5204/1
+			.talk Remains of Trey Lightforge##11020
+			..turnin Retribution of the Light##5204
+			..accept The Remains of Trey Lightforge##5385
+		step
+			goto Felwood,38.85,46.8
+			.kill Moora##9861|q 5242/1
+			.kill Salia##9860|q 5242/2
+			.from Shadow Lord Fel'dan##9517
+			.get Shadow Lord Fel'dan's Head##13207|q 5242/3
+		step
+			goto Felwood,51.21,82.11
+			.talk Greta Mosshoof##10922
+			..turnin A Final Blow##5242
+		step
+			goto Felwood,51.3,82
+			.talk Jessir Moonbow##11019
+			..turnin The Remains of Trey Lightforge##5385
+		step
+			goto Felwood,64.77,8.13
+			.talk Nafien##15395
+			..turnin Speak to Nafien##8462
+			..accept Deadwood of the North##8461
+		step
+			goto Felwood,63.08,8.82
+			.kill 6 Deadwood Den Watcher##7156|q 8461/1
+			.kill 6 Deadwood Avenger##7157|q 8461/2
+			.kill 6 Deadwood Shaman##7158 |q 8461/3 |goto 63.08,8.82
+			.' You can find more around (1)|at 60.37,8.40
+			.' You can find more around (2)|at 60.18,6.14
+			.' You can find more around (3)|at 62.67,12.48
+		step
+			goto Felwood,64.77,8.13
+			.talk Nafien##15395
+			..turnin Deadwood of the North##8461
+			..accept Speak to Salfa##8465
+		step
+			goto Winterspring,27.74,34.50
+			.talk Salfa##11556
+			..turnin Speak to Salfa##8465
+			..accept Winterfall Activity##8464
+		step
+			goto Winterspring,60.7,38.2
+			.talk Meggi Peppinrocker##11754
+			..accept Trouble in Winterspring!##6603
+		step
+			goto Winterspring,31.27,45.16
+			.talk Donova Snowden##9298
+			..turnin The New Springs##980
+			..turnin Trouble in Winterspring!##6603
+			..accept Strange Sources##4842
+			..accept Threat of the Winterfall##5082
+		step
+			goto Winterspring,59.84,74.12
+			.' Cross the bridge|at 62.42,67.44
+			Discover Darkwhisper Gorge|q 4842/1
+		step
+			goto Winterspring,69.6,38.3
+			.kill High Chief Winterfall##10738|n
+			.collect 1 Crudely-written Log##12842|q 5123 |future
+			..accept The Final Piece##5123|use Crudely-written Log##12842
+		step
+			goto Winterspring,67.2,35.9
+			.kill 8 Winterfall Shaman##7439|q 8464/1
+			.kill 8 Winterfall Den Watcher##7440|q 8464/2
+			.' You can find more Den Watcher|at 40,43.4
+			.kill 8 Winterfall Ursa##7438|q 8464/3
+		step
+			goto Winterspring,30.57,37.17
+			.kill 8 Winterfall Pathfinder##7442|q 5082/1
+			.kill 8 Winterfall Den Watcher##7440|q 5082/2
+			.kill 8 Winterfall Totemic##7441|q 5082/3
+			.info They share spawn points with the other Winterfall enemies.
+			.info Kill the other types also, to get more to spawn.
+			.' You can find more around (1)|at 39.46,43.70
+			.' You can find more around (2)|at 41.78,43.14
+		step
+			goto Winterspring,30.57,37.17
+			.from Winterfall Den Watcher##7440, Winterfall Totemic##7441, Winterfall Pathfinder##7442
+			.collect 1 Empty Firewater Flask##12771|q 5083 |future
+			.' You can find more around (1)|at 39.46,43.70
+			.' You can find more around (2)|at 41.78,43.14
+		step
+			.use the Empty Firewater Flask##12771
+			..accept Winterfall Firewater##5083
+		step
+			goto Winterspring,31.27,45.16
+			.talk Donova Snowden##9298
+			..turnin Threat of the Winterfall##5082
+			..turnin Winterfall Firewater##5083
+			..turnin Strange Sources##4842
+			..turnin The Final Piece##5123
+			..accept Words of the High Chief##5128
+			..accept Falling to Corruption##5084
+		step
+			goto Winterspring,27.74,34.50
+			.talk Salfa##11556
+			..turnin Winterfall Activity##8464
+		step
+			goto Felwood,60.20,5.87
+			.' Interact with Deadwood Cauldron
+			.info Try to kite the enemies near the cauldron away one at a time to fight them alone, until you can kill the rest.
+			.info If you have trouble, try to find someone to help you.
+			..turnin Falling to Corruption##5084
+			..accept Mystery Goo##5085
+		step
+			goto Winterspring,31.27,45.16
+			.talk Donova Snowden##9298
+			..turnin Mystery Goo##5085
+			..accept Toxic Horrors##5086
+		step
+			goto Felwood,49.42,23.51
+			.from Toxic Horror##7132
+			.info All around this green lake.
+			.get 3 Toxic Horror Droplet##12822|q 5086/1
+		step
+			goto Felwood,49.7,30.7
+			.use Flute of the Ancients##11445
+			.talk Arei##9598
+			..accept Ancient Spirit##4261
+		step
+			.' Help Arei get to Safety|q 4261/1
+		step
+			goto Winterspring,31.27,45.16
+			.talk Donova Snowden##9298
+			..turnin Toxic Horrors##5086
+			..accept Winterfall Runners##5087
+		step
+			.from Winterfall Runner##10916
+			.get Winterfall Crate##12829|q 5087/1
+			.info Runner Move on waypoint
+		step
+			goto Winterspring,31.27,45.16
+			.talk Donova Snowden##9298
+			..turnin Winterfall Runners##5087
+		step
+			goto Ashenvale,85.2,44.7
+			.talk Kayneth Stillwind##3848
+			..turnin Ancient Spirit##4261
+		step
+			.' Congratulations! +36 quests for achievement "Loremaster Kalimdor".
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[alpha] [60] Un'Goro Crater",[[
+author danaton
+description This guide contain quest-chain (? quests) for Un'Goto Crater location.
+startlevel 60
+		step
+			.' First complete Felwood
+		step
+			goto Ironforge,75.77,23.37
+			.talk Laris Geardawdle##9616
+			..turnin A Little Slime Goes a Long Way (1)##4512
+			..accept A Little Slime Goes a Long Way (2)##4513
+		step
+			goto Un'Goro Crater,34.7,40.4
+			.' Open Package of Empty Ooze in your bags|use Bag of Empty Ooze Containers##11955
+			.from Glutinous Ooze##6559
+			.use Empty Pure Sample Jar##11953|q 4513/1
+		step
+			goto Ironforge,75.77,23.37
+			.talk Laris Geardawdle##9616
+			..turnin A Little Slime Goes a Long Way (2)##4513
 ]])
 ZygorGuidesViewer.AllianceInstalled=true

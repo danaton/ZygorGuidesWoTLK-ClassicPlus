@@ -1591,7 +1591,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Orc (1-13)",[[
 		.talk Kaltunk##10176
 		..accept Your Place In The World##4641
 	step //2
-		'Go inside the cave to 42,68|goto 42.1,68.3
+		goto Durotar,42.1,68.3
 		.talk Gornek##3143
 		..turnin Your Place In The World##4641
 		..accept Cutting Teeth##788
@@ -1605,48 +1605,48 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Orc (1-13)",[[
 		.talk Zureetha Fargaze##3145
 		..accept Vile Familiars##792
 	step //6
-		'Go into the cave to 42,68|goto 42.1,68.3
+		goto Durotar,42.1,68.3
 		.talk Gornek##3143
 		..turnin Cutting Teeth##788
 		..accept Sting of the Scorpid##789
 		..accept Simple Parchment##2383
 		only Orc Warrior
 	step //7
-		'Go into the cave to 42.1,68.3|goto 42.1,68.3
+		goto Durotar,42.1,68.3
 		.talk Gornek##3143
 		..turnin Cutting Teeth##788
 		..accept Sting of the Scorpid##789
 		..accept Rune-Inscribed Parchment##3089
 		only Orc Shaman
 	step //8
-		'Go into the cave to 42.1,68.3|goto 42.1,68.3
+		goto Durotar,42.1,68.3
 		.talk Gornek##3143
 		..turnin Cutting Teeth##788
 		..accept Sting of the Scorpid##789
 		..accept Encrypted Parchment##3088
 		only Orc Rogue
 	step //9
-		'Go into the cave to 42.1,68.3|goto 42.1,68.3
+		goto Durotar,42.1,68.3
 		.talk Gornek##3143
 		..turnin Cutting Teeth##788
 		..accept Sting of the Scorpid##789
 		..accept Etched Parchment##3087
 		only Orc Hunter
 	step //10
-		'Go into the cave to 42.1,68.3|goto 42.1,68.3
+		goto Durotar,42.1,68.3
 		.talk Gornek##3143
 		..turnin Cutting Teeth##788
 		..accept Sting of the Scorpid##789
 		..accept Tainted Parchment##3090
 		only Orc Warlock
 	step //11
-		'Go into the Cave to 40.6,68.5
+		goto Durotar,40.6,68.5
 		.talk Nartok##3156
 		..turnin Tainted Parchment##3090
 		only Orc Warlock
 		info2 He is the Warlock Class Trainer
 	step //12
-		goto 42.9,69.4
+		goto Durotar,42.9,69.4
 		.talk Frang##3153
 		..turnin Simple Parchment##2383
 		only Orc Warrior
@@ -1678,7 +1678,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Orc (1-13)",[[
 		.from Scorpid Worker##3124
 		.get 10 Scorpid Worker Tail|q 789/1
 	step //18
-		'Go into the cave to 42,68|goto 42.1,68.3
+		goto Durotar,42.1,68.3
 		.talk Gornek##3143
 		..turnin Sting of the Scorpid##789
 	step //19
@@ -1832,6 +1832,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Orc (1-13)",[[
 		.talk Innkeeper Grosk##6928
 		..turnin A Peon's Burden##2161
 	step //55
+		goto 51.5,41.6
+		.talk Innkeeper Grosk##6928
 		home Razor Hill
 	step //56
 		goto 49.9,40.4
@@ -3399,7 +3401,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept Slain by the Wretched##9704
 	step //37
 		goto 42,35.7
-		.' Click the Slain Outrunner |tip It's a corpse laying in the middle of the road.
+		.talk Slain Outrunne##17849
 		..turnin Slain by the Wretched##9704
 		..accept Package Recovery##9705
 	step //38
@@ -4969,15 +4971,24 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		..accept Meats to Orgrimmar##6365
 		only Orc,Troll
 	step
+		goto Mulgore,46.8,60.2
+		.talk Skorn Whitecloud##3052
+		..accept The Hunter's Way##861
+	step
+		goto Mulgore,45.1,16.5
+		.from Flatland Prowler##3566
+		.get 4 Flatland Prowler Claw|q 861/1
+	step
 		goto Thunder Bluff,61.5,80.9
 		.talk Melor Stonehoof##3441
+		..turnin The Hunter's Way##861
 		..accept Sergra Darkthorn##860
 	step
 		goto Thunder Bluff,78.6,28.6
 		.talk Arch Druid Hamuul Runetotem##5769
 		..accept The Barrens Oases##886
 	step //4
-		goto 51.9,30.3
+		goto The Barrens,51.9,30.3
 		.talk Gazrog##3464
 		..accept Raptor Thieves##869
 	step //5
@@ -5043,8 +5054,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		..turnin Return to the Crossroads.##6386
 		only Orc,Troll
 	step //18
-		goto 53.3,29.1
-		.' Kill Plainstriders
+		goto The Barrens,53.3,29.1
+		.from Fleeting Plainstrider##3244, Fleeting Plainstrider##3246
 		.get 7 Plainstrider Beak|q 844/1
 	step //19
 		goto 54.2,25.3
@@ -5056,10 +5067,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		.' Click the Crossroads' Supply Crates |tip They look like a pile of brown boxes.
 		.get 1 Crossroads' Supply Crates|q 5041/1
 	step //21
-		goto 52.7,16.5
-		.kill raptors|n
-		.get 12 Raptor Head|q 869/1
-		info You can find raptors scattered all around, there's not really any specific spot where a lot of low level raptors are.
+		goto The Barrens,52.7,16.5
+		.from Sunscale Lashtail##3254, Sunscale Screecher##3255, Sunscale Scytheclaw##3256
+		.get 12 Raptor Head|q 869/2
+		.info You can find raptors scattered all around, there's not really any specific spot where a lot of low level raptors are.
 	step //22
 		ding 14
 	step //23
@@ -5177,7 +5188,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		..accept Kolkar Leaders##850
 	step //47
 		goto 46,27.2
-		.' Kill zhevras
+		.from Zhevra Runner##3242, Zhevra Charger##3426, Zhevra Courser##3466
 		.get 4 Zhevra Hooves|q 845/1
 	step //48
 		goto 45.3,22.9
@@ -5187,15 +5198,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		.' Explore the waters of the Forgotten Pools|goal Explore the waters of the Forgotten Pools|q 870/1
 	step //49
 		goto 42.6,23.4
-		.' Kill Barak Kodobane
+		.from Barak Kodobane##3394
 		.get Barak's Head|q 850/1
 	step //50
 		goto 46.1,26
-		.' Kill centaurs
+		.from Kolkar Wrangler##3272, Kolkar Stormer##3273
 		.get 15 Centaur Bracers|q 855/1
 	step //51
 		goto 40.7,19.7
-		.' Kill harpies
+		.from Witchwing Harpy##3276, Witchwing Roguefeather##3277, Witchwing Windcaller##3280
 		.get 8 Witchwing Talon|q 867/1
 	step //52
 		'Hearth to the Crossroads|goto The Barrens,52.0,29.9,0.1|use hearthstone##6948|noway|c
@@ -5226,7 +5237,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		.kill 8 Razormane Defender|q 872/2
 	step //59
 		goto 58.8,26.9
-		.' Kill Kreenig Snarlsnout
+		.from Kreenig Snarlsnout##3438
 		.get Kreenig Snarlsnout's Tusk|q 872/3
 		info Kreenig Snarlsnout walks around this area.
 	step //60
@@ -5237,8 +5248,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		goto 63.1,37.2
 		.talk Bragok##16227
 		..fpath Ratchet
+	step
+		'Fly to Orgrimmar|goto Orgrimmar
+	step
+		goto Orgrimmar,38.9,38.4
+		.talk Zor Lonetree##4047
+		..accept The Spirits of Stonetalon##1061
 	step //62
-		goto 63,37.2
+		goto The Barrens,63,37.2
 		.talk Sputtervalve##3442
 		..accept Samophlange (1)##894
 	step //63
@@ -5266,9 +5283,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		.kill 6 Southsea Cannoneer|q 887/2
 	step //68
 		goto 63.3,49.7
-		.' He spawns randomly in the camps around this area
-		.' Kill Baron Longshore
+		.from Baron Longshore##3467
 		.get Baron Longshore's Head|q 895/1
+		.info He spawns randomly in the camps around this area
 	step //69
 		goto The Barrens,62.7,36.2
 		.talk Gazlowe##3391
@@ -5314,6 +5331,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 	step //78
 		goto 35.2,27.8
 		.talk Seereth Stonebreak##4049
+		..turnin The Spirits of Stonetalon##1061
 		..accept Goblin Invaders##1062
 		.talk Makaba Flathoof##11857
 		..accept Avenge My Village##6548
@@ -5469,7 +5487,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		.talk Innkeeper Bates##6739
 		.home The Sepulcher
 	step //118
-		'Go inside the crypt to 43.4,40.9|goto 43.4,40.9
+		goto 43.4,40.9
 		.talk High Executor Hadrec##1952
 		..accept The Decrepit Ferry##438
 	step //119
@@ -5487,7 +5505,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		..turnin Arugal's Folly (1)##422
 		..accept Arugal's Folly (2)##423
 	step //122
-		'Go inside the crypt to 43.4,40.9|goto 43.4,40.9
+		goto 43.4,40.9
 		.talk High Executor Hadrec##1952
 		..turnin Rot Hide Clues##439
 		..accept Rot Hide Ichor##443
@@ -5567,11 +5585,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		..accept Arugal's Folly (4)##99
 	step //141
 		goto 59.8,64.3
-		.kill Dalaran mobs|n
+		.from Dalaran Protector##1912+, Dalaran Mage##1914+, Dalaran Conjuror##1915+
 		.get 8 Dalaran Pendant|q 479/1
 	step //142
 		goto 47.9,72.1
-		.kill Pyrewood Village mobs|n
+		.from Moonrage Watcher##1892+, Moonrage Sentry##1893+, Pyrewood Sentry##1894+, Moonrage Elder##1896+
 		.get 6 Pyrewood Shackle|q 99/1
 	step //143
 		Hearth to the Sepulcher|goto 43.2,41.4|use hearthstone##6948|noway|c
@@ -5646,10 +5664,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		.talk Apothecary Zamah##3419
 		..turnin Apothecary Zamah##853
 	step //165
-		goto 47,49.9
+		goto Thunder Bluff,47,49.9
 		.talk Tal##2995
 		..fpath Thunder Bluff
-		info2 Follow the spiral ramp to the top
+		.info Follow the spiral ramp to the top.
 	step //166
 		'Hearth to the Crossroads|goto The Barrens,52.0,29.9,0.1|use hearthstone##6948|noway|c
 	step //167
@@ -5658,15 +5676,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		..turnin Lost in Battle##4921
 	step //168
 		goto 41.2,23.9
-		.' Kill Savannah Prowlers
+		.from Savannah Prowler##3425+
 		.get 7 Prowler Claws|q 903/1
 	step //169
 		goto 39.9,17.2
-		.' Kill Witchwing Slayers
+		.from Witchwing Slayer##3278+
 		.get 6 Harpy Lieutenant Ring|q 875/1
 	step //170
 		goto 45.5,13.9
-		.' Kill raptors
+		.from Sunscale Scytheclaw##3256+
 		.get 5 Intact Raptor Horn|q 865/1
 		.' You can find more raptors at 52.3,47.0|n
 	step //171
@@ -5698,7 +5716,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		info It's a big machine.
 	step //176
 		goto 52.8,10.4
-		.' Kill Tinkerer Sniggles
+		.from Tinkerer Sniggles##3471+
 		.get Console Key|q 901/1
 		info He's standing inside a little green hut.
 	step //177
@@ -5713,9 +5731,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		..accept Ignition##858
 	step //179
 		goto 56.2,8.3
-		.' Kill Supervisor Lugwizzle
+		.from Supervisor Lugwizzle##3445
 		.get Ignition Key|q 858/1
-		info He walks around on this platform.
+		.info He walks around on this platform.
 	step //180
 		goto 56.5,7.5
 		.talk Wizzlecrank's Shredder##3439
@@ -5770,11 +5788,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 	step //191
 		goto 55.8,17.1
 		.' Use the Horn of Echeyakee to summon him|use Horn of Echeyakee##10327
-		.' Kill Echeyakee
+		.from Echeyakee##3475
 		.get Echeyakee's Hide|q 881/1
 	step //192
 		goto 49.0,11.2
-		.talkto Wenikee Boltbucket
+		.talk Wenikee Boltbucket##9316
 		..turnin Wenikee Boltbucket##3921
 		..accept Nugget Slugs##3922
 	step //193
@@ -5791,7 +5809,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		..turnin Report to Kadrak##6541
 	step //196
 		goto 39.2,12.1
-		.' Kill Serena Bloodfeather
+		.from Serena Bloodfeather##3452
 		.get Serena's Head|q 876/1
 	step //197
 		'Hearth to the Crossroads|goto The Barrens,52.0,29.9,0.1|use hearthstone##6948|noway|c
@@ -5807,7 +5825,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-2
 		..accept Letter to Jin'Zil##1060
 	step //200
 		goto 55.4,43.5
-		.' Kill snapjaws underwater
+		.from Oasis Snapjaw##3461
 		.get 8 Altered Snapjaw Shell|q 880/1
 	step //201
 		ding 20
@@ -5818,7 +5836,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 	startlevel 20
 	step //1
 		goto The Barrens,52.2,46.1
-		.' Kill raptors
+		.from Sunscale Screecher##3255, Sunscale Scytheclaw##3256
 		.get 3 Sunscale Feathers|n
 		.' Click the Blue Raptor Nest|goal Visit Blue Raptor Nest|q 905/1
 		.' Click the Yellow Raptor Nest|goal Visit Yellow Raptor Nest|q 905/2
@@ -5836,7 +5854,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 		.kill 6 Bristleback Water Seeker|q 878/1
 		.kill 12 Bristleback Thornweaver|q 878/2
 		.kill 12 Bristleback Geomancer|q 878/3
-		.' Kill Bristleback mobs
 		.get 60 Bristleback Quilboar Tusk|q 899/1
 		.collect 1 Blood Shard##5075|q 5052|future
 	step //5
@@ -8107,13 +8124,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (35-40)",
 		..turnin Call to Arms (1)##677
 		..accept Call to Arms (2)##678
 	step //30
+		goto Arathi Highlands,73.8,32.5
+		.talk Innkeeper Adegwa##9501
 		home Hammerfall
 	step //31
 		goto 80.9,39.9|n
 		.' The path up to 'The Princess Trapped' starts here|goto Arathi Highlands,80.9,39.9,0.5|noway|c
 	step //32
 		goto 82.6,36.5
-		.' Kill kobolds inside and around this cave
+		.from Kobolds##000011
 		.get 12 Mote of Myzrael|q 642/1
 	step //33
 		goto 84.3,31
@@ -8123,22 +8142,21 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (35-40)",
 		info Inside the cave, up on the ledge. It's a floating black crystal.
 	step //34
 		goto 56.4,36.1
-		.' Kill Kenata Dabyrie
+		.from Kenata Dabyrie##4480
 		.get Kenata's Head|q 1164/1
-		info Standing inside a small house on a hill.
 	step //35
 		goto 54.2,38.3
-		.' Kill Marcel Dabyrie
+		.from Marcel Dabyrie##4481
 		.get Marcel's Head|q 1164/2
 		info Standing inside the stables.
 	step //36
 		goto 56.7,40.4
-		.' Kill Fardel Dabyrie
+		.from Fardel Dabyrie##4479
 		.get Fardel's Head|q 1164/3
 		info Standing in front of the barn.
 	step //37
 		goto 52.3,67.4
-		.' Kill Highland Fleshstalkers
+		.from Raptors##000021
 		.get 12 Raptor Heart|q 701/1
 	step //38
 		goto 53,72.8

@@ -159,7 +159,7 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	["stepgoal_collect"] = "Возьмите %s",
 	["stepgoal_buy"] = "Купите %s %s",
 	["stepgoal_fpath"] = "Откройте маршрут: %s",
-	["stepgoal_use"] = "Употребите %s",
+	["stepgoal_use"] = "Используйте %s",
 	["stepgoal_home"] = "Сделайте %s своим домом",
 	["stepgoal_petaction"] = "Используйте способность питомца %s",
 	["stepgoal_havebuff"] = "Gain buff/debuff '%s'",
