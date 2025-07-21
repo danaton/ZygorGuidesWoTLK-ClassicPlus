@@ -580,165 +580,162 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Sunken Temple (4
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackrock Depth (50)",[[
 	startlevel 50
-	step //1
-	.' Recommended start 52 level
-	goto Tanaris,67.00,24.00
-	.talk Yorba Screwspigot##9706
-	..accept Yuka Screwspigot##4324
-	step //2
-	goto Blasted Lands,63.60,20.60
-	.talk Enohar Thunderbrew##9540
-	..accept Ragnar Thunderbrew##4128
-	step //3
-	goto Dun Morogh,46.80,52.40
-	.talk Ragnar Thunderbrew##1267
-	..turnin Ragnar Thunderbrew##4128
-	..accept Hurley Blackbreath##4126
-	step //4
-	goto Ironforge,38.40,55.30
-	.talk Royal Historian Archesonus##8879
-	..accept The Smoldering Ruins of Thaurissan##3702
-	step //5
-	goto Ironforge,38.40,55.30
-	.talk Royal Historian Archesonus##8879
-	.' Speak with Royal Historian Archesonus|goal Listen to Royal Historian Archesonus recant the history of Thaurissan|q 3702/1
-	step //6
-	goto Ironforge,38.40,55.30
-	.talk Royal Historian Archesonus##8879
-	..turnin The Smoldering Ruins of Thaurissan##3702
-	..accept The Smoldering Ruins of Thaurissan##3701
-	step //7
-	goto Burning Steppes,84.60,68.10
-	.talk Oralius##9177
-	..accept The Good Stuff##4286
-	step //8
-	goto Burning Steppes,85.40,70.20
-	.talk Jalinda Sprig##9561
-	..accept Overmaster Pyron##4262
-	step //9
-	goto Burning Steppes,64.1,41.8
-	.' Click the Thaurissan Relics|tip They look like little white stone statues on the ground around this area.
-	.' Gather Information from 12 Thaurissan Relics|goal 12 Information Recovered|q 3701/1
-	step //10
-	goto Burning Steppes,65.30,24.20
-	.talk Maxwort Uberglint##9536
-	..accept The Heart of the Mountain##4123
-	step //11
-	goto Burning Steppes,66.10,21.90
-	.talk Yuka Screwspigot##9544
-	..turnin Yuka Screwspigot##4324
-	..accept Ribbly Screwspigot##4136
-	step //12
-	goto Burning Steppes,21.99,11.98
-	.kill Overmaster Pyron|q 4262/1
-	.' Pyron standing at the entrance to Blackrock Depth
-	step //13
-	goto Searing Gorge,37.94,30.84
-	.talk Lanie Reed##2941
-	..fpath Thorium Point
-	step //14
-	goto Searing Gorge,39.1,39
-	.talk Kalaran Windblade##8479
-	..accept Divine Retribution##3441
-	..'Listen to his story
-	..turnin Divine Retribution##3441
-	..accept The Flawless Flame##3442
-	step //15
-	goto Searing Gorge,30.8,72.8
-	.kill Magma Elementals|n
-	.get 4 Golem Oil|q 3442/2
-	.kill Inferno Elementals and Magma Elementals|n
-	.get 4 Heart of Flame|q 3442/1
-	step //16
-	goto Searing Gorge,39,38.9
-	.talk Kalaran Windblade##8479
-	..turnin The Flawless Flame##3442
-	..accept Forging the Shaft##3443
-	step //17
-	goto Searing Gorge,42.4,47.1
-	.kill Dark Iron dwarves|n
-	.get 8 Thorium Plated Dagger|q 3443/1
-	step //18
-	goto Searing Gorge,39,38.9
-	.talk Kalaran Windblade##8479
-	..turnin Forging the Shaft##3443
-	..accept The Flame's Casing##3452
-	step //19
-	goto Searing Gorge,29.1,25.9
-	.' Slowly work your way to this spot
-	.' Jump onto the red crystal in the lava
-	.' Click it and get the Mysterious Artifact|goal Mysterious Artifact|q 3372/1
-	.' Kill Twilight mobs around the lava
-	.get Symbol of Ragnaros|q 3452/1
-	step //20
-	goto Searing Gorge,39,38.9
-	.talk Kalaran Windblade##8479
-	..turnin The Flame's Casing##3452
-	..accept The Torch of Retribution (1)##3453
-	..turnin The Torch of Retribution (1)##3453
-	..accept The Torch of Retribution (2)##3454
-	.' Click the green glowing floating Torch of Retribution
-	..turnin The Torch of Retribution (2)##3454
-	..accept Squire Maltrake##3462
-	.talk Squire Maltrake##8509
-	..turnin Squire Maltrake##3462
-	..accept Set Them Ablaze!##3463
-	step //21
-	goto Searing Gorge,33.3,54.5
-	.' Click the Sentry Brazier|tip At the top of the tower, click the little metal blazer on the ground.
-	.' Set the Northern Tower Ablaze|goal Northern Tower Ablaze|q 3463/4
-	step //22
-	goto Searing Gorge,35.7,60.7
-	.' Click the Sentry Brazier|tip At the top of the tower, click the little metal blazer on the ground.
-	.' Set the Western Tower Ablaze|goal Western Tower Ablaze|q 3463/1
-	step //23
-	goto Searing Gorge,44,60.9
-	.' Click the Sentry Brazier|tip At the top of the tower, click the little metal blazer on the ground.
-	.' Set the Southern Tower Ablaze|goal Southern Tower Ablaze|q 3463/2
-	step //24
-	goto Searing Gorge,50.1,54.7
-	.' Click the Sentry Brazier|tip At the top of the tower, click the little metal blazer on the ground.
-	.' Set the Eastern Tower Ablaze|goal Eastern Tower Ablaze|q 3463/3
-	step //25
-	goto Searing Gorge,39.1,39
-	.talk Squire Maltrake##8509
-	..turnin Set Them Ablaze!##3463
-	.' Click the small grey chest on the ground
-	..accept Trinkets...##3481
-	.' Click the chest again
-	..turnin Trinkets...##3481
-	.' Open the Hoard of the Black Dragonflight in your bags|use Hoard of the Black Dragonflight##10569
-	.' Make sure to save the Black Dragonflight Molt|collect Black Dragonflight Molt##10575|q 4022/1 |future
-	step //26
-	goto Burning Steppes,95.1,31.6
-	.talk Cyrus Therepentous##9459
-	..accept A Taste of Flame##4022
-	.' Present proof of your deeds
-	..turnin A Taste of Flame##4022
-	..accept A Taste of Flame##4024
-	step //27
-	goto Burning Steppes,85.40,70.20
-	.talk Jalinda Sprig##9561
-	..turnin Overmaster Pyron##4262
-	..accept Incendius!##4263
-	step //28
-	goto Ironforge,38.40,55.30
-	.talk Royal Historian Archesonus##8879
-	..turnin The Smoldering Ruins of Thaurissan##3701
-	step //29
-	goto Ironforge,39.10,56.30
-	.talk King Magni Bronzebeard ##2784
-	..accept Kharan Mighthammer##4341
-	step //30
-	goto Burning Steppes,28.19,24.47
-	.' Die in lava! Necessary step!
-	step //31
-	goto Burning Steppes,29.0,28.9
-	.' Speak with NPC in ghost form
-	.talk Franclorn Forgewright##8888
-	..accept Dark Iron Legacy##3801
-	..turnin Dark Iron Legacy##3801
-	..accept Dark Iron Legacy##3802
+		step //1
+			.' Recommended start 52 level
+			goto Tanaris,67.00,24.00
+			.talk Yorba Screwspigot##9706
+			..accept Yuka Screwspigot##4324
+		step //2
+			goto Blasted Lands,63.60,20.60
+			.talk Enohar Thunderbrew##9540
+			..accept Ragnar Thunderbrew##4128
+		step //3
+			goto Dun Morogh,46.80,52.40
+			.talk Ragnar Thunderbrew##1267
+			..turnin Ragnar Thunderbrew##4128
+			..accept Hurley Blackbreath##4126
+		step //4
+			goto Ironforge,38.40,55.30
+			.talk Royal Historian Archesonus##8879
+			..accept The Smoldering Ruins of Thaurissan##3702
+		step //5
+			goto Ironforge,38.40,55.30
+			.talk Royal Historian Archesonus##8879
+			.goal Listen to Royal Historian Archesonus recant the history of Thaurissan|q 3702/1
+		step //6
+			goto Ironforge,38.40,55.30
+			.talk Royal Historian Archesonus##8879
+			..turnin The Smoldering Ruins of Thaurissan##3702
+			..accept The Smoldering Ruins of Thaurissan##3701
+		step //7
+			goto Burning Steppes,84.60,68.10
+			.talk Oralius##9177
+			..accept The Good Stuff##4286
+		step //8
+			goto Burning Steppes,85.40,70.20
+			.talk Jalinda Sprig##9561
+			..accept Overmaster Pyron##4262
+		step //9
+			goto Burning Steppes,64.1,41.8
+			.' Click the Thaurissan Relics|tip They look like little white stone statues on the ground around this area.
+			.' Gather Information from 12 Thaurissan Relics|goal 12 Information Recovered|q 3701/1
+		step //10
+			goto Burning Steppes,65.30,24.20
+			.talk Maxwort Uberglint##9536
+			..accept The Heart of the Mountain##4123
+		step //11
+			goto Burning Steppes,66.10,21.90
+			.talk Yuka Screwspigot##9544
+			..turnin Yuka Screwspigot##4324
+			..accept Ribbly Screwspigot##4136
+		step //12
+			goto Burning Steppes,21.99,11.98
+			.kill Overmaster Pyron|q 4262/1
+			.' Pyron standing at the entrance to Blackrock Depth.
+		step //13
+			goto Searing Gorge,37.94,30.84
+			.talk Lanie Reed##2941
+			..fpath Thorium Point
+		step //14
+			goto Searing Gorge,39.1,39
+			.talk Kalaran Windblade##8479
+			..accept Divine Retribution##3441
+			.' Listen to his story
+			..turnin Divine Retribution##3441
+			..accept The Flawless Flame##3442
+		step //15
+			goto Searing Gorge,30.8,72.8
+			.from Tempered War Golem##5855, Heavy War Golem##5854
+			.get 4 Golem Oil|q 3442/2
+			.from Blazing Elemental##5850, Inferno Elemental##5852, Magma Elemental##5855
+			.get 4 Heart of Flame|q 3442/1
+		step //16
+			goto Searing Gorge,39,38.9
+			.talk Kalaran Windblade##8479
+			..turnin The Flawless Flame##3442
+			..accept Forging the Shaft##3443
+		step //17
+			goto Searing Gorge,42.4,47.1
+			.kill Dark Iron dwarves|n
+			.get 8 Thorium Plated Dagger|q 3443/1
+		step //18
+			goto Searing Gorge,39,38.9
+			.talk Kalaran Windblade##8479
+			..turnin Forging the Shaft##3443
+			..accept The Flame's Casing##3452
+		step //19
+			goto Searing Gorge,29.1,25.9
+			.from Twilight Dark Shaman##5860, Twilight Fire Guard##5861, Twilight Geomancer##5862, Twilight Idolater##8419
+			.get Symbol of Ragnaros|q 3452/1
+		step //20
+			goto Searing Gorge,39,38.9
+			.talk Kalaran Windblade##8479
+			..turnin The Flame's Casing##3452
+			..accept The Torch of Retribution (1)##3453
+			..turnin The Torch of Retribution (1)##3453
+			..accept The Torch of Retribution (2)##3454
+			.' Click the green glowing floating Torch of Retribution
+			..turnin The Torch of Retribution (2)##3454
+			..accept Squire Maltrake##3462
+			.talk Squire Maltrake##8509
+			..turnin Squire Maltrake##3462
+			..accept Set Them Ablaze!##3463
+		step //21
+			goto Searing Gorge,33.3,54.5
+			.' Click the Sentry Brazier|tip At the top of the tower, click the little metal blazer on the ground.
+			.' Set the Northern Tower Ablaze|goal Northern Tower Ablaze|q 3463/4
+		step //22
+			goto Searing Gorge,35.7,60.7
+			.' Click the Sentry Brazier|tip At the top of the tower, click the little metal blazer on the ground.
+			.' Set the Western Tower Ablaze|goal Western Tower Ablaze|q 3463/1
+		step //23
+			goto Searing Gorge,44,60.9
+			.' Click the Sentry Brazier|tip At the top of the tower, click the little metal blazer on the ground.
+			.' Set the Southern Tower Ablaze|goal Southern Tower Ablaze|q 3463/2
+		step //24
+			goto Searing Gorge,50.1,54.7
+			.' Click the Sentry Brazier|tip At the top of the tower, click the little metal blazer on the ground.
+			.' Set the Eastern Tower Ablaze|goal Eastern Tower Ablaze|q 3463/3
+		step //25
+			goto Searing Gorge,39.1,39
+			.talk Squire Maltrake##8509
+			..turnin Set Them Ablaze!##3463
+			.' Click the small grey chest on the ground
+			..accept Trinkets...##3481
+			.' Click the chest again
+			..turnin Trinkets...##3481
+			.' Open the Hoard of the Black Dragonflight in your bags|use Hoard of the Black Dragonflight##10569
+			.' Make sure to save the Black Dragonflight Molt|collect Black Dragonflight Molt##10575|q 4022/1 |future
+		step //26
+			goto Burning Steppes,95.1,31.6
+			.talk Cyrus Therepentous##9459
+			..accept A Taste of Flame##4022
+			.' Present proof of your deeds
+			..turnin A Taste of Flame##4022
+			..accept A Taste of Flame##4024
+		step //27
+			goto Burning Steppes,85.40,70.20
+			.talk Jalinda Sprig##9561
+			..turnin Overmaster Pyron##4262
+			..accept Incendius!##4263
+		step //28
+			goto Ironforge,38.40,55.30
+			.talk Royal Historian Archesonus##8879
+			..turnin The Smoldering Ruins of Thaurissan##3701
+		step //29
+			goto Ironforge,39.10,56.30
+			.talk King Magni Bronzebeard ##2784
+			..accept Kharan Mighthammer##4341
+		step //30
+			goto Burning Steppes,28.19,24.47
+			.' Die in lava! Necessary step!
+		step //31
+			goto Burning Steppes,29.0,28.9
+			.' Speak with NPC in ghost form
+			.talk Franclorn Forgewright##8888
+			..accept Dark Iron Legacy##3801
+			..turnin Dark Iron Legacy##3801
+			..accept Dark Iron Legacy##3802
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Stratholme (55)",[[
 	startlevel 55

@@ -500,7 +500,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Human (1-13)"
 		.kill 6 Rockjaw Skullthumper|q 432/1
 		.kill 10 Rockjaw Bonesnapper|q 433/1
 	step //116
-		'Go outside to 68.7,56.0|goto 68.7,56.0
+		goto Dun Morogh,68.7,56
 		.talk Senator Mehr Stonehallow##1977
 		..turnin The Public Servant##433
 	step //117
@@ -6014,7 +6014,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (20-25
 		..accept The Ancient Statuette##1007
 	step //89
 		goto 14.2,26.8
-		.from Wrathtail Sorceress##3717+, Wrathtail Wave Rider##3713+
+		.from Wrathtail Wave Rider##3713, Wrathtail Sorceress##3717
 		.get 20 Wrathtail Head|q 1008/1
 	step //90
 		goto 14.2,20.6

@@ -6149,28 +6149,28 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 		'Fly to Ratchet|goto The Barrens,63.1,37.1,0.1|noway|c
 	step //74
 		goto The Barrens,62,53.7
-		.' Kill Theramore Marines
+		.from Theramore Marine##3385
 		.get 10 Theramore Medal|q 891/4
 	step //75
-		goto 61.9,54.7
-		.' Go to the top of the tower
+		goto The Barrens,61.9,54.7
 		.kill 1 Captain Fairmount|q 891/1
+		.info To the top of the tower.
 	step //76
-		goto 63.1,56.7
-		.' Go to the top of the tower
+		goto The Barrens,63.1,56.7
 		.kill 1 Cannoneer Smythe|q 891/3
+		.info To the top of the tower.
 	step //77
-		goto 60.5,54.8
-		.' Go to the top of the tower
+		goto The Barrens,60.5,54.8
 		.kill 1 Cannoneer Whessan|q 891/2
+		.info To the top of the tower.
 	step //78
-		goto 62,55
+		goto The Barrens,62,55
 		.talk Gilthares Firebough##3465
 		..accept Free From the Hold##898
-		.' Escort Gilthares Firebough back to Ratchet|goal Escort Gilthares Firebough back to Ratchet|q 898/1
-		info2 If he's not there, someone else is probably escorting him, so just wait a few minutes for him to respawn.
+		.goal Escort Gilthares Firebough back to Ratchet|at 62.3,39.1|q 898/1
+		.info If he's not there, someone else is probably escorting him, so just wait a few minutes for him to respawn.
 	step //79
-		goto 62.3,39
+		goto The Barrens,62.3,39
 		.talk Captain Thalo'thas Brightsun##3339
 		..turnin The Guns of Northwatch##891
 		..turnin Free From the Hold##898
@@ -6196,7 +6196,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 	step //86
 		goto 69.7,88.4
 		.kill 10 Deepmoss Creeper|q 6461/1
-		info Kill 10 Deepmoss Creepers alongside the path as you walk northwest
+		.info Kill 10 Deepmoss Creepers alongside the path as you walk northwest
 	step //87
 		goto 61.3,67.2
 		.kill 7 Deepmoss Venomspitter|q 6461/2
@@ -6204,7 +6204,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 		goto 61,64.2
 		.' Click the Deepmoss Eggs
 		.get 15 Deepmoss Egg|q 1069/1
-		info They look like white, shaking eggs next to trees around this area. Get a couple of those on your way to the next step. They take some time to respawn, so it's better to do this in several passes.
+		.info They look like white, shaking eggs next to trees around this area. Get a couple of those on your way to the next step. They take some time to respawn, so it's better to do this in several passes.
 	step //89
 		goto 59,62.6
 		.talk Ziz Fizziks##4201
@@ -6214,9 +6214,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 		goto 64.5,57.7
 		.kill 15 Venture Co. Logger|q 1062/1
 	step //91
-		goto 62.6,53.8
-		.' Kill Venture Co. Operators on and around this big machine
-		.get 1 Super Reaper 6000 Blueprints|q 1093/1
+		goto Stonetalon Mountains,63.8,53.75
+		.from Venture Co. Operator##3988
+		.get Super Reaper 6000 Blueprints |q 1093/1
+		.' You can find more|at Stonetalon Mountains,72.56,56.43
 	step //92
 		goto 61,64.2
 		.' Click the Deepmoss Eggs
@@ -6242,9 +6243,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 	step //97
 		goto 45.1,59.8
 		.talk Tharm##4312
-		..fpath Sun Rock Retreat
+		..fpath Sun Rock Retreat, Stonetalon Mountains
 	step //98
-		'To Tharm's right, there is a path up the hill
+		.' To Tharm's right, there is a path up the hill
 		.' Follow the path up and take the first left|goto Stonetalon Mountains,45.1,63.5,0.3|c
 	step //99
 		goto 47.2,64.2
@@ -6258,10 +6259,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 		.' The path to 'Boulderslide Ravine' starts here|goto 67.2,88.2,0.5|noway|c
 	step //101
 		goto 61.3,92.4
-		.' Click the Resonite Crystals inside the cave
+		.' Interact with Resonite Crystals inside the cave
 		.get 10 Resonite Crystal|q 6421/2
-		.' While collecting, continue moving deep into the cave.
-		info They look like big pink crystals inside the cave.
+		.info While collecting, continue moving deep into the cave.
+		.info They look like big pink crystals inside the cave.
 	step //102
 		'Go northwest inside the cave to 59,90|goto 58.9,90.0
 		.' Investigate the Cave in Boulderslide Ravine|goal Investigate Cave in Boulderslide Ravine|q 6421/1
@@ -6303,7 +6304,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 		goto 69.9,30.9
 		.talk Magatha Grimtotem##4046
 		..turnin The Elder Crone##1063
-		..'Wait a while
+		.' Wait a while
 		..accept Forsaken Aid##1064
 	step //114
 		goto 78.6,28.5
@@ -6333,14 +6334,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 	step //121
 		goto 73.2,61.6
 		.talk Vhulgra##12616
-		..fpath Splintertree Post
+		fpath Splintertree Post, Ashenvale
 	step //122
 		goto 36.6,57.1|n
 		.' The path to bypass Astranaar starts here|goto Ashenvale,36.6,57.2,0.3|noway|c
 	step //123
 		goto 12.2,33.8
 		.talk Andruk##11901
-		..fpath Zoram'gar Outpost
+		fpath Zoram'gar Outpost, Ashenvale
 	step //124
 		goto 11.7,34.9
 		.talk Marukai##12719
@@ -6351,7 +6352,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 		..turnin Trouble in the Deeps##6562
 	step //126
 		goto 12.6,30.8
-		.' Kill nagas
+		.from Wrathtail Wave Rider##3713, Wrathtail Sorceress##3717
 		.get 20 Wrathtail Head|q 6442/1
 	step //127
 		goto 11.7,34.9
