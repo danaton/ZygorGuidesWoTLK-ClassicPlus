@@ -7403,9 +7403,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		.kill 13 Cursed Sailor|q 289/1
 		.kill 5 Cursed Marine|q 289/2
 	step //96
-		'Go downstairs in the ship to 14.1,30.1|goto 14.1,30.1
+		goto Wetlands,14.1,30.1
 		.from First Mate Snellig##1159
 		.get Snellig's Snuffbox|q 289/3
+		.info Go downstairs in the ship.
 	step //97
 		ding 32
 	step //98
@@ -7418,8 +7419,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		.from Captain Halyndor##1160
 		.get Intrepid Strongbox Key|q 290/1
 	step //100
-		'Go underwater to the bottom of the ship to 14.4,24|goto 14.4,24
-		.' Click Intrepid's Locked Strongbox|tip At the very bottom of this sunken ship, underwater.  It looks like a small metal chest.
+		goto Wetlands,14.4,24
+		.info Go underwater to the bottom of the ship.
+		.' Click Intrepid's Locked Strongbox
+		.info At the very bottom of this sunken ship, underwater. It looks like a small metal chest.
 		..turnin Lifting the Curse##290
 		..accept The Eye of Paleth##292
 	step //101
