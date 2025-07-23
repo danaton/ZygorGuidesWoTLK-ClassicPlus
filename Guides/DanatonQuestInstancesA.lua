@@ -3,7 +3,8 @@ if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Alliance" then return end
 
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Deadmines (15)",[[
-	startlevel 15
+author danaton
+startlevel 15
 		step //1
 			goto Ironforge,69.18,50.57
 			.talk Gnoarn##6569
@@ -76,7 +77,8 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Deadmines (15)",
 			..accept Red Silk Bandanas##214
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Wailing Caverns (15)",[[
-	startlevel 15
+author danaton
+startlevel 15
 		step
 			goto The Barrens,62.4,37.6
 			.talk Mebok Mizzyrix##3446
@@ -106,32 +108,34 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Wailing Caverns 
 			.' Go To Instance!|tip Good luck!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackfathom Deeps (20)",[[
-	startlevel 20
-		step
+author danaton
+startlevel 20
+		step //1
 			goto Ironforge,50.8,5.6
 			.talk Gerrig Bonegrip##2786
 			..accept Knowledge in the Deeps##971
-		step
+		step //2
 			goto Stormwind,36.2,67.6
 			.talk Argos Nightwhisper##4984
 			..accept The Corruption Abroad##3765
-		step
+		step //3
 			goto Darnassus,55.3,24.5
 			.talk Argent Guard Manados##4784
 			..accept Twilight Falls##1199
 			.talk Dawnwatcher Shaedlass##4786
 			..accept In Search of Thaelrid##1198
-		step
+		step //3
 			goto Darkshore,38.3,43.0
 			.talk Gershala Nightwhisper##8997
 			..turnin The Corruption Abroad##3765
 			..accept Researching the Corruption##1275
-		step
+		step //4
 			goto Darkshore,31.1,95.9
 			.' Go To Instance!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Razorfen Kraul (23)",[[
-	startlevel 23
+author danaton
+startlevel 23
 		step
 			goto Stormwind,80.6,59.9
 			.talk Wu Shen##5479
@@ -181,7 +185,8 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Razorfen Kraul (
 			..accept Willix the Importer##1144
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Gnomregan (25)",[[
-	startlevel 25
+author danaton
+startlevel 25
 		step //1
 			goto Darnassus,59.50,45.40
 			.talk Mathiel##6142
@@ -231,7 +236,8 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Gnomregan (25)",
 			.' Go To Instance!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Stormwind Jail (25)",[[
-	startlevel 25
+author danaton
+startlevel 25
 		step
 			goto Wetlands,49.67,18.25
 			.talk Motley Garmason##1074
@@ -268,7 +274,8 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Stormwind Jail (
 			.' Go To Instance!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Razorfen Downs (32)",[[
-	startlevel 32
+author danaton
+startlevel 32
 		step
 			goto Stormwind,50.3,45.5
 			.talk Archbishop Benedictus##1284
@@ -286,7 +293,8 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Razorfen Downs (
 			..accept Extinguishing the Idol##3525
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Uldaman (35)",[[
-	startlevel 35
+author danaton
+startlevel 35
 		step
 			goto Ironforge,74.70,11.80
 			.talk Prospector Stormpike##1356
@@ -355,231 +363,309 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Uldaman (35)",[[
 			.' Go To Uldaman Instance!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Zul'Farrak (40)",[[
-	startlevel 40
-	step //1
-	goto Stormwind,49.49,85.85
-	.talk Jennea Cannon##5497
-	..accept Tabetha's Task##2861
-	step //2
-	goto The Hinterlands,9.8,44.5
-	.talk Gryphon Master Talonaxe##5636
-	..accept Witherbark Cages##2988
-	step //3
-	goto The Hinterlands,23.2,58.8
-	.' Click the First Witherbark Cage to check it|goal Check First Cage|q 2988/1
-	.' Click the Second Witherbark Cage to check it|goal Check Second Cage|q 2988/2
-	step //4
-	goto The Hinterlands,32.1,57.3
-	.' Click the Third Witherbark Cage to check it|goal Check Third Cage|q 2988/3
-	step //5
-	goto The Hinterlands,9.8,44.5
-	.talk Gryphon Master Talonaxe##5636
-	..turnin Witherbark Cages##2988
-	..accept The Altar of Zul##2989
-	step //6
-	goto The Hinterlands,48.3,67.6
-	.' Search the Altar of Zul|q 2989/1|tip Run up the stairs of the temple towards this spot to Search the Altar of Zul.  There are a bunch of mobs at the top, so run around at the top of the temple and once you complete the quest, run away as fast as you can.
-	step //7
-	goto The Hinterlands,9.8,44.5
-	.talk Gryphon Master Talonaxe##5636
-	..turnin The Altar of Zul##2989
-	..accept Thadius Grimshade##2990
-	step //8
-	goto Blasted Lands,67,19.4
-	.talk Thadius Grimshade##8022
-	..turnin Thadius Grimshade##2990
-	..accept Nekrum's Medallion##2991
-	step //9
-	goto Stranglethorn Vale,26.96,77.22
-	.talk Krazek##773
-	..accept Tran'rek##2864
-	step //10
-	goto Dustwallow Marsh,45.98,57.17
-	.talk Tabetha##6546
-	..turnin Tabetha's Task##2861
-	..accept Tiara of the Deep##2846
-	step //11
-	goto Thousand Needles,78.16,77.14
-	.talk Wizzle Brassbolts##4453
-	..accept Gahz'rilla##2770
-	step //12
-	goto Tanaris,51.57,26.77
-	.talk Tran'rek##7876
-	..turnin Tran'rek##2864
-	..accept Scarab Shells##2865
-	step //13
-	goto Tanaris,52.46,28.53
-	.talk Chief Engineer Bilgewhizzle##7407
-	..accept Divino-matic Rod##2768
-	step //14
-	goto Tanaris,51.42,28.74
-	.talk Trenton Lighthammer##7804
-	..accept Troll Temper##3042
-	step //15
-	goto Tanaris,66.98,22.38
-	.talk Yeh'kinya##8579
-	..accept Screecher Spirits##3520
-	//step //16
-	//goto Feralas,46.6,48.2
-	//.kill 3 Rogue Vale Screechers|n
-	//.' Use Yeh'kinya's Bramble on their corpses|use Yeh'kinya's Bramble##10699
-	//.' Talk to their spirits that appear to collect their spirits
-	//.' Collect 3 Screecher Spirits|goal 3 Screecher Spirits Collected|q 3520/1
-	step //16
-	goto Feralas,46.6,48.2
-	.from Vale Screecher##5307+, Rogue Vale Screecher##5308+
-	.' Use Yeh'kinya's Bramble on their corpses|use Yeh'kinya's Bramble##10699
-	.' Talk to their spirits that appear to collect their spirits
-	.' Collect 3 Screecher Spirits|goal 3 Screecher Spirits Collected|q 3520/1
-	step //17
-	goto Tanaris,66.98,22.38
-	.talk Yeh'kinya##8579
-	..turnin Screecher Spirits##3520
-	..accept The Prophecy of Mosh'aru##3527
-	step //18
-	goto Tanaris,38.74,20.05
-	.' Go To Zul'Farrak Instance!
+author danaton
+startlevel 40
+		step //1
+			goto Stormwind,49.49,85.85
+			.talk Jennea Cannon##5497
+			..accept Tabetha's Task##2861
+		step //2
+			goto The Hinterlands,9.8,44.5
+			.talk Gryphon Master Talonaxe##5636
+			..accept Witherbark Cages##2988
+		step //3
+			goto The Hinterlands,23.2,58.8
+			.' Click the First Witherbark Cage to check it|goal Check First Cage|q 2988/1
+			.' Click the Second Witherbark Cage to check it|goal Check Second Cage|q 2988/2
+		step //4
+			goto The Hinterlands,32.1,57.3
+			.' Click the Third Witherbark Cage to check it|goal Check Third Cage|q 2988/3
+		step //5
+			goto The Hinterlands,9.8,44.5
+			.talk Gryphon Master Talonaxe##5636
+			..turnin Witherbark Cages##2988
+			..accept The Altar of Zul##2989
+		step //6
+			goto The Hinterlands,48.3,67.6
+			.' Search the Altar of Zul|q 2989/1|tip Run up the stairs of the temple towards this spot to Search the Altar of Zul.  There are a bunch of mobs at the top, so run around at the top of the temple and once you complete the quest, run away as fast as you can.
+		step //7
+			goto The Hinterlands,9.8,44.5
+			.talk Gryphon Master Talonaxe##5636
+			..turnin The Altar of Zul##2989
+			..accept Thadius Grimshade##2990
+		step //8
+			goto Blasted Lands,67,19.4
+			.talk Thadius Grimshade##8022
+			..turnin Thadius Grimshade##2990
+			..accept Nekrum's Medallion##2991
+		step //9
+			goto Stranglethorn Vale,26.96,77.22
+			.talk Krazek##773
+			..accept Tran'rek##2864
+		step //10
+			goto Dustwallow Marsh,45.98,57.17
+			.talk Tabetha##6546
+			..turnin Tabetha's Task##2861
+			..accept Tiara of the Deep##2846
+		step //11
+			goto Thousand Needles,78.16,77.14
+			.talk Wizzle Brassbolts##4453
+			..accept Gahz'rilla##2770
+		step //12
+			goto Tanaris,51.57,26.77
+			.talk Tran'rek##7876
+			..turnin Tran'rek##2864
+			..accept Scarab Shells##2865
+		step //13
+			goto Tanaris,52.46,28.53
+			.talk Chief Engineer Bilgewhizzle##7407
+			..accept Divino-matic Rod##2768
+		step //14
+			goto Tanaris,51.42,28.74
+			.talk Trenton Lighthammer##7804
+			..accept Troll Temper##3042
+		step //15
+			goto Tanaris,66.98,22.38
+			.talk Yeh'kinya##8579
+			..accept Screecher Spirits##3520
+		//step //16
+			//goto Feralas,46.6,48.2
+			//.kill 3 Rogue Vale Screechers|n
+			//.' Use Yeh'kinya's Bramble on their corpses|use Yeh'kinya's Bramble##10699
+			//.' Talk to their spirits that appear to collect their spirits
+			//.' Collect 3 Screecher Spirits|goal 3 Screecher Spirits Collected|q 3520/1
+		step //16
+			goto Feralas,46.6,48.2
+			.from Vale Screecher##5307+, Rogue Vale Screecher##5308+
+			.' Use Yeh'kinya's Bramble on their corpses|use Yeh'kinya's Bramble##10699
+			.' Talk to their spirits that appear to collect their spirits
+			.' Collect 3 Screecher Spirits|goal 3 Screecher Spirits Collected|q 3520/1
+		step //17
+			goto Tanaris,66.98,22.38
+			.talk Yeh'kinya##8579
+			..turnin Screecher Spirits##3520
+			..accept The Prophecy of Mosh'aru##3527
+		step //18
+			goto Tanaris,38.74,20.05
+			.' Go To Zul'Farrak Instance!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Maraudon (45)",[[
-	startlevel 45
-	step //1
-	goto Dustwallow Marsh,66.40,49.30
-	.talk Archmage Tervosh##4967
-	..accept Shadowshard Fragments##7070
-	step //2
-	goto Desolace,63.80,10.70
-	.talk Keeper Marandis##13698
-	..accept Corruption of Earth and Seed##7065
-	step //3
-	goto Desolace,68.50,8.90
-	.talk Talendria##11715
-	..accept Vyletongue Corruption##7041
-	step //4
-	goto Desolace,62.20,39.60
-	.talk Willow##13656
-	..accept Twisted Evils##7028
-	step //5
-	goto Desolace,50.50,86.70
-	.talk Centaur Pariah##13717
-	..accept The Pariah's Instructions##7067
-	step //6
-	goto Desolace,29.10,62.57
-	.' Go To Instance!
+author danaton
+description This guide contain all quest-chain for Maraudon Dungeon.
+startlevel 45
+		step //1
+			goto Dustwallow Marsh,66.40,49.30
+			.talk Archmage Tervosh##4967
+			..accept Shadowshard Fragments##7070
+		step //2
+			goto Desolace,63.80,10.70
+			.talk Keeper Marandis##13698
+			..accept Corruption of Earth and Seed##7065
+		step //3
+			goto Desolace,68.50,8.90
+			.talk Talendria##11715
+			..accept Vyletongue Corruption##7041
+		step //4
+			goto Desolace,62.20,39.60
+			.talk Willow##13656
+			..accept Twisted Evils##7028
+		step //5
+			goto Desolace,50.50,86.70
+			.talk Centaur Pariah##13717
+			..accept The Pariah's Instructions##7067
+		step //6
+			goto Desolace,29.10,62.57|n
+			.' Go To Entrance|goto Maraudon,38.43,57.97|noway |q 7065
+			.info If done, skip manually.
+		step //7
+			goto Desolace,28.1,62.4
+			.kill The Nameless Prophet##13718 |n
+			.collect 1 Amulet of Spirits##17757 |n |q 7067
+			.info If done, skip manually.
+		step //8
+			goto Desolace,28.43,63.98|n
+			.' Go To Down Tunnel|goto Desolace,28.43,63.98|noway |q 7065
+			.info If done, skip manually.
+		step //9
+			goto Desolace,29.09,61.76|n
+			.' Next to Left Tunnel|goto Desolace,29.09,61.76|noway |q 7067
+			.info If done, skip manually.
+		step //10
+			goto Desolace,29.05,55.43|n
+			.' Jump off carefully|goto Desolace,29.05,55.43|noway |q 7067
+			.info If done, skip manually.
+		step //11
+			goto Desolace,29.7,60.5
+			.' Use Amulet of Spirits on Spirit of Gelk|use Amulet of Spirits##17757|n
+			.from Spirit of Gelk##12239|n
+			.collect 1 Gem of the Second Khan##17762|n |q 7067
+			.info If done, skip manually.
+		step //12
+			goto Desolace,28.51,55.96
+			.' Next to Bridge|goto Desolace,28.51,55.96|noway |q 7067
+			.info If done, skip manually.
+		step //13
+			goto Desolace,27.28,56.93
+			.' Next to other Bridge|goto Desolace,27.28,56.93|noway |q 7067
+			.from Shadowshard Smasher##11778
+			.get 10 Shadowshard Fragment##17756|q 7070/1
+			.info If done, skip manually.
+		step //14
+			goto Desolace,29.58,57.50
+			.' Next to Right Tunnel|goto Desolace,29.58,57.50|noway |q 7067
+			.info If done, skip manually.
+		step //15
+			goto Desolace,29.7,60.5
+			.' Jump Down
+			.' Use Amulet of Spirits on Spirit of Kolk|use Amulet of Spirits##17757|n
+			.from Spirit of Kolk##12240|n
+			.collect 1 Gem of the First Khan##17761|n |q 7067
+			.info If done, skip manually.
+		step //16
+			goto Desolace,29.3,63.9
+			.' Next to Orange Tunnel|goto Desolace,29.3,63.9|noway |q 7065
+			.info If done, skip manually.
+		step //17
+			goto Desolace,32.1,64
+			.talk Cavindra##13697
+			..accept Legends of Maraudon##7044
+		step //18
+			goto Desolace,33.15,65.74
+			.use Coated Cerulean Vial##17693|q 7041/2
+		step //19
+			goto Desolace,34.6,64.07
+			.' Next to Upper Tunnel|goto Desolace,34.6,64.07|noway |q 7065
+			.info If done, skip manually.
+		step //20
+			goto Desolace,34.3,60.63
+			.' Jump Down|goto Desolace,34.6,60.46|noway |q 7065
+			.info If done, skip manually.
+		step //21
+			goto Desolace,35.8,60.4
+			.' Use Amulet of Spirits on Spirit of Magra|use Amulet of Spirits##17757|n
+			.from Spirit of Magra##12241|n
+			.collect 1 Gem of the Third Khan##17763|n |q 7067
+			.info If done, skip manually.
+		step //22
+			goto Desolace,36,64.2
+			.' Go To Maraudon (Orange Entrance)!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Sunken Temple (47)",[[
-	startlevel 47
-	step //1
-	.' First you need to complete quest chain on Zul'Farrak!|tip Manually skip this step
-	step //2
-	goto Stormwind,69.50,40.40
-	.talk Brohann Caskbelly ##5384
-	..accept In Search of The Temple##1448
-	step //3
-	goto Swamp of Sorrows,70.00,53.20
-	.' Search for the Temple of Atal'Hakkar|goal Check|q 1448/1
-	step //4
-	goto Stormwind,69.50,40.40
-	.talk Brohann Caskbelly ##5384
-	..turnin In Search of The Temple##1448
-	..accept To The Hinterlands##1449
-	step //5
-	goto The Hinterlands,11.80,46.75
-	.talk Falstad Wildhammer##5635
-	..turnin To The Hinterlands##1449
-	..accept Gryphon Master Talonaxe##1450
-	step //6
-	goto The Hinterlands,09.75,44.47
-	.talk Gryphon Master Talonaxe##5636
-	..turnin Gryphon Master Talonaxe##1450
-	..accept Rhapsody Shindigger##1451
-	step //7
-	goto The Hinterlands,27.00,48.50
-	.talk Rhapsody Shindigger##5634
-	..turnin Rhapsody Shindigger##1451
-	..accept Rhapsody's Kalimdor Kocktail##1452
-	step //8
-	goto Feralas,58.27,56.09
-	.from Grizzled Ironfur Bear##5272+, Ironfur Bear##5268+, Ironfur Patriarch##5274+
-	.get 3 Ironfur Liver|q 1452/2
-	.from Groddoc Ape##5260+, Groddoc Thunderer##5262+
-	.get 3 Groddoc Liver|q 1452/3
-	.' Mobs Position - 58.15,58.50|n
-	step //9
-	goto Feralas,31.90,45.60
-	.talk Angelas Moonbreeze##7900
-	..accept The Sunken Temple##3445
-	step //10
-	goto Un'Goro Crater,42.9,9.6
-	.talk Muigin##9119
-	..accept Muigin and Larion##4141
-	step //11
-	goto Un'Goro Crater,67.3,32.6
-	.from Bloodpetal Lasher##6509+, Bloodpetal Flayer##6510+, Bloodpetal Thresher##6511+, Bloodpetal Trapper##6512+
-	.get 15 Bloodpetal|q 4141/1
-	step //12
-	goto Un'Goro Crater,42.9,9.6
-	.talk Muigin##9119
-	..turnin Muigin and Larion##4141
-	..accept A Visit to Gregan##4142
-	step //13
-	goto Tanaris,45.20,37.93
-	.from Roc##5428+, Fire Roc##5429+, Searing Roc##5430+
-	.get 3 Roc Gizzard|q 1452/1
-	step //14
-	goto Tanaris,52.70,46.00
-	.talk Marvon Rivetseeker##7771
-	..turnin The Sunken Temple##3445
-	..accept The Stone Circle##3444
-	step //15
-	goto Tanaris,66.98,22.38
-	.talk Yeh'kinya##8579
-	..turnin The Prophecy of Mosh'aru##3527
-	.' This quest is from Zul'Farrak chain|tip Check condition
-	..accept The Ancient Egg##4787
-	step //16
-	goto Feralas,45.1,25.6
-	.talk Gregan Brewspewer##7775
-	..turnin A Visit to Gregan##4142
-	..accept Haze of Evil##4143
-	step //17
-	goto The Barrens,62.5,38.5
-	.' Click the little brown box outside the house on the ground|tip It's a small wooden chest to the right of the doorway to a small house.
-	.get Stone Circle|q 3444/1
-	step //18
-	goto The Hinterlands,27.00,48.50
-	.talk Rhapsody Shindigger##5634
-	..turnin Rhapsody's Kalimdor Kocktail##1452
-	.' Wait Rhapsod Drink Event
-	..accept Rhapsody's Tale##1469
-	step //19
-	goto The Hinterlands,33.8,75.2
-	.talk Atal'ai Exile##5598
-	..accept Jammal'an the Prophet##1446
-	step //20
-	goto The Hinterlands,57.56,86.76
-	.get Ancient Egg|q 4787/1
-	.' In Cave
-	step //21
-	goto Stormwind,69.50,40.40
-	.talk Brohann Caskbelly ##5384
-	..turnin Rhapsody's Tale##1469
-	..accept Into The Temple of Atal'Hakkar##1475
-	step //22
-	goto Tanaris,66.98,22.38
-	.talk Yeh'kinya##8579
-	..turnin The Ancient Egg##4787
-	..accept The God Hakkar##3528
-	step //23
-	goto Tanaris,52.70,46.00
-	.talk Marvon Rivetseeker##7771
-	..turnin The Stone Circle##3444
-	..accept Into the Depths##3446
-	..accept Secret of the Circle##3447
-	step //24
-	.' Go To Instance!
+author danaton
+startlevel 47
+		step //1
+			.' First you need to complete quest chain on Zul'Farrak!|tip Manually skip this step
+		step //2
+			goto Stormwind,69.50,40.40
+			.talk Brohann Caskbelly ##5384
+			..accept In Search of The Temple##1448
+		step //3
+			goto Swamp of Sorrows,70.00,53.20
+			.' Search for the Temple of Atal'Hakkar|goal Check|q 1448/1
+		step //4
+			goto Stormwind,69.50,40.40
+			.talk Brohann Caskbelly ##5384
+			..turnin In Search of The Temple##1448
+			..accept To The Hinterlands##1449
+		step //5
+			goto The Hinterlands,11.80,46.75
+			.talk Falstad Wildhammer##5635
+			..turnin To The Hinterlands##1449
+			..accept Gryphon Master Talonaxe##1450
+		step //6
+			goto The Hinterlands,09.75,44.47
+			.talk Gryphon Master Talonaxe##5636
+			..turnin Gryphon Master Talonaxe##1450
+			..accept Rhapsody Shindigger##1451
+		step //7
+			goto The Hinterlands,27.00,48.50
+			.talk Rhapsody Shindigger##5634
+			..turnin Rhapsody Shindigger##1451
+			..accept Rhapsody's Kalimdor Kocktail##1452
+		step //8
+			goto Feralas,58.27,56.09
+			.from Grizzled Ironfur Bear##5272+, Ironfur Bear##5268+, Ironfur Patriarch##5274+
+			.get 3 Ironfur Liver|q 1452/2
+			.from Groddoc Ape##5260+, Groddoc Thunderer##5262+
+			.get 3 Groddoc Liver|q 1452/3
+			.' Mobs Position - 58.15,58.50|n
+		step //9
+			goto Feralas,31.90,45.60
+			.talk Angelas Moonbreeze##7900
+			..accept The Sunken Temple##3445
+		step //10
+			goto Un'Goro Crater,42.9,9.6
+			.talk Muigin##9119
+			..accept Muigin and Larion##4141
+		step //11
+			goto Un'Goro Crater,67.3,32.6
+			.from Bloodpetal Lasher##6509+, Bloodpetal Flayer##6510+, Bloodpetal Thresher##6511+, Bloodpetal Trapper##6512+
+			.get 15 Bloodpetal|q 4141/1
+		step //12
+			goto Un'Goro Crater,42.9,9.6
+			.talk Muigin##9119
+			..turnin Muigin and Larion##4141
+			..accept A Visit to Gregan##4142
+		step //13
+			goto Tanaris,45.20,37.93
+			.from Roc##5428+, Fire Roc##5429+, Searing Roc##5430+
+			.get 3 Roc Gizzard|q 1452/1
+		step //14
+			goto Tanaris,52.70,46.00
+			.talk Marvon Rivetseeker##7771
+			..turnin The Sunken Temple##3445
+			..accept The Stone Circle##3444
+		step //15
+			goto Tanaris,66.98,22.38
+			.talk Yeh'kinya##8579
+			..turnin The Prophecy of Mosh'aru##3527
+			.' This quest is from Zul'Farrak chain|tip Check condition
+			..accept The Ancient Egg##4787
+		step //16
+			goto Feralas,45.1,25.6
+			.talk Gregan Brewspewer##7775
+			..turnin A Visit to Gregan##4142
+			..accept Haze of Evil##4143
+		step //17
+			goto The Barrens,62.5,38.5
+			.' Click the little brown box outside the house on the ground|tip It's a small wooden chest to the right of the doorway to a small house.
+			.get Stone Circle|q 3444/1
+		step //18
+			goto The Hinterlands,27.00,48.50
+			.talk Rhapsody Shindigger##5634
+			..turnin Rhapsody's Kalimdor Kocktail##1452
+			.' Wait Rhapsod Drink Event
+			..accept Rhapsody's Tale##1469
+		step //19
+			goto The Hinterlands,33.8,75.2
+			.talk Atal'ai Exile##5598
+			..accept Jammal'an the Prophet##1446
+		step //20
+			goto The Hinterlands,57.56,86.76
+			.get Ancient Egg|q 4787/1
+			.' In Cave
+		step //21
+			goto Stormwind,69.50,40.40
+			.talk Brohann Caskbelly ##5384
+			..turnin Rhapsody's Tale##1469
+			..accept Into The Temple of Atal'Hakkar##1475
+		step //22
+			goto Tanaris,66.98,22.38
+			.talk Yeh'kinya##8579
+			..turnin The Ancient Egg##4787
+			..accept The God Hakkar##3528
+		step //23
+			goto Tanaris,52.70,46.00
+			.talk Marvon Rivetseeker##7771
+			..turnin The Stone Circle##3444
+			..accept Into the Depths##3446
+			..accept Secret of the Circle##3447
+		step //24
+			.' Go To Instance!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackrock Depth (50)",[[
-	startlevel 50
+author danaton
+startlevel 50
 		step //1
 			.' Recommended start 52 level
 			goto Tanaris,67.00,24.00
@@ -738,7 +824,8 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackrock Depth 
 			..accept Dark Iron Legacy##3802
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Stratholme (55)",[[
-	startlevel 55
+author danaton
+startlevel 55
 	step
 		goto Eastern Plaguelands,75.63,53.89
 		.talk Duke Nicholas Zverenhoff##11039
@@ -773,7 +860,8 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Stratholme (55)"
 	.' Go To Instance!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackrock Spire (57)",[[
-	startlevel 57
+author danaton
+startlevel 57
 		step
 			.' First you need to complete quest chain on Sunken Temple!|tip Manually skip this step
 		step
@@ -798,115 +886,124 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Scholomance (58)
 	step //1
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Hellfire Citadel: Hellfire Ramparts (59)",[[
-	startlevel 59
-	step
-	'. Hellfire Ramparts first dungeon in the Hellfire Citadel questline chain.|tip Manually skip this step
-	step
-		goto Hellfire Peninsula,56.6,66.7
-		.talk Force Commander Danath Trollbane##16819
-		..accept The Legion Reborn##10141
-		..accept Know your Enemy##10160
-	step
-		goto Hellfire Peninsula,61.7,60.9
-		.talk Sergeant Altumus##19309
-		..turnin The Legion Reborn##10141
-		..accept The Path of Anguish##10142
-	step
-		goto Hellfire Peninsula,65.8,54.1
-		.kill 1 Dreadcaller|q 10142/1
-		.kill 4 Flamewaker Imp|q 10142/2
-		.kill 6 Infernal Warbringer|q 10142/3
-	step
-		goto Hellfire Peninsula,61.7,60.8
-		.talk Sergeant Altumus##19309
-		..turnin The Path of Anguish##10142
-		..accept Expedition Point##10143
-	step
-		goto Hellfire Peninsula,50.9,60.2
-		.talk Lieutenant Amadi##16820
-		..turnin Know your Enemy##10160
-		..accept Fel Orc Scavengers##10482
-	step
-		goto Hellfire Peninsula,60.4,52.1
-		.kill 20 Bonechewer Orc|q 10482/1
-	step
-		goto Hellfire Peninsula,50.9,60.2
-		.talk Lieutenant Amadi##16820
-		..turnin Fel Orc Scavengers##10482
-		..accept Ill Omens##10483
-	step
-		goto Hellfire Peninsula,65.8,67.2
-		.from Bleeding Hollow Grunt##16871+, Bleeding Hollow Dark Shaman##16873+, Bleeding Hollow Peon##16907+
-		.get Cursed Talisman|q 10483/1
-	step
-		goto Hellfire Peninsula,71,63.4
-		.talk Corporal Ironridge##21133
-		..turnin Ill Omens##10483
-	step
-		goto Hellfire Peninsula,71.3,62.8
-		.talk Forward Commander Kingston##19310
-		..turnin Expedition Point##10143
-	step
-		goto Hellfire Peninsula,56.7,66.3
-		.talk Lieutenant Chadwick##17557
-		..accept Weaken the Ramparts##9575
-	step
-		goto Hellfire Peninsula,47.7,53.54
-		.' Go To Instance!|tip Good luck!
+author danaton
+startlevel 59
+		step
+			'. Hellfire Ramparts first dungeon in the Hellfire Citadel questline chain.
+			.info If done, skip manually.
+		step
+			goto Hellfire Peninsula,56.6,66.7
+			.talk Force Commander Danath Trollbane##16819
+			..accept The Legion Reborn##10141
+			..accept Know your Enemy##10160
+		step
+			goto Hellfire Peninsula,61.7,60.9
+			.talk Sergeant Altumus##19309
+			..turnin The Legion Reborn##10141
+			..accept The Path of Anguish##10142
+		step
+			goto Hellfire Peninsula,65.8,54.1
+			.kill 1 Dreadcaller|q 10142/1
+			.kill 4 Flamewaker Imp|q 10142/2
+			.kill 6 Infernal Warbringer|q 10142/3
+		step
+			goto Hellfire Peninsula,61.7,60.8
+			.talk Sergeant Altumus##19309
+			..turnin The Path of Anguish##10142
+			..accept Expedition Point##10143
+		step
+			goto Hellfire Peninsula,50.9,60.2
+			.talk Lieutenant Amadi##16820
+			..turnin Know your Enemy##10160
+			..accept Fel Orc Scavengers##10482
+		step
+			goto Hellfire Peninsula,60.4,52.1
+			.kill 20 Bonechewer Orc|q 10482/1
+		step
+			goto Hellfire Peninsula,50.9,60.2
+			.talk Lieutenant Amadi##16820
+			..turnin Fel Orc Scavengers##10482
+			..accept Ill Omens##10483
+		step
+			goto Hellfire Peninsula,65.8,67.2
+			.from Bleeding Hollow Grunt##16871, Bleeding Hollow Dark Shaman##16873, Bleeding Hollow Peon##16907
+			.get Cursed Talisman|q 10483/1
+		step
+			goto Hellfire Peninsula,71,63.4
+			.talk Corporal Ironridge##21133
+			..turnin Ill Omens##10483
+		step
+			goto Hellfire Peninsula,71.3,62.8
+			.talk Forward Commander Kingston##19310
+			..turnin Expedition Point##10143
+		step
+			goto Hellfire Peninsula,56.7,66.3
+			.talk Lieutenant Chadwick##17557
+			..accept Weaken the Ramparts##9575
+		step
+			goto Hellfire Peninsula,47.7,53.54
+			.' Go To Instance!
+			.info Good luck!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Hellfire Citadel: The Blood Furnace (59)",[[
-	startlevel 59
-	step
-		.' You must complete Hellfire Ramparts questline before proceeding with this chain.
-		.' Next line will check the condition|tip Manually skip this step
-		..turnin Weaken the Ramparts##9575
-	step
-		goto Hellfire Peninsula,56.4,66.7
-		.talk Gunny##17479
-		..accept Heart of Rage##9607
-	step
-		goto Hellfire Peninsula,46.05,51.76
-		.' Go To Instance!|tip Good luck!
+author danaton
+startlevel 59
+		step
+			.' You must complete Hellfire Ramparts questline before proceeding with this chain.
+			.' Next line will check the condition|tip Manually skip this step
+			..turnin Weaken the Ramparts##9575
+		step
+			goto Hellfire Peninsula,56.4,66.7
+			.talk Gunny##17479
+			..accept Heart of Rage##9607
+		step
+			goto Hellfire Peninsula,46.05,51.76
+			.' Go To Instance!
+			.info Good luck!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Hellfire Citadel: The Shattered Halls (67)",[[
-	startlevel 67
-	step //1
-	.' You must complete Hellfire Ramparts and The Blood Furnace questline before proceeding with this chain.
-	.' Next line will check the condition|tip Manually skip this step
-	..turnin Weaken the Ramparts##9575
-	..turnin Heart of Rage##9607
-	step //2
-	goto Hellfire Peninsula,56.6,66.7
-	.talk Force Commander Danath Trollbane##16819
-	..accept Turning the Tide##9492
-	step //3
-	goto Hellfire Peninsula,56.8,62.7
-	.talk Field Commander Romus##16830
-	..accept Pride of the Fel Horde##9493
-	step //4
-	.' David Wayne has one more quest, but we will skip it.|tip Manually skip this step
-	step //5
-	goto Hellfire Peninsula,48.0,51.9
-	.' Go To Instance!|tip Good luck!
+author danaton
+startlevel 67
+		step //1
+			.' You must complete Hellfire Ramparts and The Blood Furnace questline before proceeding with this chain.
+			.' Next line will check the condition|tip Manually skip this step
+			..turnin Weaken the Ramparts##9575
+			..turnin Heart of Rage##9607
+		step //2
+			goto Hellfire Peninsula,56.6,66.7
+			.talk Force Commander Danath Trollbane##16819
+			..accept Turning the Tide##9492
+		step //3
+			goto Hellfire Peninsula,56.8,62.7
+			.talk Field Commander Romus##16830
+			..accept Pride of the Fel Horde##9493
+		step //4
+			.' David Wayne has one more quest, but we will skip it.
+			.info Manually skip this step
+		step //5
+			goto Hellfire Peninsula,48.0,51.9
+			.' Go To Instance!|tip Good luck!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Heroic Instance Keys\\Hellfire Citadel (70)",[[
-	startlevel 70
-	step //1
-	.' Need rep|tip Manually skip this step
-	step //2
-	goto Hellfire Peninsula,56.7,62.6
-	.' Need friendly rep from Honor Hold |rep Honor Hold,Friendly
-	.talk Logistics Officer Ulrike##17657
-	.buy 1##30622
+author danaton
+startlevel 70
+		step //1
+			.' Need rep|tip Manually skip this step
+		step //2
+			goto Hellfire Peninsula,56.7,62.6
+			.' Need friendly rep from Honor Hold |rep Honor Hold,Friendly
+			.talk Logistics Officer Ulrike##17657
+			.buy 1##30622
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Heroic Instance Keys\\Auchindoun (70)",[[
-	startlevel 70
-	step //1
-	.' Need rep|tip Manually skip this step
-	step //2
-	goto Shattrath City,62.0,68.8
-	//.' Need honored rep from Lower City |rep Lower City,Honored
-	.talk Nakodu##21655
-	.buy 1##30633
+author danaton
+startlevel 70
+		step //1
+			.' Need rep|tip Manually skip this step
+		step //2
+			goto Shattrath City,62.0,68.8
+			//.' Need honored rep from Lower City |rep Lower City,Honored
+			.talk Nakodu##21655
+			.buy 1##30633
 ]])
 ZygorGuidesViewer.AllianceInstalled=true

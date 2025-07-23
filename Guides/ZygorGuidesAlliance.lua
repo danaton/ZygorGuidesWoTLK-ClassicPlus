@@ -4878,7 +4878,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 	step //20
 		goto 44.2,45.3|n
 		.talk Silva Fil'naveth##11800
-		..'Fly to Rut'theran Village|goto Teldrassil,58.4,93.9,0.3|c
+		.'Fly to Rut'theran Village|goto Teldrassil,58.4,93.9,0.3|c
 		only NightElf Druid
 	step //21
 		'Fly to Auberdine|goto Darkshore,36.4,45.6,0.3|noway|c
@@ -7756,7 +7756,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..turnin Panther Mastery (2)##191
 		..accept Panther Mastery (3)##192
 	step //180
-		'Go south to Booty Bay to 26.9,77.2|goto 26.9,77.2
+		goto 26.9,77.2
 		.talk Krazek##773
 		..turnin Krazek's Cookery##210
 		..accept Favor for Krazek##627
