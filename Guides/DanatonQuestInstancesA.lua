@@ -22,7 +22,7 @@ startlevel 15
 		step //4
 			.goto Westfall,56.32,47.54
 			.talk Marshal Gryan Stoutmantle##234
-			..accept The Defias Brotherhood##65
+			..accept The Defias Brotherhood (1)##65
 		step //5
 			goto Westfall,52.89,53.66
 			.talk Innkeeper Heather##8931
@@ -30,25 +30,25 @@ startlevel 15
 		step //6
 			goto Redridge Mountains,26.49,45.33
 			.talk Wiley the Black##266
-			..turnin The Defias Brotherhood##65
-			..accept The Defias Brotherhood##132
+			..turnin The Defias Brotherhood (1)##65
+			..accept The Defias Brotherhood (2)##132
 		step //7
 			.'Hearth to Sentinel Hill|goto Westfall,52.89,53.66,3|use Hearthstone##6948|noway|c
 		step //8
 			goto Westfall,56.32,47.54
 			.talk Marshal Gryan Stoutmantle##234
-			..turnin The Defias Brotherhood##132
-			..accept The Defias Brotherhood##135
+			..turnin The Defias Brotherhood (2)##132
+			..accept The Defias Brotherhood (3)##135
 		step //9
 			goto Stormwind,78.55,70.87
 			.talk Master Mathias Shaw##332
-			..turnin The Defias Brotherhood##135
-			..accept The Defias Brotherhood##141
+			..turnin The Defias Brotherhood (3)##135
+			..accept The Defias Brotherhood (4)##141
 		step //10
 			goto Westfall,56.32,47.54
 			.talk Marshal Gryan Stoutmantle##234
-			..turnin The Defias Brotherhood##141
-			..accept The Defias Brotherhood##142
+			..turnin The Defias Brotherhood (4)##141
+			..accept The Defias Brotherhood (5)##142
 		step //11
 			goto Westfall,45.70,68.57
 			.from Defias Messenger##550
@@ -57,11 +57,11 @@ startlevel 15
 		step //12
 			goto Westfall,56.32,47.54
 			.talk Marshal Gryan Stoutmantle##234
-			..turnin The Defias Brotherhood##142
+			..turnin The Defias Brotherhood (5)##142
 		step //13
 			goto Westfall,55.68,47.51
 			.talk The Defias Traitor##467
-			..accept The Defias Brotherhood##155
+			..accept The Defias Brotherhood (6)##155
 		step //14
 			.'Follow the Defias Traitor.
 			goto Westfall,42.56,71.71
@@ -69,8 +69,8 @@ startlevel 15
 		step //15
 			goto Westfall,56.32,47.54
 			.talk Marshal Gryan Stoutmantle##234
-			..turnin The Defias Brotherhood##155
-			..accept The Defias Brotherhood##166
+			..turnin The Defias Brotherhood (6)##155
+			..accept The Defias Brotherhood (7)##166
 		step //16
 			goto Westfall,56.7,47.5
 			.talk Scout Riell##820
@@ -235,7 +235,7 @@ startlevel 25
 			goto Dun Morogh,17.74,39.17
 			.' Go To Instance!
 ]])
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Stormwind Jail (25)",[[
+ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\The Stockade (25)",[[
 author danaton
 startlevel 25
 		step
@@ -428,18 +428,12 @@ startlevel 40
 			goto Tanaris,66.98,22.38
 			.talk Yeh'kinya##8579
 			..accept Screecher Spirits##3520
-		//step //16
-			//goto Feralas,46.6,48.2
-			//.kill 3 Rogue Vale Screechers|n
-			//.' Use Yeh'kinya's Bramble on their corpses|use Yeh'kinya's Bramble##10699
-			//.' Talk to their spirits that appear to collect their spirits
-			//.' Collect 3 Screecher Spirits|goal 3 Screecher Spirits Collected|q 3520/1
 		step //16
 			goto Feralas,46.6,48.2
-			.from Vale Screecher##5307+, Rogue Vale Screecher##5308+
+			.from Vale Screecher##5307, Rogue Vale Screecher##5308
 			.' Use Yeh'kinya's Bramble on their corpses|use Yeh'kinya's Bramble##10699
-			.' Talk to their spirits that appear to collect their spirits
-			.' Collect 3 Screecher Spirits|goal 3 Screecher Spirits Collected|q 3520/1
+			.' Collect 3 Screecher Spirits|q 3520/1
+			.info Talk to their spirits that appear to collect their spirits.
 		step //17
 			goto Tanaris,66.98,22.38
 			.talk Yeh'kinya##8579
@@ -667,7 +661,7 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackrock Depth 
 author danaton
 startlevel 50
 		step //1
-			.' Recommended start 52 level
+			.' Recommended start 52 level.
 			goto Tanaris,67.00,24.00
 			.talk Yorba Screwspigot##9706
 			..accept Yuka Screwspigot##4324
@@ -683,7 +677,7 @@ startlevel 50
 		step //4
 			goto Ironforge,38.40,55.30
 			.talk Royal Historian Archesonus##8879
-			..accept The Smoldering Ruins of Thaurissan##3702
+			..accept The Smoldering Ruins of Thaurissan (1)##3702
 		step //5
 			goto Ironforge,38.40,55.30
 			.talk Royal Historian Archesonus##8879
@@ -691,8 +685,8 @@ startlevel 50
 		step //6
 			goto Ironforge,38.40,55.30
 			.talk Royal Historian Archesonus##8879
-			..turnin The Smoldering Ruins of Thaurissan##3702
-			..accept The Smoldering Ruins of Thaurissan##3701
+			..turnin The Smoldering Ruins of Thaurissan (1)##3702
+			..accept The Smoldering Ruins of Thaurissan (2)##3701
 		step //7
 			goto Burning Steppes,84.60,68.10
 			.talk Oralius##9177
@@ -726,7 +720,7 @@ startlevel 50
 			goto Searing Gorge,39.1,39
 			.talk Kalaran Windblade##8479
 			..accept Divine Retribution##3441
-			.' Listen to his story
+			.' Listen to his story.
 			..turnin Divine Retribution##3441
 			..accept The Flawless Flame##3442
 		step //15
@@ -742,7 +736,7 @@ startlevel 50
 			..accept Forging the Shaft##3443
 		step //17
 			goto Searing Gorge,42.4,47.1
-			.kill Dark Iron dwarves|n
+			.from Dark Iron Steamsmith##5840, Dark Iron Slaver##5844, Dark Iron Taskmaster##5846
 			.get 8 Thorium Plated Dagger|q 3443/1
 		step //18
 			goto Searing Gorge,39,38.9
@@ -760,7 +754,7 @@ startlevel 50
 			..accept The Torch of Retribution (1)##3453
 			..turnin The Torch of Retribution (1)##3453
 			..accept The Torch of Retribution (2)##3454
-			.' Click the green glowing floating Torch of Retribution
+			.' Click the green glowing floating Torch of Retribution.
 			..turnin The Torch of Retribution (2)##3454
 			..accept Squire Maltrake##3462
 			.talk Squire Maltrake##8509
@@ -786,9 +780,9 @@ startlevel 50
 			goto Searing Gorge,39.1,39
 			.talk Squire Maltrake##8509
 			..turnin Set Them Ablaze!##3463
-			.' Click the small grey chest on the ground
+			.' Click the small grey chest on the ground.
 			..accept Trinkets...##3481
-			.' Click the chest again
+			.' Click the chest again.
 			..turnin Trinkets...##3481
 			.' Open the Hoard of the Black Dragonflight in your bags|use Hoard of the Black Dragonflight##10569
 			.' Make sure to save the Black Dragonflight Molt|collect Black Dragonflight Molt##10575|q 4022/1 |future
@@ -796,7 +790,7 @@ startlevel 50
 			goto Burning Steppes,95.1,31.6
 			.talk Cyrus Therepentous##9459
 			..accept A Taste of Flame##4022
-			.' Present proof of your deeds
+			.' Present proof of your deeds.
 			..turnin A Taste of Flame##4022
 			..accept A Taste of Flame##4024
 		step //27
@@ -807,7 +801,7 @@ startlevel 50
 		step //28
 			goto Ironforge,38.40,55.30
 			.talk Royal Historian Archesonus##8879
-			..turnin The Smoldering Ruins of Thaurissan##3701
+			..turnin The Smoldering Ruins of Thaurissan (2)##3701
 		step //29
 			goto Ironforge,39.10,56.30
 			.talk King Magni Bronzebeard ##2784
@@ -815,9 +809,10 @@ startlevel 50
 		step //30
 			goto Burning Steppes,28.19,24.47
 			.' Die in lava! Necessary step!
+			.info If done, skip manually.
 		step //31
 			goto Burning Steppes,29.0,28.9
-			.' Speak with NPC in ghost form
+			.' Speak with NPC in ghost form.
 			.talk Franclorn Forgewright##8888
 			..accept Dark Iron Legacy##3801
 			..turnin Dark Iron Legacy##3801
@@ -826,38 +821,111 @@ startlevel 50
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Stratholme (55)",[[
 author danaton
 startlevel 55
-	step
-		goto Eastern Plaguelands,75.63,53.89
-		.talk Duke Nicholas Zverenhoff##11039
-		..accept The Archivist##5251
-	step
-		goto Eastern Plaguelands,75.70,53.72
-		.talk Betina Bigglezink##11035
-		..accept The Flesh Does Not Lie##5212
-	step
-		goto Eastern Plaguelands,75.7,52.6
-		.talk Rohan the Assassin##16131
-		..accept Bonescythe Digs##9126
-	step
-		goto Eastern Plaguelands,75.92,51.99
-		.talk Leonid Barthalomew the Revered##11036
-		..accept Houses of the Holy##5243
-	step
-		goto Eastern Plaguelands,74.87,52.12
-		.talk Smokey LaRue##11033
-		..accept The Great Fras Siabi##5214
-	step
-		goto Eastern Plaguelands,73.83,57.90
-		.talk Caretaker Alen##11038
-		..accept The Restless Souls##5281
-	step
-		goto Eastern Plaguelands,11.34,28.83
-		.talk Egan##11140
-		..turnin The Restless Souls##5281
-		..accept The Restless Souls##5282
-	step
-	goto Eastern Plaguelands,27.1,12.8
-	.' Go To Instance!
+		step //1
+			goto Eastern Plaguelands,4.7,38.4
+			.talk Tirion Fordring##1855
+			..accept Demon Dogs##5542
+			..accept Blood Tinged Skies##5543
+			..accept Carrion Grubbage##5544
+			.info Required for full completion.
+			.info Can be skipped for a short route.
+		step //2
+			goto Eastern Plaguelands,24.9,63.6
+			.kill 20 Plaguehound Runt|q 5542/1
+			.kill 30 Plaguebat|q 5543/1
+			.from Carrion Grub##8603, Carrion Devourer##8605
+			.get 15 Slab of Carrion Worm Meat|q 5544/1
+			.info Required for full completion.
+			.info Can be skipped for a short route.
+		step //3
+			goto Eastern Plaguelands,52.5,49.1
+			.kill 5 Plaguehound|q 5542/2
+			.info Required for full completion.
+			.info Can be skipped for a short route.
+		step //4
+			goto Eastern Plaguelands,44.4,35.5
+			.kill 5 Frenzied Plaguehound|q 5542/3
+			.info Required for full completion.
+			.info Can be skipped for a short route.
+		step //5
+			goto Eastern Plaguelands,4.7,38.4
+			.talk Tirion Fordring##1855
+			..turnin Demon Dogs##5542
+			..turnin Blood Tinged Skies##5543
+			..turnin Carrion Grubbage##5544
+			..accept Redemption##5742
+			.goal Listen to what Tirion Fordring has to say|q 5742
+			..turnin Redemption##5742
+			..accept Of Forgotten Memories##5781
+			.info Required for full completion.
+			.info Can be skipped for a short route.
+		step //6
+			goto Eastern Plaguelands,24.7,79.7
+			.' Interact with Loose Dirt Mound.
+			.from Mercutio Filthgorger##11886
+			.get Taelan's Hammer##14613|q 5781/1
+			.info Required for full completion.
+			.info Can be skipped for a short route.
+		step //7
+			goto Eastern Plaguelands,4.7,38.4
+			.talk Tirion Fordring##1855
+			..turnin Of Forgotten Memories##5781
+			..accept Of Lost Honor##5845
+			.info Required for full completion.
+			.info Can be skipped for a short route.
+		step //8
+			goto Eastern Plaguelands,66.2,28.9
+			.collect 1 Symbol of Lost Honor##14625|q 5845/1
+			.info Underwater.
+			.info Required for full completion.
+			.info Can be skipped for a short route.
+		step //9
+			goto Eastern Plaguelands,4.7,38.4
+			.talk Tirion Fordring##1855
+			..turnin Of Lost Honor##5845
+			..accept Of Love and Family (1)##5846
+			.info Required for full completion.
+			.info Can be skipped for a short route.
+		step //10
+			goto Western Plaguelands,65.8,75.4
+			.talk Artist Renfray##11936
+			..turnin Of Love and Family (1)##5846
+			..accept Of Love and Family (2)##5848
+			.info Required for full completion.
+			.info Can be skipped for a short route.
+		step //11
+			goto Eastern Plaguelands,75.63,53.89
+			.talk Duke Nicholas Zverenhoff##11039
+			..accept The Archivist##5251
+		step //12
+			goto Eastern Plaguelands,75.70,53.72
+			.talk Betina Bigglezink##11035
+			..accept The Flesh Does Not Lie##5212
+			.info Chain: 1/2 // del this string
+		step //13
+			goto Eastern Plaguelands,75.7,52.6
+			.talk Rohan the Assassin##16131
+			..accept Bonescythe Digs##9126
+		step //14
+			goto Eastern Plaguelands,75.92,51.99
+			.talk Leonid Barthalomew the Revered##11036
+			..accept Houses of the Holy##5243
+		step //15
+			goto Eastern Plaguelands,74.87,52.12
+			.talk Smokey LaRue##11033
+			..accept The Great Fras Siabi##5214
+		step //16
+			goto Eastern Plaguelands,73.83,57.90
+			.talk Caretaker Alen##11038
+			..accept The Restless Souls##5281
+		step //17
+			goto Eastern Plaguelands,11.34,28.83
+			.talk Egan##11140
+			..turnin The Restless Souls##5281
+			..accept The Restless Souls##5282
+		step //18
+			goto Eastern Plaguelands,27.1,12.8
+			.' Go To Instance!
 ]])
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackrock Spire (57)",[[
 author danaton

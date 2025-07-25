@@ -5612,9 +5612,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..accept A Baying of Gnolls##124
 	step //200
 		goto 34.2,67.4
-		.from Black Dragon Whelp##441+
+		.from Black Dragon Whelp##441
 		.get 6 Underbelly Whelp Scale|q 122/1
-		.from Great Goretusk##547+
+		.from Great Goretusk##547
 		.get 5 Great Goretusk Snout|q 92/1
 	step //201
 		goto 19.3,73.2
@@ -5742,7 +5742,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (20-25
 		goto 29,37.4
 		.kill 10 Redridge Brute|q 124/1
 		.kill 8 Redridge Mystic|q 124/2
-		.from Redridge Brute##426+, Redridge Mystic##430+
+		.from Redridge Brute##426, Redridge Mystic##430
 		.get 5 Iron Pike|q 89/1
 		.get 5 Iron Rivet|q 89/2
 	step //26
@@ -12166,7 +12166,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 	step //211
 		'Go northeast to the Eastern Plaguelands|goto Eastern Plaguelands|noway|c
 	step //212
-		'Go north up the coast to 4.7,38.4|goto Eastern Plaguelands,4.7,38.4
+		goto Eastern Plaguelands,4.7,38.4
 		.talk Tirion Fordring##1855
 		..accept Demon Dogs##5542
 		..accept Blood Tinged Skies##5543
@@ -12185,10 +12185,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		.get SI:7 Insignia (Fredo)##16001|q 6185/3
 		.' See a message saying you Uncovered the Blightcaller|goal The Blightcaller Uncovered|q 6185/1
 	step //216
-		goto 24.9,63.6
+		goto Eastern Plaguelands,24.9,63.6
 		.kill 20 Plaguehound Runt|q 5542/1
 		.kill 30 Plaguebat|q 5543/1
-		.kill Carrion Grubs|n
+		.from Carrion Grub##8603, Carrion Devourer##8605
 		.get 15 Slab of Carrion Worm Meat|q 5544/1
 	step //217
 		goto 32.4,83.7
@@ -12209,10 +12209,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		..accept Uncle Carlin##5241
 		..accept Auntie Marlene##5152
 	step //220
-		goto 52.5,49.1
+		goto Eastern Plaguelands,52.5,49.1
 		.kill 5 Plaguehound|q 5542/2
 	step //221
-		goto 50.3,25.9
+		goto Eastern Plaguelands,50.3,25.9
 		.kill 5 Frenzied Plaguehound|q 5542/3
 	step //222
 		goto 75.7,53.9
@@ -12285,9 +12285,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		.talk Bibilfaz Featherwhistle##12596
 		.' Fly to Thondroril River, Western Plaguelands|goto Western Plaguelands,69.2,49.7,0.5 |c
 	step //239
-		'Go northeast to the Eastern Plaguelands|goto Eastern Plaguelands|noway|c
+		.' Go northeast to the Eastern Plaguelands|goto Eastern Plaguelands|noway|c
 	step //240
-		'Go north up the coast to 4.7,38.4|goto Eastern Plaguelands,4.7,38.4
+		goto Eastern Plaguelands,4.7,38.4
 		.talk Tirion Fordring##1855
 		..turnin Demon Dogs##5542
 		..turnin Blood Tinged Skies##5543

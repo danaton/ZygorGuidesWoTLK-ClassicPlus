@@ -2,10 +2,10 @@
 if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Alliance" then return end
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[20] Elwynn Forest",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[10] Elwynn Forest",[[
 author danaton
 description This guide contain quest-chain (45 quests) for Elwynn Forest location.
-startlevel 20
+startlevel 10
 		step
 		.' For comfortable execution quest chain, it is recommended to be level 20+|tip Manually skip this step
 		step
@@ -349,7 +349,8 @@ startlevel 20
 			.talk Farmer Furlbrow##237
 			..turnin Furlbrow's Deed##184
 		step
-			.' Completed!|tip Use next guide - Westfall
+			.' Congratulations! +45 quests for achievement "Loremaster of Eastern Kingdoms".
+			.info Use next guide - Westfall.
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[Alpha] Stormwind City",[[
@@ -408,10 +409,10 @@ startlevel 60
 		step
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[30] Westfall",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[20] Westfall",[[
 author danaton
 description This guide contain quest-chain (26 quests + 4 if Human race) for Westfall location.
-startlevel 30
+startlevel 20
 		step
 			.' First completed Elwynn Forest guide|tip Manually skip this step
 		step
@@ -709,14 +710,361 @@ startlevel 30
 			.talk Marshal Gryan Stoutmantle##234
 			..turnin The Defias Brotherhood##155
 		step
+			.' Congratulations! +26 quests for achievement "Loremaster of Eastern Kingdoms".
 			.' Next, I recommend running Quest-Instance Guides: Deadmines (15)
-			.' Completed!|tip Use next guide - Redridge Mountains
+			.info Use next guide - Redridge Mountains.
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[20] Azuremyst Isle",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[25] Redridge Mountains",[[
+author danaton
+description This guide contain quest-chain (35 quests) for Redridge Mountains location.
+startlevel 25
+		step //1
+			.info First things complete quest-chain Westfall!
+			.info If done, skip manually.
+		step //
+			goto Elwynn Forest,65.2,69.7
+			.talk Theocritus##313
+			..accept A Watchful Eye##94
+		step //
+			goto Redridge Mountains,15.3,71.5
+			.talk Guard Parker##464
+			..accept Encroaching Gnolls##244
+		step //
+			goto Redridge Mountains,30.7,60
+			.talk Deputy Feldon##1070
+			..turnin Encroaching Gnolls##244
+			..accept Assessing the Threat##246
+		step //
+			goto Redridge Mountains,31.5,57.9
+			.talk Guard Howe##903
+			..accept Blackrock Bounty##128
+		step //
+			goto Redridge Mountains,33.5,49
+			.talk Marshal Marris##382
+			..accept Blackrock Menace##20
+		step //
+			goto Redridge Mountains,32.1,48.6
+			.talk Foreman Oslow##341
+			..accept The Lost Tools##125
+		step //
+			goto Redridge Mountains,31,47.3
+			.talk Verner Osgood##415
+			..accept The Price of Shoes##118
+		step //
+			goto Redridge Mountains,30,44.4
+			.talk Magistrate Solomon##344
+			..accept Messenger to Stormwind (1)##120
+		step //
+			goto Redridge Mountains,27.7,47.4
+			.talk Dockmaster Baren##381
+			..accept Selling Fish##127
+			..accept Murloc Poachers##150
+		step //
+			goto Redridge Mountains,26.6,44.3
+			.talk Darcy##379
+			..accept A Free Lunch##129
+		step //
+			goto Redridge Mountains,26.5,44
+			.talk Barkeep Daniels##346
+			..accept Dry Times##116
+		step //
+			goto Redridge Mountains,22.7,43.8
+			.talk Chef Breanna##343
+			..accept Redridge Goulash##92
+		step //
+			goto Redridge Mountains,21.9,46.3
+			.talk Martie Jainrose##342
+			..accept An Unwelcome Guest##34
+		step //
+			goto Redridge Mountains,16.4,49.2
+			.from Bellygrub##345
+			.get Bellygrub's Tusk##3631|q 34/1
+		//step //
+			//goto Redridge Mountains,21.9,46.3
+			//.talk Martie Jainrose##342
+			//..turnin An Unwelcome Guest##34
+		step //
+			goto Redridge Mountains,16.81,53.64
+			.from Great Goretusk##547
+			.get 5 Great Goretusk Snout##2296|q 92/1
+			.' You can find more around (1)|at 18.27,72.11
+			.info Don't sell this item!
+		step //
+			goto Redridge Mountains,15.3,71.5
+			.talk Guard Parker##464
+			..turnin A Free Lunch##129
+			..accept Visit the Herbalist##130
+		step //
+			goto Redridge Mountains,10.85,77.32
+			.from Tarantula##442
+			.get 5 Crisp Spider Meat##1081|q 92/3
+			.' You can find more around (1)|at 11.82,68.67
+			.' You can find more around (2)|at 18.26,73.15
+			.' You can find more around (3)|at 25.12,76.83
+			.info Don't sell this item!
+		step //
+			goto Redridge Mountains,15.92,63.47
+			.kill 10 Redridge Mongrel|q 246/1
+			.kill 6 Redridge Poacher|q 246/2
+			.' You can find more around (1)|at 26.8,80.2
+			.' You can find more around (2)|at 43.17,71.24
+			.' You can find more around (3)|at 53.93,74.93
+		step //
+			goto Redridge Mountains,60.77,75.60
+			.from Dire Condor##428
+			.get 5 Tough Condor Meat##1080|q 92/2
+			.' You can find more around (1)|at 48.43,76.16
+			.' You can find more around (2)|at 67.6,75.6
+			.info Don't sell this item!
+		step //
+			goto Redridge Mountains,30.7,60
+			.talk Deputy Feldon##1070
+			..turnin Assessing the Threat##246
+		step //
+			goto Redridge Mountains,22.7,43.8
+			.talk Chef Breanna##343
+			..turnin Redridge Goulash##92
+		step //
+			goto Redridge Mountains,21.9,46.3
+			.talk Martie Jainrose##342
+			..turnin An Unwelcome Guest##34
+			..turnin Visit the Herbalist##130
+			..accept Delivering Daffodils##131
+		step //
+			goto Redridge Mountains,26.6,44.4
+			.talk Darcy##379
+			..turnin Delivering Daffodils##131
+		step //
+			goto Redridge Mountains,29.3,53.6
+			.talk Shawn##8965
+			..accept Hilary's Necklace##3741
+		step //
+			goto Redridge Mountains,29.1,55.1
+			.' Click the Glinting Mud
+			.info The Glinting Mud spawns in random places around this area, so some searching may be necessary.
+			.get Hilary's Necklace|q 3741/1
+		step //
+			goto Redridge Mountains,41.5,54.6
+			.' Click the Sunken Chest
+			.get Oslow's Toolbox|q 125/1
+		step //
+			goto Redridge Mountains,48.2,73.3
+			.from Murloc Flesheater##422, Murloc Shorestriker##1083, Murloc Minor Tidecaller##548
+			.get 10 Spotted Sunfish|q 127/1
+			.collect 8 Murloc Fin##1468|q 150/1
+			.' You can find more around (1)|at 40.4,46.16
+			.' You can find more around (2)|at 56.9,50.9
+			.' You can find more around (3)|at 57.7,61.5
+			.info Don't sell this item!
+		step //
+			goto Redridge Mountains,32.1,48.6
+			.talk Foreman Oslow##341
+			..turnin The Lost Tools##125
+			..accept The Everstill Bridge##89
+		step //
+			goto Redridge Mountains,29.3,53.6
+			.talk Hilary##8962
+			..turnin Hilary's Necklace##3741
+		step //
+			goto Redridge Mountains,27.7,47.4
+			.talk Dockmaster Baren##381
+			..turnin Selling Fish##127
+			..turnin Murloc Poachers##150
+		step // move
+			goto Stormwind,60,76.9
+			.talk Roberto Pupellyverbos##277
+			.buy Cask of Merlot##1941|q 116/2
+		step // move
+			goto Stormwind,69.2,82.7
+			.talk General Marcus Jonathan##466
+			..turnin Messenger to Stormwind (1)##120
+			..accept Messenger to Stormwind (2)##121
+		step // move
+			goto Elwynn Forest,44,65.7
+			.talk Barkeep Dobbins##465
+			.buy Skin of Sweet Rum##1939|q 116/4
+		step // move
+			goto Elwynn Forest,41.7,65.5
+			.talk Smith Argus##514
+			..turnin The Price of Shoes##118
+			..accept Return to Verner##119
+		step //
+			goto Redridge Mountains,31,47.3
+			.talk Verner Osgood##415
+			..turnin Return to Verner##119
+			..accept Underbelly Scales##122
+			..accept A Baying of Gnolls##124
+		step //
+			goto Redridge Mountains,30,44.4
+			.talk Magistrate Solomon##344
+			..turnin Messenger to Stormwind (2)##121
+			..accept Messenger to Westfall (1)##143
+		step //
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin Messenger to Westfall (1)##143
+			..accept Messenger to Westfall (2)##144
+		step //
+			goto Westfall,44.6,80.3
+			.talk Grimbooze Thunderbrew##239
+			..accept Thunderbrew Lager##117
+		step //
+			goto Westfall,37.1,52.3
+			.from Harvest Watcher##114, Harvest Reaper##115
+			.get 5 Hops##1274|q 117/1
+			.' You can find more around (1)|at 61.6,62
+			.info Don't sell this item!
+		step //
+			goto Westfall,44.6,80.3
+			.talk Grimbooze Thunderbrew##239
+			..turnin Thunderbrew Lager##117
+		step //
+			goto Redridge Mountains,30,44.5
+			.talk Magistrate Solomon##344
+			..turnin Messenger to Westfall (2)##144
+			..accept Messenger to Darkshire (1)##145
+		step //
+			goto Duskwood,71.9,46.4
+			.talk Lord Ello Ebonlocke##263
+			..turnin Messenger to Darkshire (1)##145
+			..accept Messenger to Darkshire (2)##146
+		step //
+			goto Duskwood,73.7,44
+			.talk Barkeep Hann##274
+			.buy Bottle of Moonshine##1942|q 116/3
+		step //
+			goto Redridge Mountains,30,44.5
+			.talk Magistrate Solomon##344
+			..turnin Messenger to Darkshire (2)##146
+		step //
+			goto Redridge Mountains,26.5,44
+			.talk Barkeep Daniels##346
+			..turnin Dry Times##116
+		step //
+			goto Redridge Mountains,34.2,67.4
+			.from Black Dragon Whelp##441
+			.get 6 Underbelly Whelp Scale|q 122/1
+			.' You can find more around (1)|at 44.35,39.58
+			.' You can find more around (2)|at 47.73,33.36
+		step //
+			goto Redridge Mountains,29,37.4
+			.kill 10 Redridge Brute|q 124/1
+			.kill 8 Redridge Mystic|q 124/2
+			.from Redridge Brute##426, Redridge Mystic##430
+			.get 5 Iron Pike|q 89/1
+			.get 5 Iron Rivet|q 89/2
+		step //
+			goto Redridge Mountains,32.1,48.6
+			.talk Foreman Oslow##341
+			..turnin The Everstill Bridge##89
+		step //
+			goto Redridge Mountains,31,47.3
+			.talk Verner Osgood##415
+			..turnin Underbelly Scales##122
+			..turnin A Baying of Gnolls##124
+			..accept Howling in the Hills##126
+		step //
+			goto Redridge Mountains,27.4,21.8
+			.from Yowler##518
+			.get Yowler's Paw|q 126/1
+		step //
+			goto Redridge Mountains,32.9,6.8
+			.kill 15 Blackrock Champion|q 128/1
+			.collect 10 Battleworn Axe##3014|q 20/1
+		step //
+			goto Redridge Mountains,28.4,12.6
+			.talk Corporal Keeshan##349
+			..accept Missing In Action##219
+			.goal Escort Corporal Keeshan back to Redridge|q 219/1
+		step //
+			goto Redridge Mountains,33.5,49
+			.talk Marshal Marris##382
+			..turnin Blackrock Menace##20
+			..turnin Missing In Action##219
+			..accept Tharil'zun##19
+			..accept Shadow Magic##115
+		step //
+			goto Redridge Mountains,31,47.3
+			.talk Verner Osgood##415
+			..turnin Howling in the Hills##126
+		step //
+			goto Redridge Mountains,30,44.4
+			.talk Bailiff Conacher##900
+			..accept Solomon's Law##91
+		step //
+			goto Redridge Mountains,26.8,46.4
+			.info Interact with Wanted Poster and accept quests.
+			..accept Wanted: Gath'Ilzogg##169
+			..accept Wanted: Lieutenant Fangore##180
+		step //
+			goto Redridge Mountains,31.5,57.9
+			.talk Guard Howe##903
+			..turnin Blackrock Bounty##128
+		step //
+			goto Redridge Mountains,69.3,59.9
+			.from Tharil'zun##486
+			.get Tharil'zun's Head##1260|q 19/1
+		step //
+			goto Redridge Mountains,69.6,55.8
+			.from Gath'Ilzogg##334
+			.get Head of Gath'Ilzogg##3633|q 169/1
+		step //
+			goto Redridge Mountains,68.3,56.3
+			.from Blackrock Shadowcaster##436
+			.get 3 Midnight Orb##1261|q 115/1
+		step //
+			goto Redridge Mountains,84.5,46.8
+			.info Interact with Old Lion Statue.
+			..turnin A Watchful Eye##94
+			..accept Looking Further##248
+		step //
+			goto Redridge Mountains,80.2,37.1
+			.from Lieutenant Fangore##703
+			.get Fangore's Paw##3632|q 180/1
+			.from Shadowhide Slayer##431, Shadowhide Brute##432, Shadowhide Warrior##568
+			.get 10 Shadowhide Pendant##1075|q 91/1
+		step //
+			goto Redridge Mountains,63.2,49.8
+			.info At the very top of the tower.
+			..turnin Looking Further##248
+		step //
+			goto Redridge Mountains,84.5,46.8
+			.info Interact with Old Lion Statue.
+			..accept Morganth##249
+		step //
+			goto Redridge Mountains,80.1,49.5
+			.from Morganth##397
+			.info At the very top of the tower.
+			.get Pendant of Shadow##3617|q 249/1
+		step //
+			goto Redridge Mountains,33.5,49
+			.talk Marshal Marris##382
+			..turnin Tharil'zun##19
+			..turnin Shadow Magic##115
+		step //
+			goto Redridge Mountains,30,44.4
+			.talk Bailiff Conacher##900
+			..turnin Solomon's Law##91
+		step //
+			goto Redridge Mountains,30,44.4
+			.talk Magistrate Solomon##344
+			..turnin Wanted: Gath'Ilzogg##169
+			..turnin Wanted: Lieutenant Fangore##180
+		step //
+			goto Elwynn Forest,65.2,69.7
+			.talk Theocritus##313
+			..turnin Morganth##249
+		step //
+			.' Congratulations! +35 quests for achievement "Loremaster of Eastern Kingdoms".
+			.' Next, I recommend running Quest-Instance Guides: The Stockade (25).
+			.info Use next guide - Duskwood.
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[10] Azuremyst Isle",[[
 author danaton
 description This guide contain quest-chain (55 quests) for Azuremyst Isle location.
-startlevel 20
+startlevel 10
 		step
 			goto Azuremyst Isle,80.4,45.9
 			.talk Proenitus##16477
@@ -1190,10 +1538,10 @@ startlevel 20
 			.' Recomended next to use guide "Bloodmyst Isle".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[30] Bloodmyst Isle",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[20] Bloodmyst Isle",[[
 author danaton
 description This guide contain quest-chain (63 quests) for Bloodmyst Isle location.
-startlevel 30
+startlevel 20
 		step
 			goto The Exodar,81.51,51.46
 			.talk Torallius the Pack Handler##17584
@@ -1910,10 +2258,10 @@ startlevel 30
 			.' Congratulations! +63 quests for achievement "Loremaster Kalimdor".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[20] Teldrassil",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[10] Teldrassil",[[
 author danaton
 description This guide contain quest-chain (47 quests) for Teldrassil Night Elf location.
-startlevel 20
+startlevel 10
 		step
 			goto Teldrassil,58.7,44.3
 			.talk Conservator Ilthalaine##2079
@@ -2349,10 +2697,10 @@ startlevel 20
 			.' Completed!|tip Use next guide - Darkshore
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[30] Darkshore",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[20] Darkshore",[[
 author danaton
 description This guide contain quest-chain (67 quests) for Darkshore location.
-startlevel 30
+startlevel 20
 		step
 			.' For comfortable execution quest chain, it is recommended to be level 20+|tip Manually skip this step
 		step
@@ -2990,10 +3338,10 @@ startlevel 30
 			..turnin The Absent Minded Prospector (5)##943
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[40] Ashenvale",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[30] Ashenvale",[[
 author danaton
 description This guide contain quest-chain (48 quests) for Ashenvale location.
-startlevel 40
+startlevel 30
 		step
 			.' First you need complete quest-guide: "Darkshore".
 		step
@@ -3462,7 +3810,7 @@ startlevel 40
 			.talk Thyn'tel Bladeweaver##8026
 			..turnin Answered Questions##1044
 		step
-			.' Congratulations! +48 quests for achievement "Loremaster Kalimdor".
+			.' Congratulations! +48 quests for achievement "Loremaster of Kalimdor".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[30] Stonetalon Mountains",[[
