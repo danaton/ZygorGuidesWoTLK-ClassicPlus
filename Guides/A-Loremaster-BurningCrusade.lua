@@ -5976,10 +5976,14 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			only if rep ('The Aldor') >= Neutral
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\[beta] Shadowmoon Valley",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Shadowmoon Valley",[[
 author danaton
 description This guide contain quest-chain (90 quests) for Shadowmoon Valley location.
 startlevel 70
+		step
+			goto Shattrath City,64.7,70.7
+			.talk Fantei##19678
+			..accept Zorus the Judicator##11045
 		step
 			goto Shadowmoon Valley,39.50,53.73
 			.talk Wing Commander Nuainn##21357
@@ -5991,10 +5995,11 @@ startlevel 70
 		step
 			goto Shadowmoon Valley,37.61,55.45
 			.talk Brubeck Stormfoot##18939
-			fpath Wildhammer Stronghold
+			fpath Wildhammer Stronghold, Shadowmoon Valley
 		step
 			goto Shadowmoon Valley,36.64,54.88
 			.talk Zorus the Judicator##21774
+			..turnin Zorus the Judicator##11045
 			..accept A Ghost in the Machine##10642
 		step
 			goto Shadowmoon Valley,36.54,55.24
@@ -6017,7 +6022,7 @@ startlevel 70
 			goto Shadowmoon Valley,36.67,51.35
 			.kill 10 Infernal Attacker##21419|q 10562/1
 		step
-			goto Shadowmoon Valley,36.25,44.18
+			goto Shadowmoon Valley,29.83,38.44
 			.from Felfire Diemetradon##21408
 			.info You can find them around the green lava areas around this area.
 			.get 8 Felfire Spleen##30819|q 10661/1
@@ -6028,7 +6033,7 @@ startlevel 70
 			.collect 15 Ever-Burning Ash##30716|q 10642/1 
 		step
 			goto Shadowmoon Valley,34.59,38.54
-			.' kill enemies around this area
+			.from Felboar##21878, Vilewing Chimaera##21879
 			.info Only Felboars and Vilewing Chimaeras will count for the quest goal.
 			.' Slay 20 Shadowmoon Valley Wildlife|q 10703/1
 		step
@@ -6055,15 +6060,15 @@ startlevel 70
 			..accept Enraged Spirits of Water##10480
 		step
 			goto Shadowmoon Valley,37.17,31.60
-			.' kill Dark Conclave enemies around this area
+			.' Kill Dark Conclave enemies around this area
 			.collect Sketh'lon Commander's Journal - Page 1##31260|q 10569/1
 		step
 			goto Shadowmoon Valley,36.4,33.5
-			.' kill Dark Conclave enemies around this area
+			.' Kill Dark Conclave enemies around this area
 			.collect Sketh'lon Commander's Journal - Page 2##31261|q 10569/2
 		step
 			goto Shadowmoon Valley,36.4,33.5
-			.' kill Dark Conclave enemies around this area
+			.' Kill Dark Conclave enemies around this area
 			.collect Sketh'lon Commander's Journal - Page 3##31262|q 10569/3
 		step
 			goto Shadowmoon Valley,50.17,23.74
@@ -6127,25 +6132,26 @@ startlevel 70
 			.info He walks around this area.
 			.get Sketh'lon War Totem##31169|q 10777/1
 		step
-			goto Shadowmoon Valley,48.99,26.66
-			.kill Greater Felfire Diemetradon##21462 |n
-			.collect Overdeveloped Felfire Gizzard##30867|q 10677/1
+			goto Shadowmoon Valley,48.9,24
+			.from Greater Felfire Diemetradon##21462
+			.get Overdeveloped Felfire Gizzard##30867|q 10677/1
 		step
 			goto Shadowmoon Valley,53.05,25.55
-			.' Enter the cave
+			.' Enter the cave.
 			.kill Keeper of the Cistern##20795 |n
 			.info She walks around this small area inside the cave.
-			.' Click Here After killing the Keeper of the Cistern|goto 51.66,17.66 |q 10451 |future
+			.' Keeper of the Cistern Spawn Position|goto 51.66,17.66 |q 10451 |future
+			.info If done, manual skip this step.
 		step
 			goto Shadowmoon Valley,52.10,18.82
 			.talk Earthmender Wilda##21027
 			.info She drops down out of the bubble nearby after you kill the Keeper of the Cistern.
 			..accept Escape from Coilskar Cistern##10451
 		step
-			.' Watch the dialogue
+			.' Watch the dialogue.
 			.info Follow Earthmender Wilda and protect her as she walks.
 			.info You may need help with this.
-			.' Escort Earthmender Wilda to Safety |q 10451/1
+			.goal Escort Earthmender Wilda to Safety|q 10451/1
 		step
 			goto Shadowmoon Valley,36.54,55.25
 			.talk Gnomus##21777
@@ -6160,21 +6166,19 @@ startlevel 70
 			goto Shadowmoon Valley,42.19,45.07
 			.talk Earthmender Torlok##21024
 			..turnin Enraged Spirits of Water##10480
-			..accept Enraged Spirits of Air##10481
 			..turnin Escape from Coilskar Cistern##10451
+			..accept Enraged Spirits of Air##10481
 		step
 			goto Shadowmoon Valley,35.19,40.89
 			.talk Parshah##22024
 			..turnin Asghar's Totem##10777
 			..accept The Rod of Lianthe##10778
 		step
-			goto Shadowmoon Valley,26.29,41.24
-			.' Click Fel Reaver Power Core
-			.info Underwater.
+			goto Shadowmoon Valley,26.57,42.3
 			.collect Fel Reaver Power Core##30628|q 10572/1
+			.info Underwater.
 		step
 			goto Shadowmoon Valley,22.24,35.54
-			.' Click Fel Reaver Armor Plating##184860
 			.collect Fel Reaver Armor Plating##30631|q 10572/2
 		step
 			goto Shadowmoon Valley,39.50,53.73
@@ -6184,7 +6188,7 @@ startlevel 70
 		step
 			goto Shadowmoon Valley,22.64,39.91
 			.use Fel Bomb##30614
-			.' Destroy the Legion Hold Infernals|q 10564/1
+			.goal Destroy the Legion Hold Infernals|q 10564/1
 		step
 			goto Shadowmoon Valley,39.50,53.73
 			.talk Wing Commander Nuainn##21357
@@ -6198,14 +6202,11 @@ startlevel 70
 		step
 			goto Shadowmoon Valley,39.25,36.20
 			.kill 10 Deathforge Guardian##20878|q 10582/1
-			.' You can find more inside the cave|at 40.16,38.18
-		step
-			goto Shadowmoon Valley,39.25,36.20
 			.kill 5 Deathforge Summoner##20872|q 10582/2
 			.' You can find more inside the cave|at 40.16,38.18
 		step
 			goto Shadowmoon Valley,39.25,36.20
-			.' kill Deathforge enemies around this area
+			.' Kill Deathforge enemies around this area.
 			.collect 10 Mark of Sargeras##30809|q 10826 |future
 			.' You can find more inside the cave|at 40.16,38.18
 			only if rep ('The Aldor') >= Neutral
@@ -6217,21 +6218,20 @@ startlevel 70
 			..accept The Summoning Chamber##10585
 		step
 			goto Shadowmoon Valley,40.16,38.16
-			.' Enter the cave
-			.' kill Deathforge enemies around this area
+			.' Enter the cave.
+			.from Deathforge Tinkerer##19754, Deathforge Smith##19756
 			.info Inside the cave.
-			.collect Elemental Displacer##30672 |q 10585/2 |goto 37.37,41.68
+			.get Elemental Displacer##30672|q 10585/2 |goto 37.37,41.68
 		step
 			goto Shadowmoon Valley,34.6,39.9
 			.talk Flanis Swiftwing##21727
-			.info Inside the cave.
 			.' Choose "Reclaim Flanis's pack."
 			.collect Flanis Pack##30658|q 10583/1
 		step
 			goto Shadowmoon Valley,37.70,38.27
 			.use Elemental Displacer##30672
 			.info Use it on Summoner Skartax inside the cave.
-			.kill Infernal Oversoul##21735 |n
+			.kill Infernal Oversoul##21735|n
 			.' End the Infernal Summoning Ritual|q 10585/1
 		step
 			goto Shadowmoon Valley,40.45,41.29
@@ -6245,7 +6245,7 @@ startlevel 70
 			.info Inside the cave.
 		step
 			goto Shadowmoon Valley,38.90,46.78
-			.kill Warbringer Razuun##21287 |n
+			.kill Warbringer Razuun##21287|n
 			.info Inside the cave.
 			.collect Razuun's Orders##30689|q 10586/2
 		step
@@ -6255,13 +6255,13 @@ startlevel 70
 			..accept Gaining Access##10589
 		step
 			goto Shadowmoon Valley,23.45,33.33
-			.' Kill enemies around this area
-			.collect Legion Teleporter Control##30695|q 10589/1
+			.from Mo'arg Weaponsmith##19755
+			.get Legion Teleporter Control##30695|q 10589/1
 		step
 			goto Shadowmoon Valley,23.13,35.10
-			.kill Overseer Ripsaw##21499 |n
+			.kill Overseer Ripsaw##21499|n
 			.info He walks around this area.
-			..accept Illidari-Bane Shard##10621 
+			..accept Illidari-Bane Shard##10621|use Illidari-Bane Shard##30756
 		step
 			goto Shadowmoon Valley,36.82,54.89
 			.talk Ordinn Thunderfist##19370
@@ -6292,10 +6292,10 @@ startlevel 70
 		step
 			goto Shadowmoon Valley,39.39,19.56
 			.from Doctor Gutrick##21778
-			.get The Doctor's Key##30712|q 10606
+			.get 1 The Doctor's Key##30712|q 10606
 		step
 			goto Shadowmoon Valley,39.38,19.48
-			.' Click The Doctor's Strongbox
+			.' Click The Doctor's Strongbox.
 			.collect The Art of Fel Reaver Maintenance##30713|q 10606/1
 		step
 			goto Shadowmoon Valley,40.81,22.26
@@ -6308,10 +6308,10 @@ startlevel 70
 			.' Control a Fel Reaver Sentinel|havebuff 133015|q 10612
 		step
 			goto Shadowmoon Valley,36.01,22.48
-			.kill Deathforged Infernal##21316 |n
+			.kill Deathforged Infernal##21316|n
 			.info Use the abilities on your action bar.
 			.info You can find them all along this path.
-			.' Destroy #60# Deathforged Infernals|q 10612/1
+			.' Destroy 60 Deathforged Infernals|q 10612/1
 		step
 			.' Stop Controlling the Fel Reaver |nobuff 133015 |q 10612
 			.info Right-click the Fel Reaver Controller buff near your minimap.
@@ -6326,7 +6326,7 @@ startlevel 70
 			..turnin Capture the Weapons##10626
 		step
 			goto Shadowmoon Valley,36.82,54.89
-			.' Watch the dialogue
+			.' Watch the dialogue.
 			.talk Ordinn Thunderfist##19370
 			..accept The Hermit Smith##10662
 		step
@@ -6335,16 +6335,16 @@ startlevel 70
 			..turnin News of Victory##10744
 		step
 			goto Shadowmoon Valley,45.65,68.76
-			.' Kill Eclipsion enemies around this area
-			.collect Lianthe's Key##31316|q 10778/1
+			.from Eclipsion Centurion##19792, Eclipsion Archmage##19796, Eclipsion Bloodwarder##19806
+			.get Lianthe's Key##31316|q 10778/1
 		step
 			goto Shadowmoon Valley,47.54,71.69
-			.' Click Lianthe's Strongbox
+			.' Click Lianthe's Strongbox.
 			.info Inside the tent.
 			.collect Rod of Lianthe##31317|q 10778/2
 		step
 			goto Shadowmoon Valley,46.84,68.76
-			.' Kill Eclipsion enemies around this area
+			.' Kill Eclipsion enemies around this area.
 			.collect 10 Sunfury Signets##30810|q 10824 |future
 			only if rep('The Scryers')>=Neutral
 		step
@@ -6352,25 +6352,17 @@ startlevel 70
 			.' Discover the Path of Conquest|q 10772/1
 		step
 			.use Wildhammer Flare Gun##31310
-			.' Next to you:
 			.talk Wildhammer Gryphon Rider##22059
 			..turnin The Path of Conquest##10772
 			..accept Breaching the Path##10773
 		step
 			goto Shadowmoon Valley,52.11,63.12
 			.kill 20 Eclipsion Soldier##22016|q 10773/1
-			.info You may need help with this.
-		step
-			goto Shadowmoon Valley,52.11,63.12
 			.kill 10 Eclipsion Cavalier##22018|q 10773/2
-			.info You may need help with this.
-		step
-			goto Shadowmoon Valley,52.11,63.12
 			.kill 10 Son of Corok##19824|q 10773/3
 			.info You may need help with this.
 		step
 			.use Wildhammer Flare Gun##31310
-			.' Next to you:
 			.talk Wildhammer Gryphon Rider##22059
 			..turnin Breaching the Path##10773
 			..accept Blood Elf + Giant = ???##10774
@@ -6380,26 +6372,20 @@ startlevel 70
 			.info You may need help with this.
 		step
 			goto Shadowmoon Valley,53.05,69.52
-			.kill Chancellor Bloodleaf##22012|q 10774/1
+			.from Chancellor Bloodleaf##22012
 			.info You may need help with this.
-		step
-			goto Shadowmoon Valley,53.05,69.52
-			.kill Chancellor Bloodleaf##22012 |n
-			.info You may need help with this.
-			.collect Illidan's Command##31271|q 10774/3
+			.get Illidan's Command##31271|q 10774/3
 		step
 			.use Wildhammer Flare Gun##31310
-			.' Next to you:
 			.talk Wildhammer Gryphon Rider##22059
 			..turnin Blood Elf + Giant = ???##10774
 			..accept Tabards of the Illidari##10775
 		step
 			goto Shadowmoon Valley,52.24,65.40
-			.' Kill Eclipsion enemies around this area
-			.collect 10 Illidari Tabard##31278|q 10775/1
+			.from Eclipsion Soldier##22016, Eclipsion Spellbinder##22017, Eclipsion Cavalier##22018
+			.get 10 Illidari Tabard##31278|q 10775/1
 		step
 			.use Wildhammer Flare Gun##31310
-			.' Next to you:
 			.talk Wildhammer Gryphon Rider##22059
 			..turnin Tabards of the Illidari##10775
 			..accept Dissension Amongst the Ranks...##10776
@@ -6407,19 +6393,19 @@ startlevel 70
 			goto Shadowmoon Valley,58.23,70.79
 			.talk Ancient Shadowmoon Spirit##21797
 			..turnin Teron Gorefiend - Lore and Legend##10644
+			..accept Divination: Gorefiend's Armor##10634
 			..accept Divination: Gorefiend's Cloak##10635
 			..accept Divination: Gorefiend's Truncheon##10636
-			..accept Divination: Gorefiend's Armor##10634
 		step
 			goto Shadowmoon Valley,59.68,70.17
 			.use Totem of Spirits##30094
-			.kill Enraged Air Spirit##21060 |n
+			.kill Enraged Air Spirit##21060|n
 			.info kill them near the totems you plant.
 			.' Capture 10 Air Souls|q 10481/1
 			.' You can find more around|at 62.51,61.91
 		step
 			goto Shadowmoon Valley,69.80,85.93
-			.kill Vhel'kur##21801 |n
+			.kill Vhel'kur##21801|n
 			.info Make sure to equip the Spectrecles.
 			.info You can only see him when you have the Spectrecles equipped.
 			.info He looks like a big red spirit dragon flying in the sky around this area.
@@ -6436,8 +6422,8 @@ startlevel 70
 			..accept Kindness##10804
 		step
 			goto Shadowmoon Valley,61.58,56.49
-			.' kill Rocknail enemies around this area
-			.collect Rocknail Flayer Giblets##31373 |n
+			.from Rocknail Flayer##21477, Rocknail Ripper##21478
+			.collect Rocknail Flayer Giblets##31373|n
 			.use Rocknail Flayer Giblets##31373
 			.info You need 5 to create a Rocknail Flayer Carcass.
 			.use Rocknail Flayer Carcass##31372
@@ -6466,23 +6452,21 @@ startlevel 70
 			..accept Infiltrating Dragonmaw Fortress##10836
 		step
 			goto Shadowmoon Valley,68.37,61.04
-			.' kill Dragonmaw enemies around this area
+			.from Dragonmaw Wrangler##21717, Dragonmaw Subjugator##21718, Dragonmaw Drake-Rider##21719, Dragonmaw Shaman##21720
 			.' Slay 15 Dragonmaw Orcs|q 10836/1
 		step
 			goto Shadowmoon Valley,65.34,60.89
 			.talk Neltharaku##21657
-			.info He looks like a huge spirit dragon that flies in the sky around this area.
 			..turnin Infiltrating Dragonmaw Fortress##10836
 			..accept To Netherwing Ledge!##10837
 		step
 			goto Shadowmoon Valley,76.01,87.16
-			.' Click Nethervine Crystal
+			.' Collect Nethervine Crystal.
 			.info They look like red glowing thorny plants on the ground around this area.
 			.collect 12 Nethervine Crystal##31504|q 10837/1
 		step
 			goto Shadowmoon Valley,65.34,60.89
 			.talk Neltharaku##21657
-			.info He looks like a huge spirit dragon that flies in the sky around this area.
 			..turnin To Netherwing Ledge!##10837
 			..accept The Force of Neltharaku##10854
 		step
@@ -6504,33 +6488,32 @@ startlevel 70
 			..accept Zuluhed the Whacked##10866
 		step
 			goto Shadowmoon Valley,71.06,61.55
-			.kill Zuluhed the Whacked##11980|q 10866/2 |only if havequest(10866) or completedq(10866)
-			.kill Zuluhed the Whacked##11980 |q 10872/2 |only if havequest(10872) or completedq(10872)
+			.kill Zuluhed the Whacked##11980|q 10866/2
 			.info Pull him into a nearby building, so the archers can't shoot you.
 			.info You may need help with this.
 		step
-			.kill Zuluhed the Whacked##11980 |n
-			.collect Zuluhed's Key##31664 |goto 71.06,61.55 |q 10866 |only if havequest(10866) or completedq(10866)
-			.collect Zuluhed's Key##31664 |goto 71.06,61.55 |q 10872 |only if havequest(10872) or completedq(10872)
+			goto Shadowmoon Valley,71.06,61.55
+			.from Zuluhed the Whacked##11980
+			.get Zuluhed's Key##31664|q 10866
 		step
-			.' Click Zuluhed's Chains##185156
-			.' Free Karynaku |q 10866/1 |goto 69.88,61.29 |only if havequest(10866) or completedq(10866)
-			.' Free Karynaku |q 10872/1 |goto 69.88,61.29 |only if havequest(10872) or completedq(10872)
+			goto Shadowmoon Valley,69.88,61.29
+			.' Click Zuluhed's Chains.
+			.' Free Karynaku|q 10866/1
 		step
+			goto Shadowmoon Valley,69.86,61.44
 			.talk Karynaku##22112
-			..turnin Zuluhed the Whacked##10866 |goto 69.86,61.44 |only if havequest(10866) or completedq(10866)
-			..turnin Zuluhed the Whacked##10872 |goto 69.86,61.44 |only if havequest(10872) or completedq(10872)
-			..accept Ally of the Netherwing##10870 |goto 69.86,61.44 |or
-			..accept Ally of the Netherwing##10871 |goto 69.86,61.44 |or
+			..turnin Zuluhed the Whacked##10866
+			..accept Ally of the Netherwing##10870
 		step
+			goto Shadowmoon Valley,59.31,58.70
 			.talk Mordenai##22113
-			..turnin Ally of the Netherwing##10870 |goto 59.31,58.70 |only if havequest(10870) or completedq(10870)
-			..turnin Ally of the Netherwing##10871 |goto 59.31,58.70 |only if havequest(10871) or completedq(10871)
-			..accept Blood Oath of the Netherwing##11012 |goto 59.31,58.70 |instant
-			..accept In Service of the Illidari##11013 |goto 59.31,58.70
+			..turnin Ally of the Netherwing##10870
+			//..accept Blood Oath of the Netherwing##11012 |instant
+			..accept In Service of the Illidari##11013
 		step
+			goto Shadowmoon Valley,56.32,57.80
 			.talk Alieshor##21766
-			fpath Sanctum of the Stars |goto 56.32,57.80
+			fpath Sanctum of the Stars
 			only if rep('The Scryers')>=Neutral
 		step
 			goto Shadowmoon Valley,42.19,45.06
@@ -6544,18 +6527,16 @@ startlevel 70
 			..accept Sketh'lon Feathers##10780
 		step
 			goto Shadowmoon Valley,43.60,57.38
-			.' Click Sketh'lon Feather##185130
-			.info They look like brown feathers on the ground around this area.
 			.collect 8 Sketh'lon Feather##31324|q 10780/1
+			.info They look like brown feathers on the ground around this area.
 		step
 			.use Wildhammer Flare Gun##31310
-			.' Next to you:
 			.talk Wildhammer Gryphon Rider##22059
 			.' Tell him "I need a new Enchanted Illidari Tabard."
-			.collect Enchanted Illidari Tabard##31279 |q 10776
+			.collect Enchanted Illidari Tabard##31279|q 10776
 		step
 			goto Shadowmoon Valley,39.71,69.68
-			.kill Crazed Colossus##19823 |n
+			.kill Crazed Colossus##19823|n
 			.info You may need help with this.
 			.' Slay 5 Crazed Colossus While in Disguise|q 10776/1
 		step
@@ -6579,8 +6560,8 @@ startlevel 70
 			..accept Thwart the Dark Conclave##10808
 		step
 			goto Shadowmoon Valley,40.72,60.15
-			.kill Dark Conclave Ritualist##22138 |n
-			.info Лill all that are channeling a pink spell around this area.
+			.kill Dark Conclave Ritualist##22138|n
+			.info Kill all that are channeling a pink spell around this area.
 			.use Staff of Parshah##31386
 			.info Use it on the big blue blob nearby in the green lava.
 			.' End the Dark Conclave Summoning Ritual|q 10808/1
@@ -6596,7 +6577,6 @@ startlevel 70
 		step
 			goto Shadowmoon Valley,55.73,58.17
 			.talk Larissa Sunstrike##21954
-			.info Inside the building.
 			..accept Karabor Training Grounds##10687
 			only if rep('The Scryers')>=Neutral
 		step
@@ -6626,7 +6606,7 @@ startlevel 70
 			only if rep('The Scryers') >= Neutral
 		step
 			goto Shadowmoon Valley,63.81,49.17
-			.kill Cleric of Karabor##21815 |n
+			.kill Cleric of Karabor##21815|n
 			.info Make sure to equip the Spectrecles.
 			.info You can only see them when you have the Spectrecles equipped.
 			.collect Gorefiend's Cloak##30799|q 10635/1
@@ -6636,14 +6616,14 @@ startlevel 70
 			.from Felspine the Greater##21897
 			.get Felspine's Hide##30851|q 10678/1
 		step
-			goto Shadowmoon Valley,
+			goto Shadowmoon Valley,55.10,48.98
 			.from Uvuros##21102
 			.info He walks around this area.
 			.info You may need help with this.
-			.get Uvuros' Fiery Mane##30807|q 10648/1 |goto 55.10,48.98
+			.get Uvuros' Fiery Mane##30807|q 10648/1
 		step
 			goto Shadowmoon Valley,57.49,35.62
-			.kill Ashtongue Worker##21455 |n
+			.kill Ashtongue Worker##21455|n
 			.' Click Baar'ri Tablet Fragment##184870
 			.info They look like green glowing broken stone pieces on the ground around this area.
 			.collect 12 Baa'ri Tablet Fragment##30596|q 10683/1
@@ -6673,7 +6653,6 @@ startlevel 70
 		step
 			goto Shadowmoon Valley,61.12,28.24
 			.talk Caretaker Aluuro##21746
-			.info Inside the building.
 			home Altar of Sha'tar|q 10568 |future
 			only if rep ('The Aldor') >= Neutral
 		step
@@ -6694,12 +6673,12 @@ startlevel 70
 		step
 			goto Shadowmoon Valley,63.3,30.4
 			.talk Maddix##19581
-			fpath Altar of Sha'tar
+			fpath Altar of Sha'tar, Shadowmoon Valley
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Shadowmoon Valley,57.49,35.62
-			.kill Ashtongue Worker##21455 |n
-			.' Click Baar'ri Tablet Fragment
+			.kill Ashtongue Worker##21455|n
+			.' Click Baar'ri Tablet Fragment.
 			.info They look like green glowing broken stone pieces on the ground around this area.
 			.collect 12 Baa'ri Tablet Fragment##30596|q 10568/1
 			only if rep('The Aldor') >= Neutral
@@ -6711,7 +6690,7 @@ startlevel 70
 			only if rep('The Aldor') >= Neutral
 		step
 			goto Shadowmoon Valley,68.69,52.49
-			.' kill Demon Hunter enemies around this area
+			.' Kill Demon Hunter enemies around this area.
 			.collect 8 Sunfury Glaive##30679|q 10587/1
 			only if rep ('The Aldor') >= Neutral
 		step
@@ -6745,7 +6724,7 @@ startlevel 70
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Shadowmoon Valley,72.15,50.85
-			.' kill Sunfury enemies around this area
+			.' Kill Sunfury enemies around this area.
 			.info Only Sunfury Warlocks and Sunfury Summoners will drop the quest item.
 			.collect Scroll of Demonic Unbanishing##30811|q 10637
 			only if rep ('The Aldor') >= Neutral
@@ -6791,22 +6770,21 @@ startlevel 70
 			.collect 10 Shadowmoon Tuber##30356|q 10514/1
 		step
 			goto Shadowmoon Valley,49.88,23.01
-			.kill Corrupt Water Totem##21420 |n
-			.kill Lakaan##21416 |n
+			.kill Corrupt Water Totem##21420|n
+			.kill Lakaan##21416|n
 			.info You must destroy the totems before you can attack him.
 			.collect Lakaan's Medallion Fragment##30693|q 10574/3
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Shadowmoon Valley,53.92,23.53
 			.talk Oronok Torn-heart##21183
-			.info He walks around this small area.
 			..turnin I Was A Lot Of Things...##10514
 			..accept A Lesson Learned##10515
 		step
 			goto Shadowmoon Valley,56.60,16.97
-			.' Click Ravenous Flayer Egg
+			.' Click Ravenous Flayer Egg.
 			.info They look like brown spiked eggs on the ground around this area.
-			.' Destroy #10# Ravenous Flayer Eggs|q 10515/1
+			.' Destroy 10 Ravenous Flayer Eggs|q 10515/1
 		step
 			goto Shadowmoon Valley,53.92,23.53
 			.talk Oronok Torn-heart##21183.
@@ -6831,9 +6809,9 @@ startlevel 70
 			..accept The Cipher of Damnation - Grom'tor's Charge##10522
 		step
 			goto Shadowmoon Valley,46.26,28.25
-			.' kill Coilskar enemies around this area
-			.collect Coilskar Chest Key##30426+ |n
-			.' Click Coilskar Chest
+			.' Kill Coilskar enemies around this area.
+			.collect Coilskar Chest Key##30426|n
+			.' Click Coilskar Chest.
 			.info They look like stone boxes on the ground around this area.
 			.collect First Fragment of the Cipher of Damnation##30428|q 10522/1
 			.' You can find more around|at 52.44,26.80
@@ -6848,15 +6826,15 @@ startlevel 70
 			..turnin The Cipher of Damnation - The First Fragment Recovered##10523
 		step
 			goto Shadowmoon Valley,48.2,39.8
-			.kill Corrupt Fire Totem##21703 |n
-			.kill Uylaru##21710 |n
+			.kill Corrupt Fire Totem##21703|n
+			.kill Uylaru##21710|n
 			.info You must destroy the totems before you can attack him.
 			.collect Uylaru's Medallion Fragment##30694|q 10574/4
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Shadowmoon Valley,51.3,52.9
-			.kill Corrupt Earth Totem##21704 |n
-			.kill Eykenen##21709 |n
+			.kill Corrupt Earth Totem##21704|n
+			.kill Eykenen##21709|n
 			.info You must destroy the totems before you can attack him.
 			.collect Eykenen's Medallion Fragment##30692|q 10574/1
 			only if rep ('The Aldor') >= Neutral
@@ -6948,7 +6926,7 @@ startlevel 70
 			..accept Of Thistleheads and Eggs...##10547
 		step
 			goto Shadowmoon Valley,44.8,58.2
-			.' Click Rotten Arakkoa Egg
+			.' Click Rotten Arakkoa Egg.
 			.info They look like pink eggs with green fumes rising out of them in bird nests on the ground around this area.
 			.info Some eggs will have no loot and will just disappear.
 			.collect Rotten Arakkoa Egg##30500|q 10547/1
@@ -6957,9 +6935,9 @@ startlevel 70
 			.talk Ancient Shadowmoon Spirit##21797
 			..turnin Divination: Gorefiend's Cloak##10635
 		step
-			goto Shadowmoon Valley,goto 57.1,73.3
-			.kill Corrupt Air Totem##21705 |n
-			.kill Haalum##21711 |n
+			goto Shadowmoon Valley,57.1,73.3
+			.kill Corrupt Air Totem##21705|n
+			.kill Haalum##21711|n
 			.info You must destroy the totems before you can attack him.
 			.collect Haalum's Medallion Fragment##30691|q 10574/2|only if rep ('The Aldor') >= Neutral
 			.collect Haalum's Medallion Fragment##30691|q 10685/2|only if rep ('The Scryers') >= Neutral
@@ -6978,10 +6956,10 @@ startlevel 70
 			..accept Your Friend on the Inside##11019|instant
 		step
 			goto Shadowmoon Valley,74.48,86.42
-			.kill Arvoar the Rapacious##23267 |n
+			.kill Arvoar the Rapacious##23267|n
 			.info He walks around this small area.
 			.info You may need help with this.
-			..accept A Job Unfinished...##11041
+			..accept A Job Unfinished...##11041|use Partially Digested Hand##32621
 		step
 			goto Shadowmoon Valley,70.22,84.34
 			.kill Barash the Den Mother##23269|q 11041/2
@@ -7027,9 +7005,8 @@ startlevel 70
 			..turnin Akama##10628
 		step
 			goto Shadowmoon Valley,58.11,48.18
-			.' Watch the dialogue
+			.' Watch the dialogue,
 			.talk Akama##21700
-			.info Underground.
 			..accept Seer Udalo##10705
 		step
 			goto Shattrath City,63.94,70.02
@@ -7049,7 +7026,7 @@ startlevel 70
 		step
 			goto Shadowmoon Valley,49.01,57.52
 			.use Bundle of Bloodthistle##30616
-			.' Watch the dialogue
+			.' Watch the dialogue.
 			.info Stay back and wait for his elite bodyguard to leave.
 			.from Envoy Icarius##21409
 			.get Stormrage Missive##30617|q 10570/1
@@ -7060,8 +7037,8 @@ startlevel 70
 			..accept The Shadowmoon Shuffle##10576
 		step
 			goto Shadowmoon Valley,47.75,64.60
-			.' kill Eclipsion enemies around this area
-			.collect 6 Eclipsion Armor##30640|q 10576/1
+			.from Eclipsion Centurion##19795, Eclipsion Blood Knight##19795, Eclipsion Archmage##19796, Eclipsion Bloodwarder##19806
+			.get 6 Eclipsion Armor##30640|q 10576/1
 		step
 			goto Shadowmoon Valley,47.55,57.18
 			.talk Borak, Son of Oronok##21293
@@ -7071,7 +7048,7 @@ startlevel 70
 			goto Shadowmoon Valley,45.97,68.14
 			.use Blood Elf Disguise##30639
 			.info Don't use any movement-enhancing skills, or you will lose the disguise.
-			.' Wear the Blood Elf Disguise |havebuff 133564|q 10577
+			.' Wear the Blood Elf Disguise|havebuff 37093|q 10577
 			.' You can get another disguise from Borak|at 47.55,57.18
 		step
 			goto Shadowmoon Valley,46.45,71.93
@@ -7090,10 +7067,10 @@ startlevel 70
 			.info You may need help with this.
 			.get Third Fragment of the Cipher of Damnation##30645|q 10578/1
 		step
-			goto Shadowmoon Valley,
+			goto Shadowmoon Valley,47.55,57.18
 			.talk Borak, Son of Oronok##21293
-			..turnin The Cipher of Damnation - Borak's Charge##10578 |goto 47.55,57.18
-			..accept The Cipher of Damnation - The Third Fragment Recovered##10579 |goto 47.55,57.18
+			..turnin The Cipher of Damnation - Borak's Charge##10578
+			..accept The Cipher of Damnation - The Third Fragment Recovered##10579
 		step
 			goto Shadowmoon Valley,38.25,53.95
 			.talk Warcaller Beersnout##21775
@@ -7121,8 +7098,9 @@ startlevel 70
 			..accept Lohn'goron, Bow of the Torn-heart##10537
 		step
 			goto Shadowmoon Valley,30.33,52.13
-			.' kill Illidari enemies around this area
-			.collect Lohn'goron, Bow of the Torn-Heart##30451|q 10537/1
+			.from Illidari Dreadbringer##19799, Illidari Painlasher##19800, Illidari Shocktrooper##19802, Illidari Shadowstalker##21337
+			.get Lohn'goron, Bow of the Torn-Heart##30451|q 10537/1
+			.info Drop-chance ~15%.
 		step
 			goto Shadowmoon Valley,29.54,50.55
 			.talk Spirit of Ar'tor##21318
@@ -7147,10 +7125,10 @@ startlevel 70
 		step
 			goto Shadowmoon Valley,43.03,44.87
 			.use Cipher of Damnation##30657
-			.' Click Here After Using the Cipher of Damnation |confirm |q 10588
+			.' If done, manual skip this step|q 10588
 		step
 			goto Shadowmoon Valley,42.83,44.94
-			.'Watch the dialogue
+			.'Watch the dialogue.
 			.talk Oronok Torn-heart##21183
 			.info It may take a couple of minutes or so for him to show up.
 			.info He flies in on a wind rider.
@@ -7176,7 +7154,7 @@ startlevel 70
 			..accept Teron Gorefiend, I am...##10645
 		step
 			goto Shadowmoon Valley,58.2,70.8
-			.' Watch the dialogue
+			.' Watch the dialogue.
 			.kill Karsius the Ancient Watcher##21877|q 10645/1
 			.info He appears nearby.
 			.info Use the abilities on your action bar.
@@ -7301,7 +7279,7 @@ startlevel 70
 			..accept The Ata'mal Terrace##10707
 		step
 			goto Shadowmoon Valley,71.58,35.53
-			.kill Shadowmoon Soulstealer##22061 |n
+			.kill Shadowmoon Soulstealer##22061|n
 			.info Kill all 3 of them nearby channeling a spell on this pedestal.
 			.info You may need help with this.
 			.' kill the enemies that attack in waves
@@ -7313,30 +7291,27 @@ startlevel 70
 			..turnin The Ata'mal Terrace##10707
 		step
 			goto Shadowmoon Valley,58.11,48.18
-			.' Watch the dialogue
+			.' Watch the dialogue.
 			.talk Akama##21700
 			.info You will only be able to accept one of these quests.
-			..accept Akama's Promise##10708 |or
-			..accept Akama's Promise##11052 |or
+			..accept Akama's Promise##10708
+			..accept Akama's Promise##11052
 		step
 			goto Shattrath City,54.04,44.69
 			.talk A'dal##18481
-			..turnin Akama's Promise##11052 |only if havequest(10708) or completedq(10708)
-			..turnin Akama's Promise##11052 |only if havequest(11052) or completedq(11052)
+			..turnin Akama's Promise##11052
 		step
-			goto Shattrath City,51.08,26.52
-			.talk Auctioneer Itoran##50143
-			.info Inside the building.
-			.buy 5 Knothide Leather##21887 |n
+			goto Stormwind,61.2,70.7
+			.talk Auctioneer Jaxon##15659
+			.buy 5 Knothide Leather##21887|n
 			.collect 20 Knothide Leather##21887 |q 10664 |future
 			.info You can gather these yourself if you have Skinning, if you prefer.
 			.info Use the "Knothide Leather" farming guide to accomplish this.
 			only if rep ('The Aldor') >= Neutral
 		step
-			goto Shattrath City,56.98,63.14
-			.talk Auctioneer Kalaren##50139
-			.info Inside the building.
-			.buy 5 Knothide Leather##21887 |n
+			goto Stormwind,61.2,70.7
+			.talk Auctioneer Jaxon##15659
+			.buy 5 Knothide Leather##21887|n
 			.collect 20 Knothide Leather##21887|q 10664
 			.info You can gather these yourself if you have Skinning, if you prefer.
 			.info Use the "Knothide Leather" farming guide to accomplish this.
@@ -7349,14 +7324,14 @@ startlevel 70
 		step
 			goto Netherstorm,44.99,36.53
 			.talk Dealer Najeeb##20981
-			.buy Adamantite Frame##23784 |n
+			.buy Adamantite Frame##23784|n
 			.info He may not have this for sale if another player bought it recently.
 			.collect Adamantite Frame##23784|q 10664/1
 			.info You can also buy this from the Auction House.
 		step
 			goto Shattrath City,64.69,70.70
 			.talk Fantei##19678
-			.buy Demon Warding Totem##30823 |n
+			.buy Demon Warding Totem##30823|n
 			.collect Demon Warding Totem##30823|q 10664/3
 		step
 			goto Terokkar Forest,77.57,38.72
