@@ -1061,6 +1061,32 @@ startlevel 25
 			.info Use next guide - Duskwood.
 ]])
 
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[alpha-none] Western Plaguelands",[[
+author danaton
+description This guide contain quest-chain (?? quests) for Western Plaguelands location.
+startlevel 60
+		step
+			.' Required First Complete - Winterspirng Guide????
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[alpha-none] Eastern Plaguelands",[[
+author danaton
+description This guide contain quest-chain (?? quests) for Eastern Plaguelands location.
+startlevel 60
+		step
+			.' Required First Complete - Winterspirng Guide????
+		step
+			goto Winterspring,61.35,38.97
+			.talk Gregor Greystone##10431
+			..accept The Everlook Report##6028
+			..accept Duke Nicholas Zverenhoff##6030
+		step
+			goto Winterspring,61.28,38.98
+			.talk Jessica Redpath##11629
+			..accept Sister Pamela##5601
+		step
+]])
+
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[10] Azuremyst Isle",[[
 author danaton
 description This guide contain quest-chain (55 quests) for Azuremyst Isle location.
@@ -4339,37 +4365,85 @@ startlevel 60
 			.' Congratulations! +21 quests for achievement "Loremaster Kalimdor".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[source] Winterspring",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Winterspring",[[
 author danaton
-description This guide contain quest-chain (? quests) for Winterspring location.
+description This guide contain quest-chain (22 quests) for Winterspring location.
 startlevel 60
-		step // need rework
+		step
+			.' First required to complete Crater Un'Goro guide.
+		step
+			goto Tanaris,52.35,26.91
+			.talk Curgle Cranklehop##7763
+			..accept Handle With Care##3022
+		step
+			goto Teldrassil,55.50,92.05
+			.talk Erelas Ambersky##7916
+			..turnin Handle With Care##3022
+			..accept Favored of Elune?##3661
+		step
+			goto Burning Steppes,65.24,24.00
+			.talk Tinkee Steamboil##10267
+			..accept Broodling Essence##4726
+		step
+			goto Burning Steppes,72.83,28.41
+			.use the Draco-Incarcinatrix 900##12284
+			.info Use it on Broodling enemies around this area.
+			.info They look like small flying dragons.
+			.info They share spawn points with the scorpids and wolves, so kill those also, if you can't find any.
+			.from Black Broodling##7047, Scalding Broodling##7048
+			.' Click Broodling Essence.
+			.info They look like red floating crystals that appear above their corpses after you kill them.
+			.collect 8 Broodling Essence##12283|q 4726/1
+			.' You can find more around (1)|at 80.05,27.94
+			.' You can find more around (2)|at 87.34,32.01
+			.' You can find more around (3)|at 91.96,35.64
+		step
+			goto Burning Steppes,65.23,23.99
+			.talk Tinkee Steamboil##10267
+			..turnin Broodling Essence##4726
+			..accept Felnok Steelspring##4808
+		step
+			goto The Hinterlands,15.76,53.78
+			.' Click Wildkin Feather.
+			.info They look large brown and white feathers on the ground around this area.
+			.info They can be found around most of the Hinterlands, except in the eastern part.
+			.collect 15 Wildkin Feather##10819|q 3661/1
+			.' You can find more around (1)|at 22.17,55.01
+			.' You can find more around (2)|at 28.43,54.20
+			.' You can find more around (3)|at 33.90,48.74
+			.' You can find more around (4)|at 33.03,43.66
+		step
+			goto Teldrassil,55.50,92.05
+			.talk Erelas Ambersky##7916
+			..turnin Favored of Elune?##3661
+			..accept Moontouched Wildkin##978
+		step
+			goto Felwood,51,81.6
+			.talk Ivy Leafrunner##10924
+			..accept To Winterspring!##5249
+		step
 			goto Winterspring,27.74,34.50
 			.talk Salfa##11556
-			..turnin Speak to Salfa##8465
 			..accept Winterfall Activity##8464
 		step
 			goto Winterspring,31.27,45.16
 			.talk Donova Snowden##9298
-			//del..turnin The New Springs##980
-			//del..turnin Trouble in Winterspring!##6603
 			..accept Strange Sources##4842
 			..accept Threat of the Winterfall##5082
 		step
-			goto Winterspring,59.84,74.12
-			.' Cross the bridge|at 62.42,67.44
-			Discover Darkwhisper Gorge|q 4842/1
-		step
-			goto Winterspring,69.6,38.3
-			.kill High Chief Winterfall##10738|n
-			.collect 1 Crudely-written Log##12842|q 5123 |future
-			..accept The Final Piece##5123|use Crudely-written Log##12842
-		step
-			goto Winterspring,67.2,35.9
-			.kill 8 Winterfall Shaman##7439|q 8464/1
-			.kill 8 Winterfall Den Watcher##7440|q 8464/2
-			.' You can find more Den Watcher|at 40,43.4
-			.kill 8 Winterfall Ursa##7438|q 8464/3
+			goto Winterspring,31.35,45.53
+			.' Click Moontouched Feather.
+			.info They look like large blue feathers on the ground around this area.
+			.collect 10 Moontouched Feather##12383|q 978/1
+			.' You can find more around (1)|at 30.95,47.02
+			.' You can find more around (2)|at 29.39,46.67
+			.' You can find more around (3)|at 30.18,45.24
+			.' You can find more around (4)|at 30.30,44.03
+			.' You can find more around (5)|at 31.42,43.31
+			.' You can find more around (6)|at 32.02,44.25
+			.' You can find more around (7)|at 32.79,44.36
+			.' You can find more around (8)|at 33.07,44.01
+			.' You can find more around (9)|at 34.85,43.20
 		step
 			goto Winterspring,30.57,37.17
 			.kill 8 Winterfall Pathfinder##7442|q 5082/1
@@ -4381,29 +4455,21 @@ startlevel 60
 			.' You can find more around (2)|at 41.78,43.14
 		step
 			goto Winterspring,30.57,37.17
-			.from Winterfall Den Watcher##7440, Winterfall Totemic##7441, Winterfall Pathfinder##7442
-			.collect 1 Empty Firewater Flask##12771|q 5083 |future
-			.' You can find more around (1)|at 39.46,43.70
-			.' You can find more around (2)|at 41.78,43.14
-		step
+			.' Kill Winterfall enemies around this area.
+			.collect Empty Firewater Flask##12771|q 5083 |future
 			.use the Empty Firewater Flask##12771
 			..accept Winterfall Firewater##5083
+			.' You can find more around (1)|at 39.46,43.70
+			.' You can find more around (2)|at 41.78,43.14
 		step
 			goto Winterspring,31.27,45.16
 			.talk Donova Snowden##9298
 			..turnin Threat of the Winterfall##5082
 			..turnin Winterfall Firewater##5083
-			..turnin Strange Sources##4842
-			..turnin The Final Piece##5123
-			..accept Words of the High Chief##5128
 			..accept Falling to Corruption##5084
 		step
-			goto Winterspring,27.74,34.50
-			.talk Salfa##11556
-			..turnin Winterfall Activity##8464
-		step
 			goto Felwood,60.20,5.87
-			.' Interact with Deadwood Cauldron
+			.' Interact with: Deadwood Cauldron.
 			.info Try to kite the enemies near the cauldron away one at a time to fight them alone, until you can kill the rest.
 			.info If you have trouble, try to find someone to help you.
 			..turnin Falling to Corruption##5084
@@ -4419,61 +4485,290 @@ startlevel 60
 			.info All around this green lake.
 			.get 3 Toxic Horror Droplet##12822|q 5086/1
 		step
+			goto Teldrassil,55.50,92.04
+			.talk Erelas Ambersky##7916
+			..turnin Moontouched Wildkin##978
+			..accept Find Ranshalla##979
+		step
 			goto Winterspring,31.27,45.16
 			.talk Donova Snowden##9298
 			..turnin Toxic Horrors##5086
 			..accept Winterfall Runners##5087
 		step
+			goto Winterspring,30.04,42.55
 			.from Winterfall Runner##10916
-			.get Winterfall Crate##12829|q 5087/1
-			.info Runner Move on waypoint
+			.info They look like a group of 3 white furbolgs that walk back and forth along this road.
+			.info Check these locations, and if you don't find them, wait at the location in this step closest to Everlook.
+			.info They will eventually walk past this location.
+			.get 1 Winterfall Crate##12829|q 5087/1
+			.' You can also find them around (1)|at 46.96,39.54
+			.' You can also find them around (2)|at 53.55,33.96
+			.' If you don't want to wait for the patrol, there's also usually one in Felwood around|at Felwood,60.23,5.75
+		step
+			goto Winterspring,61.1,38.4
+			.talk Harlo Wigglesworth##11755
+			..accept Enraged Wildkin (1)##6604
+		step
+			goto Winterspring,61.9,38.4
+			.talk Storm Shadowhoof##10303
+			..accept Ursius of the Shardtooth##5054
+		step
+			goto Winterspring,62.3,36.6
+			.talk Maethrya##11138
+			fpath Everlook, Winterspring|q 5249
+		step
+			goto Winterspring,51.97,30.39
+			talk Wynd Nightchaser##11079
+			..turnin To Winterspring!##5249
+			..accept The Ruins of Kel'Theril##5244
+		step
+			goto Winterspring,52.14,30.43
+			.talk Jaron Stoneshaper##10301
+			..turnin The Ruins of Kel'Theril##5244
+			..accept Troubled Spirits of Kel'Theril##5245
+			..turnin Enraged Wildkin (1)##6604
+			..accept Enraged Wildkin (2)##4861
+		step
+			goto Winterspring,64,24.1
+			.kill Ursius##10806|q 5054/1
+			.info Big White Bear, moving on waypoint.
+			.' You can find it in this waypoint (1)|at 62.5,28.3
+			.' You can find it in this waypoint (2)|at 62.5,31.9
+			.' You can find it in this waypoint (3)|at 60.5,33.5
+			.' You can find it in this waypoint (4)|at 57.3,32,8
+		step
+			goto Winterspring,50.88,41.71
+			.' Click Highborne Relic Fragment.
+			.info Two enemies will appear and attack you.
+			.collect Second Relic Fragment##12897|q 5245/2
+		step
+			goto Winterspring,52.42,41.50
+			.' Click Highborne Relic Fragment.
+			.info Two enemies will appear and attack you.
+			.collect Fourth Relic Fragment##12899|q 5245/4
+		step
+			goto Winterspring,53.31,43.43
+			.' Click Highborne Relic Fragment.
+			.info Two enemies will appear and attack you.
+			.collect Third Relic Fragment##12898|q 5245/3
+		step
+			goto Winterspring,55.14,42.98
+			.' Click Highborne Relic Fragment.
+			.info Two enemies will appear and attack you.
+			.collect First Relic Fragment##12896|q 5245/1
+		step
+			goto Winterspring,60.88,37.62
+			.talk Umi Rumplesnicker##10305
+			..accept Are We There, Yeti? (1)##3783
+		step
+			goto Winterspring,61.63,38.61
+			.talk Felnok Steelspring##10468
+			..turnin Felnok Steelspring##4808
+			..accept Chillwind Horns##4809
+		step
+			goto Winterspring,61.9,38.4
+			.talk Storm Shadowhoof##10303
+			..turnin Ursius of the Shardtooth##5054
+			..accept Brumeran of the Chillwind##5055
+		step
+			goto Winterspring,61.9,38.3
+			.talk Witch Doctor Mau'ari##10307
+			..accept Luck Be With You##969
+		step
+			goto Winterspring,66.79,43.34
+			.from Ice Thistle Yeti##7458
+			.get 10 Thick Yeti Fur##12366|q 3783/1
+			.' You can find more inside the cave|at 67.65,41.75
+		step
+			goto Winterspring,57.45,41
+			.from Chillwind Chimaera##7448
+			.get 8 Uncracked Chillwind Horn##12444|q 4809/1
+		step
+			goto Winterspring,59,59.78
+			Interact with: Damaged Crate
+			..turnin Enraged Wildkin (2)##4861
+			..accept Enraged Wildkin (3)##4863
+		step
+			goto Winterspring,61.41,60.68
+			.' Interact with: Jaron's Wagon
+			..turnin Enraged Wildkin (3)##4863
+			..accept Enraged Wildkin (4)##4864
+		step
+			goto Winterspring,61.39,60.73
+			.' Interact with: Jaron's Supplies
+			.collect Jaron's Supplies##12525|q 4864/1
+		step
+			goto Winterspring,63.07,59.47
+			.talk Ranshalla##10300
+			..turnin Find Ranshalla##979
+			..accept Guardians of the Altar##4901
+		step
+			goto Winterspring,64.86,63.69
+			.' Watch the dialogue.
+			.info Follow Ranshalla and protect her as she walks.
+			.info Let her get attacked first, so she will help you fight.
+			.' Click Fire of Elune.
+			.info They look like brown torch poles in each of the caves she walks into.
+			.info Click them to get her to start walking again.
+			.' Click Altar of Elune.
+			.info It looks like a stone table, at this location, that she eventually walks to.
+			.goal Discover the Secret of the Altar of Elune|q 4901/1
+			.info If you have trouble, try to find someone to help you.
+		step
+			goto Winterspring,65.42,60.38
+			.from Crazed Owlbeast##7452, Moontouched Owlbeast##7453
+			.get 1 Blue-feathered Amulet##12524|q 4864/2
+			.info If you have trouble, try to find someone to help you.
+		step
+			goto Winterspring,61.6,68.5
+			.' First go down here|at 58.96,62.27
+			.from Frostmaul Giant##7428, Frostmaul Preserver##7429
+			.get 4 Frostmaul Shards##12334|q 969/1
+		step
+			goto Winterspring,59.84,74.12
+			.' Cross the bridge|at 62.42,67.44
+			Discover Darkwhisper Gorge|q 4842/1
+		step
+			goto Winterspring,62.5,57.9
+			.kill Brumeran##10807|q 5055/1
+			.info Big Wyvern, moving on waypoint.
+			.' You can find it in this waypoint (1)|at 61.3,60.1
+			.' You can find it in this waypoint (2)|at 59.3,61.8
+			.' You can find it in this waypoint (3)|at 61.6,56.8
+			.' You can find it in this waypoint (4)|at 59.6,54.9
+			.' You can find it in this waypoint (5)|at 57,52.6
+			.' You can find it in this waypoint (6)|at 54.4,45.2
+		step
+			goto Winterspring,61.63,38.61
+			.talk Felnok Steelspring##10468
+			..turnin Chillwind Horns##4809
+			..accept Return to Tinkee##4810
+		step
+			goto Winterspring,61.9,38.4
+			.talk Storm Shadowhoof##10303
+			..turnin Brumeran of the Chillwind##5055
+			..accept Shy-Rotam##5056
+		step
+			goto Winterspring,61.9,38.3
+			.talk Witch Doctor Mau'ari##10307
+			..turnin Luck Be With You##969
+			..accept Cache of Mau'ari##975
+		step
+			goto Winterspring,61.9,38.3
+			.talk Witch Doctor Mau'ari##10307
+			.info Wait for Witch Doctor while cast.
+			..turnin Cache of Mau'ari##975
+		step
+			goto Winterspring,60.88,37.62
+			.talk Umi Rumplesnicker##10305
+			..turnin Are We There, Yeti? (1)##3783
+			..accept Are We There, Yeti? (2)##977
+		step
+			goto Winterspring,52.14,30.43
+			.talk Jaron Stoneshaper##10301
+			..turnin Enraged Wildkin (4)##4864
+		step
+			goto Winterspring,52.64,15.4
+			.from Frostsaber##7431, Frostsaber Stalker##7432
+			.collect 1 Sacred Frostsaber Meat##12733|q 5056 |future
+		step
+			goto Winterspring,49.7,9.8
+			.use Sacred Frostsaber Meat##12733
+			.kill Shy-Rotam##10737|q 5056/1
 		step
 			goto Winterspring,31.27,45.16
 			.talk Donova Snowden##9298
+			..turnin Strange Sources##4842
 			..turnin Winterfall Runners##5087
-]])
-
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60-alpha] Winterspring",[[
-author danaton
-description This guide contain quest-chain (? quests) for Winterspring location.
-startlevel 60
-		step
-			.' First Complete Felwood???
-			.' Check condition UnGoro
-		step
-			goto Felwood,51,81.6
-			.talk Ivy Leafrunner##10924
-			..accept To Winterspring!##5249
-		step
-			goto Un'Goro Crater,30.93,50.44
-			.talk Krakle##10302
-			..accept The New Springs##980
 		step
 			goto Winterspring,31.27,45.16
 			.talk Donova Snowden##9298
-			..turnin The New Springs##980
-			..accept Strange Sources##4842
-			//..turnin It's a Secret to Everybody##3908
+			..accept High Chief Winterfall##5121
 		step
-			goto Winterspring,31.35,45.53
-			.' Click Moontouched Feather
-			.info They look like large blue feathers on the ground around this area.
-			.collect 10 Moontouched Feather##12383|q 978/1
-			.' You can find more around (1)|at 30.95,47.02
-			.' You can find more around (2)|at 29.39,46.67
-			.' You can find more around (3)|at 30.18,45.24
-			.' You can find more around (4)|at 30.30,44.03
-			.' You can find more around (5)|at 31.42,43.31
-			.' You can find more around (6)|at 32.02,44.25
-			.' You can find more around (7)|at 32.79,44.36
-			.' You can find more around (8)|at 33.07,44.01
-			.' You can find more around (9)|at 34.85,43.20
-		step	
+			goto Winterspring,69.6,38.3
+			.kill High Chief Winterfall##10738|q 5121/1
+			.collect 1 Crudely-written Log##12842|q 5123 |future
+			..accept The Final Piece##5123|use Crudely-written Log##12842
+		step
+			goto Winterspring,67.2,35.9
+			.kill 8 Winterfall Shaman##7439|q 8464/1
+			.kill 8 Winterfall Den Watcher##7440|q 8464/2
+			.' You can find more Den Watcher|at 40,43.4
+			.kill 8 Winterfall Ursa##7438|q 8464/3
+		step
+			goto Winterspring,66.7,41.25
+			.from Ice Thistle Matriarch##7459, Ice Thistle Patriarch##7460
+			.get 2 Pristine Yeti Horn##12367|q 977/1
+			.' You can find more around in cave|at 67.75,41.6
+		step
+			goto Winterspring,60.88,37.62
+			.talk Umi Rumplesnicker##10305
+			..turnin Are We There, Yeti? (2)##977
+			..accept Are We There, Yeti? (3)##5163
+		step
+			goto Winterspring,61.5,38.6
+			.talk Legacki##10978
+			.use Umi's Mechanical Yeti##12928|q 5163/1
+		step
+			goto Winterspring,61.9,38.4
+			.talk Storm Shadowhoof##10303
+			..turnin Shy-Rotam##5056
+			..accept Past Endeavors##5057
+			..turnin Past Endeavors##5057
+		step
+			goto Winterspring,31.27,45.16
+			.talk Donova Snowden##9298
+			..turnin High Chief Winterfall##5121
+			..turnin The Final Piece##5123
+			..accept Words of the High Chief##5128
+		step
+			goto Winterspring,27.74,34.50
+			.talk Salfa##11556
+			..turnin Winterfall Activity##8464
+		step
+			goto Felwood,51.1,81.8
+			.talk Kelek Skykeeper##10920
+			..turnin Words of the High Chief##5128
+		step
+			goto Tanaris,51.1,26.9
+			.talk Sprinkle##7583
+			.use Umi's Mechanical Yeti##12928|q 5163/2
+		step
+			goto Un'Goro Crater,43.7,9.4
+			.talk Quixxil##10977
+			.use Umi's Mechanical Yeti##12928|q 5163/3
+		step
+			goto Winterspring,60.88,37.62
+			.talk Umi Rumplesnicker##10305
+			..turnin Are We There, Yeti? (3)##5163
+		step
+			goto Teldrassil,55.50,92.05
+			.talk Erelas Ambersky##7916
+			..turnin Guardians of the Altar##4901
+			..accept Wildkin of Elune##4902
+		step
+			goto Darnassus,34.8,9.3
+			.talk Arch Druid Fandral Staghelm##3516
+			..turnin Wildkin of Elune##4902
+		step
+			goto Burning Steppes,65.24,24.00
+			.talk Tinkee Steamboil##10267
+			..turnin Return to Tinkee##4810
+		step
+			goto Western Plaguelands,43,83.5
+			.talk Argent Officer Pureheart##10840
+			..turnin The Everlook Report##6028
+		step
+			goto Eastern Plaguelands,48.8,17.6
+			.talk Aurora Skycaller##10304
+			..turnin Troubled Spirits of Kel'Theril##5245
+		step
+			.' Congratulations! +22 quests for achievement "Loremaster Kalimdor".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Un'Goro Crater",[[
 author danaton
-description This guide contain quest-chain (43 quests) for Un'Goto Crater location.
+description This guide contain quest-chain (46 quests) for Un'Goto Crater location.
 startlevel 60
 		step
 			.' First you need to complete Felwood Quest-Chain.
@@ -4489,6 +4784,15 @@ startlevel 60
 			.talk Auctioneer Redmuse##8720
 			.buy 1 Mithril Casing##10561|future |q 4244
 			.info Don't Selling!
+		step
+			goto Darnassus,67.4,15.6
+			.talk Innkeeper Saelienne##6735
+			..accept Assisting Arch Druid Staghelm##3763
+		step
+			goto Darnassus,34.8,9.3
+			.talk Arch Druid Fandral Staghelm##3516
+			..turnin Assisting Arch Druid Staghelm##3763
+			..accept Un'Goro Soil##3764
 		step
 			goto The Barrens,62.4,38.7
 			.talk Liv Rizzlefix##8496
@@ -4571,7 +4875,7 @@ startlevel 60
 		step
 			goto Un'Goro Crater,45.23,5.84
 			.talk Gryfe##10583
-			fpath Marshal's Refuge, Un'Goro Crater
+			fpath Marshal's Refuge, Un'Goro Crater|q 4243
 		step
 			goto Un'Goro Crater,67.65,16.76
 			.talk A-Me 01##9623
@@ -4797,17 +5101,31 @@ startlevel 60
 			goto Un'Goro Crater,56.48,12.45
 			.' Interact with: Northern Crystal Pylon
 			.' Choose "I want to examine this pylon."
-			.' Discover and Examine the Northern Crystal Pylon|q 4285/1
+			.goal Discover and Examine the Northern Crystal Pylon|q 4285/1
 		step
 			goto Un'Goro Crater,77.24,49.97
 			.' Interact with: Eastern Crystal Pylon
 			.' Choose "I want to examine this pylon."
-			.' Discover and Examine the Eastern Crystal Pylon|q 4287/1
+			.goal Discover and Examine the Eastern Crystal Pylon|q 4287/1
 		step
 			goto Un'Goro Crater,23.79,59.19
 			.' Interact with: Western Crystal Pylon
 			.' Choose "I want to examine this pylon."
-			.' Discover and Examine the Western Crystal Pylon|q 4288/1
+			.goal Discover and Examine the Western Crystal Pylon|q 4288/1
+		step
+			goto Un'Goro Crater,44.7,54.5
+			.collect 20 Un'Goro Soil##11018|q 3764/1
+			.collect 10 Un'Goro Soil##11018|q 3785 |future
+			.' You can find more around (1)|at 52.5,78.9
+			.' You can find more around (2)|at 44.4,83.2
+			.' You can find more around (3)|at 41.1,79.8
+			.' You can find more around (4)|at 36.4,76.3
+			.' You can find more around (5)|at 36.4,69.7
+			.' You can find more around (6)|at 31,78.8
+			.' You can find more around (7)|at 30.5,70
+			.' You can find more around (8)|at 33.1,65.3
+			.' You can find more around (9)|at 28,62.8
+			.' You can find more around (10)|at 40.8,59.6
 		step
 			goto Un'Goro Crater,41.92,2.70
 			.talk J.D. Collie##9117
@@ -4888,7 +5206,7 @@ startlevel 60
 			..accept Silver Heart##4084
 		step
 			goto Felwood,54.9,85.83
-			.from Felpaw Wolf##8959
+			.from Angerclaw Bear##8956, Felpaw Wolf##8959
 			.get 11 Silvery Claws##11172|q 4084/1
 		step
 			goto Felwood,48.8,21.6
@@ -4930,10 +5248,31 @@ startlevel 60
 			.talk Linken##8737
 			..turnin It's Dangerous to Go Alone##3962
 		step
+			goto Darnassus,31.5,8.2
+			.talk Jenal##9047
+			..turnin Un'Goro Soil##3764
+		step
+			goto Darnassus,34.8,9.3
+			.talk Arch Druid Fandral Staghelm##3516
+			..accept Morrowgrain Research (1)##3781
+		step
+			goto Darnassus,35.4,8.4
+			.talk Mathrengyl Bearwalker##4217
+			..turnin Morrowgrain Research (1)##3781
+			..accept Morrowgrain Research (2)##3785
+		step
+			.collect 10 Un'Goro Soil##11018|q 3785 |future
+			.use Evergreen Pouch##11020
+			.collect 10 Morrowgrain##11040|q 3785/1
+		step
+			goto Darnassus,35.4,8.4
+			.talk Mathrengyl Bearwalker##4217
+			..turnin Morrowgrain Research (2)##3785
+		step
 			goto Ironforge,75.77,23.37
 			.talk Laris Geardawdle##9616
 			..turnin A Little Slime Goes a Long Way (2)##4513
 		step
-			.' Congratulations! +43 quests for achievement "Loremaster Kalimdor".
+			.' Congratulations! +46 quests for achievement "Loremaster Kalimdor".
 ]])
 ZygorGuidesViewer.AllianceInstalled=true

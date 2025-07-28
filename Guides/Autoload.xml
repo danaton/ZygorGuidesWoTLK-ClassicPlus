@@ -18,7 +18,6 @@
 	<Script file="ZygorGoldAllianceTrial.lua"/>
 	<Script file="ZygorGoldHordeTrial.lua"/>
 
-	<Script file="DanatonGuidesAlliance.lua"/>
 	<Script file="DanatonQuestInstancesA.lua"/>
 	<Script file="DanatonQuestInstancesH.lua"/>
 	<Script file="A-Loremaster-Classic.lua"/>
