@@ -256,7 +256,7 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	["opt_goalbackprogressing_desc"] = "Используйте этот цвет для обозначения частично выполненной цели (наполовину).",
 	["opt_goalbackcomplete"] = "Завершено",
 	["opt_goalbackcomplete_desc"] = "Используйте этот цвет для обозначения выполненных задач.",
-	["opt_goalbackincomplete"] = "Незавершенно",
+	["opt_goalbackincomplete"] = "Незавершено",
 	["opt_goalbackincomplete_desc"] = "Используйте этот цвет для обозначения незавершенных задач.",
 	["opt_goalbackimpossible"] = "Невыполнимо",
 	["opt_goalbackimpossible_desc"] = "Используйте этот цвет для обозначения цели, которую невозможно выполнить в данный момент.",

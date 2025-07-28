@@ -11082,7 +11082,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 	step //177
 		goto 58.5,25
 		.' Click Kim'jael's Equipment box|tip It's a small crate sitting on the ground.
-		.' There are usually more boxes around at 58.7,29
+		.' There are usually more boxes around (1)|at 58.7,29
+		.' There are usually more boxes around (2)|at 59.5,30.8
+		.' There are usually more boxes around (3)|at 56,30
+		.' There are usually more boxes around (4)|at 56.3,28.84
 		.get Kim'jael's Compass|q 3601/1
 		.get Kim'jael's Scope|q 3601/2
 		.get Kim'jael's Stuffed Chicken|q 3601/3
@@ -11099,7 +11102,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 		.' The path down to Some Rune starts here|goto Azshara,45.5,37.7,0.5|noway|c
 	step //181
 		goto 47.2,42.9
-		.kill nagas|n
+		.from Spitelash Siren##6195, Spitelash Myrmidon##6196, Spitelash Battlemaster##7885, Spitelash Enchantress##7886
 		.get Some Rune|q 5534/1
 	step //182
 		goto 46.1,39.0|n

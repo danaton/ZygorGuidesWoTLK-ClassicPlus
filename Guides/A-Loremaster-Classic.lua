@@ -4050,7 +4050,7 @@ startlevel 30
 			.talk Tyrande Whisperwind##7999
 			..turnin Reception from Tyrande##1081
 		step
-			.' Congratulations! +28 quests for achievement "Loremaster Kalimdor".
+			.' Congratulations! +28 quests for achievement "Loremaster of Kalimdor".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Felwood",[[
@@ -4362,7 +4362,7 @@ startlevel 60
 			.talk Laris Geardawdle##9616
 			..turnin A Little Slime Goes a Long Way (1)##4512
 		step
-			.' Congratulations! +21 quests for achievement "Loremaster Kalimdor".
+			.' Congratulations! +21 quests for achievement "Loremaster of Kalimdor".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Winterspring",[[
@@ -5275,4 +5275,281 @@ startlevel 60
 		step
 			.' Congratulations! +46 quests for achievement "Loremaster Kalimdor".
 ]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Azshara",[[
+author danaton
+description This guide contain quest-chain (12 Kalimdor + 13 Eastern Kingdoms quests) for Azshara location.
+startlevel 60
+		step
+			.' .' First required to complete Wintergrasp guide.
+		step
+			goto Eastern Plaguelands,48.8,17.6
+			.talk Aurora Skycaller##10304
+			..accept Fragments of the Past##5246
+		step
+			goto Blasted Lands,67.6,19.3
+			.talk Ambassador Ardalan##7826
+			..accept Petty Squabbles##2783
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Fallen Hero of the Horde##7572
+			..turnin Petty Squabbles##2783
+			..accept A Tale of Sorrow##2801
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Fallen Hero of the Horde##7572
+			.goal A Tale of Sorrow|q 2801/1
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Fallen Hero of the Horde##7572
+			..turnin A Tale of Sorrow##2801
+			..accept The Stones That Bind Us##2681
+		step
+			goto Blasted Lands,43.4,10.6
+			.kill 1 Servant of Grol##7669|q 2681/2
+			.info It is necessary to kill near the floating stone.
+		step
+			goto Blasted Lands,41.2,14.4
+			.kill 2 Servant of Grol##7669|q 2681/2
+			.info It is necessary to kill near the floating stone.
+		step
+			goto Blasted Lands,41.5,39.1
+			.kill 1 Servant of Sevine##7671|q 2681/4
+			.info It is necessary to kill near the floating stone.
+		step
+			goto Blasted Lands,39.4,34.4
+			.kill 2 Servant of Sevine##7671|q 2681/4
+			.info It is necessary to kill near the floating stone.
+		step
+			goto Blasted Lands,38.2,33.9
+			.kill 3 Servant of Sevine##7671|q 2681/4
+			.info It is necessary to kill near the floating stone.
+		step
+			goto Blasted Lands,49.4,43.6
+			.kill 3 Servant of Grol##7669|q 2681/2
+			.info It is necessary to kill near the floating stone.
+		step
+			goto Blasted Lands,58.2,48.8
+			.kill 9 Servant of Razelikh##7668|q 2681/1
+			.info It is necessary to kill near the floating stone.
+		step
+			goto Blasted Lands,66.7,29.3
+			.kill 3 Servant of Allistarj##7670|q 2681/3
+			.info It is necessary to kill near the floating stone.
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Fallen Hero of the Horde##7572
+			..turnin The Stones That Bind Us##2681
+			..accept Heroes of Old (1)##2702
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Corporal Thund Splithoof##7750
+			..turnin Heroes of Old (1)##2702
+			..accept Heroes of Old (2)##2701
+		step
+			goto Swamp of Sorrows,33.3,66.2
+			.' Interact with object: Spectral Lockbox
+			..turnin Heroes of Old (2)##2701
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Fallen Hero of the Horde##7572
+			..accept Kirith##2721
+		step
+			goto Blasted Lands,69.3,30.8
+			.' Entrance in cave|at 65.05,32.93
+			.kill 1 Kirith the Damned##7728|n
+			.talk Spirit of Kirith##7729
+			..turnin Kirith##2721
+			..accept The Cover of Darkness##2743
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Fallen Hero of the Horde##7572
+			..turnin The Cover of Darkness##2743
+			..accept The Demon Hunter##2744
+		step
+			goto Ironforge,77.5,11.8
+			.talk Historian Karnik##2916
+			..accept Passing the Burden##3448
+		step
+			goto Ironforge,31,4.8
+			.talk Tymor##8507
+			..turnin Passing the Burden##3448
+			..accept Arcane Runes##3449
+			..accept An Easy Pickup##3450
+		step
+			goto Ironforge,70.9,94.6
+			.talk Xiggs Fuselighter##8517
+			..turnin An Easy Pickup##3450
+			..accept Signal for Pickup##3451
+			..turnin Signal for Pickup##3451
+		step
+			goto Azshara,11.4,78.2
+			.talk Loh'atu##11548
+			..accept Spiritual Unrest##5535
+			..accept A Land Filled with Hatred##5536
+		step
+			goto Azshara,11.9,77.6
+			.talk Jarrodenus##12577
+			fpath Talredis Point, Azshara|q 5536
+		step
+			goto Azshara,17.3,70.6
+			.kill 6 Highborne Apparition|q 5535/1
+			.kill 6 Highborne Lichling|q 5535/2
+		step
+			goto Azshara,19.3,62.4
+			.kill 6 Haldarr Satyr|q 5536/1
+			.kill 2 Haldarr Trickster|q 5536/2
+			.kill 2 Haldarr Felsworn|q 5536/3
+		step
+			goto Azshara,11.4,78.2
+			.talk Loh'atu##11548
+			..turnin Spiritual Unrest##5535
+			..turnin A Land Filled with Hatred##5536
+		step
+			goto Azshara,42.3,64.1
+			.' Click the Rune of Sael'hai.
+			.info A tall, purple glowing monument looking thing.
+			.get Rubbing: Rune of Sael'hai|q 3449/4
+		step
+			goto Azshara,39.3,55.5
+			.' Click the Rune of Markri.
+			.info A tall, purple glowing looking monument thing.
+			.get Rubbing: Rune of Markri|q 3449/3
+		step
+			goto Azshara,39.5,50.2
+			.' Click the Rune of Jin'yael.
+			.info A tall, purple glowing monument looking thing.
+			.get Rubbing: Rune of Jin'yael|q 3449/2
+		step
+			goto Azshara,36.9,53.2
+			.' Click the Rune of Beth'Amara.
+			.info A tall, purple glowing monument looking thing.
+			.get Rubbing: Rune of Beth'Amara|q 3449/1
+		step
+			goto Azshara,41.5,52.5
+			.collect Sacred Highborne Writings##13313|q 5246/1
+		step
+			goto Azshara,53.5,21.8
+			.talk Kim'jael##8420
+			..accept Kim'jael Indeed!##3601
+		step
+			goto Azshara,58.5,25
+			.' Click Kim'jael's Equipment box.
+			.info It's a small crate sitting on the ground.
+			.' There are usually more boxes around (1)|at 58.7,29
+			.' There are usually more boxes around (2)|at 59.5,30.8
+			.' There are usually more boxes around (3)|at 56,30
+			.' There are usually more boxes around (4)|at 56.3,28.84
+			.get Kim'jael's Compass|q 3601/1
+			.get Kim'jael's Scope|q 3601/2
+			.get Kim'jael's Stuffed Chicken|q 3601/3
+			.get Kim'jael's Wizzlegoober|q 3601/4
+		step
+			goto Azshara,53.5,21.8
+			.talk Kim'jael##8420
+			..turnin Kim'jael Indeed!##3601
+			..accept Kim'jael's "Missing" Equipment##5534
+		step
+			goto Azshara,47.2,42.9
+			.from Spitelash Siren##6195, Spitelash Myrmidon##6196, Spitelash Battlemaster##7885, Spitelash Enchantress##7886
+			.get Some Rune|q 5534/1
+		step
+			goto Azshara,53.5,21.8
+			.talk Kim'jael##8420
+			..turnin Kim'jael's "Missing" Equipment##5534
+		step
+			goto Azshara,60.8,66.4
+			.talk Loramus Thalipedes##7783
+			.goal Conversation with Loramus|q 2744/1
+			..turnin The Demon Hunter##2744
+			..accept Loramus##3141
+		step
+			goto Azshara,60.8,66.4
+			.talk Loramus Thalipedes##7783
+			.goal Loramus' Story|q 3141/1
+			..turnin Loramus##3141
+			..accept Breaking the Ward##3508
+		step
+			goto Azshara,60.8,66.4
+			.talk Loramus Thalipedes##7783
+			..turnin Breaking the Ward##3508
+			.info Wait for Loramus to complete the enlightenment spell.
+			..accept The Name of the Beast (1)##3509
+		step
+			goto Azshara,77.1,42.8
+			.talk Lord Arkkoroc##6134
+			..turnin The Name of the Beast (1)##3509
+			..accept The Name of the Beast (2)##3510
+		step
+			goto Azshara,56.7,44.8
+			.from Hetaera##6140
+			.info The Big Green Hydra.
+			.get 1 Hetaera's Beaten Head##10599|q 3510/1
+			.get 1 Hetaera's Bloodied Head##10598|q 3510/2
+			.get 1 Hetaera's Bruised Head##10600|q 3510/3
+		step
+			goto Azshara,77.1,42.8
+			.talk Lord Arkkoroc##6134
+			..turnin The Name of the Beast (2)##3510
+			..accept The Name of the Beast (3)##3511
+		step
+			goto Azshara,60.8,66.4
+			.talk Loramus Thalipedes##7783
+			..turnin The Name of the Beast (3)##3511
+			..accept Azsharite##3602
+		step
+			goto Azshara,54.6,82
+			.collect 20 Crystallized Azsharite##10714|q 3602/1
+			.info Big Blue Crystal on ground.
+		step
+			goto Azshara,60.8,66.4
+			.talk Loramus Thalipedes##7783
+			..turnin Azsharite##3602
+			..accept The Formation of Felbane##3621
+		step
+			goto Azshara,79.3,73.7
+			.talk Duke Hydraxis##13278
+			..accept Stormers and Rumblers##6805
+		step
+			goto Azshara,77.8,91.3
+			.' Stand on the landing pad on the small island
+			.' Use your Standard Issue Flare Gun|use Standard Issue Flare Gun##10444
+			.talk Pilot Xiggs Fuselighter##8392
+			..turnin Arcane Runes##3449
+			..accept Return to Tymor##3461
+		step
+			goto Silithus,57.8,13
+			.kill 15 Dust Stormer##11744|q 6805/1
+			.' You can find more around (1)|at 63.3,23.8
+			.' You can find more around (2)|at 50.9,19.4
+			.' You can find more around (3)|at 65.3,29.9
+			.' You can find more around (4)|at 38.2,34.7
+			.' You can find more around (5)|at 32.9,34.8
+			.' You can find more around (6)|at 28.5,28.4
+			.' You can find more around (7)|at 17.1,27.1
+			.' You can find more around (8)|at 19.2,32
+			.' You can find more around (9)|at 18.7,22.2
+		step
+			goto Silithus,22.7,10.2
+			.kill 15 Desert Rumbler##11746|q 6805/2
+		step
+			goto Azshara,79.3,73.7
+			.talk Duke Hydraxis##13278
+			..turnin Stormers and Rumblers##6805
+		step
+			goto Ironforge,31,4.8
+			.talk Tymor##8507
+			..turnin Return to Tymor##3461
+		step
+			goto Stranglethorn Vale,50.5,20.3
+			.talk Galvan the Ancient##7802
+			..turnin The Formation of Felbane##3621
+		step
+			goto Eastern Plaguelands,48.8,17.6
+			.talk Aurora Skycaller##10304
+			..turnin Fragments of the Past (1)##5246
+		step
+			.' Congratulations! +12 quests for achievement "Loremaster of Kalimdor" and +13 quests for achievement "Loremaster of Eastern Kingdoms".
+]])
+
 ZygorGuidesViewer.AllianceInstalled=true
