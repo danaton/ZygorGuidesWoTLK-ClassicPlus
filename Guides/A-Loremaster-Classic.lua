@@ -1560,7 +1560,7 @@ startlevel 10
 			.talk Vorkhan the Elekk Herder##17586
 			..turnin Elekks Are Serious Business##9625
 		step
-			.' Congratulations! +55 quests for achievement "Loremaster Kalimdor".
+			.' Congratulations! +55 quests for achievement "Loremaster of Kalimdor".
 			.' Recomended next to use guide "Bloodmyst Isle".
 ]])
 
@@ -2281,7 +2281,7 @@ startlevel 20
 			.talk Thundris Windweaver##3649
 			..turnin The Way to Auberdine##9633
 		step
-			.' Congratulations! +63 quests for achievement "Loremaster Kalimdor".
+			.' Congratulations! +63 quests for achievement "Loremaster of Kalimdor".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[10] Teldrassil",[[
@@ -4053,6 +4053,978 @@ startlevel 30
 			.' Congratulations! +28 quests for achievement "Loremaster of Kalimdor".
 ]])
 
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[40] Desolace",[[
+author danaton
+description This guide contain quest-chain (31 quests) for Desolace location.
+startlevel 40
+		step
+			goto Ironforge,69.9,21.3
+			.talk Roetten Stonehammer##5637
+			..accept Reclaimers' Business in Desolace##1453
+		step
+			goto Stormwind,52.6,43.4
+			.talk Brother Crowley##12336
+			..accept Brother Anton##6141
+		step
+			goto Desolace,66.44,11.82
+			.talk Vahlarriel Demonslayer##5642
+			..accept Vahlarriel's Search (1)##1437
+		step
+			goto Desolace,66.74,10.87
+			.talk Corporal Melkins##5752
+			..accept Centaur Bounty##1387
+		step
+			goto Desolace,66.66,10.93
+			.talk Captain Pentigast##5396
+			..accept Strange Alliance##1382
+		step
+			goto Desolace,64.66,10.54
+			.talk Baritanas Skyriver##6706
+			.fpath Nijel's Point, Desolace|q 1453
+		step
+			goto Desolace,66.20,9.63
+			.talk Kreldig Ungor##5638
+			..turnin Reclaimers' Business in Desolace##1453
+			..accept The Karnitol Shipwreck (1)##1454
+			..accept Reagents for Reclaimers Inc. (1)##1458
+		step
+			goto Desolace,66.5,7.9
+			.talk Brother Anton##1182
+			..turnin Brother Anton##6141
+			..accept Down the Scarlet Path (1)##261
+		step
+			goto Desolace,75.60,23.34
+			.from Hatefury Rogue##4670, Hatefury Trickster##4671, Hatefury Felsworn##4672, Hatefury Betrayer##4673, Hatefury Shadowstalker##4674, Hatefury Hellcaller##4675
+			.get 10 Hatefury Claw##6246|q 1458/1
+			.get 10 Hatefury Horn##6247|q 1458/2
+			.' You can find more around (1)|at 79.65,19.76
+			.' You can find more around (2)|at 77.19,15.26
+			.' You can find more around (3)|at 72.61,18.28
+		step
+			goto Desolace,66.20,9.63
+			.talk Kreldig Ungor##5638
+			..turnin Reagents for Reclaimers Inc. (1)##1458
+			..accept Reagents for Reclaimers Inc. (2)##1459
+		step
+			goto Desolace,56.54,17.83
+			.' Interact with object: Malem Chest
+			..turnin Vahlarriel's Search (1)##1437
+			..accept Vahlarriel's Search (2)##1465
+		step
+			goto Desolace,62.33,38.98
+			.talk Bibbly F'utzbuckle##11438
+			..accept Bone Collector##5501
+		step
+			goto Desolace,38.88,27.17
+			.talk Azore Aldamort##11863
+			..accept Sceptre of Light##5741
+		step
+			goto Desolace,36.11,30.45
+			.' Interact with object: Karnitol's Chest
+			..turnin The Karnitol Shipwreck (1)##1454
+			..accept The Karnitol Shipwreck (2)##1455
+		step
+			goto Desolace,36.07,30.41
+			.' Interact with object: Rackmore's Log
+			..accept Claim Rackmore's Treasure!##6161
+		step
+			goto Desolace,32.78,31.37
+			.' Kill Drysnap enemies around this area.
+			.info They look like lobsters underwater around this area.
+			.collect Rackmore's Silver Key##15878|q 6161/1
+		step
+			goto Desolace,60.86,61.86
+			.talk Smeed Scrabblescrew##11596
+			..accept Kodo Roundup##5561
+		step
+			goto Desolace,51.31,58.04
+			.' Interact with object: Kodo Bones.
+			.info They look like large white horned animal skulls on the ground around this area.
+			.info A Kodo Apparition may appear and attack you.
+			.collect 10 Kodo Bone##13703|q 5501/1
+		step
+			goto Desolace,51.41,58.45
+			.from Aged Kodo##4700
+			.get 3 Aged Kodo Hide##6249|q 1459/2
+		step
+			goto Desolace,47.8,61.8
+			.talk Hornizz Brimbuzzle##6019
+			..accept Ghost-o-plasm Round Up##6134
+		step
+			goto Desolace,54.45,63.19
+			.use the Kodo Kombobulator##13892
+			.info Use it on Kodo enemies around this area.
+			.info You can find more all around this bone graveyard area.
+			.' Tame 5 Kodos|q 5561/1
+			.info You must bring them back to Smeed Scrabblescrew to tame them.
+			.info Talk to the kodos after you bring them to Smeed Scrabblescrew.
+			.' Bring the Kodos back to|at 60.73,61.96
+		step
+			goto Desolace,60.86,61.86
+			.talk Smeed Scrabblescrew##11596
+			..turnin Kodo Roundup##5561
+		step
+			goto Desolace,70.30,73.77
+			.' Kill Magram enemies around this area.
+			.info The ones in the outskirts of the village are a bit lower level and easier to grind.
+			.info Be careful to avoid the Magram Pack Runners that walk around this area with 2 high level hyena guards.
+			.collect 15 Centaur Ear##6067|q 1387/1
+		step
+			goto Desolace,70.30,73.77
+			.' Kill Magram enemies around this area.
+			.info The ones in the outskirts of the village are a bit lower level and easier to grind. |notinsticky
+			.info Be careful to avoid the Magram Pack Runners that walk around this area with 2 high level hyena guards. |notinsticky
+			.' Reach Friendly Reputation with the Gelkis Clan Centaur|q 1382/1
+		step
+			goto Desolace,64.25,91.40
+			.use Crate of Ghost Magnets##15848|n
+			.from Magrami Spectre##11560
+			.get 8 Ghost-o-plasm##15849|q 6134/1
+		step
+			goto Desolace,63,92.1
+			.kill 30 Undead Ravager##11561|q 261/1
+		step
+			goto Desolace,36.23,79.25
+			.talk Uthek the Wise##5397
+			..turnin Strange Alliance##1382
+			..accept Raid on the Kolkar##1384
+		step
+			goto Desolace,47.8,61.8
+			.talk Hornizz Brimbuzzle##6019
+			..turnin Ghost-o-plasm Round Up##6134
+		step
+			goto Desolace,70.54,58.87
+			.' Kill Scorpashi enemies around this area.
+			.info They look like yellow scorpions.
+			.info They share spawn points with basilisk enemies, so kill those too, if you can't find any.
+			.collect 7 Scorpashi Venom##6248|q 1459/1
+			.' You can find more around (1)|at 68.21,68.45
+			.' You can find more around (2)|at 63.87,62.86
+			.' You can find more around (3)|at 63.48,69.64
+			.' You can find more around (4)|at 56.09,64.83
+		step
+			goto Desolace,70.03,41.94
+			.' Kill Kolkar enemies around this area.
+			.collect 10 Crude Charm##6079|q 1384/1
+			.' You can find more around (1)|at 72.07,47.01
+			.' You can find more around (2)|at 73.61,50.00
+		step
+			goto Desolace,62.33,38.98
+			.talk Bibbly F'utzbuckle##11438
+			..turnin Bone Collector##5501
+		step
+			goto Desolace,66.74,10.87
+			.talk Corporal Melkins##5752
+			..turnin Centaur Bounty##1387
+		step
+			goto Desolace,66.20,9.63
+			.talk Kreldig Ungor##5638
+			..turnin The Karnitol Shipwreck (2)##1455
+			..accept The Karnitol Shipwreck (3)##1456
+			..turnin Reagents for Reclaimers Inc. (2)##1459
+			..accept Reagents for Reclaimers Inc. (3)##1466
+		step
+			goto Desolace,66.5,7.9
+			.talk Brother Anton##1182
+			..turnin Down the Scarlet Path (1)##261
+			..accept Down the Scarlet Path (2)##1052
+		step
+			goto Desolace,66.44,11.82
+			.talk Vahlarriel Demonslayer##5642
+			..turnin Vahlarriel's Search (2)##1465
+			..accept Vahlarriel's Search (3)##1438
+		step
+			goto Desolace,54.86,26.13
+			.talk Dalinda Malem##5644
+			..turnin Vahlarriel's Search (3)##1438
+			..accept Search for Tyranis##1439
+		step
+			goto Desolace,55.17,30.15
+			.from Burning Blade Seer##13019
+			.info At the top of the tower.
+			.get Sceptre of Light##15750|q 5741/1
+		step
+			goto Desolace,53.01,29.08
+			.from Tyranis Malem##5643
+			.info Inside the building.
+			.info Try to pull him toward the building entrance, so you don't accidentally aggro other enemies.
+			.get Tyranis' Pendant##6767|q 1439/1
+		step
+			goto Desolace,54.86,26.13
+			.talk Dalinda Malem##5644
+			.info If she's not here, someone may be escorting her.
+			..turnin Search for Tyranis##1439
+			..accept Return to Vahlarriel##1440
+			.info This is an escort quest.
+			.info Kill all enemies in this room before starting the quest.
+		step
+			goto Desolace,58.26,30.95
+			.' Watch the dialogue.
+			.info Follow Dalinda Malem and protect her as she walks.
+			.info She eventually walks to this location.
+			.goal Rescue Dalinda Malem|q 1440/1
+		step
+			goto Desolace,38.89,27.17
+			.talk Azore Aldamort##11863
+			..turnin Sceptre of Light##5741
+			..accept Book of the Ancients##6027
+		step
+			goto Desolace,30.75,8.7
+			.' Kill Slitherblade enemies around this area.
+			.info Underwater.
+			.collect Rackmore's Golden Key##15881|q 6161/2
+		step
+			goto Desolace,28.19,6.62
+			.' Interact with object: Serpent Statue
+			.from Lord Kragaru##12369
+			.get Book of the Ancients##15803|q 6027/1
+		step
+			goto Desolace,30.00,8.70
+			.' Interact with object: Rackmore's Chest
+			.info On the ground at the base of the tree.
+			turnin Claim Rackmore's Treasure!##6161
+		step
+			goto Desolace,28.19,6.62
+			.' Kill Slitherblade enemies around this area.
+			.info Only Slitherblade Tidehunters and Slitherblade Sea Witches will drop the quest item.
+			.info They share spawn points with other types of naga on this island.
+			.info Kill all types of naga on this island, to try to get more to spawn.
+			.collect Karnitol's Satchel##6245|q 1456/1
+			.' You can find more underwater around|at 32.18,9.57
+		step
+			goto Desolace,38.89,27.17
+			.talk Azore Aldamort##11863
+			..turnin Book of the Ancients##6027
+		step
+			goto Desolace,53.3,76.6
+			.from Mana Eater##4678, Mage Hunter##4681, Ley Hunter##4685
+			.get 10 Felhound Brain##6250|q 1466/1
+			.from Nether Maiden##4679, Nether Sister##4682, Nether Sorceress##4684
+			.get 10 Nether Wing##6251|q 1466/2
+			.from Doomwarder Captain##4680
+			.get 10 Doomwarder Blood##6252|q 1466/3
+		step
+			goto Desolace,36.22,79.25
+			.talk Uthek the Wise##5397
+			..turnin Raid on the Kolkar##1384
+			..accept Stealing Supplies##1370
+		step
+			goto Desolace,70.90,75.47
+			.' Interact with object: Sack of Meat
+			.info They look like tan leather bags on the ground near the buildings around this area.
+			.info Not all of the tan bags you see will be clickable.
+			.collect 6 Crudely Dried Meat##6069|q 1370/1
+		step
+			goto Desolace,36.22,79.25
+			.talk Uthek the Wise##5397
+			..turnin Stealing Supplies##1370
+			..accept Ongeku##1373
+		step
+			goto Desolace,66.44,11.82
+			.talk Vahlarriel Demonslayer##5642
+			..turnin Return to Vahlarriel##1440
+		step
+			goto Desolace,66.20,9.63
+			.talk Kreldig Ungor##5638
+			..turnin The Karnitol Shipwreck (3)##1456
+			..accept The Karnitol Shipwreck (4)##1457
+			..turnin Reagents for Reclaimers Inc. (3)##1466
+			..accept Reagents for Reclaimers Inc. (4)##1467
+		step
+			goto Swamp of Sorrows,65.1,22
+			.from Ongeku##5622
+			.get 1 Draenethyst Shard##6190|q 1373/1
+		step
+			goto Ironforge,67.91,17.52
+			.talk Roetten Stonehammer##5637
+			..turnin The Karnitol Shipwreck##1457
+			..turnin Reagents for Reclaimers Inc. (4)##1467
+		step
+			goto Hillsbrad Foothills,51.5,58.4
+			.talk Raleigh the Devout##3980
+			..turnin Down the Scarlet Path##1052
+		step
+			goto Desolace,36.22,79.25
+			.talk Uthek the Wise##5397
+			..turnin Ongeku##1373
+			..accept Khan Jehn##1374
+		step
+			goto Desolace,65.9,80.4
+			.from Khan Jehn##5601
+			.get 1 Khan Jehn's Head##6072|q 1374/1
+		step
+			goto Desolace,36.22,79.25
+			.talk Uthek the Wise##5397
+			..turnin Khan Jehn##1374
+			..accept Khan Hratha##1380
+		step
+			goto Desolace,31.7,61.6
+			.from Maraudine Centaur|n
+			.get 1 War Horn Mouthpiece##6074|q 1380
+		step
+			goto Desolace,29.75,53.20
+			.use War Horn Mouthpiece##6074|n
+			.from Khan Hratha##5402
+			.get 1 Maraudine Key Fragment##6077|q 1380/1
+		step
+			goto Desolace,33.9,53.5
+			.talk Melizza Brimbuzzle##12277
+			..accept Get Me Out of Here!##6132
+		step
+			goto Desolace,40.8,61.3
+			.goal Melizza Brimbuzzle escorted to safety|q 6132/1
+		step
+			goto Desolace,47.8,61.8
+			.talk Hornizz Brimbuzzle##6019
+			..turnin Get Me Out of Here!##6132
+		step
+			goto Desolace,36.22,79.25
+			.talk Uthek the Wise##5397
+			..turnin Khan Hratha##1380
+		step
+			goto Desolace,66.8,59.1
+			.talk Rigger Gizelton##11626
+			..accept Gizelton Caravan##5943
+			.info Caravan moves along the road.
+			.' Caravan position 1|at 65.6,34.9
+			.' Caravan position 2|at 67.8,41.3
+			.' Caravan position 3|at 66.8,66
+			.' Caravan position 4|at 60.8,64.2
+			.' Caravan position 5|at 54.5,69.7
+			.' Caravan position 6|at 38.4,77.8
+		step
+			.goal Escort Gizelton Caravan past Mannoroc Coven|q 5943/1
+		step
+			goto Desolace,60.9,61.9
+			.talk Smeed Scrabblescrew##11596
+			..turnin Gizelton Caravan##5943
+		step
+			.' Congratulations! +31 quests for achievement "Loremaster of Kalimdor".
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[50] Dustwallow Marsh",[[
+author danaton
+description This guide contain quest-chain (66 quests) for Dustwallow Marsh location.
+startlevel 50
+		step
+			goto Stormwind,51.8,93.6
+			.talk Angus Stern##1141
+			..accept Morgan Stern##1260
+		step
+			goto Stormwind,51.1,95.5
+			.talk Connor Rivers##5081
+			..accept James Hyal (1)##1301
+		step
+			goto Wetlands,8.4,61.8
+			.talk Vincent Hyal##5082
+			..turnin James Hyal (1)##1301
+			..accept James Hyal (2)##1302
+		step
+			.' Ride the boat to Theramore|goto Dustwallow Marsh|at Wetlands,5.05,63.4|q 1302
+		step
+			goto Dustwallow Marsh,67.9,51.6
+			.talk Sergeant Amelyn##23835
+			..accept This Old Lighthouse##11191
+		step
+			goto Dustwallow Marsh,68.3,51.0
+			.talk Calia Hastings##23566
+			..accept Traitors Among Us##11126
+		step
+			.talk Deserter Agitator##23602
+			.' Expose 5 Deserter Agitators|goal 5 Deserter Agitator Exposed|q 11126/1
+		step
+			goto Dustwallow Marsh,68.3,51.0
+			.talk Calia Hastings##23566
+			..turnin Traitors Among Us##11126
+			..accept Propaganda War##11128
+		step
+			goto Dustwallow Marsh,67.9,58.7
+			.' Click the Deserter Propoganda boxes on the ship|tip A pile of boxes on the bottom deck of the ship in the Captain's quarters.
+			.get Deserter Propaganda|q 11128/1
+		step
+			goto Dustwallow Marsh,68.3,51.0
+			.talk Calia Hastings##23566
+			..turnin Propaganda War##11128
+			..accept Discrediting the Deserters##11133
+		step
+			.talk Theramore Guard##4979
+			.' Give them each a flier.
+			.'Distribute 6 Leaflets|goal 6 Leaflets Distributed|q 11133/1
+		step
+			goto Dustwallow Marsh,68.3,51.0
+			.talk Calia Hastings##23566
+			..turnin Discrediting the Deserters##11133
+			..accept The End of the Deserters##11134
+		step
+			goto Dustwallow Marsh,72,47.1
+			.talk Babs Fizzletorque##23892
+			..turnin This Old Lighthouse##11191
+			..accept Thresher Oil##11192
+		step
+			goto Dustwallow Marsh,72,50
+			.from Young Murk Threshers##4388
+			.info Underwater around this area.
+			.get 4 Thresher Oil##33126|q 11192/1
+		step
+			goto Dustwallow Marsh,76.2,57
+			.' Fight Gavis Greyshield until he surrenders.
+			.info He's downstairs in this ship, in the captain's quarters.
+			.goal Gavis Greyshield Captured|q 11134/1
+		step
+			goto Dustwallow Marsh,72,47.1
+			.talk Babs Fizzletorque##23892
+			..turnin Thresher Oil##11192
+			..accept Dastardly Denizens of the Deep##11193
+		step
+			goto Dustwallow Marsh,69.1,52.1
+			.talk "Dirty" Michael Crowe##23896
+			..turnin Dastardly Denizens of the Deep##11193
+			..accept Is it Real?##11194
+		step
+			goto Dustwallow Marsh,68.3,51.0
+			.talk Calia Hastings##23566
+			..turnin The End of the Deserters##11134
+		step
+			goto Dustwallow Marsh,68.3,51.8
+			.talk Sergeant Amelyn##23835
+			..accept The Hermit of Swamplight Manor##11177
+		step
+			goto Dustwallow Marsh,66.2,46.1
+			.talk Guard Byron##4921
+			..accept Tabetha's Farm##11212
+		step
+			goto Dustwallow Marsh,66.3,45.5
+			.talk Morgan Stern##4794
+			..turnin Morgan Stern##1260
+			..accept Mudrock Soup and Bugs##1204
+		step
+			goto Dustwallow Marsh,65.1,47.1
+			.talk Lieutenant Aden##23951
+			..accept A Disturbing Development##11136
+			..accept Mission to Mudsprocket##11214
+		step
+			goto Dustwallow Marsh,67.9,48.2
+			.talk Clerk Lendry##5083
+			..turnin James Hyal (2)##1302
+		step
+			goto Dustwallow Marsh,68.2,48.6
+			.talk Captain Garran Vimes##4944
+			..accept Inspecting the Ruins##11123
+		step
+			goto Dustwallow Marsh,59.8,41.1
+			.talk Captain Wymor##5086
+			..turnin A Disturbing Development##11136
+			..accept Defias in Dustwallow?##11137
+		step
+			goto Dustwallow Marsh,64.7,41.3
+			.from Mudrock Spikeshell##4397
+			.get 8 Forked Mudrock Tongue|q 1204/1
+		step
+			goto Dustwallow Marsh,64,30
+			.from Garn Mathers##23679
+			.get Defias Orders##33037|q 11137/1
+		step
+			goto Dustwallow Marsh,59.8,41.1
+			.talk Captain Wymor##5086
+			..turnin Defias in Dustwallow?##11137
+			..accept Renn McGill##11138
+		step
+			goto Dustwallow Marsh,55.4,26.3
+			.talk "Swamp Eye" Jarl##4792
+			..turnin The Hermit of Swamplight Manor##11177
+			..accept Marsh Frog Legs##1218
+			.talk Mordant Grimsby##23843
+			..accept What's Haunting Witch Hill?##11180
+		step
+			goto Dustwallow Marsh,55.4,25.9
+			.' Interact with gameobject: The Loose Dirt.
+			.info It looks like a dirt grave next to the small shack.
+			..accept The Orc Report##1219
+		step
+			goto Dustwallow Marsh,55.75,25.7
+			.from Giant Marsh Frog##23979
+			.get 10 Marsh Frog Leg|q 1218/1
+		step
+			goto Dustwallow Marsh,55.4,26.3
+			.talk "Swamp Eye" Jarl##4792
+			..turnin Marsh Frog Legs##1218
+			..accept Jarl Needs Eyes##1206
+		step
+			goto Dustwallow Marsh,55,31
+			.from Risen Spirit##23554, Risen Husk##23555
+			.' Gather 10 Information|goal 10 Information Gathered|q 11180/1
+		step
+			goto Dustwallow Marsh,55.4,26.3
+			.talk Mordant Grimsby##23843
+			..turnin What's Haunting Witch Hill?##11180
+			..accept The Witch's Bane##11181
+		step
+			goto Dustwallow Marsh,56,27
+			.' Click Witchbane plants
+			.info They are bright green fern looking plants with a tall pink flower in the middle of them.
+			.get 9 Witchbane|q 11181/1
+		step
+			goto Dustwallow Marsh,55.4,26.3
+			.talk Mordant Grimsby##23843
+			..turnin The Witch's Bane##11181
+			..accept Cleansing Witch Hill##11183
+		step
+			goto Dustwallow Marsh,55.2,26.7
+			.use Witchbane Torch##33113
+			.info A flying demon will appear.
+			.from Zelfrax##23864
+			.' Cleanse Witch Hill|goal Witch Hill Cleansed|q 11183/1
+		step
+			goto Dustwallow Marsh,55.4,26.3
+			.talk Mordant Grimsby##23843
+			..turnin Cleansing Witch Hill##11183
+		step
+			goto Dustwallow Marsh,63.7,17
+			.talk Renn McGill##23569
+			..turnin Renn McGill##11138
+			..accept Secondhand Diving Gear##11139
+		step
+			goto Dustwallow Marsh,62.6,18.2
+			.collect Damaged Diving Gear##33038|q 11139/1
+		step
+			goto Dustwallow Marsh,62.4,18.9
+			.collect Tool Kit##33039|q 11139/2
+		step
+			goto Dustwallow Marsh,63.7,17
+			.talk Renn McGill##23569
+			..turnin Secondhand Diving Gear##11139
+			..accept Recover the Cargo!##11140
+		step
+			goto Dustwallow Marsh,64.9,19.9
+			.' Open Renn's Supplies|use Renn's Supplies##33045
+			.' Equip Repaired Diving Gear|use Repaired Diving Gear##33040
+			.' Use Salvage Kit on the wreckage for pieces of the cargo|use Salvage Kit##33044|q 11140/1
+		step
+			goto Dustwallow Marsh,63.7,17
+			.talk Renn McGill##23569
+			..turnin Recover the Cargo!##11140
+			..accept Jaina Must Know##11141
+		step
+			goto Dustwallow Marsh,46.7,23.1
+			.talk Sergeant Lukas##23723
+			..accept Raptor Captor##11146
+		step
+			goto Dustwallow Marsh,47,19
+			.' Fight Bloodfen Screechers and Bloodfen Raptors
+			.' Use your Sturdy Rope on the raptors when they are almost dead|use Sturdy Rope##33069|tip You will see a message in your chat window letting you know when you can capture the raptor.  Do not kill the raptors or you won't be able to capture them.
+			.' Capture 6 Raptors|goal 6 Raptors Captured|q 11146/1
+		step
+			goto Dustwallow Marsh,46.9,17.5
+			.talk "Stinky" Ignatz##4880
+			..accept Stinky's Escape##1222
+		step
+			goto Dustwallow Marsh,48.8,24.5
+			.goal Help Stinky find Bogbean Leaves|q 1222/1
+		step
+			goto Dustwallow Marsh,46.7,23.1
+			.talk Sergeant Lukas##23723
+			..turnin Raptor Captor##11146
+			..accept Prisoners of the Grimtotems##11145
+			..accept Unleash the Raptors##11147
+		step
+			goto Dustwallow Marsh,41.41,12
+			.' Use your Raptor Bait next to the windmill|use Raptor Bait##33070
+			.goal Raptors Released|q 11147/1
+		step
+			goto Dustwallow Marsh,44,16
+			.from Grimtotem Breaker##23592
+			.get Grimtotem Key##33061|n
+			.' Click the Blackhoof Cages
+			.info The Blackhoof Cages are yellow cages around this area.
+			.' Free 5 Theramore Prisoners|goal 5 Theramore Prisoners Freed|q 11145/1
+		step
+			goto Dustwallow Marsh,46.7,23.1
+			.talk Sergeant Lukas##23723
+			..turnin Unleash the Raptors##11147
+			..turnin Prisoners of the Grimtotems##11145
+		step
+			goto Dustwallow Marsh,35.1,23
+			.from Darkmist Spider##4376, Darkmist Hatchling##4377, Darkmist Recluse##4378, Darkmist Silkspinner##4379
+			.get 20 Unpopped Darkmist Eye|q 1206/1
+		step
+			goto Dustwallow Marsh,29.7,47.6
+			.talk Inspector Tarem##23567
+			..turnin Inspecting the Ruins##11123
+			.' Click the Suspicious Hoofprints
+			.info They look like a set of 3 toed tan muddy footprints on the ground next to the path.
+			..accept Suspicious Hoofprints##1284
+		step
+			goto Dustwallow Marsh,29.8,48.3
+			.' Click the Theramore Guard Badge
+			.info A very tiny grey badge laying on a board ont he floor in the burnt down house.
+			..accept Lieutenant Paval Reethe (1)##1252
+		step
+			goto Dustwallow Marsh,29.6,48.6
+			.' Click the Black Shield|tip Hanging on the brick chimney wall.
+			..accept The Black Shield (1)##1253
+		step
+			goto Dustwallow Marsh,42.3,72.9
+			.talk Drazzit Dripvalve##23572
+			..turnin Mission to Mudsprocket##11214
+		step
+			goto Dustwallow Marsh,41.8,73.1
+			.' Click the Wanted Poster
+			.info To the right of the stairway entrance to the big hut.
+			..accept WANTED: Goreclaw the Ravenous##11184
+		step
+			goto Dustwallow Marsh,41.9,74
+			.talk Brogg##23579
+			..accept Bloodfen Feathers##11158
+		step
+			goto Dustwallow Marsh,41.5,73
+			.talk Gizzix Grimegurgle##23570
+			..accept Catch a Dragon by the Tail##11217
+		step
+			goto Dustwallow Marsh,46.1,57.4
+			.talk Apprentice Morlann##23600
+			..accept Direhorn Raiders##11156
+			..accept The Zeppelin Crash##11172
+		step
+			goto Dustwallow Marsh,46.1,57.1
+			.talk Tabetha##6546
+			..turnin Tabetha's Farm##11212
+		step
+			goto Dustwallow Marsh,46.1,57.2
+			.talk Apprentice Garion##23601
+			..accept The Grimtotem Weapon##11169
+			..accept The Reagent Thief##11173
+		step
+			goto Dustwallow Marsh,53.6,56.9
+			.talk Moxie Steelgrille##23797
+			..turnin The Zeppelin Crash##11172
+			..accept Corrosion Prevention##11174
+			..accept Secure the Cargo!##11207
+		step
+			goto Dustwallow Marsh,53,56
+			.' Click the Zeppelin Cargo|tip They look like wooden boxes on the ground around this area.
+			.get 8 Zeppelin Cargo|q 11207/1
+			.' Use your Ooze Buster on oozes|use Ooze Buster##33108|tip You have to be near a Power Core Fragment (the things that connect lightning to you).
+			.' Dissolve 10 Oozes|goal 10 Oozes Dissolved|q 11174/1
+		step
+			goto Dustwallow Marsh,53.6,56.9
+			.talk Moxie Steelgrille##23797
+			..turnin Corrosion Prevention##11174
+			..turnin Secure the Cargo!##11207
+			..accept Delivery for Drazzit##11208
+		step
+			goto Dustwallow Marsh,58.76,60.17
+			.talk Nat Pagle##12919
+			..turnin Is it Real?##11194
+			..accept Nat's Bargain##11209
+		step
+			goto Dustwallow Marsh,56.2,62
+			.' Use Pagle's Fish Paste, Extra Strength|use Pagle's Fish Paste, Extra Strength##33166
+			.' Kill the Lurking Shark that spawns underwater
+			.' Test the Fish Paste|goal Fish Paste Tested|q 11209/1
+		step
+			goto Dustwallow Marsh,58.76,60.17
+			.talk Nat Pagle##12919
+			..turnin Nat's Bargain##11209
+			..accept Oh, It's Real##11210
+		step
+			goto Dustwallow Marsh,69.7,51.2
+			.talk Major Mills##23905
+			..turnin Oh, It's Real##11210
+			..accept Take Down Tethyr!##11198
+		step
+			.' A huge monster will spawn in the water.
+			.' Run around on the dock clicking the big metal cannons until the big monster dies.
+			.goal Defend Theramore Docks from Tethyr|q 11198/1
+		step
+			goto Dustwallow Marsh,69.7,51.2
+			.talk Major Mills##23905
+			..turnin Take Down Tethyr!##11198
+		step
+			goto Dustwallow Marsh,68.2,48.6
+			.talk Captain Garran Vimes##4944
+			..turnin Lieutenant Paval Reethe (1)##1252
+			..accept Lieutenant Paval Reethe (2)##1259
+			..turnin The Black Shield (1)##1253
+			..accept The Black Shield (2)##1319
+			..turnin Suspicious Hoofprints##1284
+		step
+			goto Dustwallow Marsh,68,48.1
+			.talk Adjutant Tesoran##4948
+			..turnin Lieutenant Paval Reethe (2)##1259
+			..accept Daelin's Men##1285
+		step
+			goto Dustwallow Marsh,68.2,48.6
+			.talk Captain Garran Vimes##4944
+			..turnin Daelin's Men##1285
+			..accept The Deserters (1)##1286
+		step
+			goto Dustwallow Marsh,66.3,45.5
+			.talk Morgan Stern##4794
+			..turnin Mudrock Soup and Bugs##1204
+			..accept ...and Bugs##1258
+			..turnin Stinky's Escape##1222
+		step
+			goto Dustwallow Marsh,65.1,47.1
+			.talk the Lieutenant Aden##23951
+			..turnin The Orc Report##1219
+			..accept Captain Vimes##1220
+		step
+			goto Dustwallow Marsh,66.3,49
+			.talk Lady Jaina Proudmoore##4968
+			..turnin Jaina Must Know##11141
+			..accept Survey Alcaz Island##11142
+		step
+			goto Dustwallow Marsh,64.8,50.4
+			.talk Caz Twosprocket##4941
+			..turnin The Black Shield (2)##1319
+			..accept The Black Shield (3)##1320
+		step
+			goto Dustwallow Marsh,68.2,48.6
+			.talk Captain Garran Vimes##4944
+			..turnin Captain Vimes##1220
+			..turnin The Black Shield (3)##1320
+		step
+			goto Dustwallow Marsh,67.3,51.1
+			.talk Cassa Crimsonwing##23704
+			.info Use one of her gryphons to survey Alcaz Island.
+			.goal Survey Alcaz Island|q 11142/1
+		step
+			goto Dustwallow Marsh,66.3,49
+			.talk Lady Jaina Proudmoore##4968
+			..turnin Survey Alcaz Island##11142
+		step
+			goto Dustwallow Marsh,55.4,26.3
+			.talk "Swamp Eye" Jarl##4792
+			..turnin Jarl Needs Eyes##1206
+			..accept Jarl Needs a Blade##1203
+		step
+			goto Dustwallow Marsh,58,18.1
+			.from Razorspine##23841
+			.get 1 Razorspine's Sword##33110|q 1203/1
+		step
+			goto Dustwallow Marsh,55.4,26.3
+			.talk "Swamp Eye" Jarl##4792
+			..turnin Jarl Needs a Blade##1203
+		step
+			goto Dustwallow Marsh,47.2,46.6
+			.from Apothecary Cylla##23881
+			.get the Sealed Letter|n
+			.' Click the Sealed Letter|use Sealed Letter##33114
+			..accept The Apothecary's Letter##11185
+		step
+			goto Dustwallow Marsh,47,50
+			.from Grimtotem Destroyer##23594, Grimtotem Earthbinder##23595
+			.' Kill 12 Direhorn Grimtotems|goal 12 Direhorn Grimtotems killed|q 11156/1
+		step
+			goto Dustwallow Marsh,43.8,57
+			.' Use your Captured Totem|use Captured Totem##33101
+			.from Mottled Drywallow Crocolisks##4344
+			.' Perform 10 Totem Tests|goal 10 Totem Tests Performed|q 11169/1
+		step
+			goto Dustwallow Marsh,41.7,51.4
+			.from Darkfang Creepers##4412, Noxious Shredders##4348
+			.get 6 Marsh Venom|q 11173/1
+		step
+			goto Dustwallow Marsh,36.1,54.3
+			.' Fight Balos Jacken until he surrenders.
+			.talk Balos Jacken##5089
+			..turnin The Deserters (1)##1286
+			..accept The Deserters (2)##1287
+		step
+			goto Dustwallow Marsh,45.5,57.8
+			.talk Andello Porter##23942
+			..turnin The Apothecary's Letter##11185
+		step
+			goto Dustwallow Marsh,46.1,57.2
+			.talk Apprentice Garion##23601
+			..turnin The Reagent Thief##11173
+			..turnin The Grimtotem Weapon##11169
+			.talk Apprentice Morlann##23600
+			..turnin Direhorn Raiders##11156
+		step
+			goto Dustwallow Marsh,42.3,72.9
+			.talk Drazzit Dripvalve##23572
+			..turnin Delivery for Drazzit##11208
+		step
+			goto Dustwallow Marsh,32,65.7
+			.kill Goreclaw the Ravenous##23873|q 11184/1
+			.info He's a big green raptor standing at the entrance to the cave.
+		step
+			goto Dustwallow Marsh,35,65
+			.from Bloodfen Razormaw##4356, Bloodfen Lashtail##4357
+			.get 5 Bloodfen Feather|q 11158/1
+		step
+			goto Dustwallow Marsh,42.3,72.9
+			.talk Drazzit Dripvalve##23572
+			..turnin WANTED: Goreclaw the Ravenous##11184
+		step
+			goto Dustwallow Marsh,41.9,74
+			.talk Brogg##23579
+			..turnin Bloodfen Feathers##11158
+			..accept Banner of the Stonemaul##11160
+			..accept The Essence of Enmity##11161
+		step
+			goto Dustwallow Marsh,39,66
+			.from Firemane Scout##4329, Firemane Ash Tail##4331
+			.' Use Brogg's Totem on their corpses|use Brogg's Totem##33088
+			.get 10 Black Dragonkin Essence|q 11161/1
+		step
+			goto Dustwallow Marsh,38.1,69.4
+			.' Click the Stonemaul Banner
+			.info It looks like a hanging tiger skin with an eye painted on it inside the cave.
+			.get Stonemaul Banner|q 11160/1
+		step
+			goto Dustwallow Marsh,41.9,74
+			.talk Brogg##23579
+			..turnin Banner of the Stonemaul##11160
+			..turnin The Essence of Enmity##11161
+			..accept Spirits of Stonemaul Hold##11159
+		step
+			goto Dustwallow Marsh,46,74
+			.' Click the Wyrmtails.
+			.info They look like green balls on the ground.
+			.get 8 Wyrmtail|q 11217/1
+		step
+			goto Dustwallow Marsh,46,69
+			.' Click the Ogre Remains.
+			.info They look like big white bones on the ground.
+			.from Stonemaul Spirit##23786
+			.' Lay 10 Stonemaul Spirits to rest|goal 10 Stonemaul Spirits laid to rest|q 11159/1
+		step
+			goto Dustwallow Marsh,41.5,73
+			.talk Gizzix Grimegurgle##23570
+			..turnin Catch a Dragon by the Tail##11217
+		step
+			goto Dustwallow Marsh,41.9,74
+			.talk Brogg##23579
+			..turnin Spirits of Stonemaul Hold##11159
+			..accept Challenge to the Black Flight##11162
+		step
+			goto Dustwallow Marsh,52.1,75.8
+			.' Use your Stonemaul Banner at the foot of the stone ramp at the entrance to Onyxia's Lair|use Stonemaul Banner##33095
+			.' A dragon will appear
+			.from Smolderwing##23789
+			.' Avenge the Stonemaul Clan|goal Stonemaul Clan Avenged|q 11162/1
+		step
+			goto Dustwallow Marsh,41.9,74
+			.talk Brogg##23579
+			..turnin Challenge to the Black Flight##11162
+		step
+			goto Dustwallow Marsh,68.2,48.6
+			.talk Captain Garran Vimes##4944
+			..turnin The Deserters (2)##1287
+			..accept A Grim Connection##11143
+		step
+			goto Dustwallow Marsh,46.6,24.6
+			.talk Captain Darill##23568
+			..turnin A Grim Connection##11143
+			..accept Confirming the Suspicion##11144
+			..accept Arms of the Grimtotems##11148
+		step
+			goto Dustwallow Marsh,43.1,15
+			.from Grimtotem Elder##23714
+			.get 4 Grimtotem Note##33050|n
+			.' Click the Grimtotem Notes in your bags to combine them|use Grimtotem Note##33050
+			.get Grimtotem Battle Plan|q 11144/1
+			.' Click the Blackhoof Armaments|tip The Blackhoof Armaments look like wooden weapon with huge spears on them around this area.
+			.get 7 Blackhoof Armaments|q 11148/1
+		step
+			goto Dustwallow Marsh,46.6,24.6
+			.talk Captain Darill##23568
+			..turnin Confirming the Suspicion##11144
+			..turnin Arms of the Grimtotems##11148
+			..accept Tabetha's Assistance##11149
+		step
+			goto Dustwallow Marsh,46.1,57.2
+			.talk Tabetha##6546
+			..turnin Tabetha's Assistance##11149
+			..accept Raze Direhorn Post!##11150
+		step
+			goto Dustwallow Marsh,47.4,47.6
+			.' Use Tabetha's Torch inside this tent|use Tabetha's Torch##33072
+			.' Burn the East Tent|goal East Tent Burned|q 11150/3
+		step
+			goto Dustwallow Marsh,47.3,46.6
+			.' Use Tabetha's Torch inside this tent|use Tabetha's Torch##33072
+			.' Burn the Northeast Tent|goal Northeast Tent Burned|q 11150/2
+		step
+			goto Dustwallow Marsh,46.6,46
+			.' Use Tabetha's Torch inside this tent|use Tabetha's Torch##33072
+			.' Burn the North Tent|goal North Tent Burned|q 11150/1
+		step
+			goto Dustwallow Marsh,46.1,57.2
+			.talk Tabetha##6546
+			..turnin Raze Direhorn Post!##11150
+			..accept Justice for the Hyals##11151
+		step
+			goto Dustwallow Marsh,68.2,48.6
+			.talk Captain Garran Vimes##4944
+			..turnin Justice for the Hyals##11151
+			..accept Peace at Last##11152
+		step
+			goto Dustwallow Marsh,63.7,42.8
+			.' Use your Wreath in your bags|use Wreath##33082
+			.goal Lay the Wreath at the Hyal Family Monument|q 11152/1
+			.info It's a big gray tombstone in this graveyard.
+		step
+			goto Dustwallow Marsh,68.2,48.6
+			.talk Captain Garran Vimes##4944
+			..turnin Peace at Last##11152
+		step
+			.' Congratulations! +66 quests for achievement "Loremaster of Kalimdor".
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[40-beta] Thousand Needles",[[
+author danaton
+description This guide contain quest-chain (?? quests) for Thousand Needles location.
+startlevel 40
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+		step
+			.' Congratulations! +?? quests for achievement "Loremaster of Kalimdor".
+]])
+
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Felwood",[[
 author danaton
 description This guide contain quest-chain (21 quests) for Felwood location.
@@ -4763,7 +5735,7 @@ startlevel 60
 			.talk Aurora Skycaller##10304
 			..turnin Troubled Spirits of Kel'Theril##5245
 		step
-			.' Congratulations! +22 quests for achievement "Loremaster Kalimdor".
+			.' Congratulations! +22 quests for achievement "Loremaster of Kalimdor".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Un'Goro Crater",[[
@@ -5273,7 +6245,7 @@ startlevel 60
 			.talk Laris Geardawdle##9616
 			..turnin A Little Slime Goes a Long Way (2)##4513
 		step
-			.' Congratulations! +46 quests for achievement "Loremaster Kalimdor".
+			.' Congratulations! +46 quests for achievement "Loremaster of Kalimdor".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Azshara",[[

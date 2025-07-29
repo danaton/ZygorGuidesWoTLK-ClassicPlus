@@ -8479,8 +8479,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (35-40
 		.talk Calia Hastings##23566
 		..accept Traitors Among Us##11126
 	step //158
-		talk 5 Deserter Agitator##23602
-		.'Expose 5 Deserter Agitators|goal 5 Deserter Agitator Exposed|q 11126/1
+		.talk Deserter Agitator##23602
+		.' Expose 5 Deserter Agitators|goal 5 Deserter Agitator Exposed|q 11126/1
 	step //159
 		goto 65.1,47.1
 		.talk Lieutenant Aden##23951
@@ -8491,7 +8491,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (35-40
 		..accept They Call Him Smiling Jim##1282
 		..accept Tabetha's Farm##11212
 	step //161
-		home Theramore
+		goto 66.6,45.2
+		.talk Innkeeper Janene##6272
+		home Theramore|q 1282
 	step //162
 		goto 66.3,45.5
 		.talk Morgan Stern##4794
@@ -8520,8 +8522,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (35-40
 		..turnin Propaganda War##11128
 		..accept Discrediting the Deserters##11133
 	step //168
-		talk 6 Theramore Guard##4979
-		.' Give them each a flier
+		.talk Theramore Guard##4979
+		.' Give them each a flier.
 		.'Distribute 6 Leaflets|goal 6 Leaflets Distributed|q 11133/1
 	step //169
 		goto 68.3,51.0
@@ -8530,7 +8532,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (35-40
 		..accept The End of the Deserters##11134
 	step //170
 		goto 76.2,57
-		.' Fight Gavis Greyshield until he surrenders|tip He's downstairs in this ship, in the captain's quarters.
+		.' Fight Gavis Greyshield until he surrenders.
+		.info He's downstairs in this ship, in the captain's quarters.
 		.' Capture Gavis Greyshield|goal Gavis Greyshield Captured|q 11134/1
 	step //171
 		goto 68.3,51.0
@@ -8546,9 +8549,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (35-40
 		..turnin This Old Lighthouse##11191
 		..accept Thresher Oil##11192
 	step //174
-		goto 72,50
-		.kill Young Murk Threshers|n|tip Underwater around this area.
-		.get 4 Thresher Oil|q 11192/1
+		goto Dustwallow Marsh,72,50
+		.from Young Murk Threshers##4388
+		.info Underwater around this area.
+		.get 4 Thresher Oil##33126|q 11192/1
 	step //175
 		goto 72,47.1
 		.talk Babs Fizzletorque##23892
@@ -8569,13 +8573,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (35-40
 		..turnin A Disturbing Development##11136
 		..accept Defias in Dustwallow?##11137
 	step //179
-		goto 64.7,41.3
-		.kill turtles|n
+		goto Dustwallow Marsh,64.7,41.3
+		.from Mudrock Spikeshell##4397
 		.get 8 Forked Mudrock Tongue|q 1204/1
 	step //180
 		goto 64,30
 		.from Garn Mathers##23679
-		.get Defias Orders|q 11137/1
+		.get Defias Orders##33037|q 11137/1
 	step //181
 		goto 59.8,41.1
 		.talk Captain Wymor##5086
@@ -8589,10 +8593,12 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (35-40
 		..accept What's Haunting Witch Hill?##11180
 	step //183
 		goto 55.4,25.9
-		.' Click the Loose Dirt|tip It looks like a dirt grave next to the small shack.
+		.' Click the Loose Dirt.
+		.info It looks like a dirt grave next to the small shack.
 		..accept The Orc Report##1219
 	step //184
-		'Kill Giant Marsh Frogs around "Swamp Eye" Jarl's house
+		.from Giant Marsh Frog##23979
+		.info Kill Giant Marsh Frogs around "Swamp Eye" Jarl's house.
 		.get 10 Marsh Frog Leg|q 1218/1
 	step //185
 		goto 55.4,26.3
@@ -8601,8 +8607,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (35-40
 		..accept Jarl Needs Eyes##1206
 	step //186
 		goto 55,31
-		.kill Risen Husks|n
-		.kill Risen Spirits|n
+		.from Risen Spirit##23554, Risen Husk##23555
 		.' Gather 10 Information|goal 10 Information Gathered|q 11180/1
 	step //187
 		goto 55.4,26.3
@@ -8656,13 +8661,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45
 		..accept Prisoners of the Grimtotems##11145
 		..accept Unleash the Raptors##11147
 	step //7
-		goto 44,16
-		.kill Grimtotem mobs|n
-		.get Grimtotem Keys|n
-		.' Click the Blackhoof Cages|tip The Blackhoof Cages are yellow cages around this area.
+		goto Dustwallow Marsh,44,16
+		.from Grimtotem Breaker##23592
+		.get Grimtotem Key##33061|n
+		.' Click the Blackhoof Cages
+		.info The Blackhoof Cages are yellow cages around this area.
 		.' Free 5 Theramore Prisoners|goal 5 Theramore Prisoners Freed|q 11145/1
 	step //8
-		goto 42,12
+		goto Dustwallow Marsh,41.41,12
 		.' Use your Raptor Bait next to the windmill|use Raptor Bait##33070
 		.' Release the Raptors|goal Raptors Released|q 11147/1
 	step //9
@@ -8678,7 +8684,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45
 		goto 29.7,47.6
 		.talk Inspector Tarem##23567
 		..turnin Inspecting the Ruins##11123
-		.' Click the Suspicious Hoofprints'|tip They look like a set of 3 toed tan muddy footprints on the ground next to the path.
+		.' Click the Suspicious Hoofprints
+		.info They look like a set of 3 toed tan muddy footprints on the ground next to the path.
 		..accept Suspicious Hoofprints##1284
 	step //12
 		goto 29.8,48.3
@@ -8825,7 +8832,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45
 		..accept The Deserters (2)##1287
 	step //43
 		goto 35,65
-		.kill raptors|n
+		.from Bloodfen Razormaw##4356, Bloodfen Lashtail##4357
 		.get 5 Bloodfen Feather|q 11158/1
 	step //44
 		ding 41
@@ -8844,7 +8851,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45
 		..accept The Essence of Enmity##11161
 	step //48
 		goto 39,66
-		.kill Firemane mobs|n
+		.from Firemane Scout##4329, Firemane Ash Tail##4331
 		.' Use Brogg's Totem on their corpses|use Brogg's Totem##33088
 		.get 10 Black Dragonkin Essence|q 11161/1
 	step //49
@@ -8864,7 +8871,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45
 	step //52
 		goto 46,69
 		.' Click the Ogre Remains|tip They look like big white bones on the ground.
-		.kill the Ogre Spirits|n
+		.from Stonemaul Spirit##23786
 		.' Lay 10 Stonemaul Spirits to rest|goal 10 Stonemaul Spirits laid to rest|q 11159/1
 	step //53
 		goto 41.5,73
@@ -8878,8 +8885,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45
 	step //55
 		goto 52.1,75.8
 		.' Use your Stonemaul Banner at the foot of the stone ramp at the entrance to Onyxia's Lair|use Stonemaul Banner##33095
-		..'A dragon will appear
-		.kill Smolderwing|n
+		.' A dragon will appear
+		.from Smolderwing##23789
 		.' Avenge the Stonemaul Clan|goal Stonemaul Clan Avenged|q 11162/1
 	step //56
 		goto 41.9,74
@@ -8938,8 +8945,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45
 		..accept Arms of the Grimtotems##11148
 	step //67
 		goto 43.1,15
-		.kill Grimtotem Elders|n
-		.get 4 Grimtotem Note|n
+		.from Grimtotem Elder##23714
+		.get 4 Grimtotem Note##33050|n
 		.' Click the Grimtotem Notes in your bags to combine them|use Grimtotem Note##33050
 		.get Grimtotem Battle Plan|q 11144/1
 		.' Click the Blackhoof Armaments|tip The Blackhoof Armaments look like wooden weapon with huge spears on them around this area.
