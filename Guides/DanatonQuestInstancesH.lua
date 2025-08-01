@@ -79,9 +79,10 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Wailing Caverns 
 			..accept Trouble at the Docks##959
 		step
 			goto The Barrens,45.5,13.9
-			.from Sunscale Scytheclaw##3256+
+			.from Sunscale Scytheclaw##3256
 			.get 5 Intact Raptor Horn|q 865/1
-			.' Position-spot 2|at 61,31.58
+			.' You can find more around (1)|at 59.7,8.3
+			.' You can find more around (2)|at 61,31.58
 		step
 			goto The Barrens,62.4,37.6
 			.talk Mebok Mizzyrix##3446

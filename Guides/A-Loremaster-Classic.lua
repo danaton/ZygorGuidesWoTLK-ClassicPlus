@@ -3839,6 +3839,155 @@ startlevel 30
 			.' Congratulations! +48 quests for achievement "Loremaster of Kalimdor".
 ]])
 
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[30] The Barrens",[[
+author danaton
+description This guide contain quest-chain (15 quests) for The Barrens location.
+startlevel 30
+		step
+			goto The Barrens,63.4,38.5
+			.talk Wharfmaster Dizzywig##3453
+			..accept Miner's Fortune##896
+		step
+			goto The Barrens,63,37.2
+			.talk Sputtervalve##3442
+			..accept Samophlange (1)##894
+			..accept Ziz Fizziks##1483
+		step
+			goto The Barrens,62.7,36.2
+			.talk Gazlowe##3391
+			..accept Southsea Freebooters##887
+		step
+			goto The Barrens,62.6,37.5
+			.' Interact with Wanted Poster.
+			..accept WANTED: Baron Longshore##895
+		step
+			goto The Barrens,62.4,37.6
+			.talk Mebok Mizzyrix##3446
+			..accept Raptor Horns##865
+			..accept Deepmoss Spider Eggs##1069
+		step
+			goto The Barrens,63.6,49.15
+			.from Baron Longshore##3467
+			.get 1 Baron Longshore's Head##5084|q 895/1
+			.' Can be resurrected here (1)|at 64.2,47.1
+			.' Can be resurrected here (2)|at 62.6,49.8
+		step
+			goto The Barrens,64,43.92
+			.kill 12 Southsea Brigand##3381|q 887/1
+			.kill 6 Southsea Cannoneer##3382|q 887/2
+			.' You can find more around (1)|at 63.95,47.37
+			.' You can find more around (2)|at 62.8,49.85
+		step
+			goto The Barrens,62.7,36.2
+			.talk Gazlowe##3391
+			..turnin Southsea Freebooters##887
+			..turnin WANTED: Baron Longshore##895
+			..accept The Missing Shipment (1)##890
+		step
+			goto The Barrens,63.4,38.5
+			.talk Wharfmaster Dizzywig##3453
+			..turnin The Missing Shipment (1)##890
+			..accept The Missing Shipment (2)##892
+		step
+			goto The Barrens,62.7,36.2
+			.talk Gazlowe##3391
+			..turnin The Missing Shipment (2)##892
+			..accept Stolen Booty##888
+		step
+			goto The Barrens,63.6,49.3
+			.collect 1 Telescopic Lens##5077|q 888/2
+		step
+			goto The Barrens,62.6,49.6
+			.collect 1 Shipment of Boots##5076|q 888/1
+		step
+			goto The Barrens,62.7,36.2
+			.talk Gazlowe##3391
+			..turnin Stolen Booty##888
+		step
+			goto The Barrens,45.5,13.9
+			.from Sunscale Scytheclaw##3256
+			.get 5 Intact Raptor Horn|q 865/1
+			.' You can find more around (1)|at 59.7,8.3
+			.' You can find more around (2)|at 61,31.58
+		step
+			goto The Barrens,61.63,4.5
+			.from Venture Co. Enforcer##3283, Venture Co. Overseer##3286
+			.get 1 Cats Eye Emerald##5097|q 896/1
+		step
+			goto The Barrens,56.5,7.5
+			.talk Wizzlecrank's Shredder##3439
+			..accept Ignition##858
+		step
+			goto The Barrens,56.3,8.6
+			.from Supervisor Lugwizzle##3445
+			.get 1 Ignition Key##5050|q 858/1
+		step
+			goto The Barrens,56.5,7.5
+			.talk Wizzlecrank's Shredder##3439
+			..turnin Ignition##858
+			..accept The Escape##863
+		step
+			goto The Barrens,55.37,7.73
+			.goal Escort Wizzlecrank out of the Venture Co. drill site|q 863/1
+		step
+			goto The Barrens,52.4,11.6
+			.' Interact with: Control Console.
+			..turnin Samophlange (1)##894
+			..accept Samophlange (2)##900
+		step
+			goto The Barrens,52.4,11.4
+			.goal Fuel Control Valve|q 900/2
+		step
+			goto The Barrens,52.3,11.4
+			.goal Regulator Valve|q 900/3
+		step
+			goto The Barrens,52.33,11.57
+			.goal Main Control Valve|q 900/1
+		step
+			goto The Barrens,52.4,11.6
+			.' Interact with: Control Console.
+			..turnin Samophlange (2)##900
+			..accept Samophlange (3)##901
+		step
+			goto The Barrens,52.8,10.4
+			.from Tinkerer Sniggles##3471
+			.get 1 Console Key##5089|q 901/1
+		step
+			goto The Barrens,52.4,11.6
+			.' Interact with: Control Console.
+			..turnin Samophlange (3)##901
+			..accept Samophlange (4)##902
+		step
+			goto Stonetalon Mountains,59,62.6
+			.talk Ziz Fizziks##4201
+			..turnin Ziz Fizziks##1483
+		step
+			goto Stonetalon Mountains,53.4,72.6
+			.collect 15 Deepmoss Egg##5570|q 1069/1
+			.' You can find more eggs around (1)|at 76.3,43.6
+			.' You can find more eggs around (2)|at 77.5,52.5
+			.' You can find more eggs around (3)|at 70.5,45.8
+			.' You can find more eggs around (4)|at 60,49.7
+			.' You can find more eggs around (5)|at 45.8,43.4
+			.' You can find more eggs around (6)|at 50.8,40.5
+		step
+			goto The Barrens,62.4,37.6
+			.talk Mebok Mizzyrix##3446
+			..turnin Raptor Horns##865
+			..turnin Deepmoss Spider Eggs##1069
+		step
+			goto The Barrens,63,37.2
+			.talk Sputtervalve##3442
+			..turnin The Escape##863
+			..turnin Samophlange (4)##902
+		step
+			goto The Barrens,63.4,38.5
+			.talk Wharfmaster Dizzywig##3453
+			..turnin Miner's Fortune##896
+		step
+			.' Congratulations! +15 quests for achievement "Loremaster of Kalimdor".
+]])
+
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[30] Stonetalon Mountains",[[
 author danaton
 description This guide contain quest-chain (28 quests) for Stonetalon Mountains location.
@@ -4974,55 +5123,326 @@ startlevel 50
 			.' Congratulations! +66 quests for achievement "Loremaster of Kalimdor".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[40-beta] Thousand Needles",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[50] Thousand Needles",[[
 author danaton
-description This guide contain quest-chain (?? quests) for Thousand Needles location.
-startlevel 40
+description This guide contain quest-chain (34 quests) for Thousand Needles location.
+startlevel 50
 		step
+			.' It is recommended that you first complete the "Dustwallow Marsh" guide.
+			.info Manually skip this step.
 		step
+			goto Ironforge,67.9,46.1
+			.talk Klockmort Spannerspan##6169
+			..accept The Brassbolts Brothers##2769
 		step
+			goto Ironforge,72.7,94
+			.talk Pilot Longbeard##2092
+			..accept The Brassbolts Brothers##1179
 		step
+			goto Thousand Needles,30.73,24.35
+			.' Interact with object: Henrig Lonebrow's Journal
+			.info It looks like a small brown book in a dead dwarf's hand.
+			.collect Henrig Lonebrow's Journal##5791|q 1100 |future
 		step
+			.use Henrig Lonebrow's Journal##5791
+			..accept Lonebrow's Journal##1100
 		step
+			goto Feralas,89.64,46.56
+			.talk Falfindel Waywarder##4048
+			..turnin Lonebrow's Journal##1100
 		step
+			goto Thousand Needles,77.79,77.27
+			.talk Kravel Koalbeard##4452
+			..accept Rocket Car Parts##1110
+			..accept Wharfmaster Dizzywig##1111
+			..accept Hemet Nesingwary##5762
 		step
+			goto Thousand Needles,78.06,77.13
+			.talk Fizzle Brassbolts##4454
+			..accept Salt Flat Venom##1104
 		step
+			goto Thousand Needles,78.14,77.12
+			.talk Wizzle Brassbolts##4453
+			..turnin The Brassbolts Brothers##1179
+			..turnin The Brassbolts Brothers##2769
+			..accept Hardened Shells##1105
 		step
+			goto Thousand Needles,80.18,75.89
+			.talk Pozzik##4630
+			..accept Load Lightening##1176
 		step
+			goto Thousand Needles,81.64,77.95
+			.talk Trackmaster Zherin##4629
+			..accept A Bump in the Road##1175
 		step
+			goto Thousand Needles,87.45,65.73
+			.from Salt Flats Scavenger##4154, Salt Flats Vulture##4158
+			.get 10 Hollow Vulture Bone##5848|q 1176/1
+			.' You can find more around (1)|at 75.28,53.62
+			.' You can find more around (2)|at 73.95,58.5
+			.' You can find more around (3)|at 70.24,62.23
+			.' You can find more around (4)|at 71.5,67.5
+			.' You can find more around (5)|at 71.6,73.99
 		step
+			goto Thousand Needles,77.51,87.20
+			.kill 6 Saltstone Gazer##4150|q 1175/3
 		step
+			goto Thousand Needles,82.53,55.37
+			.' Kill Sparkleshell enemies around this area.
+			.info They look like turtles.
+			.collect 9 Hardened Tortoise Shell##5795|q 1105/1
+			.' You can find more around (1)|at 77.41,53.72
+			.' You can find more around (2)|at 73.05,56.51
+			.' You can find more around (3)|at 74.82,63.33
 		step
+			goto Thousand Needles,83.06,61.38
+			.' Kill Scorpid enemies around this area
+			.info They look like scorpions.
+			.collect 6 Salty Scorpid Venom##5794|q 1104/1
+			.' You can find more around (1)|at 77.95,53.29
+			.' You can find more around (2)|at 73.56,56.98
+			.' You can find more around (3)|at 71.30,66.70
+			.' You can find more around (4)|at 77.61,68.70
 		step
+			goto Thousand Needles,77.73,59.22
+			.kill 10 Saltstone Basilisk##4147|q 1175/1
+			.' You can find more around (1)|at 73.41,57.27
+			.' You can find more around (2)|at 70.97,66.69
+			.' You can find more around (3)|at 77.48,52.40
 		step
+			goto Thousand Needles,77.51,87.20
+			.kill 10 Saltstone Crystalhide##4151|q 1175/2
 		step
+			goto Thousand Needles,83.06,61.38
+			.' Collect Rocket Car Rubble
+			.info They look like various machine parts scattered on the ground.
+			.info You can find them all throughout the Shimmering Flats.
+			collect 30 Rocket Car Parts##5798|q 1110/1
+			.' You can find more around (1)|at 77.95,53.29
+			.' You can find more around (2)|at 73.56,56.98
+			.' You can find more around (3)|at 71.30,66.70
+			.' You can find more around (4)|at 77.61,68.70
 		step
+			goto Thousand Needles,81.63,77.95
+			.talk Trackmaster Zherin##4629
+			..turnin A Bump in the Road##1175
 		step
+			goto Thousand Needles,80.18,75.89
+			.talk Pozzik##4630
+			..turnin Load Lightening##1176
+			..accept Goblin Sponsorship (1)##1178
 		step
+			goto Thousand Needles,78.14,77.12
+			.talk Wizzle Brassbolts##4453
+			..turnin Hardened Shells##1105
+			..accept Encrusted Tail Fins##1107
 		step
+			goto Thousand Needles,78.06,77.13
+			.talk Fizzle Brassbolts##4454
+			..turnin Salt Flat Venom##1104
+			..accept Martek the Exiled##1106
 		step
+			goto Thousand Needles,77.79,77.27
+			.talk Kravel Koalbeard##4452
+			..turnin Rocket Car Parts##1110
 		step
+			goto The Barrens,62.7,36.2
+			.talk Gazlowe##3391
+			..turnin Goblin Sponsorship (1)##1178
+			..accept Goblin Sponsorship (2)##1180
 		step
+			goto The Barrens,63.4,38.5
+			.talk Wharfmaster Dizzywig##3453
+			..turnin Wharfmaster Dizzywig##1111
+			..accept Parts for Kravel##1112
 		step
+			goto Thousand Needles,77.79,77.27
+			.talk Kravel Koalbeard##4452
+			..turnin Parts for Kravel##1112
+			..accept Delivery to the Gnomes##1114
 		step
+			goto Thousand Needles,78.1,77.1
+			.talk Fizzle Brassbolts##4454
+			..turnin Delivery to the Gnomes##1114
 		step
+			goto Thousand Needles,77.79,77.27
+			.talk Kravel Koalbeard##4452
+			..accept The Rumormonger##1115
 		step
+			goto Dustwallow Marsh,66.3,45.5
+			.talk Morgan Stern##4794
+			..accept ...and Bugs##1258
+			.info You need complete guide: Dustwallow Marsh
 		step
+			goto Stranglethorn Vale,26.3,73.6
+			.talk Wharfmaster Lozgil##4631
+			..turnin Goblin Sponsorship (2)##1180
+			..accept Goblin Sponsorship (3)##1181
 		step
+			goto Stranglethorn Vale,27.1,77.2
+			.talk Crank Fizzlebub##2498
+			..accept Zanzil's Secret##621
 		step
+			goto Stranglethorn Vale,26.9,77.2
+			.talk Krazek##773
+			..turnin The Rumormonger##1115
+			..accept Dream Dust in the Swamp##1116
+			..accept Investigate the Camp##201
+			..accept The Haunted Isle##616
 		step
+			goto Stranglethorn Vale,27.2,76.9
+			.talk Baron Revilgaz##2496
+			..turnin The Haunted Isle##616
+			..accept The Stone of the Tides##578
+			..turnin Goblin Sponsorship (3)##1181
+			..accept Goblin Sponsorship (4)##1182
 		step
+			goto Stranglethorn Vale,40,58.24
+			.from Zanzil Zombie##1488, Zanzil Naga##1491
+			.get 12 Zanzil's Mixture##4016|q 621/1
+			.' You can find more around (1)|at 34.12,51.96
 		step
+			goto Stranglethorn Vale,24.7,24.3
+			.from Saltscale Warrior##871, Saltscale Oracle##873, Saltscale Hunter##879
+			.get 10 Encrusted Tail Fin##5796|q 1107/1
 		step
+			goto Stranglethorn Vale,21.4,23.35
+			.goal Locate the haunted island|q 578/1
 		step
+			goto Stranglethorn Vale,42.6,18.4
+			.kill Foreman Cozzle##4723|n
+			.get 1 Cozzle's Key##5851|q 1182
 		step
+			goto Stranglethorn Vale,43.3,20.3
+			.info Open Cozzle's Footlocker in hut.
+			.collect Fuel Regulator Blueprints##5852|q 1182/1
 		step
+			goto Stranglethorn Vale,35.7,10.8
+			.goal Locate the hunters' camp|q 201/1
 		step
+			goto Stranglethorn Vale,35.7,10.8
+			.talk Hemet Nesingwary Jr.##715
+			..turnin Hemet Nesingwary##5762
 		step
+			goto Swamp of Sorrows,14.6,59.6
+			.from Adolescent Whelp##740, Dreaming Whelp##741
+			.get 10 Speck of Dream Dust##5803|q 1116/1
 		step
+			goto Swamp of Sorrows,96,46.3
+			.from Silt Crawler##922, Monstrous Crawler##1088
+			.get 12 Pristine Crawler Leg##5938|q 1258/1
 		step
+			goto Stranglethorn Vale,27.1,77.2
+			.talk Crank Fizzlebub##2498
+			..turnin Zanzil's Secret##621
 		step
-			.' Congratulations! +?? quests for achievement "Loremaster of Kalimdor".
+			goto Stranglethorn Vale,26.9,77.2
+			.talk Krazek##773
+			..turnin Investigate the Camp##201
+			..turnin Dream Dust in the Swamp##1116
+			..accept Rumors for Kravel##1117
+		step
+			goto Stranglethorn Vale,27.2,76.9
+			.talk Baron Revilgaz##2496
+			..turnin The Stone of the Tides##578
+			..turnin Goblin Sponsorship (4)##1182
+			..accept Goblin Sponsorship (5)##1183
+		step
+			goto Dustwallow Marsh,66.3,45.5
+			.talk Morgan Stern##4794
+			..turnin ...and Bugs##1258
+		step
+			goto Thousand Needles,77.79,77.27
+			.talk Kravel Koalbeard##4452
+			..turnin Rumors for Kravel##1117
+			..accept Back to Booty Bay##1118
+		step
+			goto Thousand Needles,78.14,77.12
+			.talk Wizzle Brassbolts##4453
+			..turnin Encrusted Tail Fins##1107
+		step
+			goto Thousand Needles,80.18,75.89
+			.talk Pozzik##4630
+			..turnin Goblin Sponsorship (5)##1183
+			..accept The Eighteenth Pilot##1186
+		step
+			goto Thousand Needles,80.3,76.1
+			.talk Razzeric##4706
+			..turnin The Eighteenth Pilot##1186
+			..accept Razzeric's Tweaking##1187
+		step
+			goto Dustwallow Marsh,54.1,56.5
+			.info Open Gizmorium Shipping Crate.
+			.collect Seaforium Booster##5862|q 1187/1
+		step
+			goto Stranglethorn Vale,27.1,77.2
+			.talk Crank Fizzlebub##2498
+			..turnin Back to Booty Bay##1118
+			..accept Zanzil's Mixture and a Fool's Stout##1119
+		step
+			goto Thousand Needles,77.79,77.27
+			.talk Kravel Koalbeard##4452
+			..turnin Zanzil's Mixture and a Fool's Stout##1119
+			..accept Get the Gnomes Drunk##1120
+		step
+			goto Thousand Needles,77.6,76.9
+			.talk Gnome Pit Boss##4495
+			..turnin Get the Gnomes Drunk##1120
+		step
+			goto Thousand Needles,77.79,77.27
+			.talk Kravel Koalbeard##4452
+			..accept Report Back to Fizzlebub##1122
+		step
+			goto Thousand Needles,80.3,76.1
+			.talk Razzeric##4706
+			..turnin Razzeric's Tweaking##1187
+			..accept Safety First (1)##1188
+		step
+			goto Tanaris,51,27.2
+			.talk Shreev##4708
+			..turnin Safety First (1)##1188
+			..accept Safety First (2)##1189
+		step
+			goto Thousand Needles,80.3,76.1
+			.talk Razzeric##4706
+			..turnin Safety First (2)##1189
+		step
+			goto Stranglethorn Vale,27.1,77.2
+			.talk Crank Fizzlebub##2498
+			..turnin Report Back to Fizzlebub##1122
+		step
+			goto Badlands,42.2,52.7
+			.talk Martek the Exiled##4618
+			..turnin Martek the Exiled##1106
+			..accept Indurium##1108
+		step
+			goto Badlands,50.6,69.1
+			.from Stonevault Bonesnapper##2893
+			.get 10 Indurium Flake##5797|q 1108/1
+		step
+			goto Badlands,42.2,52.7
+			.talk Martek the Exiled##4618
+			..turnin Indurium##1108
+			..accept News for Fizzle##1137
+		step
+			goto Thousand Needles,78.06,77.13
+			.talk Fizzle Brassbolts##4454
+			..turnin News for Fizzle##1137
+		step
+			goto Thousand Needles,80.18,75.89
+			.talk Pozzik##4630
+			..accept Keeping Pace##1190
+		step
+			goto Thousand Needles,77.2,77.4
+			.' Interact with gameobject: Rizzle's Unguarded Plans
+			..turnin Keeping Pace##1190
+			..accept Rizzle's Schematics##1194
+		step
+			goto Thousand Needles,80.18,75.89
+			.talk Pozzik##4630
+			..turnin Rizzle's Schematics##1194
+		step
+			.' Congratulations! +34 quests for achievement "Loremaster of Kalimdor" and +5 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Felwood",[[
