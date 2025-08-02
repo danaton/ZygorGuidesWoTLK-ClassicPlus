@@ -579,11 +579,11 @@ startlevel 47
 			..accept Rhapsody's Kalimdor Kocktail##1452
 		step //8
 			goto Feralas,58.27,56.09
-			.from Grizzled Ironfur Bear##5272+, Ironfur Bear##5268+, Ironfur Patriarch##5274+
+			.from Grizzled Ironfur Bear##5272, Ironfur Bear##5268, Ironfur Patriarch##5274
 			.get 3 Ironfur Liver|q 1452/2
-			.from Groddoc Ape##5260+, Groddoc Thunderer##5262+
+			.from Groddoc Ape##5260, Groddoc Thunderer##5262
 			.get 3 Groddoc Liver|q 1452/3
-			.' Mobs Position - 58.15,58.50|n
+			.' You can find more around|at 58.15,58.50
 		step //9
 			goto Feralas,31.90,45.60
 			.talk Angelas Moonbreeze##7900
@@ -603,7 +603,7 @@ startlevel 47
 			..accept A Visit to Gregan##4142
 		step //13
 			goto Tanaris,45.20,37.93
-			.from Roc##5428+, Fire Roc##5429+, Searing Roc##5430+
+			.from Roc##5428, Fire Roc##5429, Searing Roc##5430
 			.get 3 Roc Gizzard|q 1452/1
 		step //14
 			goto Tanaris,52.70,46.00
@@ -614,7 +614,8 @@ startlevel 47
 			goto Tanaris,66.98,22.38
 			.talk Yeh'kinya##8579
 			..turnin The Prophecy of Mosh'aru##3527
-			.' This quest is from Zul'Farrak chain|tip Check condition
+			.' This quest is from Zul'Farrak chain
+			.info Check condition
 			..accept The Ancient Egg##4787
 		step //16
 			goto Feralas,45.1,25.6
@@ -629,7 +630,7 @@ startlevel 47
 			goto The Hinterlands,27.00,48.50
 			.talk Rhapsody Shindigger##5634
 			..turnin Rhapsody's Kalimdor Kocktail##1452
-			.' Wait Rhapsod Drink Event
+			.' Wait Rhapsod Drink Event.
 			..accept Rhapsody's Tale##1469
 		step //19
 			goto The Hinterlands,33.8,75.2

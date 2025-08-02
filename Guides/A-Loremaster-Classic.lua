@@ -7,7 +7,8 @@ author danaton
 description This guide contain quest-chain (45 quests) for Elwynn Forest location.
 startlevel 10
 		step
-		.' For comfortable execution quest chain, it is recommended to be level 20+|tip Manually skip this step
+		.' For comfortable execution quest chain, it is recommended to be level 20+
+		.info Manually skip this step
 		step
 			goto Elwynn Forest,48.1,43.6
 			.talk Deputy Willem##823
@@ -5445,6 +5446,881 @@ startlevel 50
 			.' Congratulations! +34 quests for achievement "Loremaster of Kalimdor" and +5 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[50-beta] Tanaris",[[
+author danaton
+description This guide contain quest-chain (27 quests) for Tanaris location.
+startlevel 50
+		step
+			goto Stranglethorn Vale,26.9,77.2
+			.talk Krazek##773
+			..accept Tran'rek##2864
+		step
+			goto Stranglethorn Vale,27.8,77.1
+			.talk Sea Wolf MacKinley##2501
+			..accept Stoley's Debt##2872
+		step
+			goto Tanaris,51.57,26.76
+			.talk Tran'rek##7876
+			..turnin Tran'rek##2864
+			..accept Thistleshrub Valley##3362
+			..accept Super Sticky##4504
+		step
+			goto Tanaris,51.84,27.02
+			.' Click Wanted Poster.
+			..accept WANTED: Caliph Scorpidsting##2781
+			..accept WANTED: Andre Firebeard##2875
+		step
+			goto Tanaris,52.82,27.40
+			.talk Andi Lynn##11758
+			..accept The Dunemaul Compound##5863
+		step
+			goto Tanaris,52.48,28.44
+			.talk Spigot Operator Luglunket##7408
+			..accept Water Pouch Bounty##1707
+		step
+			goto Tanaris,52.46,28.51
+			.talk Chief Engineer Bilgewhizzle##7407
+			..accept Wastewander Justice##1690
+		step
+			goto Tanaris,51.81,28.66
+			.talk Marin Noggenfogger##7564
+			..accept The Thirsty Goblin##2605
+		step
+			goto Tanaris,50.21,27.48
+			.talk Senior Surveyor Fizzledowser##7724
+			..accept Gadgetzan Water Survey##992
+		step
+			goto Tanaris,66.56,22.27
+			.talk Haughty Modiste##15165
+			..accept Pirate Hats Ahoy!##8365
+		step
+			goto Tanaris,66.99,22.36
+			.talk Yeh'kinya##8579
+			..accept Screecher Spirits##3520
+		step
+			goto Tanaris,67.06,23.89
+			.talk Security Chief Bilgewhizzle##7882
+			..accept Southsea Shakedown##8366
+		step
+			goto Tanaris,67.11,23.98
+			.talk Stoley##7881
+			..turnin Stoley's Debt##2872
+			..accept Stoley's Shipment##2873
+		step	
+			.from Caliph Scorpidsting##7847
+			.info He walks in a counter-clockwise pattern, so this path will help you find him faster.
+			.info He walks with 2 stealthed guards with him, so be careful.
+			.get 1 Caliph Scorpidsting's Head##8723|q 2781/1
+			.' Path-Marker (1)|at 63.84,31.89
+			.' Path-Marker (2)|at 63.30,37.23
+			.' Path-Marker (3)|at 62.29,37.83
+			.' Path-Marker (4)|at 59.52,41.19
+			.' Path-Marker (5)|at 58.71,38.17
+			.' Path-Marker (6)|at 61.87,33.42
+		step
+			goto Tanaris,73.37,47.14
+			.from Andre Firebeard##7883
+			.info Try to pull him away to fight him alone.
+			.get Firebeard's Head##9246|q 2875/1
+		step
+			goto Tanaris,72.19,46.77
+			.' Collect Stolen Cargo.
+			.info Upstairs inside the building.
+			.collect Stoley's Shipment##9244|q 2873/1
+		step
+			goto Tanaris,73.26,46.42
+			.kill 10 Southsea Pirate##7855|q 8366/1
+			.kill 10 Southsea Freebooter##7856|q 8366/2
+			.kill 10 Southsea Dock Worker##7857|q 8366/3
+			.' You can find more around|at 72.29,44.64
+		step
+			goto Tanaris,75.19,45.96
+			.kill 10 Southsea Swashbuckler##7858|q 8366/4
+			.' You can find more in the buildings around|at 72.96,47.07
+		step
+			goto Tanaris,73.26,46.42
+			.' Kill Southsea enemies around this area.
+			.collect 20 Southsea Pirate Hat##20519|q 8365/1
+			.' You can find more around|at 72.29,44.64
+		step
+			goto Tanaris,73.26,46.42
+			.' Kill Southsea enemies around this area.
+			.collect Pirate's Footlocker##9276 |n
+			.use Pirate's Footlocker##9276
+			.collect Ship Schedule##9250|q 2876 |future
+			.info It may take a long time to get it, but it is a good grind to do to get a lot of extra xp built up.
+			.' You can find more around|at 72.29,44.64
+		step
+			.use the Ship Schedule##9250
+			..accept Ship Schedules##2876
+		step
+			goto Tanaris,59.82,24.34
+			.kill 10 Wastewander Bandit##5618|q 1690/1
+			.kill 10 Wastewander Thief##5616|q 1690/2
+			.' You can find more around|at 63.51,30.31
+		step
+			goto Tanaris,59.82,24.34
+			.from Wastewander Thief##5616, Wastewander Bandit##5618
+			.get 5 Wastewander Water Pouch##8483|q 1707/1
+			.info Be careful not to accidentally sell these to a vendor.
+			.' You can find more around|at 63.51,30.31
+		step
+			goto Tanaris,67.06,23.89
+			.talk Security Chief Bilgewhizzle##7882
+			..turnin WANTED: Andre Firebeard##2875
+			..turnin Southsea Shakedown##8366
+			..turnin Ship Schedules##2876
+		step
+			goto Tanaris,67.11,23.98
+			.talk Stoley##7881
+			..turnin Stoley's Shipment##2873
+			..accept Deliver to MacKinley##2874
+		step
+			goto Tanaris,66.56,22.27
+			.talk Haughty Modiste##15165
+			..turnin Pirate Hats Ahoy!##8365
+		step
+			goto Tanaris,52.48,28.44
+			.talk Spigot Operator Luglunket##7408
+			..turnin Water Pouch Bounty##1707
+		step
+			goto Tanaris,52.46,28.51
+			.talk Chief Engineer Bilgewhizzle##7407
+			..turnin Wastewander Justice##1690
+			..turnin WANTED: Caliph Scorpidsting##2781
+			..accept More Wastewander Justice##1691
+		step
+			goto Tanaris,39.09,29.17
+			.use the Untapped Dowsing Widget##8584
+			.info Use it in the water.
+			.info Once you get the Tapped Dowsing Widget, run away to safety immediately.
+			.info Multiple higher level enemies appear after using the item.
+			.collect Tapped Dowsing Widget##8585|q 992/1
+		step
+			goto Tanaris,52.71,45.93
+			.talk Marvon Rivetseeker##7771
+			..accept Gahz'ridian##3161
+		step
+			goto Tanaris,40.45,72.67
+			.' Collect Gahz'ridian.
+			.info They look like small piles of sand on the ground around this area.
+			.collect 30 Gahz'ridian Ornament##8443|q 3161/1
+			.' You can find more around (1)|at 46.96,65.87
+			.' You can find more around (2)|at 53,44
+		step
+			goto Tanaris,41.50,57.81
+			.kill Gor'marok the Ravager##12046|q 5863/3
+			.info Inside the small cave.
+		step
+			goto Tanaris,40.45,72.67
+			.kill 10 Dunemaul Brute##5474|q 5863/1
+			.kill 10 Dunemaul Enforcer##5472|q 5863/2
+			.' You can find more around (1)|at 46.96,65.87
+			.' You can find more around (2)|at 40.04,55.70
+		step
+			goto Tanaris,29.97,66.48
+			.from Thistleshrub Dew Collector##5481
+			.get Laden Dew Gland##8428|q 2605/1
+			.' You can find more around (1)|at 28.18,64.79
+			.' You can find more around (2)|at 30.54,64.66
+		step
+			goto Tanaris,29.97,66.48
+			.kill 8 Gnarled Thistleshrub##5490|q 3362/1
+			.kill 8 Thistleshrub Rootshaper##5485|q 3362/2
+			.' You can find more around (1)|at 28.18,64.79
+			.' You can find more around (2)|at 30.54,64.66
+		step
+			goto Tanaris,52.71,45.93
+			.talk Marvon Rivetseeker##7771
+			..turnin Gahz'ridian##3161
+		step
+			goto Tanaris,60.87,32.74
+			.kill 8 Wastewander Rogue##5615|q 1691/1
+			.info They are stealthed around this area.
+			.kill 6 Wastewander Assassin##5623|q 1691/2
+			.kill 10 Wastewander Shadow Mage##5617|q 1691/3
+			.' You can find more around (1)|at 61.84,34.67
+			.' You can find more around (2)|at 59.99,37.02
+			.' You can find more around (3)|at 58.85,36.63
+			.' You can find more around (4)|at 58.81,39.22
+			.' You can find more around (5)|at 60.52,39.06
+			.' You can find more around (6)|at 63.40,37.65
+			.' You can find more around (7)|at 64.43,39.57
+			.' You can find more around (8)|at 65.32,36.89
+		step
+			goto Tanaris,51.81,28.66
+			.talk Marin Noggenfogger##7564
+			..turnin The Thirsty Goblin##2605
+			..accept In Good Taste##2606
+		step
+			goto Tanaris,52.46,28.51
+			.talk Chief Engineer Bilgewhizzle##7407
+			..turnin More Wastewander Justice##1691
+		step
+			goto Tanaris,52.82,27.40
+			.talk Andi Lynn##11758
+			..turnin The Dunemaul Compound##5863
+		step
+			goto Tanaris,51.57,26.76
+			.talk Tran'rek##7876
+			..turnin Thistleshrub Valley##3362
+		step
+			goto Tanaris,51.06,26.87
+			.talk Sprinkle##7583
+			..turnin In Good Taste##2606
+			..accept Sprinkle's Secret Ingredient##2641
+		step
+			goto Tanaris,50.21,27.48
+			.talk Senior Surveyor Fizzledowser##7724
+			..turnin Gadgetzan Water Survey##992
+			..accept Noxious Lair Investigation##82
+		step
+			goto Tanaris,35.74,42.06
+			.' Kill Centipaar enemies around this area.
+			.collect 5 Centipaar Insect Parts##8587|q 82/1
+		step
+			goto Tanaris,28.5,63.1
+			.talk Tooga##5955
+			.info He looks like a turtle that walks around this area.
+			.info This is an escort quest.
+			.info If you can't find him, someone may be escorting him.
+			.info Just keep grinding enemies around this area until you find him.
+			..accept Tooga's Quest##1560
+			.' You can find more around (1)|at 29.97,66.48
+			.' You can find more around (2)|at 30.54,64.66
+			.' You can find more around (3)|at 31.79,74.15
+			.' You can find more around (4)|at 29.58,74.73
+		step
+			goto Tanaris,66.57,25.67
+			.' Lead Tooga to Torta|q 1560/1
+			.info He will follow you.
+			.info Protect Tooga as you walk, and try to stay fairly close to him.
+			.info If you get too far away from him, you will fail the quest.
+			.info Torta looks like a turtle that walks around this area.
+		step
+			goto Tanaris,66.57,25.67
+			.talk Torta##6015
+			..turnin Tooga's Quest##1560
+		step
+			goto Tanaris,50.89,26.96
+			.talk Alchemist Pestlezugg##5594
+			..turnin Noxious Lair Investigation##82
+		step
+			goto Tanaris,50.21,27.48
+			.talk Senior Surveyor Fizzledowser##7724
+			..accept The Scrimshank Redemption##10
+		step
+			goto Tanaris,55.97,71.18
+			.' Collect Scrimshank's Surveying Gear
+			.info Inside the cave.
+			.collect Scrimshank's Surveying Gear##8593|q 10/1
+		step
+			.use the OOX-17/TN Distress Beacon##8623
+			..accept Find OOX-17/TN!##351
+		step
+			goto Tanaris,60.23,64.72
+			.talk Homing Robot OOX-17/TN##7784
+			..turnin Find OOX-17/TN!##351
+			..accept Rescue OOX-17/TN!##648
+		step
+			goto Tanaris,61.3,53.84
+			.goal Escort OOX-17/TN to safety|q 648/1
+		step
+			goto Tanaris,50.21,27.48
+			.talk Senior Surveyor Fizzledowser##7724
+			..turnin The Scrimshank Redemption##10
+			..accept Insect Part Analysis (1)##110
+		step
+			goto Tanaris,50.89,26.96
+			.talk Alchemist Pestlezugg##5594
+			..turnin Insect Part Analysis (1)##110
+			..accept Insect Part Analysis (2)##113
+		step
+			goto Tanaris,50.21,27.48
+			.talk Senior Surveyor Fizzledowser##7724
+			..turnin Insect Part Analysis (2)##113
+			..accept Rise of the Silithid##162
+		step
+			goto Un'Goro Crater,59.96,30.56
+			.from Tar Beast##6517, Tar Lurker##6518, Tar Lord##6519, Tar Creeper##6527
+			.get 12 Super Sticky Tar##11834|q 4504/1
+			.' You can find more around (1)|at 59.75,24.49
+			.' You can find more around (2)|at 63.54,23.41
+		step
+			goto Tanaris,51.57,26.76
+			.talk Tran'rek##7876
+			..turnin Super Sticky##4504
+		step
+			goto Stranglethorn Vale,28.4,76.4
+			.talk Oglethorpe Obnoticus##7406
+			..turnin Rescue OOX-17/TN!##648
+		step
+			goto Stranglethorn Vale,27.8,77.1
+			.talk Sea Wolf MacKinley##2501
+			..turnin Deliver to MacKinley##2874
+		step
+			goto Darnassus,41.8,85.6
+			.talk Gracina Spiritmight##7740
+			..turnin Rise of the Silithid##162
+		step
+			.' Congratulations! +27 quests for achievement "Loremaster of Kalimdor".
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[50-beta] Feralas",[[
+author danaton
+description This guide contain quest-chain (54 quests) for Feralas location.
+startlevel 50
+		step
+			.' First you need to complete the Tanaris quest chain.
+			.info Skip the step manually.
+		step
+			goto Stormwind,61.2,70.7
+			.talk Auctioneer Jaxon##15659
+			.buy 2 Elixir of Fortitude##3825|q 3842/1 |future
+		step
+			goto Stormwind,56.4,74.1
+			.talk Crier Goodman##2198
+			..accept Feathermoon Stronghold##7494
+		step
+			goto Stormwind,69.50,40.40
+			.talk Brohann Caskbelly ##5384
+			..accept In Search of The Temple##1448
+			.info Dungeon: The Sunken Temple Quest Chain.
+		step
+			goto Swamp of Sorrows,70.00,53.20
+			.goal Search for the Temple of Atal'Hakkar|q 1448/1
+			.info Dungeon: The Sunken Temple Quest Chain.
+		step
+			goto Stormwind,69.50,40.40
+			.talk Brohann Caskbelly ##5384
+			..turnin In Search of The Temple##1448
+			..accept To The Hinterlands##1449
+			.info Dungeon: The Sunken Temple Quest Chain.
+		step
+			goto Tanaris,52.35,26.91
+			.talk Curgle Cranklehop##7763
+			..accept Handle With Care##3022
+		step
+			goto Tanaris,52.4,27
+			.' Interact with gameobject: Egg-O-Matic
+			.accept The Super Egg-O-Matic##2741
+		step
+			goto Tanaris,51.1,26.9
+			.talk Sprinkle##7583
+			..accept Sprinkle's Secret Ingredient##2641
+		step
+			goto Tanaris,66.98,22.38
+			.talk Yeh'kinya##8579
+			..accept Screecher Spirits##3520
+			.info Dungeon: Zul'Farrak Quest Chain.
+		step
+			goto Feralas,65.94,45.65
+			.talk Kindal Moonweaver##7956
+			..accept Freedom for All Creatures##2969
+		step
+			goto Feralas,66.67,46.75
+			.' Open Cage Door.
+			.info Follow the Captured Sprite Darters and protect them.
+			.info You have to make sure at least 6 of them survive.
+			.info HURRY! You must complete the quest and turn it in before the timer ends.
+			.' Save at Least 6 Sprite Darters from Capture|q 2969/1
+		step
+			goto Feralas,65.94,45.65
+			.talk Kindal Moonweaver##7956
+			.info HURRY! You must turn it in before the timer ends.
+			..turnin Freedom for All Creatures##2969
+		step
+			goto Feralas,65.95,45.61
+			.talk Jer'kai Moonweaver##7957
+			..accept Doling Justice (1)##2970
+		step
+			goto Feralas,66.89,46.43
+			.kill 12 Grimtotem Naturalist##7726|q 2970/1
+			.kill 10 Grimtotem Raider##7725|q 2970/2
+			.kill 6 Grimtotem Shaman##7727|q 2970/3
+			.' You can find more around (1)|at 68.71,47.04
+			.' You can find more around (2)|at 69.59,39.44
+			.' Up the path|at 68.26,39.25
+		step
+			goto Feralas,65.95,45.61
+			.talk Jer'kai Moonweaver##7957
+			..turnin Doling Justice (1)##2970
+			..accept Doling Justice (2)##2972
+		step
+			goto Feralas,46.26,40.14
+			.from Vale Screecher##5307, Rogue Vale Screecher##5308
+			.info Vale Screechers and Rogue Vale Screechers will count for the quest.
+			.info They look like thin flying dragons.
+			.use Yeh'kinya's Bramble##10699
+			.info Use it on their corpses.
+			.talk Screecher Spirit##8612+
+			.info They appear after using Yeh'kinya's Bramble on the corpses.
+			.collect 3 Screecher Spirits|q 3520/1
+			.' You can find more around (1)|at 45.86,37.59
+			.' You can find more around (2)|at 44.46,36.19
+			.' You can find more around (3)|at 42.49,36.47
+			.' You can find more around (4)|at 46.6,48.2
+			.info Dungeon: Zul'Farrak Quest Chain.
+		step
+			goto Feralas,44.8,43.4
+			.talk Zorbin Fandazzle##14637
+			..accept Zapped Giants##7003
+			..accept Fuel for the Zapping##7721
+		step
+			goto Feralas,46.3,58.14
+			.from Deep Strider##5360, Wave Strider##5361
+			.use Zorbin's Ultra-Shrinker##18904|q 7003/1
+			.' You can find more around (1)|at 37.8,36.3
+		step
+			goto Feralas,47,56.9
+			.from Sea Elemental##5461, Sea Spray##5462
+			.get 10 Water Elemental Core##18958|q 7721/1
+			.' You can find more around (1)|at 48.47,51.45
+		step
+			goto Feralas,44.8,43.4
+			.talk Zorbin Fandazzle##14637
+			..turnin Zapped Giants##7003
+			..turnin Fuel for the Zapping##7721
+		step
+			goto Feralas,31.78,45.50
+			.talk Troyas Moonbreeze##7764
+			..accept In Search of Knowledge##2939
+		step
+			goto Teldrassil,55.50,92.05
+			.talk Erelas Ambersky##7916
+			..turnin Handle With Care##3022
+		step
+			goto Teldrassil,55.41,92.23
+			.talk Daryn Lightwind##7907
+			..turnin In Search of Knowledge##2939
+		step
+			goto Teldrassil,55.22,91.46
+			.' Interact with book: "Feralas: A History"
+			..accept Feralas: A History##2940
+		step
+			goto Teldrassil,55.41,92.23
+			.talk Daryn Lightwind##7907
+			..turnin Feralas: A History##2940
+			..accept The Borrower##2941
+		step
+			goto Darnassus,39.10,81.59
+			.talk Tyrande Whisperwind##7999
+			..turnin Doling Justice (2)##2972
+		step
+			goto Feralas,65.9,45.7
+			.talk Kindal Moonweaver##7956
+			..accept An Orphan Looking For a Home##3841
+		step
+			goto Thousand Needles,78.3,74.7
+			.talk Quentin##9238
+			..turnin An Orphan Looking For a Home##3841
+			..accept A Short Incubation##3842
+		step
+			goto Stormwind,61.2,70.7
+			.talk Auctioneer Jaxon##15659
+			.buy 2 Elixir of Fortitude##3825|q 3842/1
+		step
+			goto Thousand Needles,78.3,74.7
+			.talk Quentin##9238
+			..turnin A Short Incubation##3842
+			..accept The Newest Member of the Family##3843
+		step
+			goto Tanaris,52.4,26.9
+			.talk Curgle Cranklehop##7763
+			..turnin The Borrower##2941
+			..accept The Super Snapper FX##2944
+		step
+			goto Tanaris,66.98,22.38
+			.talk Yeh'kinya##8579
+			..turnin Screecher Spirits##3520
+			.info Dungeon: Zul'Farrak Quest Chain.
+		step
+			goto The Hinterlands,11.80,46.75
+			.talk Falstad Wildhammer##5635
+			..turnin To The Hinterlands##1449
+			..accept Gryphon Master Talonaxe##1450
+			.info Dungeon: The Sunken Temple Quest Chain.
+		step
+			goto The Hinterlands,09.75,44.47
+			.talk Gryphon Master Talonaxe##5636
+			..turnin Gryphon Master Talonaxe##1450
+			..accept Rhapsody Shindigger##1451
+			.info Dungeon: The Sunken Temple Quest Chain.
+		step
+			goto The Hinterlands,14.2,43.6
+			.talk Agnar Beastamer##9660
+			..turnin The Newest Member of the Family##3843
+			..accept Food for Baby##4297
+		step
+			goto The Hinterlands,27.00,48.50
+			.talk Rhapsody Shindigger##5634
+			..turnin Rhapsody Shindigger##1451
+			..accept Rhapsody's Kalimdor Kocktail##1452
+			.info Dungeon: The Sunken Temple Quest Chain.
+		step
+			goto The Hinterlands,41,59.8
+			.collect 1 Violet Tragan##8526|q 2641/1
+			.info Purple mushroom underwater.
+		step
+			goto The Hinterlands,67,50.4
+			.from Silvermane Stalker##2926
+			.get 5 Silvermane Stalker Flank##11472|q 4297/1
+		step
+			goto The Hinterlands,80.1,58.4
+			.from Gammerita##7977
+			.use Super Snapper FX##9328|q 2944/1
+		step
+			goto The Hinterlands,14.2,43.6
+			.talk Agnar Beastamer##9660
+			..turnin Food for Baby##4297
+			..accept Becoming a Parent##4298
+			..turnin Becoming a Parent##4298
+		step
+			goto Teldrassil,55.4,92.2
+			.talk Daryn Lightwind##7907
+			..turnin The Super Snapper FX##2944
+			..accept Return to Troyas##2943
+		step
+			goto Feralas,30.63,42.71
+			.talk Pratt McGrubben##7852
+			..accept The Mark of Quality##2821
+		step
+			goto Feralas,30.38,46.17
+			.talk Latronicus Moonspear##7877
+			..accept The Missing Courier (1)##4124
+			..turin Feathermoon Stronghold##7494
+		step
+			goto Feralas,30.28,46.17
+			.talk Shandris Feathermoon##3936
+			..accept The Ruins of Solarsal##2866
+		step
+			goto Feralas,31.83,45.61
+			.talk Angelas Moonbreeze##7900
+			..accept The High Wilderness##2982
+			..accept The Sunken Temple##3445
+		step
+			goto Feralas,31.8,45.5
+			.talk Troyas Moonbreeze##7764
+			..turnin Return to Troyas##2943
+			..accept The Stave of Equinex##2879
+		step
+			goto Feralas,31.86,45.13
+			.talk Ginro Hearthkindle##7880
+			..turnin The Missing Courier (1)##4124
+			..accept The Missing Courier (2)##4125
+		step
+			goto Feralas,26.32,52.34
+			.' Interact with gameobject: Solarsal Gazebo
+			.info You have to be standing inside of it to be able to click it.
+			..turnin The Ruins of Solarsal##2866
+			..accept Return to Feathermoon Stronghold##2867
+		step
+			goto Feralas,30.28,46.17
+			.talk Shandris Feathermoon##3936
+			..turnin Return to Feathermoon Stronghold##2867
+			..accept Against the Hatecrest (1)##3130
+		step
+			goto Feralas,30.38,46.17
+			.talk Latronicus Moonspear##7877
+			..turnin Against the Hatecrest (1)##3130
+			..accept Against the Hatecrest (2)##2869
+		step
+			goto Feralas,28.66,53.05
+			.from Hatecrest Warrior##5331, Hatecrest Wave Rider##5332, Hatecrest Screamer##5335, Hatecrest Siren##5337
+			.get 10 Hatecrest Naga Scale##9247|q 2869/1
+			.' You can find more around|at 26.21,51.95
+		step
+			goto Feralas,30.38,46.17
+			.talk Latronicus Moonspear##7877
+			..turnin Against the Hatecrest (2)##2869
+			..accept Against Lord Shalzaru##2870
+		step
+			goto Feralas,28.49,70.45
+			.from Lord Shalzaru##8136
+			.info Inside the cave.
+			.get Mysterious Relic##9248|q 2870/1
+		step
+			goto Feralas,26.09,67.26
+			.' Kill enemies around this area.
+			.info Inside and outside the cave.
+			.info Any enemy in Feralas can drop this item.
+			.collect OOX-22/FE Distress Beacon##8705 |n
+			.info If you reach level  47 before finding this item, skip the quest.
+			.use the OOX-22/FE Distress Beacon##8705
+			..accept Find OOX-22/FE!##2766
+		step
+			goto Feralas,45.45,64.97
+			.' Interact with gameobject: Wrecked Row Boat
+			.info Underwater.
+			.info You will make it out of the Fatigue zone shortly after.
+			..turnin The Missing Courier##4125
+			..accept Boat Wreckage##4127
+		step
+			goto Feralas,31.86,45.13
+			.talk Ginro Hearthkindle##7880
+			..turnin Boat Wreckage##4127
+			..accept The Knife Revealed##4129
+		step
+			goto Feralas,30.38,46.17
+			.talk Latronicus Moonspear##7877
+			..turnin Against Lord Shalzaru##2870
+			..accept Delivering the Relic##2871
+		step
+			goto Feralas,30.08,45.06
+			.talk Vestia Moonspear##7878
+			..turnin Delivering the Relic##2871
+		step
+			goto Feralas,32.45,43.79
+			.talk Quintis Jonespyre##7879
+			..turnin The Knife Revealed##4129
+		step
+			goto Feralas,32.45,43.79
+			.' Watch the dialogue.
+			.talk Quintis Jonespyre##7879
+			..accept Psychometric Reading##4130
+		step
+			goto Feralas,31.86,45.13
+			.talk Ginro Hearthkindle##7880
+			..turnin Psychometric Reading##4130
+			..accept The Woodpaw Gnolls##4131
+		step
+			goto Feralas,53.35,55.70
+			.talk Homing Robot OOX-22/FE##7807
+			.info This NPC offers an escort quest.
+			.info If it's not here, someone may be escorting it.
+			.info Wait until it respawns.
+			..turnin Find OOX-22/FE!##2766
+			..accept Rescue OOX-22/FE!##2767
+		step
+			goto Feralas,55.62,51.37
+			.goal Escort OOX-22/FE to safety|q 2767/1
+		step
+			goto Feralas,56.20,57.02
+			.from Feral Scar Yeti##5292, Enraged Feral Scar##5295
+			.info They look like yetis.
+			.get 10 Thick Yeti Hide##8973|q 2821/1
+			.' You can find more through in cave|at 53.15,56.25
+		step
+			goto Feralas,54.6,75.8
+			.collect 1 Hippogryph Egg##8564|q 2741/1
+			.' You can find more|at 58,76.3
+		step
+			goto Feralas,59.67,66.85
+			.kill 8 Gordunni Shaman##5236|q 2982/2
+			.info They share spawn points with the other ogres, so kill those too, if you can't find any.
+		step
+			goto Feralas,59.22,64.15
+			.kill 8 Gordunni Warlock##5240|q 2982/1
+			.' You can find more around|at 61.03,55.64
+		step
+			goto Feralas,61.00,55.61
+			.kill 8 Gordunni Brute##5232|q 2982/3
+			.' You can find more around|at 59.28,63.51
+		step
+			goto Feralas,60.27,60.56
+			.from Ironfur Bear##5268
+			.info They look like bears.
+			.get 3 Ironfur Liver##6258|q 1452/2
+			.' You can find more around (1)|at 58.52,60.59
+			.' You can find more around (2)|at 57.74,56.51
+			.info Dungeon: The Sunken Temple Quest Chain.
+		step
+			goto Feralas,60.27,60.56
+			.from Groddoc Ape##5260
+			.info They look like gorillas.
+			.get 3 Groddoc Liver##6259|q 1452/3
+			.' You can find more around (1)|at 58.52,60.59
+			.' You can find more around (2)|at 57.74,56.51
+			.info Dungeon: The Sunken Temple Quest Chain.
+		step
+			goto Feralas,73.31,56.31
+			.' Interact with Large Leather Backpacks.
+			..turnin The Woodpaw Gnolls##4131
+			..accept The Writhing Deep##4135
+		step
+			.use the Undelivered Parcel##11463
+			..accept Thalanaar Delivery##4281
+		step
+			goto Feralas,72.08,63.75
+			.' Interact with Zukk'ash Pod.
+			..turnin The Writhing Deep##4135
+			..accept Freed from the Hive##4265
+		step
+			goto Feralas,72.08,63.81
+			.' Watch the dialogue.
+			.info Inside the cave.
+			.' Free Raschal|q 4265/1
+		step
+			goto Feralas,89.64,46.57
+			.talk Falfindel Waywarder##4048
+			..turnin Thalanaar Delivery##4281
+		step
+			goto Feralas,30.63,42.71
+			.talk Pratt McGrubben##7852
+			..turnin The Mark of Quality##2821
+			..accept Improved Quality##7733
+		step
+			goto Feralas,31.83,45.61
+			.talk Angelas Moonbreeze##7900
+			..turnin The High Wilderness##2982
+		step
+			goto Feralas,31.86,45.13
+			.talk Ginro Hearthkindle##7880
+			..turnin Freed from the Hive##4265
+			..accept A Hero's Welcome##4266
+		step
+			goto Feralas,30.28,46.17
+			.talk Shandris Feathermoon##3936
+			..turnin A Hero's Welcome##4266
+			..accept Rise of the Silithid##4267
+		step
+			goto Feralas,52.73,31.76
+			.from Rage Scar Yeti##5296, Ferocious Rage Scar##5299
+			.get 10 Rage Scar Yeti Hide##18947|q 7733/1
+		step
+			goto Feralas,53.3,31.8
+			.from Rage Scar Yeti##5296, Ferocious Rage Scar##5299
+			.get 1 Pristine Yeti Hide##18969|n
+			.use Pristine Yeti Hide##18969
+			..accept Pristine Yeti Hide##7735
+		step
+			goto Feralas,42.4,22
+			.talk Rockbiter##7765
+			..accept The Giant Guardian##2844
+		step
+			goto Feralas,38.53,15.75
+			.collect 1 Byltan Essence##9258|q 2879
+		step
+			goto Feralas,40.5,12.7
+			.collect 1 Samha Essence##9257|q 2879
+		step
+			goto Feralas,39.9,9.4
+			.collect 1 Imbel Essence##9256|q 2879
+		step
+			goto Feralas,37.8,12.2
+			.collect 1 Lahassa Essence##9255|q 2879
+		step
+			goto Feralas,38.8,13.2
+			.use Troyas' Stave##9263|q 2879/1
+			.' Interact with gameobject: Equinex Monolith
+			..turnin The Stave of Equinex##2879
+			..accept The Morrow Stone##2942
+		step
+			goto Feralas,38.2,10.3
+			.talk Shay Leafrunner##7774
+			..turnin The Giant Guardian##2844
+			..accept Wandering Shay##2845
+		step
+			goto Feralas,38.3,10.3
+			.' Open Shay's Chest.
+			.collect 1 Shay's Bell##9189|q 2845/2
+		step
+			goto Feralas,42.4,22
+			.use Shay's Bell##9189
+			.goal Take Shay Leafrunner to Rockbiter's camp|q 2845/1
+		step
+			goto Feralas,42.4,22
+			.talk Rockbiter##7765
+			..turnin Wandering Shay##2845
+		step
+			goto Feralas,31.8,45.5
+			.talk Troyas Moonbreeze##7764
+			..turnin The Morrow Stone##2942
+		step
+			goto Feralas,30.63,42.71
+			.talk Pratt McGrubben##7852
+			..turnin Improved Quality##7733
+			..turnin Pristine Yeti Hide##7735
+		step
+			goto Darnassus,41.85,85.62
+			.talk Gracina Spiritmight##7740
+			..turnin Rise of the Silithid##4267
+			..accept March of the Silithid##4493
+		step
+			goto Tanaris,50.9,27
+			.talk Alchemist Pestlezugg##5594
+			..turnin March of the Silithid##4493
+			..accept Bungle in the Jungle##4496
+		step
+			goto Tanaris,51.1,26.9
+			.talk Sprinkle##7583
+			..turnin Sprinkle's Secret Ingredient##2641
+			..accept Delivery for Marin##2661
+		step
+			goto Tanaris,52.4,27
+			.' Interact with gameobject: Egg-O-Matic
+			..turnin The Super Egg-O-Matic##2741
+		step
+			goto Tanaris,51.8,28.7
+			.talk Marin Noggenfogger##7564
+			..turnin Delivery for Marin##2661
+			..accept Noggenfogger Elixir##2662
+			..turnin Noggenfogger Elixir##2662
+		step
+			goto Tanaris,45.20,37.93
+			.from Roc##5428, Fire Roc##5429, Searing Roc##5430
+			.get 3 Roc Gizzard|q 1452/1
+			.info Dungeon: The Sunken Temple Quest Chain.
+		step
+			goto Tanaris,52.7,45.9
+			.talk Marvon Rivetseeker##7771
+			..turnin The Sunken Temple##3445
+		step
+			goto Un'Goro Crater,45.5,14.2
+			.collect 5 Un'Goro Soil##11018|q 4496/2
+			.' You can find more around (1)|at 49.7,15.9
+			.' You can find more around (2)|at 54.7,16.2
+			.' You can find more around (3)|at 42.4,16.2
+			.' You can find more around (4)|at 45.4,24.4
+			.' You can find more around (5)|at 38.1,23.2
+		step
+			goto Un'Goro Crater,50.4,78.1
+			.from Gorishi Wasp##6551, Gorishi Worker##6552, Gorishi Reaver##6553
+			.get 1 Gorishi Scent Gland##11837|q 4496/1
+		step
+			goto Tanaris,50.9,27
+			.talk Alchemist Pestlezugg##5594
+			..turnin Bungle in the Jungle##4496
+			..accept Pawn Captures Queen##4507
+		step
+			goto Un'Goro Crater,43.53,81.07
+			.use Gorishi Queen Lure##11833
+			.from Gorishi Hive Queen##10041
+			.get 1 Gorishi Queen Brain##11835|q 4507/1
+		step
+			goto Tanaris,50.9,27
+			.talk Alchemist Pestlezugg##5594
+			..turnin Pawn Captures Queen##4507
+			..accept Calm Before the Storm (1)##4508
+		step
+			goto Stranglethorn Vale,28.4,76.4
+			.talk Oglethorpe Obnoticus##7406
+			..turnin Rescue OOX-22/FE!##2767
+		step
+			goto The Hinterlands,27.00,48.50
+			.talk Rhapsody Shindigger##5634
+			..turnin Rhapsody's Kalimdor Kocktail##1452
+			.' Wait Rhapsod Drink Event.
+			..accept Rhapsody's Tale##1469
+			.info Dungeon: The Sunken Temple Quest Chain.
+		step
+			goto Stormwind,69.5,40.4
+			.talk Brohann Caskbelly##5384
+			..turnin Rhapsody's Tale##1469
+			.info Dungeon: The Sunken Temple Quest Chain.
+		step
+			goto Darnassus,41.8,85.6
+			.talk Gracina Spiritmight##7740
+			..turnin Calm Before the Storm (1)##4508
+			..accept Calm Before the Storm (2)##4510
+		step
+			goto Darnassus,39.4,42.4
+			.talk Idriana##4155
+			..turnin Calm Before the Storm (2)##4510
+		step
+			.' Congratulations! +54 quests for achievement "Loremaster of Kalimdor" and +6 quests for achievement "Loremaster of Eastern Kingdoms".
+]])
+
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Felwood",[[
 author danaton
 description This guide contain quest-chain (21 quests) for Felwood location.
@@ -6942,6 +7818,312 @@ startlevel 60
 			..turnin Fragments of the Past (1)##5246
 		step
 			.' Congratulations! +12 quests for achievement "Loremaster of Kalimdor" and +13 quests for achievement "Loremaster of Eastern Kingdoms".
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60-beta] Silithus",[[
+author danaton
+description This guide contain quest-chain (27 quests) for Silithus location.
+startlevel 60
+		step
+			goto Ironforge,55.9,81.4
+			.talk Courier Hammerfall##10877
+			..accept The New Frontier (1)##1019
+		step
+			goto Ironforge,58.5,47.3
+			.talk Cenarion Emissary Jademoon##15187
+			..accept Taking Back Silithus##8275
+		step
+			goto Darnassus,34.8,9.3
+			.talk Arch Druid Fandral Staghelm##3516
+			..turnin The New Frontier (1)##1019
+			..accept The New Frontier (2)##6761
+		step
+			goto Darnassus,35.4,8.4
+			.talk Mathrengyl Bearwalker##4217
+			..turnin The New Frontier (2)##6761
+			..accept Rabine Saturna##6762
+		step
+			goto Moonglade,51.7,45.1
+			.talk Rabine Saturna##11801
+			..turnin Rabine Saturna##6762
+			..accept Wasteland##1124
+			..accept A Reliquary of Purity##5527
+		step
+			goto Silithus,81.9,18.9
+			.talk Layo Starstrike##13220
+			..turnin Wasteland##1124
+			..accept The Spirits of Southwind##1125
+		step
+			goto Silithus,63.2,55.3
+			.collect 1 Reliquary of Purity##22201|q 5527/1
+		step
+			goto Silithus,61.9,53.2
+			.kill 8 Tortured Druid##12178|q 1125/1
+			.kill 8 Tortured Sentinel##12179|q 1125/2
+		step
+			goto Silithus,81.9,18.9
+			.talk Layo Starstrike##13220
+			..turnin The Spirits of Southwind##1125
+			..accept Hive in the Tower##1126
+		step
+			goto Silithus,60.3,52.6
+			.collect 1 Silithid Goo##17345|q 1126
+			.info At the very top of the tower.
+			.from Hive'Ashi Ambusher##13301
+			.get 1 Encrusted Silithid Object##17346|q 1126/1
+		step
+			goto Silithus,51.15,38.29
+			.talk Windcaller Proudhorn##15191
+			..turnin Taking Back Silithus##8275
+			..accept Securing the Supply Lines##8280
+		step
+			goto Silithus,51.4,38.3
+			.' Interact with gameobject: Wanted Poster: Deathclasp
+			..accept Wanted - Deathclasp, Terror of the Sands##8283
+		step
+			goto Silithus,51.71,38.58
+			.talk Beetix Ficklespragg##15189
+			..accept Deadly Desert Venom##8277
+		step
+			goto Silithus,49.67,37.46
+			.talk Geologist Larksbane##15183
+			..accept The Twilight Mystery##8284
+		step
+			goto Silithus,48.6,37.9
+			.talk Huum Wildmane##15270
+			..accept Twilight Geolords##8320
+		step
+			goto Silithus,48.57,37.78
+			.talk Bor Wildmane##15306
+			..accept Secret Communication##8318
+		step
+			goto Silithus,49.19,34.18
+			.talk Commander Mar'alith##15181
+			..accept Dearest Natalia##8304
+		step
+			goto Silithus,50.7,34.7
+			.talk Rifleman Torrig##17082
+			..accept Report to Marshal Bluewall##9415
+		step
+			goto Silithus,55.97,49.86
+			.' Kill Hive'Ashi enemies around this area.
+			.info You may need help with this.
+			.collect Brann Bronzebeard's Lost Letter##20461|q 8308 |future
+			.info This has a low drop rate.
+			.' You can find more around (1)|at 52.57,52.85
+			.' You can find more around (2)|at 48.18,44.34
+		step
+			.use Brann Bronzebeard's Lost Letter##20461
+			..accept Brann Bronzebeard's Lost Letter##8308
+		step
+			goto Silithus,81.9,18.9
+			.talk Layo Starstrike##13220
+			..turnin Hive in the Tower##1126
+			..accept Umber, Archivist##6844
+		step
+			goto Silithus,60.63,17.19
+			.from Stonelash Scorpid##11735
+			.info They look like scorpions.
+			.get 8 Stonelash Scorpid Stinger##20373|q 8277/1
+			.get 8 Sand Skitterer Fang##20376|q 8277/2
+			.' You can find more around (1)|at 51.92,17.95
+			.' You can find more around (2)|at 52.50,30.60
+			.' You can find more around (3)|at 68.54,32.78
+			.' You can find more around (4)|at 59.11,23.46
+		step
+			goto Silithus,60.63,17.19
+			.kill 15 Dredge Striker##11740|q 8280/1
+			.' You can find more around (1)|at 51.92,17.95
+			.' You can find more around (2)|at 52.50,30.60
+			.' You can find more around (3)|at 68.54,32.78
+			.' You can find more around (4)|at 59.11,23.46
+		step
+			goto Silithus,24.33,11.94
+			.' Click Twilight Tablet Fragment.
+			.info They look like small blue-glowing broken pieces of stone tablets on the ground around this area.
+			.collect 8 Twilight Tablet Fragment##20378|q 8284/1
+		step
+			goto Silithus,33.3,51.1
+			.talk Marshal Bluewall##17080
+			..turnin Report to Marshal Bluewall##9415
+		step
+			goto Silithus,25.45,34.2
+			.kill 10 Twilight Geolord##11881|q 8320/1
+			.collect 10 Encrypted Twilight Text##20404|q 8318/1
+			.' You can find more around (1)|at 39.65,45.2
+			.' You can find more around (2)|at 19.25,85.15
+		step
+			goto Silithus,48.58,37.78
+			.talk Bor Wildmane##15306
+			..turnin Secret Communication##8318
+		step
+			goto Silithus,48.6,37.9
+			.talk Huum Wildmane##15270
+			..turnin Twilight Geolords##8320
+			..accept Vyral the Vile##8321
+		step
+			goto Silithus,49.67,37.46
+			.talk Geologist Larksbane##15183
+			..turnin The Twilight Mystery##8284
+			..accept The Deserter##8285
+		step
+			goto Silithus,51.15,38.29
+			.talk Windcaller Proudhorn##15191
+			..turnin Securing the Supply Lines##8280
+			..accept Stepping Up Security##8281
+		step
+			goto Silithus,51.71,38.58
+			.talk Beetix Ficklespragg##15189
+			..turnin Deadly Desert Venom##8277
+			..accept Noggle's Last Hope##8278
+		step
+			goto Silithus,48.6,37.9
+			.talk Huum Wildmane##15270
+			..accept Aurel Goldleaf##8331
+		step
+			goto Silithus,52,38.2
+			.talk Aurel Goldleaf##15282
+			..turnin Aurel Goldleaf##8331
+		step
+			goto Silithus,72.4,15.6
+			.from Vyral the Vile##15202
+			.get 1 Vyral's Signet Ring##20466|q 8321/1
+		step
+			goto Silithus,67.2,69.8
+			.talk Hermit Ortell##15194
+			..turnin The Deserter##8285
+			..accept The Twilight Lexicon##8279
+		step
+			goto Silithus,45.44,86.38
+			.from Stonelash Flayer##11737+
+			.get 3 Stonelash Flayer Stinger##20375|q 8278/1
+			.' You can find more around (1)|at 45.15,82.20
+			.' You can find more around (2)|at 36.97,86.68
+			.' You can find more around (3)|at 28.44,80.89
+			.' You can find more around (4)|at 35.23,71.64
+		step
+			goto Silithus,27.26,43.55
+			.from Stonelash Pincer##11736
+			.get 3 Stonelash Pincer Stinger##20374|q 8278/2
+			.' You can find more around (1)|at 36.54,50.40
+			.' You can find more around (2)|at 37.93,60.76
+			.' You can find more around (3)|at 47.11,59.42
+			.' You can find more around (4)|at 57.55,60.78
+		step
+			goto Silithus,45.44,86.38
+			.from Rock Stalker##11739
+			.get 3 Rock Stalker Fang##20377|q 8278/3
+			.' You can find more around (1)|at 45.15,82.20
+			.' You can find more around (2)|at 36.97,86.68
+			.' You can find more around (3)|at 28.44,80.89
+			.' You can find more around (4)|at 35.23,71.64
+		step
+			goto Silithus,27.26,43.55
+			.kill 20 Dredge Crusher##11741|q 8281/1
+			.' You can find more around (1)|at 36.54,50.40
+			.' You can find more around (2)|at 37.93,60.76
+			.' You can find more around (3)|at 47.11,59.42
+			.' You can find more around (4)|at 57.55,60.78
+		step
+			goto Silithus,48.6,37.9
+			.talk Huum Wildmane##15270
+			..turnin Vyral the Vile##8321
+		step
+			goto Silithus,51.15,38.29
+			.talk Windcaller Proudhorn##15191
+			..turnin Stepping Up Security##8281
+		step
+			goto Silithus,51.71,38.58
+			.talk Beetix Ficklespragg##15189
+			..turnin Noggle's Last Hope##8278
+		step
+			goto Silithus,51.6,38.5
+			.talk Noggle Ficklespragg##15190
+			..accept Noggle's Lost Satchel##8282
+		step
+			goto Silithus,40.9,42.2
+			.from Twilight Keeper Havunth##11804
+			.get 1 Twilight Lexicon - Chapter 3##20396|q 8279/3
+		step
+			goto Silithus,26.3,36.6
+			.from Twilight Keeper Mayna##15200
+			.get 1 Twilight Lexicon - Chapter 1##20394|q 8279/1
+		step
+			goto Silithus,16.1,86.4
+			.from Twilight Keeper Exeter##11803
+			.get 1 Twilight Lexicon - Chapter 2##20395|q 8279/2
+		step
+			goto Silithus,41.28,88.45
+			.talk Rutgar Glyphshaper##15170
+			..turnin Brann Bronzebeard's Lost Letter##8308
+		step
+			goto Silithus,41.28,88.45
+			.talk Rutgar Glyphshaper##15170
+			.' Tell him "Hello, Rutgar. The Commander has sent me here to gather some information about his missing wife."
+			.' Question Rutgar|q 8304/2
+		step
+			goto Silithus,40.82,88.85
+			.talk Frankal Stonebridge##15171
+			.' Tell him "Hello, Frankal. I've heard that you might have some information as to the whereabouts of Mistress Natalia Mar'alith."
+			.' Question Frankal|q 8304/1
+		step
+			goto Silithus,44.6,91.4
+			.collect 1 Noggle's Satchel##20379|q 8282/1
+		step
+			goto Silithus,44,90.3
+			.from Deathclasp##15196
+			.get 1 Deathclasp's Pincer##20385|q 8283/1
+		step
+			goto Silithus,67.2,69.8
+			.talk Hermit Ortell##15194
+			..turnin The Twilight Lexicon##8279
+			..accept A Terrible Purpose##8287
+			..accept True Believers##8323
+		step
+			goto Silithus,51.6,38.5
+			.talk Noggle Ficklespragg##15190
+			..turnin Noggle's Lost Satchel##8282
+		step
+			goto Silithus,49.19,34.18
+			.talk Commander Mar'alith##15181
+			..turnin A Terrible Purpose##8287
+			..turnin Dearest Natalia##8304
+			..accept Into The Maw of Madness##8306
+		step
+			goto Silithus,50.8,33.7
+			.talk Vish Kozus##15182
+			..turnin Wanted - Deathclasp, Terror of the Sands##8283
+		step
+			goto Silithus,25.45,34.2
+			.from Twilight Avenger##11880
+			.get 10 Encrypted Twilight Text##20404|q 8323/1
+			.' You can find more around (1)|at 39.65,45.2
+			.' You can find more around (2)|at 19.25,85.15
+			.' You can find more around (3)|at 67.2,18.15
+		step
+			goto Silithus,55.5,87.5
+			.info Enter the cave.
+			.kill 1 Mistress Natalia Mar'alith##15215|at Silithus,51.96,101.89|q 8306/1
+		step
+			goto Silithus,67.2,69.8
+			.talk Hermit Ortell##15194
+			..turnin True Believers##8323
+		step
+			goto Silithus,49.19,34.18
+			.talk Commander Mar'alith##15181
+			..turnin Into The Maw of Madness##8306
+		step
+			goto Moonglade,44.9,35.6
+			.talk Umber##11939
+			..turnin Umber, Archivist##6844
+			..accept Uncovering Past Secrets##6845
+		step
+			goto Moonglade,51.7,45.1
+			.talk Rabine Saturna##11801
+			..turnin A Reliquary of Purity##5527
+			..turnin Uncovering Past Secrets##6845
+		step
+			.' Congratulations! +27 quests for achievement "Loremaster of Kalimdor".
 ]])
 
 ZygorGuidesViewer.AllianceInstalled=true
