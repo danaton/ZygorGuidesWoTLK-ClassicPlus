@@ -21,8 +21,8 @@
 	<Script file="DanatonQuestInstancesA.lua"/>
 	<Script file="DanatonQuestInstancesH.lua"/>
 	<Script file="A-Loremaster-Classic.lua"/>
+	<Script file="A-Loremaster-EasternKingdoms.lua"/>
 	<Script file="A-Loremaster-BurningCrusade.lua"/>
-	<Script file="Guide06.lua"/>
 	<Script file="Guide07.lua"/>
 	<Script file="Guide08.lua"/>
 	<Script file="Guide09.lua"/>

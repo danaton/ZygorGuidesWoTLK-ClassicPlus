@@ -7,9 +7,6 @@ author danaton
 description This guide contain quest-chain (45 quests) for Elwynn Forest location.
 startlevel 10
 		step
-		.' For comfortable execution quest chain, it is recommended to be level 20+
-		.info Manually skip this step
-		step
 			goto Elwynn Forest,48.1,43.6
 			.talk Deputy Willem##823
 			..accept A Threat Within##783
@@ -354,62 +351,6 @@ startlevel 10
 			.info Use next guide - Westfall.
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[Alpha] Stormwind City",[[
-author danaton
-description Coming Soon
-startlevel 60
-		step//redridge
-			goto Stormwind City,55,54.2
-			.talk Brother Kristoff##1444
-			..accept Speaking of Fortitude##343
-		step//duskwood
-			goto Stormwind City,49.6,44.5
-			.talk Thomas##4982
-			..accept The Missing Diplomat(1)##1274
-		step//west plaguelands
-			goto Stormwind City,80,38.5
-			.talk King Varian Wrynn##29611
-			..accept The First and the Last##6182
-		step//duskwood
-			goto Stormwind City,80.3,44.1
-			.talk Bishop DeLavey##4960
-			..turnin The Missing Diplomat(1)##1274
-			..accept The Missing Diplomat(2)##1241
-		step//redridge
-			goto Stormwind City,77.1,30.2
-			.talk Milton Sheaf##1440
-			..turnin Speaking of Fortitude##343
-			..accept Brother Paxton##344
-		step//west plaguelands
-			goto Stormwind City,78.3,70.7
-			.talk Master Mathias Shaw##332
-			..turnin The First and the Last##6182
-			..accept Honor the Dead##6183
-			..turnin Honor the Dead##6183
-		step//duskwood
-			goto Stormwind City,76.3,85.1
-			.talk Jorgen##4959
-			..turnin The Missing Diplomat(2)##1241
-			..accept The Missing Diplomat(3)##1242
-		step//duskwood
-			goto Stormwind City,66,74.1
-			.talk Elling Trias##482
-			..turnin The Missing Diplomat(3)##1242
-		step//redridge
-			goto Elwynn Forest,49.6,40.4
-			.talk Brother Paxton##951
-			..turnin Brother Paxton##344
-		step
-			goto Stormwind City,51.8,74.3
-			.talk Mazen Mac'Nadir##338
-			..accept Mazen's Behest##1363
-		step
-			goto Stormwind City,51.4,73.8
-			.talk Acolyte Dellis##5386
-			..turnin Mazen's Behest##1363
-		step
-]])
-
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[20] Westfall",[[
 author danaton
 description This guide contain quest-chain (26 quests + 4 if Human race) for Westfall location.
@@ -718,11 +659,25 @@ startlevel 20
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[25] Redridge Mountains",[[
 author danaton
-description This guide contain quest-chain (35 quests) for Redridge Mountains location.
+description This guide contain quest-chain (40 quests) for Redridge Mountains location.
 startlevel 25
 		step //1
 			.info First things complete quest-chain Westfall!
 			.info If done, skip manually.
+		step
+			goto Stormwind City,55,54.2
+			.talk Brother Kristoff##1444
+			..accept Speaking of Fortitude##343
+		step
+			goto Stormwind City,77.1,30.2
+			.talk Milton Sheaf##1440
+			..turnin Speaking of Fortitude##343
+			..accept Brother Paxton##344
+		step
+			goto Elwynn Forest,49.6,40.4
+			.talk Brother Paxton##951
+			..turnin Brother Paxton##344
+			..accept Ink Supplies##345
 		step //
 			goto Elwynn Forest,65.2,69.7
 			.talk Theocritus##313
@@ -747,7 +702,9 @@ startlevel 25
 		step //
 			goto Redridge Mountains,32.1,48.6
 			.talk Foreman Oslow##341
+			..turnin Ink Supplies##345
 			..accept The Lost Tools##125
+			..accept Rethban Ore##347
 		step //
 			goto Redridge Mountains,31,47.3
 			.talk Verner Osgood##415
@@ -781,10 +738,6 @@ startlevel 25
 			goto Redridge Mountains,16.4,49.2
 			.from Bellygrub##345
 			.get Bellygrub's Tusk##3631|q 34/1
-		//step //
-			//goto Redridge Mountains,21.9,46.3
-			//.talk Martie Jainrose##342
-			//..turnin An Unwelcome Guest##34
 		step //
 			goto Redridge Mountains,16.81,53.64
 			.from Great Goretusk##547
@@ -966,6 +919,11 @@ startlevel 25
 			..turnin A Baying of Gnolls##124
 			..accept Howling in the Hills##126
 		step //
+			goto Redridge Mountains,20.7,28.3
+			.from Redridge Drudger##580
+			.get 5 Rethban Ore##2798|q 347/1
+			.' Enter the cave|at 20.3,35.1
+		step //
 			goto Redridge Mountains,27.4,21.8
 			.from Yowler##518
 			.get Yowler's Paw|q 126/1
@@ -994,9 +952,12 @@ startlevel 25
 			.talk Bailiff Conacher##900
 			..accept Solomon's Law##91
 		step //
-			goto Redridge Mountains,26.8,46.4
-			.info Interact with Wanted Poster and accept quests.
+			goto Redridge Mountains,29.6,46.2
+			.info Interact with gameobject: Wanted: Gath'Ilzogg
 			..accept Wanted: Gath'Ilzogg##169
+		step //
+			goto Redridge Mountains,26.8,46.4
+			.info nteract with gameobject: Wanted: Lieutenant Fangore
 			..accept Wanted: Lieutenant Fangore##180
 		step //
 			goto Redridge Mountains,31.5,57.9
@@ -1016,7 +977,7 @@ startlevel 25
 			.get 3 Midnight Orb##1261|q 115/1
 		step //
 			goto Redridge Mountains,84.5,46.8
-			.info Interact with Old Lion Statue.
+			.info Interact with gameobject: Old Lion Statue.
 			..turnin A Watchful Eye##94
 			..accept Looking Further##248
 		step //
@@ -1057,7 +1018,16 @@ startlevel 25
 			.talk Theocritus##313
 			..turnin Morganth##249
 		step //
-			.' Congratulations! +35 quests for achievement "Loremaster of Eastern Kingdoms".
+			goto Elwynn Forest,49.6,40.4
+			.talk Brother Paxton##951
+			..turnin Rethban Ore##347
+			..accept Return to Kristoff##346
+		step //
+			goto Stormwind City,55,54.2
+			.talk Brother Kristoff##1444
+			..turnin Return to Kristoff##346
+		step //
+			.' Congratulations! +40 quests for achievement "Loremaster of Eastern Kingdoms".
 			.' Next, I recommend running Quest-Instance Guides: The Stockade (25).
 			.info Use next guide - Duskwood.
 ]])
@@ -5446,7 +5416,7 @@ startlevel 50
 			.' Congratulations! +34 quests for achievement "Loremaster of Kalimdor" and +5 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[50-beta] Tanaris",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[50] Tanaris",[[
 author danaton
 description This guide contain quest-chain (27 quests) for Tanaris location.
 startlevel 50
@@ -5766,7 +5736,7 @@ startlevel 50
 			.' Congratulations! +27 quests for achievement "Loremaster of Kalimdor".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[50-beta] Feralas",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[50] Feralas",[[
 author danaton
 description This guide contain quest-chain (54 quests) for Feralas location.
 startlevel 50
@@ -5988,7 +5958,7 @@ startlevel 50
 			goto Feralas,30.38,46.17
 			.talk Latronicus Moonspear##7877
 			..accept The Missing Courier (1)##4124
-			..turin Feathermoon Stronghold##7494
+			..turnin Feathermoon Stronghold##7494
 		step
 			goto Feralas,30.28,46.17
 			.talk Shandris Feathermoon##3936
@@ -6102,7 +6072,7 @@ startlevel 50
 			.' You can find more through in cave|at 53.15,56.25
 		step
 			goto Feralas,54.6,75.8
-			.collect 1 Hippogryph Egg##8564|q 2741/1
+			.collect 1 Hippogryph Egg##8564|q 2741 |future
 			.' You can find more|at 58,76.3
 		step
 			goto Feralas,59.67,66.85
@@ -7549,7 +7519,7 @@ author danaton
 description This guide contain quest-chain (12 Kalimdor + 13 Eastern Kingdoms quests) for Azshara location.
 startlevel 60
 		step
-			.' .' First required to complete Wintergrasp guide.
+			.' First required to complete Wintergrasp guide.
 		step
 			goto Eastern Plaguelands,48.8,17.6
 			.talk Aurora Skycaller##10304
@@ -7820,14 +7790,16 @@ startlevel 60
 			.' Congratulations! +12 quests for achievement "Loremaster of Kalimdor" and +13 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60-beta] Silithus",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Silithus",[[
 author danaton
 description This guide contain quest-chain (27 quests) for Silithus location.
 startlevel 60
 		step
 			goto Ironforge,55.9,81.4
 			.talk Courier Hammerfall##10877
-			..accept The New Frontier (1)##1019
+			..accept The New Frontier (1)##1015 |or
+        	..accept The New Frontier (1)##1019 |or
+        	..accept The New Frontier (1)##1047 |or
 		step
 			goto Ironforge,58.5,47.3
 			.talk Cenarion Emissary Jademoon##15187
@@ -7835,7 +7807,9 @@ startlevel 60
 		step
 			goto Darnassus,34.8,9.3
 			.talk Arch Druid Fandral Staghelm##3516
-			..turnin The New Frontier (1)##1019
+			..turnin The New Frontier (1)##1015 |or
+        	..turnin The New Frontier (1)##1019 |or
+        	..turnin The New Frontier (1)##1047 |or
 			..accept The New Frontier (2)##6761
 		step
 			goto Darnassus,35.4,8.4
