@@ -52,8 +52,10 @@ startlevel 15
 		step //11
 			goto Westfall,45.70,68.57
 			.from Defias Messenger##550
-			.get 1 A Mysterious Message|q 142/1
-			.' End move POS 36.23,43.97|n
+			.get A Mysterious Message##1381|q 142/1
+			.' Moves variably into this position|at 36.23,43.97
+			.' Or in this position|at 44.5,25.45
+			.info Dungeon: Deadmines Quest Chain.
 		step //12
 			goto Westfall,56.32,47.54
 			.talk Marshal Gryan Stoutmantle##234
@@ -65,7 +67,7 @@ startlevel 15
 		step //14
 			.'Follow the Defias Traitor.
 			goto Westfall,42.56,71.71
-			.' Escort The Defias Traitor to discover where VanCleef is hiding.|goal The Defias Brotherhood|q 155/1
+			.goal Escort The Defias Traitor to discover where VanCleef is hiding.|q 155/1
 		step //15
 			goto Westfall,56.32,47.54
 			.talk Marshal Gryan Stoutmantle##234
@@ -76,6 +78,7 @@ startlevel 15
 			.talk Scout Riell##820
 			..accept Red Silk Bandanas##214
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Wailing Caverns (15)",[[
 author danaton
 startlevel 15
@@ -108,6 +111,7 @@ startlevel 15
 			goto The Barrens,47.73,34.82
 			.' Go To Instance!|tip Good luck!
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackfathom Deeps (20)",[[
 author danaton
 startlevel 20
@@ -134,6 +138,7 @@ startlevel 20
 			goto Darkshore,31.1,95.9
 			.' Go To Instance!
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Razorfen Kraul (23)",[[
 author danaton
 startlevel 23
@@ -185,6 +190,7 @@ startlevel 23
 			.talk Willix the Importer##4508
 			..accept Willix the Importer##1144
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Gnomregan (25)",[[
 author danaton
 startlevel 25
@@ -236,6 +242,7 @@ startlevel 25
 			goto Dun Morogh,17.74,39.17
 			.' Go To Instance!
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\The Stockade (25)",[[
 author danaton
 startlevel 25
@@ -274,6 +281,7 @@ startlevel 25
 			goto Stormwind,50.49,66.41
 			.' Go To Instance!
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Razorfen Downs (32)",[[
 author danaton
 startlevel 32
@@ -293,6 +301,7 @@ startlevel 32
 			..turnin Scourge of the Downs##3523
 			..accept Extinguishing the Idol##3525
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Uldaman (35)",[[
 author danaton
 startlevel 35
@@ -363,6 +372,7 @@ startlevel 35
 			goto Badlands,35.22,10.66
 			.' Go To Uldaman Instance!
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Zul'Farrak (40)",[[
 author danaton
 startlevel 40
@@ -376,11 +386,11 @@ startlevel 40
 			..accept Witherbark Cages##2988
 		step //3
 			goto The Hinterlands,23.2,58.8
-			.' Click the First Witherbark Cage to check it|goal Check First Cage|q 2988/1
-			.' Click the Second Witherbark Cage to check it|goal Check Second Cage|q 2988/2
+			.goal Click the First Witherbark Cage to check it|q 2988/1
+			.goal the Second Witherbark Cage to check it|q 2988/2
 		step //4
 			goto The Hinterlands,32.1,57.3
-			.' Click the Third Witherbark Cage to check it|goal Check Third Cage|q 2988/3
+			.goal Click the Third Witherbark Cage to check it|q 2988/3
 		step //5
 			goto The Hinterlands,9.8,44.5
 			.talk Gryphon Master Talonaxe##5636
@@ -388,7 +398,8 @@ startlevel 40
 			..accept The Altar of Zul##2989
 		step //6
 			goto The Hinterlands,48.3,67.6
-			.' Search the Altar of Zul|q 2989/1|tip Run up the stairs of the temple towards this spot to Search the Altar of Zul.  There are a bunch of mobs at the top, so run around at the top of the temple and once you complete the quest, run away as fast as you can.
+			.goal Search the Altar of Zul|q 2989/1
+			.info Run up the stairs of the temple towards this spot to Search the Altar of Zul. There are a bunch of mobs at the top, so run around at the top of the temple and once you complete the quest, run away as fast as you can.
 		step //7
 			goto The Hinterlands,9.8,44.5
 			.talk Gryphon Master Talonaxe##5636
@@ -549,7 +560,8 @@ ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Sunken Temple (4
 author danaton
 startlevel 47
 		step //1
-			.' First you need to complete quest chain on Zul'Farrak!|tip Manually skip this step
+			.' First you need to complete quest chain on Zul'Farrak!
+			.info Manually skip this step.
 		step //2
 			goto Stormwind,69.50,40.40
 			.talk Brohann Caskbelly ##5384
@@ -594,7 +606,7 @@ startlevel 47
 			..accept Muigin and Larion##4141
 		step //11
 			goto Un'Goro Crater,67.3,32.6
-			.from Bloodpetal Lasher##6509+, Bloodpetal Flayer##6510+, Bloodpetal Thresher##6511+, Bloodpetal Trapper##6512+
+			.from Bloodpetal Lasher##6509, Bloodpetal Flayer##6510, Bloodpetal Thresher##6511, Bloodpetal Trapper##6512
 			.get 15 Bloodpetal|q 4141/1
 		step //12
 			goto Un'Goro Crater,42.9,9.6
@@ -624,7 +636,8 @@ startlevel 47
 			..accept Haze of Evil##4143
 		step //17
 			goto The Barrens,62.5,38.5
-			.' Click the little brown box outside the house on the ground|tip It's a small wooden chest to the right of the doorway to a small house.
+			.' Click the little brown box outside the house on the ground
+			.info It's a small wooden chest to the right of the doorway to a small house.
 			.get Stone Circle|q 3444/1
 		step //18
 			goto The Hinterlands,27.00,48.50
@@ -820,6 +833,7 @@ startlevel 50
 			..turnin Dark Iron Legacy##3801
 			..accept Dark Iron Legacy##3802
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Stratholme (55)",[[
 author danaton
 startlevel 55
@@ -929,32 +943,157 @@ startlevel 55
 			goto Eastern Plaguelands,27.1,12.8
 			.' Go To Instance!
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackrock Spire (57)",[[
 author danaton
 startlevel 57
 		step
-			.' First you need to complete quest chain on Sunken Temple!|tip Manually skip this step
+			.' First you need to complete quest chain on Sunken Temple!
+			.info Manually skip this step.
+		step
+			goto Burning Steppes,65.2,23.9
+			.talk Tinkee Steamboil##10267
+			..accept Broodling Essence##4726
+		step
+			goto Burning Steppes,90.4,55.9
+			.' Use your Draco-Incarcinatrix 900 on Black Broodlings and kill them|use Draco-Incarcinatrix 900##12284
+			.' Click the red crystals that float over their corpses.
+			.get 8 Broodling Essence|q 4726/1
+		step
+			goto Burning Steppes,65.2,23.9
+			.talk Tinkee Steamboil##10267
+			..turnin Broodling Essence##4726
+			..accept Felnok Steelspring##4808
 		step
 			goto Winterspring,61.60,38.50
 			.talk Felnok Steelspring##10468
-			..accept Tinkee Steamboil##4909
+			..turnin Felnok Steelspring##4808
+			..accept Chillwind Horns##4809
+		step
+			goto Winterspring,57.45,41
+			.from Chillwind Chimaera##7448
+			.get 8 Uncracked Chillwind Horn##12444|q 4809/1
+		step
+			goto Winterspring,61.63,38.61
+			.talk Felnok Steelspring##10468
+			..turnin Chillwind Horns##4809
+			..accept Return to Tinkee##4810
+		step
+			goto Burning Steppes,65.2,23.9
+			.talk Tinkee Steamboil##10267
+			..turnin Return to Tinkee##4810
+		step
+			goto Winterspring,61.63,38.61
+			.talk Felnok Steelspring##10468
+			..accept Tinkee Steamboil##4907
 		step
 			goto Winterspring,63.60,73.80
 			.talk Lorax##10918
-			..accept The Demon Forge##5127
+			..accept Lorax's Tale##5126
+			only if skill('Blacksmithing')>0
 		step
-			goto Stormwind,76.90,47.80
+			.goal Listen to Lorax's Tale|q 5126/1
+			only if skill('Blacksmithing')>0
+		step
+			goto Winterspring,63.60,73.80
+			.talk Lorax##10918
+			..turnin Lorax's Tale##5126
+			..accept The Demon Forge##5127
+			only if skill('Blacksmithing')>0
+		step
+			goto Stormwind City,76.90,47.80
 			.talk Count Remington Ridgewell##2285
 			..accept Mayara Brightwing##4766
+		step
+			goto Burning Steppes,84.8,69.1
+			.talk Mayara Brightwing##9565
+			..turnin Mayara Brightwing##4766
+			..accept Doomrigger's Clasp##4764
 		step
 			goto Burning Steppes,85.50,69.30
 			.talk Helendis Riverhorn##9562
 			..accept Put Her Down##4701
+		step
+			goto Burning Steppes,65.2,24
+			.talk Tinkee Steamboil##10267
+			..turnin Tinkee Steamboil##4907
+			..accept Egg Freezing##4734
+		step
+			goto Burning Steppes,65,23.8
+			.talk Ragged John##9563
+			..accept Mother's Milk##4866
+		step
+			goto Burning Steppes,65.9,21.9
+			.talk Kibler##10260
+			..accept Kibler's Exotic Pets##4729
+			..accept En-Ay-Es-Tee-Why##4862
+		step
+			goto Burning Steppes,32.85,25.3
+			.' Go To Instance!
+			.info Good luck!
+		step
+			.goal Test the Eggscilliscope Prototype|q 4734/1
+			.info Left Wing: First Step.
+		step
+			.collect Doomrigger's Clasp##12352|q 4764/1
+			.info Left Wing: Second Step.
+		step
+			.goal Soul Stained Pike|q 5127/1
+			.collect Unforged Rune Covered Breastplate##12806|q 5127/2
+			.info Left Wing: Third Step.
+		step
+			.talk Warosh##10799
+			..accept Urok Doomhowl##4867
+			.info Right Wing: First Step.
+		step
+			.collect Roughshod Pike##12533|q 4867 |future
+			.info Right Wing: Second Step.
+		step
+			.collect Omokk's Head##12534|q 4867 |future
+			.info Right Wing: Third Step.
+		step
+			.talk Bijou##10257
+			..accept Bijou's Belongings##5001
+			.info Right Wing: Four Step.
+		step
+			.collect Bijou's Belongings##12345|q 5001/1
+			.info Appears randomly.
+			.info Right Wing: Five Step.
+		step
+			.collect 15 Spire Spider Egg##12530|q 4862/1
+			.info Right Wing: Six Step.
+		step
+			.use Omokk's Head##12534
+			.from Urok Doomhowl##10584
+			.get Warosh's Mojo##12712|q 4867/1
+			.info Right Wing: Seven Step.
+		step
+			.kill Halycon##10220|q 4701/1
+			.goal Caged Worg Pup|q 4729/1
+			.info Right Wing: Eight Step.
+		step
+			.kill Overlord Wyrmthalak##9568|n
+			.collect General Drakkisath's Command##12780|q 5089 |future
+			..accept General Drakkisath's Command##5089|use General Drakkisath's Command##12780
+			.info Right Wing: Nine Step.
+		step
+			.talk Bijou##10257
+			..turnin Bijou's Belongings##5001
+			..accept Message to Maxwell##5002
+			.info Right Wing: Ten Step.
+		step
+			.talk Warosh##10799
+			..turnin Urok Doomhowl##4867
+			.info Right Wing: Eleven Step.
+		step
+			
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Scholomance (58)",[[
 	startlevel 58
 	step //1
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Hellfire Citadel: Hellfire Ramparts (59)",[[
 author danaton
 startlevel 59
@@ -1015,6 +1154,7 @@ startlevel 59
 			.' Go To Instance!
 			.info Good luck!
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Hellfire Citadel: The Blood Furnace (59)",[[
 author danaton
 startlevel 59
@@ -1031,6 +1171,7 @@ startlevel 59
 			.' Go To Instance!
 			.info Good luck!
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Hellfire Citadel: The Shattered Halls (67)",[[
 author danaton
 startlevel 67
@@ -1054,6 +1195,7 @@ startlevel 67
 			goto Hellfire Peninsula,48.0,51.9
 			.' Go To Instance!|tip Good luck!
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Heroic Instance Keys\\Hellfire Citadel (70)",[[
 author danaton
 startlevel 70
@@ -1065,6 +1207,7 @@ startlevel 70
 			.talk Logistics Officer Ulrike##17657
 			.buy 1##30622
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Heroic Instance Keys\\Auchindoun (70)",[[
 author danaton
 startlevel 70
@@ -1076,4 +1219,5 @@ startlevel 70
 			.talk Nakodu##21655
 			.buy 1##30633
 ]])
+
 ZygorGuidesViewer.AllianceInstalled=true

@@ -6,7 +6,28 @@ ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[
 author danaton
 description Coming Soon
 startlevel 60
-		step //redridge
+		step
+			goto Stormwind City,63.8,73.6
+			.talk Renato Gallina##1432
+			..accept Wine Shop Advert##332
+		step
+			goto Stormwind City,62.3,67.9
+			.talk Harlan Bagley##1427
+			..accept Harlan Needs a Resupply##333
+		step
+			goto Stormwind City,58.1,67.5
+			.talk Rema Schneider##1428
+			..turnin Harlan Needs a Resupply##333
+			..accept Package for Thurman##334
+		step
+			goto Stormwind City,60.3,76.8
+			.talk Suzetta Gallina##1431
+			..turnin Wine Shop Advert##332
+		step
+			goto Stormwind City,52.6,83.4
+			.talk Thurman Schneider##1429
+			..turnin Package for Thurman##334
+		step // Redridge
 			goto Stormwind City,55,54.2
 			.talk Brother Kristoff##1444
 			..accept Speaking of Fortitude##343
@@ -14,7 +35,7 @@ startlevel 60
 			goto Stormwind City,49.6,44.5
 			.talk Thomas##4982
 			..accept The Missing Diplomat(1)##1274
-		step //west plaguelands
+		step // West Plaguelands
 			goto Stormwind City,80,38.5
 			.talk King Varian Wrynn##29611
 			..accept The First and the Last##6182
@@ -23,12 +44,12 @@ startlevel 60
 			.talk Bishop DeLavey##4960
 			..turnin The Missing Diplomat(1)##1274
 			..accept The Missing Diplomat(2)##1241
-		step //redridge
+		step // Redridge
 			goto Stormwind City,77.1,30.2
 			.talk Milton Sheaf##1440
 			..turnin Speaking of Fortitude##343
 			..accept Brother Paxton##344
-		step //west plaguelands
+		step // West Plaguelands
 			goto Stormwind City,78.3,70.7
 			.talk Master Mathias Shaw##332
 			..turnin The First and the Last##6182
@@ -44,16 +65,16 @@ startlevel 60
 			.talk Elling Trias##482
 			..turnin The Missing Diplomat(3)##1242
 			..accept The Missing Diplomat(4)##1243
-		step //redridge
+		step // Redridge
 			goto Elwynn Forest,49.6,40.4
 			.talk Brother Paxton##951
 			..turnin Brother Paxton##344
 			..accept Ink Supplies##345
-		step // blasted lands
+		step // Blasted Lands
 			goto Stormwind City,51.8,74.3
 			.talk Mazen Mac'Nadir##338
 			..accept Mazen's Behest##1363
-		step // blasted lands
+		step // Blasted Lands
 			goto Stormwind City,51.4,73.8
 			.talk Acolyte Dellis##5386
 			..turnin Mazen's Behest##1363
@@ -146,6 +167,728 @@ startlevel 60
 			goto Dustwallow Marsh,66.3,49
 			.talk Lady Jaina Proudmoore##4968
 			..accept The Missing Diplomat(17)##1267
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[10] Elwynn Forest",[[
+author danaton
+description This guide contain quest-chain (45 quests) for Elwynn Forest location.
+startlevel 10
+		step
+			goto Elwynn Forest,48.1,43.6
+			.talk Deputy Willem##823
+			..accept A Threat Within##783
+		step
+			goto Elwynn Forest,48.9,41.6
+			.talk Marshal McBride##197
+			..turnin A Threat Within##783
+			..accept Kobold Camp Cleanup##7
+		step
+			goto Elwynn Forest,48.1,43.6
+			.talk Deputy Willem##823
+			..accept Eagan Peltskinner##5261
+		step
+			goto Elwynn Forest,48.9,40.2
+			.talk Eagan Peltskinner##196
+			..turnin Eagan Peltskinner##5261
+			..accept Wolves Across the Border##33
+		step
+			goto Elwynn Forest,47.4,39.7
+			.from Diseased Young Wolf##299+
+			.get 8 Diseased Wolf Pelt|q 33/1
+		step
+			goto Elwynn Forest,47.9,37.1
+			.kill 8 Kobold Vermin|q 7/1
+		step
+			goto Elwynn Forest,48.9,40.2
+			.talk Eagan Peltskinner##196
+			..turnin Wolves Across the Border##33
+		step
+			goto Elwynn Forest,48.9,41.6
+			.talk Marshal McBride##197
+			..turnin Kobold Camp Cleanup##7
+			..accept Investigate Echo Ridge##15
+		step
+			goto Elwynn Forest,48.1,43.6
+			.talk Deputy Willem##823
+			..accept Brotherhood of Thieves##18
+		step
+			goto Elwynn Forest,51.3,37.0
+			.kill 10 Kobold Workers|q 15/1
+		step
+			goto Elwynn Forest,54.3,41
+			.from Defias Thug##38+
+			.get 12 Red Burlap Bandana|q 18/1
+		step
+			goto Elwynn Forest,48.1,43.6
+			.talk Deputy Willem##823
+			..turnin Brotherhood of Thieves##18
+			..accept Milly Osworth##3903
+			..accept Bounty on Garrick Padfoot##6
+		step
+			goto Elwynn Forest,48.9,41.6
+			.talk Marshal McBride##197
+			..turnin Investigate Echo Ridge##15
+			..accept Skirmish at Echo Ridge##21
+		step
+			goto Elwynn Forest,50.7,39.3
+			.talk Milly Osworth##9296
+			..turnin Milly Osworth##3903
+			..accept Milly's Harvest##3904
+		step
+			goto Elwynn Forest,53.6,47.3
+			.' Click Milly's Harvest barrels around the vineyard
+			.info Milly's Harvest look like barrels of grapes.
+			.get 8 Milly's Harvest|q 3904/1
+		step
+			goto Elwynn Forest,57.5,48.3
+			.from Garrick Padfoot##103
+			.get Garrick's Head|q 6/1
+		step
+			goto Elwynn Forest,50.7,39.3
+			.talk Milly Osworth##9296
+			..turnin Milly's Harvest##3904
+			..accept Grape Manifest##3905
+		step
+			goto Elwynn Forest,48.1,43.6
+			.talk Deputy Willem##823
+			..turnin Bounty on Garrick Padfoot##6
+		step
+			goto Elwynn Forest,49.5,41.6
+			.talk Brother Neals##952
+			..turnin Grape Manifest##3905
+		step
+			goto Elwynn Forest,47.7,32
+			.kill 12 Kobold Laborer##80|q 21/1
+		step
+			goto Elwynn Forest,48.9,41.6
+			.talk Marshal McBride##197
+			..turnin Skirmish at Echo Ridge##21
+			..accept Report to Goldshire##54
+		step
+			goto Elwynn Forest,45.6,47.7
+			.talk Falkhaan Isenstrider##6774
+			..accept Rest and Relaxation##2158
+		step
+			goto Elwynn Forest,43.8,65.8
+			.talk Innkeeper Farley##295
+			..turnin Rest and Relaxation##2158
+		step
+			goto Elwynn Forest,43.3,65.7
+			.talk William Pestle##253
+			..accept Kobold Candles##60
+		step
+			goto Elwynn Forest,42.1,65.9
+			.talk Marshal Dughan##240
+			..turnin Report to Goldshire##54
+			..accept The Fargodeep Mine##62
+		step
+			goto Elwynn Forest,42.1,67.3
+			.talk Remy "Two Times"##241
+			..accept Gold Dust Exchange##47
+		step
+			goto Elwynn Forest,43.2,89.6
+			.talk Maybell Maclure##251
+			..accept Young Lovers##106
+		step
+			.' Go To Low Entrance Mine|at 38.1,81.5
+			.' Scout through the Fargodeep Mine|at 40.75,81.70|q 62/1
+		step
+			goto Elwynn Forest,38.2,83.2
+			.from Kobold Miner##40, Kobold Tunneler##475, Kobold Geomancer##476
+			.get 8 Large Candle##772|q 60/1
+			.get 10 Gold Dust##773|q 47/1
+		step
+			goto Elwynn Forest,34.7,84.5
+			.talk Ma Stonefield##244
+			..accept Princess Must Die!##88
+		step
+			goto Elwynn Forest,34.5,84.3
+			.talk "Auntie" Bernice Stonefield##246
+			..accept Lost Necklace##85
+		step
+			goto Elwynn Forest,29.8,86.0
+			.talk Tommy Joe Stonefield##252
+			..turnin Young Lovers##106
+			..accept Speak with Gramma##111
+		step
+			goto Elwynn Forest,34.9,83.9
+			.talk Gramma Stonefield##248
+			..turnin Speak with Gramma##111
+			..accept Note to William##107
+		step
+			goto Elwynn Forest,43.1,85.7
+			.talk Billy Maclure##247
+			..turnin Lost Necklace##85
+			..accept Pie for Billy##86
+		step
+			goto Elwynn Forest,41.8,86.9
+			.from Stonetusk Boar##113
+			.get 4 Chunk of Boar Meat##769|q 86/1
+		step
+			goto Elwynn Forest,34.5,84.3
+			.talk "Auntie" Bernice Stonefield##246
+			..turnin Pie for Billy##86
+			..accept Back to Billy##84
+		step
+			goto Elwynn Forest,43.1,85.7
+			.talk Billy Maclure##247
+			..turnin Back to Billy##84
+			..accept Goldtooth##87
+		step
+			.' Go To High Entrance Mine|at 39.09,82.5
+			.' Go To Left Tunnel|at 39.79,79.25
+			.from Goldtooth##327
+			.get Bernice's Necklace##981|q 87/1
+		step
+			goto Elwynn Forest,34.5,84.3
+			.talk "Auntie" Bernice Stonefield##246
+			..turnin Goldtooth##87
+		step
+			goto Elwynn Forest,42.1,67.3
+			.talk Remy "Two Times"##241
+			..turnin Gold Dust Exchange##47
+			..accept A Fishy Peril##40
+		step
+			goto Elwynn Forest,42.1,65.9
+			.talk Marshal Dughan##240
+			..turnin A Fishy Peril##40
+			..accept Further Concerns##35
+			..turnin The Fargodeep Mine##62
+			..accept The Jasperlode Mine##76
+		step
+			goto Elwynn Forest,43.3,65.7
+			.talk William Pestle##253
+			..turnin Kobold Candles##60
+			..accept Shipment to Stormwind##61
+			..turnin Note to William##107
+			..accept Collecting Kelp##112
+		step
+			goto Elwynn Forest,52.94,64.72
+			.from Murloc##285, Murloc Streamrunner##735
+			.get 4 Crystal Kelp Frond##1256|q 112/1
+		step
+			goto Elwynn Forest,61.8,54.2
+			.' Scout through the Jasperlode Mine|at 60.3,49.6|q 76/1
+		step
+			goto Elwynn Forest,69.6,79.7
+			.from Princess##330+
+			.get Brass Collar##1006|q 88/1
+		step
+			goto Elwynn Forest,42.1,65.9
+			.talk Marshal Dughan##240
+			..turnin The Jasperlode Mine##76
+			..accept Westbrook Garrison Needs Help!##239
+		step
+			goto Elwynn Forest,43.3,65.7
+			.talk William Pestle##253
+			..turnin Collecting Kelp##112
+			..accept The Escape##114
+		step
+			goto Elwynn Forest,34.7,84.5
+			.talk Ma Stonefield##244
+			..turnin Princess Must Die!##88
+		step
+			goto Elwynn Forest,24.56,78.22
+			.' Click Wanted Poster
+			..accept Wanted: "Hogger"##176
+		step
+			goto Elwynn Forest,24.2,74.4
+			.talk Deputy Rainer##963
+			..turnin Westbrook Garrison Needs Help!##239
+			..accept Riverpaw Gnoll Bounty##11
+		step
+			goto Elwynn Forest,26.4,93.6
+			.from Hogger##448+
+			.get 1 Huge Gnoll Claw##1931|q 176/1
+		step
+			goto Elwynn Forest,26.5,86.6
+			.from Riverpaw Runt##97, Riverpaw Outrunner##478
+			.get 8 Painted Gnoll Armband##782|q 11/1
+			.collect Gold Pickup Schedule##1307|q 123 |future |sticky
+			..accept The Collector##123
+		step
+			goto Elwynn Forest,24.2,74.4
+			.talk Deputy Rainer##963
+			..turnin Riverpaw Gnoll Bounty##11
+		step
+			goto Elwynn Forest,42.1,65.9
+			.talk Marshal Dughan##240
+			..turnin The Collector##123
+			..accept Manhunt##147
+			..turnin Wanted: "Hogger"##176
+		step
+			goto Elwynn Forest,43.2,89.6
+			.talk Maybell Maclure##251
+			..turnin The Escape##114
+		step
+			goto Elwynn Forest,74,72.2
+			.talk Guard Thomas##261
+			..turnin Further Concerns##35
+			..accept Find the Lost Guards##37
+			..accept Bounty on Murlocs##46
+			..accept Protect the Frontier##52
+		step
+			goto Elwynn Forest,72.7,60.3
+			.talk A half-eaten body|n
+			..turnin Find the Lost Guards##37
+			..accept Discover Rolf's Fate##45
+		step
+			goto Elwynn Forest,79.8,55.5
+			.talk Rolf's corpse|n
+			..turnin Discover Rolf's Fate##45
+			..accept Report to Thomas##71
+		step
+			goto Elwynn Forest,79.1,55.7
+			.from Murloc Forager##46, Murloc Lurker##732
+			.get 8 Torn Murloc Fin##780|q 46/1
+		step
+			goto Elwynn Forest,81.4,66.1
+			.talk Supervisor Raelen##10616
+			..accept A Bundle of Trouble##5545
+		step
+			goto Elwynn Forest,79.5,68.8
+			.talk Sara Timberlain##278
+			..accept Red Linen Goods##83
+		step
+			goto Elwynn Forest,81.3,60.6
+			.' Click the small stacks of wood at the base of trees
+			.info They look like little stacks of 3 firewood at the base of trees in this area.
+			.get 8 Bundle of Wood|q 5545/1
+		step
+			goto Elwynn Forest,82.6,59.1
+			.kill 8 Prowler|q 52/1
+			.kill 5 Young Forest Bear|q 52/2
+			.' You can find more around|at 80,77.8
+		step
+			goto Elwynn Forest,71.1,80.6
+			.from Morgan the Collector##473+
+			.get The Collector's Ring##2239|q 147/1
+		step
+			goto Elwynn Forest,70.6,76.3
+			.from Defias Bandit##116+
+			.get 6 Red Linen Bandana|q 83/1
+			.collect Westfall Deed##1972|q 184 |future |sticky
+			.info Try to drop or manually skip.
+			..accept Furlbrow's Deed##184
+			.' Mobs POS 2|at 74.7,51.6
+		step
+			goto Elwynn Forest,74,72.2
+			.talk Guard Thomas##261
+			..turnin Bounty on Murlocs##46
+			..turnin Report to Thomas##71
+			..turnin Protect the Frontier##52
+			..accept Deliver Thomas' Report##39
+		step
+			goto Elwynn Forest,79.5,68.8
+			.talk Sara Timberlain##278
+			..turnin Red Linen Goods##83
+		step
+			goto Elwynn Forest,81.4,66.1
+			.talk Supervisor Raelen##10616
+			..turnin A Bundle of Trouble##5545
+		step
+			goto Elwynn Forest,42.1,65.9
+			.talk Marshal Dughan##240
+			..turnin Deliver Thomas' Report##39
+			..accept Cloth and Leather Armor##59
+			..turnin Manhunt##147
+		step
+			goto Elwynn Forest,41.7,65.5
+			.talk Smith Argus##514
+			..accept Elmore's Task##1097
+		step
+			goto Stormwind City,63.2,74.4
+			.talk Morgan Pestle##279
+			..turnin Shipment to Stormwind##61
+		step
+			goto Stormwind City,59.7,33.8
+			.talk Grimand Elmore##1416
+			..turnin Elmore's Task##1097
+		step
+			goto Elwynn Forest,42.1,65.9
+			.talk Marshal Dughan##240
+			..turnin Wanted: "Hogger"##176
+		step
+			goto Elwynn Forest,79.5,68.8
+			.talk Sara Timberlain##278
+			..turnin Cloth and Leather Armor##59
+		step
+			goto Westfall,60,19.4
+			.talk Farmer Furlbrow##237
+			..turnin Furlbrow's Deed##184
+		step
+			.' Congratulations! +45 quests for achievement "Loremaster of Eastern Kingdoms".
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[25] Redridge Mountains",[[
+author danaton
+description This guide contain quest-chain (40 quests) for Redridge Mountains location.
+startlevel 25
+		step
+			goto Stormwind City,55,54.2
+			.talk Brother Kristoff##1444
+			..accept Speaking of Fortitude##343
+		step
+			goto Stormwind City,77.1,30.2
+			.talk Milton Sheaf##1440
+			..turnin Speaking of Fortitude##343
+			..accept Brother Paxton##344
+		step
+			goto Elwynn Forest,49.6,40.4
+			.talk Brother Paxton##951
+			..turnin Brother Paxton##344
+			..accept Ink Supplies##345
+		step //
+			goto Elwynn Forest,65.2,69.7
+			.talk Theocritus##313
+			..accept A Watchful Eye##94
+		step //
+			goto Redridge Mountains,15.3,71.5
+			.talk Guard Parker##464
+			..accept Encroaching Gnolls##244
+		step //
+			goto Redridge Mountains,30.7,60
+			.talk Deputy Feldon##1070
+			..turnin Encroaching Gnolls##244
+			..accept Assessing the Threat##246
+		step //
+			goto Redridge Mountains,31.5,57.9
+			.talk Guard Howe##903
+			..accept Blackrock Bounty##128
+		step //
+			goto Redridge Mountains,33.5,49
+			.talk Marshal Marris##382
+			..accept Blackrock Menace##20
+		step //
+			goto Redridge Mountains,32.1,48.6
+			.talk Foreman Oslow##341
+			..turnin Ink Supplies##345
+			..accept The Lost Tools##125
+			..accept Rethban Ore##347
+		step //
+			goto Redridge Mountains,31,47.3
+			.talk Verner Osgood##415
+			..accept The Price of Shoes##118
+		step //
+			goto Redridge Mountains,30,44.4
+			.talk Magistrate Solomon##344
+			..accept Messenger to Stormwind (1)##120
+		step //
+			goto Redridge Mountains,27.7,47.4
+			.talk Dockmaster Baren##381
+			..accept Selling Fish##127
+			..accept Murloc Poachers##150
+		step //
+			goto Redridge Mountains,26.6,44.3
+			.talk Darcy##379
+			..accept A Free Lunch##129
+		step //
+			goto Redridge Mountains,26.5,44
+			.talk Barkeep Daniels##346
+			..accept Dry Times##116
+		step //
+			goto Redridge Mountains,22.7,43.8
+			.talk Chef Breanna##343
+			..accept Redridge Goulash##92
+		step //
+			goto Redridge Mountains,21.9,46.3
+			.talk Martie Jainrose##342
+			..accept An Unwelcome Guest##34
+		step //
+			goto Redridge Mountains,16.4,49.2
+			.from Bellygrub##345
+			.get Bellygrub's Tusk##3631|q 34/1
+		step //
+			goto Redridge Mountains,16.81,53.64
+			.from Great Goretusk##547
+			.get 5 Great Goretusk Snout##2296|q 92/1
+			.' You can find more around (1)|at 18.27,72.11
+			.info Don't sell this item!
+		step //
+			goto Redridge Mountains,15.3,71.5
+			.talk Guard Parker##464
+			..turnin A Free Lunch##129
+			..accept Visit the Herbalist##130
+		step //
+			goto Redridge Mountains,10.85,77.32
+			.from Tarantula##442
+			.get 5 Crisp Spider Meat##1081|q 92/3
+			.' You can find more around (1)|at 11.82,68.67
+			.' You can find more around (2)|at 18.26,73.15
+			.' You can find more around (3)|at 25.12,76.83
+			.info Don't sell this item!
+		step //
+			goto Redridge Mountains,15.92,63.47
+			.kill 10 Redridge Mongrel|q 246/1
+			.kill 6 Redridge Poacher|q 246/2
+			.' You can find more around (1)|at 26.8,80.2
+			.' You can find more around (2)|at 43.17,71.24
+			.' You can find more around (3)|at 53.93,74.93
+		step //
+			goto Redridge Mountains,60.77,75.60
+			.from Dire Condor##428
+			.get 5 Tough Condor Meat##1080|q 92/2
+			.' You can find more around (1)|at 48.43,76.16
+			.' You can find more around (2)|at 67.6,75.6
+			.info Don't sell this item!
+		step //
+			goto Redridge Mountains,30.7,60
+			.talk Deputy Feldon##1070
+			..turnin Assessing the Threat##246
+		step //
+			goto Redridge Mountains,22.7,43.8
+			.talk Chef Breanna##343
+			..turnin Redridge Goulash##92
+		step //
+			goto Redridge Mountains,21.9,46.3
+			.talk Martie Jainrose##342
+			..turnin An Unwelcome Guest##34
+			..turnin Visit the Herbalist##130
+			..accept Delivering Daffodils##131
+		step //
+			goto Redridge Mountains,26.6,44.4
+			.talk Darcy##379
+			..turnin Delivering Daffodils##131
+		step //
+			goto Redridge Mountains,29.3,53.6
+			.talk Shawn##8965
+			..accept Hilary's Necklace##3741
+		step //
+			goto Redridge Mountains,29.1,55.1
+			.' Click the Glinting Mud
+			.info The Glinting Mud spawns in random places around this area, so some searching may be necessary.
+			.get Hilary's Necklace|q 3741/1
+		step //
+			goto Redridge Mountains,41.5,54.6
+			.' Click the Sunken Chest
+			.get Oslow's Toolbox|q 125/1
+		step //
+			goto Redridge Mountains,48.2,73.3
+			.from Murloc Flesheater##422, Murloc Shorestriker##1083, Murloc Minor Tidecaller##548
+			.get 10 Spotted Sunfish|q 127/1
+			.collect 8 Murloc Fin##1468|q 150/1
+			.' You can find more around (1)|at 40.4,46.16
+			.' You can find more around (2)|at 56.9,50.9
+			.' You can find more around (3)|at 57.7,61.5
+			.info Don't sell this item!
+		step //
+			goto Redridge Mountains,32.1,48.6
+			.talk Foreman Oslow##341
+			..turnin The Lost Tools##125
+			..accept The Everstill Bridge##89
+		step //
+			goto Redridge Mountains,29.3,53.6
+			.talk Hilary##8962
+			..turnin Hilary's Necklace##3741
+		step //
+			goto Redridge Mountains,27.7,47.4
+			.talk Dockmaster Baren##381
+			..turnin Selling Fish##127
+			..turnin Murloc Poachers##150
+		step // move
+			goto Stormwind,60,76.9
+			.talk Roberto Pupellyverbos##277
+			.buy Cask of Merlot##1941|q 116/2
+		step // move
+			goto Stormwind,69.2,82.7
+			.talk General Marcus Jonathan##466
+			..turnin Messenger to Stormwind (1)##120
+			..accept Messenger to Stormwind (2)##121
+		step // move
+			goto Elwynn Forest,44,65.7
+			.talk Barkeep Dobbins##465
+			.buy Skin of Sweet Rum##1939|q 116/4
+		step // move
+			goto Elwynn Forest,41.7,65.5
+			.talk Smith Argus##514
+			..turnin The Price of Shoes##118
+			..accept Return to Verner##119
+		step //
+			goto Redridge Mountains,31,47.3
+			.talk Verner Osgood##415
+			..turnin Return to Verner##119
+			..accept Underbelly Scales##122
+			..accept A Baying of Gnolls##124
+		step //
+			goto Redridge Mountains,30,44.4
+			.talk Magistrate Solomon##344
+			..turnin Messenger to Stormwind (2)##121
+			..accept Messenger to Westfall (1)##143
+		step //
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin Messenger to Westfall (1)##143
+			..accept Messenger to Westfall (2)##144
+		step //
+			goto Westfall,44.6,80.3
+			.talk Grimbooze Thunderbrew##239
+			..accept Thunderbrew Lager##117
+		step //
+			goto Westfall,37.1,52.3
+			.from Harvest Watcher##114, Harvest Reaper##115
+			.get 5 Hops##1274|q 117/1
+			.' You can find more around (1)|at 61.6,62
+			.info Don't sell this item!
+		step //
+			goto Westfall,44.6,80.3
+			.talk Grimbooze Thunderbrew##239
+			..turnin Thunderbrew Lager##117
+		step //
+			goto Redridge Mountains,30,44.5
+			.talk Magistrate Solomon##344
+			..turnin Messenger to Westfall (2)##144
+			..accept Messenger to Darkshire (1)##145
+		step //
+			goto Duskwood,71.9,46.4
+			.talk Lord Ello Ebonlocke##263
+			..turnin Messenger to Darkshire (1)##145
+			..accept Messenger to Darkshire (2)##146
+		step //
+			goto Duskwood,73.7,44
+			.talk Barkeep Hann##274
+			.buy Bottle of Moonshine##1942|q 116/3
+		step //
+			goto Redridge Mountains,30,44.5
+			.talk Magistrate Solomon##344
+			..turnin Messenger to Darkshire (2)##146
+		step //
+			goto Redridge Mountains,26.5,44
+			.talk Barkeep Daniels##346
+			..turnin Dry Times##116
+		step //
+			goto Redridge Mountains,34.2,67.4
+			.from Black Dragon Whelp##441
+			.get 6 Underbelly Whelp Scale|q 122/1
+			.' You can find more around (1)|at 44.35,39.58
+			.' You can find more around (2)|at 47.73,33.36
+		step //
+			goto Redridge Mountains,29,37.4
+			.kill 10 Redridge Brute|q 124/1
+			.kill 8 Redridge Mystic|q 124/2
+			.from Redridge Brute##426, Redridge Mystic##430
+			.get 5 Iron Pike|q 89/1
+			.get 5 Iron Rivet|q 89/2
+		step //
+			goto Redridge Mountains,32.1,48.6
+			.talk Foreman Oslow##341
+			..turnin The Everstill Bridge##89
+		step //
+			goto Redridge Mountains,31,47.3
+			.talk Verner Osgood##415
+			..turnin Underbelly Scales##122
+			..turnin A Baying of Gnolls##124
+			..accept Howling in the Hills##126
+		step //
+			goto Redridge Mountains,20.7,28.3
+			.from Redridge Drudger##580
+			.get 5 Rethban Ore##2798|q 347/1
+			.' Enter the cave|at 20.3,35.1
+		step //
+			goto Redridge Mountains,27.4,21.8
+			.from Yowler##518
+			.get Yowler's Paw|q 126/1
+		step //
+			goto Redridge Mountains,32.9,6.8
+			.kill 15 Blackrock Champion|q 128/1
+			.collect 10 Battleworn Axe##3014|q 20/1
+		step //
+			goto Redridge Mountains,28.4,12.6
+			.talk Corporal Keeshan##349
+			..accept Missing In Action##219
+			.goal Escort Corporal Keeshan back to Redridge|q 219/1
+		step //
+			goto Redridge Mountains,33.5,49
+			.talk Marshal Marris##382
+			..turnin Blackrock Menace##20
+			..turnin Missing In Action##219
+			..accept Tharil'zun##19
+			..accept Shadow Magic##115
+		step //
+			goto Redridge Mountains,31,47.3
+			.talk Verner Osgood##415
+			..turnin Howling in the Hills##126
+		step //
+			goto Redridge Mountains,30,44.4
+			.talk Bailiff Conacher##900
+			..accept Solomon's Law##91
+		step //
+			goto Redridge Mountains,29.6,46.2
+			.info Interact with gameobject: Wanted: Gath'Ilzogg
+			..accept Wanted: Gath'Ilzogg##169
+		step //
+			goto Redridge Mountains,26.8,46.4
+			.info nteract with gameobject: Wanted: Lieutenant Fangore
+			..accept Wanted: Lieutenant Fangore##180
+		step //
+			goto Redridge Mountains,31.5,57.9
+			.talk Guard Howe##903
+			..turnin Blackrock Bounty##128
+		step //
+			goto Redridge Mountains,69.3,59.9
+			.from Tharil'zun##486
+			.get Tharil'zun's Head##1260|q 19/1
+		step //
+			goto Redridge Mountains,69.6,55.8
+			.from Gath'Ilzogg##334
+			.get Head of Gath'Ilzogg##3633|q 169/1
+		step //
+			goto Redridge Mountains,68.3,56.3
+			.from Blackrock Shadowcaster##436
+			.get 3 Midnight Orb##1261|q 115/1
+		step //
+			goto Redridge Mountains,84.5,46.8
+			.info Interact with gameobject: Old Lion Statue.
+			..turnin A Watchful Eye##94
+			..accept Looking Further##248
+		step //
+			goto Redridge Mountains,80.2,37.1
+			.from Lieutenant Fangore##703
+			.get Fangore's Paw##3632|q 180/1
+			.from Shadowhide Slayer##431, Shadowhide Brute##432, Shadowhide Warrior##568
+			.get 10 Shadowhide Pendant##1075|q 91/1
+		step //
+			goto Redridge Mountains,63.2,49.8
+			.info At the very top of the tower.
+			..turnin Looking Further##248
+		step //
+			goto Redridge Mountains,84.5,46.8
+			.info Interact with Old Lion Statue.
+			..accept Morganth##249
+		step //
+			goto Redridge Mountains,80.1,49.5
+			.from Morganth##397
+			.info At the very top of the tower.
+			.get Pendant of Shadow##3617|q 249/1
+		step //
+			goto Redridge Mountains,33.5,49
+			.talk Marshal Marris##382
+			..turnin Tharil'zun##19
+			..turnin Shadow Magic##115
+		step //
+			goto Redridge Mountains,30,44.4
+			.talk Bailiff Conacher##900
+			..turnin Solomon's Law##91
+		step //
+			goto Redridge Mountains,30,44.4
+			.talk Magistrate Solomon##344
+			..turnin Wanted: Gath'Ilzogg##169
+			..turnin Wanted: Lieutenant Fangore##180
+		step //
+			goto Elwynn Forest,65.2,69.7
+			.talk Theocritus##313
+			..turnin Morganth##249
+		step //
+			goto Elwynn Forest,49.6,40.4
+			.talk Brother Paxton##951
+			..turnin Rethban Ore##347
+			..accept Return to Kristoff##346
+		step //
+			goto Stormwind City,55,54.2
+			.talk Brother Kristoff##1444
+			..turnin Return to Kristoff##346
+		step //
+			.' Congratulations! +40 quests for achievement "Loremaster of Eastern Kingdoms".
+			.' Next, I recommend running Quest-Instance Guides: The Stockade (25).
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[30] Duskwood",[[
@@ -923,7 +1666,7 @@ startlevel 45
 		step
 			goto Stranglethorn Vale,50,24
 			.from Bhag'thera##728
-			.get Fang of Bhag'thera|q 193/1
+			.get Fang of Bhag'thera##3876|q 193/1
 			.' Bhag'thera can also be found (1)|at 47.2,28.6
 			.' Bhag'thera can also be found (2)|at 48.8,20.1
 		step
@@ -1097,8 +1840,8 @@ startlevel 45
 			goto Stranglethorn Vale,32.8,76.2
 			.kill 10 Bloodsail Swashbuckler|q 604/1
 			.' Kill Bloodsail pirates along the beach around this area
-			.get Dizzy's Eye|q 576/1
-			.get 15 Snuff|q 587/1
+			.get Dizzy's Eye##3897|q 576/1
+			.get 15 Snuff##3910|q 587/1
 		step
 			goto Stranglethorn Vale,28.6,75.9
 			.talk Dizzy One-Eye##2493
@@ -1316,23 +2059,163 @@ startlevel 45
 			.' Congratulations! +69 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[none] Swamp of Sorrows",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[45] Swamp of Sorrows",[[
 author danaton
-description This guide contain quest-chain (?? quests) for Swamp of Sorrows location.
-startlevel 60
+description This guide contain quest-chain (13 quests) for Swamp of Sorrows location.
+startlevel 45
 		step
-			.' First you need to complete the Duskwood quest chain.
-			.info Skip this step manually.
+			goto Stormwind,69.50,40.40
+			.talk Brohann Caskbelly ##5384
+			..accept In Search of The Temple##1448
+			.info Dungeon: The Sunken Temple Quest Chain.
 		step
+			goto Stormwind City,51.8,74.3
+			.talk Mazen Mac'Nadir##338
+			..accept Mazen's Behest (1)##1363
+		step
+			goto Stormwind City,51.4,73.8
+			.talk Acolyte Dellis##5386
+			..turnin Mazen's Behest (1)##1363
+			..accept Mazen's Behest (2)##1364
+		step
+			goto Swamp of Sorrows,25.9,32.4
+			.talk Holaaru##18221
+			..accept Pool of Tears##9610
+		step
+			goto Swamp of Sorrows,25.8,31.8
+			.talk Anchorite Avuun##17127
+			..accept Help Watcher Biggs##9609
+			..accept Mercy for the Cursed##9448
+		step
+			goto Swamp of Sorrows,26,31.4
+			.talk Magtoor##1776
+			..accept Draenethyst Crystals##1389
+		step
+			goto Swamp of Sorrows,13,35.3
+			.from Swampwalker##764, Swampwalker Elder##765, Tangled Horror##766
+			.get Khadgar's Essays on Dimensional Convergence##6065|q 1364/1
+		step
+			goto Swamp of Sorrows,26.7,59.8
+			.talk Watcher Biggs##5476
+			..turnin Help Watcher Biggs##9609
+			..accept Encroaching Wildlife##1396
+		step
+			goto Swamp of Sorrows,30.4,38.9
+			.kill 8 Young Sawtooth Crocolisk##1084|q 1396/1
+			.' You can find more around (1)|at 25.9,52.2
+			.' You can find more around (2)|at 24.6,39.2
+			.' You can find more around (3)|at 38.6,35.3
+			.' You can find more around (4)|at 37.6,51.2
+		step
+			goto Swamp of Sorrows,24.4,61.5
+			.kill 10 Sorrow Spinner##858|q 1396/2
+			.' You can find more around (1)|at 17.6,53.4
+			.' You can find more around (2)|at 26.4,45.9
+			.' You can find more around (3)|at 22.5,37.7
+			.' You can find more around (4)|at 39.5,30.8
+			.' You can find more around (5)|at 31.6,50.5
+		step
+			goto Swamp of Sorrows,39.2,39.3
+			.kill 10 Swamp Jaguar##767|q 1396/2
+			.' You can find more around (1)|at 25.3,41.3
+			.' You can find more around (2)|at 40.4,45.3
+			.' You can find more around (3)|at 32,50
+			.' You can find more around (4)|at 23.5,60.1
+		step
+			goto Swamp of Sorrows,26.7,59.8
+			.talk Watcher Biggs##5476
+			..turnin Encroaching Wildlife##1396
+			..accept The Lost Caravan##1421
+		step
+			goto Swamp of Sorrows,70.00,53.20
+			.goal Search for the Temple of Atal'Hakkar|q 1448/1
+			.info Dungeon: The Sunken Temple Quest Chain.
+		step
+			goto Swamp of Sorrows,70.3,50.7
+			.collect 5 Atal'ai Artifact##6175|q 9610/1
+			.info All around at the bottom of the lake.
+		step
+			goto Swamp of Sorrows,56.9,24.7
+			.info Open the Scattered Crate.
+			.collect Lost Supplies##6172|q 1423 |future
+			.' You can find more around (1)|at 62.3,22.5
+			.' You can find more around (2)|at 64.1,23.4
+			.' You can find more around (3)|at 45.8,35.6
+			.' You can find more around (4)|at 43.3,37.1
+		step
+			.use Lost Supplies##6172
+			..accept The Lost Supplies##1423
+		step
+			goto Swamp of Sorrows,62.1,22.3
+			.collect 6 Draenethyst Crystal##6071|q 1389/1
+			.kill 3 Cursed Lost One##17115|q 9448/1
+		step
+			goto Swamp of Sorrows,64.5,18.3
+			.collect Wizards' Reagents##6170|q 1421/1
+		step
+			goto Swamp of Sorrows,65.5,18.2
+			.talk Galen Goodward##5391
+			..accept Galen's Escape##1393
+		step
+			goto Swamp of Sorrows,51.75,29.55
+			.goal Escort Galen out of the Fallow Sanctuary|q 1393/1
+		step
+			goto Swamp of Sorrows,47.8,39.8
+			.info Interact with gameobject: Galen's Strongbox
+			..turnin Galen's Escape##1393
+		step
+			goto Swamp of Sorrows,26.7,59.8
+			.talk Watcher Biggs##5476
+			..turnin The Lost Caravan##1421
+			..accept Driftwood##1398
+		step
+			goto Swamp of Sorrows,25.9,32.4
+			.talk Holaaru##18221
+			..turnin Pool of Tears##9610
+		step
+			goto Swamp of Sorrows,25.8,31.8
+			.talk Anchorite Avuun##17127
+			..turnin Mercy for the Cursed##9448
+		step
+			goto Swamp of Sorrows,26,31.4
+			.talk Magtoor##1776
+			..turnin Draenethyst Crystals##1389
+		step
+			goto Swamp of Sorrows,83.1,12.7
+			.collect 8 Sundried Driftwood##6146|q 1398/1
+			.' You can find more around (1)|at 89.3,22.4
+			.' You can find more around (2)|at 92.9,36.3
+			.' You can find more around (3)|at 93.7,54.8
+			.' You can find more around (4)|at 92,67.1
+			.' You can find more around (5)|at 87.8,79.1
+			.' You can find more around (6)|at 83.2,89.6
+		step
+			goto Swamp of Sorrows,26.7,59.8
+			.talk Watcher Biggs##5476
+			..turnin Driftwood##1398
+			..accept Deliver the Shipment##1425
+		step
+			goto Blasted Lands,67.6,19.2
+			.talk Watcher Mahar Ba##5385
+			..turnin Mazen's Behest (2)##1364
+		step
+			goto Blasted Lands,66.5,21.4
+			.talk Quartermaster Lungertz##5393
+			..turnin The Lost Supplies##1423
+			..turnin Deliver the Shipment##1425
+		step
+			goto Stormwind,69.50,40.40
+			.talk Brohann Caskbelly ##5384
+			..turnin In Search of The Temple##1448
+			.info Dungeon: The Sunken Temple Quest Chain.
+		step
+			.' Congratulations! +13 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[none] Blasted Lands",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[60] Blasted Lands",[[
 author danaton
-description This guide contain quest-chain (?? quests) for Blasted Lands location.
+description This guide contain quest-chain (16 quests) for Blasted Lands location.
 startlevel 60
-		step
-			.' First you need to complete the Duskwood quest chain.
-			.info Skip this step manually.
 		step
 			goto Stormwind City,51.8,74.3
 			.talk Mazen Mac'Nadir##338
@@ -1351,22 +2234,1375 @@ startlevel 60
 			.talk Watchmaster Sorigal##5464
 			..turnin Vital Supplies##1477
 			..accept Supplies for Nethergarde##1395
+		step
+			goto Blasted Lands,67.6,19.3
+			.talk Ambassador Ardalan##7826
+			..accept Petty Squabbles##2783
+		step
+			goto Blasted Lands,66.5,21.4
+			.talk Quartermaster Lungertz##5393
+			..turnin Supplies for Nethergarde##1395
+		step
+			goto Blasted Lands,50.6,14.3
+			.talk Bloodmage Lynnore##7506
+			..accept The Basilisk's Bite##2601
+			..accept Vulture's Vigor##2603
+		step
+			goto Blasted Lands,50.6,14.2
+			.talk Bloodmage Drazial##7505
+			..accept Snickerfang Jowls##2581
+			..accept A Boar's Vitality##2583
+			..accept The Decisive Striker##2585
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Fallen Hero of the Horde##7572
+			..turnin Petty Squabbles##2783
+			..accept A Tale of Sorrow##2801
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Fallen Hero of the Horde##7572
+			.goal A Tale of Sorrow|q 2801/1
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Fallen Hero of the Horde##7572
+			..turnin A Tale of Sorrow##2801
+			..accept The Stones That Bind Us##2681
+		step
+			goto Swamp of Sorrows,13,35.3
+			.from Swampwalker##764, Swampwalker Elder##765, Tangled Horror##766
+			.get Khadgar's Essays on Dimensional Convergence##6065|q 1364/1
+		step
+			goto Blasted Lands,43.4,10.6
+			.kill 1 Servant of Grol##7669|q 2681/2
+			.info It is necessary to kill near the floating stone.
+		step
+			goto Blasted Lands,41.2,14.4
+			.kill 2 Servant of Grol##7669|q 2681/2
+			.info It is necessary to kill near the floating stone.
+		step
+			goto Blasted Lands,41.5,39.1
+			.kill 1 Servant of Sevine##7671|q 2681/4
+			.info It is necessary to kill near the floating stone.
+		step
+			goto Blasted Lands,39.4,34.4
+			.kill 2 Servant of Sevine##7671|q 2681/4
+			.info It is necessary to kill near the floating stone.
+		step
+			goto Blasted Lands,38.2,33.9
+			.kill 3 Servant of Sevine##7671|q 2681/4
+			.info It is necessary to kill near the floating stone.
+		step
+			goto Blasted Lands,52,35.6
+			.talk Kum'isha the Collector##7363
+			..accept To Serve Kum'isha##2521
+			..accept Everything Counts In Large Amounts##3501
+		step
+			goto Blasted Lands,49.4,43.6
+			.kill 3 Servant of Grol##7669|q 2681/2
+			.info It is necessary to kill near the floating stone.
+		step
+			goto Blasted Lands,58.2,48.8
+			.kill 9 Servant of Razelikh##7668|q 2681/1
+			.info It is necessary to kill near the floating stone.
+		step
+			goto Blasted Lands,66.7,29.3
+			.kill 3 Servant of Allistarj##7670|q 2681/3
+			.info It is necessary to kill near the floating stone.
+		step
+			.'Follow the Grinding Circle killing boars, hyenas, vultures, basilisks, and scorpions until you:
+			.collect 6 Blasted Boar Lung##8392
+			.collect 5 Snickerfang Jowl##8391
+			.collect 16 Vulture Gizzard##8396
+			.collect 12 Basilisk Brain##8394
+			.collect 6 Scorpok Pincer##8393
+			.' At Grind Point 1|at 49,18
+			.' At Grind Point 2|at 45,26
+			.' At Grind Point 3|at 46,34
+			.' At Grind Point 4|at 56,37
+			.' At Grind Point 5|at 56.3,30.5
+			.' At Grind Point 6|at 63,28
+			.info Skip this step if you have done the quests from the previous step already.
+		step
+			goto Blasted Lands,50.6,14.3
+			.talk Bloodmage Lynnore##7506
+			..turnin The Basilisk's Bite##2601
+			..turnin Vulture's Vigor##2603
+			.info Do not accept the following quests, they are daily.
+		step
+			goto Blasted Lands,50.6,14.2
+			.talk Bloodmage Drazial##7505
+			..turnin Snickerfang Jowls##2581
+			..turnin A Boar's Vitality##2583
+			..turnin The Decisive Striker##2585
+			.info Do not accept the following quests, they are daily.
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Fallen Hero of the Horde##7572
+			..turnin The Stones That Bind Us##2681
+			..accept Heroes of Old (1)##2702
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Corporal Thund Splithoof##7750
+			..turnin Heroes of Old (1)##2702
+			..accept Heroes of Old (2)##2701
+		step
+			goto Swamp of Sorrows,33.3,66.2
+			.' Interact with object: Spectral Lockbox
+			..turnin Heroes of Old (2)##2701
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Fallen Hero of the Horde##7572
+			..accept Kirith##2721
+		step
+			goto Blasted Lands,69.3,30.8
+			.' Entrance in cave|at 65.05,32.93
+			.kill 1 Kirith the Damned##7728|n
+			.talk Spirit of Kirith##7729
+			..turnin Kirith##2721
+			..accept The Cover of Darkness##2743
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Fallen Hero of the Horde##7572
+			..turnin The Cover of Darkness##2743
+			.info The next quest "The Demon Hunter" we do not accept, it is completed in the Azshara guide.
+		step
+			goto Blasted Lands,67.6,19.2
+			.talk Watcher Mahar Ba##5385
+			..turnin Mazen's Behest (2)##1364
+		step
+			goto Blasted Lands,64.7,33.05
+			.from Shadowsworn Cultist##6004, Shadowsworn Thug##6005
+			.get Flawless Draenethyst Sphere##8244|q 2521/1
+			.get Imperfect Draenethyst Fragment##10593|q 3501/1
+		step
+			goto Blasted Lands,52,35.6
+			.talk Kum'isha the Collector##7363
+			..turnin To Serve Kum'isha##2521
+			..turnin Everything Counts In Large Amounts##3501
+			.info Do not accept the following quests, they are daily.
+		step
+			.' Congratulations! +16 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[none] Burning Steppes",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[50-beta] Searing Gorge",[[
 author danaton
-description This guide contain quest-chain (?? quests) for Burning Steppes location.
+description This guide contain quest-chain (30 quests) for Searing Gorge location.
+startlevel 50
+		step
+			goto Ironforge,24.2,74.7
+			.talk Auctioneer Redmuse##8720
+			.buy 15 Silk Cloth##4306|q 4449 |future
+		step
+			goto Searing Gorge,37.6,26.5
+			.talk Wanted/Missing/Lost & Found##001000
+			..accept WANTED: Overseer Maltorius##7701
+			..accept STOLEN: Smithing Tuyere and Lookout's Spyglass##7728
+			..accept JOB OPPORTUNITY: Culling the Competition##7729	
+		step
+			goto Searing Gorge,38.4,27.7
+			.talk Evonice Sootsmoker##14628
+			..accept Kill 'Em With Sleep Deprivation##7702
+		step
+			goto Searing Gorge,38.6,27.8
+			.talk Hansel Heavyhands##14627
+			..accept Curse These Fat Fingers##7723
+			..accept Fiery Menace!##7724
+			..accept Incendosaurs? Whateverosaur is More Like It##7727
+		step
+			goto Searing Gorge,38.8,28.5
+			.talk Master Smith Burninate##14624
+			..accept What the Flux?##7722
+		step
+			goto Searing Gorge,39.1,39
+			.talk Kalaran Windblade##8479
+			..accept Divine Retribution##3441
+			.info Listen to his story.
+			..turnin Divine Retribution##3441
+			..accept The Flawless Flame##3442
+		step
+			goto Searing Gorge,36.8,49.4
+			.from Dark Iron Steamsmith##5840
+			.get Smithing Tuyere##18959|q 7728/1
+			.from Dark Iron Steamsmith##5840, Dark Iron Slaver##5844, Dark Iron Taskmaster##5846
+			.collect Grimesilt Outhouse Key##11818|q 4451 |future
+			.use Grimesilt Outhouse Key##11818
+			..accept The Key to Freedom##4451
+		step
+			goto Searing Gorge,46.3,41.8
+			.kill 20 Heavy War Golem##5854|q 7723/1
+			.' You can find more around (1)|at 33.5,64.2
+			.' You can find more around (2)|at 44.5,63.9
+			.' You can find more around (3)|at 51.9,59.4
+			.' You can find more around (4)|at 32.1,48.6
+		step
+			goto Searing Gorge,33.1,51.8
+			.from Dark Iron Lookout##8566
+			.get Lookout's Spyglass##18960|q 7728/2
+		step
+			goto Searing Gorge,32,62.2
+			.kill 20 Greater Lava Spider##5858|q 7724/1
+		step
+			goto Searing Gorge,30.8,72.8
+			.from Magma Elemental##5855
+			.get 4 Golem Oil##10511|q 3442/2
+			.from Inferno Elemental##5852, Magma Elemental##5855
+			.get 4 Heart of Flame##10509|q 3442/1
+		step
+			goto Searing Gorge,70.7,73.3
+			.from Margol the Rager##5833
+			.collect Margol's Horn##10000|q 3181 |future
+			.use Margol's Horn##10000
+			..accept The Horn of the Beast##3181
+		step
+			goto Searing Gorge,65.5,62.3
+			.' Interact with gameobject: the Wooden Outhouse.
+			..turnin The Key to Freedom##4451
+			..accept Caught!##4449
+		step
+			goto Searing Gorge,63.3,59.7
+			.kill 8 Dark Iron Geologist##5839|q 4449/1
+		step
+			goto Searing Gorge,65.5,62.3
+			.' Click the Wooden Outhouse
+			..turnin Caught!##4449
+			..accept Ledger from Tanaris##4450
+			.' Click the book he slides under the door
+			.get Goodsteel Ledger##11727|q 4450/1
+		step
+			goto Searing Gorge,61.7,72
+			.from Glassweb Spider##5856
+			.get 20 Solid Crystal Leg Shaft##11725|q 4450/2
+			.' You can find more Glassweb Spiders|at 61.9,54.6
+		step
+			goto Searing Gorge,63.9,61
+			.talk Dorius Stonetender##8284
+			..accept Suntara Stones (1)##3367
+			.' Escort him.
+		step
+			goto Searing Gorge,74.45,19.45
+			.goal Dorius Escort|q 3367/1
+			.' Escort him until he gets murdered (it's part of the quest).
+			.' He drops a note when he dies.
+		step
+			goto Searing Gorge,74.45,19.45
+			.' Interact with gameobject: the Singed Letter.
+			..turnin Suntara Stones (1)##3367
+			..accept Suntara Stones (2)##3368
+		step
+			goto Searing Gorge,39,38.9
+			.talk Kalaran Windblade##8479
+			..turnin The Flawless Flame##3442
+			..accept Forging the Shaft##3443
+		step
+			goto Searing Gorge,42.4,47.1
+			.kill Dark Iron dwarves|n
+			.get 8 Thorium Plated Dagger##10551|q 3443/1
+		step
+			goto Searing Gorge,39,38.9
+			.talk Kalaran Windblade##8479
+			..turnin Forging the Shaft##3443
+			..accept The Flame's Casing##3452
+		step
+			goto Searing Gorge,38.6,27.8
+			.talk Hansel Heavyhands##14627
+			..turnin Curse These Fat Fingers##7723
+			..turnin Fiery Menace!##7724
+		step
+			goto Searing Gorge,39,27.5
+			.talk Taskmaster Scrange##14626
+			..turnin STOLEN: Smithing Tuyere and Lookout's Spyglass##7728
+		step
+			goto Ironforge,67.8,8.3
+			.talk Curator Thorius##8256
+			..turnin Suntara Stones (2)##3368
+			..accept Dwarven Justice##3371
+		step
+			goto Loch Modan,18.2,84
+			.talk Mountaineer Pebblebitty##3836
+			..turnin The Horn of the Beast##3181
+			..accept Proof of Deed##3182
+		step
+			goto Ironforge,67.8,8.3
+			.talk Curator Thorius##8256
+			..turnin Proof of Deed##3182
+			.' Watch the dialogue.
+			..accept At Last!##3201
+		step
+			goto Loch Modan,18.2,84
+			.talk Mountaineer Pebblebitty##3836
+			..turnin At Last!##3201
+		step
+			goto Searing Gorge,41.5,54.7|n
+			.' The entrance to the Slag Pit is here|goto Searing Gorge,41.5,54.7,0.5|noway|q 3371
+			.info It's up on the Metal Riser Walkway things.
+		step
+			goto Searing Gorge,37.6,44.3|n
+			.' Follow the path, go left though the Jail Door|goto Searing Gorge,37.6,44.3,0.5|noway|q 3371
+		step
+			goto Searing Gorge,41.2,25.5
+			.talk the Dying Archeologist##8417
+			..turnin Dwarven Justice##3371
+			..accept Release Them##3372
+		step
+			goto Searing Gorge,42.4,30.5|n
+			.' Go upstairs the ramp|goto Searing Gorge,42.4,30.5,0.5|noway|q 7701
+		step
+			goto Searing Gorge,40.9,35.8
+			.from Overseer Maltorius##14621
+			.get Head of Overseer Maltorius|q 7701/1
+		step
+			goto Searing Gorge,40.5,35.7
+			.' Click the Secret Plans: Fiery Flux
+			.info It's a scroll laying on a bench behind Overseer Maltorius.
+			.get Secret Plans: Fiery Flux|q 7722/1
+		step
+			goto Searing Gorge,45.45,30.5
+			.collect 20 Dark Iron Pillow##18943|q 7702/1
+			.kill 15 Dark Iron Taskmaster|q 7729/1
+			.kill 15 Dark Iron Slaver|q 7729/2
+		step
+			goto Searing Gorge,47.9,42.1|n
+			.' Jump off the bridge at this spot to the path below|goto Searing Gorge,47.9,42.1,0.5|noway|q 7727
+		step
+			goto Searing Gorge,52,37
+			.kill 20 Incendosaur|q 7727/1
+		step
+			goto Searing Gorge,37.6,26.5
+			.talk Lookout Captain Lolo Longstriker##14634
+			..turnin WANTED: Overseer Maltorius##7701
+		step
+			goto Searing Gorge,38.4,27.7
+			.talk Evonice Sootsmoker##14628
+			..turnin Kill 'Em With Sleep Deprivation##7702
+		step
+			goto Searing Gorge,38.6,27.8
+			.talk Hansel Heavyhands##14627
+			..turnin Incendosaurs? Whateverosaur is More Like It##7727
+		step
+			goto Searing Gorge,39,27.5
+			.talk Taskmaster Scrange##14626
+			..turnin JOB OPPORTUNITY: Culling the Competition##7729
+		step
+			goto Searing Gorge,38.8,28.5
+			.talk Master Smith Burninate##14624
+			..turnin What the Flux?##7722
+		step
+			goto Searing Gorge,29.1,25.9
+			.' Slowly work your way to this spot
+			.' Jump onto the red crystal in the lava
+			.' Click it and get the Mysterious Artifact|goal Mysterious Artifact|q 3372/1
+			.' Kill Twilight mobs around the lava
+			.get Symbol of Ragnaros##10552|q 3452/1
+		step
+			goto Searing Gorge,29.6,26.4
+			.talk Zamael Lunthistle##8436
+			..accept Prayer to Elune (1)##3377
+		step
+			goto Searing Gorge,29.6,26.4
+			.talk Zamael Lunthistle##8436
+			.goal Zamael Story|q 3377/1
+		step
+			goto Searing Gorge,29.6,26.4
+			.talk Zamael Lunthistle##8436
+			..turnin Prayer to Elune (1)##3377
+			..accept Prayer to Elune (2)##3378
+		step
+			goto Searing Gorge,27,25.35
+			.kill Twilight mobs|n
+			.get Prayer to Elune##10458|q 3378/1
+		step
+			goto Searing Gorge,39,38.9
+			.talk Kalaran Windblade##8479
+			..turnin The Flame's Casing##3452
+			..accept The Torch of Retribution (1)##3453
+			..turnin The Torch of Retribution (1)##3453
+			..accept The Torch of Retribution (2)##3454
+			.' Click the green glowing floating Torch of Retribution
+			..turnin The Torch of Retribution (2)##3454
+			..accept Squire Maltrake##3462
+		step
+			goto Searing Gorge,39.2,39
+			.talk Squire Maltrake##8509
+			..turnin Squire Maltrake##3462
+			..accept Set Them Ablaze!##3463
+		step
+			.' Go into the Slag Pit|goto Searing Gorge,41.5,54.7,0.5|c |q 3372
+		step
+			goto Searing Gorge,41.2,25.5
+			.' Interact with gameobject: the Altar of Suntara
+			.info Inside the Slag Pit laying on the ground.
+			..turnin Release Them##3372
+			.talk the Dying Archeologist##8417
+			..accept Rise, Obsidion!##3566
+			.from Lathoric the Black##8391
+			.get Head of Lathoric the Black##10447|q 3566/1
+			.from Obsidion##8400
+			.get Heart of Obsidion##10446|q 3566/2
+		step
+			goto Searing Gorge,33.3,54.5
+			.' Equip the Torch of Retribution
+			.use Torch of Retribution##10515
+			.' Click the Sentry Brazier.
+			.info At the top of the tower, click the little metal blazer on the ground.
+			.goal Northern Tower Ablaze|q 3463/4
+		step
+			goto Searing Gorge,35.7,60.7
+			.' Click the Sentry Brazier.
+			.info At the top of the tower, click the little metal blazer on the ground.
+			.goal Western Tower Ablaze|q 3463/1
+		step
+			goto Searing Gorge,44,60.9
+			.' Click the Sentry Brazier.
+			.info At the top of the tower, click the little metal blazer on the ground.
+			.goal Southern Tower Ablaze|q 3463/2
+		step
+			goto Searing Gorge,50.1,54.7
+			.' Click the Sentry Brazier.
+			.info At the top of the tower, click the little metal blazer on the ground.
+			.goal Eastern Tower Ablaze|q 3463/3
+		step
+			goto Searing Gorge,39.1,39
+			.talk Squire Maltrake##8509
+			..turnin Set Them Ablaze!##3463
+			.' Click the small grey chest on the ground.
+			..accept Trinkets...##3481
+			.' Click the chest again.
+			..turnin Trinkets...##3481
+			.' Open the Hoard of the Black Dragonflight in your bags|use Hoard of the Black Dragonflight##10569
+			.' Make sure to save the Black Dragonflight Molt|collect Black Dragonflight Molt##10575|q 4022/1 |future
+		step
+			goto Ironforge,71.8,16.1
+			.talk Curator Thorius##8256
+			..turnin Rise, Obsidion!##3566
+		step
+			goto Swamp of Sorrows,94.8,52.1
+			.from Jarquia##9916
+			.get Goodsteel's Balanced Flameberge##11723|q 4450/4
+		step
+			goto Darnassus,38.3,81
+			.talk Astarii Starseeker##4090
+			..turnin Prayer to Elune (2)##3378
+		step
+			goto Dustwallow Marsh,54.1,55.9
+			.collect Overdue Package##11724|q 4450/3
+		step
+			goto Tanaris,51.5,28.8
+			.talk Krinkle Goodsteel##5411
+			..turnin Ledger from Tanaris##4450
+		step
+			.' Congratulations! +30 quests for achievement "Loremaster of Eastern Kingdoms".
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[60-beta] Burning Steppes",[[
+author danaton
+description This guide contain quest-chain (10 quests) for Burning Steppes location.
 startlevel 60
 		step
-			.' First you need to complete the Duskwood quest chain.
+			.' First you need to complete the Searing Gorge quest chain.
 			.info Skip this step manually.
 		step
+			goto Stormwind City,76.90,47.80
+			.talk Count Remington Ridgewell##2285
+			..accept Mayara Brightwing##4766
+		step
+			goto Ironforge,38.4,55.3
+			.talk Royal Historian Archesonus##8879
+			..accept The Smoldering Ruins of Thaurissan (1)##3702
+		step
+			goto Ironforge,38.4,55.3
+			.talk Royal Historian Archesonus##8879
+			.goal Story of Thaurissan|q 3702/1
+		step
+			goto Ironforge,38.4,55.3
+			.talk Royal Historian Archesonus##8879
+			..turnin The Smoldering Ruins of Thaurissan (1)##3702
+			..accept The Smoldering Ruins of Thaurissan (2)##3701
+		step
+			goto Burning Steppes,84.56,68.68
+			.talk Oralius##9177
+			..accept Extinguish the Firegut##3823
+			..accept FIFTY! YEP!##4283
+		step
+			goto Burning Steppes,84.8,69.1
+			.talk Mayara Brightwing##9565
+			..turnin Mayara Brightwing##4766
+		step
+			goto Burning Steppes,75.39,38.44
+			.kill 15 Firegut Ogre Mage##7034|q 3823/1
+			.kill 7 Firegut Ogre##7033|q 3823/2
+			.kill 7 Firegut Brute##7035|q 3823/3
+			.info You can find more all around on this mountain, and in the caves on the mountain.
+		step
+			goto Burning Steppes,84.56,68.68
+			.talk Oralius##9177
+			..turnin Extinguish the Firegut##3823
+			..accept Gor'tesh the Brute Lord##3824
+		step
+			goto Burning Steppes,65.24,24.00
+			.talk Tinkee Steamboil##10267
+			..accept Broodling Essence##4726
+		step
+			goto Burning Steppes,65.16,23.92
+			.talk Maxwort Uberglint##9536
+			..accept Tablet of the Seven##4296
+		step
+			goto Burning Steppes,72.83,28.41
+			.use the Draco-Incarcinatrix 900##12284
+			.info Use it on Broodling enemies around this area.
+			.info They look like small flying dragons.
+			.info They share spawn points with the scorpids and wolves, so kill those also, if you can't find any.
+			.' Kill Broodling enemies around this area.
+			.' click Broodling Essence
+			.info They look like red floating crystals that appear above their corpses after you kill them.
+			.collect 8 Broodling Essence##12283|q 4726/1
+			.' You can find more around (1)|at 80.05,27.94
+			.' You can find more around (2)|at 87.34,32.01
+			.' You can find more around (3)|at 91.96,35.64
+		step
+			goto Burning Steppes,95.06,31.57
+			.talk Cyrus Therepentous##9459
+			..accept A Taste of Flame##4022 |or
+			..accept A Taste of Flame##4023 |or
+		step
+			goto Burning Steppes,95.06,31.57
+			.talk Cyrus Therepentous##9459
+			.' Tell him "I do not posess proof any proof, Cyrus."
+			.from Frenzied Black Drake##9461
+			.info This dragon is level 54 and will immediately attack you.
+			.get Black Dragonflight Molt##10575|q 4022/1 |or
+			.get Black Dragonflight Molt##10575|q 4023/1 |or
+		step
+			goto Burning Steppes,95.06,31.57
+			.talk Cyrus Therepentous##9459
+			..turnin A Taste of Flame##4022 |or
+			..turnin A Taste of Flame##4023 |or
+		step
+			goto Burning Steppes,54.09,40.73
+			.info Interact with gameobject: Tablet of the Seven
+			.' Choose "Transcribe the tablet."
+			.collect Tablet Transcript##11470|q 4296/1
+		step
+			goto Burning Steppes,68.42,37.33
+			.info Interact with gameobject: Thaurissan Relic
+			.info They look like cylindrical grey stones sitting upright on the ground around this area.
+			.' Recover 12 Information|q 3701/1
+			.' You can find more around (1)|at 66.04,44.05
+			.' You can find more around (2)|at 62.21,40.68
+			.' You can find more around (3)|at 58.93,42.59
+			.' You can find more around (4)|at 57.80,37.02
+			.' You can find more around (5)|at 52.89,35.96
+		step
+			goto Burning Steppes,39.26,55.36
+			.from Gor'tesh##9176
+			.info He walks around this area, in and out of this building.
+			.get Gor'tesh's Lopped Off Head##11080|q 3824/1
+		step
+			goto Burning Steppes,39.31,55.42
+			.' kill Blackrock enemies around this area.
+			.info They look like orcs and wolves.
+			.info You can find more inside the buildings around this area.
+			.collect 50 Blackrock Medallion##11467|q 4283/1
+			.' You can find more around (1)|at 43.90,56.18
+			.' You can find more around (2)|at 49.30,55.43
+			.' You can find more around (3)|at 52.98,53.87
+		step
+			goto Burning Steppes,84.56,68.67
+			.talk Oralius##9177
+			..turnin Gor'tesh the Brute Lord##3824
+			..turnin FIFTY! YEP!##4283
+			..accept Ogre Head On A Stick = Party##3825
+		step
+			goto Burning Steppes,65.23,23.99
+			.talk Tinkee Steamboil##10267
+			..turnin Broodling Essence##4726
+		step
+			goto Burning Steppes,65.15,23.91
+			.talk Maxwort Uberglint##9536
+			..turnin Tablet of the Seven##4296
+		step
+			goto Burning Steppes,80.99,46.78
+			.info Interact with gameobject: Soft Dirt Mound
+			.goal Plant Gor'tesh's Head|q 3825/1
+			.info On top of the mountain.
+		step
+			goto Burning Steppes,84.56,68.67
+			.talk Oralius##9177
+			..turnin Ogre Head On A Stick = Party##3825
+		step
+			goto Ironforge,38.4,55.3
+			.talk Royal Historian Archesonus##8879
+			..turnin The Smoldering Ruins of Thaurissan (2)##3701
+		step
+			.' Congratulations! +10 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[none] Wetlands",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[45-none] Badlands",[[
 author danaton
-description This guide contain quest-chain (?? quests) for Wetlands location.
-startlevel 60
+description This guide contain quest-chain (?? quests) for Badlands location.
+startlevel 45
+		step
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[20] Dun Morogh",[[
+author danaton
+description This guide contain quest-chain (40 quests) for Dun Morogh location.
+startlevel 20
+		step
+			goto Elwynn Forest,41.7,65.5
+			.talk Smith Argus##514
+			..accept Elmore's Task##1097
+		step
+			goto Stormwind City,59.7,33.8
+			.talk Grimand Elmore##1416
+			..turnin Elmore's Task##1097
+			..accept Stormpike's Delivery##353
+		step
+			goto Ironforge,69.2,50.5
+			.talk Gnoarn##6569
+			..accept The Day After##2927
+			.info Dungeon: Gnomeregan Quest Chain.
+		step
+			goto Ironforge,24.2,74.7
+			.talk Auctioneer Redmuse##8720
+			.buy 6 Incendicite Ore##3340|q 466 |future
+		step
+			goto Loch Modan,34.3,47.7
+			.talk Mountaineer Kadrell##1340
+			..accept Stonegear's Search##467
+		step
+			goto Dun Morogh,45.9,49.4
+			.talk Ozzie Togglevolt##1268
+			..turnin The Day After##2927
+			.info Dungeon: Gnomeregan Quest Chain.
+		step
+			goto Dun Morogh,29.9,71.9
+			.talk Sten Stoutarm##658
+			..accept Dwarven Outfitters##179
+		step
+			goto Dun Morogh,29.8,73.8
+			.from Ragged Young Wolf##705
+			.get 8 Tough Wolf Meat|q 179/1
+		step
+			goto Dun Morogh,29.8,71.3
+			.talk Sten Stoutarm##658
+			..turnin Dwarven Outfitters##179
+			..accept Coldridge Valley Mail Delivery (1)##233
+		step
+			goto Dun Morogh,29.7,71.3
+			.talk Balir Frosthammer##713
+			..accept A New Threat##170
+		step
+			goto Dun Morogh,30.4,74.8
+			.kill 6 Rockjaw Trogg|q 170/1
+			.kill 6 Burly Rockjaw Trogg|q 170/2
+		step
+			goto Dun Morogh,29.8,71.3
+			.talk Balir Frosthammer##713
+			..turnin A New Threat##170
+		step
+			goto Dun Morogh,28.5,67.7
+			.talk Felix Whindlebolt##8416
+			..accept A Refugee's Quandary##3361
+		step
+			goto Dun Morogh,22.6,71.4
+			.talk Talin Keeneye##714
+			..turnin Coldridge Valley Mail Delivery (1)##233
+			..accept Coldridge Valley Mail Delivery (2)##234
+			..accept The Boar Hunter##183
+		step
+			goto Dun Morogh,22.0,71.3
+			.kill 8 Small Crag Boar|q 183/1
+		step
+			goto Dun Morogh,22.6,71.4
+			.talk Talin Keeneye##714
+			..turnin The Boar Hunter##183
+		step
+			goto Dun Morogh,20.9,76.1
+			.' Click Felix's Box
+			.info In the troll camp on the ground, to the right of the campfire.
+			.get Felix's Box|q 3361/1
+		step
+			goto Dun Morogh,25.1,75.7
+			.talk Grelin Whitebeard##786
+			..turnin Coldridge Valley Mail Delivery (2)##234
+			..accept The Troll Cave##182
+		step
+			goto Dun Morogh,22.8,80.0
+			.' Click Felix's Chest
+			.info In the troll camp on the ground, to the left directly next to the campfire.
+			.get Felix's Chest|q 3361/2
+		step
+			goto Dun Morogh,26.3,79.3
+			.' Click Felix's Bucket of Bolts
+			.info Outside troll cave entrance on the ground next to the campfire.
+			.get Felix's Bucket of Bolts|q 3361/3
+		step
+			goto Dun Morogh,26.6,79.25
+			.kill 10 Frostmane Troll Whelp|q 182/1
+		step
+			goto Dun Morogh,25.1,75.7
+			.talk Grelin Whitebeard##786
+			..turnin The Troll Cave##182
+			..accept The Stolen Journal##218
+		step
+			goto Dun Morogh,26.6,79.45
+			.from Grik'nir the Cold##808|at 30.5,80.2
+			.info Inside the cave.
+			.get Grelin Whitebeard's Journal|q 218/1
+		step
+			goto Dun Morogh,25.1,75.7
+			.talk Grelin Whitebeard##786
+			..turnin The Stolen Journal##218
+			..accept Senir's Observations (1)##282
+		step
+			goto Dun Morogh,25,76
+			.talk Nori Pridedrift##12738
+			..accept Scalding Mornbrew Delivery##3364
+		step
+			goto Dun Morogh,28.5,67.7
+			.talk Felix Whindlebolt##8416
+			..turnin A Refugee's Quandary##3361
+		step
+			goto Dun Morogh,28.8,66.4
+			.talk Durnan Furcutter##836
+			..turnin Scalding Mornbrew Delivery##3364
+			..accept Bring Back the Mug##3365
+		step
+			goto Dun Morogh,25,76
+			.talk Nori Pridedrift##12738
+			..turnin Bring Back the Mug##3365
+		step
+			goto Dun Morogh,33.5,71.8
+			.talk Mountaineer Thalos##1965
+			..turnin Senir's Observations (1)##282
+			..accept Senir's Observations (2)##420
+		step
+			goto Dun Morogh,33.8,72.2
+			.talk Hands Springsprocket##6782
+			..accept Supplies to Tannok##2160
+		step
+			goto Dun Morogh,46.7,53.8
+			.talk Senir Whitebeard##1252
+			..turnin Senir's Observations (2)##420
+			..accept Frostmane Hold##287
+		step
+			goto Dun Morogh,47.3,52.3
+			.talk Tannok Frosthammer##6806
+			..turnin Supplies to Tannok##2160
+		step
+			goto Dun Morogh,47.7,52.3
+			.talk Gremlock Pilsnor##1699
+			.' You need to learn Сooking.
+			only if skill('Cooking')==0
+		step
+			goto Dun Morogh,47.4,52.5
+			.talk Innkeeper Belm##1247
+			.buy Rhapsody Malt##2894|q 384 |future
+		step
+			goto Dun Morogh,46.8,52.4
+			.talk Ragnar Thunderbrew##1267
+			..accept Beer Basted Boar Ribs##384
+			only if skill('Cooking')>0
+		step
+			goto Dun Morogh,46.0,51.7
+			.talk Tharek Blackstone##1872
+			..accept Tools for Steelgrill##400
+		step
+			goto Dun Morogh,45.9,49.4
+			.talk Ozzie Togglevolt##1268
+			..accept Gnogaine##2926
+			.info Dungeon: Gnomeregan Quest Chain.
+		step
+			goto Dun Morogh,45.8,49.4
+			.talk Razzle Sprysprocket##1269
+			..accept Operation Recombobulation##412
+			.info Dungeon: Gnomeregan Quest Chain.
+		step
+			goto Dun Morogh,49.4,48.4
+			.talk Pilot Bellowfiz##1378
+			..accept Stocking Jetsteam##317
+		step
+			goto Dun Morogh,49.6,48.6
+			.talk Pilot Stonegear##1377
+			..accept The Grizzled Den##313
+			..turnin Stonegear's Search##467
+			..accept Search for Incendicite##466
+		step
+			goto Ironforge,24.2,74.7
+			.talk Auctioneer Redmuse##8720
+			.buy 6 Incendicite Ore##3340|q 466 |future
+		step
+			goto Dun Morogh,49.6,48.6
+			.talk Pilot Stonegear##1377
+			..turnin Search for Incendicite##466
+		step
+			goto Dun Morogh,50.1,49.4
+			.talk Loslor Rudge##1694
+			..accept Ammo for Rumbleshot##5541
+		step
+			goto Dun Morogh,50.4,49.1
+			.talk Beldin Steelgrill##1376
+			..turnin Tools for Steelgrill##400
+		step
+			goto Dun Morogh,49.7,50.8
+			.from Large Crag Boar##1126, Crag Boar##1125, Young Black Bear##1128, Ice Claw Bear##1196
+			.get 4 Chunk of Boar Meat|q 317/1
+			.get 6 Crag Boar Rib|q 384/1
+			.get 2 Thick Bear Fur|q 317/2
+		step
+			goto Dun Morogh,44.1,57
+			.' Open the crate.
+			.info In the small camp next to a tent.
+			.get Rumbleshot's Ammo|q 5541/1
+		step
+			goto Dun Morogh,42.4,54.1
+			.from Young Wendigo##1134, Wendigo##1135
+			.get 8 Wendigo Mane|q 313/1
+		step
+			goto Dun Morogh,40.7,65.1
+			.talk Hegnar Rumbleshot##1243
+			..turnin Ammo for Rumbleshot##5541
+		step
+			goto Dun Morogh,46.8,52.4
+			.talk Ragnar Thunderbrew##1267
+			..turnin Beer Basted Boar Ribs##384
+		step
+			goto Dun Morogh,49.4,48.4
+			.talk Pilot Bellowfiz##1378
+			..turnin Stocking Jetsteam##317
+			..accept Evershine##318
+		step
+			goto Dun Morogh,49.6,48.6
+			.talk Pilot Stonegear##1377
+			..turnin The Grizzled Den##313
+		step
+			goto Dun Morogh,30.2,45.6
+			.talk Rejold Barleybrew##1374
+			..turnin Evershine##318
+			..accept A Favor for Evershine##319
+			..accept The Perfect Stout##315
+		step
+			goto Dun Morogh,30.2,45.5
+			.talk Marleth Barleybrew##1375
+			..accept Bitter Rivals##310
+		step
+			goto Dun Morogh,41.2,36.4
+			.from Frostmane Seer##1397
+			.' Collect the Shimmerweed Baskets.
+			.info The Shimmerweed Baskets look like woven wooden baskets on the ground around this area.
+			.get 6 Shimmerweed|q 315/1
+		step
+			goto Dun Morogh,30.2,45.6
+			.talk Rejold Barleybrew##1374
+			..turnin The Perfect Stout##315
+			..accept Shimmer Stout##413
+		step
+			goto Dun Morogh,21.2,52.3
+			.goal Fully explore Frostmane Hold|q 287/1
+			.info By the time you reach this point, you should have seen the "Explore Frostmane Hold" completed message.
+		step
+			goto Dun Morogh,25,51
+			.kill 5 Frostmane Headhunter|q 287/2
+		step
+			goto Dun Morogh,27.8,48.3
+			.kill 6 Ice Claw Bear|q 319/1
+			.kill 8 Elder Crag Boar|q 319/2
+			.kill 8 Snow Leopard|q 319/3
+		step
+			goto Dun Morogh,27.1,36.9
+			.from Leper Gnome##1211
+			.get 8 Restabilization Cog##3083|q 412/1
+			.get 8 Gyromechanic Gear##3084|q 412/2
+			.' You can find more around (1)|at 25,39.9
+			.' You can find more around (2)|at 25.6,43.1
+		step
+			goto Dun Morogh,24.4,39.8|n
+			.' Go down and take the elevator.|goto Dun Morogh,24.4,39.8 |q 2926 |future |c
+		step
+			goto Dun Morogh,21.97,36.93|n
+			.' Keep moving straight ahead.|goto Dun Morogh,21.97,36.93 |q 2926 |future |c
+		step
+			goto Dun Morogh,22.09,34.15
+			.from Irradiated Invader##6213
+			.use Empty Leaden Collection Phial##9283|q 2926/1
+		step
+			goto Dun Morogh,30.2,45.6
+			.talk Rejold Barleybrew##1374
+			..turnin A Favor for Evershine##319
+			..accept Return to Bellowfiz##320
+		step
+			goto Dun Morogh,34.6,51.7
+			.talk Tundra MacGrann##1266
+			..accept Tundra MacGrann's Stolen Stash##312
+		step
+			goto Dun Morogh,38.5,53.9
+			.' Open MacGrann's Meat Locker.
+			.collect MacGrann's Dried Meats##2667|q 312/1
+		step
+			goto Dun Morogh,34.6,51.7
+			.talk Tundra MacGrann##1266
+			..turnin Tundra MacGrann's Stolen Stash##312
+		step
+			goto Dun Morogh,45.9,49.4
+			.talk Ozzie Togglevolt##1268
+			..turnin Gnogaine##2926
+			.info Dungeon: Gnomeregan Quest Chain.
+		step
+			goto Dun Morogh,45.8,49.4
+			.talk Razzle Sprysprocket##1269
+			..turnin Operation Recombobulation##412
+			.info Dungeon: Gnomeregan Quest Chain.
+		step
+			goto Dun Morogh,49.4,48.4
+			.talk Pilot Bellowfiz##1378
+			..turnin Return to Bellowfiz##320
+		step
+			goto Dun Morogh,47.3,52.3
+			.talk Innkeeper Belm##1247
+			.buy Thunder Ale##2686|q 311 |future
+		step
+			goto Dun Morogh,47.6,52.7
+			.talk Jarven Thunderbrew##1373
+			.' Give him the Thunder Ale
+			.' Click the barrel next to him
+			..turnin Bitter Rivals##310
+			..accept Return to Marleth##311
+		step
+			goto Dun Morogh,46.7,53.8
+			.talk Senir Whitebeard##1252
+			..turnin Frostmane Hold##287
+			..accept The Reports##291
+		step
+			goto Dun Morogh,30.2,45.5
+			.talk Marleth Barleybrew##1375
+			..turnin Return to Marleth##311
+		step
+			goto Ironforge,39.5,57.5
+			.talk Senator Barin Redstone##1274
+			..turnin The Reports##291
+		step
+			goto Dun Morogh,63.1,49.9
+			.talk Rudra Amberstill##1265
+			..accept Protecting the Herd##314
+		step
+			goto Dun Morogh,62.6,46.1
+			.from Vagash##1388
+			.get Fang of Vagash|q 314/1
+		step
+			goto Dun Morogh,63.1,49.9
+			.talk Rudra Amberstill##1265
+			..turnin Protecting the Herd##314
+		step
+			goto Dun Morogh,68.7,56
+			.talk Senator Mehr Stonehallow##1977
+			..accept The Public Servant##433
+		step
+			goto Dun Morogh,69.1,56.3
+			.talk Foreman Stonebrow##1254
+			..accept Those Blasted Troggs!##432
+		step
+			goto Dun Morogh,70.7,56.5
+			.info Go inside the cave.
+			.kill 6 Rockjaw Skullthumper|q 432/1
+			.kill 10 Rockjaw Bonesnapper|q 433/1
+		step
+			goto Dun Morogh,68.7,56.0
+			.talk Senator Mehr Stonehallow##1977
+			..turnin The Public Servant##433
+		step
+			goto Dun Morogh,69.1,56.3
+			.talk Foreman Stonebrow##1254
+			..turnin Those Blasted Troggs!##432
+		step
+			goto Dun Morogh,86.3,48.8
+			.talk Mountaineer Barleybrew##1959
+			..turnin Shimmer Stout##413
+			..accept Stout to Kadrell##414
+		step
+			goto Dun Morogh,83.9,39.2
+			.talk Pilot Hammerfoot##1960
+			..accept The Lost Pilot##419
+		step
+			goto Dun Morogh,79.7,36.2
+			.' Interact with A Dwarven Corpse.
+			..turnin The Lost Pilot##419
+			..accept A Pilot's Revenge##417
+		step
+			goto Dun Morogh,78.3,37.8
+			.from Mangeclaw##1961
+			.get Mangy Claw##3183|q 417/1
+		step
+			goto Dun Morogh,83.9,39.2
+			.talk Pilot Hammerfoot##1960
+			..turnin A Pilot's Revenge##417
+		step
+			goto Loch Modan,24.8,18.4
+			.talk Mountaineer Stormpike##1343
+			..turnin Stormpike's Delivery##353
+		step
+			goto Loch Modan,34.3,47.7
+			.talk Mountaineer Kadrell##1340
+			..turnin Stout to Kadrell##414
+		step
+			.' Congratulations! +40 quests for achievement "Loremaster of Eastern Kingdoms".
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[20] Loch Modan",[[
+author danaton
+description This guide contain quest-chain (38 quests) for Loch Modan location.
+startlevel 20
+		step
+			goto Elwynn Forest,41.7,65.5
+			.talk Smith Argus##514
+			..accept Elmore's Task##1097
+		step
+			goto Stormwind City,59.7,33.8
+			.talk Grimand Elmore##1416
+			..turnin Elmore's Task##1097
+			..accept Stormpike's Delivery##353
+		step
+			goto Ironforge,69.2,50.5
+			.talk Gnoarn##6569
+			..accept Find Bingles##2039
+			..accept Speak with Shoni##2041
+			.info Dungeon: Deadmines Quest Chain.
+		step
+			goto Loch Modan,34.8,47.1
+			.talk Mountaineer Kadrell##1340
+			..accept Rat Catching##416
+			..accept Stonegear's Search##467
+			..accept Report to Mountaineer Rockgar##468
+			..accept Mountaineer Stormpike's Task##1339
+		step
+			goto Loch Modan,34.8,49.3
+			.talk Vidra Hearthstove##1963
+			..accept Thelsamar Blood Sausages##418
+		step
+			goto Loch Modan,34.7,43.2
+			.talk Magistrate Bluntnose##1139
+			..accept Mercenaries##255
+		step
+			goto Loch Modan,37.3,46.5
+			.info Interact with gameobject: WANTED
+			..accept WANTED: Chok'sul##256
+		step
+			goto Loch Modan,37.2,47.4
+			.talk Jern Hornhelm##1105
+			..accept Ironband's Excavation##436
+		step
+			goto Loch Modan,64.9,66.7
+			.talk Magmar Fellhew##1345
+			..turnin Ironband's Excavation##436
+			..accept Gathering Idols##297
+		step
+			goto Loch Modan,65.9,65.6
+			.talk Prospector Ironband##1344
+			..accept Excavation Progress Report##298
+		step
+			goto Loch Modan,68.1,63.2
+			.from Stoneplinter Digger##1167, Stonesplinter Geomancer##1165
+			.get 8 Carved Stone Idol|q 297/1
+		step
+			goto Loch Modan,64.9,66.7
+			.talk Magmar Fellhew##1345
+			..turnin Gathering Idols##297
+		step
+			goto Loch Modan,83.5,65.5
+			.talk Daryl the Youngling##1187
+			.' The next quest is timed. Make sure you are ready.
+			..accept A Hunter's Boast##257
+		step
+			goto Loch Modan,81.8,61.7
+			.talk Marek Ironheart##1154
+			..accept Crocolisk Hunting##385
+		step
+			goto Loch Modan,77.4,58.3
+			.kill 6 Mountain Buzzard|q 257/1
+		step
+			goto Loch Modan,83.5,65.5
+			.talk Daryl the Youngling##1187
+			..turnin A Hunter's Boast##257
+			.' The next quest is timed. Make sure you are ready.
+			..accept A Hunter's Challenge##258
+		step
+			goto Loch Modan,65.3,39.1
+			.kill 5 Elder Mountain Boar|q 258/1
+		step
+			goto Loch Modan,83.5,65.5
+			.talk Daryl the Youngling##1187
+			..turnin A Hunter's Challenge##258
+		step
+			goto Loch Modan,81.7,64.1
+			.talk Vyrin Swiftwind##1156
+			..accept Vyrin's Revenge (1)##271
+		step
+			goto Loch Modan,43,64
+			.from Ol' Sooty##1225
+			.get Ol' Sooty's Head|q 271/1
+		step
+			goto Loch Modan,37.2,47.4
+			.talk Jern Hornhelm##1105
+			..turnin Excavation Progress Report##298
+			..accept Report to Ironforge##301
+		step
+			goto Ironforge,74.7,11.7
+			.talk Prospector Stormpike##1356
+			..turnin Report to Ironforge##301
+			..accept Powder to Ironband##302
+		step
+			goto Loch Modan,37.2,47.4
+			.talk Jern Hornhelm##1105
+			..turnin Powder to Ironband##302
+			..accept Resupplying the Excavation##273
+		step
+			goto Loch Modan,24.8,18.4
+			.talk Mountaineer Stormpike##1343
+			..turnin Stormpike's Delivery##353
+			..turnin Mountaineer Stormpike's Task##1339
+			..accept Filthy Paws##307
+			..accept Stormpike's Order##1338
+		step
+			goto Loch Modan,25.4,10.4
+			.talk Mountaineer Rockgar##1342
+			..turnin Report to Mountaineer Rockgar##468
+		step
+			goto Loch Modan,35.4,18.5
+			.' Click Miners' League Crates inside the cave
+			.get 4 Miners' Gear|q 307/1
+		step
+			goto Loch Modan,24.8,18.4
+			.talk Mountaineer Stormpike##1343
+			..turnin Filthy Paws##307
+		step
+			goto Loch Modan,24.5,33.6
+			.from Tunnel Rat Scout##1173, Tunnel Rat Forager##1176, Tunnel Rat Kobold##1202, Tunnel Rat Vermin##1172
+			.get 12 Tunnel Rat Ear|q 416/1
+			.' You can find more around|at 35.3,17.05
+		step
+			goto Loch Modan,37.4,38.9
+			.from Mountain Boar##1190, Elder Black Bear##1186, Forest Lurker##1195
+			.get 3 Boar Intestines|q 418/1
+			.get 3 Bear Meat|q 418/2
+			.get 3 Spider Ichor|q 418/3
+		step
+			goto Loch Modan,34.8,47.1
+			.talk Mountaineer Kadrell##1340
+			..turnin Rat Catching##416
+		step
+			goto Loch Modan,34.8,49.3
+			.talk Vidra Hearthstove##1963
+			..turnin Thelsamar Blood Sausages##418
+		step
+			goto Loch Modan,22.1,73.1
+			.talk Mountaineer Cobbleflint##1089
+			..accept In Defense of the King's Lands (1)##224
+		step
+			goto Loch Modan,23.2,73.7
+			.talk Captain Rugelfuss##1092
+			..accept The Trogg Threat##267
+		step
+			goto Loch Modan,32.1,73.5
+			.kill 10 Stonesplinter Trogg|q 224/1
+			.kill 10 Stonesplinter Scout|q 224/2
+			.get 8 Trogg Stone Tooth|q 267/1
+		step
+			goto Loch Modan,22.1,73.1
+			.talk Mountaineer Cobbleflint##1089
+			..turnin In Defense of the King's Lands (1)##224
+		step
+			goto Loch Modan,23.5,76.4
+			.talk Mountaineer Gravelgaw##1091
+			..accept In Defense of the King's Lands (2)##237
+		step
+			goto Loch Modan,23.2,73.7
+			.talk Captain Rugelfuss##1092
+			..turnin The Trogg Threat##267
+		step
+			goto Loch Modan,35.9,83.1
+			.kill 10 Stonesplinter Skullthumper##1163|q 237/1
+			.kill 10 Stonesplinter Seer##1166|q 237/2
+		step
+			goto Loch Modan,23.5,76.4
+			.talk Mountaineer Gravelgaw##1091
+			..turnin In Defense of the King's Lands (2)##237
+		step
+			goto Loch Modan,23.5,74.5
+			.talk Mountaineer Wallbang##1090
+			..accept In Defense of the King's Lands (3)##263
+		step
+			goto Loch Modan,37.5,86.2
+			.kill 10 Stonesplinter Shaman##1197|q 263/1
+			.kill 10 Stonesplinter Bonesnapper##1164|q 263/2
+		step
+			goto Loch Modan,23.5,74.5
+			.talk Mountaineer Wallbang##1090
+			..turnin In Defense of the King's Lands (3)##263
+		step
+			goto Loch Modan,23.2,73.7
+			.talk Captain Rugelfuss##1092
+			..accept In Defense of the King's Lands(4)##217
+		step
+			goto Loch Modan,35.23,84.07
+			.info Inside the cave.
+			.kill Grawmug##1205|q 217/1|at 34.8,90.5
+			.kill Gnasher##1206|q 217/2|at 34.8,90.5
+			.kill Brawler##1207|q 217/3|at 34.8,90.5
+		step
+			goto Loch Modan,23.2,73.7
+			.talk Captain Rugelfuss##1092
+			..turnin In Defense of the King's Lands(4)##217
+		step
+			goto Loch Modan,52.2,69.3
+			.goal Find Huldar, Miran, and Saean|q 273/1
+		step
+			goto Loch Modan,52.2,69.3
+			.talk Huldar##2057
+			..turnin Resupplying the Excavation##273
+			..accept After the Ambush##454
+		step
+			goto Loch Modan,52.2,69.4
+			.talk Miran##1379
+			..turnin After the Ambush##454
+			..accept Protecting the Shipment##309
+		step
+			goto Loch Modan,65.2,65.87
+			.goal Escort Miran to the excavation site|q 309/1
+		step
+			goto Loch Modan,65.9,65.6
+			.talk Prospector Ironband##1344
+			..turnin Protecting the Shipment##309
+		step
+			goto Loch Modan,63.6,47.9
+			.talk Bingles Blastenheimer##6577
+			..turnin Find Bingles##2039
+			..accept Bingles' Missing Supplies##2038
+		step
+			goto Loch Modan,55.2,54
+			.from Loch Crocolisk##1693+
+			.get 5 Crocolisk Meat|q 385/1
+			.get 6 Crocolisk Skin|q 385/2
+		step
+			goto Loch Modan,48.7,30.1
+			.' Click Bingles's Toolbucket
+			.info It's a little silver bucket on the ground.
+			.get Bingles' Wrench|q 2038/1
+		step
+			goto Loch Modan,54.2,26.6
+			.' Click Bingles' Blastencapper
+			.info It's the little bitty barrel to the right of the hut entrance with a fuse on it.
+			.get Bingles' Blastencapper|q 2038/4
+		step
+			goto Loch Modan,51.8,24.1
+			.' Click Bingles's Toolbucket
+			.info It's a little silver bucket on the ground.
+			.get Bingles' Hammer|q 2038/3
+		step
+			goto Loch Modan,48.1,21.1
+			.' Click Bingles' Toolbucket
+			.info It's a little silver bucket on the ground.
+			.get Bingles' Screwdriver|q 2038/2
+		step
+			goto Loch Modan,46,13.6
+			.talk Chief Engineer Hinderweir VII##1093
+			..accept A Dark Threat Looms (1)##250
+		step
+			goto Loch Modan,56,13.3
+			.' Interact with gameobject: Suspicious Barrel
+			.info Its a little barrel sitting on the ground right next to the wall.
+			..turnin A Dark Threat Looms (1)##250
+			..accept A Dark Threat Looms (2)##199
+		step
+			goto Loch Modan,46,13.6
+			.talk Chief Engineer Hinderweir VII##1093
+			..turnin A Dark Threat Looms (2)##199
+			..accept A Dark Threat Looms (3)##161
+		step
+			goto Wetlands,50,18.2
+			.talk Ashlan Stonesmirk##1073
+			..turnin A Dark Threat Looms (3)##161
+			..accept A Dark Threat Looms (4)##274
+		step
+			goto Loch Modan,46,13.6
+			.talk Chief Engineer Hinderweir VII##1093
+			..turnin A Dark Threat Looms (4)##274
+			..accept A Dark Threat Looms (5)##278
+		step
+			goto Loch Modan,74.5,19.8
+			.from Chok'sul##1210
+			.get Chok'sul's Head##2561|q 256/1|at 79.6,14.7
+		step
+			goto Loch Modan,71.8,23.8
+			.kill 4 Mo'grosh Ogre|q 255/1
+			.kill 4 Mo'grosh Brute|q 255/2
+			.kill 4 Mo'grosh Enforcer|q 255/3
+		step
+			goto Loch Modan,70.5,22.5
+			.from Mo'grosh Ogre##1178, Mo'grosh Enforcer##1179, Mo'grosh Brute##1180, Mo'grosh Shaman##1181, Mo'grosh Mystic##1183
+			.get Mo'grosh Crystal##2607|q 278/2
+		step
+			goto Loch Modan,60.85,23.1
+			.from Cliff Lurker##1184, Wood Lurker##1185, Forest Lurker##1195
+			.get Lurker Venom##2606|q 278/1
+			.' You can find more around (1)|at 75.3,37.25
+			.' You can find more around (2)|at 65.8,52
+		step
+			goto Loch Modan,54.95,54.45
+			.from Loch Crocolisk##1693
+			.get Crocolisk Tear##2939|q 278/3
+			.' You can find more around|at 54.9,38.4
+		step
+			goto Loch Modan,46,13.6
+			.talk Chief Engineer Hinderweir VII##1093
+			..turnin A Dark Threat Looms (5)##278
+			..accept A Dark Threat Looms (6)##280
+		step
+			goto Loch Modan,50.6,14.3
+			.' Interact with gameobject: Explosive Charge
+			..turnin A Dark Threat Looms (6)##280
+			..accept A Dark Threat Looms (7)##283
+		step
+			goto Loch Modan,46,13.6
+			.talk Chief Engineer Hinderweir VII##1093
+			..turnin A Dark Threat Looms (7)##283
+		step
+			goto Loch Modan,63.6,47.9
+			.talk Bingles Blastenheimer##6577
+			..turnin Bingles' Missing Supplies##2038
+		step
+			goto Loch Modan,81.8,61.7
+			.talk Marek Ironheart##1154
+			..turnin Crocolisk Hunting##385
+		step
+			goto Loch Modan,83.5,65.5
+			.talk Daryl the Youngling##1187
+			..turnin Vyrin's Revenge (1)##271
+			..accept Vyrin's Revenge (2)##531
+		step
+			goto Loch Modan,81.7,64.2
+			.talk Vyrin Swiftwind##1156
+			..turnin Vyrin's Revenge (2)##531
+		step
+			goto Loch Modan,34.7,43.2
+			.talk Magistrate Bluntnose##1139
+			..turnin Mercenaries##255
+			..turnin WANTED: Chok'sul##256
+		step
+			goto Stormwind City,64.6,37.2
+			.talk Furen Longbeard##5413
+			..turnin Stormpike's Order##1338
+		step
+			goto Stormwind City,62.6,34.1
+			.talk Shoni the Shilent##6579
+			..turnin Speak with Shoni##2041
+			.info Dungeon: Deadmines Quest Chain.
+		step
+			.' Congratulations! +38 quests for achievement "Loremaster of Eastern Kingdoms".
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[30] Wetlands",[[
+author danaton
+description This guide contain quest-chain (48 quests) for Wetlands location.
+startlevel 30
 		step
 			.' First you need to complete the Duskwood quest chain.
 			.info Skip this step manually.
@@ -1375,21 +3611,429 @@ startlevel 60
 			.talk Bishop Farthing##1212
 			..accept The Doomed Fleet##270
 		step
-			goto Stormwind,51.1,95.5
+			goto Stormwind City,50.4,87.5
+			.talk Archmage Malin##2708
+			..accept Malin's Request##690
+		step
+			goto Stormwind City,51.1,95.5
 			.talk Connor Rivers##5081
 			..accept James Hyal (1)##1301
 		step
 			goto Stormwind City,66,74.1
 			.talk Elling Trias##482
 			..accept The Missing Diplomat(10)##1248
+		step
+			goto Loch Modan,34.3,47.7
+			.talk Mountaineer Kadrell##1340
+			..accept Report to Mountaineer Rockgar##468
+		step
+			goto Loch Modan,25.4,10.4
+			.talk Mountaineer Rockgar##1342
+			..turnin Report to Mountaineer Rockgar##468
+			..accept The Algaz Gauntlet##455
+		step
+			goto Wetlands,49.7,79.5
+			.kill 8 Dragonmaw Scout|q 455/2
+			.kill 6 Dragonmaw Grunt|q 455/3
+		step
+			goto Wetlands,53.9,70.3
+			.goal Traverse Dun Algaz|q 455/1
+		step
+			goto Wetlands,49.9,39.4
+			.talk Einar Stonegrip##2093
+			..accept Daily Delivery##469
+		step
+			goto Wetlands,11.5,52.2
+			.talk Tarrel Rockweaver##2096
+			..accept In Search of The Excavation Team (1)##305
+		step
+			goto Wetlands,10.8,55.9
+			.talk Harlo Barnaby##2097
+			..accept Fall of Dun Modr##472
+		step
+			goto Wetlands,8.5,55.7
+			.talk James Halloran##2094
+			..turnin Daily Delivery##469
+			..accept Young Crocolisk Skins##484
+		step
+			goto Wetlands,8.3,58.6
+			.talk Karl Boran##1242
+			..accept Claws from the Deep##279
+		step
+			goto Wetlands,8.4,61.8
+			.talk Vincent Hyal##5082
+			..turnin James Hyal##1301
+		step
+			goto Wetlands,10.9,59.6
+			.talk First Mate Fitzsimmons##1239
+			..accept The Third Fleet##288
+			..accept The Greenwarden##463
+		step
+			goto Wetlands,10.6,60.6
+			.talk Glorin Steelbrow##1217
+			..turnin The Doomed Fleet##270
+			..accept Lightforge Iron##321
+		step
+			goto Wetlands,10.6,60.8
+			.talk Mikhail##4963
+			..turnin The Missing Diplomat(10)##1248
+			..accept The Missing Diplomat(11)##1249
+		step
+			goto Wetlands,10.8,59.6
+			.goal Defeat Tapoke Jahn|q 1249/1
+			.info Rogue is invisible and sneaks towards the exit.
+		step
+			goto Wetlands,10.6,60.8
+			.talk Mikhail##4963
+			..turnin The Missing Diplomat(11)##1249
+		step
+			goto Wetlands,10.8,60.8
+			.talk Innkeeper Helbrek##1464
+			.buy Flagon of Mead##2594|q 288/1
+		step
+			goto Wetlands,10.5,60.3
+			.talk Tapoke "Slim" Jahn##4962
+			..accept The Missing Diplomat (12)##1250
+		step
+			goto Wetlands,10.6,60.8
+			.talk Mikhail##4963
+			..turnin The Missing Diplomat (12)##1250
+		step
+			goto Wetlands,10.9,59.6
+			.talk First Mate Fitzsimmons##1239
+			..turnin The Third Fleet##288
+			..accept The Cursed Crew##289
+		step
+			goto Wetlands,11.8,58
+			.talk Sida##2111
+			..accept Digging Through the Ooze##470
+		step
+			goto Wetlands,10.1,56.9
+			.talk Valstag Ironjaw##2086
+			..turnin The Algaz Gauntlet##455
+			..accept Report to Captain Stoutfist##473
+		step
+			goto Wetlands,9.9,57.5
+			.talk Captain Stoutfist##2104
+			..turnin Report to Captain Stoutfist##473
+			..accept War Banners##464
+		step
+			goto Wetlands,12.1,64.2
+			.' Interact with gameobject: Waterlogged Chest
+			..turnin Lightforge Iron##321
+			..accept The Lost Ingots##324
+		step
+			goto Wetlands,10.15,70.99
+			.from Bluegill Raider##1418
+			.get 5 Lightforge Ingot##2702|q 324/1
+		step
+			goto Wetlands,18.8,47.7
+			.from Young Wetlands Crocolisk##1417
+			.get 4 Young Crocolisk Skin|q 484/1
+			.' You can find more around|at 33.15,35.9
+		step
+			goto Wetlands,18.9,40.3
+			.from Gobbler##1259
+			.get Gobbler's Head|q 279/2
+		step
+			goto Wetlands,13.8,41.9
+			.kill 12 Bluegill Murloc|q 279/1
+		step
+			goto Wetlands,14.1,30.1
+			.from First Mate Snellig##1159
+			.get Snellig's Snuffbox|q 289/3
+			.info Go downstairs in the ship.
+		step
+			goto Wetlands,14.1,29.3
+			.kill 13 Cursed Sailor|q 289/1
+			.kill 5 Cursed Marine|q 289/2
+		step
+			goto Wetlands,44.3,25.5
+			.from Crimson Ooze##1031, Black Ooze##1032
+			.get Sida's Bag|q 470/1
+		step
+			goto Wetlands,49.8,18.3
+			.talk Longbraid the Grim##1071
+			..turnin Fall of Dun Modr##472
+			..accept A Grim Task##304
+		step
+			goto Wetlands,49.9,18.2
+			.talk Rhag Garmason##1075
+			..accept The Thandol Span (1)##631
+		step
+			goto Wetlands,49.7,18.2
+			.talk Motley Garmason##1074
+			..accept The Dark Iron War##303
+		step
+			goto Wetlands,62.5,28.4
+			.from Balgaras the Foul##1364
+			.get Ear of Balgaras|q 304/1
+		step
+			goto Wetlands,62.2,28.3
+			.kill 10 Dark Iron Dwarf|q 303/1
+			.kill 5 Dark Iron Tunneler|q 303/2
+			.kill 5 Dark Iron Saboteur|q 303/3
+			.kill 5 Dark Iron Demolitionist|q 303/4
+			.' You can find more around|at 47.8,16.9
+		step
+			goto Wetlands,49.8,18.3
+			.talk Longbraid the Grim##1071
+			..turnin A Grim Task##304
+		step
+			goto Wetlands,50,18.2
+			.talk Motley Garmason##1074
+			..turnin The Dark Iron War##303
+		step
+			goto Wetlands,51.3,8
+			.' Interact with gameobject: Ebenezer Rustlocke's Corpse
+			.info Down the passage to the right in the middle of the bridge, all the way downstairs.
+			..turnin The Thandol Span (1)##631
+			..accept The Thandol Span (2)##632
+		step
+			goto Wetlands,49.8,18.3
+			.talk Rhag Garmason##1075
+			..turnin The Thandol Span (2)##632
+			..accept The Thandol Span (3)##633
+		step
+			goto Arathi Highlands,48.8,88.1
+			.' Click the Cache of Explosives
+			.info To the right across the hanging bridge after walking across the big bridge from the Wetlands.
+			.goal Cache of Explosives Destroyed|q 633/1
+		step
+			goto Wetlands,49.8,18.3
+			.talk Rhag Garmason##1075
+			..turnin The Thandol Span (3)##633
+			..accept Plea To The Alliance##634
+		step
+			goto Arathi Highlands,45.8,47.6
+			.talk Captain Nials##2700
+			..turnin Plea To The Alliance##634
+		step
+			goto Arathi Highlands,46.7,47
+			.talk Skuerto##2789
+			..turnin Malin's Request##690
+		step
+			goto Wetlands,10.9,59.6
+			.talk First Mate Fitzsimmons##1239
+			..turnin The Cursed Crew##289
+			..accept Lifting the Curse##290
+		step
+			goto Wetlands,10.6,60.6
+			.talk Glorin Steelbrow##1217
+			..turnin The Lost Ingots##324
+			..accept Blessed Arm##322
+		step
+			goto Wetlands,11.8,58
+			.talk Sida##2111
+			..turnin Digging Through the Ooze##470
+		step
+			goto Wetlands,8.5,55.7
+			.talk James Halloran##2094
+			..turnin Young Crocolisk Skins##484
+			..accept Apprentice's Duties##471
+		step
+			goto Wetlands,8.3,58.6
+			.talk Karl Boran##1242
+			..turnin Claws from the Deep##279
+			..accept Reclaiming Goods##281
+		step
+			goto Wetlands,13.5,41.4
+			.' Click the Damaged Crate on the ground by the murloc huts
+			..turnin Reclaiming Goods##281
+			..accept The Search Continues##284
+		step
+			goto Wetlands,13.6,38.2
+			.' Click the Sealed Barrel on the ground next to the murloc huts
+			..turnin The Search Continues##284
+			..accept Search More Hovels##285
+		step
+			goto Wetlands,13.9,34.8
+			.' Click the Half-buried Barrel next to the murloc hut
+			..turnin Search More Hovels##285
+			..accept Return the Statuette##286
+		step
+			goto Wetlands,15.5,23.5
+			.from Captain Halyndor##1160
+			.get Intrepid Strongbox Key|q 290/1
+		step
+			goto Wetlands,14.4,24
+			.info Go underwater to the bottom of the ship.
+			.' Click Intrepid's Locked Strongbox
+			.info At the very bottom of this sunken ship, underwater. It looks like a small metal chest.
+			..turnin Lifting the Curse##290
+			..accept The Eye of Paleth##292
+		step
+			goto Wetlands,18.5,27.3
+			.from Giant Wetlands Crocolisks##2089
+			.get 6 Giant Crocolisk Skin|q 471/1
+		step
+			goto Wetlands,38.1,51.1
+			.talk Ormer Ironbraid##1078
+			..accept Ormer's Revenge (1)##294
+		step
+			goto Wetlands,38.8,52.3
+			.talk Merrin Rockweaver##1076
+			..turnin In Search of The Excavation Team (1)##305
+			..accept In Search of The Excavation Team (2)##306
+		step
+			goto Wetlands,38.8,52.4
+			.talk Prospector Whelgar##1077
+			..accept Uncovering the Past##299
+		step
+			goto Wetlands,24.8,50.15
+			.kill 10 Mottled Raptor|q 294/1
+			.kill 10 Mottled Screecher|q 294/2
+		step
+			goto Wetlands,38.1,51.1
+			.talk Ormer Ironbraid##1078
+			..turnin Ormer's Revenge (1)##294
+			..accept Ormer's Revenge (2)##295
+		step
+			goto Wetlands,34.8,45.4
+			.kill 10 Mottled Scytheclaw|q 295/1
+			.kill 10 Mottled Razormaw|q 295/2
+			.' Get the 4 Relics that spawn randomly in different places around this area. They can spawn up the hill next to Sarltooth also:
+			.get Ados Fragment##2658|q 299/1
+			.info The Ados Fragment looks like a big stone box.
+			.get Modr Fragment##2659|q 299/2
+			.info The Modr Fragment looks like a thin, tall red vase with a yellow face on it.
+			.get Golm Fragment##2660|q 299/3
+			.info The Golm Fragment looks like a wide yellow vase with black silhouettes on it.
+			.get Neru Fragment##2661|q 299/4
+			.info The Neru Fragment looks like a mound of dirt.
+		step
+			goto Wetlands,38.1,51.1
+			.talk Ormer Ironbraid##1078
+			..turnin Ormer's Revenge (2)##295
+			..accept Ormer's Revenge (3)##296
+		step
+			goto Wetlands,38.8,52.3
+			.talk Prospector Whelgar##1077
+			..turnin Uncovering the Past##299
+		step
+			goto Wetlands,33.2,51.4
+			.from Sarltooth##1353
+			.get Sarltooth's Talon|q 296/1
+		step
+			goto Wetlands,38.1,51.1
+			.talk Ormer Ironbraid##1078
+			..turnin Ormer's Revenge (3)##296
+		step
+			goto Wetlands,42.9,41.2
+			.from Dragonmaw Raider##1034
+			.get 8 Dragonmaw War Banner|q 464/1
+		step
+			goto Wetlands,56.3,40.5
+			.talk Rethiel the Greenwarden##1244
+			..turnin The Greenwarden##463
+			..accept Tramping Paws##276
+		step
+			goto Wetlands,63.9,61.8
+			.kill 15 Mosshide Gnoll|q 276/1
+			.kill 10 Mosshide Mongrel|q 276/2
+		step
+			goto Wetlands,56.3,40.5
+			.talk Rethiel the Greenwarden##1244
+			..turnin Tramping Paws##276
+			..accept Fire Taboo##277
+		step
+			goto Wetlands,46.4,35.3
+			.from Mosshide Mistweaver##1009, Mosshide Fenrunner##1010, Mosshide Trapper##1011, Mosshide Brute##1012
+			.info Mosshide Gnolls and Mosshide Mongrels will not drop the Crude Flint.
+			.get 9 Crude Flint##2611|q 277/1
+		step
+			goto Wetlands,56.3,40.5
+			.talk Rethiel the Greenwarden##1244
+			..turnin Fire Taboo##277
+			..accept Blisters on The Land##275
+		step
+			goto Wetlands,47,34.74
+			.kill 8 Fen Creeper|q 275/1
+			.' You can find more around|at 22.75,28.8
+		step
+			goto Wetlands,11.5,52.2
+			.talk Tarrel Rockweaver##2096
+			..turnin In Search of The Excavation Team (2)##306
+		step
+			goto Wetlands,9.9,57.5
+			.talk Captain Stoutfist##2104
+			..turnin War Banners##464
+			..accept Nek'rosh's Gambit##465
+		step
+			goto Wetlands,8.5,55.7
+			.talk James Halloran##2094
+			..turnin Apprentice's Duties##471
+		step
+			goto Wetlands,8.3,58.6
+			.talk Karl Boran##1242
+			..turnin Return the Statuette##286
+		step
+			goto Wetlands,10.6,60.6
+			.talk Glorin Steelbrow##1217
+			..turnin The Eye of Paleth##292
+			..accept Cleansing the Eye##293
+		step
+			goto Wetlands,47.5,46.9
+			.' Interact with gameobject: Dragonmaw Catapult
+			..turnin Nek'rosh's Gambit##465
+			..accept Defeat Nek'rosh##474
+		step
+			goto Wetlands,53.5,54.7
+			.from Chieftain Nek'rosh##2091
+			.get Nek'rosh's Head|q 474/1
+		step
+			goto Wetlands,56.3,40.5
+			.talk Rethiel the Greenwarden##1244
+			..turnin Blisters on The Land##275
+		step
+			goto Wetlands,9.9,57.5
+			.talk Captain Stoutfist##2104
+			..turnin Defeat Nek'rosh##474
+		step
+			goto Stormwind City,50.3,45.5
+			.talk Archbishop Benedictus##1284
+			..turnin Cleansing the Eye##293
+		step
+			goto Stormwind City,59.7,33.8
+			.talk Grimand Elmore##1416
+			..turnin Blessed Arm##322
+			..accept Armed and Ready##325
+		step
+			goto Duskwood,7.8,34.1
+			.talk Sven Yorgen##311
+			..turnin Armed and Ready##325
+			..accept Morbent Fel##55
+		step
+			goto Duskwood,16.9,33.4
+			.kill Morbent Fel##1200|q 55/1
+		step
+			goto Duskwood,7.8,34.1
+			.talk Sven Yorgen##311
+			..turnin Morbent Fel##55
+		step
+			.' Congratulations! +48 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[none] Hillsbrad Foothills",[[
 author danaton
 description This guide contain quest-chain (?? quests) for Hillsbrad Foothills location.
-startlevel 60
+startlevel 40
 		step
 			.' First you need to complete the Duskwood quest chain.
+			.info Skip this step manually.
+			.' +543 quest
+		step
+			goto Stormwind City,77.1,30.2
+			.talk Milton Sheaf##1440
+			..accept Southshore##538
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[none] Arathi Highlands",[[
+author danaton
+description This guide contain quest-chain (?? quests) for Arathi Highlands location.
+startlevel 40
+		step
+			.' First you need to complete the Hillsbrad Foothills quest chain.
 			.info Skip this step manually.
 		step
 			goto Stormwind City,77.1,30.2

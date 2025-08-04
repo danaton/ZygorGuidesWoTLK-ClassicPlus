@@ -2,361 +2,13 @@
 if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Alliance" then return end
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[10] Elwynn Forest",[[
-author danaton
-description This guide contain quest-chain (45 quests) for Elwynn Forest location.
-startlevel 10
-		step
-			goto Elwynn Forest,48.1,43.6
-			.talk Deputy Willem##823
-			..accept A Threat Within##783
-		step
-			goto Elwynn Forest,48.9,41.6
-			.talk Marshal McBride##197
-			..turnin A Threat Within##783
-			..accept Kobold Camp Cleanup##7
-		step
-			goto Elwynn Forest,48.1,43.6
-			.talk Deputy Willem##823
-			..accept Eagan Peltskinner##5261
-		step
-			goto Elwynn Forest,48.9,40.2
-			.talk Eagan Peltskinner##196
-			..turnin Eagan Peltskinner##5261
-			..accept Wolves Across the Border##33
-		step
-			goto Elwynn Forest,47.4,39.7
-			.from Diseased Young Wolf##299+
-			.get 8 Diseased Wolf Pelt|q 33/1
-		step
-			goto Elwynn Forest,47.9,37.1
-			.kill 8 Kobold Vermin|q 7/1
-		step
-			goto Elwynn Forest,48.9,40.2
-			.talk Eagan Peltskinner##196
-			..turnin Wolves Across the Border##33
-		step
-			goto Elwynn Forest,48.9,41.6
-			.talk Marshal McBride##197
-			..turnin Kobold Camp Cleanup##7
-			..accept Investigate Echo Ridge##15
-		step
-			goto Elwynn Forest,48.1,43.6
-			.talk Deputy Willem##823
-			..accept Brotherhood of Thieves##18
-		step
-			goto Elwynn Forest,51.3,37.0
-			.kill 10 Kobold Workers|q 15/1
-		step
-			goto Elwynn Forest,54.3,41
-			.from Defias Thug##38+
-			.get 12 Red Burlap Bandana|q 18/1
-		step
-			goto Elwynn Forest,48.1,43.6
-			.talk Deputy Willem##823
-			..turnin Brotherhood of Thieves##18
-			..accept Milly Osworth##3903
-			..accept Bounty on Garrick Padfoot##6
-		step
-			goto Elwynn Forest,48.9,41.6
-			.talk Marshal McBride##197
-			..turnin Investigate Echo Ridge##15
-			..accept Skirmish at Echo Ridge##21
-		step
-			goto Elwynn Forest,50.7,39.3
-			.talk Milly Osworth##9296
-			..turnin Milly Osworth##3903
-			..accept Milly's Harvest##3904
-		step
-			goto Elwynn Forest,53.6,47.3
-			.' Click Milly's Harvest barrels around the vineyard|tip Milly's Harvest look like barrels of grapes.
-			.get 8 Milly's Harvest|q 3904/1
-		step
-			goto Elwynn Forest,57.5,48.3
-			.from Garrick Padfoot##103
-			.get Garrick's Head|q 6/1
-		step
-			goto Elwynn Forest,50.7,39.3
-			.talk Milly Osworth##9296
-			..turnin Milly's Harvest##3904
-			..accept Grape Manifest##3905
-		step
-			goto Elwynn Forest,48.1,43.6
-			.talk Deputy Willem##823
-			..turnin Bounty on Garrick Padfoot##6
-		step
-			goto Elwynn Forest,49.5,41.6
-			.talk Brother Neals##952
-			..turnin Grape Manifest##3905
-		step
-			goto Elwynn Forest,47.7,32
-			.kill 12 Kobold Laborer##80|q 21/1
-		step
-			goto Elwynn Forest,48.9,41.6
-			.talk Marshal McBride##197
-			..turnin Skirmish at Echo Ridge##21
-			..accept Report to Goldshire##54
-		step
-			goto Elwynn Forest,45.6,47.7
-			.talk Falkhaan Isenstrider##6774
-			..accept Rest and Relaxation##2158
-		step
-			goto Elwynn Forest,43.8,65.8
-			.talk Innkeeper Farley##295
-			..turnin Rest and Relaxation##2158
-		step
-			goto Elwynn Forest,43.3,65.7
-			.talk William Pestle##253
-			..accept Kobold Candles##60
-		step
-			goto Elwynn Forest,42.1,65.9
-			.talk Marshal Dughan##240
-			..turnin Report to Goldshire##54
-			..accept The Fargodeep Mine##62
-		step
-			goto Elwynn Forest,42.1,67.3
-			.talk Remy "Two Times"##241
-			..accept Gold Dust Exchange##47
-		step
-			goto Elwynn Forest,43.2,89.6
-			.talk Maybell Maclure##251
-			..accept Young Lovers##106
-		step
-			.' Go To Low Entrance Mine|at 38.1,81.5
-			.' Scout through the Fargodeep Mine|at 40.75,81.70|q 62/1
-		step
-			goto Elwynn Forest,38.2,83.2
-			.from Kobold Miner##40+, Kobold Tunneler##475+, Kobold Geomancer##476+
-			.get 8 Large Candle##772|q 60/1
-			.get 10 Gold Dust##773|q 47/1
-		step
-			goto Elwynn Forest,34.7,84.5
-			.talk Ma Stonefield##244
-			..accept Princess Must Die!##88
-		step
-			goto Elwynn Forest,34.5,84.3
-			.talk "Auntie" Bernice Stonefield##246
-			..accept Lost Necklace##85
-		step
-			goto Elwynn Forest,29.8,86.0
-			.talk Tommy Joe Stonefield##252
-			..turnin Young Lovers##106
-			..accept Speak with Gramma##111
-		step
-			goto Elwynn Forest,34.9,83.9
-			.talk Gramma Stonefield##248
-			..turnin Speak with Gramma##111
-			..accept Note to William##107
-		step
-			goto Elwynn Forest,43.1,85.7
-			.talk Billy Maclure##247
-			..turnin Lost Necklace##85
-			..accept Pie for Billy##86
-		step
-			goto Elwynn Forest,41.8,86.9
-			.from Stonetusk Boar##113
-			.get 4 Chunk of Boar Meat##769|q 86/1
-		step
-			goto Elwynn Forest,34.5,84.3
-			.talk "Auntie" Bernice Stonefield##246
-			..turnin Pie for Billy##86
-			..accept Back to Billy##84
-		step
-			goto Elwynn Forest,43.1,85.7
-			.talk Billy Maclure##247
-			..turnin Back to Billy##84
-			..accept Goldtooth##87
-		step
-			.' Go To High Entrance Mine|at 39.09,82.5
-			.' Go To Left Tunnel|at 39.79,79.25
-			.from Goldtooth##327
-			.get Bernice's Necklace##981|q 87/1
-		step
-			goto Elwynn Forest,34.5,84.3
-			.talk "Auntie" Bernice Stonefield##246
-			..turnin Goldtooth##87
-		step
-			goto Elwynn Forest,42.1,67.3
-			.talk Remy "Two Times"##241
-			..turnin Gold Dust Exchange##47
-			..accept A Fishy Peril##40
-		step
-			goto Elwynn Forest,42.1,65.9
-			.talk Marshal Dughan##240
-			..turnin A Fishy Peril##40
-			..accept Further Concerns##35
-			..turnin The Fargodeep Mine##62
-			..accept The Jasperlode Mine##76
-		step
-			goto Elwynn Forest,43.3,65.7
-			.talk William Pestle##253
-			..turnin Kobold Candles##60
-			..accept Shipment to Stormwind##61
-			..turnin Note to William##107
-			..accept Collecting Kelp##112
-		step
-			goto Elwynn Forest,52.94,64.72
-			.from Murloc##285+, Murloc Streamrunner##735+
-			.get 4 Crystal Kelp Frond##1256|q 112/1
-		step
-			goto Elwynn Forest,61.8,54.2
-			.' Scout through the Jasperlode Mine|at 60.3,49.6|q 76/1
-		step
-			goto Elwynn Forest,69.6,79.7
-			.from Princess##330+
-			.get Brass Collar##1006|q 88/1
-		step
-			goto Elwynn Forest,42.1,65.9
-			.talk Marshal Dughan##240
-			..turnin The Jasperlode Mine##76
-			..accept Westbrook Garrison Needs Help!##239
-		step
-			goto Elwynn Forest,43.3,65.7
-			.talk William Pestle##253
-			..turnin Collecting Kelp##112
-			..accept The Escape##114
-		step
-			goto Elwynn Forest,34.7,84.5
-			.talk Ma Stonefield##244
-			..turnin Princess Must Die!##88
-		step
-			goto Elwynn Forest,24.56,78.22
-			.' Click Wanted Poster
-			..accept Wanted: "Hogger"##176
-		step
-			goto Elwynn Forest,24.2,74.4
-			.talk Deputy Rainer##963
-			..turnin Westbrook Garrison Needs Help!##239
-			..accept Riverpaw Gnoll Bounty##11
-		step
-			goto Elwynn Forest,26.4,93.6
-			.from Hogger##448+
-			.get 1 Huge Gnoll Claw##1931|q 176/1
-		step
-			goto Elwynn Forest,26.5,86.6
-			.from Riverpaw Runt##97+, Riverpaw Outrunner##478+
-			.get 8 Painted Gnoll Armband##782|q 11/1
-			..collect 1 Gold Pickup Schedule##1307|q 123 |future |sticky
-			..accept The Collector##123
-		step
-			goto Elwynn Forest,24.2,74.4
-			.talk Deputy Rainer##963
-			..turnin Riverpaw Gnoll Bounty##11
-		step
-			goto Elwynn Forest,42.1,65.9
-			.talk Marshal Dughan##240
-			..turnin The Collector##123
-			..accept Manhunt##147
-			..turnin Wanted: "Hogger"##176
-		step
-			goto Elwynn Forest,43.2,89.6
-			.talk Maybell Maclure##251
-			..turnin The Escape##114
-		step
-			goto Elwynn Forest,74,72.2
-			.talk Guard Thomas##261
-			..turnin Further Concerns##35
-			..accept Find the Lost Guards##37
-			..accept Bounty on Murlocs##46
-			..accept Protect the Frontier##52
-		step
-			goto Elwynn Forest,72.7,60.3
-			.talk A half-eaten body|n
-			..turnin Find the Lost Guards##37
-			..accept Discover Rolf's Fate##45
-		step
-			goto Elwynn Forest,79.8,55.5
-			.talk Rolf's corpse|n
-			..turnin Discover Rolf's Fate##45
-			..accept Report to Thomas##71
-		step
-			goto Elwynn Forest,79.1,55.7
-			.from Murloc Forager##46+, Murloc Lurker##732+
-			.get 8 Torn Murloc Fin##780|q 46/1
-		step
-			goto Elwynn Forest,81.4,66.1
-			.talk Supervisor Raelen##10616
-			..accept A Bundle of Trouble##5545
-		step
-			goto Elwynn Forest,79.5,68.8
-			.talk Sara Timberlain##278
-			..accept Red Linen Goods##83
-		step
-			goto Elwynn Forest,81.3,60.6
-			.' Click the small stacks of wood at the base of trees|tip They look like little stacks of 3 firewood at the base of trees in this area.
-			.get 8 Bundle of Wood|q 5545/1
-		step
-			goto Elwynn Forest,82.6,59.1
-			.kill 8 Prowler|q 52/1
-			.kill 5 Young Forest Bear|q 52/2
-			.' Mobs POS 2|at 80,77.8
-		step
-			goto Elwynn Forest,71.1,80.6
-			.from Morgan the Collector##473+
-			.get The Collector's Ring##2239|q 147/1
-		step
-			goto Elwynn Forest,70.6,76.3
-			.from Defias Bandit##116+
-			.get 6 Red Linen Bandana|q 83/1
-			..collect 1 Westfall Deed##1972+|q 184 |future |sticky |tip Try to drop or manually skip
-			..accept Furlbrow's Deed##184
-			.' Mobs POS 2|at 74.7,51.6
-		step
-			goto Elwynn Forest,74,72.2
-			.talk Guard Thomas##261
-			..turnin Bounty on Murlocs##46
-			..turnin Report to Thomas##71
-			..turnin Protect the Frontier##52
-			..accept Deliver Thomas' Report##39
-		step
-			goto Elwynn Forest,79.5,68.8
-			.talk Sara Timberlain##278
-			..turnin Red Linen Goods##83
-		step
-			goto Elwynn Forest,81.4,66.1
-			.talk Supervisor Raelen##10616
-			..turnin A Bundle of Trouble##5545
-		step
-			goto Elwynn Forest,42.1,65.9
-			.talk Marshal Dughan##240
-			..turnin Deliver Thomas' Report##39
-			..accept Cloth and Leather Armor##59
-			..turnin Manhunt##147
-		step
-			goto Elwynn Forest,41.7,65.5
-			.talk Smith Argus##514
-			..accept Elmore's Task##1097
-		step
-			goto Stormwind City,63.2,74.4
-			.talk Morgan Pestle##279
-			..turnin Shipment to Stormwind##61
-		step
-			goto Stormwind City,59.7,33.8
-			.talk Grimand Elmore##1416
-			..turnin Elmore's Task##1097
-		step
-			goto Elwynn Forest,42.1,65.9
-			.talk Marshal Dughan##240
-			..turnin Wanted: "Hogger"##176
-		step
-			goto Elwynn Forest,79.5,68.8
-			.talk Sara Timberlain##278
-			..turnin Cloth and Leather Armor##59
-		step
-			goto Westfall,60,19.4
-			.talk Farmer Furlbrow##237
-			..turnin Furlbrow's Deed##184
-		step
-			.' Congratulations! +45 quests for achievement "Loremaster of Eastern Kingdoms".
-			.info Use next guide - Westfall.
-]])
-
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[20] Westfall",[[
 author danaton
 description This guide contain quest-chain (26 quests + 4 if Human race) for Westfall location.
 startlevel 20
 		step
-			.' First completed Elwynn Forest guide|tip Manually skip this step
+			.' First you need to complete the Elwynn Forest quest chain.
+			.info Skip this step manually.
 		step
 			goto Stormwind City,57.7,47.9
 			.talk Baros Alexston##1646
@@ -369,25 +21,30 @@ startlevel 20
 			goto Westfall,60,19.4
 			.talk Farmer Furlbrow##237
 			..accept The Forgotten Heirloom##64
+		step
+			goto Westfall,60,19.4
 			.talk Verna Furlbrow##238
 			..accept Westfall Stew(1)##36
 			..accept Poor Old Blanchy##151
 		step
 			goto Westfall,49.42,19.23
-			.get 1 Furlbrow's Pocket Watch|q 64/1|tip Inside the house
+			.get 1 Furlbrow's Pocket Watch|q 64/1
+			.info Inside the house.
 		step
 			.get 8 Handful of Oats|q 151/1
-			Position 1|at 50.10,19.58
-			Position 2|at 49.34,17.95
-			Position-spot 3|at 48.45,20.31|tip Inside the building
-			Position 4|at 54.01,24.94
-			Position 5|at 56.67,18.89
-			Position 6|at 57.36,19.45|tip In the cart
-			Position-spot 7|at 58.33,18.26|tip On the field you can find from 2 to 4 Handful of Oats	
+			.' You can find more around (1)|at 50.10,19.58
+			.' You can find more around (2)|at 49.34,17.95
+			.' You can find more around (3)|at 48.45,20.31|tip Inside the building.
+			.' You can find more around (4)|at 54.01,24.94
+			.' You can find more around (5)|at 56.67,18.89
+			.' You can find more around (6)|at 57.36,19.45|tip In the cart.
+			.' You can find more around (7)|at 58.33,18.26|tip On the field you can find from 2 to 4 Handful of Oats	.
 		step
 			goto Westfall,60,19.4
 			.talk Verna Furlbrow##238
 			..turnin Poor Old Blanchy##151
+		step
+			goto Westfall,60,19.4
 			.talk Farmer Furlbrow##237
 			..turnin The Forgotten Heirloom##64
 		step
@@ -403,7 +60,7 @@ startlevel 20
 		step
 			goto Westfall,51.1,21.8
 			.kill 20 Harvest Watcher|q 9/1
-			.get 3 Okra|q 38/4|tip Do not sell to vendor!
+			.get 3 Okra##732|q 38/4|tip Do not sell to vendor!
 			.from Harvest Watcher##114+
 			.collect 5 Flask of Oil##814|q 103/1 |future
 			.' Flask of Oil needed on the future! Do not sell to vendor!
@@ -412,14 +69,14 @@ startlevel 20
 			.' And a big spot on this field|at 44.87,35.68
 		step
 			goto Westfall,59.02,33.34
-			.from Young Goretusk##454+, Goretusk##157+, Great Goretusk##547+
+			.from Young Goretusk##454, Goretusk##157, Great Goretusk##547
 			.get 8 Goretusk Liver##723|q 22/1|tip Do not sell to vendor!
 			.get 3 Goretusk Snout##731|q 38/3|tip Do not sell to vendor!
-			.' Position 1|at 51.01,36.09
-			.' Position 2|at 59.60,43.53
+			.' You can find more around (1)|at 51.01,36.09
+			.' You can find more around (2)|at 59.60,43.53
 		step
 			goto Westfall,59.05,61.74
-			.from Young Fleshripper##199+, Fleshripper##1109+, Greater Fleshripper##154+
+			.from Young Fleshripper##199, Fleshripper##1109, Greater Fleshripper##154
 			.get 3 Stringy Vulture Meat##729|q 38/1|tip Do not sell to vendor!
 		step
 			goto Westfall,56.0,31.2
@@ -445,23 +102,23 @@ startlevel 20
 			.kill 15 Defias Trapper##504|q 12/1
 			.kill 15 Defias Smuggler##95|q 12/2
 			.collect 15 Red Leather Bandana##829|q 153/1
-			.' Position 1|at 48.65,46.42
-			.' Position 2|at 46.42,38.59
-			.' Position 3|at 50.79,40.61
+			.' You can find more around (1)|at 48.65,46.42
+			.' You can find more around (2)|at 46.42,38.59
+			.' You can find more around (3)|at 50.79,40.61
 		step
 			goto Westfall,57.19,13.32
 			.from Riverpaw Gnoll##117, Riverpaw Brute##124, Riverpaw Overseer##125, Riverpaw Bandit##452, Riverpaw Mystic##453, Riverpaw Scout##500, Riverpaw Herbalist##501
 			.get 8 Gnoll Paw##725|q 102/1
-			.' Position 1|at 52.07,15.41
-			.' Position 2|at 44.9,15
+			.' You can find more around (1)|at 52.07,15.41
+			.' You can find more around (2)|at 44.9,15
 		step
 			goto Westfall,55.17,9.90
 			.from Murloc Coastrunner##126, Murloc Tidehunter##127, Murloc Warrior##171, Murloc Minor Oracle##456, Murloc Hunter##458, Murloc Raider##515, Murloc Oracle##517
 			.get 3 Murloc Eye|q 38/2
-			.' Position 1|at 44.3,9.07
-			.' Position 2|at 35.20,21.60
-			.' Position 3|at 27.6,40.5
-			.' Position 4|at 27.56,70.08
+			.' You can find more around (1)|at 44.3,9.07
+			.' You can find more around (2)|at 35.20,21.60
+			.' You can find more around (3)|at 27.6,40.5
+			.' You can find more around (4)|at 27.56,70.08
 			.' Wait drop on murloc Sanders' Treasure Map
 			..accept Captain Sanders' Hidden Treasure (1)##136|use Captain Sanders' Treasure Map##1357
 		step
@@ -483,7 +140,7 @@ startlevel 20
 			..turnin Red Leather Bandanas##153
 		step
 			goto Westfall,36.4,56.67
-			.' Open chest in destroying home
+			.' Open chest in destroying home.
 			.collect A Simple Compass##1998|q 399/1
 		step
 			goto Westfall,25.9,47.8
@@ -508,8 +165,8 @@ startlevel 20
 			goto Westfall,31.4,44.5
 			.kill 15 Defias Looter|q 13/2
 			.kill 15 Defias Pillager|q 13/1
-			.' Position 1|at 37.1,54.8
-			.' Position 2|at 43,69
+			.' You can find more around (1)|at 37.1,54.8
+			.' You can find more around (2)|at 43,69
 		step
 			goto Westfall,56.3,47.5
 			.talk Gryan Stoutmantle##234
@@ -520,19 +177,6 @@ startlevel 20
 			.kill 15 Defias Highwayman|q 14/1
 			.kill 5 Defias Pathstalker|q 14/2
 			.kill 5 Defias Knuckleduster|q 14/3
-		step
-			goto Westfall,44.6,80.3
-			.talk Grimbooze Thunderbrew##239
-			..accept Thunderbrew Lager##117
-		step
-			goto Westfall,47.19,67.48
-			.from Harvest Golem##36, Harvest Watcher##114
-			.get 5 Hops##1274|q 117/1
-			.' Position 1|at 38.9,52.6
-		step
-			goto Westfall,44.6,80.3
-			.talk Grimbooze Thunderbrew##239
-			..turnin Thunderbrew Lager##117
 		step
 			goto Westfall,30,86
 			.talk Captain Grayson##392
@@ -550,18 +194,18 @@ startlevel 20
 			.kill 7 Murloc Warrior##171|q 152/2
 			.kill 7 Murloc Tidehunter##127|q 152/3
 			.kill 7 Murloc Oracle##517|q 152/4
-			.' Position 1|at 27.56,70.08
-			.' Position 2|at 27.6,40.5
-			.' Position 3|at 35.20,21.60
-			.' Position 4|at 44.3,9.07
-			.' Position 5|at 55.7,9.8
+			.' You can find more around (1)|at 27.56,70.08
+			.' You can find more around (2)|at 27.6,40.5
+			.' You can find more around (3)|at 35.20,21.60
+			.' You can find more around (4)|at 44.3,9.07
+			.' You can find more around (5)|at 55.7,9.8
 		step
 			goto Westfall,51.7,21.7
 			.from Harvest Golem##36, Harvest Watcher##114, Harvest Reaper##115
 			.get 5 Flask of Oil##814|q 103/1
-			.' Position 1|at 53.3,33.6
-			.' Position 2|at 43.8,36.5
-			.' Position 3|at 39.1,52.1
+			.' You can find more around (1)|at 53.3,33.6
+			.' You can find more around (2)|at 43.8,36.5
+			.' You can find more around (3)|at 39.1,52.1
 		step
 			goto Westfall,30,86
 			.talk Captain Grayson##392
@@ -572,25 +216,28 @@ startlevel 20
 			goto Westfall,56.3,47.5
 			.talk Gryan Stoutmantle##234
 			..turnin The People's Militia (3)##14
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
 			..accept The Defias Brotherhood (1)##65
+			.info Dungeon: Deadmines Quest Chain.
 		step
 			goto Westfall,57,47.2
 			.talk Quartermaster Lewis##491
 			..accept A Swift Message##6181
-		only Human
+			only Human
 		step
 			goto Westfall,56.6,52.6
 			.talk Thor##523
 			..turnin A Swift Message##6181
 			..accept Continue to Stormwind##6281
-			.' Fly to Stormwind, Elwynn Forest|goto Stormwind|noway|c
-		only Human
+			only Human
 		step
 			goto Stormwind,77.2,61
 			.talk Osric Strang##1323
 			..turnin Continue to Stormwind##6281
 			..accept Dungar Longdrink##6261
-		only Human
+			only Human
 		step
 			goto Stormwind,57.7,47.9
 			.talk Baros Alexston##1646
@@ -600,436 +247,66 @@ startlevel 20
 			.talk Dungar Longdrink##352
 			..turnin Dungar Longdrink##6261
 			..accept Return to Lewis##6285
-		only Human
-		step
-			goto Stormwind,71,72.5
-			.talk Dungar Longdrink##352
-			.' Fly to Lakeshire, Redridge Mountains|goto Redridge Mountains|noway|c
+			only Human
 		step
 			goto Redridge Mountains,26.5,45.3
 			.talk Wiley the Black##266
 			..turnin The Defias Brotherhood (1)##65
 			..accept The Defias Brotherhood (2)##132
+			.info Dungeon: Deadmines Quest Chain.
 		step
 			goto Westfall,56.3,47.5
 			.talk Gryan Stoutmantle##234
 			..turnin The Defias Brotherhood (2)##132
 			..accept The Defias Brotherhood (3)##135
+			.info Dungeon: Deadmines Quest Chain.
 		step
 			goto Westfall,57,47.2
 			.talk Quartermaster Lewis##491
 			..turnin Return to Lewis##6285
-		only Human
+			only Human
 		step
 			goto Stormwind,78.3,70.7
 			.talk Master Mathias Shaw##332
 			..turnin The Defias Brotherhood (3)##135
 			..accept The Defias Brotherhood (4)##141
+			.info Dungeon: Deadmines Quest Chain.
 		step
 			goto Westfall,56.3,47.5
 			.talk Gryan Stoutmantle##234
 			..turnin The Defias Brotherhood (4)##141
 			..accept The Defias Brotherhood (5)##142
+			.info Dungeon: Deadmines Quest Chain.
 		step
 			goto Westfall,45.70,68.57
 			.from Defias Messenger##550
-			.get 1 A Mysterious Message|q 142/1
-			.' End move POS 36.23,43.97|n
+			.get A Mysterious Message##1381|q 142/1
+			.' Moves variably into this position|at 36.23,43.97
+			.' Or in this position|at 44.5,25.45
+			.info Dungeon: Deadmines Quest Chain.
 		step
 			goto Westfall,56.3,47.5
 			.talk Gryan Stoutmantle##234
 			..turnin The Defias Brotherhood (5)##142
+			.info Dungeon: Deadmines Quest Chain.
 		step
 			goto Westfall,55.68,47.51
 			.talk The Defias Traitor##467
 			..accept The Defias Brotherhood##155
+			.info Dungeon: Deadmines Quest Chain.
 		step
 			.'Follow the Defias Traitor.
 			goto Westfall,42.56,71.71
-			.' Escort The Defias Traitor to discover where VanCleef is hiding.|goal The Defias Brotherhood|q 155/1
+			.goal Escort The Defias Traitor to discover where VanCleef is hiding|q 155/1
+			.info Dungeon: Deadmines Quest Chain.
 		step
 			goto Westfall,56.32,47.54
 			.talk Marshal Gryan Stoutmantle##234
 			..turnin The Defias Brotherhood##155
+			.info Dungeon: Deadmines Quest Chain.
 		step
 			.' Congratulations! +26 quests for achievement "Loremaster of Eastern Kingdoms".
 			.' Next, I recommend running Quest-Instance Guides: Deadmines (15)
-			.info Use next guide - Redridge Mountains.
-]])
-
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[25] Redridge Mountains",[[
-author danaton
-description This guide contain quest-chain (40 quests) for Redridge Mountains location.
-startlevel 25
-		step //1
-			.info First things complete quest-chain Westfall!
-			.info If done, skip manually.
-		step
-			goto Stormwind City,55,54.2
-			.talk Brother Kristoff##1444
-			..accept Speaking of Fortitude##343
-		step
-			goto Stormwind City,77.1,30.2
-			.talk Milton Sheaf##1440
-			..turnin Speaking of Fortitude##343
-			..accept Brother Paxton##344
-		step
-			goto Elwynn Forest,49.6,40.4
-			.talk Brother Paxton##951
-			..turnin Brother Paxton##344
-			..accept Ink Supplies##345
-		step //
-			goto Elwynn Forest,65.2,69.7
-			.talk Theocritus##313
-			..accept A Watchful Eye##94
-		step //
-			goto Redridge Mountains,15.3,71.5
-			.talk Guard Parker##464
-			..accept Encroaching Gnolls##244
-		step //
-			goto Redridge Mountains,30.7,60
-			.talk Deputy Feldon##1070
-			..turnin Encroaching Gnolls##244
-			..accept Assessing the Threat##246
-		step //
-			goto Redridge Mountains,31.5,57.9
-			.talk Guard Howe##903
-			..accept Blackrock Bounty##128
-		step //
-			goto Redridge Mountains,33.5,49
-			.talk Marshal Marris##382
-			..accept Blackrock Menace##20
-		step //
-			goto Redridge Mountains,32.1,48.6
-			.talk Foreman Oslow##341
-			..turnin Ink Supplies##345
-			..accept The Lost Tools##125
-			..accept Rethban Ore##347
-		step //
-			goto Redridge Mountains,31,47.3
-			.talk Verner Osgood##415
-			..accept The Price of Shoes##118
-		step //
-			goto Redridge Mountains,30,44.4
-			.talk Magistrate Solomon##344
-			..accept Messenger to Stormwind (1)##120
-		step //
-			goto Redridge Mountains,27.7,47.4
-			.talk Dockmaster Baren##381
-			..accept Selling Fish##127
-			..accept Murloc Poachers##150
-		step //
-			goto Redridge Mountains,26.6,44.3
-			.talk Darcy##379
-			..accept A Free Lunch##129
-		step //
-			goto Redridge Mountains,26.5,44
-			.talk Barkeep Daniels##346
-			..accept Dry Times##116
-		step //
-			goto Redridge Mountains,22.7,43.8
-			.talk Chef Breanna##343
-			..accept Redridge Goulash##92
-		step //
-			goto Redridge Mountains,21.9,46.3
-			.talk Martie Jainrose##342
-			..accept An Unwelcome Guest##34
-		step //
-			goto Redridge Mountains,16.4,49.2
-			.from Bellygrub##345
-			.get Bellygrub's Tusk##3631|q 34/1
-		step //
-			goto Redridge Mountains,16.81,53.64
-			.from Great Goretusk##547
-			.get 5 Great Goretusk Snout##2296|q 92/1
-			.' You can find more around (1)|at 18.27,72.11
-			.info Don't sell this item!
-		step //
-			goto Redridge Mountains,15.3,71.5
-			.talk Guard Parker##464
-			..turnin A Free Lunch##129
-			..accept Visit the Herbalist##130
-		step //
-			goto Redridge Mountains,10.85,77.32
-			.from Tarantula##442
-			.get 5 Crisp Spider Meat##1081|q 92/3
-			.' You can find more around (1)|at 11.82,68.67
-			.' You can find more around (2)|at 18.26,73.15
-			.' You can find more around (3)|at 25.12,76.83
-			.info Don't sell this item!
-		step //
-			goto Redridge Mountains,15.92,63.47
-			.kill 10 Redridge Mongrel|q 246/1
-			.kill 6 Redridge Poacher|q 246/2
-			.' You can find more around (1)|at 26.8,80.2
-			.' You can find more around (2)|at 43.17,71.24
-			.' You can find more around (3)|at 53.93,74.93
-		step //
-			goto Redridge Mountains,60.77,75.60
-			.from Dire Condor##428
-			.get 5 Tough Condor Meat##1080|q 92/2
-			.' You can find more around (1)|at 48.43,76.16
-			.' You can find more around (2)|at 67.6,75.6
-			.info Don't sell this item!
-		step //
-			goto Redridge Mountains,30.7,60
-			.talk Deputy Feldon##1070
-			..turnin Assessing the Threat##246
-		step //
-			goto Redridge Mountains,22.7,43.8
-			.talk Chef Breanna##343
-			..turnin Redridge Goulash##92
-		step //
-			goto Redridge Mountains,21.9,46.3
-			.talk Martie Jainrose##342
-			..turnin An Unwelcome Guest##34
-			..turnin Visit the Herbalist##130
-			..accept Delivering Daffodils##131
-		step //
-			goto Redridge Mountains,26.6,44.4
-			.talk Darcy##379
-			..turnin Delivering Daffodils##131
-		step //
-			goto Redridge Mountains,29.3,53.6
-			.talk Shawn##8965
-			..accept Hilary's Necklace##3741
-		step //
-			goto Redridge Mountains,29.1,55.1
-			.' Click the Glinting Mud
-			.info The Glinting Mud spawns in random places around this area, so some searching may be necessary.
-			.get Hilary's Necklace|q 3741/1
-		step //
-			goto Redridge Mountains,41.5,54.6
-			.' Click the Sunken Chest
-			.get Oslow's Toolbox|q 125/1
-		step //
-			goto Redridge Mountains,48.2,73.3
-			.from Murloc Flesheater##422, Murloc Shorestriker##1083, Murloc Minor Tidecaller##548
-			.get 10 Spotted Sunfish|q 127/1
-			.collect 8 Murloc Fin##1468|q 150/1
-			.' You can find more around (1)|at 40.4,46.16
-			.' You can find more around (2)|at 56.9,50.9
-			.' You can find more around (3)|at 57.7,61.5
-			.info Don't sell this item!
-		step //
-			goto Redridge Mountains,32.1,48.6
-			.talk Foreman Oslow##341
-			..turnin The Lost Tools##125
-			..accept The Everstill Bridge##89
-		step //
-			goto Redridge Mountains,29.3,53.6
-			.talk Hilary##8962
-			..turnin Hilary's Necklace##3741
-		step //
-			goto Redridge Mountains,27.7,47.4
-			.talk Dockmaster Baren##381
-			..turnin Selling Fish##127
-			..turnin Murloc Poachers##150
-		step // move
-			goto Stormwind,60,76.9
-			.talk Roberto Pupellyverbos##277
-			.buy Cask of Merlot##1941|q 116/2
-		step // move
-			goto Stormwind,69.2,82.7
-			.talk General Marcus Jonathan##466
-			..turnin Messenger to Stormwind (1)##120
-			..accept Messenger to Stormwind (2)##121
-		step // move
-			goto Elwynn Forest,44,65.7
-			.talk Barkeep Dobbins##465
-			.buy Skin of Sweet Rum##1939|q 116/4
-		step // move
-			goto Elwynn Forest,41.7,65.5
-			.talk Smith Argus##514
-			..turnin The Price of Shoes##118
-			..accept Return to Verner##119
-		step //
-			goto Redridge Mountains,31,47.3
-			.talk Verner Osgood##415
-			..turnin Return to Verner##119
-			..accept Underbelly Scales##122
-			..accept A Baying of Gnolls##124
-		step //
-			goto Redridge Mountains,30,44.4
-			.talk Magistrate Solomon##344
-			..turnin Messenger to Stormwind (2)##121
-			..accept Messenger to Westfall (1)##143
-		step //
-			goto Westfall,56.3,47.5
-			.talk Gryan Stoutmantle##234
-			..turnin Messenger to Westfall (1)##143
-			..accept Messenger to Westfall (2)##144
-		step //
-			goto Westfall,44.6,80.3
-			.talk Grimbooze Thunderbrew##239
-			..accept Thunderbrew Lager##117
-		step //
-			goto Westfall,37.1,52.3
-			.from Harvest Watcher##114, Harvest Reaper##115
-			.get 5 Hops##1274|q 117/1
-			.' You can find more around (1)|at 61.6,62
-			.info Don't sell this item!
-		step //
-			goto Westfall,44.6,80.3
-			.talk Grimbooze Thunderbrew##239
-			..turnin Thunderbrew Lager##117
-		step //
-			goto Redridge Mountains,30,44.5
-			.talk Magistrate Solomon##344
-			..turnin Messenger to Westfall (2)##144
-			..accept Messenger to Darkshire (1)##145
-		step //
-			goto Duskwood,71.9,46.4
-			.talk Lord Ello Ebonlocke##263
-			..turnin Messenger to Darkshire (1)##145
-			..accept Messenger to Darkshire (2)##146
-		step //
-			goto Duskwood,73.7,44
-			.talk Barkeep Hann##274
-			.buy Bottle of Moonshine##1942|q 116/3
-		step //
-			goto Redridge Mountains,30,44.5
-			.talk Magistrate Solomon##344
-			..turnin Messenger to Darkshire (2)##146
-		step //
-			goto Redridge Mountains,26.5,44
-			.talk Barkeep Daniels##346
-			..turnin Dry Times##116
-		step //
-			goto Redridge Mountains,34.2,67.4
-			.from Black Dragon Whelp##441
-			.get 6 Underbelly Whelp Scale|q 122/1
-			.' You can find more around (1)|at 44.35,39.58
-			.' You can find more around (2)|at 47.73,33.36
-		step //
-			goto Redridge Mountains,29,37.4
-			.kill 10 Redridge Brute|q 124/1
-			.kill 8 Redridge Mystic|q 124/2
-			.from Redridge Brute##426, Redridge Mystic##430
-			.get 5 Iron Pike|q 89/1
-			.get 5 Iron Rivet|q 89/2
-		step //
-			goto Redridge Mountains,32.1,48.6
-			.talk Foreman Oslow##341
-			..turnin The Everstill Bridge##89
-		step //
-			goto Redridge Mountains,31,47.3
-			.talk Verner Osgood##415
-			..turnin Underbelly Scales##122
-			..turnin A Baying of Gnolls##124
-			..accept Howling in the Hills##126
-		step //
-			goto Redridge Mountains,20.7,28.3
-			.from Redridge Drudger##580
-			.get 5 Rethban Ore##2798|q 347/1
-			.' Enter the cave|at 20.3,35.1
-		step //
-			goto Redridge Mountains,27.4,21.8
-			.from Yowler##518
-			.get Yowler's Paw|q 126/1
-		step //
-			goto Redridge Mountains,32.9,6.8
-			.kill 15 Blackrock Champion|q 128/1
-			.collect 10 Battleworn Axe##3014|q 20/1
-		step //
-			goto Redridge Mountains,28.4,12.6
-			.talk Corporal Keeshan##349
-			..accept Missing In Action##219
-			.goal Escort Corporal Keeshan back to Redridge|q 219/1
-		step //
-			goto Redridge Mountains,33.5,49
-			.talk Marshal Marris##382
-			..turnin Blackrock Menace##20
-			..turnin Missing In Action##219
-			..accept Tharil'zun##19
-			..accept Shadow Magic##115
-		step //
-			goto Redridge Mountains,31,47.3
-			.talk Verner Osgood##415
-			..turnin Howling in the Hills##126
-		step //
-			goto Redridge Mountains,30,44.4
-			.talk Bailiff Conacher##900
-			..accept Solomon's Law##91
-		step //
-			goto Redridge Mountains,29.6,46.2
-			.info Interact with gameobject: Wanted: Gath'Ilzogg
-			..accept Wanted: Gath'Ilzogg##169
-		step //
-			goto Redridge Mountains,26.8,46.4
-			.info nteract with gameobject: Wanted: Lieutenant Fangore
-			..accept Wanted: Lieutenant Fangore##180
-		step //
-			goto Redridge Mountains,31.5,57.9
-			.talk Guard Howe##903
-			..turnin Blackrock Bounty##128
-		step //
-			goto Redridge Mountains,69.3,59.9
-			.from Tharil'zun##486
-			.get Tharil'zun's Head##1260|q 19/1
-		step //
-			goto Redridge Mountains,69.6,55.8
-			.from Gath'Ilzogg##334
-			.get Head of Gath'Ilzogg##3633|q 169/1
-		step //
-			goto Redridge Mountains,68.3,56.3
-			.from Blackrock Shadowcaster##436
-			.get 3 Midnight Orb##1261|q 115/1
-		step //
-			goto Redridge Mountains,84.5,46.8
-			.info Interact with gameobject: Old Lion Statue.
-			..turnin A Watchful Eye##94
-			..accept Looking Further##248
-		step //
-			goto Redridge Mountains,80.2,37.1
-			.from Lieutenant Fangore##703
-			.get Fangore's Paw##3632|q 180/1
-			.from Shadowhide Slayer##431, Shadowhide Brute##432, Shadowhide Warrior##568
-			.get 10 Shadowhide Pendant##1075|q 91/1
-		step //
-			goto Redridge Mountains,63.2,49.8
-			.info At the very top of the tower.
-			..turnin Looking Further##248
-		step //
-			goto Redridge Mountains,84.5,46.8
-			.info Interact with Old Lion Statue.
-			..accept Morganth##249
-		step //
-			goto Redridge Mountains,80.1,49.5
-			.from Morganth##397
-			.info At the very top of the tower.
-			.get Pendant of Shadow##3617|q 249/1
-		step //
-			goto Redridge Mountains,33.5,49
-			.talk Marshal Marris##382
-			..turnin Tharil'zun##19
-			..turnin Shadow Magic##115
-		step //
-			goto Redridge Mountains,30,44.4
-			.talk Bailiff Conacher##900
-			..turnin Solomon's Law##91
-		step //
-			goto Redridge Mountains,30,44.4
-			.talk Magistrate Solomon##344
-			..turnin Wanted: Gath'Ilzogg##169
-			..turnin Wanted: Lieutenant Fangore##180
-		step //
-			goto Elwynn Forest,65.2,69.7
-			.talk Theocritus##313
-			..turnin Morganth##249
-		step //
-			goto Elwynn Forest,49.6,40.4
-			.talk Brother Paxton##951
-			..turnin Rethban Ore##347
-			..accept Return to Kristoff##346
-		step //
-			goto Stormwind City,55,54.2
-			.talk Brother Kristoff##1444
-			..turnin Return to Kristoff##346
-		step //
-			.' Congratulations! +40 quests for achievement "Loremaster of Eastern Kingdoms".
-			.' Next, I recommend running Quest-Instance Guides: The Stockade (25).
-			.info Use next guide - Duskwood.
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[alpha-none] Western Plaguelands",[[

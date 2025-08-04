@@ -1891,7 +1891,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //57
 		goto 47.3,52.3
 		.talk Innkeeper Belm##1247
-		..buy 1 Thunder Ale|q 308/1
+		.buy 1 Thunder Ale##2686|q 308/1
 	step //58
 		goto 47.6,52.7
 		.talk Jarven Thunderbrew##1373
@@ -2272,7 +2272,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Dwarf (1-13)"
 	next Zygor's Alliance Leveling Guides\\Main Guide (13-20)
 	startlevel 1
 	step //1
-		  goto Dun Morogh,29.9,71.9
+		goto Dun Morogh,29.9,71.9
 		.talk Sten Stoutarm##658
 		..accept Dwarven Outfitters##179
 	step //2
@@ -2402,7 +2402,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Dwarf (1-13)"
 		.from Grik'nir the Cold##808
 		.get Grelin Whitebeard's Journal|q 218/1
 	step //26
-		'Go outside to 22.8,80.0|goto 22.8,80.0
+		goto 22.8,80.0
 		.' Click Felix's Chest|tip In the troll camp on the ground, to the left directly next to the campfire.
 		.get Felix's Chest|q 3361/2
 	step //27
@@ -6304,7 +6304,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		goto 34.8,45.4
 		.kill 10 Mottled Scytheclaw|q 295/1
 		.kill 10 Mottled Razormaw|q 295/2
-		.' Get the 4 Relics that spawn randomly in different places around this area.  They can spawn up the hill next to Sarltooth also:
+		.' Get the 4 Relics that spawn randomly in different places around this area. They can spawn up the hill next to Sarltooth also:
 		..'Ados Fragment|get Ados Fragment|q 299/1|tip The Ados Fragment looks like a big stone box.
 		..'Modr Fragment|get Modr Fragment|q 299/2|tip The Modr Fragment looks like a thin, tall red vase with a yellow face on it.
 		..'Golm Fragment|get Golm Fragment|q 299/3|tip The Golm Fragment looks like a wide yellow vase with black silhouettes on it.
@@ -10435,36 +10435,36 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 		..accept The Flawless Flame##3442
 	step //26
 		goto 36.8,49.4
-		.kill Dark Iron Steamsmiths|n
-		.get Smithing Tuyere|q 7728/1
-		.kill Dark Iron dwarves|n
-		.get Grimesilt Outhouse Key|n
-		.' Click the Grimesilt Outhouse Key|use Grimesilt Outhouse Key##11818
+		.from Dark Iron Steamsmith##5840
+		.get Smithing Tuyere##18959|q 7728/1
+		.from Dark Iron Steamsmith##5840, Dark Iron Slaver##5844, Dark Iron Taskmaster##5846
+		.collect Grimesilt Outhouse Key##11818|q 4451 |future
+		.use Grimesilt Outhouse Key##11818
 		..accept The Key to Freedom##4451
 	step //27
 		goto 32.5,49.2
-		.kill 20 Heavy War Golem|q 7723/1
+		.kill 20 Heavy War Golem##5854|q 7723/1
 	step //28
 		goto 33.1,51.8
-		.kill Dark Iron Lookouts|n
-		.get Lookout's Spyglass|q 7728/2
+		.from Dark Iron Lookout##8566
+		.get Lookout's Spyglass##18960|q 7728/2
 	step //29
 		goto 32,62.2
-		.kill 20 Greater Lava Spider|q 7724/1
+		.kill 20 Greater Lava Spider##5858|q 7724/1
 	step //30
 		goto 30.8,72.8
-		.kill Magma Elementals|n
-		.get 4 Golem Oil|q 3442/2
-		.kill Inferno Elementals and Magma Elementals|n
-		.get 4 Heart of Flame|q 3442/1
+		.from Magma Elemental##5855
+		.get 4 Golem Oil##10511|q 3442/2
+		.from Inferno Elemental##5852, Magma Elemental##5855
+		.get 4 Heart of Flame##10509|q 3442/1
 	step //31
 		goto 65.2,76.3|n
 		.' The path up to Margol the Rager starts here|goto Searing Gorge,65.2,76.3,0.3|noway|c
 	step //32
 		goto 70.7,73.3
 		.from Margol the Rager##5833
-		.get Margol's Horn|n
-		.' Click Margol's Horn|use Margol's Horn##10000
+		.collect Margol's Horn##10000|q 3181 |future
+		.use Margol's Horn##10000
 		..accept The Horn of the Beast##3181
 	step //33
 		goto 65.5,62.3
@@ -10473,24 +10473,24 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 		..accept Caught!##4449
 	step //34
 		goto 63.3,59.7
-		.kill 8 Dark Iron Geologist|q 4449/1
+		.kill 8 Dark Iron Geologist##5839|q 4449/1
 	step //35
 		goto 65.5,62.3
 		.' Click the Wooden Outhouse
 		..turnin Caught!##4449
 		..accept Ledger from Tanaris##4450
 		.' Click the book he slides under the door
-		.get Goodsteel Ledger|q 4450/1
+		.get Goodsteel Ledger##11727|q 4450/1
 	step //36
 		goto 61.7,72
-		.kill Glassweb Spiders|n
-		.get 20 Solid Crystal Leg Shaft|q 4450/2
-		.' You can find more Glassweb Spiders at 61.9,54.6|n
+		.from Glassweb Spider##5856
+		.get 20 Solid Crystal Leg Shaft##11725|q 4450/2
+		.' You can find more Glassweb Spiders|at 61.9,54.6
 	step //37
 		goto 63.9,61
 		.talk Dorius Stonetender##8284
 		..accept Suntara Stones (1)##3367
-		.' Escort him until he gets murdered(it's part of the quest)
+		.' Escort him until he gets murdered (it's part of the quest)
 		.' He drops a note when he dies
 		.' Click the Singed Letter
 		..turnin Suntara Stones (1)##3367
@@ -10503,7 +10503,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 	step //39
 		goto 42.4,47.1
 		.kill Dark Iron dwarves|n
-		.get 8 Thorium Plated Dagger|q 3443/1
+		.get 8 Thorium Plated Dagger##10551|q 3443/1
 	step //40
 		goto 39,38.9
 		.talk Kalaran Windblade##8479
@@ -10641,9 +10641,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 		.talk the Dying Archeologist##8417
 		..accept Rise, Obsidion!##3566
 		.from Lathoric the Black##8391
-		.get Head of Lathoric the Black|q 3566/1
+		.get Head of Lathoric the Black##10447|q 3566/1
 		.from Obsidion##8400
-		.get Heart of Obsidion|q 3566/2
+		.get Heart of Obsidion##10446|q 3566/2
 	step //73
 		'Leave the Slag Pit, go up top of the Cauldron|n
 		.' Skip to the next step of the guide|n
@@ -16624,7 +16624,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (70
 		kill 10 Coldarra Spellweaver|q 11918/1
 		from Glacial Ancient+
 		.get 3 Glacial Splinter|q 11910/1
-		info Don't forget to harvest the Ancients for herbs.|only if skill('Herbalism')>0
+		.info Don't forget to harvest the Ancients for herbs.|only if skill('Herbalism')>0
 		from Magic-Bound Ancient+
 		.get 3 Magic-Bound Splinter|q 11910/2
 		'Click Frostberry Bushes
