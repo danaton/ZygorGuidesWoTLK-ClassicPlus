@@ -6584,7 +6584,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 		.talk Gann Stonespire##3341
 		..turnin Revenge of Gann (2)##849
 	step //184
-		'Go southwest to Thousand Needles|goto Thousand Needles
+		.' Go southwest to Thousand Needles|goto Thousand Needles
 	step //185
 		goto Thousand Needles,31.9,21.7
 		.talk Grish Longrunner##12576
@@ -6634,7 +6634,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (20-25)",
 		..turnin Alien Egg##4821
 		..accept Serpent Wild##4865
 	step //195
-		'Hearth to Camp Taurajo|goto The Barrens,45.5,59.0,0.1|use hearthstone##6948|noway|c
+		.' Hearth to Camp Taurajo|goto The Barrens,45.5,59.0,0.1|use hearthstone##6948|noway|c
 	step //196
 		goto The Barrens,44.9,59.1
 		.talk Jorn Skyseer##3387
@@ -6673,7 +6673,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 		.' Plant 10 Gaea Seeds|goal 10 Gaea seed planted|q 6381/1
 	step //6
 		goto 35.9,65.3
-		.' Kill fire elementals
+		.from Rogue Flame Spirit##4036, Burning Ravager##4037, Burning Destroyer##4038
 		.get 10 Incendrites|q 6393/1
 	step //7
 		goto 35.7,68.7
@@ -6728,8 +6728,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 		..accept Ashenvale Outrunners##6503
 	step //21
 		goto 72,70.6
-		.' They are stealthed around this area
-		.kill 9 Ashenvale Outrunner|q 6503/1
+		.kill 9 Ashenvale Outrunner##12856|q 6503/1
+		.info They are stealthed around this area.
 	step //22
 		goto 68.3,75.3
 		.talk Torek##12858
@@ -6739,31 +6739,31 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 		.' Take Silverwing Outpost|goal Take Silverwing Outpost.|q 6544/1
 	step //23
 		goto 48.9,69.6
-		.' Stand in the glowing gazebo
-		.' Scout the gazebo|goal Scout the gazebo on Mystral Lake that overlooks the nearby Alliance outpost.|q 25/1 |future
+		.goal Scout the gazebo on Mystral Lake that overlooks the nearby Alliance outpost.|q 25/1 |future
+		.info Stand in the glowing gazebo.
 	step //24
 		goto 47.7,69.7
 		.kill 12 Befouled Water Elemental|q 25/2
-		.' Tideress walks around this area
-		.' Kill Tideress
-		.get the Befouled Water Globe|n
-		.' Click the Befouled Water Globe|use Befouled Water Globe##16408
+		.kill Tideress##12759|n
+		.info Tideress walks around this area.
+		.get Befouled Water Globe##16408|n
+		.use Befouled Water Globe##16408
 		..accept The Befouled Element##1918
 	step //25
 		goto 42.3,65.6
-		.' Ursangous wanders around this area
-		.' Kill Ursangous
-		.get Ursangous's Paw|n
-		.' Click Ursangous's Paw|use Ursangous's Paw##16303
+		.kill Ursangous##12678|n
+		.info Ursangous wanders around this area.
+		.get Ursangous's Paw##16303|n
+		.use Ursangous's Paw##16303
 		..accept Ursangous's Paw##23
 	step //26
 		goto 57.9,56.2
-		.' Kill Laughing Sisters
-		.collect 1 Etched Phial##5867|q 1195
+		.kill Laughing Sister##4054|n
+		.collect Etched Phial##5867|q 1195
 	step //27
 		ding 26
 	step //28
-		'Go to Splintertree Post|goto Ashenvale,73.9,60.7,0.1
+		.'Go to Splintertree Post|goto Ashenvale,73.9,60.7,0.1|q 25
 	step //29
 		goto 73.7,60
 		.talk Mastok Wrilehiss##12737
@@ -6788,15 +6788,17 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 		.get Filled Etched Phial|q 1195/1
 	step //34
 		goto 58.7,56.1
-		.' Shadumbra walks around this area
-		.' Kill Shadumbra
-		.get Shadumbra's Head|n
-		.' Click Shadumbra's Head|use Shadumbra's Head##16304
+		.kill Shadumbra##12677|n
+		.info Shadumbra walks around this area.
+		.get Shadumbra's Head##16304|n
+		.use Shadumbra's Head##16304
 		..accept Shadumbra's Head##24
 	step //35
-		'Hearth to Splintertree Post|goto Ashenvale,73.9,60.7,0.1|use hearthstone##6948|noway|c
+		.'Hearth to Splintertree Post|goto Ashenvale,73.9,60.7,0.1|use hearthstone##6948|noway|q 824
 	step //36
-		'Fly to Zoram'gar Outpost|goto Ashenvale,12.2,33.8,0.1|noway|c
+		goto 73.2,61.6|n
+		.talk Vhulgra##12616
+		.'Fly to Zoram'gar Outpost|goto Ashenvale,12.2,33.8,0.1|noway|q 824
 	step //37
 		goto 11.6,34.3
 		.talk Je'neu Sancrea##12736
@@ -6816,35 +6818,35 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 		.' Escort and protect Muglash
 		.' Click the purple flame brazier when he tells you to
 		.goal Defeat Vorsha the Lasher|q 6641/1
-		info2 If he is not there, wait for him to respawn
+		.info If he is not there, wait for him to respawn
 	step //41
 		goto 12.2,34.2
 		.talk Warsong Runner##12863
 		..turnin Vorsha the Lasher##6641
 	step //42
 		goto 31.3,46.6|n
-		.' The path to 'Between a Rock and a Thistlefur' starts here|goto Ashenvale,31.3,46.6,0.5|noway|c
+		.' The path to 'Between a Rock and a Thistlefur' starts here|goto Ashenvale,31.3,46.6,0.5|noway|q 216
 	step //43
 		goto 31.3,44.8
 		.kill 8 Thistlefur Avenger|q 216/1
 		.kill 8 Thistlefur Shaman|q 216/2
 	step //44
 		goto 37.5,32.4|n
-		.' The path up to 'Troll Charm' starts here|goto Ashenvale,37.5,32.4,0.3|noway|c
+		.' The path up to 'Troll Charm' starts here|goto Ashenvale,37.5,32.4,0.3|noway|q 216
 	step //45
-		'Go into the cave|goto Ashenvale,38.4,30.6,0.5|c
+		.' Go into the cave|goto Ashenvale,38.4,30.6,0.5|q 216
 	step //46
 		goto 40,32.5
 		.' Click the Troll Chests inside the cave
 		.get 8 Troll Charm|q 6462/1
-		info They look looke like little brown bamboo chests inside the cave.
+		.info They look looke like little brown bamboo chests inside the cave.
 	step //47
 		goto 41.5,34.5
 		.talk Ruul Snowhoof##12818
 		..accept Freedom to Ruul##6482
-		.goal Escort Ruul from the Thistlefurs.|q 6482/1
+		.goal Escort Ruul from the Thistlefurs|q 6482/1
 	step //48
-		'Leave the cave and go to 11.9,34.5|goto 11.9,34.5
+		goto 11.9,34.5
 		.talk Karang Amakkar##12757
 		..turnin Between a Rock and a Thistlefur##216
 	step //49
@@ -6852,7 +6854,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 		.talk Mitsuwa##12721
 		..turnin Troll Charm##6462
 	step //50
-		'Hearth to Splintertree Post|goto Ashenvale,73.9,60.7,0.1|use hearthstone##6948|noway|c
+		.'Hearth to Splintertree Post|goto Ashenvale,73.9,60.7,0.1|use hearthstone##6948|noway|q 6482
 	step //51
 		goto 74,61
 		.talk Yama Snowhoof##12837
@@ -6865,20 +6867,20 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 		ding 27
 	step //54
 		goto 81.8,52
-		.' Kill satyrs
+		.kill Satyrs|n
 		.get 16 Satyr Horns|q 6441/1
 	step //55
 		goto 73.1,61.5
 		.talk Pixel##12724
 		..turnin Satyr Horns##6441
 	step //56
-		'Fly to Sun Rock Retreat|goto Stonetalon Mountains,45.2,59.9,5.0|noway|c
+		.' Fly to Sun Rock Retreat|goto Stonetalon Mountains,45.2,59.9,5.0|noway|q 6283
 	step //57
-		'Follow the path to the right of the Flight Path over to the Charred Vale|goto Stonetalon Mountains,44.6,61.8,0.3|c
+		.' Follow the path to the right of the Flight Path over to the Charred Vale|goto Stonetalon Mountains,44.6,61.8,0.3|q 6283
 	step //58
 		goto 30.8,62.4
-		.' Kill the Bloodfury Ripper
-		.get Bloodfury Ripper's Remains|q 6283/1
+		.from Bloodfury Ripper##12579
+		.get Bloodfury Ripper's Remains##16190|q 6283/1
 	step //59
 		goto 47.2,61.2
 		.talk Maggran Earthbinder##11860
@@ -6886,16 +6888,20 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 	step //60
 		goto Stonetalon Mountains,47.5,62.1
 		.talk Innkeeper Jayka##7731
-		home Sun Rock Retreat
+		home Sun Rock Retreat|q 1195
 	step //61
-		'Fly to Thunder Bluff|goto Thunder Bluff
+		goto Stonetalon Mountains,45.1,59.8|n
+		.talk Tharm##4312
+		.' Fly to Thunder Bluff|goto Thunder Bluff|q 1195
 	step //62
 		goto Thunder Bluff,55,51.4
 		.talk Zangen Stonehoof##4721
 		..turnin The Sacred Flame (1)##1195
 		..accept The Sacred Flame (2)##1196
 	step //63
-		'Fly to Freewind Post|goto Thousand Needles,45.0,49.1,0.1|noway|c
+		goto Thunder Bluff,47,49.8|n
+		.talk Tal##2995
+		.' Fly to Freewind Post|goto Thousand Needles,45.0,49.1,0.1|noway|q 1196
 	step //64
 		goto Thousand Needles,46.1,51.7
 		.talk Rau Cliffrunner##4722
@@ -6910,24 +6916,22 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 		.talk Elu##10377
 		..accept Wind Rider##4767
 	step //67
-		'The path to Dorn Plainstalker starts here|goto 54.7,44.7,0.5|c
+		.' The path to Dorn Plainstalker starts here|goto 54.7,44.7,1.0|q 1149 |future
 	step //68
 		goto 53.9,41.5
 		.talk Dorn Plainstalker##2986
 		..accept Test of Faith##1149
-		info2 Standing in the back of the cave
 	step //69
 		goto 26.4,32.4
 		.' Stand on the 2 planks
 		.' Jump off of the plateau
 		.' You will not die
-		.' You will be teleported back to the cave|goto 53.8,41.7,0.1|noway|c
+		.' You will be teleported back to the cave|goto 53.8,41.7,0.1|noway|q 1149
 	step //70
 		goto 53.9,41.5
 		.talk Dorn Plainstalker##2986
 		..turnin Test of Faith##1149
 		..accept Test of Endurance##1150
-		info2 Standing in the back of the cave
 	step //71
 		goto 21.5,32.4
 		.talk Motega Firemane##10428
@@ -6937,73 +6941,75 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 		goto 33.6,34.1
 		.' Click the Incendia Agave in the water
 		.get 10 Incendia Agave|q 5062/1
-		info They look like aloe plants around the lake and inside the water.
+		.info They look like aloe plants around the lake and inside the water.
 	step //73
 		goto 14.5,32.5|n
-		.' The path up to 'Wind Rider' starts here|goto Thousand Needles,14.5,32.5,0.3|noway|c
+		.' The path up to 'Wind Rider' starts here|goto Thousand Needles,14.5,32.5,0.3|noway|q 4767
 	step //74
-		goto 10.7,30.8
-		.' Click the Highperch Wyvern Eggs on the ground
-		.get 10 Highperch Wyvern Egg|q 4767/1
-		info They look like white eggs with light blue spots on them around this area.
+		goto 11.1,36
+		.collect 10 Highperch Wyvern Egg##12356|q 4767/1
+		.info They look like white eggs with light blue spots on them around this area.
 	step //75
 		goto 13.2,39.5|n
-		.' The path up to Pao'ka Swiftmountain starts here|goto Thousand Needles,13.2,39.5,1.0|noway|c
+		.' The path up to Pao'ka Swiftmountain starts here|goto Thousand Needles,13.2,39.5,1.0|noway|q 4770 |future
 	step //76
 		goto 17.9,40.6
 		.talk Pao'ka Swiftmountain##10427
 		..accept Homeward Bound##4770
-		.' Escort Pao'ka Swiftmountain to safety|goal Escort Pao'ka from Highperch|q 4770/1
+		.goal Escort Pao'ka from Highperch|q 4770/1
 	step //77
 		goto 13.2,26.3
-		.' Kill Thundering Boulderkin
-		.get 2 Purifying Earth|q 9431/1
+		.from Thundering Boulderkin##4120
+		.get 2 Purifying Earth##23643|q 9431/1
 	step //78
-		'Hearth to Sun Rock Retreat|goto Stonetalon Mountains,47.5,62.1,0.1|use hearthstone##6948|noway|c
+		.' Hearth to Sun Rock Retreat|goto Stonetalon Mountains,47.5,62.1,1|use hearthstone##6948|noway|q 5062
 	step //79
-		'Fly to Thunder Bluff|goto Thunder Bluff
+		goto Stonetalon Mountains,45.1,59.8|n
+		.talk Tharm##4312
+		.' Fly to Thunder Bluff|goto Thunder Bluff |q 5062
 	step //80
 		goto Thunder Bluff,69.9,30.9
 		.talk Magatha Grimtotem##4046
 		..turnin Sacred Fire##5062
 		..accept Arikara##5088
 	step //81
-		'Fly to Freewind Post|goto Thousand Needles,45.0,49.1,0.1|noway|c
+		goto Thunder Bluff,47,49.8|n
+		.talk Tal##2995
+		.' Fly to Freewind Post|goto Thousand Needles,45.0,49.1,0.1|noway|q 5088
 	step //82
 		goto Thousand Needles,44.8,49
 		.talk Elu##10377
 		..turnin Wind Rider##4767
 	step //83
-		home Freewind Post
+		goto 46.1,51.5
+		.talk Innkeeper Abeqwa##11116
+		home Freewind Post |q 5064
 	step //84
 		goto 31.2,36.9|n
-		.' The path up to 'Grimtotem Spying' starts here|goto Thousand Needles,31.2,36.9,0.3|noway|c
+		.' The path up to 'Grimtotem Spying' starts here|goto Thousand Needles,31.2,36.9,0.3|noway|q 5064
 	step //85
 		goto 31.8,32.6
-		.' Click the Document Chest
-		.get Secret Note #1|q 5064/1
-		info It's a grey chest
+		.collect Secret Note #1##12765|q 5064/1
+		.info It's a grey chest.
 	step //86
 		goto 33.8,40
-		.' Click the Document Chest in the big tent
-		.get Secret Note #2|q 5064/2
-		info It's a grey chest inside the big teepee hut
+		.collect Secret Note #2##12766|q 5064/2
+		.info It's a grey chest inside the big teepee hut.
 	step //87
 		goto 39.3,41.5
-		.' Click the Document Chest in the big tent
-		.get Secret Note #3|q 5064/3
-		info It's a grey chest inside the teepee house
+		.collect Secret Note #3##12768|q 5064/3
+		.info It's a grey chest inside the teepee house.
 	step //88
 		goto 38,35.3
 		.' Click the Sacred Fire of Life
 		.' Light the Sacred Fire of Life to summon Arikara|goal Light the Sacred Fire of Life|q 5088/1
-		.' Kill Arikara
-		.get Arikara Serpent Skin|q 5088/2
+		.from Arikara##10882
+		.get Arikara Serpent Skin##12925|q 5088/2
 	step //89
 		goto 38.9,28.6
-		.' Arnak Grimtotem walks around here
-		.' Kill Arnak Grimtotem
-		.get Arnak's Hoof|q 5147/1
+		.from Arnak Grimtotem##10896
+		.info Arnak Grimtotem walks around here.
+		.get Arnak's Hoof##12884|q 5147/1
 	step //90
 		ding 28
 	step //91
@@ -7021,21 +7027,20 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 		..accept A Dip in the Moonwell##9433
 	step //93
 		goto 44.1,37.3|n
-		.' The path to The Sacred Flame (3) starts here
-		.' Go inside the cave
-		.' Follow the path to the left|goto Thousand Needles,44.1,37.3,0.3|noway|c
+		.' The path to The Sacred Flame (3) starts here.
+		.' Go inside the cave.
+		.' Follow the path to the left|goto Thousand Needles,44.1,37.3,0.3|noway|q 1197
 	step //94
 		goto 42,31.5
-		.' Click the Ancient Brazier
-		.get Cloven Hoof|q 1197/1
-		info It looks like a bowl with a blue flame in it.
+		.collect Cloven Hoof##5869|q 1197/1
+		.info It looks like a bowl with a blue flame in it.
 	step //95
 		goto 17.6,28.2
-		.' Steelsnap wanders around this area
-		.' Kill Steelsnap
-		.get Steelsnap's Rib|q 1131/1
+		.from Steelsnap##4548
+		.info Steelsnap wanders around this area.
+		.get Steelsnap's Rib##5837|q 1131/1
 	step //96
-		'Hearth to Freewind Post|goto Thousand Needles,46.0,51.4,2.0|use hearthstone##6948|noway|c
+		.' Hearth to Freewind Post|goto Thousand Needles,46.0,51.4,2.0|use hearthstone##6948|noway|q 1197
 	step //97
 		goto 46.1,51.7
 		.talk Rau Cliffrunner##4722
@@ -7050,22 +7055,26 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 		..turnin Grimtotem Spying##5064
 		..turnin Wanted - Arnak Grimtotem##5147
 	step //100
-		'Fly to Thunder Bluff|goto Thunder Bluff
+		goto 45.1,49.1|n
+		.talk Nyse##4317
+		.' Fly to Thunder Bluff|goto Thunder Bluff |q 1131
 	step //101
-		goto 61.5,80.9
+		goto Thunder Bluff,61.5,80.9
 		.talk Melor Stonehoof##3441
 		..turnin Steelsnap##1131
 		..accept Frostmaw##1136
 	step //102
-		'Fly to Freewind Post|goto Thousand Needles,45.0,49.1,0.1|noway|c
+		goto Thunder Bluff,47,49.8|n
+		.talk Tal##2995
+		.' Fly to Freewind Post|goto Thousand Needles,45.0,49.1,0.1|noway|q 4881 |future
 	step //103
-		goto 22.1,31
-		.' Find the Galak Messenger
-		.' Kill the Galak Messenger
-		.get the Assassination Note|n
-		.' Click the Assassination Note|use Assassination Note##12564
+		goto Thousand Needles,22.1,31
+		.' Find the Galak Messenger.
+		.kill the Galak Messenger##10617|n
+		.collect the Assassination Note##12564|n
+		.use Assassination Note##12564
 		..accept Assassination Plot##4881
-		info Walk this road east to west from this point to the fork in the road to the east until you find the Galak Messenger running along the road.
+		.info Walk this road east to west from this point to the fork in the road to the east until you find the Galak Messenger running along the road.
 	step //104
 		goto 21.3,32.1
 		.talk Kanati Greycloud##10638
@@ -7076,8 +7085,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 		..turnin Protect Kanati Greycloud##4966
 	step //105
 		goto 12,18.8|n
-		.' The path to 'A Dip in the Moonwell' starts here
-		..'You can get up on the ledge at this spot|goto Thousand Needles,12,18.8,0.3|noway|c
+		.' The path to 'A Dip in the Moonwell' starts here.
+		..'You can get up on the ledge at this spot|goto Thousand Needles,9.85,18.25,0.3|noway|q 9433
 	step //106
 		goto 9.5,18.7
 		.' Stand next to the Concealed Control Panel
@@ -7096,9 +7105,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (25-30)",
 	step //108
 		ding 29
 	step //109
-		.The path up to 'Test of Endurance' starts here|goto 27.5,49.8,0.5|c
+		.' The path up to 'Test of Endurance' starts here|goto 27.5,49.8,0.5|c
 	step //110
-		Go inside the cave at 27.4,51.0|goto 27.4,51.0,0.5
+		.' Go inside the cave|goto 27.4,51.0,0.5 |q 1150
 	step //111
 		goto 26,55
 		.Click the Harpy Foodstuffs

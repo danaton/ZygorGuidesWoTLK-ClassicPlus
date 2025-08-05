@@ -508,7 +508,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Human (1-13)"
 		.talk Foreman Stonebrow##1254
 		..turnin Those Blasted Troggs!##432
 	step //118
-		'Go east to Loch Modan|goto Loch Modan|noway|c
+		.' Go east to Loch Modan|goto Loch Modan|noway|c
 	step //119
 		goto Loch Modan,33.9,51
 		.talk Thorgrum Borrelson##1572
@@ -780,8 +780,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept The Balance of Nature (1)##456
 	step //2
 		goto 58.5,45.9
-		.kill 7 Young Nightsaber|q 456/1
-		.kill 4 Young Thistle Boar|q 456/2
+		.kill 7 Young Nightsaber##2031|q 456/1
+		.kill 4 Young Thistle Boar##1984|q 456/2
 	step //3
 		ding 2
 	step //4
@@ -849,8 +849,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept The Woodland Protector (2)##459
 	step //15
 		goto 56.5,45.5
-		.from Grell##1988+, Grellkin##1989+
-		.get 8 Fel Moss|q 459/1
+		.from Grell##1988, Grellkin##1989
+		.get 8 Fel Moss##3297|q 459/1
 	step //16
 		goto 57.6,45.3
 		.talk Tarindrella##1992
@@ -862,23 +862,23 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		.talk Gilshalan Windwalker##2082
 		..accept Webwood Venom##916
 	step //19
-		'Go up the huge spiral ramp to 58.7,40.5|goto 58.7,40.5
+		.' Go up the huge spiral ramp to|goto 58.7,40.5
 		.talk Ayanna Everstride##3596
 		..turnin Etched Sigil##3117
 		only NightElf Hunter
 	step //20
-		'Go up the huge spiral ramp to 58.6,40.3|goto 58.6,40.3
+		.' Go up the huge spiral ramp to|goto 58.6,40.3
 		.talk Mardant Strongoak##3597
 		..turnin Verdant Sigil##3120
 		only NightElf Druid
 	step //21
 		goto 58.8,36.8
-		.kill 7 Mangy Nightsaber|q 457/1
-		.kill 7 Thistle Boar|q 457/2
+		.kill 7 Mangy Nightsaber##2032|q 457/1
+		.kill 7 Thistle Boar##1985|q 457/2
 	step //22
 		goto 58.3,32.9
-		.from Webwood Spider##1986+
-		.get 10 Webwood Venom Sac|q 916/1
+		.from Webwood Spider##1986
+		.get 10 Webwood Venom Sac##5166|q 916/1
 	step //23
 		goto 54.6,33
 		.talk Iverron##8584
@@ -902,33 +902,33 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept Iverron's Antidote (1)##3521
 	step //28
 		goto 55.2,39.6
-		.from Grell##1988+, Grellkin##1989+
-		.get 7 Hyacinth Mushroom|q 3521/1
+		.from Grell##1988, Grellkin##1989
+		.get 7 Hyacinth Mushroom##10639|q 3521/1
 	step //29
 		goto 57.7,38.5
-		.' Click Moonpetal Lilies|tip The Moonpetal Lillies look like tall flower with orange petals around the pond here.
+		.' Click Moonpetal Lilies.
+		.info The Moonpetal Lillies look like tall flower with orange petals around the pond here.
 		.get 4 Moonpetal Lily|q 3521/2
 	step //30
 		goto 56.7,32.1
-		.from Webwood Spider##1986+
-		.get Webwood Ichor|q 3521/3
+		.from Webwood Spider##1986
+		.get Webwood Ichor##10640|q 3521/3
 	step //31
-		'Go into the cave at 56.8,31.7|goto 56.8,31.7|n
-		.' Follow the path in the middle, then go left
-		.' Go up to the ledge above|goto Teldrassil,55.8,25.5,0.5|c
+		.' Go into the cave at|goto 56.8,31.7|n
+		.' Follow the path in the middle, then go left.
+		.' Go up to the ledge above|goto Teldrassil,55.8,25.5,0.5|q 917
 	step //32
 		goto 56.7,26.4
-		.' Click a Webwood Egg
-		.get Webwood Egg|q 917/1
+		.collect Webwood Egg##5167|q 917/1
 	step //33
-		'Leave the cave|goto Teldrassil,56.8,32.0,0.5|noway|c
+		.' Leave the cave|goto Teldrassil,56.8,32.0,0.5|noway|q 917
 	step //34
 		goto 57.8,41.7
 		.talk Gilshalan Windwalker##2082
 		..turnin Webwood Egg##917
 		..accept Tenaron's Summons##920
 	step //35
-		'Follow the ramp to the top of the tree|goto Teldrassil,59.4,39.0,0.5|noway|c
+		.' Follow the ramp to the top of the tree|goto Teldrassil,59.4,39.0,0.5|noway|q 920
 	step //36
 		goto 59.1,39.4
 		.talk Tenaron Stormgrip##3514
@@ -948,11 +948,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 	step //40
 		goto 59.9,33.1
 		.' Use your Crystal Phial in the moonwell water|use Crystal Phial##5185
-		.get Filled Crystal Phial|q 921/1
+		.get Filled Crystal Phial##5184|q 921/1
 	step //41
-		goto 59.1,39.4
+		.' Go to the top of the big tree|goto 59.1,39.4
 		.talk Tenaron Stormgrip##3514
-		..'Go to the top of the big tree
 		..turnin Crown of the Earth (1)##921
 		..accept Crown of the Earth (2)##928
 	step //42
@@ -965,14 +964,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept Zenn's Bidding##488
 	step //44
 		goto 63.8,54.2
-		.from Strigid Owl##1995+
-		.get 3 Strigid Owl Feather|q 488/2
+		.from Strigid Owl##1995
+		.get 3 Strigid Owl Feather##3411|q 488/2
 	step //45
 		goto 60.6,58.2
-		.from Webwood Lurker##1998+
-		.get 3 Webwood Spider Silk|q 488/3
-		.from Nightsaber##2042+
-		.get 3 Nightsaber Fang|q 488/1
+		.from Webwood Lurker##1998
+		.get 3 Webwood Spider Silk##3412|q 488/3
+		.from Nightsaber##2042
+		.get 3 Nightsaber Fang##3409|q 488/1
 	step //46
 		goto 60.4,56.3
 		.talk Zenn Foulhoof##2150
@@ -989,7 +988,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		.talk Athridas Bearmantle##2078
 		..accept A Troubling Breeze##475
 	step //50
-		'Go to the top of the tower|goto Teldrassil,55.0,57.2,0.5|noway|c
+		.' Go to the top of the tower|goto Teldrassil,55.0,57.2,0.5|noway|q 2438 |future
 	step //51
 		goto 55.6,56.9
 		.talk Tallonkai Swiftroot##3567
@@ -1002,7 +1001,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 	step //53
 		goto 55.6,59.8
 		.talk Innkeeper Keldamyr##6736
-		home Dolanaar
+		home Dolanaar |q 928
 	step //54
 		goto 56.1,61.7
 		.talk Corithras Moonrage##3515
@@ -1019,19 +1018,19 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept Gnarlpine Corruption##476
 	step //57
 		goto 68,59.6
-		.' Click Tallonkai's Dresser|tip To the right in the small house.
-		.get Emerald Dreamcatcher|q 2438/1
+		.collect Emerald Dreamcatcher##8048|q 2438/1
+		.info To the right in the small house.
 	step //58
 		goto 63.6,62.3
-		.' Click Fel Cones|tip They are big, brown, green smoking pine cones at the base of trees.
-		.get 3 Fel Cone|q 489/1
+		.collect 3 Fel Cone##3418|q 489/1
+		.info They are big, brown, green smoking pine cones at the base of trees.
 	step //59
 		goto 56,57.3
 		.talk Athridas Bearmantle##2078
 		..turnin Gnarlpine Corruption##476
 		..accept The Relics of Wakening##483
 	step //60
-		'Go to the top of the tower|goto Teldrassil,55.0,57.2,0.5|noway|c
+		.' Go to the top of the tower|goto Teldrassil,55.0,57.2,0.5|noway|q 2438
 	step //61
 		goto 55.6,56.9
 		.talk Tallonkai Swiftroot##3567
@@ -1056,9 +1055,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept Timberling Sprouts##919
 	step //66
 		goto 61.2,66.8
-		.from Timberling##2022+
+		.from Timberling##2022
 		.get 8 Timberling Seed|q 918/1
-		.' Click Timberling Sprouts|tip They are brown and green bulbs on the ground.
+		.' Click Timberling Sprouts.
+		.info They are brown and green bulbs on the ground.
 		.get 12 Timberling Sprout|q 919/1
 	step //67
 		goto 60.9,68.5
@@ -1068,15 +1068,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..turnin Timberling Sprouts##919
 	step //68
 		goto 68.3,53.7
-		.kill 7 Gnarlpine Mystic|q 2459/1
+		.kill 7 Gnarlpine Mystic##7235|q 2459/1
 	step //69
 		goto 69.4,53.3
 		.from Ferocitas the Dream Eater##7234
-		.get Gnarlpine Necklace|n
-		.' Click the Gnarlpine Necklace|use Gnarlpine Necklace##8049
-		.get Tallonkai's Jewel|q 2459/2
+		.get Gnarlpine Necklace##8049|n
+		.use Gnarlpine Necklace##8049
+		.get Tallonkai's Jewel##8050|q 2459/2
 	step //70
-		'Go to the top of the tower to 55.6,56.9|goto 55.6,56.9
+		goto 55.6,56.9
 		.talk Tallonkai Swiftroot##3567
 		..turnin Ferocitas the Dream Eater##2459
 	step //71
@@ -1087,29 +1087,29 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept The Road to Darnassus##487
 	step //73
 		goto 46.7,53.5
-		.kill 6 Gnarlpine Ambusher|q 487/1
+		.kill 6 Gnarlpine Ambusher##2152|q 487/1
 	step //74
-		'Go southwest into the cave at 44.4,57.8|goto Teldrassil,44.4,57.8,0.5|c
+		.' Go southwest into the cave at|goto Teldrassil,44.4,57.8,0.5|q 483
 	step //75
 		goto 43.7,61.2
-		.' Click the Chest of the Black Feather|tip On the top floor of the cave, across the bridge to the right, in the small room, on the right on the ground.
-		.get Black Feather Quill|q 483/2
+		.collect Black Feather Quill##3406|q 483/2
+		.info On the top floor of the cave, across the bridge to the right, in the small room, on the right on the ground.
 	step //76
 		goto 44.4,60.7
-		.' Click the Chest of Nesting|tip On the top floor of the cave, across the middle bridge, on the ground to the right in the small room.
-		.get Rune of Nesting|q 483/4
+		.collect Sapphire of Sky##3407|q 483/3
+		.info On the top floor of the cave, across the middle bridge, on the ground to the right in the small room.
 	step //77
-		'Go downstairs to 44.9,61.6|goto 44.9,61.6
+		.' Go downstairs|goto 44.9,61.6
 		.talk Oben Rageclaw##7317
 		..accept The Sleeping Druid##2541
 	step //78
-		'Go to the next room over to 45.6,58.7|goto 45.6,58.7
-		.from Gnarlpine Shaman##2009+
-		.get Shaman Voodoo Charm|q 2541/1
+		.' Go to the next room over to|goto 45.6,58.7
+		.from Gnarlpine Shaman##2009
+		.get Shaman Voodoo Charm##8363|q 2541/1
 	step //79
 		goto 45.7,57.4
-		.' Click the Chest of the Raven Claw|tip At the bottom of the cave, up across the bridge, on a ledge.
-		.get Raven Claw Talisman|q 483/1
+		.collect Raven Claw Talisman##3405|q 483/1
+		.info At the bottom of the cave, up across the bridge, on a ledge.
 	step //80
 		goto 44.9,61.6
 		.talk Oben Rageclaw##7317
@@ -1119,41 +1119,42 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		goto 45.6,58.7
 		.kill Rageclaw##7318|n
 		.' Use the Voodoo Charm on his corpse|use Voodoo Charm##8149
-		.' Release Oben Rageclaw's spirit|goal Release Oben Rageclaw's spirit|q 2561/1
+		.goal Release Oben Rageclaw's spirit|q 2561/1
 	step //82
-		'Go through the tunnel back to where Oben Rageclaw is to 44.7,62.5|goto 44.7,62.5
-		.' Click the Chest of the Sky|tip Down the path at the bottom of the cave, next to Greenpaw.
-		.get Sapphire of Sky|q 483/3
+		.' Go through the tunnel back to where Oben Rageclaw is to|goto 44.7,62.5
+		.collect Rune of Nesting##3408|q 483/4
+		.info Down the path at the bottom of the cave, next to Greenpaw.
 	step //83
-		'Go back up the path to 44.9,61.6|goto 44.9,61.6
+		.' Go back up the path to|goto 44.9,61.6
 		.talk Oben Rageclaw##7317
 		..turnin Druid of the Claw##2561
 	step //84
 		ding 9
 	step //85
-		'Hearth to Dolanaar|goto Teldrassil,55.7,59.8,1|use Hearthstone##6948|noway|c
+		.' Hearth to Dolanaar|goto Teldrassil,55.7,59.8,1|use Hearthstone##6948|noway|q 483
 	step //86
 		goto 56,57.3
 		.talk Athridas Bearmantle##2078
 		..turnin The Relics of Wakening##483
 		..accept Ursal the Mauler##486
 	step //87
-		'Go north to Fel Rock|goto Teldrassil,54.7,52.8,0.5|c
+		.' Go north to Fel Rock|goto Teldrassil,54.7,52.8,0.5|q 932
 	step //88
-		'Go inside the cave to 52.8,50.2|goto 52.8,50.2
+		.' Go inside the cave to|goto 51.2,50.8
 		.from Lord Melenas##2038
-		.get Melenas' Head|q 932/1
+		.get Melenas' Head##5221|q 932/1
 	step //89
-		'Go outside and go to the top of the tower to 55.6,56.9|goto 55.6,56.9
+		.' Go outside and go to the top of the tower to|goto 55.6,56.9
 		.talk Tallonkai Swiftroot##3567
 		..turnin Twisted Hatred##932
 	step //90
 		goto 42.4,67.1
 		.' Use your Tourmaline Phial in the moonwell water|use Tourmaline Phial##5621
-		.get Filled Tourmaline Phial|q 933/1
+		.get Filled Tourmaline Phial##5645|q 933/1
 	step //91
 		goto 42.6,76.1
-		.' Click the Strange Fruited Plant|tip It looks like a big pink glowing plant.
+		.' Click the Strange Fruited Plant
+		.info It looks like a big pink glowing plant.
 		..accept The Glowing Fruit##930
 	step //92
 		goto 60.9,68.5
@@ -1175,11 +1176,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 	step //96
 		goto 38.4,34.1
 		.' Click the Amethyst Phial in your bags|use Amethyst Phial##18152
-		.get Filled Amethyst Phial|q 7383/1
+		.get Filled Amethyst Phial##18151|q 7383/1
 	step //97
 		goto 37.4,37.3
-		.from Bloodfeather Rogue##2017+, Bloodfeather Sorceress##2018+, Bloodfeather Harpy##2015+
-		.get 6 Bloodfeather Belt|q 937/1
+		.from Bloodfeather Rogue##2017, Bloodfeather Sorceress##2018, Bloodfeather Harpy##2015
+		.get 6 Bloodfeather Belt##5204|q 937/1
 	step //98
 		ding 10
 	step //99
@@ -1188,10 +1189,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..turnin The Enchanted Glade##937
 	step //100
 		goto 34.7,29
-		.' Click the Strange Fronded Plant|tip It's a big glowing pink plant up on a hill.
+		.' Click the Strange Fronded Plant
+		.info It's a big glowing pink plant up on a hill.
 		..accept The Shimmering Frond##931
 	step //101
-		'Hearth to Dolanaar|goto Teldrassil,55.7,59.8,1|use Hearthstone##6948|noway|c
+		.' Hearth to Dolanaar|goto Teldrassil,55.7,59.8,1|use Hearthstone##6948|noway|q 7383
 	step //102
 		goto 56.1,61.7
 		.talk Corithras Moonrage##3515
@@ -1203,7 +1205,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept Elanaria##1684
 		only NightElf Warrior
 	step //104
-		'Go west to Darnassus|goto Darnassus|noway|c
+		.' Go west to Darnassus|goto Darnassus|noway|q 1683 |future
 		only NightElf Warrior
 	step //105
 		goto Darnassus,57.3,34.6
@@ -1212,19 +1214,19 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept Vorlus Vilehoof##1683
 		only NightElf Warrior
 	step //106
-		'Go east out of Darnassus to Teldrassil|goto Teldrassil|noway|c
+		.' Go east out of Darnassus to Teldrassil|goto Teldrassil|noway|q 1683
 		only NightElf Warrior
 	step //107
 		goto 49.0,62.0|n
-		.' The path up to 'Vorlus Vilehoof' starts here|goto Teldrassil,49.0,62.0,1|noway|c
+		.' The path up to 'Vorlus Vilehoof' starts here|goto Teldrassil,49.0,62.0,1|noway|q 1683
 		only NightElf Warrior
 	step //108
-		'Follow the path up to 47.4,63.6|goto 47.4,63.6
+		.' Follow the path up to|goto 47.4,63.6
 		.from Vorlus Vilehoof##6128
-		.get Horn of Vorlus|q 1683/1
+		.get Horn of Vorlus##6508|q 1683/1
 		only NightElf Warrior
 	step //109
-		'Go northwest to Darnassus|goto Darnassus|noway|c
+		.' Go northwest to Darnassus|goto Darnassus|noway|q 1683
 		only NightElf Warrior
 	step //110
 		goto Darnassus,57.3,34.6
@@ -1232,7 +1234,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..turnin Vorlus Vilehoof##1683
 		only NightElf Warrior
 	step //111
-		'Go east out of Darnassus to Teldrassil|goto Teldrassil|noway|c
+		.' Go east out of Darnassus to Teldrassil|goto Teldrassil|noway|c
 		only NightElf Warrior
 	step //112
 		goto Teldrassil,56.7,59.5
@@ -1273,7 +1275,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept Training the Beast##6103
 		only NightElf Hunter
 	step //119
-		'Go west to Darnassus|goto Darnassus|noway|c
+		.' Go west to Darnassus|goto Darnassus|noway|q 6103
 		only NightElf Hunter
 	step //120
 		goto Darnassus,40.4,8.5
@@ -1281,7 +1283,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..turnin Training the Beast##6103
 		only NightElf Hunter
 	step //121
-		'Go east out of Darnassus to Teldrassil|goto Teldrassil|noway|c
+		.' Go east out of Darnassus to Teldrassil|goto Teldrassil|noway|q 5923 |future
 		only NightElf Hunter
 	step //122
 		goto Teldrassil,56.0,61.5
@@ -1289,7 +1291,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept Heeding the Call##5923
 		only NightElf Druid
 	step //123
-		'Go west to Darnassus|goto Darnassus|noway|c
+		.' Go west to Darnassus|goto Darnassus|noway|q 5923
 		only NightElf Druid
 	step //124
 		goto Teldrassil,24.6,48.7
@@ -1299,7 +1301,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		only NightElf Druid
 	step //125
 		'He gives you a spell called Teleport: Moonglade
-		.' Teleport to Moonglade|goto Moonglade|cast Teleport: Moonglade|c
+		.' Teleport to Moonglade|goto Moonglade|cast Teleport: Moonglade|q 5921
 		only NightElf Druid
 	step //126
 		goto Moonglade,56.2,30.5
@@ -1314,7 +1316,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		only NightElf Druid
 	step //128
 		'He gives you a spell called Teleport: Moonglade
-		.' Teleport to Moonglade|goto Moonglade|cast Teleport: Moonglade|c
+		.' Teleport to Moonglade|goto Moonglade|cast Teleport: Moonglade|q 5929
 		only NightElf Druid
 	step //129
 		goto 56.2,30.5
@@ -1325,10 +1327,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 	step //130
 		goto 44.2,45.3|n
 		.talk Silva Fil'naveth##11800
-		..'Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+		.' Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|q 5931
 		only NightElf Druid
 	step //131
-		'Go northwest into the big pink portal to Darnassus|goto Darnassus|noway|c
+		.' Go northwest into the big pink portal to Darnassus|goto Darnassus|noway|q 5931
 		only NightElf Druid
 	step //132
 		goto Teldrassil,24.6,48.7
@@ -1338,10 +1340,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		only NightElf Druid
 	step //133
 		goto 31,42|n
-		.' Go into the pink portal to Rut'theran Village|goto Teldrassil|noway|c
+		.' Go into the pink portal to Rut'theran Village|goto Teldrassil|noway|q 6001
 		only NightElf Druid
 	step //134
-		'Fly to Auberdine|goto Darkshore,36.4,45.6,0.3|noway|c
+		.' Fly to Auberdine|goto Darkshore,36.4,45.6,0.3|noway|q 6001
 		only NightElf Druid
 	step //135
 		'Go into the cave|goto Darkshore,43,46
@@ -1351,10 +1353,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		.goal Face Lunaclaw and earn the strength of body and heart it possesses.|q 6001/1
 		only NightElf Druid
 	step //136
-		'Go west to Auberdine and fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+		.' Go west to Auberdine and fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|q 6001
 		only NightElf Druid
 	step //137
-		goto Darnassus|goto Darnassus|noway|c
+		goto Darnassus|goto Darnassus|noway|q 6001
 		only NightElf Druid
 	step //138
 		goto Teldrassil,24.6,48.7
@@ -1362,7 +1364,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..turnin Body and Heart##6001
 		only NightElf Druid
 	step //139
-		'Go east outside of Darnassus to Teldrassil|goto Teldrassil|noway|c
+		.' Go east outside of Darnassus to Teldrassil|goto Teldrassil|noway|q 486
 		only NightElf Druid
 	step //140
 		goto Teldrassil,39.2,80.1
@@ -1376,7 +1378,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		.talk Athridas Bearmantle##2078
 		..turnin Ursal the Mauler##486
 	step //143
-		'Go west to Darnassus|goto Darnassus|noway|c
+		.' Go west to Darnassus|goto Darnassus|noway|q 6344 |future
 	step //144
 		goto Darnassus,70.7,45.4
 		.talk Mydrannul##4241
@@ -1390,7 +1392,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		.talk Arch Druid Fandral Staghelm##3516
 		..turnin Crown of the Earth (6)##935
 	step //147
-		.' Go into the pink portal to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+		.' Go into the pink portal to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|q 6344
 	step //148
 		goto Teldrassil,56.3,92.4
 		.talk Nessa Shadowsong##10118
@@ -1402,9 +1404,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..turnin The Bounty of Teldrassil##6341
 		..accept Flight to Auberdine##6342
 	step //150
-		goto 58.4,94
+		goto 58.4,94|n
 		.talk Vesprystus##3838
-		'Fly to Auberdine|goto Darkshore,36.4,45.6,0.5|noway|c
+		.' Fly to Auberdine|goto Darkshore,36.4,45.6,0.5|noway|q 6342
 	step //151
 		goto Darkshore,36.6,45.6
 		.talk Gwennyth Bly'Leggonde##10219
@@ -1417,15 +1419,17 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 	step //153
 		ding 11
 	step //154
-		goto Darkshore,36.3,45.6
+		goto Darkshore,36.3,45.6|n
 		.talk Caylais Moonfeather##3841
-		'Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+		.' Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|q 6343
 	step //155
 		goto Teldrassil,56.3,92.4
 		.talk Nessa Shadowsong##10118
 		..turnin Return to Nessa##6343
 	step //156
-		'Fly to Auberdine|goto Darkshore,36.4,45.6,0.5|noway|c
+		goto 58.4,94|n
+		.talk Vesprystus##3838
+		.' Fly to Auberdine|goto Darkshore,36.4,45.6,0.5|noway|q 983 |future
 	step //157
 		goto Darkshore,37,44.1
 		.talk Wizbang Cranktoggle##3666
@@ -1433,7 +1437,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 	step //158
 		goto 37.0,44.1
 		.talk Innkeeper Shaussiy##6737
-		home Auberdine
+		home Auberdine |q 983
 	step //159
 		goto 39.4,43.5
 		.talk Terenthis##3693
@@ -1444,15 +1448,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept Bashal'Aran (1)##954
 	step //161
 		goto 36.1,47.3
-		.from Pygmy Tide Crawler##2231+, Young Reef Crawler##2234+
-		.get 6 Crawler Leg|q 983/1
+		.from Pygmy Tide Crawler##2231, Young Reef Crawler##2234
+		.get 6 Crawler Leg##5385|q 983/1
 	step //162
 		goto 36.4,50.8
-		.' Click the Beached Sea Creature|tip It looks like a big green rotting dinosaur laying on the beach.
-		.get Sea Creature Bones|q 3524/1
+		.collect Sea Creature Bones##12242|q 3524/1
+		.info It looks like a big green rotting dinosaur laying on the beach.
 	step //163
 		goto 36.7,46.3
-		.' Click Buzzbox 827|tip It looks like a mechanical box with levers on it sitting in the grass next to a big wooden platform.
+		.' Click Buzzbox 827
+		.info It looks like a mechanical box with levers on it sitting in the grass next to a big wooden platform.
 		..turnin Buzzbox 827##983
 		..accept Buzzbox 411##1001
 	step //164
@@ -1462,15 +1467,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept Washed Ashore (2)##4681
 	step //165
 		goto 32.7,47.7
-		.from Darkshore Thresher##2185+
-		.get 3 Thresher Eye|q 1001/1
+		.from Darkshore Thresher##2185
+		.get 3 Thresher Eye##5412|q 1001/1
 	step //166
 		goto 31.9,46.3
-		.' Click the Skeletal Sea Turtle|tip It looks like a big turtle skull underwater here.
-		.get Sea Turtle Remains|q 4681/1
+		.collect Sea Turtle Remains##12289|q 4681/1
+		.info It looks like a big turtle skull underwater here.
 	step //167
 		goto 39.6,52.9
-		.' Find a corrupt furbolg camp at this spot|goal Find a corrupt furbolg camp|q 984/1
+		.goal Find a corrupt furbolg camp|q 984/1
 	step //168
 		goto 39.4,43.5
 		.talk Terenthis##3693
@@ -1491,8 +1496,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept Bashal'Aran (2)##955
 	step //172
 		goto 44.6,36.9
-		.from Wild Grell##2190+, Vile Sprite##2189+
-		.get 8 Grell Earring|q 955/1
+		.from Wild Grell##2190, Vile Sprite##2189
+		.get 8 Grell Earring##5336|q 955/1
 	step //173
 		ding 12
 	step //174
@@ -1501,26 +1506,27 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..turnin Bashal'Aran (2)##955
 	step //175
 		goto 42,28.6
-		.' Click the Buzzbox 411|tip It's a metal box with levers on it, sitting on the beach.
+		.' Click the Buzzbox 411.
+		.info It's a metal box with levers on it, sitting on the beach.
 		..turnin Buzzbox 411##1001
 	step //176
-		'Hearth to Auberdine|goto Darkshore,37.0,44.1,0.5|use Hearthstone##6948|noway|c
+		.' Hearth to Auberdine|goto Darkshore,37.0,44.1,0.5|use Hearthstone##6948|noway|q 432 |future
 	step //177
 		goto 32.4,43.8|n
-		'Ride the boat to Stormwind Harbor|goto Stormwind City|noway|c
+		.' Ride the boat to Stormwind Harbor|goto Stormwind City|noway|q 432 |future
 	step //178
 		goto Stormwind City,71,72.5
 		.talk Dungar Longdrink##352
-		..fpath Stormwind City
+		.fpath Stormwind City |q 432 |future
 	step //179
 		goto 69,30.9|n
-		'Ride the train to Ironforge|goto Ironforge|noway|c
+		.' Ride the train to Ironforge|goto Ironforge|noway|q 432 |future
 	step //180
 		goto Ironforge,55.5,47.7
 		.talk Gryth Thurden##1573
 		..fpath Ironforge
 	step //181
-		'Go outside to Dun Morogh|goto Dun Morogh|noway|c
+		.' Go outside to Dun Morogh|goto Dun Morogh|noway|q 432 |future
 	step //182
 		goto Dun Morogh,68.7,56
 		.talk Senator Mehr Stonehallow##1977
@@ -1530,11 +1536,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		.talk Foreman Stonebrow##1254
 		..accept Those Blasted Troggs!##432
 	step //184
-		'Go inside the cave to 70.7,56.5|goto 70.7,56.5
-		.kill 6 Rockjaw Skullthumper|q 432/1
-		.kill 10 Rockjaw Bonesnapper|q 433/1
+		.' Go inside the cave to|goto 70.7,56.5
+		.kill 6 Rockjaw Skullthumper##1115|q 432/1
+		.kill 10 Rockjaw Bonesnapper##1117|q 433/1
 	step //185
-		'Go outside to 68.7,56|goto 68.7,56
+		.' Go outside to|goto 68.7,56
 		.talk Senator Mehr Stonehallow##1977
 		..turnin The Public Servant##433
 	step //186
@@ -1542,42 +1548,42 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		.talk Foreman Stonebrow##1254
 		..turnin Those Blasted Troggs!##432
 	step //187
-		'Go east to Loch Modan|goto Loch Modan|noway|c
+		.' Go east to Loch Modan|goto Loch Modan|noway|q 416 |future
 	step //188
 		goto Loch Modan,33.9,51
 		.talk Thorgrum Borrelson##1572
-		..fpath Thelsamar
+		.fpath Thelsamar |q 416 |future
 	step //189
 		goto 34.8,47.1
 		.talk Mountaineer Kadrell##1340
-		..'He wanders around town
+		.' He wanders around town.
 		..accept Rat Catching##416
 		..accept Mountaineer Stormpike's Task##1339
 	step //190
 		goto 35.5,48.4
 		.talk Innkeeper Hearthstove##6732
-		home Thelsamar
+		home Thelsamar |q 416
 	step //191
 		goto 34.8,49.3
 		.talk Vidra Hearthstove##1963
 		..accept Thelsamar Blood Sausages##418
 	step //192
 		goto 37.4,38.9
-		.from Mountain Boar##1190+, Elder Black Bear##1186+, Forest Lurker##1195+
-		.get 3 Boar Intestines|q 418/1
-		.get 3 Bear Meat|q 418/2
-		.get 3 Spider Ichor|q 418/3
+		.from Mountain Boar##1190, Elder Black Bear##1186, Forest Lurker##1195
+		.get 3 Boar Intestines##3172|q 418/1
+		.get 3 Bear Meat##3173|q 418/2
+		.get 3 Spider Ichor##3174|q 418/3
 	step //193
 		goto 24.5,33.6
-		.from Tunnel Rat Scout##1173+, Tunnel Rat Forager##1176+, Tunnel Rat Kobold##1202+, Tunnel Rat Vermin##1172+
-		.get 12 Tunnel Rat Ear|q 416/1
+		.from Tunnel Rat Scout##1173, Tunnel Rat Forager##1176, Tunnel Rat Kobold##1202, Tunnel Rat Vermin##1172
+		.get 12 Tunnel Rat Ear##3110|q 416/1
 	step //194
 		goto 24.8,18.4
 		.talk Mountaineer Stormpike##1343
 		..turnin Mountaineer Stormpike's Task##1339
 		..accept Stormpike's Order##1338
 	step //195
-		'Hearth to Thelsamar|goto Loch Modan,35.5,48.3,0.5|use Hearthstone##6948|noway|c
+		.' Hearth to Thelsamar|goto Loch Modan,35.5,48.3,0.5|use Hearthstone##6948|noway|q 418
 	step //196
 		goto 34.8,49.3
 		.talk Vidra Hearthstove##1963
@@ -1596,10 +1602,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept The Trogg Threat##267
 	step //200
 		goto 31.1,70.7
-		.kill 10 Stonesplinter Trogg|q 224/1
-		.kill 10 Stonesplinter Scout|q 224/2
-		.from Stonesplinter Scout##1162+, Stonesplinter Trogg##1161+
-		.get 8 Trogg Stone Tooth|q 267/1
+		.kill 10 Stonesplinter Trogg##1161|q 224/1
+		.kill 10 Stonesplinter Scout##1162|q 224/2
+		.from Stonesplinter Scout##1162, Stonesplinter Trogg##1161
+		.get 8 Trogg Stone Tooth##2536|q 267/1
 	step //201
 		goto 22.1,73.1
 		.talk Mountaineer Cobbleflint##1089
@@ -1611,21 +1617,21 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 	step //203
 		ding 13
 	step //204
-		goto 33.9,51
+		goto 33.9,51|n
 		.talk Thorgrum Borrelson##1572
-		'Fly to Stormwind|goto Stormwind City|noway|c
+		.' Fly to Stormwind|goto Stormwind City|noway|q 1338
 	step //205
 		goto Stormwind City,64.6,37.2
 		.talk Furen Longbeard##5413
 		..turnin Stormpike's Order##1338
 	step //206
-		'Go outside to Elwynn Forest|goto Elwynn Forest|noway|c
+		.' Go outside to Elwynn Forest|goto Elwynn Forest|noway|q 109 |future
 	step //207
 		goto Elwynn Forest,42.1,65.9
 		.talk Marshal Dughan##240
 		..accept Report to Gryan Stoutmantle##109
 	step //208
-		'Go southwest to Westfall|goto Westfall|noway|c
+		.' Go southwest to Westfall|goto Westfall|noway|q 109 |future
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)",[[
 	author support@zygorguides.com
