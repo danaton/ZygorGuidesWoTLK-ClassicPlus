@@ -321,7 +321,8 @@ startlevel 35
 			..accept Find Agmond##738
 		step
 			goto Badlands,53.00,33.9
-			.' Click the Crumpled Map|tip Laying on the ground under a white canopy.
+			.' Interact with gameobject: Crumpled Map
+			.info Laying on the ground under a white canopy.
 			..accept A Sign of Hope##720
 		step
 			goto Badlands,53.38,43.33
@@ -365,9 +366,9 @@ startlevel 35
 			goto Badlands,35.3,13.4
 			.' Collect Carved Urn
 			.collect 4 Carved Stone Urn##4610|q 704/1
-			.' Kill mobs in cave
-			.kill 8 Shadowforge Surveyor|q 2418/1
-			.kill 8 Shadowforge Digger|q 2418/2
+			.kill Shadowforge Dwarf|n
+			.get 8 Dentrium Power Stone##8009|q 2418/1
+			.get 8 An'Alleum Power Stone##8052|q 2418/2
 		step
 			goto Badlands,35.22,10.66
 			.' Go To Uldaman Instance!

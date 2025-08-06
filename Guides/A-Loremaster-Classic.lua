@@ -4444,7 +4444,7 @@ startlevel 50
 			.' You can find more around (3)|at 74.82,63.33
 		step
 			goto Thousand Needles,83.06,61.38
-			.' Kill Scorpid enemies around this area
+			.' Kill Scorpid enemies around this area.
 			.info They look like scorpions.
 			.collect 6 Salty Scorpid Venom##5794|q 1104/1
 			.' You can find more around (1)|at 77.95,53.29

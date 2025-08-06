@@ -2384,7 +2384,7 @@ startlevel 60
 			.' Congratulations! +16 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[50-beta] Searing Gorge",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[50] Searing Gorge",[[
 author danaton
 description This guide contain quest-chain (30 quests) for Searing Gorge location.
 startlevel 50
@@ -2693,7 +2693,7 @@ startlevel 50
 			.' Congratulations! +30 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[60-beta] Burning Steppes",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[60] Burning Steppes",[[
 author danaton
 description This guide contain quest-chain (10 quests) for Burning Steppes location.
 startlevel 60
@@ -2836,11 +2836,252 @@ startlevel 60
 			.' Congratulations! +10 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[45-none] Badlands",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[45] Badlands",[[
 author danaton
-description This guide contain quest-chain (?? quests) for Badlands location.
+description This guide contain quest-chain (19 quests) for Badlands location.
 startlevel 45
 		step
+			goto Thousand Needles,78.1,77.1
+			.talk Fizzle Brassbolts##4454
+			..accept Salt Flat Venom##1104
+		step
+			goto Thousand Needles,78.14,77.12
+			.talk Wizzle Brassbolts##4453
+			..accept Hardened Shells##1105
+		step
+			goto Thousand Needles,82.53,55.37
+			.' Kill Sparkleshell enemies around this area.
+			.info They look like turtles.
+			.collect 9 Hardened Tortoise Shell##5795|q 1105/1
+			.' You can find more around (1)|at 77.41,53.72
+			.' You can find more around (2)|at 73.05,56.51
+			.' You can find more around (3)|at 74.82,63.33
+		step
+			goto Thousand Needles,83.06,61.38
+			.' Kill Scorpid enemies around this area.
+			.info They look like scorpions.
+			.collect 6 Salty Scorpid Venom##5794|q 1104/1
+			.' You can find more around (1)|at 77.95,53.29
+			.' You can find more around (2)|at 73.56,56.98
+			.' You can find more around (3)|at 71.30,66.70
+			.' You can find more around (4)|at 77.61,68.70
+		step
+			goto Thousand Needles,78.14,77.12
+			.talk Wizzle Brassbolts##4453
+			..turnin Hardened Shells##1105
+		step
+			goto Thousand Needles,78.1,77.1
+			.talk Fizzle Brassbolts##4454
+			..turnin Salt Flat Venom##1104
+			..accept Martek the Exiled##1106
+		step
+			goto Ironforge,24.2,74.7
+			.talk Auctioneer Redmuse##8720
+			.buy 1 Frost Oil##3829|q 713/1 |future
+			.buy 1 Gyrochronatom##4389|q 714/1 |future
+		step
+			goto Ironforge,74.70,11.80
+			.talk Prospector Stormpike##1356
+			..accept Ironband Wants You!##707
+			.info Dungeon: Uldaman Quest Chain.
+		step
+			goto Loch Modan,37.1,49.4
+			.talk Ghak Healtouch##1470
+			..accept Badlands Reagent Run##2500
+		step
+			goto Loch Modan,66.00,65.4
+			.talk Prospector Ironband##1344
+			..turnin Ironband Wants You!##707
+			..accept Find Agmond##738
+			.info Dungeon: Uldaman Quest Chain.
+		step
+			goto Badlands,53.5,20.15
+			.from Crag Coyote##2727, Rabid Crag Coyote##2730
+			.get 10 Crag Coyote Fang##7846|q 2500/2
+			.' You can find more Coyote|at 51.1,39.9
+		step
+			goto Badlands,53,33.9
+			.' Interact with gameobject: Crumpled Map
+			..accept A Sign of Hope (1)##720
+			.info Dungeon: Uldaman Quest Chain.
+		step
+			goto Badlands,53.6,43.3
+			.talk Prospector Ryedol##2910
+			..turnin A Sign of Hope (1)##720
+			..accept A Dwarf and His Tools##719
+			..accept A Sign of Hope (2)##721
+			.info Dungeon: Uldaman Quest Chain.
+		step
+			goto Badlands,53.8,43.3
+			.talk Sigrun Ironhew##2860
+			..accept Fiery Blaze Enchantments##706
+			..accept Mirages##718
+		step
+			goto Badlands,42.4,52.9
+			.talk Rigglefuzz##2817
+			..accept Barbecued Buzzard Wings##703
+			..accept Pearl Diving##705
+			..accept Power Stones##2418
+		step
+			goto Badlands,42.2,52.7
+			.talk Martek the Exiled##4618
+			..turnin Martek the Exiled##1106
+			..accept Indurium##1108
+		step
+			goto Badlands,25.9,44.6
+			.talk Lotwil Veriatus##2921
+			..accept Study of the Elements: Rock (1)##710
+			..accept Coolant Heads Prevail##713
+			..turnin Coolant Heads Prevail##713
+			..accept Gyro... What?##714
+			..turnin Gyro... What?##714
+		step
+			goto Badlands,21.9,44.6
+			.from Lesser Rock Elemental##2735
+			.get 10 Small Stone Shard##4626|q 710/1
+			.get 5 Rock Elemental Shard##7848|q 2500/3
+		step
+			goto Badlands,25.9,44.6
+			.talk Lotwil Veriatus##2921
+			..turnin Study of the Elements: Rock (1)##710
+			..accept Study of the Elements: Rock (2)##711
+		step
+			goto Badlands,52.3,30.4
+			.from Shadowforge Tunneler##2739, Shadowforge Darkweaver##2740, Shadowforge Chanter##2742, Shadowforge Warrior##2743
+			.get Ryedol's Lucky Pick##4616|q 719/1
+		step
+			goto Badlands,66.6,21.5
+			.collect Supply Crate##4629|q 718/1
+			.info It's a wooden crate, sitting next to a very small tent, canopy thing in the small ogre camp, or sitting on the ground next to a cauldron.
+			.' The crate can also be located|at 66.9,23.4
+		step
+			goto Badlands,81.7,34.65
+			.from Scalding Whelp##2725, Scorched Guardian##2726
+			.get Black Drake's Heart##4612|q 706/1
+			.' You can find more around (1)|at 81.15,52.4
+			.' You can find more around (2)|at 74.05,63.75
+		step
+			goto Badlands,53.6,43.3
+			.talk Prospector Ryedol##2910
+			..turnin A Dwarf and His Tools##719
+		step
+			goto Badlands,53.8,43.3
+			.talk Sigrun Ironhew##2860
+			..turnin Fiery Blaze Enchantments##706
+			..turnin Mirages##718
+			..accept Scrounging##733
+		step
+			goto Badlands,50.9,62.4
+			.' Interact with gameobject: Battered Dwarven Skeleton
+			..turnin Find Agmond##738
+			..accept Murdaloc##739
+		step
+			goto Badlands,50.70,67.70
+			.kill 1 Murdaloc|q 739/1
+			.kill 12 Stonevault Bonesnapper|q 739/2
+			.get 10 Indurium Flake##5797|q 1108/1
+		step
+			goto Badlands,46.3,77.2|n
+			.' The path up to Study of the Elements: Rock (2) starts here|goto Badlands,46.3,77.2,0.5|noway|q 711
+		step
+			goto Badlands,44.05,83.4
+			.from Rock Elementals##92
+			.get 3 Large Stone Slab##4627|q 711/1
+		step
+			goto Badlands,9.2,80.05
+			.kill Ogres|n
+			.get 7 Scrap Metal##4630|q 733/1
+		step
+			goto Badlands,16.05,60.35
+			.from Giant Buzzard##2831
+			.get 5 Buzzard Gizzard##7847|q 2500/1
+			.get 4 Buzzard Wing##3404|q 703/1
+			.' You can find more Buzzard|at 31.4,59.4
+		step
+			goto Badlands,25.9,44.6
+			.talk Lotwil Veriatus##2921
+			..turnin Study of the Elements: Rock (2)##711
+			..accept Study of the Elements: Rock (3)##712
+		step
+			goto Badlands,7.9,74.1|n
+			.' The path up to 'Study of the Elements: Rock (3)' starts here|goto Badlands,7.9,74.1,0.5|noway|q 712
+		step
+			goto Badlands,4.2,81.5
+			.from Greater Rock Elementals##2736
+			.get 5 Bracers of Rock Binding##4628|q 712/1
+		step
+			goto Badlands,25.9,44.6
+			.talk Lotwil Veriatus##2921
+			..turnin Study of the Elements: Rock (3)##712
+			..accept This Is Going to Be Hard (1)##734
+		step
+			goto Badlands,25.8,44.2
+			.talk Lucien Tosselwrench##2920
+			..turnin This Is Going to Be Hard (1)##734
+			..accept This Is Going to Be Hard (2)##777
+		step
+			goto Badlands,25.9,44.6
+			.talk Lotwil Veriatus##2921
+			..turnin This Is Going to Be Hard (2)##777
+			..accept This Is Going to Be Hard (3)##778
+		step
+			goto Badlands,26.1,46.85
+			.from Fam'retor Guardian##2919
+			.get Lotwil's Shackles of Elemental Binding##4847|q 778/1
+		step
+			goto Badlands,25.9,44.6
+			.talk Lotwil Veriatus##2921
+			..turnin This Is Going to Be Hard (3)##778
+		step
+			goto Badlands,42.4,52.9
+			.talk Rigglefuzz##2817
+			..turnin Barbecued Buzzard Wings##703
+		step
+			goto Badlands,42.2,52.7
+			.talk Martek the Exiled##4618
+			..turnin Indurium##1108
+			..accept News for Fizzle##1137
+		step
+			goto Badlands,53.6,43.3
+			.talk Sigrun Ironhew##2860
+			..turnin Scrounging##733
+		step
+			goto Badlands,35.3,13.4
+			.kill Shadowforge Dwarf|n
+			.get 8 Dentrium Power Stone##8009|q 2418/1
+			.get 8 An'Alleum Power Stone##8052|q 2418/2
+			.info Dungeon: Uldaman Quest Chain.
+		step
+			goto Badlands,37.9,10.58
+			.talk Hammertoe Grez##2909
+			..turnin A Sign of Hope (2)##721
+			.info Dungeon: Uldaman Quest Chain.
+		step
+			goto Badlands,42.4,52.9
+			.talk Rigglefuzz##2817
+			..turnin Power Stones##2418
+		step
+			goto Loch Modan,66.00,65.4
+			.talk Prospector Ironband##1344
+			..turnin Murdaloc##739
+			.info Dungeon: Uldaman Quest Chain.
+		step
+			goto Loch Modan,37.1,49.4
+			.talk Ghak Healtouch##1470
+			..turnin Badlands Reagent Run##2500
+		step
+			goto Stranglethorn Vale,26.1,22.9
+			.collect 9 Blue Pearl##4611|q 705/1
+		step
+			goto Badlands,42.4,52.9
+			.talk Rigglefuzz##2817
+			..turnin Pearl Diving##705
+		step
+			goto Thousand Needles,78.1,77.1
+			.talk Fizzle Brassbolts##4454
+			..turnin News for Fizzle##1137
+		step
+			.' Congratulations! +19 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[20] Dun Morogh",[[
@@ -4014,31 +4255,699 @@ startlevel 30
 			.' Congratulations! +48 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[none] Hillsbrad Foothills",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[35] Hillsbrad Foothills",[[
 author danaton
-description This guide contain quest-chain (?? quests) for Hillsbrad Foothills location.
-startlevel 40
+description This guide contain quest-chain (34 quests) for Hillsbrad Foothills location.
+startlevel 35
 		step
 			.' First you need to complete the Duskwood quest chain.
 			.info Skip this step manually.
-			.' +543 quest
+		step
+			goto Duskwood,23.05,37.6
+			.from Bone Chewer##210, Plague Spreader##604, Rotted One##948
+			.collect An Old History Book##2794|q 337 |future
+			.use An Old History Book##2794
+			..accept An Old History Book##337
+		step
+			goto Stormwind City,53.1,81.8
+			.talk Alexandra Bolero##1347
+			.buy 1 Fine Thread##2321|q 565 |future
+		step
+			goto Stormwind City,61.2,70.7
+			.talk Auctioneer Jaxon##15659
+			.buy 1 Bolt of Woolen Cloth##2997|q 565 |future
+			.buy 1 Hillman's Cloak##3719|q 565 |future
+			.info Hillman's Cloak created by tailors.
 		step
 			goto Stormwind City,77.1,30.2
 			.talk Milton Sheaf##1440
+			..turnin An Old History Book##337
 			..accept Southshore##538
+		step
+			goto Stormwind City,76.9,47.8
+			.talk Count Remington Ridgewell##2285
+			..accept The Perenolde Tiara##543
+		step
+			goto Arathi Highlands,43.27,92.03|n
+			.' Jump onto the ledge from the bridge|goto Arathi Highlands,43.27,92.03,0.5|noway|q 647 |future
+		step
+			goto Arathi Highlands,43.2,92.6
+			.talk Foggy MacKreel##2696
+			..accept MacKreel's Moonshine##647
+			.info Warning! Timed quest!
+		step
+			goto Arathi Highlands,44.3,92.8|n
+			.' Jump down into the water|goto Arathi Highlands,44.3,92.8,0.5|noway|q 637 |future
+		step
+			goto Arathi Highlands,44.3,92.9
+			.collect Waterlogged Envelope##4433|q 637 |future
+			.use Waterlogged Envelope##4433
+			..accept Sully Balloo's Letter##637
+			.info At the bottom, near the dwarf's corpse.
+		step
+			goto Arathi Highlands,53.2,91|n
+			.' Swim here and go up the hill|goto Arathi Highlands,53.2,91,0.5|noway|q 647
+		step
+			goto Hillsbrad Foothills,52.1,58.7
+			.talk Brewmeister Bilger##2705
+			..turnin MacKreel's Moonshine##647
+			.info Hurry! Timed quest.
+		step
+			goto Hillsbrad Foothills,49.3,52.3|n
+			.talk Darla Harris##2432
+			.' Fly to Ironforge|goto Ironforge,55.75,47.85,0.5|noway|q 637
+		step
+			goto Ironforge,63.5,67.3
+			.talk Sara Balloo##2695
+			..turnin Sully Balloo's Letter##637
+			..accept Sara Balloo's Plea##683
+		step
+			goto Ironforge,39.1,56.2
+			.talk King Magni Bronzebeard##2784
+			..turnin Sara Balloo's Plea##683
+			..accept A King's Tribute (1)##686
+		step
+			goto Ironforge,39,88.1
+			.talk Grand Mason Marblesten##2790
+			..turnin A King's Tribute (1)##686
+			..accept A King's Tribute (2)##689
+		step
+			goto Hillsbrad Foothills,50.6,57.1
+			.talk Loremaster Dibbs##2277
+			..turnin Southshore##538
+			..accept Preserving Knowledge##540
+		step
+			goto Hillsbrad Foothills,52.42,55.96
+			.talk Darren Malvew##2382
+			..accept Costly Menace##564
+		step
+			goto Hillsbrad Foothills,49.4,55.5
+			.talk Bartolo Ginsetti##2438
+			..accept Bartolo's Yeti Fur Cloak##565
+		step
+			goto Hillsbrad Foothills,50.99,58.69
+			.talk Huraan##17218
+			..accept Missing Crystals##9435
+		step
+			goto Hillsbrad Foothills,51.46,58.38
+			.talk Lieutenant Farren Orinelle##2228
+			..accept Down the Coast##536
+		step
+			goto Hillsbrad Foothills,51.89,58.68
+			.talk Chef Jessen##2430
+			..accept Soothing Turtle Bisque##555
+		step
+			goto Hillsbrad Foothills,49.48,58.73
+			.talk Marshal Redpath##2263
+			..accept Crushridge Bounty##500
+		step
+			goto Hillsbrad Foothills,48.14,59.11
+			.talk Magistrate Henry Maleb##2276
+			..accept Syndicate Assassins##505
+		step
+			goto Hillsbrad Foothills,55.57,35.21
+			.collect Shipment of Rare Crystals##23646|q 9435/1
+			.info Inside the building.
+		step
+			goto Hillsbrad Foothills,46.18,31.83
+			.collect 5 Alterac Granite##4521|q 689/1
+			.info They look like flat grey stones standing upright near the walls inside the cave.
+		step
+			goto Hillsbrad Foothills,45.75,31.5
+			.from Cave Yeti##2248, Ferocious Yeti##2249
+			.get 10 Yeti Fur##3720|q 565/4
+		step
+			goto Alterac Mountains,47.91,82.13
+			.' Interact with gameobject: Syndicate Documents
+			.info Be careful, the enemies in these camps respawn pretty quickly.
+			.info If you have trouble, try to find someone to help you.
+			..accept Foreboding Plans##510
+			..accept Encrypted Letter##511
+			.' If it's not here, check the other camp|at 58.32,67.92
+		step
+			goto Alterac Mountains,38.4,46.4
+			.collect Worn Leather Book##3659|q 540/2
+		step
+			goto Alterac Mountains,35.5,54.5
+			.from Grel'borg the Miser##2417
+			.get Perenolde Tiara##3684|q 543/1
+			.' Moving along the route, the final point is here|at 40.8,46.2
+		step
+			goto Alterac Mountains,49.9,57.1
+			.from Crushridge Ogre##2252
+			.get 5 Recovered Tome##3658|q 540/1
+			.get 9 Dirty Knucklebones##2843|q 500/1
+			.' You can find more around (1)|at 38.2,52.4
+			.' You can find more around (2)|at 48.8,43.1
+		step
+			goto Alterac Mountains,58.32,67.92
+			.kill 12 Syndicate Footpad##2240|q 505/1
+			.kill 8 Syndicate Thief##2241|q 505/2
+			.info Focus on killing them in this camp.
+			.info The next step in the guide is nearby this camp.
+		step
+			goto Alterac Mountains,43.94,77.87
+			.kill 8 Mountain Lion##2406|q 564/1
+			.kill 10 Hulking Mountain Lion##2407|q 564/2
+			.' You can find more around (1)|at 37.69,85.48
+			.' You can find more around (2)|at 32.86,83.10
+		step
+			goto Hillsbrad Foothills,70.16,11.90
+			.from Snapjaw##2408
+			.get 10 Turtle Meat##3712|q 555/1
+			.info Be careful not to accidentally sell these to a vendor.
+			.' You can find more around (1)|at Alterac Mountains,73.90,66.37
+			.' You can find more around (2)|at Alterac Mountains,80.00,58.78
+			.' You can find more around (3)|at Alterac Mountains,84.47,51.55
+			.' You can find more around (4)|at Alterac Mountains,89.72,47.03
+		step
+			goto Hillsbrad Foothills,49.4,55.5
+			.talk Bartolo Ginsetti##2438
+			..turnin Bartolo's Yeti Fur Cloak##565
+		step
+			goto Hillsbrad Foothills,50.57,57.09
+			.talk Loremaster Dibbs##2277
+			..turnin Encrypted Letter##511
+			..turnin Preserving Knowledge##540
+			..accept Letter to Stormpike##514
+			..accept Return to Milton##542
+		step
+			goto Hillsbrad Foothills,52.42,55.96
+			.talk Darren Malvew##2382
+			..turnin Costly Menace##564
+		step
+			goto Hillsbrad Foothills,50.99,58.69
+			.talk Huraan##17218
+			..turnin Missing Crystals##9435
+		step
+			goto Hillsbrad Foothills,51.89,58.68
+			.talk Chef Jessen##2430
+			..turnin Soothing Turtle Bisque##555
+		step
+			goto Hillsbrad Foothills,49.5,58.7
+			.talk Marshal Redpath##2263
+			..turnin Crushridge Bounty##500
+			..accept Crushridge Warmongers##504
+		step
+			goto Hillsbrad Foothills,48.14,59.11
+			.talk Magistrate Henry Maleb##2276
+			..turnin Syndicate Assassins##505
+			..turnin Foreboding Plans##510
+			..accept Noble Deaths##512
+		step
+			goto Hillsbrad Foothills,46.55,64.38
+			.kill 10 Torn Fin Tidehunter##2377|q 536/1
+			.kill 10 Torn Fin Oracle##2376|q 536/2
+			.info You can find more in the water along the shore.
+			.' You can find more around (1)|at 43.51,67.70
+			.' You can find more around (2)|at 37.04,68.74
+		step
+			goto Hillsbrad Foothills,51.46,58.38
+			.talk Lieutenant Farren Orinelle##2228
+			..turnin Down the Coast##536
+			..accept Farren's Proof (1)##559
+		step
+			goto Alterac Mountains,38.15,52.3
+			.kill 10 Crushridge Warmonger##2287|q 504/1
+		step
+			goto Alterac Mountains,39.7,17.15
+			.from Syndicate Spy##2242, Syndicate Sentry##2243, Syndicate Saboteur##2245, Syndicate Assassin##2246, Syndicate Enforcer##2247, Syndicate Wizard##2319
+			.get 7 Alterac Signet Ring##3505|q 512/1
+			.' You can find more around (1)|at 48.6,17.85
+			.' You can find more around (2)|at 56.3,26.85
+			.' You can find more around (3)|at 62.1,44
+		step
+			goto Hillsbrad Foothills,49.5,58.7
+			.talk Marshal Redpath##2263
+			..turnin Crushridge Warmongers##504
+		step
+			goto Hillsbrad Foothills,48.14,59.11
+			.talk Magistrate Henry Maleb##2276
+			..turnin Noble Deaths##512
+		step
+			goto Hillsbrad Foothills,46.55,64.38
+			.' Kill Torn Fin enemies around this area.
+			.info You can find more in the water along the shore.
+			.get 10 Murloc Head##3716|q 559/1
+			.' You can find more around (1)|at 43.51,67.70
+			.' You can find more around (2)|at 37.04,68.74
+		step
+			goto Hillsbrad Foothills,48,47.5
+			.from Shadowy Assassin##2434
+			.collect Assassin's Contract##3668|q 522 |future
+			.' You can find more around (1)|at 45.1,50.8
+			.' You can find more around (2)|at 45.6,55.6
+			.' You can find more around (3)|at 47.2,55.3
+		step
+			.use Assassin's Contract##3668
+			..accept Assassin's Contract##522
+		step
+			goto Hillsbrad Foothills,51.46,58.38
+			.talk Lieutenant Farren Orinelle##2228
+			..turnin Farren's Proof (1)##559
+			..accept Farren's Proof (2)##560
+		step
+			goto Hillsbrad Foothills,49.48,58.73
+			.talk Marshal Redpath##2263
+			..turnin Farren's Proof (2)##560
+			..accept Farren's Proof (3)##561
+		step
+			goto Hillsbrad Foothills,48.1,59.1
+			.talk Magistrate Henry Maleb##2276
+			..turnin Assassin's Contract##522
+			..accept Baron's Demise##523
+		step
+			goto Hillsbrad Foothills,51.46,58.38
+			.talk Lieutenant Farren Orinelle##2228
+			..turnin Farren's Proof (3)##561
+			..accept Stormwind Ho!##562
+		step
+			goto Hillsbrad Foothills,53.42,64.21
+			.kill 10 Daggerspine Shorehunter##2369|q 562/1
+			.kill 10 Daggerspine Siren##2371|q 562/2
+			.info You can find more in the water along the shore.
+			.' You can find more around (1)|at 57.57,66.32
+			.' You can find more around (2)|at 60.95,75.24
+		step
+			goto Hillsbrad Foothills,51.46,58.38
+			.talk Lieutenant Farren Orinelle##2228
+			..turnin Stormwind Ho!##562
+			..accept Reassignment##563
+		step
+			goto Ironforge,39,88.1
+			.talk Grand Mason Marblesten##2790
+			..turnin A King's Tribute (2)##689
+			.' Watch the dialogue.
+			..accept A King's Tribute (3)##700
+		step
+			goto Ironforge,39.1,56.2
+			.talk King Magni Bronzebeard##2784
+			..turnin A King's Tribute (3)##700
+		step
+			goto Ironforge,74.6,11.7
+			.talk Prospector Stormpike##1356
+			..turnin Letter to Stormpike##514
+			..accept Further Mysteries##525
+		step
+			goto Stormwind City,76.9,47.8
+			.talk Count Remington Ridgewell##2285
+			..turnin The Perenolde Tiara##543
+		step
+			goto Stormwind City,77.1,30.2
+			.talk Milton Sheaf##1440
+			..turnin Return to Milton##542
+		step
+			goto Stormwind City,75.9,36.7
+			.talk Major Samuelson##2439
+			..turnin Reassignment##563
+		step
+			goto Hillsbrad Foothills,48.1,59.1
+			.talk Magistrate Henry Maleb##2276
+			..turnin Further Mysteries##525
+			..accept Dark Council##537
+		step
+			goto Alterac Mountains,47.8,17.1
+			.from Baron Vardus##2306
+			.get Head of Baron Vardus##3626|q 523/1
+		step
+			goto Alterac Mountains,39.2,14.3
+			.from Nagaz##2320
+			.get Head of Nagaz##3672|q 537/2
+		step
+			goto Alterac Mountains,39.2,14.7
+			.collect Ensorcelled Parchment##3706|q 551 |future
+			.info On the second floor in a chest.
+		step
+			.use Ensorcelled Parchment##3706
+			..accept The Ensorcelled Parchment##551
+		step
+			goto Alterac Mountains,60.3,44
+			.kill 4 Argus Shadow Mage##2318|q 537/1
+		step
+			goto Hillsbrad Foothills,50.6,57.1
+			.talk Loremaster Dibbs##2277
+			..turnin The Ensorcelled Parchment##551
+			..accept Stormpike's Deciphering##554
+		step
+			goto Hillsbrad Foothills,48.1,59.1
+			.talk Magistrate Henry Maleb##2276
+			..turnin Baron's Demise##523
+			..turnin Dark Council##537
+		step
+			goto Ironforge,74.6,11.7
+			.talk Prospector Stormpike##1356
+			..turnin Stormpike's Deciphering##554
+		step
+			.' Congratulations! +34 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[none] Arathi Highlands",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[40] Arathi Highlands",[[
 author danaton
-description This guide contain quest-chain (?? quests) for Arathi Highlands location.
+description This guide contain quest-chain (32 quests) for Arathi Highlands location.
 startlevel 40
 		step
-			.' First you need to complete the Hillsbrad Foothills quest chain.
+			.' First you need to complete the Wetlands and Hillsbrad Foothills quest chain.
 			.info Skip this step manually.
 		step
-			goto Stormwind City,77.1,30.2
-			.talk Milton Sheaf##1440
-			..accept Southshore##538
+			goto Stormwind City,50.4,87.5
+			.talk Archmage Malin##2708
+			..accept Malin's Request##690
+		step
+			goto Hillsbrad Foothills,50.3,59
+			.talk Phin Odelic##2711
+			..accept Hints of a New Plague? (1)##659
+		step
+			goto Arathi Highlands,45.8,47.6
+			.talk Captain Nials##2700
+			..accept Northfold Manor##681
+		step
+			goto Arathi Highlands,46,47.7
+			.' Interact with gameobject: Wanted Board
+			..accept Wanted! Marez Cowl##684
+			..accept Wanted! Otto and Falconcrest##685
+		step
+			goto Arathi Highlands,46.7,47
+			.talk Skuerto##2789
+			..turnin Malin's Request##690
+		step
+			goto Arathi Highlands,46.2,47.8
+			.talk Apprentice Kryten##2788
+			..accept Worth Its Weight in Gold##691
+		step
+			goto Arathi Highlands,32.45,28.4
+			.kill 10 Syndicate Highwayman|q 681/1
+			.kill 6 Syndicate Mercenary|q 681/2
+		step
+			goto Arathi Highlands,45.8,47.6
+			.talk Captain Nials##2700
+			..turnin Northfold Manor##681
+		step
+			goto Arathi Highlands,62.5,33.8
+			.' Interact with gameobject: Shards of Myzrael
+			.info It's a huge floating black crystal.
+			..accept The Princess Trapped##642
+		step
+			goto Arathi Highlands,82.8,36
+			.from Drywhisker Kobold##2572, Drywhisker Surveyor##2573, Drywhisker Digger##2574
+			.get 12 Mote of Myzrael|q 642/1
+		step
+			goto Arathi Highlands,84.3,30.9
+			.' Interact with gameobject: Iridescent Shards
+			.info Inside the cave, follow the path curving up to the left. It's a big black floating crystal.
+			..turnin The Princess Trapped##642
+			..accept Stones of Binding##651
+		step
+			goto Arathi Highlands,66.7,29.7
+			.' Interact with gameobject: Stone of East Binding
+			.info In the middle of a circle of stones.
+			.collect 1 Cresting Key##4484|q 651/2
+		step
+			goto Arathi Highlands,52,50.7
+			.collect 1 Thundering Key##4485|q 651/3
+			.info In the middle of a circle of stones.
+		step
+			goto Arathi Highlands,60.2,53.9
+			.talk Quae##2712
+			..turnin Hints of a New Plague? (1)##659
+			..accept Hints of a New Plague? (2)##658
+		step
+			goto Arathi Highlands,71.7,62.9
+			.from Witherbark Troll##2552, Witherbark Shadowcaster##2553, Witherbark Axe Thrower##2554, Witherbark Headhunter##2556, Witherbark Shadow Hunter##2557, Witherbark Berserker##2558
+			.get 10 Witherbark Tusk|q 691/1
+			.from Witherbark Witch Doctors##2555
+			.get 4 Witherbark Medicine Pouch|q 691/2
+		step
+			goto Arathi Highlands,68.3,75.1
+			.from Witherbark Shadow Hunters##2557
+			.' They are inside the cave.
+			.get Shadow Hunter Knife|q 691/3
+		step
+			.' The Forsaken Courier walks the road from the Go'Shek Farm to Tauren Mill in the Hillsbrad Foothills. If you see him while walking around, kill only the Forsaken Courier then run away. If you still have not found him after you're done questing, walk the road until you find him.
+			.from Forsaken Courier##2714
+			.get Sealed Folder##4482|q 658/1
+		step
+			goto Arathi Highlands,25.5,30.1
+			.collect 1 Burning Key##4483|q 651/1
+			.info In the middle of a circle of stones.
+		step
+			goto Arathi Highlands,46.2,47.8
+			.talk Apprentice Kryten##2788
+			..turnin Worth Its Weight in Gold##691
+		step
+			goto Arathi Highlands,46.6,47
+			.talk Skuerto##2789
+			..accept Wand over Fist##693
+		step
+			goto Arathi Highlands,36.2,57.3
+			.' Interact with gameobject: Stone of Inner Binding
+			.info In the middle of a circle of stones.
+			..turnin Stones of Binding##651
+			..accept Breaking the Keystone##652
+		step
+			goto Arathi Highlands,64.5,27.8
+			.from Fozruk##2611
+			.info It moves along waypoints.
+			.get Rod of Order##4469|q 652/1
+			.' You can find Fozruk (1)|at 67.4,33.8
+			.' You can find Fozruk (2)|at 66.2,45.6
+			.' You can find Fozruk (3)|at 50.8,55.3
+			.' You can find Fozruk (4)|at 38.9,49.9
+			.' You can find Fozruk (5)|at 36.4,38.7
+			.' You can find Fozruk (6)|at 30.1,37.4
+			.' You can find Fozruk (7)|at 19.1,46.4
+			.' You can find Fozruk (8)|at 25.4,47
+			.' You can find Fozruk (9)|at 30.5,54.5
+			.' You can find Fozruk (10)|at 39.9,56.5
+			.' You can find Fozruk (11)|at 51.3,47.9
+			.' You can find Fozruk (12)|at 64.1,42.5
+		step
+			goto Arathi Highlands,60.2,53.9
+			.talk Quae##2712
+			..turnin Hints of a New Plague? (2)##658
+			..accept Hints of a New Plague? (3)##657
+		step
+			goto Arathi Highlands,60.2,53.9
+			.talk Kinelory##2713
+			..turnin Hints of a New Plague? (3)##657
+			..accept Hints of a New Plague? (4)##660
+		step
+			goto Arathi Highlands,60,59.25
+			.goal Protect Kinelory|q 660/1
+		step
+			goto Arathi Highlands,60.2,53.9
+			.talk Quae##2712
+			..turnin Hints of a New Plague? (4)##660
+			..accept Hints of a New Plague? (5)##661
+		step
+			goto Arathi Highlands,54.8,81.9
+			.from Kor'gresh Coldrage##2793
+			.get Trelane's Wand of Invocation##4525|q 693/1
+		step
+			goto Arathi Highlands,46.6,47
+			.talk Skuerto##2789
+			..turnin Wand over Fist##693
+			..accept Trelane's Defenses##694
+		step
+			goto Arathi Highlands,45.8,47.6
+			.talk Captain Nials##2700
+			..accept Stromgarde Badges##682
+		step
+			goto Arathi Highlands,36.2,57.3
+			.' Interact with gameobject: Stone of Inner Binding
+			.info In the middle of a circle of stones.
+			..turnin Breaking the Keystone##652
+			..accept Myzrael's Allies##653
+		step
+			goto Arathi Highlands,29.6,64.2
+			.from Marez Cowl##2783
+			.get Marez's Head|q 684/1
+			.' She can also be|at 29.6,63.0
+			.info She is standing behind a big house, next to a table with a bunch of raw meat on it.
+		step
+			goto Arathi Highlands,26,65.5
+			.from Otto##2599
+			.get Otto's Head|q 685/1
+			.from Lord Falconcrest##2597
+			.get Falconcrest's Head|q 685/2
+		step
+			goto Arathi Highlands,26.1,59.8
+			.from Syndicate Prowler##2588, Syndicate Conjuror##2590, Syndicate Magus##2591
+			.get 7 Stromgarde Badge|q 682/1
+		step
+			.goto Arathi Highlands,24.4,61.2|n
+			.' The path to Trelane's Defenses starts here|goto Arathi Highlands,24.4,61.2,0.5|noway|q 694
+		step
+			goto Arathi Highlands,21.7,66.9
+			.from Boulderfist Shaman##2570
+			.get Azure Agate##4527|q 694/1
+		step
+			goto Arathi Highlands,31.5,64.1|n
+			.' The path over to Faldir's Cove starts here|goto Arathi Highlands,31.5,64.1,0.5|noway|q 663 |future
+		step
+			goto Arathi Highlands,31.8,82.7
+			.talk Lolo the Lookout##2766
+			..accept Land Ho!##663
+		step
+			goto Arathi Highlands,32.3,81.4
+			.talk Shakes O'Breen##2610
+			..turnin Land Ho!##663
+		step
+			goto Arathi Highlands,32.7,81.5
+			.talk First Mate Nilzlix##2767
+			..accept Deep Sea Salvage##662
+		step
+			goto Arathi Highlands,33.9,80.6
+			.talk Captain Steelgut##2769
+			..accept Drowned Sorrows##664
+		step
+			goto Arathi Highlands,33.9,80.5
+			.talk Professor Phizzlethorpe##2768
+			..accept Sunken Treasure (1)##665
+		step
+			goto Arathi Highlands,35.72,79.64
+			.goal Defend Professor Phizzlethorpe|q 665/1
+		step
+			goto Arathi Highlands,33.9,80.4
+			.talk Doctor Draxlegauge##2774
+			..turnin Sunken Treasure (1)##665
+			..accept Sunken Treasure (2)##666
+		step
+			goto Arathi Highlands,23.5,85.1
+			.collect Maiden's Folly Log##4489|q 662/2
+			.info On the middle deck, in a pile of junk, sitting in a cauldron looking pot.
+		step
+			goto Arathi Highlands,23.1,84.5
+			.collect Maiden's Folly Charts##4487|q 662/1
+			.info On a wooden ledge on the middle deck. It looks like a tan, flat scroll.
+		step
+			goto Arathi Highlands,20.5,85.6
+			.collect Spirit of Silverpine Charts##4488|q 662/3
+			.info It's a flat scroll laying on a box next to a cannon on the middle deck of the ship.
+		step
+			goto Arathi Highlands,20.6,85.1
+			.collect Spirit of Silverpine Log##4490|q 662/4
+			.info It's a scroll laying flat on the ground at the very bottom of the ship.
+		step
+			goto Arathi Highlands,22.4,83.7
+			.' Put on your Goggles of Gem Hunting|use Goggles of Gem Hunting##4491
+			.collect 10 Elven Gem##4492|q 666/1
+			.info Use your Goggles of Gem Hunting. The Calcified Elven Gems will show up as yellow dots on your mini map.
+		step
+			goto Arathi Highlands,25.3,85.2
+			.kill 10 Daggerspine Raider##2595|q 664/1
+			.kill 3 Daggerspine Sorceress##2596|q 664/2
+		step
+			goto Arathi Highlands,32.7,81.5
+			.talk First Mate Nilzlix##2767
+			..turnin Deep Sea Salvage##662
+		step
+			goto Arathi Highlands,33.9,80.6
+			.talk Doctor Draxlegauge##2774
+			..turnin Sunken Treasure (2)##666
+			..accept Sunken Treasure (3)##668
+		step
+			goto Arathi Highlands,33.9,80.6
+			.talk Captain Steelgut##2769
+			..turnin Drowned Sorrows##664
+		step
+			goto Arathi Highlands,32.3,81.4
+			.talk Shakes O'Breen##2610
+			..turnin Sunken Treasure (3)##668
+			..accept Sunken Treasure (4)##669
+		step
+			goto Arathi Highlands,45.8,47.6
+			.talk Captain Nials##2700
+			..turnin Stromgarde Badges##682
+			..turnin Wanted! Marez Cowl##684
+			..turnin Wanted! Otto and Falconcrest##685
+		step
+			goto Arathi Highlands,46.2,47.8
+			.talk Apprentice Kryten##2788
+			..turnin Trelane's Defenses##694
+			..accept An Apprentice's Enchantment##695
+		step
+			goto Arathi Highlands,46.6,47
+			.talk Skuerto##2789
+			..turnin An Apprentice's Enchantment##695
+			..accept Attack on the Tower##696
+		step
+			goto Arathi Highlands,18.2,68.1
+			.collect Trelane's Phylactery##4530|q 696/1
+		step
+			goto Arathi Highlands,18,67.9
+			.collect Trelane's Ember Agate##4532|q 696/3
+		step
+			goto Arathi Highlands,18.2,69.2
+			.collect Trelane's Orb##4531|q 696/2
+		step
+			goto Arathi Highlands,46.6,47
+			.talk Skuerto##2789
+			..turnin Attack on the Tower##696
+			..accept Malin's Request##697
+		step
+			goto Hillsbrad Foothills,50.3,59
+			.talk Phin Odelic##2711
+			..turnin Hints of a New Plague? (5)##661
+		step
+			goto Ironforge,50.8,5.6
+			.talk Gerrig Bonegrip##2786
+			..turnin Myzrael's Allies##653
+			..accept Theldurin the Lost##687
+		step
+			goto Stormwind City,50.4,87.5
+			.talk Archmage Malin##2708
+			..turnin Malin's Request##697
+		step
+			goto Stranglethorn Vale,27.2,77
+			.talk Fleet Master Seahorn##2487
+			..turnin Sunken Treasure (4)##669
+			..accept Sunken Treasure (5)##670
+		step
+			goto Badlands,51.4,76.9
+			.talk Theldurin the Lost##2785
+			..turnin Theldurin the Lost##687
+			..accept The Lost Fragments##692
+		step
+			goto Badlands,54.95,84.25
+			.from Enraged Rock Elemental##2791
+			.get Torn Scroll Fragment##4518|q 692/1
+			.get Crumpled Scroll Fragment##4519|q 692/2
+			.get Singed Scroll Fragment##4520|q 692/3
+		step
+			goto Badlands,51.4,76.9
+			.talk Theldurin the Lost##2785
+			..turnin The Lost Fragments##692
+			..accept Summoning the Princess##656
+		step
+			goto Arathi Highlands,62.5,33.7
+			.use Scroll of Myzrael##4472
+			.from Myzrael##2755
+			.get Eldritch Shackles##4473|q 656/1
+		step
+			goto Arathi Highlands,62.5,33.7
+			.' Interact with gameobject: Shards of Myzrael
+			..turnin Summoning the Princess##656
+		step
+			goto Arathi Highlands,32.3,81.4
+			.talk Shakes O'Breen##2610
+			..turnin Sunken Treasure (5)##670
+			..accept Death From Below##667
+		step
+			goto Arathi Highlands,32.3,81.4
+			.goal Defend Shakes O'Breen|q 667/1
+		step
+			goto Arathi Highlands,32.3,81.4
+			.talk Shakes O'Breen##2610
+			..turnin Death From Below##667
+		step
+			.' Congratulations! +32 quests for achievement "Loremaster of Eastern Kingdoms".
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[none] Hinterlands",[[
+author danaton
+description This guide contain quest-chain (?? quests) for Arathi Highlands location.
+startlevel 50
+		step
 ]])
 
 ZygorGuidesViewer.AllianceInstalled=true
