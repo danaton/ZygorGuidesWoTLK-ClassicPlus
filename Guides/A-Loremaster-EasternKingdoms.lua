@@ -520,6 +520,313 @@ startlevel 10
 			.' Congratulations! +45 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[20] Westfall",[[
+author danaton
+description This guide contain quest-chain (26 quests + 4 if Human race) for Westfall location.
+startlevel 20
+		step
+			.' First you need to complete the Elwynn Forest quest chain.
+			.info Skip this step manually.
+		step
+			goto Stormwind City,57.7,47.9
+			.talk Baros Alexston##1646
+			..accept Humble Beginnings##399
+		step
+			goto Elwynn Forest,24.2,74.4
+			.talk Deputy Raine##963
+			..accept Report to Gryan Stoutmantle##109
+		step
+			goto Westfall,60,19.4
+			.talk Farmer Furlbrow##237
+			..accept The Forgotten Heirloom##64
+		step
+			goto Westfall,60,19.4
+			.talk Verna Furlbrow##238
+			..accept Westfall Stew(1)##36
+			..accept Poor Old Blanchy##151
+		step
+			goto Westfall,49.42,19.23
+			.get 1 Furlbrow's Pocket Watch|q 64/1
+			.info Inside the house.
+		step
+			.get 8 Handful of Oats|q 151/1
+			.' You can find more around (1)|at 50.10,19.58
+			.' You can find more around (2)|at 49.34,17.95
+			.' You can find more around (3)|at 48.45,20.31|tip Inside the building.
+			.' You can find more around (4)|at 54.01,24.94
+			.' You can find more around (5)|at 56.67,18.89
+			.' You can find more around (6)|at 57.36,19.45|tip In the cart.
+			.' You can find more around (7)|at 58.33,18.26|tip On the field you can find from 2 to 4 Handful of Oats	.
+		step
+			goto Westfall,60,19.4
+			.talk Verna Furlbrow##238
+			..turnin Poor Old Blanchy##151
+		step
+			goto Westfall,60,19.4
+			.talk Farmer Furlbrow##237
+			..turnin The Forgotten Heirloom##64
+		step
+			goto Westfall,56.0,31.2
+			.talk Farmer Saldean##233
+			..accept The Killing Fields##9
+		step
+			goto Westfall,56.4,30.5
+			.talk Salma Saldean##235
+			..turnin Westfall Stew(1)##36
+			..accept Westfall Stew(2)##38
+			..accept Goretusk Liver Pie##22
+		step
+			goto Westfall,51.1,21.8
+			.kill 20 Harvest Watcher|q 9/1
+			.get 3 Okra##732|q 38/4|tip Do not sell to vendor!
+			.from Harvest Watcher##114+
+			.collect 5 Flask of Oil##814|q 103/1 |future
+			.' Flask of Oil needed on the future! Do not sell to vendor!
+			.collect 5 Hops##1274|q 117/1|future
+			.' You can find more Harvest Watchers|at 53.5,29.4|n
+			.' And a big spot on this field|at 44.87,35.68
+		step
+			goto Westfall,59.02,33.34
+			.from Young Goretusk##454, Goretusk##157, Great Goretusk##547
+			.get 8 Goretusk Liver##723|q 22/1|tip Do not sell to vendor!
+			.get 3 Goretusk Snout##731|q 38/3|tip Do not sell to vendor!
+			.' You can find more around (1)|at 51.01,36.09
+			.' You can find more around (2)|at 59.60,43.53
+		step
+			goto Westfall,59.05,61.74
+			.from Young Fleshripper##199, Fleshripper##1109, Greater Fleshripper##154
+			.get 3 Stringy Vulture Meat##729|q 38/1|tip Do not sell to vendor!
+		step
+			goto Westfall,56.0,31.2
+			.talk Farmer Saldean##233
+			..turnin The Killing Fields##9
+		step
+			goto Westfall,56.4,30.5
+			.talk Salma Saldean##235
+			..turnin Goretusk Liver Pie##22
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin Report to Gryan Stoutmantle##109
+			..accept The People's Militia (1)##12
+			.talk Captain Danuvin##821
+			..accept Patrolling Westfall##102
+		step
+			goto Westfall,54,53
+			.talk Scout Galiaan##878
+			..accept Red Leather Bandanas##153
+		step
+			goto Westfall,50.97,46.86
+			.kill 15 Defias Trapper##504|q 12/1
+			.kill 15 Defias Smuggler##95|q 12/2
+			.collect 15 Red Leather Bandana##829|q 153/1
+			.' You can find more around (1)|at 48.65,46.42
+			.' You can find more around (2)|at 46.42,38.59
+			.' You can find more around (3)|at 50.79,40.61
+		step
+			goto Westfall,57.19,13.32
+			.from Riverpaw Gnoll##117, Riverpaw Brute##124, Riverpaw Overseer##125, Riverpaw Bandit##452, Riverpaw Mystic##453, Riverpaw Scout##500, Riverpaw Herbalist##501
+			.get 8 Gnoll Paw##725|q 102/1
+			.' You can find more around (1)|at 52.07,15.41
+			.' You can find more around (2)|at 44.9,15
+		step
+			goto Westfall,55.17,9.90
+			.from Murloc Coastrunner##126, Murloc Tidehunter##127, Murloc Warrior##171, Murloc Minor Oracle##456, Murloc Hunter##458, Murloc Raider##515, Murloc Oracle##517
+			.get 3 Murloc Eye|q 38/2
+			.' You can find more around (1)|at 44.3,9.07
+			.' You can find more around (2)|at 35.20,21.60
+			.' You can find more around (3)|at 27.6,40.5
+			.' You can find more around (4)|at 27.56,70.08
+			.' Wait drop on murloc Sanders' Treasure Map
+			..accept Captain Sanders' Hidden Treasure (1)##136|use Captain Sanders' Treasure Map##1357
+		step
+			goto Westfall,56.4,30.5
+			.talk Salma Saldean##235
+			..turnin Westfall Stew(2)##38
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin The People's Militia (1)##12
+			..accept The People's Militia (2)##13
+		step
+			goto Westfall,56.4,47.6
+			.talk Captain Danuvin##821
+			..turnin Patrolling Westfall##102
+		step
+			goto Westfall,54,53
+			.talk Scout Galiaan##878
+			..turnin Red Leather Bandanas##153
+		step
+			goto Westfall,36.4,56.67
+			.' Open chest in destroying home.
+			.collect A Simple Compass##1998|q 399/1
+		step
+			goto Westfall,25.9,47.8
+			.' Click Footlocker
+			..turnin Captain Sanders' Hidden Treasure (1)##136
+			..accept Captain Sanders' Hidden Treasure (2)##138
+		step
+			goto Westfall,40.5,47.8
+			.' Click Broken Barrel
+			..turnin Captain Sanders' Hidden Treasure (2)##138
+			..accept Captain Sanders' Hidden Treasure (3)##139
+		step
+			goto Westfall,40.6,17
+			.' Click Old Jug
+			..turnin Captain Sanders' Hidden Treasure (3)##139
+			..accept Captain Sanders' Hidden Treasure (4)##140
+		step
+			goto Westfall,26,16.9
+			.' Click Locked Chest
+			..turnin Captain Sanders' Hidden Treasure (4)##140
+		step
+			goto Westfall,31.4,44.5
+			.kill 15 Defias Looter|q 13/2
+			.kill 15 Defias Pillager|q 13/1
+			.' You can find more around (1)|at 37.1,54.8
+			.' You can find more around (2)|at 43,69
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin The People's Militia (2)##13
+			..accept The People's Militia (3)##14
+		step
+			goto Westfall,52.6,72.3
+			.kill 15 Defias Highwayman|q 14/1
+			.kill 5 Defias Pathstalker|q 14/2
+			.kill 5 Defias Knuckleduster|q 14/3
+		step
+			goto Westfall,30,86
+			.talk Captain Grayson##392
+			..accept Keeper of the Flame##103
+			..accept The Coastal Menace##104
+			..accept The Coast Isn't Clear##152
+		step
+			goto Westfall,34.7,85.3
+			.from Old Murk-Eye##391
+			.get Scale of Old Murk-Eye##3636|q 104/1
+			.' Waypoint start position|at 26.4,66
+		step
+			goto Westfall,34.65,85
+			.kill 7 Murloc Coastrunner##126|q 152/1
+			.kill 7 Murloc Warrior##171|q 152/2
+			.kill 7 Murloc Tidehunter##127|q 152/3
+			.kill 7 Murloc Oracle##517|q 152/4
+			.' You can find more around (1)|at 27.56,70.08
+			.' You can find more around (2)|at 27.6,40.5
+			.' You can find more around (3)|at 35.20,21.60
+			.' You can find more around (4)|at 44.3,9.07
+			.' You can find more around (5)|at 55.7,9.8
+		step
+			goto Westfall,51.7,21.7
+			.from Harvest Golem##36, Harvest Watcher##114, Harvest Reaper##115
+			.get 5 Flask of Oil##814|q 103/1
+			.' You can find more around (1)|at 53.3,33.6
+			.' You can find more around (2)|at 43.8,36.5
+			.' You can find more around (3)|at 39.1,52.1
+		step
+			goto Westfall,30,86
+			.talk Captain Grayson##392
+			..turnin Keeper of the Flame##103
+			..turnin The Coastal Menace##104
+			..turnin The Coast Isn't Clear##152
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin The People's Militia (3)##14
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..accept The Defias Brotherhood (1)##65
+			.info Dungeon: Deadmines Quest Chain.
+		step
+			goto Westfall,57,47.2
+			.talk Quartermaster Lewis##491
+			..accept A Swift Message##6181
+			only Human
+		step
+			goto Westfall,56.6,52.6
+			.talk Thor##523
+			..turnin A Swift Message##6181
+			..accept Continue to Stormwind##6281
+			only Human
+		step
+			goto Stormwind,77.2,61
+			.talk Osric Strang##1323
+			..turnin Continue to Stormwind##6281
+			..accept Dungar Longdrink##6261
+			only Human
+		step
+			goto Stormwind,57.7,47.9
+			.talk Baros Alexston##1646
+			..turnin Humble Beginnings##399
+		step
+			goto Stormwind,71,72.5
+			.talk Dungar Longdrink##352
+			..turnin Dungar Longdrink##6261
+			..accept Return to Lewis##6285
+			only Human
+		step
+			goto Redridge Mountains,26.5,45.3
+			.talk Wiley the Black##266
+			..turnin The Defias Brotherhood (1)##65
+			..accept The Defias Brotherhood (2)##132
+			.info Dungeon: Deadmines Quest Chain.
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin The Defias Brotherhood (2)##132
+			..accept The Defias Brotherhood (3)##135
+			.info Dungeon: Deadmines Quest Chain.
+		step
+			goto Westfall,57,47.2
+			.talk Quartermaster Lewis##491
+			..turnin Return to Lewis##6285
+			only Human
+		step
+			goto Stormwind,78.3,70.7
+			.talk Master Mathias Shaw##332
+			..turnin The Defias Brotherhood (3)##135
+			..accept The Defias Brotherhood (4)##141
+			.info Dungeon: Deadmines Quest Chain.
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin The Defias Brotherhood (4)##141
+			..accept The Defias Brotherhood (5)##142
+			.info Dungeon: Deadmines Quest Chain.
+		step
+			goto Westfall,45.70,68.57
+			.from Defias Messenger##550
+			.get A Mysterious Message##1381|q 142/1
+			.' Moves variably into this position|at 36.23,43.97
+			.' Or in this position|at 44.5,25.45
+			.info Dungeon: Deadmines Quest Chain.
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin The Defias Brotherhood (5)##142
+			.info Dungeon: Deadmines Quest Chain.
+		step
+			goto Westfall,55.68,47.51
+			.talk The Defias Traitor##467
+			..accept The Defias Brotherhood##155
+			.info Dungeon: Deadmines Quest Chain.
+		step
+			.'Follow the Defias Traitor.
+			goto Westfall,42.56,71.71
+			.goal Escort The Defias Traitor to discover where VanCleef is hiding|q 155/1
+			.info Dungeon: Deadmines Quest Chain.
+		step
+			goto Westfall,56.32,47.54
+			.talk Marshal Gryan Stoutmantle##234
+			..turnin The Defias Brotherhood##155
+			.info Dungeon: Deadmines Quest Chain.
+		step
+			.' Congratulations! +26 quests for achievement "Loremaster of Eastern Kingdoms".
+			.' Next, I recommend running Quest-Instance Guides: Deadmines (15)
+]])
+
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[25] Redridge Mountains",[[
 author danaton
 description This guide contain quest-chain (40 quests) for Redridge Mountains location.
@@ -2136,8 +2443,8 @@ startlevel 45
 			.info All around at the bottom of the lake.
 		step
 			goto Swamp of Sorrows,56.9,24.7
-			.info Open the Scattered Crate.
 			.collect Lost Supplies##6172|q 1423 |future
+			.info Open the Scattered Crate.
 			.' You can find more around (1)|at 62.3,22.5
 			.' You can find more around (2)|at 64.1,23.4
 			.' You can find more around (3)|at 45.8,35.6
@@ -2678,6 +2985,7 @@ startlevel 50
 			goto Swamp of Sorrows,94.8,52.1
 			.from Jarquia##9916
 			.get Goodsteel's Balanced Flameberge##11723|q 4450/4
+			.' You can find an alternative respawn point|at 91.9,67
 		step
 			goto Darnassus,38.3,81
 			.talk Astarii Starseeker##4090
@@ -4943,10 +5251,226 @@ startlevel 40
 			.' Congratulations! +32 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[none] Hinterlands",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[50-beta] Hinterlands",[[
 author danaton
-description This guide contain quest-chain (?? quests) for Arathi Highlands location.
+description This guide contain quest-chain (17 quests) for Hinterlands location.
 startlevel 50
+		step
+			goto Teldrassil,55.5,92
+			.talk Erelas Ambersky##7916
+			..accept Favored of Elune?##3661
+		step
+			goto Stormwind,69.50,40.40
+			.talk Brohann Caskbelly ##5384
+			..accept In Search of The Temple##1448
+		step
+			goto Swamp of Sorrows,70.00,53.20
+			.goal Search for the Temple of Atal'Hakkar|q 1448/1
+		step
+			goto Stormwind,69.50,40.40
+			.talk Brohann Caskbelly ##5384
+			..turnin In Search of The Temple##1448
+			..accept To The Hinterlands##1449
+		step
+			goto Stranglethorn Vale,27.1,77.4
+			.talk Whiskey Slim##2491
+			..accept Whiskey Slim's Lost Grog##580
+		step
+			.' Ride the boat to Ratchet|goto The Barrens|noway|q 2605 |future
+		step
+			goto Tanaris,51.8,28.7
+			.talk Marin Noggenfogger##7564
+			..accept The Thirsty Goblin##2605
+		step
+			goto Tanaris,28.5,65.3
+			.from Thistleshrub Dew Collector##5481
+			.get Laden Dew Gland##8428|q 2605/1
+		step
+			goto Tanaris,51.8,28.7
+			.talk Marin Noggenfogger##7564
+			..turnin The Thirsty Goblin##2605
+			..accept In Good Taste##2606
+		step
+			goto Tanaris,51.1,26.9
+			.talk Sprinkle##7583
+			..turnin In Good Taste##2606
+			..accept Sprinkle's Secret Ingredient##2641
+		step
+			goto The Hinterlands,11.8,46.8
+			.talk Falstad Wildhammer##5635
+			..turnin To The Hinterlands##1449
+			..accept Gryphon Master Talonaxe##1450
+		step
+			goto The Hinterlands,9.8,44.5
+			.talk Gryphon Master Talonaxe##5636
+			..turnin Gryphon Master Talonaxe##1450
+			..accept Rhapsody Shindigger##1451
+			..accept Witherbark Cages##2988
+		step
+			goto The Hinterlands,14.8,44.6
+			.talk Fraggar Thundermantle##7884
+			..accept Skulk Rock Clean-up##2877
+			..accept Troll Necklace Bounty##2880
+		step
+			goto The Hinterlands,15.1,47.2
+			.talk Ambassador Rualeth##17223
+			..accept Featherbeard's Endorsement##9469
+			..accept A Gesture of Goodwill##9470
+			..accept Preying on the Predators##9471
+		step
+			goto The Hinterlands,13.4,55.2
+			.' Interact with gameobject: Featherbeard's Journal
+			.info Inside the little house, downstairs, laying right in front of the fireplace.
+			..turnin Featherbeard's Endorsement##9469
+			..accept In Pursuit of Featherbeard##9476
+		step
+			goto The Hinterlands,20.5,52.7
+			.kill 10 Mangy Silvermane##2923|q 9471/1
+		step
+			goto The Hinterlands,22.9,54.8
+			.collect 15 Wildkin Feather##10819|q 3661/1
+			.info They look like big brown and white feathers on the ground here and around Quel'Danil Lodge.
+		step
+			goto The Hinterlands,23.2,58.8
+			.goal Check First Cage|q 2988/1
+			.goal Check Second Cage|q 2988/2
+		step
+			goto The Hinterlands,24.8,55.4
+			.kill Trolls|n
+			.get 5 Troll Tribal Necklace##9259|q 2880/1
+		step
+			goto The Hinterlands,24.6,65.6
+			.kill Witch Doctor Mai'jin##17235|q 9470/1
+			.kill Tcha'kaz##17236|q 9470/2
+			.info Inside the cave.
+		step
+			goto The Hinterlands,27.1,66.5
+			.kill 5 Silvermane Wolf##2924|q 9471/2
+		step
+			goto The Hinterlands,32.1,57.3
+			.goal Check Third Cage|q 2988/3
+		step
+			goto The Hinterlands,40.7,59.1
+			.collect Violet Tragan##8526|q 2641/1
+			.info They are brown and white mushrooms underwater.
+		step
+			goto The Hinterlands,48.2,41.7
+			.kill 10 Green Sludge##2655|q 2877/1
+			.kill 10 Jade Ooze##2656|q 2877/2
+		step
+			goto The Hinterlands,48.2,41.7
+			.from Green Sludge##2655, Jade Ooze##2656
+			.collect OOX-09/HL Distress Beacon##8704|q 485 |future
+		step
+			.use OOX-09/HL Distress Beacon##8704
+			..accept Find OOX-09/HL!##485
+		step
+			goto The Hinterlands,49.4,37.7
+			.talk Homing Robot OOX-09/HL##7806
+			..turnin Find OOX-09/HL!##485
+			..accept Rescue OOX-09/HL!##836
+		step
+			goto The Hinterlands,57.83,50.2
+			.goal Escort OOX-09/HL to safety|q 836/1
+		step
+			goto The Hinterlands,71.5,65.1|n
+			.' The path down starts here|goto The Hinterlands,71.5,65.1,0.5|noway|q 580
+		step
+			goto The Hinterlands,78.8,63.4
+			.collect 12 Pupellyverbos Port##3900|q 580/1
+			.info Little blue bottles.
+		step
+			goto The Hinterlands,37.2,71.5
+			.' Click Featherbeard's Remains at the top of the temple, up the stairs
+			..turnin In Pursuit of Featherbeard##9476
+			..accept Reclaiming the Eggs##9475
+		step
+			goto The Hinterlands,34.1,72.9
+			.collect 5 Gryphon Egg##23694|q 9475/1
+			.info They look like medium sized white eggs with blue spots on them.
+		step
+			goto The Hinterlands,27.00,48.50
+			.talk Rhapsody Shindigger##5634
+			..turnin Rhapsody Shindigger##1451
+		step
+			goto The Hinterlands,15.1,47.2
+			.talk Ambassador Rualeth##17223
+			..turnin A Gesture of Goodwill##9470
+			..turnin Preying on the Predators##9471
+			..turnin Reclaiming the Eggs##9475
+		step
+			goto The Hinterlands,14.8,44.6
+			.talk Fraggar Thundermantle##7884
+			..turnin Skulk Rock Clean-up##2877
+			..turnin Troll Necklace Bounty##2880
+		step
+			goto The Hinterlands,9.8,44.5
+			.talk Gryphon Master Talonaxe##5636
+			..turnin Witherbark Cages##2988
+			..accept The Altar of Zul##2989
+		step
+			goto The Hinterlands,48.3,67.6
+			.goal Search the Altar of Zul|q 2989/1
+			.info Run up the stairs of the temple towards this spot to Search the Altar of Zul. There are a bunch of mobs at the top, so run around at the top of the temple and once you complete the quest, run away as fast as you can.
+		step
+			goto The Hinterlands,9.8,44.5
+			.talk Gryphon Master Talonaxe##5636
+			..turnin The Altar of Zul##2989
+			..accept Thadius Grimshade##2990
+		step
+			goto Blasted Lands,67,19.4
+			.talk Thadius Grimshade##8022
+			..turnin Thadius Grimshade##2990
+		step
+			goto Stranglethorn Vale,28.4,76.4
+			.talk Oglethorpe Obnoticus##7406
+			..turnin Rescue OOX-09/HL!##836
+		step
+			goto Stranglethorn Vale,27.1,77.5
+			.talk Whiskey Slim##2491
+			..turnin Whiskey Slim's Lost Grog##580
+		step
+			goto Tanaris,51.1,26.9
+			.talk Sprinkle##7583
+			..turnin Sprinkle's Secret Ingredient##2641
+			..accept Delivery for Marin##2661
+		step
+			goto Tanaris,51.8,28.7
+			.talk Marin Noggenfogger##7564
+			..turnin Delivery for Marin##2661
+			..accept Noggenfogger Elixir##2662
+			..turnin Noggenfogger Elixir##2662
+		step
+			goto Teldrassil,55.5,92
+			.talk Erelas Ambersky##7916
+			..turnin Favored of Elune?##3661
+		step
+			.' Congratulations! +17 quests for achievement "Loremaster of Eastern Kingdoms".
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[alpha-none] Western Plaguelands",[[
+author danaton
+description This guide contain quest-chain (?? quests) for Western Plaguelands location.
+startlevel 60
+		step
+			.' Required First Complete - Winterspirng Guide????
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[alpha-none] Eastern Plaguelands",[[
+author danaton
+description This guide contain quest-chain (?? quests) for Eastern Plaguelands location.
+startlevel 60
+		step
+			.' Required First Complete - Winterspirng Guide????
+		step
+			goto Winterspring,61.35,38.97
+			.talk Gregor Greystone##10431
+			..accept The Everlook Report##6028
+			..accept Duke Nicholas Zverenhoff##6030
+		step
+			goto Winterspring,61.28,38.98
+			.talk Jessica Redpath##11629
+			..accept Sister Pamela##5601
 		step
 ]])
 
