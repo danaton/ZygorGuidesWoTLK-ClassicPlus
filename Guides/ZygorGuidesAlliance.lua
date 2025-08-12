@@ -11963,8 +11963,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		..fpath Chillwind Camp
 	step //162
 		goto 48.2,81.2
-		.kill 10 Skeletal Flayer|q 5092/1
-		.kill 10 Slavering Ghoul|q 5092/2
+		.kill 10 Skeletal Flayer##1783|q 5092/1
+		.kill 10 Slavering Ghoul##1791|q 5092/2
 	step //163
 		goto 42.7,84
 		.talk Commander Ashlam Valorfist##10838
@@ -12008,7 +12008,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		..accept Better Late Than Never (1)##5021
 	step //172
 		goto 38.7,55.3
-		.' Click Janice's Parcel|tip It's a brown package on the floor inside the barn, next to the wall as you enter.
+		.' Click Janice's Parcel
+		.info It's a brown package on the floor inside the barn, next to the wall as you enter.
 		..turnin Better Late Than Never (1)##5021
 		..accept Better Late Than Never (2)##5022
 	step //173
@@ -12027,24 +12028,27 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 	step //175
 		goto 46.2,52.4
 		.from Cauldron Lord Malvinious##11077
-		.get Dalson's Tears Cauldron Key|n
+		.get Dalson's Tears Cauldron Key##13195|n
 		.' Click the Scourge Cauldron
 		..turnin Target: Dalson's Tears##5219
 		..accept Return to Chillwind Camp##5220
 	step //176
 		goto 47.7,50.7
-		.' Click Mrs. Dalson's Diary|tip Inside the barn, on the floor in the middle of the room, it's an opened book.
+		.' Click Mrs. Dalson's Diary
+		.info Inside the barn, on the floor in the middle of the room, it's an opened book.
 		..accept Mrs. Dalson's Diary##5058|instant
 	step //177
 		goto 48.1,49.7
 		.from Wandering Skeleton##10816
-		.get Dalson Outhouse Key|n
-		.' Unlock the Outhouse with the Dalson Outhouse Key|tip Behind the barn, next to a big tree stump.
+		.get Dalson Outhouse Key##12738|n
+		.' Unlock the Outhouse with the Dalson Outhouse Key
+		.info Behind the barn, next to a big tree stump.
 		.from Farmer Dalson##10836
 		.collect 1 Dalson Cabinet Key##12739|q 5060|instant
 	step //178
 		goto 47.4,49.7
-		.' Unlock the Locked Cabinet with the Dalson Cabinet Key|tip In the house, on the second floor in the small room.
+		.' Unlock the Locked Cabinet with the Dalson Cabinet Key
+		.info In the house, on the second floor in the small room.
 		..accept Locked Away##5059/1|instant
 	step //179
 		goto 50.0,30.4|n
@@ -12055,12 +12059,12 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		..accept Unfinished Business (1)##6004
 	step //181
 		goto 50.3,41.5
-		.kill 2 Scarlet Knight|q 6004/4
-		.kill 2 Scarlet Mage|q 6004/3
+		.kill 2 Scarlet Knight##1833|q 6004/4
+		.kill 2 Scarlet Mage##1826|q 6004/3
 	step //182
 		goto 51.1,43.7
-		.kill 2 Scarlet Hunter|q 6004/2
-		.kill 2 Scarlet Medic|q 6004/1
+		.kill 2 Scarlet Hunter##1831|q 6004/2
+		.kill 2 Scarlet Medic##10605|q 6004/1
 	step //183
 		goto 51.9,28
 		.talk Kirsta Deepshadow##11610
@@ -12068,19 +12072,20 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		..accept Unfinished Business (2)##6023
 	step //184
 		goto 56.4,34.0|n
-		.' The path up to Huntsman Radley starts here|goto Western Plaguelands,56.4,34.0,0.5|noway|c
+		.' The path up to Huntsman Radley starts here|goto Western Plaguelands,56.4,34.0,0.5|noway|q 6023
 	step //185
 		goto 57.7,36.3
-		.kill Huntsman Radley|q 6023/1
+		.kill Huntsman Radley##11613|q 6023/1
 	step //186
 		goto 54.2,24.2
-		.kill 1 Cavalier Durgen|q 6023/2|tip Stay in front of the tower. Cavalier Durgen will eventually walk out of the tower down the front.
+		.kill 1 Cavalier Durgen##11611|q 6023/2
+		.info Stay in front of the tower. Cavalier Durgen will eventually walk out of the tower down the front.
 		.' Go to the top of the tower
 		.' Click the small brown chest
-		.get Mark of the Lightbringer|q 9474/1
+		.get Mark of the Lightbringer##23661|q 9474/1
 	step //187
 		goto 52.8,25.2|n
-		.' Jump off the cliff down to Kirsta Deepshadow|goto Western Plaguelands,52.8,25.2,0.3|noway|c
+		.' Jump off the cliff down to Kirsta Deepshadow|goto Western Plaguelands,52.8,25.2,0.5|noway|q 6023
 	step //188
 		goto 51.9,28
 		.talk Kirsta Deepshadow##11610
@@ -12093,7 +12098,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		.talk Anchorite Truuen##17238
 		..turnin The Mark of the Lightbringer##9474
 	step //190
-		'Fly to Stormwind|goto Stormwind City|noway|c
+		.' Fly to Stormwind|goto Stormwind City|noway|q 5022
 	step //191
 		goto Stormwind City,57.2,48.1
 		.talk Royal Factor Bathrilor##10782
@@ -12128,13 +12133,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		..turnin Good Luck Charm##5050
 		..accept Two Halves Become One##5051
 	step //198
-		goto 37.5,55
-		.kill a Jabbering Ghoul|n|tip If a Jabbering Ghoul is not in this spot, you can find one somewhere in this field.
+		goto 36.8,58.2
+		.kill Jabbering Ghoul##10801|n
+		.info If a Jabbering Ghoul is not in this spot, you can find one somewhere in this field.
 		.get Good Luck Other-Half Charm|n
 		.' Click the Good Luck Other-Half-Charm in your bags|use Good Luck Other-Half-Charm##12722
-		.get Good Luck Charm|q 5051/1
-		.kill skeletons|n
-		.get 15 Skeletal Fragments|q 5537/1
+		.get Good Luck Charm##12723|q 5051/1
+		.kill Skeletons|n
+		.get 15 Skeletal Fragments##14619|q 5537/1
 	step //199
 		goto 38.4,54
 		.talk Janice Felstone##10778
@@ -12142,7 +12148,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 	step //200
 		goto 53,66
 		.from Cauldron Lord Razarch##11076
-		.get Writhing Haunt Cauldron Key|n
+		.get Writhing Haunt Cauldron Key##13197|n
 		.' Click the Scourge Cauldron
 		..turnin Target: Writhing Haunt##5222
 		..accept Return to Chillwind Camp##5223
@@ -12164,8 +12170,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		..accept The Wildlife Suffers Too (1)##4984
 	step //204
 		goto 42.8,55.4
-		.kill 8 Diseased Wolf|q 4984/1 |tip The wolves in this area share a respawn with the spiders so killing them as well will spawn wolves faster.
-		..'You can also find more wolves at 45.6,47.4 |n
+		.kill 8 Diseased Wolf##1817|q 4984/1
+		.info The wolves in this area share a respawn with the spiders so killing them as well will spawn wolves faster.
+		.'You can also find more wolves|at 45.6,47.4
 	step //205
 		goto 53.7,64.7
 		.talk Mulgris Deepriver##10739
@@ -12175,8 +12182,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		ding 59
 	step //207
 		goto 57.9,61.2
-		.kill 8 Diseased Grizzly|q 4985/1
-		.' You can find more at 57.4,53.1
+		.kill 8 Diseased Grizzly##1816|q 4985/1
+		.' You can find more|at 57.4,53.1
 	step //208
 		goto 53.7,64.7
 		.talk Mulgris Deepriver##10739
@@ -12184,16 +12191,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 	step //209
 		goto 62.6,59.9
 		.from Cauldron Lord Soulwrath##11078
-		.get Gahrron's Withering Cauldron Key|n
+		.get Gahrron's Withering Cauldron Key##13196|n
 		.' Click the Scourge Cauldron
 		..turnin Target: Gahrron's Withering##5225
 		..accept Return to Chillwind Camp##5226
 	step //210
 		goto 69.2,49.6
-		..fpath Thondroril River
-
+		.fpath Thondroril River
 	step //211
-		'Go northeast to the Eastern Plaguelands|goto Eastern Plaguelands|noway|c
+		.' Go northeast to the Eastern Plaguelands|goto Eastern Plaguelands|noway|c
 	step //212
 		goto Eastern Plaguelands,4.7,38.4
 		.talk Tirion Fordring##1855
@@ -12280,8 +12286,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		..accept A Strange Historian##5153
 	step //231
 		goto 49.7,76.8
-		.' Click Joseph Redpath's Monument|tip It's a squarish stone gravestone with a gold plaque on it. It's a lighter color than all the other graves.
-		.get Joseph's Wedding Ring|q 5153/1
+		.' Click Joseph Redpath's Monument
+		.info It's a squarish stone gravestone with a gold plaque on it. It's a lighter color than all the other graves.
+		.get Joseph's Wedding Ring##12894|q 5153/1
 	step //232
 		goto 39.5,66.8
 		.talk Chromie##10667
@@ -12290,11 +12297,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		..accept A Matter of Time##4971
 	step //233
 		goto 43.5,69.4
-		.get Annals of Darrowshire|q 5154/1|tip In the building that isn's crumbled in the middle of the town - you can enter from the south side by hugging the wall of the building until you get inside safely.
+		.collect Annals of Darrowshire##12900|q 5154/1
+		.info In the building that isn's crumbled in the middle of the town - you can enter from the south side by hugging the wall of the building until you get inside safely.
 	step //234
 		goto 46.9,65.7
-		.' Use your Temporal Displacer on the disco ball towers|use Temporal Displacer##12627|tip In this area, you will see towers that have light shining out of them like a disco ball.
-		.kill 10 Temporal Parasite|q 4971/1
+		.' Use your Temporal Displacer on the disco ball towers|use Temporal Displacer##12627
+		.info In this area, you will see towers that have light shining out of them like a disco ball.
+		.kill 10 Temporal Parasite##10717|q 4971/1
 	step //235
 		goto 39.5,66.8
 		.talk Chromie##10667
@@ -12303,8 +12312,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		..accept Counting Out Time##4972
 	step //236
 		goto 38.8,68.3
-		.' Click the Small Lockboxes on the ground in the crumbled houses
-		.get 5 Andorhal Watch |q 4972/1
+		.collect 5 Andorhal Watch##12638|q 4972/1
+		.info Click the Small Lockboxes on the ground in the crumbled houses.
 	step //237
 		goto 39.5,66.8
 		.talk Chromie##10667

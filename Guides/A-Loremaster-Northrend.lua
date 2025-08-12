@@ -112,6 +112,9 @@ startlevel 68
 			.info Inside the cave.
 			.collect Dragonflayer Battle Plans##33488|q 11290/1
 		step
+			goto Howling Fjord,56.63,49.45|n
+			.' Enter the cave and go down|goto Howling Fjord,56.63,49.45,0.5|noway|q 11276
+		step
 			goto Howling Fjord,56.94,53.75
 			.talk Glorenfeld##24150
 			..turnin And Then There Were Two...##11276

@@ -5251,7 +5251,7 @@ startlevel 40
 			.' Congratulations! +32 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[50-beta] Hinterlands",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[50] Hinterlands",[[
 author danaton
 description This guide contain quest-chain (17 quests) for Hinterlands location.
 startlevel 50
@@ -5448,12 +5448,394 @@ startlevel 50
 			.' Congratulations! +17 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[alpha-none] Western Plaguelands",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[60] Western Plaguelands",[[
 author danaton
-description This guide contain quest-chain (?? quests) for Western Plaguelands location.
+description This guide contain quest-chain (46? quests) for Western Plaguelands location.
 startlevel 60
 		step
-			.' Required First Complete - Winterspirng Guide????
+			goto Winterspring,61.35,38.97
+			.talk Gregor Greystone##10431
+			..accept The Everlook Report##6028
+		step
+			goto Winterspring,61.3,39
+			.talk Jessica Redpath##11629
+			..accept Sister Pamela##5601
+		step
+			goto Ironforge,29.4,22.1
+			.talk Courier Hammerfall##10877
+			..accept A Call to Arms: The Plaguelands!##5090
+		step
+			goto Western Plaguelands,43,83.5
+			.talk Argent Officer Pureheart##10840
+			..turnin The Everlook Report##6028
+		step
+			goto Western Plaguelands,42.7,84
+			.talk Commander Ashlam Valorfist##10838
+			..turnin A Call to Arms: The Plaguelands!##5090
+			..accept Clear the Way##5092
+		step
+			goto Western Plaguelands,42.9,84.5
+			.talk Anchorite Truuen##17238
+			..accept The Mark of the Lightbringer##9474
+		step
+			goto Western Plaguelands,48.2,81.2
+			.kill 10 Skeletal Flayer##1783|q 5092/1
+			.kill 10 Slavering Ghoul##1791|q 5092/2
+		step
+			goto Western Plaguelands,42.7,84
+			.talk Commander Ashlam Valorfist##10838
+			..turnin Clear the Way##5092
+			..accept The Scourge Cauldrons##5215
+			..accept All Along the Watchtowers##5097
+		step
+			goto Western Plaguelands,42.9,84.5
+			.talk High Priestess MacDonnell##11053
+			..turnin The Scourge Cauldrons##5215
+			..accept Target: Felstone Field##5216
+		step
+			goto Western Plaguelands,49.3,73.2|n
+			.' Enter the Ruins of Andorhal from this bridge|goto Western Plaguelands,49.3,73.2,0.5|noway|q 5097
+		step
+			goto Western Plaguelands,46.6,71.1
+			.' Use your Beacon Torch near the tower entrance|use Beacon Torch##12815
+			.goal Tower Four marked|q 5097/4
+		step
+			goto Western Plaguelands,40,71.6
+			.' Use your Beacon Torch near the tower entrance|use Beacon Torch##12815
+			.goal Tower One marked|q 5097/1
+		step
+			goto Western Plaguelands,42.3,66.3
+			.' Use your Beacon Torch near the tower entrance|use Beacon Torch##12815
+			.goal Tower Two marked|q 5097/2
+		step
+			goto Western Plaguelands,44.3,63.3
+			.' Use your Beacon Torch near the tower entrance|use Beacon Torch##12815
+			.goal Tower Three marked|q 5097/3
+		step
+			goto Western Plaguelands,37,57.1
+			.from Cauldron Lord Bilemaw##11075
+			.collect Felstone Field Cauldron Key##13194|q 5216 |future
+			.' Interact with gameobject: Scourge Cauldron
+			..turnin Target: Felstone Field##5216
+			..accept Return to Chillwind Camp##5217
+		step
+			goto Western Plaguelands,38.4,54
+			.talk Janice Felstone##10778
+			..accept Better Late Than Never (1)##5021
+		step
+			goto Western Plaguelands,38.7,55.3
+			.' Interact with gameobject: Janice's Parcel
+			.info It's a brown package on the floor inside the barn, next to the wall as you enter.
+			..turnin Better Late Than Never (1)##5021
+			..accept Better Late Than Never (2)##5022
+		step
+			goto Western Plaguelands,42.7,84
+			.talk Commander Ashlam Valorfist##10838
+			..turnin All Along the Watchtowers##5097
+			..accept Alas, Andorhal##211
+		step
+			goto Western Plaguelands,42.9,84.5
+			.talk High Priestess MacDonnell##11053
+			..turnin Return to Chillwind Camp##5217
+			..accept Target: Dalson's Tears##5219
+		step
+			goto Western Plaguelands,45.3,69.2
+			.from Araj the Summoner##1852
+			.get Araj's Phylactery Shard##17114|q 211/1
+		step
+			goto Western Plaguelands,42.7,84
+			.talk Commander Ashlam Valorfist##10838
+			..turnin Alas, Andorhal##211
+			..accept Scholomance##5533
+		step
+			goto Western Plaguelands,42.7,83.8
+			.talk Alchemist Arbington##11056
+			..turnin Scholomance##5533
+			..accept Skeletal Fragments##5537
+		step
+			goto Western Plaguelands,46.2,52.4
+			.from Cauldron Lord Malvinious##11077
+			.collect Dalson's Tears Cauldron Key##13195|q 5219 |future
+			.' Interact with gameobject: Scourge Cauldron
+			..turnin Target: Dalson's Tears##5219
+			..accept Return to Chillwind Camp##5220
+		step
+			goto Western Plaguelands,47.7,50.7
+			.' Interact with gameobject: Mrs. Dalson's Diary
+			.info Inside the barn, on the floor in the middle of the room, it's an opened book.
+			..accept Mrs. Dalson's Diary##5058|instant
+		step
+			goto Western Plaguelands,48.1,49.7
+			.from Wandering Skeleton##10816
+			.get Dalson Outhouse Key##12738|n
+			.' Unlock the Outhouse with the Dalson Outhouse Key
+			.info Behind the barn, next to a big tree stump.
+			.from Farmer Dalson##10836
+			.collect 1 Dalson Cabinet Key##12739|q 5060 |future |instant
+		step
+			goto Western Plaguelands,47.4,49.7
+			.' Unlock the Locked Cabinet with the Dalson Cabinet Key
+			.info In the house, on the second floor in the small room.
+			..accept Locked Away##5059|instant
+		step
+			goto Western Plaguelands,50.0,30.4|n
+			.' The path down to Kirsta Deepshadow starts here|goto Western Plaguelands,50.0,30.4,0.5|noway|q 6004 |future
+		step
+			goto Western Plaguelands,51.9,28
+			.talk Kirsta Deepshadow##11610
+			..accept Unfinished Business (1)##6004
+		step
+			goto Western Plaguelands,50.3,41.5
+			.kill 2 Scarlet Knight##1833|q 6004/4
+			.kill 2 Scarlet Mage##1826|q 6004/3
+		step
+			goto Western Plaguelands,51.1,43.7
+			.kill 2 Scarlet Hunter##1831|q 6004/2
+			.kill 2 Scarlet Medic##10605|q 6004/1
+		step
+			goto Western Plaguelands,51.9,28
+			.talk Kirsta Deepshadow##11610
+			..turnin Unfinished Business (1)##6004
+			..accept Unfinished Business (2)##6023
+		step
+			goto Western Plaguelands,56.4,34.0|n
+			.' The path up to Huntsman Radley starts here|goto Western Plaguelands,56.4,34.0,0.5|noway|q 6023
+		step
+			goto Western Plaguelands,57.7,36.3
+			.kill Huntsman Radley##11613|q 6023/1
+		step
+			goto Western Plaguelands,54.2,24.2
+			.kill 1 Cavalier Durgen##11611|q 6023/2
+			.info Stay in front of the tower. Cavalier Durgen will eventually walk out of the tower down the front.
+			.' Go to the top of the tower
+			.' Click the small brown chest
+			.get Mark of the Lightbringer##23661|q 9474/1
+		step
+			goto Western Plaguelands,52.8,25.2|n
+			.' Jump off the cliff down to Kirsta Deepshadow|goto Western Plaguelands,52.8,25.2,0.5|noway|q 6023
+		step
+			goto Western Plaguelands,51.9,28
+			.talk Kirsta Deepshadow##11610
+			..turnin Unfinished Business (2)##6023
+			..accept Unfinished Business (3)##6025
+		step
+			goto Western Plaguelands,45.19,17.97|n
+			.' Climb the tower|goto Western Plaguelands,45.19,17.97,0.5|noway|q 6025
+		step
+			goto Western Plaguelands,45.82,18.37
+			.goal Overlook Hearthglen from a high vantage point|q 6025/1
+		step
+			goto Western Plaguelands,51.9,28
+			.talk Kirsta Deepshadow##11610
+			..turnin Unfinished Business (3)##6025
+		step
+			goto Western Plaguelands,42.9,84.5
+			.talk High Priestess MacDonnell##11053
+			..turnin Return to Chillwind Camp##5220
+			..accept Target: Writhing Haunt##5222
+		step
+			goto Western Plaguelands,42.9,84.5
+			.talk Anchorite Truuen##17238
+			..turnin The Mark of the Lightbringer##9474
+		step
+			goto Western Plaguelands,42.9,84.5
+			.talk Anchorite Truuen##17238
+			.' Warning! Escorting quest!
+			..accept Tomb of the Lightbringer##9446
+		step
+			goto Western Plaguelands,52.1,83.4
+			.goal Escort Anchorite Truuen to Uther's Tomb|q 9446/1
+		step
+			goto Western Plaguelands,42.9,84.5
+			.talk High Priestess MacDonnell##11053
+			..turnin Tomb of the Lightbringer##9446
+		step
+			goto Stormwind City,57.2,48.1
+			.talk Royal Factor Bathrilor##10782
+			..turnin Better Late Than Never (2)##5022
+			..accept Good Natured Emma##5048
+		step
+			goto Stormwind City,60.2,57
+			.talk Ol' Emma##3520
+			..turnin Good Natured Emma##5048
+			..accept Good Luck Charm##5050
+		step
+			goto Stormwind City,80,38.4
+			.talk King Varian Wrynn##29611
+			..accept The First and the Last##6182
+		step
+			goto Stormwind City,78.3,70.7
+			.talk Master Mathias Shaw##332
+			..turnin The First and the Last##6182
+			..accept Honor the Dead##6183
+			..turnin Honor the Dead##6183
+			..accept Flint Shadowmore##6184
+		step
+			goto Western Plaguelands,43.6,84.5
+			.talk Flint Shadowmore##12425
+			..turnin Flint Shadowmore##6184
+			..accept The Eastern Plagues##6185
+		step
+			goto Western Plaguelands,38.4,54
+			.talk Janice Felstone##10778
+			..turnin Good Luck Charm##5050
+			..accept Two Halves Become One##5051
+		step
+			goto Western Plaguelands,36.8,58.2
+			.kill Jabbering Ghoul##10801|n
+			.info If a Jabbering Ghoul is not in this spot, you can find one somewhere in this field.
+			.collect Good Luck Other-Half Charm##12722|q 5051 |future
+			.' Click the Good Luck Other-Half-Charm in your bags|use Good Luck Other-Half-Charm##12722
+			.get Good Luck Charm##12723|q 5051/1
+			.kill Skeletons|n
+			.get 15 Skeletal Fragments##14619|q 5537/1
+		step
+			goto Western Plaguelands,38.4,54
+			.talk Janice Felstone##10778
+			..turnin Two Halves Become One##5051
+		step
+			goto Western Plaguelands,53,66
+			.from Cauldron Lord Razarch##11076
+			.collect Writhing Haunt Cauldron Key##13197|q 5222 |future
+			.' Interact with gameobject: Scourge Cauldron
+			..turnin Target: Writhing Haunt##5222
+			..accept Return to Chillwind Camp##5223
+		step
+			goto Western Plaguelands,42.7,84
+			.talk Alchemist Arbington##11056
+			..turnin Skeletal Fragments##5537
+			..accept Mold Rhymes With...##5538
+		step
+			goto Western Plaguelands,42.9,84.5
+			.talk High Priestess MacDonnell##11053
+			..turnin Return to Chillwind Camp##5223
+			..accept Target: Gahrron's Withering##5225
+		step
+			goto Western Plaguelands,53.7,64.7
+			.talk Mulgris Deepriver##10739
+			..accept The Wildlife Suffers Too (1)##4984
+		step
+			goto Western Plaguelands,42.8,55.4
+			.kill 8 Diseased Wolf##1817|q 4984/1
+			.info The wolves in this area share a respawn with the spiders so killing them as well will spawn wolves faster.
+			.'You can also find more wolves|at 45.6,47.4
+		step
+			goto Western Plaguelands,53.7,64.7
+			.talk Mulgris Deepriver##10739
+			..turnin The Wildlife Suffers Too (1)##4984
+			..accept The Wildlife Suffers Too (2)##4985
+		step
+			goto Western Plaguelands,57.9,61.2
+			.kill 8 Diseased Grizzly##1816|q 4985/1
+			.' You can find more|at 57.4,53.1
+		step
+			goto Western Plaguelands,53.7,64.7
+			.talk Mulgris Deepriver##10739
+			..turnin The Wildlife Suffers Too (2)##4985
+			..accept Glyphed Oaken Branch##4986
+		step
+			goto Western Plaguelands,62.6,59.9
+			.from Cauldron Lord Soulwrath##11078
+			.collect Gahrron's Withering Cauldron Key##13196|q 5225 |future
+			.' Interact with gameobject: Scourge Cauldron
+			..turnin Target: Gahrron's Withering##5225
+			..accept Return to Chillwind Camp##5226
+		step
+			goto Eastern Plaguelands,25.1,73.1
+			.collect SI:7 Insignia (Rutger)##16003|q 6185/2
+		step
+			goto Eastern Plaguelands,25.1,68.4
+			.collect SI:7 Insignia (Turyen)##16002|q 6185/4
+		step
+			goto Eastern Plaguelands,23.5,68.4
+			.collect SI:7 Insignia (Fredo)##16001|q 6185/3
+			.goal The Blightcaller Uncovered|q 6185/1
+		step
+			goto Eastern Plaguelands,32.4,83.7
+			.talk Pamela Redpath##10926
+			..turnin Sister Pamela##5601
+			..accept Pamela's Doll##5149
+		step
+			goto Eastern Plaguelands,35.0,84.3
+			.' The doll parts spawn in the house here, except the house Pamela is in
+			.get Pamela's Doll's Head##12886|n
+			.get Pamela's Doll's Left Side##12887|n
+			.get Pamela's Doll's Right Side##12888|n
+			.' Click Pamela's Doll's Head to put the doll parts together to make Pamela's Doll|q 5149/1|use Pamela's Doll's Head##12886
+		step
+			goto Eastern Plaguelands,32.4,83.7
+			.talk Pamela Redpath##10926
+			..turnin Pamela's Doll##5149
+			..accept Uncle Carlin##5241
+			..accept Auntie Marlene##5152
+		step
+			goto Western Plaguelands,42.9,84.5
+			.talk High Priestess MacDonnell##11053
+			..turnin Return to Chillwind Camp##5226
+		step
+			goto Western Plaguelands,43.6,84.5
+			.talk Flint Shadowmore##12425
+			..turnin The Eastern Plagues##6185
+			..accept The Blightcaller Cometh##6186
+		step
+			goto Western Plaguelands,49.2,78.5
+			.talk Marlene Redpath##10927
+			..turnin Auntie Marlene##5152
+			..accept A Strange Historian##5153
+		step
+			goto Western Plaguelands,49.7,76.8
+			.' Interact with gameobject: Joseph Redpath's Monument
+			.info It's a squarish stone gravestone with a gold plaque on it. It's a lighter color than all the other graves.
+			.collect Joseph's Wedding Ring##12894|q 5153/1
+		step
+			goto Western Plaguelands,39.5,66.8
+			.talk Chromie##10667
+			..turnin A Strange Historian##5153
+			..accept The Annals of Darrowshire##5154
+			..accept A Matter of Time##4971
+		step
+			goto Western Plaguelands,43.5,69.4
+			.collect Annals of Darrowshire##12900|q 5154/1
+			.info In the building that isn's crumbled in the middle of the town - you can enter from the south side by hugging the wall of the building until you get inside safely.
+		step
+			goto Western Plaguelands,46.9,65.7
+			.' Use your Temporal Displacer on the disco ball towers|use Temporal Displacer##12627
+			.info In this area, you will see towers that have light shining out of them like a disco ball.
+			.kill 10 Temporal Parasite##10717|q 4971/1
+		step
+			goto Western Plaguelands,39.5,66.8
+			.talk Chromie##10667
+			..turnin The Annals of Darrowshire##5154
+			..turnin A Matter of Time##4971
+			..accept Counting Out Time##4972
+			..accept Brother Carlin##5210
+		step
+			goto Western Plaguelands,38.8,68.3
+			.collect 5 Andorhal Watch##12638|q 4972/1
+			.info Click the Small Lockboxes on the ground in the crumbled houses.
+		step
+			goto Western Plaguelands,39.5,66.8
+			.talk Chromie##10667
+			..turnin Counting Out Time##4972
+		step
+			goto Eastern Plaguelands,75.7,53.8
+			.talk Carlin Redpath##11063
+			..turnin Brother Carlin##5210
+			..turnin Uncle Carlin##5241
+		step
+			goto Stormwind City,80,38.5
+			.talk King Varian Wrynn##29611
+			..turnin The Blightcaller Cometh##6186
+		step
+			goto Darnassus,35.4,8.4
+			.talk Mathrengyl Bearwalker##4217
+			..turnin Glyphed Oaken Branch##4986
+		step
+			goto Tanaris,51.5,28.8
+			.talk Krinkle Goodsteel##5411
+			..turnin Mold Rhymes With...##5538
+		step
+			.' Congratulations! +46? quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[alpha-none] Eastern Plaguelands",[[
