@@ -1032,6 +1032,7 @@ startlevel 57
 			goto Burning Steppes,32.85,25.3
 			.' Go To Instance!
 			.info Good luck!
+			.info Next step contains hints.
 		step
 			.goal Test the Eggscilliscope Prototype|q 4734/1
 			.info Left Wing: First Step.
@@ -1086,11 +1087,9 @@ startlevel 57
 			.talk Warosh##10799
 			..turnin Urok Doomhowl##4867
 			.info Right Wing: Eleven Step.
-		step
-			
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Scholomance (58)",[[
+ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\[Empty] Scholomance (58)",[[
 	startlevel 58
 	step //1
 ]])

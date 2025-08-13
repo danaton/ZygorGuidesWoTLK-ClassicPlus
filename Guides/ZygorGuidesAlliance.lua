@@ -12221,10 +12221,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		.' See a message saying you Uncovered the Blightcaller|goal The Blightcaller Uncovered|q 6185/1
 	step //216
 		goto Eastern Plaguelands,24.9,63.6
-		.kill 20 Plaguehound Runt|q 5542/1
-		.kill 30 Plaguebat|q 5543/1
+		.kill 20 Plaguehound Runt##8596|q 5542/1
+		.kill 30 Plaguebat##8600|q 5543/1
 		.from Carrion Grub##8603, Carrion Devourer##8605
-		.get 15 Slab of Carrion Worm Meat|q 5544/1
+		.get 15 Slab of Carrion Worm Meat##13853|q 5544/1
 	step //217
 		goto 32.4,83.7
 		.talk Pamela Redpath##10926
@@ -12233,9 +12233,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 	step //218
 		goto 35.0,84.3
 		.' The doll parts spawn in the house here, except the house Pamela is in
-		.get Pamela's Doll's Head|n
-		.get Pamela's Doll's Left Side|n
-		.get Pamela's Doll's Right Side|n
+		.get Pamela's Doll's Head##12886|n
+		.get Pamela's Doll's Left Side##12887|n
+		.get Pamela's Doll's Right Side##12888|n
 		.' Click Pamela's Doll's Head to put the doll parts together to make Pamela's Doll|q 5149/1|use Pamela's Doll's Head##12886
 	step //219
 		goto 32.4,83.7
@@ -12245,10 +12245,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		..accept Auntie Marlene##5152
 	step //220
 		goto Eastern Plaguelands,52.5,49.1
-		.kill 5 Plaguehound|q 5542/2
+		.kill 5 Plaguehound##8597|q 5542/2
 	step //221
 		goto Eastern Plaguelands,50.3,25.9
-		.kill 5 Frenzied Plaguehound|q 5542/3
+		.kill 5 Frenzied Plaguehound##8598|q 5542/3
 	step //222
 		goto 75.7,53.9
 		.talk Duke Nicholas Zverenhoff##11039
@@ -12258,9 +12258,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 	step //223
 		goto 75.9,53.4
 		.talk Khaelyn Steelwing##12617
-		..fpath Light's Hope Chapel
+		.fpath Light's Hope Chapel, Eastern Plaguelands|q 9446
 	step //224
-		'Fly to Chillwind Camp|goto Western Plaguelands,43.0,84.3,1.5|noway|c
+		goto 75.9,53.4|n
+		.talk Khaelyn Steelwing##12617
+		.' Fly to Chillwind Camp|goto Western Plaguelands,43.0,84.3,1.5|noway|q 9446
 	step //225
 		goto Western Plaguelands,42.9,84.5
 		.talk High Priestess MacDonnell##11053
@@ -12272,13 +12274,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		..turnin The Eastern Plagues##6185
 		..accept The Blightcaller Cometh##6186
 	step //227
-		'Fly to Stormwind|goto Stormwind City|noway|c
+		.' Fly to Stormwind|goto Stormwind City|noway|q 6186
 	step //228
 		goto Stormwind City,80,38.4
 		.talk King Varian Wrynn##29611
 		..turnin The Blightcaller Cometh##6186
 	step //229
-		'Fly to Chillwind Camp|goto Western Plaguelands,43.0,84.3,1.5|noway|c
+		.' Fly to Chillwind Camp|goto Western Plaguelands,43.0,84.3,1.5|noway|q 5152
 	step //230
 		goto Western Plaguelands,49.2,78.5
 		.talk Marlene Redpath##10927
@@ -12331,7 +12333,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		..turnin Blood Tinged Skies##5543
 		..turnin Carrion Grubbage##5544
 		..accept Redemption##5742
-		..'Listen to his story
+		.' Listen to his story
 		..turnin Redemption##5742
 	step //241
 		'Hearth to Ironforge|goto Ironforge|use Hearthstone##6948|noway|c

@@ -5450,7 +5450,7 @@ startlevel 50
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[60] Western Plaguelands",[[
 author danaton
-description This guide contain quest-chain (46? quests) for Western Plaguelands location.
+description This guide contain quest-chain (45 quests) for Western Plaguelands location.
 startlevel 60
 		step
 			goto Winterspring,61.35,38.97
@@ -5576,7 +5576,7 @@ startlevel 60
 			goto Western Plaguelands,47.4,49.7
 			.' Unlock the Locked Cabinet with the Dalson Cabinet Key
 			.info In the house, on the second floor in the small room.
-			..accept Locked Away##5059|instant
+			..accept Locked Away##5060|instant
 		step
 			goto Western Plaguelands,50.0,30.4|n
 			.' The path down to Kirsta Deepshadow starts here|goto Western Plaguelands,50.0,30.4,0.5|noway|q 6004 |future
@@ -5835,15 +5835,13 @@ startlevel 60
 			.talk Krinkle Goodsteel##5411
 			..turnin Mold Rhymes With...##5538
 		step
-			.' Congratulations! +46? quests for achievement "Loremaster of Eastern Kingdoms".
+			.' Congratulations! +45 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[alpha-none] Eastern Plaguelands",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[60] Eastern Plaguelands",[[
 author danaton
-description This guide contain quest-chain (?? quests) for Eastern Plaguelands location.
+description This guide contain quest-chain (35 quests) for Eastern Plaguelands location.
 startlevel 60
-		step
-			.' Required First Complete - Winterspirng Guide????
 		step
 			goto Winterspring,61.35,38.97
 			.talk Gregor Greystone##10431
@@ -5854,6 +5852,370 @@ startlevel 60
 			.talk Jessica Redpath##11629
 			..accept Sister Pamela##5601
 		step
+			goto Stormwind City,80,38.5
+			.talk King Varian Wrynn##29611
+			..accept The First and the Last##6182
+		step
+			goto Stormwind City,78.3,70.7
+			.talk Master Mathias Shaw##332
+			..turnin The First and the Last##6182
+			..accept Honor the Dead##6183
+			..turnin Honor the Dead##6183
+			..accept Flint Shadowmore##6184
+		step
+			goto Western Plaguelands,43.6,84.5
+			.talk Flint Shadowmore##12425
+			..turnin Flint Shadowmore##6184
+			..accept The Eastern Plagues##6185
+		step
+			goto Western Plaguelands,43,83.5
+			.talk Argent Officer Pureheart##10840
+			..turnin The Everlook Report##6028
+		step
+			goto Eastern Plaguelands,4.7,38.4
+			.talk Tirion Fordring##1855
+			..accept Demon Dogs##5542
+			..accept Blood Tinged Skies##5543
+			..accept Carrion Grubbage##5544
+		step
+			goto Eastern Plaguelands,25.1,73.1
+			.' Click the Mangled Human Remains
+			.get SI:7 Insignia (Rutger)##16003|q 6185/2
+		step
+			goto Eastern Plaguelands,25.1,68.4
+			.' Click the Mangled Human Remains
+			.get SI:7 Insignia (Turyen)##16002|q 6185/4
+		step
+			goto Eastern Plaguelands,23.5,68.4
+			.' Click the Mangled Human Remains
+			.get SI:7 Insignia (Fredo)##16001|q 6185/3
+			.goal The Blightcaller Uncovered|q 6185/1
+		step
+			goto Eastern Plaguelands,24.9,63.6
+			.kill 20 Plaguehound Runt##8596|q 5542/1
+			.kill 30 Plaguebat##8600|q 5543/1
+			.from Carrion Grub##8603, Carrion Devourer##8605
+			.get 15 Slab of Carrion Worm Meat##13853|q 5544/1
+		step
+			goto Eastern Plaguelands,32.4,83.7
+			.talk Pamela Redpath##10926
+			..turnin Sister Pamela##5601
+			..accept Pamela's Doll##5149
+		step
+			goto Eastern Plaguelands,35.0,84.3
+			.' The doll parts spawn in the house here, except the house Pamela is in
+			.collect Pamela's Doll's Head##12886|n
+			.collect Pamela's Doll's Left Side##12887|n
+			.collect Pamela's Doll's Right Side##12888|n
+			.' Click Pamela's Doll's Head to put the doll parts together to make Pamela's Doll|q 5149/1|use Pamela's Doll's Head##12886
+		step
+			goto Eastern Plaguelands,32.4,83.7
+			.talk Pamela Redpath##10926
+			..turnin Pamela's Doll##5149
+			..accept Uncle Carlin##5241
+			..accept Auntie Marlene##5152
+		step
+			goto Eastern Plaguelands,52.5,49.1
+			.kill 5 Plaguehound##8597|q 5542/2
+		step
+			goto Eastern Plaguelands,50.3,25.9
+			.kill 5 Frenzied Plaguehound##8598|q 5542/3
+		step
+			goto Eastern Plaguelands,4.7,38.4
+			.talk Tirion Fordring##1855
+			..turnin Demon Dogs##5542
+			..turnin Blood Tinged Skies##5543
+			..turnin Carrion Grubbage##5544
+			..accept Redemption##5742
+		step
+			goto Eastern Plaguelands,4.7,38.4
+			.talk Tirion Fordring##1855
+			.goal Tirion's Tale|q 5742/1
+		step
+			goto Eastern Plaguelands,4.7,38.4
+			.talk Tirion Fordring##1855
+			..turnin Redemption##5742
+			..accept Of Forgotten Memories##5781
+		step
+			goto Eastern Plaguelands,24.66,79.79
+			.' Interact with gameobject: Loose Dirt Mound to summon Mercutio Filthgorger
+			.from Mercutio Filthgorger##11886
+			.get Taelan's Hammer##14613|q 5781/1
+		step
+			goto Eastern Plaguelands,23.7,78.3
+			.' Interact with gameobject: Torn Scroll
+			..accept Hameya's Plea##6024
+		step
+			goto Eastern Plaguelands,4.7,38.4
+			.talk Tirion Fordring##1855
+			..turnin Of Forgotten Memories##5781
+			..accept Of Lost Honor##5845
+		step
+			goto Western Plaguelands,49.2,78.6
+			.talk Marlene Redpath##10927
+			..turnin Auntie Marlene##5152
+			..accept A Strange Historian##5153
+		step
+			goto Western Plaguelands,49.7,76.8
+			.' Interact with gameobject: Joseph Redpath's Monument
+			.info It's a squarish stone gravestone with a gold plaque on it. It's a lighter color than all the other graves.
+			.collect Joseph's Wedding Ring##12894|q 5153/1
+		step
+			goto Western Plaguelands,39.5,66.8
+			.talk Chromie##10667
+			..turnin A Strange Historian##5153
+			..accept The Annals of Darrowshire##5154
+		step
+			goto Western Plaguelands,43.5,69.4
+			.collect Annals of Darrowshire##12900|q 5154/1
+			.info In the building that isn's crumbled in the middle of the town - you can enter from the south side by hugging the wall of the building until you get inside safely.
+		step
+			goto Western Plaguelands,39.5,66.8
+			.talk Chromie##10667
+			..turnin The Annals of Darrowshire##5154
+			..accept Brother Carlin##5210
+		step
+			goto Western Plaguelands,43.6,84.5
+			.talk Flint Shadowmore##12425
+			..turnin The Eastern Plagues##6185
+			..accept The Blightcaller Cometh##6186
+		step
+			goto Western Plaguelands,43.4,84.8
+			.talk Nathaniel Dumah##11616
+			..accept A Plague Upon Thee (1)##5903
+		step
+			goto Stormwind City,61.2,70.7
+			.talk Auctioneer Jaxon##15659
+			.buy 30 Core of Elements##22527|q 9128 |future
+			.buy 30 Dark Iron Scraps##22528|q 9131 |future
+			.buy 30 Savage Frond##22529|q 9136 |future
+		step
+			goto Stormwind City,80,38.5
+			.talk King Varian Wrynn##29611
+			..turnin The Blightcaller Cometh##6186
+			..accept Order Must Be Restored##6187
+		step
+			goto Eastern Plaguelands,23,68.2
+			.kill Nathanos Blightcaller##11878|q 6187/1
+		step
+			goto Eastern Plaguelands,75.7,53.9
+			.talk Duke Nicholas Zverenhoff##11039
+			..turnin Duke Nicholas Zverenhoff##6030
+		step
+			goto Eastern Plaguelands,75.7,53.8
+			.talk Carlin Redpath##11063
+			..turnin Brother Carlin##5210
+			..turnin Uncle Carlin##5241
+			..accept Villains of Darrowshire##5181
+			..accept Defenders of Darrowshire##5211
+		step
+			goto Eastern Plaguelands,75.5,53.4
+			.talk Emissary Whitebeard##17069
+			..accept Establishing New Outposts##9664
+			.info This is a PvP quest.
+		step
+			goto Eastern Plaguelands,75.4,53.1
+			.talk Rayne##16135
+			..accept Savage Flora##9136
+			.buy 30 Savage Frond##22529|q 9136/1
+			..turnin Savage Flora##9136
+		step
+			goto Eastern Plaguelands,75.7,52.6
+			.talk Rohan the Assassin##16131
+			..accept Bonescythe Digs##9126
+		step
+			goto Eastern Plaguelands,75.7,52.7
+			.talk Huntsman Leopold##16132
+			..accept Cryptstalker Armor Doesn't Make Itself...##9124
+		step
+			goto Eastern Plaguelands,75.7,52.4
+			.talk Archmage Angela Dosantos##16116
+			..accept The Elemental Equation##9128
+			.buy 30 Core of Elements##22527|q 9128/1
+			..turnin The Elemental Equation##9128
+		step
+			goto Eastern Plaguelands,76,52.2
+			.talk Korfax, Champion of the Light##16112
+			..accept Binding the Dreadnaught##9131
+			.buy 30 Dark Iron Scraps##22528|q 9131/1
+			..turnin Binding the Dreadnaught##9131
+		step
+			goto Eastern Plaguelands,73.8,57.8
+			.talk Caretaker Alen##11038
+			..accept Zaeldarr the Outcast##6021
+		step
+			goto Eastern Plaguelands,46.5,44.4
+			.collect Skull of Horgus##12956|q 5181/1
+			.info Underwater.
+		step
+			goto Eastern Plaguelands,49.2,59.6
+			.collect Shattered Sword of Marduk##12957|q 5181/2
+		step
+			goto Eastern Plaguelands,75.7,53.8
+			.talk Carlin Redpath##11063
+			..turnin Villains of Darrowshire##5181
+			..accept Heroes of Darrowshire##5168
+		step
+			goto Eastern Plaguelands,62.2,42.5
+			.goal Capture Eastwall Tower|q 9664/2
+		step
+			goto Eastern Plaguelands,66,29.1
+			.collect Symbol of Lost Honor##14625|q 5845/1
+			.info Underwater.
+		step
+			goto Eastern Plaguelands,61.97,35.85
+			.from Diseased Flayer##8532
+			.talk Darrowshire Spirit##11064
+			.' Darrowshire Spirits Freed|q 5211/1
+		step
+			goto Eastern Plaguelands,65.3,12.3
+			.from Infiltrator Hameya##12248
+			.get Hameya's Key##15767|q 6024/1
+		step
+			goto Eastern Plaguelands,51.8,19.9
+			.goal Capture Northpass Tower|q 9664/3
+		step
+			goto Eastern Plaguelands,38.6,29.3
+			.collect 100 Plagueland Termites##15043|q 5903/1
+			.' You can find more around (1)|at 39.4,19.7
+			.' You can find more around (2)|at 31.6,19.3
+			.' You can find more around (3)|at 32,26.9
+			.' You can find more around (4)|at 28.2,30.8
+			.' You can find more around (5)|at 19,17
+		step
+			goto Eastern Plaguelands,18.6,27.2
+			.goal Capture Plaguewood Tower|q 9664/4
+		step
+			goto Eastern Plaguelands,34.9,28.6
+			.from Scourge Soldier##8523, Cursed Mage##8524, Scourge Guard##8527
+			.get 30 Bone Fragments##22526|q 9126/1
+			.info Be careful! Do not sell items.
+		step
+			goto Eastern Plaguelands,11.3,28.6
+			.talk Augustus the Touched##12384
+			..accept Augustus' Receipt Book##6164
+		step
+			goto Eastern Plaguelands,14.2,26.3
+			.collect Augustus' Receipt Book##15884|q 6164/1
+			.info Inside the inn, 2-nd floor.
+		step
+			goto Eastern Plaguelands,11.3,28.6
+			.talk Augustus the Touched##12384
+			..turnin Augustus' Receipt Book##6164
+		step
+			goto Eastern Plaguelands,13.35,28
+			.from Crypt Stalker##8555, Crypt Walker##8556, Crypt Horror##8557, Crypt Slayer##8558
+			.get 30 Crypt Fiend Parts##22525|q 9124/1
+			.' You can find around in cave|at 12.13,24.67
+		step
+			goto Eastern Plaguelands,12.2,24.6|n
+			.' Move forward through the tunnel|goto Eastern Plaguelands,12.2,24.6,0.5|noway|q 5845
+		step
+			goto Eastern Plaguelands,9.28,29.07|n
+			.' Continue moving through the tunnel|goto Eastern Plaguelands,9.28,29.07,0.5|noway|q 5845
+		step
+			goto Eastern Plaguelands,4.7,38.4
+			.talk Tirion Fordring##1855
+			..turnin Of Lost Honor##5845
+			..accept Of Love and Family (1)##5846
+		step
+			goto Western Plaguelands,63.8,57.2
+			.collect Redpath's Shield##12955|q 5168/2
+		step
+			goto Western Plaguelands,65.8,75.4
+			.talk Artist Renfray##11936
+			..turnin Of Love and Family (1)##5846
+		step
+			goto Western Plaguelands,43.4,84.8
+			.talk Nathaniel Dumah##11616
+			..turnin A Plague Upon Thee (1)##5903
+			..accept A Plague Upon Thee (2)##5904
+		step
+			goto Western Plaguelands,48.36,32
+			.' Interact with gameobject: Termite Barrel
+			..turnin A Plague Upon Thee (2)##5904
+			..accept A Plague Upon Thee (3)##6389
+		step
+			goto Western Plaguelands,42.5,19
+			.collect Davil's Libram##12954|q 5168/1
+		step
+			goto Western Plaguelands,43.4,84.8
+			.talk Nathaniel Dumah##11616
+			..turnin A Plague Upon Thee (3)##6389
+		step
+			goto Eastern Plaguelands,23.8,77.9
+			.from Zaeldarr the Outcast##12250
+			.get Zaeldarr's Head##15785|q 6021/1
+		step
+			goto Eastern Plaguelands,24.4,79.2
+			.' Interact with gameobject: Mound of Dirt
+			..turnin Hameya's Plea##6024
+		step
+			goto Eastern Plaguelands,35.6,68.8
+			.goal Capture Crown Guard Tower|q 9664/1
+		step
+			goto Eastern Plaguelands,73.8,57.8
+			.talk Caretaker Alen##11038
+			..turnin Zaeldarr the Outcast##6021
+		step
+			goto Eastern Plaguelands,75.7,53.8
+			.talk Carlin Redpath##11063
+			..turnin Heroes of Darrowshire##5168
+			..turnin Defenders of Darrowshire##5211
+			..accept Marauders of Darrowshire##5206
+		step
+			goto Eastern Plaguelands,75.5,53.4
+			.talk Emissary Whitebeard##17069
+			..turnin Establishing New Outposts##9664
+		step
+			goto Eastern Plaguelands,75.7,52.6
+			.talk Rohan the Assassin##16131
+			..turnin Bonescythe Digs##9126
+		step
+			goto Eastern Plaguelands,75.7,52.7
+			.talk Huntsman Leopold##16132
+			..turnin Cryptstalker Armor Doesn't Make Itself...##9124
+		step
+			goto Eastern Plaguelands,70.9,45.2
+			.from Scourge Champion##8529
+			.collect 5 Fetid Skull##13157|q 5206 |future
+			.' You can find more Scourge Champion around|at 78.8,38.5
+		step
+			.use Mystic Crystal##13156
+			.get 5 Resonating Skull##13155|q 5206/1
+		step
+			goto Eastern Plaguelands,75.7,53.8
+			.talk Carlin Redpath##11063
+			..turnin Marauders of Darrowshire##5206
+			..accept Return to Chromie##5941
+		step
+			goto Western Plaguelands,39.5,66.8
+			.talk Chromie##10667
+			..turnin Return to Chromie##5941
+			..accept The Battle of Darrowshire##5721
+		step
+			goto Eastern Plaguelands,35,84
+			.use Relic Bundle##15209
+			.kill Redpath the Corrupted##10938|at 34.42,82.2 |n
+			.info Join the battle before he appears.
+			.talk Joseph Redpath##10936
+			.' Accept Redpath's Forgiveness|q 5721/1
+		step
+			goto Eastern Plaguelands,32.5,83.6
+			.talk Pamela Redpath##10926
+			..turnin The Battle of Darrowshire##5721
+			..accept Hidden Treasures##5942
+		step
+			goto Eastern Plaguelands,32.2,83.4
+			.' Interact with gameobject: Joseph's Chest
+			.info Behind the house.
+			..turnin Hidden Treasures##5942
+		step
+			goto Stormwind City,80,38.5
+			.talk King Varian Wrynn##29611
+			..turnin Order Must Be Restored##6187
+		step
+			.' Congratulations! +35 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
 ZygorGuidesViewer.AllianceInstalled=true

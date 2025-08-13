@@ -1643,8 +1643,6 @@ author danaton
 description This guide contain quest-chain (67 quests) for Darkshore location.
 startlevel 20
 		step
-			.' For comfortable execution quest chain, it is recommended to be level 20+|tip Manually skip this step
-		step
 			goto Darnassus,31.2,84.5
 			.talk Chief Archaeologist Greywhisker##2912
 			..accept Trouble In Darkshore?##730
@@ -1665,10 +1663,10 @@ startlevel 20
 			.collect Sea Creature Bones##12242|q 3524/1
 		step
 			goto Darkshore,36.19,46.52
-			.from Pygmy Tide Crawler##2231+, Tide Crawler##2232+, Young Reef Crawler##2234+
+			.from Pygmy Tide Crawler##2231, Tide Crawler##2232, Young Reef Crawler##2234
 			.get 6 Crawler Leg##5385|q 983/1
-			Position 1|at 36.4,49.9
-			Position 2|at 36.63,56
+			.' You can find more around (1)|at 36.4,49.9
+			.' You can find more around (2)|at 36.63,56
 		step
 			goto Darkshore,36.64,46.29
 			.talk Buzzbox 827##991002
@@ -1684,9 +1682,9 @@ startlevel 20
 			.collect Sea Turtle Remains##12289|q 4681/1
 		step
 			goto Darkshore,33,52.3
-			.from Darkshore Thresher##2185+, Elder Darkshore Thresher##2187+
+			.from Darkshore Thresher##2185, Elder Darkshore Thresher##2187
 			.get 3 Thresher Eye##5412|q 1001/1
-			Position-spot|at 33.85,35.08
+			.' You can find more around|at 33.85,35.08
 		step
 			goto Darkshore,36.6,45.6
 			.talk Gwennyth Bly'Leggonde##10219
@@ -1706,14 +1704,14 @@ startlevel 20
 		step
 			goto Darkshore,38.4,52.9
 			.' Use Tharnariun's Hope on a Rabid Thistle Bear|use Tharnariun's Hope##7586
-			.' Capture a Rabid Thistle Bear|goal Rabid Thistle Bear Captured|q 2118/1
+			.goal Rabid Thistle Bear Captured|q 2118/1
 		step
 			goto Darkshore,39.6,52.9
-			.' Find a corrupt furbolg camp at this spot|goal Find a corrupt furbolg camp|q 984/1
+			.goal Find a corrupt furbolg camp|q 984/1
 		step
 			goto Darkshore,47.4,48.7
 			.' Walk up next to the big red crystal at the top of this hill
-			.' Locate the large, red crystal on Darkshore's eastern mountain range|goal Locate the large, red crystal on Darkshore's eastern mountain range|q 4811/1
+			.goal Locate the large, red crystal on Darkshore's eastern mountain range|q 4811/1
 		step
 			goto Darkshore,38.8,43.4
 			.talk Tharnariun Treetender##3701
@@ -1732,11 +1730,11 @@ startlevel 20
 		step
 			goto Darkshore,37.8,44.1
 			.' Use your Empty Water Tube in your bags in the moonwell water|use Empty Water Tube##14338
-			.get Moonwell Water Tube|q 4812/1
+			.collect Moonwell Water Tube##14339|q 4812/1
 		step
 			goto Darkshore,40.3,53
-			.kill 8 Blackwood Pathfinder|q 985/1
-			.kill 5 Blackwood Windtalker|q 985/2
+			.kill 8 Blackwood Pathfinder##2167|q 985/1
+			.kill 5 Blackwood Windtalker##2324|q 985/2
 		step
 			goto Darkshore,47.3,48.7
 			.talk Mysterious Red Crystal##991006
@@ -1772,8 +1770,8 @@ startlevel 20
 			..accept Bashal'Aran (2)##955
 		step
 			goto Darkshore,44.6,36.9
-			.from Wild Grell##2190+, Vile Sprite##2189+
-			.get 8 Grell Earring|q 955/1
+			.from Wild Grell##2190, Vile Sprite##2189
+			.get 8 Grell Earring##5336|q 955/1
 		step
 			goto Darkshore,44.2,36.3
 			.talk Asterion##3650
@@ -1781,8 +1779,8 @@ startlevel 20
 			..accept Bashal'Aran (3)##956
 		step
 			goto Darkshore,47.4,36.8
-			.from Deth'ryll Satyrs##2212+
-			.get Ancient Moonstone Seal|q 956/1
+			.from Deth'ryll Satyrs##2212
+			.get Ancient Moonstone Seal##5338|q 956/1
 		step
 			goto Darkshore,44.2,36.3
 			.talk Asterion##3650
@@ -1798,30 +1796,30 @@ startlevel 20
 			..turnin Buzzbox 411##1001
 			..accept Buzzbox 323##1002
 		step
-			.' Go underwater to 39.6,27.5|goto 39.6,27.5
-			.' Click the Mist Veil's Lockbox|tip It's a small grey chest at the very bottom of the ship.
-			.get Mist Veil's Lockbox|q 982/2
+			.' Go underwater to|at 39.6,27.5
+			.collect Mist Veil's Lockbox##12192|q 982/2
+			.info It's a small grey chest at the very bottom of the ship.
 		step
-			.' Go underwater to 38.2,28.8|goto 38.2,28.8
-			.' Click the Silver Dawning's Lockbox|tip It's a small grey chest at the very bottom of this ship.
-			.get Silver Dawning's Lockbox|q 982/1
+			.' Go underwater to|at 38.2,28.8
+			.collect Silver Dawning's Lockbox##12191|q 982/1
+			.info It's a small grey chest at the very bottom of this ship.
 		step
-			.' Jump down into the water below the bridge to 50.9,25.7|goto 50.9,25.7
+			.' Jump down into the water below the bridge to|at 50.9,25.7
 			.' Use your Empty Sampling Tube at the bottom of this waterfall|use Empty Sampling Tube##12350
-			.get Cliffspring River Sample|q 4762/1
+			.collect Cliffspring River Sample##12349|q 4762/1
 		step
 			goto Darkshore,55.64,36.13
 			.' Сan be found on the upper level of the cave
-			.get 1 Death Cap|q 947/2
+			.collect 1 Death Cap##5270|q 947/2
 		step
 			goto Darkshore,55.1,33.6
 			.' Inside the cave
-			.get 5 Scaber Stalk|q 947/1
+			.collect 5 Scaber Stalk##5271|q 947/1
 		step
 			goto Darkshore,48.4,30.7
-			.kill 20 Rabid Thistle Bear|q 2138/1
-			.from Moonstalker##2069+
-			.get 6 Moonstalker Fang|q 1002/1
+			.kill 20 Rabid Thistle Bear##2164|q 2138/1
+			.from Moonstalker##2069
+			.get 6 Moonstalker Fang##5413|q 1002/1
 		step
 			goto Darkshore,51.3,24.6
 			.talk Buzzbox 323##991004
@@ -1832,7 +1830,7 @@ startlevel 20
 			.talk Beached Sea Turtle##991009
 			..accept Beached Sea Turtle##4725
 		step
-			.' Hearth to Auberdine|goto Darkshore,37,44.10|use Hearthstone##6948|noway|c
+			.' Hearth to Auberdine|goto Darkshore,37,44.10|use Hearthstone##6948|noway|q 4723
 		step
 			goto Darkshore,35.7,43.7
 			.talk Cerellean Whiteclaw##3644
@@ -1887,7 +1885,7 @@ startlevel 20
 			.' The path up to Tharnariun's Hope starts here|goto Darkshore,52.4,35.9,0.5|noway|c
 		step
 			goto Darkshore,51.5,38.2
-			.kill Den Mother|q 2139/1
+			.kill Den Mother##6788|q 2139/1
 		step
 			goto Darkshore,50.7,34.9
 			.collect 1 Blackwood Grain Sample##12342|q 4763/1
@@ -1912,8 +1910,8 @@ startlevel 20
 			..accept The Tower of Althalaxx (2)##966
 		step
 			goto Darkshore,55.2,26.4
-			.from Dark Strand Fanatic##2336+
-			.get 4 Worn Parchment|q 966/1
+			.from Dark Strand Fanatic##2336
+			.get 4 Worn Parchment##5348|q 966/1
 		step
 			goto Darkshore,55,24.9
 			.talk Balthule Shadowstrike##3661
@@ -1942,24 +1940,27 @@ startlevel 20
 			..accept The Fall of Ameth'Aran##953
 		step
 			goto Darkshore,42.4,61.8
-			.' Click the Ancient Flame|tip It's a stone podium with a green coming out of the top of it, inside a dark colored broken gazebo.
-			.' Destroy the seal at the ancient flame|goal Destroy the seal at the ancient flame|q 957/1
+			.' Click the Ancient Flame
+			.info It's a stone podium with a green coming out of the top of it, inside a dark colored broken gazebo.
+			.goal Destroy the seal at the ancient flame|q 957/1
 		step
 			goto Darkshore,42.6,63.1
-			.' Click the Fall of Ameth'Aran|tip It's a stone tablet standing upright on the ground.
-			.' Read the Fall of Ameth'Aran|goal Read the Fall of Ameth'Aran|q 953/2
+			.' Click the Fall of Ameth'Aran
+			.info It's a stone tablet standing upright on the ground.
+			.goal Read the Fall of Ameth'Aran|q 953/2
 		step
 			goto Darkshore,43.3,59.7
 			.from Anaya Dawnrunner##3667
-			.get Anaya's Pendant|q 963/1
+			.get Anaya's Pendant##5382|q 963/1
 		step
 			goto Darkshore,43.3,58.7
-			.' Click the Lay of Ameth'Aran |tip It's a stone tablet laying flat on the ground.
-			.' Read the Lay of Ameth'Aran |q 953/1
+			.' Click the Lay of Ameth'Aran
+			.info It's a stone tablet laying flat on the ground.
+			.goal Read the Lay of Ameth'Aran|q 953/1
 		step
 			goto Darkshore,41.5,59.1
-			.from Cursed Highborne##2176+, Writhing Highborne##2177+, Wailing Highborne##2178+
-			.get 7 Highborne Relic|q 958/1
+			.from Cursed Highborne##2176, Writhing Highborne##2177, Wailing Highborne##2178
+			.get 7 Highborne Relic##5360|q 958/1
 		step
 			goto Darkshore,40.3,59.7
 			.talk Sentinel Tysha Moonblade##3639
@@ -1973,18 +1974,18 @@ startlevel 20
 			.kill Murkdeep##10323|q 4740/1
 		step
 			goto Darkshore,34.9,80
-			.from Reef Crawler##2235+, Encrusted Tide Crawler##2233+
-			.get 6 Fine Crab Chunks|q 1138/1
+			.from Reef Crawler##2235, Encrusted Tide Crawler##2233
+			.get 6 Fine Crab Chunks##12237|q 1138/1
 		step
 			goto Darkshore,31.7,83.7
 			.talk Beached Sea Turtle##001009
 			..accept Beached Sea Turtle##4731
 		step
 			goto Darkshore,37.6,82.4
-			.from Grizzled Thistle Bear##2165+
-			.get 4 Grizzled Scalp|q 1003/1
-			.from Moonstalker Sire##2237+, Moonstalker Matriarch##2071+
-			.get 5 Fine Moonstalker Pelt|q 986/1
+			.from Grizzled Thistle Bear##2165
+			.get 4 Grizzled Scalp##5414|q 1003/1
+			.from Moonstalker Sire##2237, Moonstalker Matriarch##2071
+			.get 5 Fine Moonstalker Pelt##5386|q 986/1
 		step
 			goto Darkshore,41.4,80.6
 			.talk Buzzbox 525##991005
@@ -2049,10 +2050,10 @@ startlevel 20
 			goto Darkshore,38.7,87.4
 			.talk Therylune##3584
 			..accept Therylune's Escape##945
-			.from Twilight Disciple##2338+, Twilight Thug##2339+
+			.from Twilight Disciple##2338, Twilight Thug##2339
 			.collect Book: The Powers Below##5352|q 1143/1 |future
 			..accept The Powers Below##968|use Book: The Powers Below##5352
-			.' Escort Therylune away from the Master's Glaive|goal Escort Therylune away from the Master's Glaive|q 945/1	
+			.goal Escort Therylune away from the Master's Glaive|q 945/1	
 		step
 			goto Darkshore,35.7,83.7
 			.talk Prospector Remtravel##2917
@@ -2088,7 +2089,8 @@ startlevel 20
 			.collect Horn of Awakening##13536|q 5321/2
 		step
 			goto Ashenvale,26.8,36.8
-			.' Escort Kerlonian Evershade south to Ashenvale, then south to Maestra's Post|goal Escort Kerlonian Evershade to Maestra's Post|q 5321/1|tip Do NOT follow the road. Walk in the forest as much as you can. This will allow you to avoid the ambushes along the way.
+			.' Escort Kerlonian Evershade south to Ashenvale, then south to Maestra's Post|goal Escort Kerlonian Evershade to Maestra's Post|q 5321/1
+			.info Do NOT follow the road. Walk in the forest as much as you can. This will allow you to avoid the ambushes along the way.
 			.' Use your Horn of Awakening on Kerlonian Evershade when he falls asleep to wake him up|use Horn of Awakening##13536
 		step
 			goto Ashenvale,27.3,35.6
@@ -2101,8 +2103,8 @@ startlevel 20
 			..accept The Tower of Althalaxx (4)##970
 		step
 			goto Ashenvale,32.7,28.7
-			.from Dark Strand Cultist##3725+, Dark Strand Adept##3728+, Dark Strand Excavator##3730+, Dark Strand Enforcer##3727+
-			.get Glowing Soul Gem|q 970/1
+			.from Dark Strand Cultist##3725, Dark Strand Adept##3728, Dark Strand Excavator##3730, Dark Strand Enforcer##3727
+			.get Glowing Soul Gem##5366|q 970/1
 		step
 			goto Ashenvale,26.2,38.6
 			.talk Delgren the Purifier##3663
@@ -2116,7 +2118,7 @@ startlevel 20
 			goto Ashenvale,25.3,60.7
 			.' Go to Path-Up|at 25.88,63.11
 			.from Ilkrud Magthrull##3664+
-			.get Ilkrud Magthrulls Tome|q 973/1
+			.get Ilkrud Magthrulls Tome##5533|q 973/1
 		step
 			goto Ashenvale,36.6,49.6
 			.talk Raene Wolfrunner##3691
@@ -2140,11 +2142,11 @@ startlevel 20
 		step
 			goto Ashenvale,85.1,43.4
 			.talk Suralais Farwind##22935
-			..fpath Forest Song, Ashenvale
+			.fpath Forest Song, Ashenvale|q 1140
 		step
 			goto Ashenvale,85.1,43.4
 			.talk Suralais Farwind##22935
-			.'Fly to Astranaar, Ashenvale|goto Ashenvale,35.5,50.2,5|noway|c
+			.' Fly to Astranaar, Ashenvale|goto Ashenvale,35.5,50.2,5|noway|q 1140
 		step
 			goto Ashenvale,26.2,38.6
 			.talk Delgren the Purifier##3663
@@ -2153,7 +2155,7 @@ startlevel 20
 		step
 			goto Ashenvale,34.4,48
 			.talk Daelyshia##4267
-			.'Fly to Auberdine, Darkshore|goto Darkshore,36.4,45.6,0.3|noway|c
+			.' Fly to Auberdine, Darkshore|goto Darkshore,36.4,45.6,0.5|noway|q 4730
 		step
 			goto Darkshore,36.6,45.6
 			.talk Gwennyth Bly'Leggonde##10219
@@ -2178,7 +2180,7 @@ startlevel 20
 		step
 			goto Darkshore,56,26.3
 			.from Athrikus Narassin##3660
-			.get Athrikus Narassin's Head|q 1143/1
+			.get Athrikus Narassin's Head##5383|q 1143/1
 		step
 			goto Darkshore,55,24.9
 			.talk Balthule Shadowstrike##3661
@@ -2190,16 +2192,16 @@ startlevel 20
 			..accept Gyromast's Retrieval##2098
 		step
 			goto Darkshore,52.8,19.5
-			.from Encrusted Tide Crawler##2233+, Raging Reef Crawler##2236+
-			.get Bottom of Gelkak's Key|q 2098/3
+			.from Encrusted Tide Crawler##2233, Raging Reef Crawler##2236
+			.get Bottom of Gelkak's Key##7500|q 2098/3
 		step
 			goto Darkshore,60.9,10.3
 			.from Giant Foreststrider##2323
-			.get Top of Gelkak's Key|q 2098/1
+			.get Top of Gelkak's Key##7498|q 2098/1
 		step
 			goto Darkshore,55.22,12.56
-			.from Greymist Oracle##2207+, Greymist Tidehunter##2208+
-			.get Middle of Gelkak's Key|q 2098/2
+			.from Greymist Oracle##2207, Greymist Tidehunter##2208
+			.get Middle of Gelkak's Key##7499|q 2098/2
 		step
 			goto Darkshore,56.7,13.5
 			.talk Gelkak Gyromast##6667
@@ -2216,8 +2218,6 @@ startlevel 20
 		step
 			goto Darkshore,58.3,21.9
 			.collect 6 Mathystra Relic##5273|q 951/1
-		step
-			.' Hearth to Auberdine|goto Darkshore,37,44.10|use Hearthstone##6948|noway|c
 		step
 			goto Darkshore,39.3,44.08
 			.talk Sentinel Selarin##3694
@@ -2241,7 +2241,7 @@ startlevel 20
 		step
 			goto Ashenvale,34.4,48
 			.talk Daelyshia##4267
-			.'Fly to Auberdine, Darkshore|goto Darkshore,36.4,45.6,0.3|noway|c
+			.' Fly to Auberdine, Darkshore|goto Darkshore,36.4,45.6,0.5|noway|q 4733
 		step
 			goto Darkshore,36.6,45.6
 			.talk Gwennyth Bly'Leggonde##10219
@@ -2249,7 +2249,7 @@ startlevel 20
 		step
 			goto Darkshore,36.3,45.6
 			.talk Caylais Moonfeather##3841
-			.' Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+			.' Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|q 741
 		step
 			goto Darnassus,31.2,84.5
 			.talk Chief Archaeologist Greywhisker##2912
@@ -2270,7 +2270,7 @@ startlevel 20
 			.collect Flagongut's Fossil##5234|q 943/2
 		step
 			goto Wetlands,34.46,47.13
-			.from Mottled Raptor##1020+, Mottled Screecher##1021+, Mottled Scytheclaw##1022+, Mottled Razormaw##1023+
+			.from Mottled Raptor##1020, Mottled Screecher##1021, Mottled Scytheclaw##1022, Mottled Razormaw##1023
 			.' Drop chance 10% on Raptor
 			.get Stone of Relu##5233|q 943/1
 		step
