@@ -2,11 +2,1513 @@ local ZygorGuidesViewer=ZygorGuidesViewer
 if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Alliance" then return end
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[68-empty] Borean Tundra",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[68] Borean Tundra",[[
 author danaton
-description This guide contain quest-chain (??) for Borean Tundra location.
+description This guide contain quest-chain (142) for Borean Tundra location.
 startlevel 68
 		step
+			goto Stormwind City,61.2,70.7
+			.talk Auctioneer Jaxon##15659
+			.buy Overcharged Capacitor##39682|q 11650 |future
+			.info This is needed for a future quest.
+		step
+			goto Borean Tundra,57.85,67.60
+			.talk Recruitment Officer Blythe##25307
+			..accept Enlistment Day##11672
+		step
+			goto Borean Tundra,56.67,72.64
+			.talk General Arlos##25250
+			..turnin Enlistment Day##11672
+			..accept A Time for Heroes##11727
+		step
+			goto Borean Tundra,56.36,69.59
+			.talk Sergeant Hammerhill##25816
+			..turnin A Time for Heroes##11727
+			..accept The Siege##11797
+		step
+			goto Borean Tundra,55.00,68.92
+			.talk Medic Hawthorn##25825
+			..accept A Soldier in Need##11789
+		step
+			goto Borean Tundra,53.01,70.10
+			.kill 6 Crypt Crawler##25227|q 11797/1
+		step
+			goto Borean Tundra,56.36,69.59
+			.talk Sergeant Hammerhill##25816
+			..turnin The Siege##11797
+			..accept Death From Above##11889
+		step
+			goto Borean Tundra,57.50,69.28
+			.collect Hawthorn's Anti-Venom##35119|q 11789/1
+			.info Inside the ship.
+		step
+			goto Borean Tundra,57.53,69.12
+			.' Interact with gameobject: Cultist Shrine
+			.info Inside the ship.
+			..accept Cultists Among Us##11920
+		step
+			goto Borean Tundra,57.83,69.20
+			.talk Captain "Lefty" Lugsail##25298
+			..turnin Cultists Among Us##11920
+		step
+			goto Borean Tundra,57.80,69.19
+			.talk Admiral Cantlebree##25299
+			..accept Notify Arlos##11791
+		step
+			goto Borean Tundra,56.67,72.64
+			.talk General Arlos##25250
+			..turnin Notify Arlos##11791
+		step
+			goto Borean Tundra,56.71,72.62
+			.talk Counselor Talbot##25301
+			..accept A Diplomatic Mission##12141
+		step
+			goto Borean Tundra,56.60,72.47
+			.talk Harbinger Vurenn##25285
+			..accept Enemies of the Light##11792
+		step
+			goto Borean Tundra,55.00,68.93
+			.talk Medic Hawthorn##25825
+			..turnin A Soldier in Need##11789
+		step
+			goto Borean Tundra,54.77,70.41
+			.use Reinforced Net##35278
+			.info Use it on Scourged Flamespitters flying above you.
+			.kill 6 Scourged Flamespitter##25582|q 11889/1
+		step
+			goto Borean Tundra,56.36,69.58
+			.talk Sergeant Hammerhill##25816
+			..turnin Death From Above##11889
+			..accept Plug the Sinkholes##11897
+		step
+			goto Borean Tundra,54.19,61.60
+			.from Cultist Necrolyte##25651
+			.get Cultist Communique##35122|q 11792/1
+		step
+			goto Borean Tundra,54.05,63.89
+			.use Incendiary Explosives##35704
+			.info Use it while standing on the edge of the sinkhole.
+			.' Set the Explosives at the Northern Sinkhole|q 11897/2
+		step
+			goto Borean Tundra,50.89,72.11
+			.use Incendiary Explosives##35704
+			.info Use it while standing on the edge of the sinkhole.
+			.' Set the Explosives at the Southern Sinkhole|q 11897/1
+		step
+			goto Borean Tundra,56.36,69.58
+			.talk Sergeant Hammerhill##25816
+			..turnin Plug the Sinkholes##11897
+			..accept Farshire##11928
+		step
+			goto Borean Tundra,56.77,69.51
+			.talk Mark Hanes##26155
+			..accept Word on the Street##11927
+		step
+			goto Borean Tundra,56.61,72.46
+			.talk Harbinger Vurenn##25285
+			..turnin Enemies of the Light##11792
+			..accept Further Investigation##11793
+		step
+			goto Borean Tundra,58.41,67.79
+			.talk Midge##25249
+			..accept Nick of Time##11575
+		step
+			goto Borean Tundra,58.75,68.36
+			.talk Leryssa##25251
+			..turnin Word on the Street##11927
+			..accept Thassarian, My Brother##11599
+		step
+			goto Borean Tundra,58.55,67.31
+			.talk Vindicator Yaala##25826
+			..turnin Further Investigation##11793
+			..accept The Hunt is On##11794
+		step
+			goto Borean Tundra,58.58,67.14
+			.use Oculus of the Exorcist##35125
+			.info Use it on "Salty" John Thorpe.
+			.talk "Salty" John Thorpe##25248
+			.' Tell him "I have reason to believe you're involved in cultist activity."
+			.info Watch the dialogue.
+			.kill "Salty" John Thorpe##25248|n
+			.' Defeat the Cultist in the Kitchen|q 11794/3
+		step
+			goto Borean Tundra,58.84,68.72
+			.talk Airman Skyhopper##25737
+			..accept Distress Call##11707
+		step
+			goto Borean Tundra,59.21,68.39
+			.use Oculus of the Exorcist##35125
+			.info Use it on Tom Hegger.
+			.talk Tom Hegger##25827
+			.' Ask him "What do you know about the Cult of the Damned?"
+			.info Watch the dialogue.
+			.kill Tom Hegger##25827|n
+			.' Defeat the Cultist on the Docks|q 11794/1
+		step
+			goto Borean Tundra,56.72,71.83
+			.use Oculus of the Exorcist##35125
+			.info Use it on Guard Mitchells.
+			.talk Guard Mitchells##25828
+			.' Ask him "How long have you worked for the Cult of the Damned?"
+			.info Watch the dialogue.
+			.kill Guard Mitchells##25828|n
+			.' Defeat the Cultist in the Jail|q 11794/2
+		step
+			goto Borean Tundra,58.55,67.30
+			.talk Vindicator Yaala##25826
+			..turnin The Hunt is On##11794
+		step
+			goto Borean Tundra,58.21,62.82
+			.talk Gerald Green##26083
+			..turnin Farshire##11928
+			..accept Military? What Military?##11901
+		step
+			goto Borean Tundra,56.81,55.56
+			.' Interact with Plagued Grain
+			.info Inside the mine.
+			..turnin Military? What Military?##11901
+			..accept Pernicious Evidence##11902
+		step
+			goto Borean Tundra,56.05,55.42
+			.talk William Allerton##25385
+			..turnin Thassarian, My Brother##11599
+			..accept The Late William Allerton##11600
+		step
+			goto Borean Tundra,58.21,62.82
+			.talk Gerald Green##26083
+			..turnin Pernicious Evidence##11902
+			..accept It's Time for Action##11903
+		step
+			goto Borean Tundra,58.28,62.77
+			.talk Wendy Darren##26085
+			..accept Take No Chances##11913
+		step
+			goto Borean Tundra,58.19,62.98
+			.talk Jeremiah Hawning##26084
+			..accept Reference Material##11908
+		step
+			goto Borean Tundra,55.75,58.32
+			.' Interact with book Fields, Factories and Workshops
+			.collect Fields, Factories and Workshops##35481|q 11908/1
+		step
+			goto Borean Tundra,55.79,60.83
+			.use Wendy's Torch##35491
+			.info Use it next to Farshire Grain around this area.
+			.info They look like bags with patches on the ground around this area.
+			.' Burn 8 Farshire Grain|q 11913/1
+		step
+			goto Borean Tundra,55.79,60.83
+			.kill 14 Plagued Scavenger##25650|q 11903/1
+		step
+			goto Borean Tundra,58.28,62.77
+			.talk Wendy Darren##26085
+			..turnin Take No Chances##11913
+		step
+			goto Borean Tundra,58.22,62.82
+			.talk Gerald Green##26083
+			..turnin It's Time for Action##11903
+			..accept Fruits of Our Labor##11904
+		step
+			goto Borean Tundra,58.19,62.98
+			.talk Jeremiah Hawning##26084
+			..turnin Reference Material##11908
+			..accept Repurposed Technology##12035
+		step
+			goto Borean Tundra,58.15,60.68
+			.from Harvest Collector##25623
+			.use Jeremiah's Tools##35943
+			.info Use it on their corpses.
+			.' Rewire 5 Harvest Collectors|q 12035/1
+		step
+			goto Borean Tundra,57.95,53.67
+			.from Captain Jacobs##26252
+			.info He walks around this area inside the mine.
+			.collect Cart Release Key##35705|q 11904 |future
+		step
+			goto Borean Tundra,57.19,54.64
+			.' Interact with Cart Release
+			.info Inside the mine.
+			.' Release the Ore Cart|q 11904/1
+		step
+			goto Borean Tundra,58.22,62.82
+			.talk Gerald Green##26083
+			..turnin Fruits of Our Labor##11904
+			..accept One Last Delivery##11962
+		step
+			goto Borean Tundra,58.19,62.98
+			.talk Jeremiah Hawning##26084
+			..turnin Repurposed Technology##12035
+		step
+			goto Borean Tundra,57.32,66.64
+			.talk Hilda Stoneforge##25235
+			..turnin One Last Delivery##11962
+			..accept Weapons for Farshire##11963
+		step
+			goto Borean Tundra,58.75,68.36
+			.talk Leryssa##25251
+			..turnin The Late William Allerton##11600
+			..accept Lost and Found##11601
+		step
+			goto Borean Tundra,58.29,68.05
+			.talk James Deacon##25245
+			..turnin Lost and Found##11601
+			..accept In Wine, Truth##11603
+		step
+			goto Borean Tundra,58.22,62.82
+			.talk Gerald Green##26083
+			..turnin Weapons for Farshire##11963
+			..accept Call to Arms!##11965
+		step
+			goto Borean Tundra,57.32,59.43
+			.' Interact with gameobject: Bell Rope
+			.info It looks like a huge long rope hanging in this stairwell inside the building.
+			.goal Ring the Farshire Bell|q 11965/1
+		step
+			goto Borean Tundra,58.22,62.82
+			.talk Gerald Green##26083
+			..turnin Call to Arms!##11965
+		step
+			goto Borean Tundra,61.90,65.68
+			.collect Kul Tiras Wine##34714|q 11603/1
+			.info Underwater.
+		step
+			goto Borean Tundra,58.53,68.09
+			.talk Old Man Colburn##25302
+			..turnin In Wine, Truth##11603
+			..accept A Deserter##11604
+		step
+			goto Borean Tundra,56.68,71.45
+			.talk Private Brau##25395
+			..turnin A Deserter##11604
+			..accept Cowards and Fools##11932
+		step
+			goto Borean Tundra,47.13,75.48
+			.talk Karuk##25435
+			..turnin A Diplomatic Mission##12141
+			..accept Karuk's Oath##11613
+		step
+			goto Borean Tundra,44.09,77.90
+			.kill Riplash Myrmidon##24576|n
+			.info Kill the cheering npc's nearby as well.
+			.talk Captured Tuskarr Prisoner##25636
+			..accept Cruelty of the Kvaldir##12471
+		step
+			goto Borean Tundra,46.92,78.07
+			.kill 6 Skadir Raider##25522|q 11613/1
+		step
+			goto Borean Tundra,46.92,78.07
+			.kill 5 Skadir Longboatsman##25521|q 11613/2
+		step
+			goto Borean Tundra,47.13,75.48
+			.talk Karuk##25435
+			..turnin Karuk's Oath##11613
+			..turnin Cruelty of the Kvaldir##12471
+			..accept Gamel the Cruel##11619
+		step
+			goto Borean Tundra,46.42,78.23
+			.kill Gamel the Cruel##26449|q 11619/1
+			.info Inside the small cave.
+		step
+			goto Borean Tundra,47.13,75.48
+			.talk Karuk##25435
+			..turnin Gamel the Cruel##11619
+			..accept A Father's Words##11620
+		step
+			goto Borean Tundra,43.61,80.52
+			.talk Veehja##25450
+			..turnin A Father's Words##11620
+			..accept The Trident of Naz'jan##11625
+		step
+			goto Borean Tundra,54.99,88.56
+			.from Ragnar Drakkarlund##26451
+			.info Inside the building.
+			.get Trident of Naz'jan##35774|q 11625/1
+		step
+			goto Borean Tundra,43.60,80.53
+			.talk Veehja##25450
+			..turnin The Trident of Naz'jan##11625
+			..accept The Emissary##11626
+		step
+			goto Borean Tundra,52.16,88.27
+			.use Trident of Naz'jan##35850
+			.info Use it on Leviroth underwater nearby.
+			.info Swim to the bubbling rock underwater at this spot.
+			.info Being next to the bubbling rock will allow you to breathe underwater.
+			.kill Leviroth##26452|q 11626/1
+		step
+			goto Borean Tundra,47.13,75.48
+			.talk Karuk##25435
+			..turnin The Emissary##11626
+		step
+			goto Borean Tundra,57.05,44.32
+			.talk Arch Druid Lathorius##25809
+			..accept A Mission Statement##11864 |instant
+			..accept Ears of Our Enemies##11866
+			..accept Help Those That Cannot Help Themselves##11876
+		step
+			goto Borean Tundra,57.32,44.08
+			.talk Hierophant Cenius##25810
+			..accept Happy as a Clam##11869
+		step
+			goto Borean Tundra,57.24,43.70
+			.talk Killinger the Den Watcher##25812
+			..accept Ned, Lord of Rhinos...##11884
+		step
+			goto Borean Tundra,56.80,44.03
+			.talk Zaza##25811
+			..accept Unfit for Death##11865
+		step
+			goto Borean Tundra,55.18,38.58
+			.use D.E.H.T.A. Trap Smasher##35228
+			.info Use it while standing next to Trapped Mammoth Calves around this area.
+			.info Try to avoid	killing mammoths, you'll get a debuff for 3 minutes that may cause nearby druid guards to attack you.
+			.' Free 8 Mammoth Calves|q 11876/1
+		step
+			goto Borean Tundra,52.30,44.84
+			.from Loot Crazed Diver##25836
+			.info Underwater around this area.
+			.get 15 Nesingwary Lackey Ear##35188|q 11866/1
+		step
+			goto Borean Tundra,52.30,44.84
+			.kill 10 Loot Crazed Diver##25836|q 11869/1
+		step
+			goto Borean Tundra,48.38,40.60
+			.kill "Lunchbox"##25968|q 11884/2
+			.info He looks like a gray rhino that walks around this area.
+		step
+			goto Borean Tundra,48.38,40.60
+			.kill Nedar, Lord of Rhinos##25801|q 11884/1 
+			.info He rides on a gray rhino that walks around this area.
+		step
+			goto Borean Tundra,56.75,48.66
+			.use Pile of Fake Furs##35127
+			.info Use it inside the Caribou Traps on the ground around this area.
+			.info They look like metal spiked traps on the ground around this area.
+			.' Trap 8 Nesingwary Trappers|q 11865/1
+		step
+			goto Borean Tundra,57.05,44.32
+			.talk Arch Druid Lathorius##25809
+			..turnin Ears of Our Enemies##11866
+			..turnin Help Those That Cannot Help Themselves##11876
+			..accept Khu'nok Will Know##11878
+		step
+			goto Borean Tundra,57.33,44.09
+			.talk Hierophant Cenius##25810
+			..turnin Happy as a Clam##11869
+			..accept The Abandoned Reach##11870
+		step
+			goto Borean Tundra,57.14,43.60
+			.talk Killinger the Den Watcher##25812
+			..turnin Ned, Lord of Rhinos...##11884
+		step
+			goto Borean Tundra,56.80,44.04
+			.talk Zaza##25811
+			..turnin Unfit for Death##11865
+			..accept The Culler Cometh##11868
+		step
+			goto Borean Tundra,59.44,30.37
+			.goal Deliver the Orphaned Mammoth Calf to Khu'nok|q 11878/1
+			.info The calf is slow so don't move too fast or you'll lose it.
+		step
+			goto Borean Tundra,59.44,30.37
+			.talk Khu'nok the Behemoth##25862
+			..turnin Khu'nok Will Know##11878
+			..accept Kaw the Mammoth Destroyer##11879
+		step
+			goto Borean Tundra,55.88,31.39
+			.' Interact with NPC: Wooly Mammoth Bull
+			.info Around this area.
+			.' Ride a Wooly Mammoth Bull |invehicle |q 11879
+		step
+			goto Borean Tundra,53.7,23.9
+			.kill Kaw the Mammoth Destroyer##25802|n
+			.info Use the abilities on your action bar.
+			.' Collect Kaw's War Halberd
+			.info It appears after you	kill Kaw the Mammoth Destroyer.
+			.info You will have to stop riding the mammoth to be able to loot it.
+			.info Click the red arrow on your action bar to stop riding the mammoth.
+			.collect Kaw's War Halberd##35234|q 11879/1
+		step
+			goto Borean Tundra,56.98,18.70
+			.talk Fizzcrank Fullthrottle##25590
+			..turnin Distress Call##11707
+			..accept The Mechagnomes##11708
+		step
+			goto Borean Tundra,56.98,18.70
+			.talk Fizzcrank Fullthrottle##25590
+			.' Tell him "Tell me what's going on out here, Fizzcrank."
+			.goal Listen to Fizzcrank's Tale|q 11708/1
+		step
+			goto Borean Tundra,57.44,18.74
+			.talk Jinky Wingnut##25747
+			..turnin The Mechagnomes##11708
+			..accept Re-Cursive##11712
+		step
+			goto Borean Tundra,57.51,18.61
+			.talk Mordle Cogspinner##25702
+			..accept What's the Matter with the Transmatter?##11710
+			..accept King Mrgl-Mrgl##11704
+		step
+			goto Borean Tundra,57.93,18.80
+			.talk Crafty Wobblesprocket##25477
+			..accept Dirty, Stinkin' Snobolds!##11645
+		step
+			goto Borean Tundra,57.05,44.32
+			.talk Arch Druid Lathorius##25809
+			..turnin Kaw the Mammoth Destroyer##11879
+		step
+			goto Borean Tundra,57.26,56.45
+			.kill Karen "I Don't Caribou" the Culler##25803|q 11868/1
+			.info She walks around this small area.
+		step
+			goto Borean Tundra,57.80,55.11
+			.talk Hierophant Liandra##25838
+			..turnin The Abandoned Reach##11870
+			..accept Not On Our Watch##11871
+		step
+			goto Borean Tundra,59.53,58.66
+			.collect 12 Shipment of Animal Parts##35222|q 11871/1
+			.info They look like brown bags and crates on the ground around this area.
+		step
+			goto Borean Tundra,57.80,55.11
+			.talk Hierophant Liandra##25838
+			..turnin Not On Our Watch##11871
+			..accept The Nefarious Clam Master...##11872
+		step
+			goto Borean Tundra,61.19,66.62
+			.kill Clam Master K##25800|q 11872/1
+			.info He walks underwater around this area.
+		step
+			goto Borean Tundra,57.33,44.08
+			.talk Hierophant Cenius##25810
+			..turnin The Nefarious Clam Master...##11872
+		step
+			goto Borean Tundra,56.80,44.04
+			.talk Zaza##25811
+			..turnin The Culler Cometh##11868
+		step
+			goto Borean Tundra,57.05,44.32
+			.talk Archdruid Lathorius##25809
+			..accept The Assassination of Harold Lane##11892
+		step
+			goto Borean Tundra,49.91,41.54
+			.kill Harold Lane##25804|q 11892/1
+		step
+			goto Borean Tundra,57.05,44.32
+			.talk Archdruid Lathorius##25809
+			..turnin The Assassination of Harold Lane##11892
+		step
+			goto Borean Tundra,54.29,36.10
+			.talk Etaruk##25292
+			..accept Reclaiming the Quarry##11612
+		step
+			goto Borean Tundra,54.60,36.00
+			.' Interact with gameobject: Elder Atkanok
+			..accept The Honored Ancestors##11605
+		step
+			goto Borean Tundra,52.82,34.03
+			.' Interact with gameobject: "Elder Sagani"
+			.' Identify the Elder Sagani|q 11605/2
+		step
+			goto Borean Tundra,52.31,31.15
+			.' Interact with gameobject: "Elder Takret"
+			.' Identify the Elder Takret|q 11605/3
+		step
+			goto Borean Tundra,50.87,32.39
+			.' Interact with gameobject: "Elder Kesuk"
+			.' Identify the Elder Kesuk|q 11605/1
+		step
+			goto Borean Tundra,52.16,33.57
+			.kill 12 Beryl Treasure Hunter##25353|q 11612/1
+		step
+			goto Borean Tundra,54.62,35.74
+			.' Interact with gameobject: Elder Atkanok
+			..turnin The Honored Ancestors##11605
+			..accept The Lost Spirits##11607
+		step
+			goto Borean Tundra,54.29,36.10
+			.talk Etaruk##25292
+			..turnin Reclaiming the Quarry##11612
+			..accept Hampering Their Escape##11617
+		step
+			goto Borean Tundra,52.12,33.18
+			.from Beryl Reclaimer##25449
+			.collect 3 Gnomish Grenade##34772|q 11617 |future
+		step
+			goto Borean Tundra,52.28,31.93
+			.use Gnomish Grenade##34772
+			.info Use it while standing up on the floating platform.
+			.goal Destroy the North Platform|q 11617/2
+		step
+			goto Borean Tundra,51.00,33.99
+			.use Gnomish Grenade##34772
+			.info Use it while standing up on the floating platform.
+			.goal Destroy the West Platform|q 11617/3
+		step
+			goto Borean Tundra,52.71,34.69
+			.use Gnomish Grenade##34772
+			.info Use it while standing up on the floating platform.
+			.goal Destroy the East Platform|q 11617/1
+		step
+			goto Borean Tundra,52.12,33.18
+			.from Beryl Hound##25355
+			.collect Core of Malice##34711|n
+			.use Core of Malice##34711
+			.info Use them on Kaskala Craftsmen around this area.
+			.info They look like walrus man spirits around this area.
+			.' Free 3 Kaskala Craftsman Spirits|q 11607/1
+		step
+			goto Borean Tundra,52.12,33.18
+			.from Beryl Hound##25355
+			.collect Core of Malice##34711|n
+			.use Core of Malice##34711
+			.info Use them on Kaskala Shamans around this area.
+			.info They look like walrus man spirits around this area.
+			.' Free 3 Kaskala Shaman Spirits|q 11607/2
+		step
+			goto Borean Tundra,54.62,35.74
+			.' Interact with gameobject: Elder Atkanok
+			..turnin The Lost Spirits##11607
+			..accept Picking Up the Pieces##11609
+		step
+			goto Borean Tundra,54.29,36.10
+			.talk Etaruk##25292
+			..turnin Hampering Their Escape##11617
+			..accept A Visit to the Curator##11623
+		step
+			goto Borean Tundra,50.09,32.56
+			.kill Curator Insivius##25448|q 11623/1
+			.info He walks around this small area.
+		step
+			goto Borean Tundra,51.95,32.94
+			.collect 6 Tuskarr Ritual Object##34713|q 11609/1
+			.info They look like stone fish and incense smoke bowls on the ground around this area.
+		step
+			goto Borean Tundra,54.62,35.74
+			.' Interact with gameobject: Elder Atkanok
+			..turnin Picking Up the Pieces##11609
+			..accept Leading the Ancestors Home##11610
+		step
+			goto Borean Tundra,54.29,36.10
+			.talk Etaruk##25292
+			..turnin A Visit to the Curator##11623
+		step
+			goto Borean Tundra,52.82,34.04
+			.use Tuskarr Ritual Object##34715
+			.info Use it while standing next to the Elder Sagani.
+			.' Complete Elder Sagani's Ceremony|q 11610/2
+		step
+			goto Borean Tundra,52.31,31.15
+			.use Tuskarr Ritual Object##34715
+			.info Use it while standing next to the Elder Takret.
+			.' Complete Elder Takret's Ceremony|q 11610/3
+		step
+			goto Borean Tundra,50.87,32.39
+			.use Tuskarr Ritual Object##34715
+			.info Use it while standing next to the Elder Kesuk.
+			.' Complete Elder Kesuk's Ceremony|q 11610/1
+		step
+			goto Borean Tundra,54.62,35.74
+			.' Interact with gameobject: Elder Atkanok
+			..turnin Leading the Ancestors Home##11610
+		step
+			goto Borean Tundra,45.26,33.35
+			.talk Librarian Donathan##25262
+			..turnin Nick of Time##11575
+			..accept Prison Break##11587
+		step
+			goto Borean Tundra,44.98,33.38
+			.talk Librarian Garren##25291
+			..accept Monitoring the Rift: Cleftcliff Anomaly##11576
+		step
+			goto Borean Tundra,41.99,37.65
+			.from Beryl Mage Hunter##25585
+			.collect Beryl Prison Key##34688|q 11587 |future
+		step
+			goto Borean Tundra,40.44,39.16
+			.' Interact with gameobject: Arcane Prison
+			.info Not all of the Arcane Prisons will complete the quest goal.
+			.info It seems random.
+			.' Rescue the Arcane Prisoners|q 11587/1
+			.' You can find more Arcane Prisons (1)|at 41.79,42.54
+			.' You can find more Arcane Prisons (2)|at 42.59,36.76
+		step
+			goto Borean Tundra,34.36,42.06
+			.use Arcanometer##34669
+			.' Take the Cleftcliff Anomaly Reading|q 11576/1
+		step
+			goto Borean Tundra,44.98,33.38
+			.talk Librarian Garren##25291
+			..turnin Monitoring the Rift: Cleftcliff Anomaly##11576
+			..accept Monitoring the Rift: Sundered Chasm##11582
+		step
+			goto Borean Tundra,45.26,33.35
+			.talk Librarian Donathan##25262
+			..turnin Prison Break##11587
+			..accept Abduction##11590
+		step
+			goto Borean Tundra,43.98,28.49
+			.use Arcanometer##34669
+			.info Swim down to the pink chasm underwater.
+			.' Take the Sundered Chasm Reading|q 11582/1
+		step
+			goto Borean Tundra,44.98,33.38
+			.talk Librarian Garren##25291
+			..turnin Monitoring the Rift: Sundered Chasm##11582
+			..accept Monitoring the Rift: Winterfin Cavern##12728
+		step
+			goto Borean Tundra,40.11,19.77
+			.use Arcanometer##34669
+			.' Take the Winterfin Cavern Reading|q 12728/1
+		step
+			goto Borean Tundra,44.98,33.38
+			.talk Librarian Garren##25291
+			..turnin Monitoring the Rift: Winterfin Cavern##12728
+		step
+			goto Borean Tundra,42.66,38.06
+			.kill Beryl Sorcerer##25316|n
+			.info Don't kill them, just weaken them.
+			.use Arcane Binder##34691
+			.info Use it on the Beryl Sorcerer when it is weakened.
+			.' Capture a Beryl Sorcerer|q 11590/1
+		step
+			goto Borean Tundra,45.26,33.35
+			.talk Librarian Donathan##25262
+			..turnin Abduction##11590
+			..accept The Borean Inquisition##11646
+		step
+			goto Borean Tundra,46.33,32.85
+			.talk Librarian Normantis##25480
+			..turnin The Borean Inquisition##11646
+			..accept The Art of Persuasion##11648
+		step
+			goto Borean Tundra,46.32,32.92
+			.use Neural Needler##34811
+			.info Use it on the Imprisoned Beryl Sorcerer repeatedly.
+			.info Upstairs inside the tower.
+			.' Interrogate the Prisoner|q 11648/1
+		step
+			goto Borean Tundra,46.33,32.85
+			.talk Librarian Normantis##25480
+			..turnin The Art of Persuasion##11648
+			..accept Sharing Intelligence##11663
+		step
+			goto Borean Tundra,45.26,33.35
+			.talk Librarian Donathan##25262
+			..turnin Sharing Intelligence##11663
+			..accept A Race Against Time##11671
+		step
+			goto Borean Tundra,41.80,39.16
+			.use Beryl Shield Detonator##34897
+			.info If it won't let you, wait until Inquisitor Salrand appears again.
+			.kill Inquisitor Salrand##25584|n
+			.' Interact with gameobject: Salrand's Lockbox
+			.info It appears after you kill Inquisitor Salrand.
+			.collect Salrand's Broken Key##34909|q 11671/1
+		step
+			goto Borean Tundra,45.26,33.35
+			.talk Librarian Donathan##25262
+			..turnin A Race Against Time##11671
+			..accept Reforging the Key##11679
+		step
+			goto Borean Tundra,45.32,34.52
+			.talk Surristrasz##24795
+			..turnin Reforging the Key##11679
+			..accept Taking Wing##11680
+		step
+			goto Borean Tundra,46.38,37.31
+			.talk Warmage Anzim##25356
+			..turnin Taking Wing##11680
+			..accept Rescuing Evanor##11681
+		step
+			goto Borean Tundra,46.37,32.40
+			.talk Archmage Evanor##25785
+			..turnin Rescuing Evanor##11681
+			..accept Dragonspeak##11682
+		step
+			goto Borean Tundra,45.32,34.52
+			.talk Surristrasz##24795
+			..turnin Dragonspeak##11682  
+			..accept Traversing the Rift##11733
+		step
+			goto Borean Tundra,32.95,34.40
+			.talk Archmage Berinand##25314
+			..turnin Traversing the Rift##11733
+			..accept Reading the Meters##11900
+			..accept Secrets of the Ancients##11910
+		step
+			goto Borean Tundra,33.31,34.53
+			.talk Raelorasz##26117
+			..accept Basic Training##11918
+		step
+			goto Borean Tundra,33.49,34.38
+			.talk Librarian Serrah##26110
+			..accept Nuts for Berries##11912
+		step
+			goto Borean Tundra,34.29,28.61
+			.kill Coldarra Spellbinder##25719|n
+			.collect Scintillating Fragment##35648|q 11941 |future
+			.use Scintillating Fragment##35648
+			..accept Puzzling...##11941
+		step
+			goto Borean Tundra,28.32,28.48
+			.' Interact with gameobject: Coldarra Geological Monitor
+			.' Take the Nexus Geological Reading|q 11900/1
+		step
+			goto Borean Tundra,31.71,20.57
+			.' Interact with gameobject: Coldarra Geological Monitor
+			.info Inside the building.
+			.' Take the Northern Coldarra Reading|q 11900/3
+		step
+			goto Borean Tundra,22.62,23.45
+			.' Interact with gameobject: Coldarra Geological Monitor
+			.info Inside the building.
+			.' Take the Western Coldarra Reading|q 11900/4
+		step
+			goto Borean Tundra,28.27,35.02
+			.' Interact with gameobject: Coldarra Geological Monitor
+			.info Inside the building.
+			.' Take the Southern Coldarra Reading|q 11900/2
+		step
+			goto Borean Tundra,31.49,30.09
+			.kill 10 Coldarra Spellweaver##25722|q 11918/1
+		step
+			goto Borean Tundra,31.49,30.09
+			.from Glacial Ancient##25709
+			.get 3 Glacial Splinter##35483|q 11910/1
+		step
+			goto Borean Tundra,31.49,30.09
+			.from Magic-Bound Ancient##25707
+			.get 3 Magic-Bound Splinter##35484|q 11910/2
+		step
+			goto Borean Tundra,26.05,19.57
+			.collect 10 Frostberry##35492|q 11912/1
+			.info They look like bushes on the ground around this area.
+		step
+			goto Borean Tundra,32.95,34.40
+			.talk Archmage Berinand##25314
+			..turnin Reading the Meters##11900
+			..turnin Secrets of the Ancients##11910
+		step
+			goto Borean Tundra,33.31,34.53
+			.talk Raelorasz##26117
+			..turnin Basic Training##11918
+			..turnin Puzzling...##11941
+			..accept Hatching a Plan##11936
+			..accept The Cell##11943
+		step
+			goto Borean Tundra,33.49,34.38
+			.talk Librarian Serrah##26110
+			..turnin Nuts for Berries##11912
+			..accept Keep the Secret Safe##11914
+		step
+			goto Borean Tundra,24.99,34.60
+			.from Coldarra Wyrmkin##25728
+			.collect 5 Frozen Axe##35586|q 11936 |future
+		step
+			goto Borean Tundra,24.13,29.59
+			.from Warbringer Goredrak##25712
+			.get Energy Core##35669|q 11943/1
+		step
+			goto Borean Tundra,27.32,20.40
+			.from General Cerulean##25716
+			.get Prison Casing##35668|q 11943/2
+		step
+			goto Borean Tundra,27.95,24.20
+			.' Destroy 5 Dragon Eggs|q 11936/1
+			.info They look like big dark colored eggs with white crystals on them on the ground around this area.
+		step
+			goto Borean Tundra,27.95,24.20
+			.from Arcane Serpent##25721
+			.get 5 Nexus Mana Essence##35493|q 11914/1
+		step
+			goto Borean Tundra,33.31,34.53
+			.talk Raelorasz##26117
+			..turnin Hatching a Plan##11936
+			..accept Drake Hunt##11919
+			..turnin The Cell##11943
+		step
+			goto Borean Tundra,33.49,34.38
+			.talk Librarian Serrah##26110
+			..turnin Keep the Secret Safe##11914
+		step
+			goto Borean Tundra,24.72,27.95
+			.use Raelorasz's Spear##35506
+			.info Use it on a Nexus Drake Hatchling around this area.
+			.info They are flying above you in the sky around this area.
+			.info Do not kill it, let it hit you until it becomes friendly.
+			.' Subdue a Drake Hatchling |havebuff 134155 |q 11919
+		step
+			goto Borean Tundra,33.31,34.53
+			.' Capture the Nexus Drake|q 11919/1
+		step
+			goto Borean Tundra,33.31,34.53
+			.talk Raelorasz##26117
+			..turnin Drake Hunt##11919
+			..accept Cracking the Code##11931
+		step
+			.use Augmented Arcane Prison##35671
+			.info Next to you:
+			.talk Keristrasza##26206
+			..accept Keristrasza##11946
+		step
+			.use Augmented Arcane Prison##35671
+			.info Next to you:
+			.talk Keristrasza##26206
+			..turnin Keristrasza##11946
+			..accept Bait and Switch##11951
+		step
+			goto Borean Tundra,33.31,34.53
+			.talk Raelorasz##26117
+			.' Tell him "I seem to have lost the Augmented Arcane Prison. Did I leave it here with you?"
+			.collect Augmented Arcane Prison##35671|q 11951 |future
+		step
+			goto Borean Tundra,32.70,27.83
+			.from Inquisitor Caleras##25720
+			.get Azure Codex##35628|q 11931/2
+		step
+			goto Borean Tundra,32.63,28.60
+			.from Coldarra Spellbinder##25719
+			.get 3 Shimmering Rune##35629|q 11931/1
+		step
+			goto Borean Tundra,28.52,30.93
+			.collect 10 Crystallized Mana Shard##35685|q 11951/1
+			.info They look like clusters of pink crystals on the ground around this area.
+			.info You can find more around the perimeter of the big tower shooting energy into the sky.
+		step
+			.use Augmented Arcane Prison##35671
+			.info Next to you:
+			.talk Keristrasza##26237
+			..turnin Bait and Switch##11951
+			..accept Saragosa's End##11957
+		step
+			.use Augmented Arcane Prison##35671
+			.info Next to you:
+			.talk Keristrasza##26237
+			.' Tell her "I am prepared to face Saragosa!"
+			.' Teleport to Saragosa|goto 21.19,22.47,0.5 |noway |q 11957
+		step
+			goto Borean Tundra,22.07,22.66
+			.use Arcane Power Focus##35690
+			.info Watch the dialogue.
+			.from Saragosa##26232
+			.get Saragosa's Corpse##35709|q 11957/1
+		step
+			.use Augmented Arcane Prison##35671
+			.info Next to you:
+			.talk Keristrasza##26206
+			..turnin Saragosa's End##11957
+			..accept Mustering the Reds##11967
+		step
+			.use Augmented Arcane Prison##35671
+			.info Next to you:
+			.talk Keristrasza##26206
+			.' Tell her "Keristrasa, I am finished here. Please return me to the Transitus Shield."
+			.' Return to Transitus Shield|goto 33.28,34.44,0.5 |noway |q 11967
+		step
+			goto Borean Tundra,33.31,34.53
+			.talk Raelorasz##26117
+			..turnin Cracking the Code##11931
+			..turnin Mustering the Reds##11967
+			..accept Springing the Trap##11969
+		step
+			goto Borean Tundra,25.40,21.77
+			.use Raelorasz' Spark##44950
+			.info Use it next to the Signal Fire.
+			.info Watch the dialogue.
+			.' Lure Malygos|q 11969/1
+		step
+			goto Borean Tundra,34.19,25.55
+			.info Watch the dialogue
+			.' Fly with Keristrasa|q 11969
+		step
+			goto Borean Tundra,33.31,34.53
+			.talk Raelorasz##26117
+			..turnin Springing the Trap##11969
+		step
+			goto Borean Tundra,56.74,12.61
+			.collect 10 Crafty's Stuff##34787|q 11645/1
+			.info They look like wooden crates on the ground around this area.
+		step
+			goto Borean Tundra,55.57,12.57
+			.talk Bonker Togglevolt##25589
+			..accept Get Me Outa Here!##11673
+		step
+			goto Borean Tundra,53.8,13.87
+			.goal Escort Bonker Togglevolt to Safety|q 11673/1
+			.info Follow Bonker Togglevolt and protect him.
+		step
+			goto Borean Tundra,56.98,18.71
+			.talk Fizzcrank Fullthrottle##25590
+			..turnin Get Me Outa Here!##11673
+		step
+			goto Borean Tundra,57.72,18.97
+			.talk Crafty Wobblesprocket##25477
+			..turnin Dirty, Stinkin' Snobolds!##11645
+			..accept Just a Few More Things...##11650
+		step
+			goto Borean Tundra,64.40,23.14
+			.collect Crafty's Tools##34802|q 11650/1
+		step
+			goto Borean Tundra,63.51,23.81
+			.kill Fizzcrank Mechagnome##25814|n
+			.use Re-Cursive Transmatter Injection##34973
+			.info Use it on their corpses.
+			.' Curse & Port 6 Fizzcrank Gnomes|q 11712/1
+		step
+			goto Borean Tundra,63.51,23.81
+			.from Scavenge-bot 004-A8##25752, Sentry-bot 57-K##25753, Defendo-tank 66D##25758, Scavenge-bot 005-B6##25792, 55-D Collect-a-tron##25793
+			.collect The Ultrasonic Screwdriver##34984|q 11729 |future
+			.use The Ultrasonic Screwdriver##34984
+			..accept The Ultrasonic Screwdriver##11729
+		step
+			goto Borean Tundra,63.51,23.81
+			.collect 15 Fizzcrank Spare Parts##34972|q 11710/1
+			.info They look like grey metal objects on the ground around this area.
+		step
+			goto Borean Tundra,57.63,18.99
+			.talk Crafty Wobblesprocket##25477
+			..turnin The Ultrasonic Screwdriver##11729
+			..accept Master and Servant##11730
+		step
+			goto Borean Tundra,57.44,18.74
+			.talk Jinky Wingnut##25747
+			..turnin Re-Cursive##11712
+			..accept Lefty Loosey, Righty Tighty##11788
+		step
+			goto Borean Tundra,57.52,18.61
+			.talk Mordle Cogspinner##25702
+			..turnin What's the Matter with the Transmatter?##11710
+			..accept Check in With Bixie##11692
+		step
+			goto Borean Tundra,56.98,18.71
+			.talk Fizzcrank Fullthrottle##25590
+			..accept Finding Pilot Tailspin##11725
+		step
+			goto Borean Tundra,60.23,20.39
+			.' Interact with gameobject: West Point Station Valve
+			.kill Twonky##25830|q 11788/1
+		step
+			goto Borean Tundra,65.41,17.51
+			.' Interact with gameobject: North Point Station Valve
+			.kill ED-210##25831|q 11788/2
+		step
+			goto Borean Tundra,63.68,22.50
+			.' Interact with gameobject: Mid Point Station Valve
+			.kill Max Blasto##25832|q 11788/3
+		step
+			goto Borean Tundra,65.25,28.78
+			.' Interact with gameobject: South Point Station Valve
+			.kill The Grinder##25833|q 11788/4
+		step
+			goto Borean Tundra,63.29,23.87
+			.from Scavenge-bot 004-A8##25752, Sentry-bot 57-K##25753, Defendo-tank 66D##25758, Scavenge-bot 005-B6##25792, 55-D Collect-a-tron##25793
+			.use The Ultrasonic Screwdriver##35116
+			.info Use it on their corpses.
+			.' Reprogram 15 Robots|q 11730/1
+		step
+			goto Borean Tundra,61.68,35.78
+			.talk Iggy "Tailspin" Cogtoggle##25807
+			..turnin Finding Pilot Tailspin##11725
+			..accept A Little Bit of Spice##11726
+		step
+			goto Borean Tundra,60.82,50.13
+			.from Gorloc Waddler##25685, Gorloc Gibberer##25686, Gorloc Steam Belcher##25687
+			.get 4 Gorloc Spice Pouch##34983|q 11726/1
+		step
+			goto Borean Tundra,61.68,35.78
+			.talk Iggy "Tailspin" Cogtoggle##25807
+			..turnin A Little Bit of Spice##11726
+			..accept Lupus Pupus##11728
+		step
+			goto Borean Tundra,61.31,32.56
+			.use Wolf Bait##35121
+			.info Use it on Oil-stained Wolves around this area.
+			.collect 8 Microfilm##35123|q 11728/1
+			.info They appear on the ground after the wolves eat the bait.
+		step
+			goto Borean Tundra,61.68,35.78
+			.talk Iggy "Tailspin" Cogtoggle##25807
+			..turnin Lupus Pupus##11728
+			..accept Emergency Protocol: Section 8.2, Paragraph C##11795
+		step
+			goto Borean Tundra,61.35,34.08
+			.' Interact with Fizzcrank Recon Pilot
+			.info They look like dead gnomes on the ground around this area.
+			.' Choose "Search for the pilot's insignia."
+			.collect 6 Fizzcrank Pilot's Insignia##35126|q 11795/1
+		step
+			goto Borean Tundra,61.68,35.78
+			.talk Iggy "Tailspin" Cogtoggle##25807
+			..turnin Emergency Protocol: Section 8.2, Paragraph C##11795
+			..accept Emergency Protocol: Section 8.2, Paragraph D##11796
+		step
+			goto Borean Tundra,59.62,39.10
+			.use Emergency Torch##35224
+			.' Scuttle a Southern Wreck|q 11796/2
+		step
+			goto Borean Tundra,63.32,37.02
+			.use Emergency Torch##35224
+			.' Scuttle the Eastern Wreck|q 11796/1
+		step
+			goto Borean Tundra,60.90,33.62
+			.use Emergency Torch##35224
+			.' Scuttle a Northwestern Wreck|q 11796/3
+		step
+			goto Borean Tundra,61.68,35.78
+			.talk Iggy "Tailspin" Cogtoggle##25807
+			..turnin Emergency Protocol: Section 8.2, Paragraph D##11796
+			..accept Give Fizzcrank the News##11873
+		step
+			goto Borean Tundra,63.80,46.12
+			.talk Ataika##26169
+			..turnin Cowards and Fools##11932
+			..accept The Son of Karkut##12086
+			..accept Not Without a Fight!##11949
+		step
+			goto Borean Tundra,67.27,53.03
+			.kill 12 Kvaldir Raider##25760|q 11949/1
+		step
+			goto Borean Tundra,63.80,46.12
+			.talk Ataika##26169
+			..turnin Not Without a Fight!##11949
+			..accept Muahit's Wisdom##11950
+		step
+			goto Borean Tundra,67.20,54.85
+			.talk Elder Muahit##26218
+			..turnin Muahit's Wisdom##11950
+			..accept Spirits Watch Over Us##11961
+		step
+			goto Borean Tundra,67.64,50.41
+			.talk Iruk##26219
+			.info Underwater.
+			.' Choose <Search corpse for Issliruk's Totem.>
+			.collect Issliruk's Totem##35701|q 11961/1
+		step
+			goto Borean Tundra,67.20,54.85
+			.talk Elder Muahit##26218
+			..turnin Spirits Watch Over Us##11961
+			..accept The Tides Turn##11968
+		step
+			goto Borean Tundra,67.60,56.70
+			.kill Heigarr the Horrible##26266|q 11968/1
+			.info He fights around this area.
+		step
+			goto Borean Tundra,67.20,54.85
+			.talk Elder Muahit##26218
+			..turnin The Tides Turn##11968
+		step
+			goto Borean Tundra,67.27,54.85
+			.talk Hotawa##28382
+			..accept Travel to Moa'ki Harbor##12117
+		step
+			goto Borean Tundra,82.01,46.42
+			.talk Corporal Venn##26187
+			..turnin The Son of Karkut##12086
+			..accept Surrounded!##11944
+		step
+			goto Borean Tundra,82.16,46.40
+			.talk Private Casey##26186
+			..accept The Lost Courier##12157
+		step
+			goto Borean Tundra,81.54,42.50
+			.from Rocknar##25514
+			.get A Handful of Rocknar's Grit##34804|q 11650/3
+		step
+			goto Borean Tundra,82.38,43.73
+			.kill 7 Ziggurat Defender##26202|q 11944/1
+		step
+			goto Borean Tundra,82.01,46.42
+			.talk Corporal Venn##26187
+			..turnin Surrounded!##11944
+			..accept Thassarian, the Death Knight##12088
+		step
+			goto Borean Tundra,84.79,41.67
+			.talk Thassarian##26170
+			..turnin Thassarian, the Death Knight##12088
+			..accept Finding the Phylactery##11956
+		step
+			goto Borean Tundra,85.40,33.34
+			.' Interact with gameobject Frozen Phylactery
+			.info Underwater.
+			.from Phylactery Guardian##26225
+			.get Tanathal's Phylactery##35687|q 11956/1
+		step
+			goto Borean Tundra,84.79,41.67
+			.talk Thassarian##26170
+			..turnin Finding the Phylactery##11956
+			..accept Buying Some Time##11938
+		step
+			goto Borean Tundra,85.99,25.13
+			.' Kill En'kilah enemies around this area
+			.' Slay 20 En'kilah Casualties|q 11938/1
+		step
+			goto Borean Tundra,84.79,41.67
+			.talk Thassarian##26170
+			..turnin Buying Some Time##11938
+			..accept Words of Power##11942
+		step
+			goto Borean Tundra,89.43,28.89
+			.from High Priest Talet-Kha##26073
+			.info You must kill the 2 cocoons next to her before you can attack her.
+			.get High Priest Talet-Kha's Scroll##35354|q 11942/3
+		step
+			goto Borean Tundra,88.06,20.94
+			.from High Priest Andorath##25392
+			.info Enter the 2-nd floor building.
+			.get High Priest Andorath's Scroll##35355|q 11942/1
+		step
+			goto Borean Tundra,83.88,20.46
+			.from High Priest Naferset##26076
+			.info Inside the building.
+			.info You must kill the 3 enemies around him before you can attack him.
+			.get High Priest Naferset's Scroll##35353|q 11942/2
+		step
+			goto Borean Tundra,84.79,41.67
+			.talk Thassarian##26170
+			..turnin Words of Power##11942
+			..accept Last Rites##12019
+		step
+			goto Borean Tundra,86.48,28.54|n
+			.' Stand in the glowing circle to teleport|goto 86.48,28.54,0.1|q 12019
+		step
+			goto Borean Tundra,86.91,30.15|n
+			.' Teleport on the second floor|goto 86.91,30.15,0.1|q 12019
+		step
+			goto Borean Tundra,86.64,31.37
+			.talk Thassarian##26170
+			.' Tell him "Let's do this, Thassarian. It's now or never."
+			.info Watch the dialogue.
+			.kill Prince Valanar##28189|n
+			.' Witness the Last Rites|q 12019/1
+		step
+			goto Borean Tundra,86.79,30.58
+			.talk Thassarian##26170
+			..turnin Last Rites##12019
+		step
+			goto Borean Tundra,56.98,18.71
+			.talk Fizzcrank Fullthrottle##25590
+			..turnin Give Fizzcrank the News##11873
+		step
+			goto Borean Tundra,57.06,20.11
+			.talk Abner Fizzletorque##25780
+			..accept Scouting the Sinkholes##11713
+		step
+			goto Borean Tundra,57.44,18.74
+			.talk Jinky Wingnut##25747
+			..turnin Lefty Loosey, Righty Tighty##11788
+			..accept The Gearmaster##11798
+		step
+			goto Borean Tundra,57.62,19.05
+			.talk Crafty Wobblesprocket##25477
+			..turnin Just a Few More Things...##11650
+			..turnin Master and Servant##11730
+			..accept Hah... You're Not So Big Now!##11653
+		step
+			goto Borean Tundra,56.53,12.50
+			.use Crafty's Ultra-Advanced Proto-Typical Shortening Blaster##34812
+			.info Use it on Magmoth Crushers around this area.
+			.kill Magmoth Crusher##25434|n
+			.info Don't kill them until they have the buff.
+			.info They look like big blue four-legged creatures that walk around this area.
+			.' Test Crafty's Blaster 5 Times|q 11653/1
+		step
+			goto Borean Tundra,57.62,19.02
+			.talk Crafty Wobblesprocket##25477
+			..turnin Hah... You're Not So Big Now!##11653
+			..accept Plan B##11658
+		step
+			goto Borean Tundra,49.59,26.68
+			.collect Warsong Banner##34690|q 11658/2
+		step
+			goto Borean Tundra,49.78,24.17
+			.' Interact with NPC: Dead Caravan Worker
+			.info They look like corpses with green smoke coming out of them on the ground around this area.
+			.' Choose "Take their clothing."
+			.collect 10 Warsong Outfit##34842|q 11658/1
+		step
+			goto Borean Tundra,43.50,13.97
+			.talk King Mrgl-Mrgl##25197
+			..turnin King Mrgl-Mrgl##11704
+			..accept Learning to Communicate##11571
+		step
+			goto Borean Tundra,42.78,17.07
+			.kill Scalder##25226|n
+			.info He looks like a blue water elemental that swims along this purple trench underwater around this area.
+			.use The King's Empty Conch##34598
+			.info Use it on Scalder's corpse.
+			.collect The King's Filled Conch##34623|q 11571/1
+		step
+			goto Borean Tundra,40.61,16.85
+			.from Winterfin Shorestriker##25215, Winterfin Oracle##25216, Winterfin Warrior##25217
+			.info They look like small grey clams on the ground around this area.
+			.collect 5 Winterfin Clam##34597|q 11559 |future
+		step
+			goto Borean Tundra,43.50,13.97
+			.talk King Mrgl-Mrgl##25197
+			..turnin Learning to Communicate##11571
+			..accept Winterfin Commerce##11559
+		step
+			goto Borean Tundra,43.04,13.81
+			.talk Ahlurglgr##25206
+			..turnin Winterfin Commerce##11559
+		step
+			goto Borean Tundra,43.50,13.97
+			.talk King Mrgl-Mrgl##25197
+			..accept Oh Noes, the Tadpoles!##11560
+		step
+			goto Borean Tundra,42.83,13.65
+			.talk Brglmurgl##25199
+			..accept Them!##11561
+		step
+			goto Borean Tundra,40.61,16.85
+			.' Interact with gameobject: Cage
+			.info They look like yellow wooden cages on the ground around this area.
+			.' Rescue 20 Winterfin Tadpoles|q 11560/1
+		step
+			goto Borean Tundra,40.61,16.85
+			.from Winterfin Shorestriker##25215, Winterfin Oracle##25216, Winterfin Warrior##25217
+			.' Slay 15 Winterfin Murlocs|q 11561/1
+		step
+			goto Borean Tundra,42.83,13.65
+			.talk Brglmurgl##25199
+			..turnin Them!##11561
+		step
+			goto Borean Tundra,43.50,13.97
+			.talk King Mrgl-Mrgl##25197
+			..turnin Oh Noes, the Tadpoles!##11560
+			..accept I'm Being Blackmailed By My Cleaner##11562
+		step
+			goto Borean Tundra,42.00,12.77
+			.talk Mrmrglmr##25205
+			..turnin I'm Being Blackmailed By My Cleaner##11562
+			..accept Grmmurggll Mrllggrl Glrggl!!!##11563
+		step
+			goto Borean Tundra,36.47,8.23
+			.from Glrggl##25203
+			.info It looks like a larger orca that swims on the surface of the water around this area.
+			.get Glrggl's Head##34617|q 11563/1
+		step
+			goto Borean Tundra,42.00,12.77
+			.talk Mrmrglmr##25205
+			..turnin Grmmurggll Mrllggrl Glrggl!!!##11563
+			..accept The Spare Suit##11565
+		step
+			goto Borean Tundra,42.03,13.15
+			.talk Cleaver Bmurglbrm##25211
+			..accept Succulent Orca Stew##11564
+		step
+			goto Borean Tundra,39.92,11.81
+			.from Glimmer Bay Orca##25204
+			.info Underwater around this area.
+			.get 7 Succulent Orca Blubber##34618|q 11564/1
+		step
+			goto Borean Tundra,42.03,13.15
+			.talk Cleaver Bmurglbrm##25211
+			..turnin Succulent Orca Stew##11564
+		step
+			goto Borean Tundra,43.50,13.97
+			.talk King Mrgl-Mrgl##25197
+			..turnin The Spare Suit##11565
+			..accept Surrender... Not!##11566
+		step
+			goto Borean Tundra,40.33,19.21
+			.use King Mrgl-Mrgl's Spare Suit##34620
+			.' Wear King Mrgl-Mrgl's Spare Suit |havebuff INV_Misc_Head_Murloc_01|q 11566
+		step
+			goto Borean Tundra,37.84,23.19
+			.talk Glrglrglr##28375
+			..accept Keymaster Urmgrgl##11569
+		step
+			goto Borean Tundra,39.07,22.69
+			.' Remove King Mrgl-Mrgl's Spare Suit |nobuff INV_Misc_Head_Murloc_01|q 11566
+			.info Right-click the "King Mrgl-Mrgl's Spare Suit" buff near your minimap.
+			.info Be careful, enemies will attack you.
+		step
+			goto Borean Tundra,39.07,22.69
+			.from Keymaster Urmgrgl##25210
+			.info He walks around this area inside the cave.
+			.get Urmgrgl's Key##34600|q 11569/1
+		step
+			.use King Mrgl-Mrgl's Spare Suit##34620
+			.' Wear King Mrgl-Mrgl's Spare Suit |havebuff INV_Misc_Head_Murloc_01|q 11566
+		step
+			goto Borean Tundra,37.55,27.51
+			.from Claximus##25209
+			.info Inside the cave.
+			.get Claw of Claximus##34621|q 11566/1
+		step
+			.use King Mrgl-Mrgl's Spare Suit##34620
+			.' Wear King Mrgl-Mrgl's Spare Suit |havebuff INV_Misc_Head_Murloc_01|q 11566
+		step
+			goto Borean Tundra,37.84,23.19
+			.talk Glrglrglr##28375
+			..turnin Keymaster Urmgrgl##11569
+		step
+			goto Borean Tundra,37.75,23.02
+			.' Remove King Mrgl-Mrgl's Spare Suit |nobuff INV_Misc_Head_Murloc_01|q 11570 |future
+			.info Right-click the "King Mrgl-Mrgl's Spare Suit" buff near your minimap.
+			.info Be careful, enemies will attack you.
+		step
+			goto Borean Tundra,37.75,23.02
+			.talk Lurgglbr##25208
+			..accept Escape from the Winterfin Caverns##11570
+		step
+			goto Borean Tundra,41.35,16.33
+			.goal Escort Lurgglbr to Safety|q 11570/1
+			.info Follow Lurgglbr and protect him as he walks.
+			.info Let him get attacked first, otherwise he won't stop to help you fight.
+		step
+			goto Borean Tundra,43.50,13.97
+			.talk King Mrgl-Mrgl##25197
+			..turnin Surrender... Not!##11566
+			..turnin Escape from the Winterfin Caverns##11570
+		step
+			goto Borean Tundra,57.63,19.00
+			.talk Crafty Wobblesprocket##25477
+			..turnin Plan B##11658
+			..accept It Was The Orcs, Honest!##11670
+		step
+			.use Crafty's Sack##34871
+			.collect Warsong Banner##34869|q 11670
+			.collect Warsong Orc Disguise##34870|q 11670
+		step
+			goto Borean Tundra,55.48,11.17
+			.use Warsong Orc Disguise##34870
+			.' Wear the Warsong Orc Disguise|havebuff INV_Misc_TabardPVP_04|q 11670
+		step
+			goto Borean Tundra,55.34,11.93
+			.kill Magmothregar##25430|n
+			.info He walks around this small area inside the cave.
+			.use Warsong Banner##34869
+			.info Use it on Magmothregar's corpse.
+			.' Plant the Warsong Banner in Magmothregar|q 11670/1
+		step
+			goto Borean Tundra,57.63,19.00
+			.talk Crafty Wobblesprocket##25477
+			..turnin It Was The Orcs, Honest!##11670
+		step
+			goto Borean Tundra,64.53,23.40
+			.' Interact with gameobject: The Gearmaster's Manual
+			.info Inside the building.
+			.info Watch the dialogue
+			.from Gearmaster Mechazod##25834
+			.get Mechazod's Head##35486|q 11798/2
+		step
+			goto Borean Tundra,66.35,32.49
+			.use Map of the Geyser Fields##34920
+			.goal Mark the Location of the Northwest Sinkhole|q 11713/3
+		step
+			goto Borean Tundra,69.69,32.59
+			.use Map of the Geyser Fields##34920
+			.goal Mark the Location of the Northeast Sinkhole|q 11713/2
+		step
+			goto Borean Tundra,70.35,36.68
+			.use Map of the Geyser Fields##34920
+			.goal Mark the Location of the South Sinkhole|q 11713/1
+		step
+			goto Borean Tundra,73.42,18.79
+			.talk Bixie Wrenchshanker##25705
+			..turnin Check in With Bixie##11692
+			..accept Oh Great... Plagued Magnataur!##11693
+		step
+			goto Borean Tundra,75.96,21.60
+			.kill 10 Plagued Magnataur##25615|q 11693/1
+		step
+			goto Borean Tundra,73.42,18.79
+			.talk Bixie Wrenchshanker##25705
+			..turnin Oh Great... Plagued Magnataur!##11693
+			..accept There's Something Going On In Those Caves##11694
+		step
+			goto Borean Tundra,74.74,14.14
+			.use Bixie's Inhibiting Powder##34915
+			.info Use it next to the Den of Dying Plague Cauldron inside the small cave.
+			.goal Neutralize the Plague Cauldron|q 11694/1
+		step
+			goto Borean Tundra,73.42,18.79
+			.talk Bixie Wrenchshanker##25705
+			..turnin There's Something Going On In Those Caves##11694
+			..accept Rats, Tinky Went into the Necropolis!##11697
+			..accept Might As Well Wipe Out the Scourge##11698
+		step
+			goto Borean Tundra,69.90,14.74
+			.talk Tinky Wickwhistle##25714
+			..turnin Rats, Tinky Went into the Necropolis!##11697
+			..accept I'm Stuck in this Damned Cage... But Not For Long!##11699
+		step
+			goto Borean Tundra,68.54,18.41
+			.from Festering Ghoul##25660
+			.info You can find more upstairs inside the building.
+			.get Engine-Core Crystal##34957|q 11699/1
+		step
+			goto Borean Tundra,69.64,13.86
+			.from Lich-Lord Chillwinter##25682
+			.info On top of the building.
+			.get Piloting Scourgestone##34959|q 11699/3
+		step
+			goto Borean Tundra,69.70,12.87
+			.from Doctor Razorgrin##25678
+			.info He walks around this small area inside the building.
+			.info Jump down to him from on top of the building.
+			.get Magical Gyroscope##34958|q 11699/2
+		step
+			goto Borean Tundra,69.90,14.74
+			.talk Tinky Wickwhistle##25714
+			..turnin I'm Stuck in this Damned Cage... But Not For Long!##11699
+			..accept Let Bixie Know##11700
+		step
+			goto Borean Tundra,68.54,18.41
+			.' Kill enemies around this area
+			.' Destroy 20 Talramas Scourge|q 11698/1
+		step
+			goto Borean Tundra,73.42,18.79
+			.talk Bixie Wrenchshanker##25705
+			..turnin Let Bixie Know##11700
+			..turnin Might As Well Wipe Out the Scourge##11698
+			..accept Back to the Airstrip##11701
+		step
+			goto Borean Tundra,56.98,18.71
+			.talk Fizzcrank Fullthrottle##25590
+			..turnin Back to the Airstrip##11701
+			..turnin The Gearmaster##11798
+		step
+			goto Borean Tundra,57.06,20.11
+			.talk Abner Fizzletorque##25780
+			..turnin Scouting the Sinkholes##11713
+			..accept Fueling the Project##11715
+		step
+			goto Borean Tundra,60.44,27.98
+			.use Portable Oil collector##34975
+			.info Use it next to the black oil spots on the ground in the water around this area.
+			.collect 8 Barrels of Oil|q 11715/1
+		step
+			goto Borean Tundra,57.06,20.11
+			.talk Abner Fizzletorque##25780
+			..turnin Fueling the Project##11715
+			..accept A Bot in Mammoth's Clothing##11718
+		step
+			goto Borean Tundra,52.86,21.87
+			.from Wooly Mammoth##24614, Wooly Mammoth Bull##25743
+			.get 6 Thick Mammoth Hide##34977|q 11718/1
+		step
+			goto Borean Tundra,57.06,20.11
+			.talk Abner Fizzletorque##25780
+			..turnin A Bot in Mammoth's Clothing##11718
+			..accept Deploy the Shake-n-Quake!##11723
+		step
+			goto Borean Tundra,70.18,36.36
+			.use Shake-n-Quake 5000 Control Unit##34981
+			.info Watch the dialogue
+			.' Deploy the Shake-n-Quake 5000|q 11723/2
+		step
+			goto Borean Tundra,70.18,36.36
+			.kill Lord Kryxix##25768|q 11723/1
+		step
+			goto Borean Tundra,57.06,20.11
+			.talk Abner Fizzletorque##25780
+			..turnin Deploy the Shake-n-Quake!##11723
+		step
+			.' Congratulations! +142/130 quests for achievement "Nothing Boring About Borean".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[68] Howling Fjord",[[
@@ -1741,6 +3243,8 @@ author danaton
 description This guide contain quest-chain (??) for Dragonblight location.
 startlevel 72
 		step
+		step
+			.' "Might of Dragonblight".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[74-empty] Grizzly Hills",[[
@@ -1748,6 +3252,8 @@ author danaton
 description This guide contain quest-chain (??) for Grizzly Hills location.
 startlevel 74
 		step
+		step
+			.' "Fo' Grizzle My Shizzle".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[74-empty] Zul'Drak",[[
@@ -1755,6 +3261,8 @@ author danaton
 description This guide contain quest-chain (??) for Zul'Drak location.
 startlevel 74
 		step
+		step
+			.' "The Empire of Zul'Drak".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[76-empty] Sholazar Basin",[[
@@ -1762,6 +3270,8 @@ author danaton
 description This guide contain quest-chain (??) for Sholazar Basin location.
 startlevel 76
 		step
+		step
+			.' "Into the Basin"
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[77-empty] The Storm Peaks",[[
@@ -1769,6 +3279,8 @@ author danaton
 description This guide contain quest-chain (??) for The Storm Peaks location.
 startlevel 77
 		step
+		step
+			.' "The Summit of Storm Peaks".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[none] Icecrown",[[
@@ -1776,6 +3288,8 @@ author danaton
 description This guide contain quest-chain (??) for Icecrown location.
 startlevel 77
 		step
+		step
+			.' "Icecrown: The Final Goal".
 ]])
 
 ZygorGuidesViewer.AllianceInstalled=true
