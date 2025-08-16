@@ -1526,7 +1526,7 @@ startlevel 68
 			..accept If Valgarde Falls...##11243
 		step
 			goto Howling Fjord,58.93,59.60
-			.' Kill Dragonflayer enemies around this area.
+			.from Dragonflayer Invader##24051, Dragonflayer Worg##24063
 			.info They look like large humans and wolves.
 			.info They continually attack near this location.
 			.' Slay 12 Dragonflayer Invaders|q 11243/1
@@ -1537,7 +1537,7 @@ startlevel 68
 			..accept Rescuing the Rescuers##11244
 		step
 			goto Howling Fjord,58.40,56.21
-			.' Click Ceremonial Dragonflayer Harpoon
+			.' Interact with gameobject: Ceremonial Dragonflayer Harpoon
 			.info They look like poles sticking out of the ground around this area.
 			.' Rescue 8 Valgarde Scouts|q 11244/1
 		step
@@ -1563,9 +1563,8 @@ startlevel 68
 			..accept The Path to Payback##11420
 		step
 			goto Howling Fjord,62.06,57.62
-			.' Click Reagent Pouch
-			.info Underwater, on the deck of the ship.
 			.collect Reagent Pouch##6652|q 11333/1
+			.info Underwater, on the deck of the ship.
 		step
 			goto Howling Fjord,59.80,61.48
 			.talk Thoralius the Wise##23975
@@ -1580,7 +1579,7 @@ startlevel 68
 			goto Howling Fjord,60.25,51.33
 			.use the Incense Burner##33637
 			.info Use it in the doorway of the building.
-			.' Enter the Spirit World |havebuff Echo of Ymiron##42786|q 11343
+			.' Enter the Spirit World |havebuff Spell_Holiday_ToW_SpiceCloud |q 11343
 		step
 			goto Howling Fjord,60.16,50.87
 			.' Watch the dialogue.
@@ -1589,7 +1588,7 @@ startlevel 68
 		step
 			goto Howling Fjord,58.26,52.96
 			.' Kill Dragonflayer enemies around this area
-			.collect Dragonflayer Cage Key##33308+ |n
+			.collect Dragonflayer Cage Key##33308|n
 			.' Click Dragonflayer Cages
 			.info They look like metal cages on the ground and inside buildings around this area.
 			.' Rescue 3 Captured Valgarde Prisoners|q 11255/1
@@ -1610,9 +1609,8 @@ startlevel 68
 			..accept And Then There Were Two...##11276
 		step
 			goto Howling Fjord,55.68,52.58
-			.' Click Dragonflayer Battle Plans
-			.info Inside the cave.
 			.collect Dragonflayer Battle Plans##33488|q 11290/1
+			.info Inside the cave.
 		step
 			goto Howling Fjord,56.63,49.45|n
 			.' Enter the cave and go down|goto Howling Fjord,56.63,49.45,0.5|noway|q 11276
@@ -1623,20 +1621,18 @@ startlevel 68
 			..accept The Depths of Depravity##11277
 		step
 			goto Howling Fjord,59.26,55.38
-			.' Click Harpoon Operation Manual
-			.info Inside the cave, on the top level.
 			.collect Harpoon Operation Manual##34031|q 11420/1
+			.info Inside the cave, on the top level.
 		step
 			goto Howling Fjord,59.34,55.42
 			.talk Ares the Oathbound##24189
 			..accept The Shining Light##11288
 		step
 			goto Howling Fjord,56.65,53.43
-			.' Click Sacred Artifact
+			.collect Sacred Artifact##33485|q 11288/1
 			.info Downstairs inside the cave, on the bottom level.
 			.info You can run through the ghouls, they won't attack you, since you have the "Shining Light" buff.
 			.info HURRY, this quest is timed!
-			.collect Sacred Artifact##33485|q 11288/1
 		step
 			goto Howling Fjord,59.34,55.42
 			.talk Ares the Oathbound##24189
@@ -1645,10 +1641,9 @@ startlevel 68
 			..accept Guided by Honor##11289
 		step
 			goto Howling Fjord,57.32,56.36
-			.' Click Wyrmskull Tablet.
+			.collect 10 Wyrmskull Tablet##33355|q 11277/1
 			.info They look like broken stone tablets laying on the ground all around inside this cave.
 			.info They are only on the top and middle levels of the cave.
-			.collect 10 Wyrmskull Tablet##33355|q 11277/1
 		step
 			goto Howling Fjord,56.94,53.75
 			.talk Glorenfeld##24150
@@ -1672,6 +1667,9 @@ startlevel 68
 			.talk Glorenfeld##24150
 			..turnin Stunning Defeat at the Ring##11300
 			..accept Return to Valgarde##11278
+		step
+			goto Howling Fjord,55.99,50.2|n
+			.' Move towards the exit of the cave|goto 55.99,50.2,1 |q 11289
 		step
 			goto Howling Fjord,59.74,62.43
 			.talk Lord Irulon Trueblade##24191
@@ -1704,10 +1702,10 @@ startlevel 68
 			goto Howling Fjord,60.12,62.42
 			.talk Guard Captain Zorek##23728
 			.' Tell him "Take me to Lieutenant Icehammer, Zorek!"
-			.' Begin Flying to Lieutenant Icehammer|q 11427
+			.' Begin Flying to Lieutenant Icehammer |invehicle |q 11427
 		step
-			goto Howling Fjord,64.88,46.29
-			.' Fly to Lieutenant Icehammer|q 11427 |noway
+			goto Howling Fjord,64.88,46.29|n
+			.' Fly to Lieutenant Icehammer|goto 64.88,46.29,1 |q 11427
 		step
 			goto Howling Fjord,64.43,46.95
 			.talk Lieutenant Icehammer##24634
@@ -1733,7 +1731,7 @@ startlevel 68
 		step
 			goto Howling Fjord,68.81,54.85
 			.use the Incense Burner##33774
-			.' Enter the Spirit World |havebuff Echo of Ymiron##42786|q 11344
+			.' Enter the Spirit World |havebuff Spell_Holiday_ToW_SpiceCloud |q 11344
 		step
 			goto Howling Fjord,68.81,54.85
 			.' Watch the dialogue.
@@ -1754,9 +1752,8 @@ startlevel 68
 			..accept Trust is Earned##11460
 		step
 			goto Howling Fjord,75.81,64.56
-			.' Click Loose Rock.
-			.info They look like flat grey stones on the ground around this area.
 			.collect Fjord Grub##34102|q 11460
+			.info They look like flat grey stones on the ground around this area.
 		step
 			goto Howling Fjord,75.27,64.91
 			.' Click Rock Falcon
@@ -1774,9 +1771,8 @@ startlevel 68
 			..accept Out of My Element?##11477
 		step
 			goto Howling Fjord,79.00,47.56
-			.' Collect Building Tools.
-			.info On the wooden platform.
 			.collect Building Tools##34131|q 11475/1
+			.info On the wooden platform.
 		step
 			goto Howling Fjord,79.20,47.79
 			.kill 5 Iron Rune Laborer##23711|q 11477/2
@@ -3238,13 +3234,1406 @@ startlevel 68
 			.' Congratulations! +130 quests for achievement "I've Toured the Fjord".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[72-empty] Dragonblight",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[72-beta] Dragonblight",[[
 author danaton
 description This guide contain quest-chain (??) for Dragonblight location.
 startlevel 72
 		step
+			goto Borean Tundra,63.80,46.12
+			.talk Ataika##26169
+			..accept Not Without a Fight!##11949
 		step
-			.' "Might of Dragonblight".
+			goto Borean Tundra,67.27,53.03
+			.kill 12 Kvaldir Raider##25760|q 11949/1
+		step
+			goto Borean Tundra,63.80,46.12
+			.talk Ataika##26169
+			..turnin Not Without a Fight!##11949
+			..accept Muahit's Wisdom##11950
+		step
+			goto Borean Tundra,67.20,54.85
+			.talk Elder Muahit##26218
+			..turnin Muahit's Wisdom##11950
+			..accept Spirits Watch Over Us##11961
+		step
+			goto Borean Tundra,67.64,50.41
+			.talk Iruk##26219
+			.info Underwater.
+			.' Choose <Search corpse for Issliruk's Totem.>
+			.collect Issliruk's Totem##35701|q 11961/1
+		step
+			goto Borean Tundra,67.20,54.85
+			.talk Elder Muahit##26218
+			..turnin Spirits Watch Over Us##11961
+			..accept The Tides Turn##11968
+		step
+			goto Borean Tundra,67.60,56.70
+			.kill Heigarr the Horrible##26266|q 11968/1
+			.info He fights around this area.
+		step
+			goto Borean Tundra,67.20,54.85
+			.talk Elder Muahit##26218
+			..turnin The Tides Turn##11968
+		step
+			goto Borean Tundra,67.27,54.85
+			.talk Hotawa##28382
+			..accept Travel to Moa'ki Harbor##12117
+		step
+			goto Borean Tundra,82.16,46.40
+			.talk Private Casey##26186
+			..accept The Lost Courier##12157
+		step
+			goto Dragonblight,29.00,55.45
+			.talk Image of Archmage Modera##26673
+			..accept Rifle the Bodies##12000
+		step
+			goto Dragonblight,29.18,55.65
+			.talk Warden Jodi Moonsong##26973
+			..accept The Liquid Fire of Elune##12166
+		step
+			goto Dragonblight,28.83,56.18
+			.talk Courier Lanson##27060
+			..turnin The Lost Courier##12157
+			..accept Of Traitors and Treason##12171
+		step
+			goto Dragonblight,29.18,55.32
+			.talk Palena Silvercloud##26881
+			..turnin Of Traitors and Treason##12171
+			..accept High Commander Halford Wyrmbane##12174
+		step
+			goto Dragonblight,78.5,48.3
+			.talk High Commander Halford Wyrmbane##27136
+			..turnin High Commander Halford Wyrmbane##12174
+		step
+			goto Dragonblight,78.9,45.3
+			.talk Vas the Unstable##27158
+			..accept A Disturbance In The West##12439
+		step
+			goto Dragonblight,77.1,49.8
+			.talk Rodney Wells##26878
+			..turnin A Disturbance In The West##12439
+		step
+			goto Dragonblight,77.1,49.8|n
+			.talk Rodney Wells##26878
+			.' Fly to Stars Rest, Dragonblight|goto 29,55.5,1.0|q 12166
+		step
+			goto Dragonblight,28.48,49.48
+			.kill Blighted Elk##26616|n
+			.info They look like deer bucks around this area.
+			.use the Liquid Fire of Elune##36956
+			.info Use it on their corpses.
+			.' Cleanse 6 Blighted Elk Corpses|q 12166/1
+			.' You can find more around (1)|at 31.09,47.25
+			.' You can find more around (2)|at 24.46,50.29
+		step
+			goto Dragonblight,28.48,49.48
+			.kill Rabid Grizzly##26643|n
+			.info They look like diseased bears around this area.
+			.use the Liquid Fire of Elune##36956
+			.info Use it on their corpses.
+			.' Cleanse 6 Rabid Grizzly Corpses|q 12166/2
+			.' You can find more around (1)|at 31.09,47.25
+			.' You can find more around (2)|at 24.46,50.29
+		step
+			goto Dragonblight,24.20,60.08
+			.talk Ethenial Moonshadow##26501
+			..accept Avenge this Atrocity!##12006
+		step
+			goto Dragonblight,23.65,57.82
+			.' Interact with NPC: Dead Mage Hunter
+			.info They look like dead bodies on the ground around this area.
+			.collect Mage Hunter Personal Effects##35792|n
+			.use the Mage Hunter Personal Effects##35792
+			.info You may have to find and use multiple of these.
+			.collect Moonrest Gardens Plans##35783|q 12000/1
+		step
+			goto Dragonblight,29.00,55.45
+			.talk Image of Archmage Modera##26673
+			..turnin Rifle the Bodies##12000
+			..accept Prevent the Accord##12004
+		step
+			goto Dragonblight,29.18,55.65
+			.talk Warden Jodi Moonsong##26973
+			..turnin The Liquid Fire of Elune##12166
+			..accept Kill the Cultists##12167
+		step
+			goto Dragonblight,26.17,44.08
+			.from Anub'ar Cultist##26319
+			.get 5 Functional Cultist Suit##36957|q 12167/1
+			.' You can find more around (1)|at 24.97,44.14
+			.' You can find more around (2)|at 23.85,44.25
+			.' You can find more around (3)|at 25.47,46.27
+		step
+			goto Dragonblight,26.17,44.08
+			.from Anub'ar Cultist##26319
+			.collect The Favor of Zangus##36958|q 12168 |future
+			.use The Favor of Zangus##36958
+			..accept The Favor of Zangus##12168
+			.' You can find more around (1)|at 24.97,44.14
+			.' You can find more around (2)|at 23.85,44.25
+			.' You can find more around (3)|at 25.47,46.27
+		step
+			goto Dragonblight,29.18,55.65
+			.talk Warden Jodi Moonsong##26973
+			..turnin Kill the Cultists##12167
+			..turnin The Favor of Zangus##12168
+			..accept The High Cultist##12169
+		step
+			goto Dragonblight,18.42,58.89
+			.from Wind Trader Mu'fah##26496
+			.info Outside, in front of the building.
+			.get Wind Trader Mu'fah's Remains##35800|q 12004/1
+		step
+			goto Dragonblight,19.52,58.12
+			.from Goramosh##26349
+			.info Upstairs inside the crumbled building.
+			.get The Scales of Goramosh##35801|q 12004/2
+			.collect Goramosh's Strange Device##36742|q 12055 |future
+		step
+			.use Goramosh's Strange Device##36742
+			..accept A Strange Device##12055
+		step
+			goto Dragonblight,29.00,55.45
+			.talk Image of Archmage Modera##26673
+			..turnin Prevent the Accord##12004
+			..turnin A Strange Device##12055
+			..accept Projections and Plans##12060
+		step
+			goto Dragonblight,28.84,49.74
+			.kill High Cultist Zangus##26655|q 12169/1
+		step
+			goto Dragonblight,29.18,55.65
+			.talk Warden Jodi Moonsong##26973
+			..turnin The High Cultist##12169
+		step
+			goto Dragonblight,26.47,57.22
+			.use the Surge Needle Teleporter##36747
+			.info You will be teleported up to a floating platform.
+			.' Teleport to the Surge Needle|goto 19.48,59.59,0.2|q 12060
+		step
+			goto Dragonblight,19.79,59.82
+			.' Watch the dialogue.
+			.info On the floating platform.
+			.' Observe the Object on the Surge Needle|q 12060/1
+		step
+			.use the Surge Needle Teleporter##36747
+			.info On the floating platform.
+			.' Return to the Ground|goto 17.64,59,0.2|q 12060
+		step
+			goto Dragonblight,25.9,64.4
+			.from Surge Needle Sorcerer##26257, Dragonblight Mage Hunter##26280, Moonrest Stalker##26281
+			.info The Moonrest Highborne ghosts will not count for the quest goal.
+			.' Slay 15 Blue Dragonflight Forces at Moonrest Gardens|q 12006/1
+			.' You can find more around (1)|at 21.36,60.53
+		step
+			goto Dragonblight,24.20,60.08
+			.talk Ethenial Moonshadow##26501
+			..turnin Avenge this Atrocity!##12006
+			..accept End Arcanimus##12013
+		step
+			goto Dragonblight,20.02,59.59
+			.kill Arcanimus##26370|q 12013/1
+		step
+			goto Dragonblight,24.20,60.08
+			.talk Ethenial Moonshadow##26501
+			..turnin End Arcanimus##12013
+		step
+			goto Dragonblight,29.00,55.45
+			.talk Image of Archmage Modera##26673
+			..turnin Projections and Plans##12060
+			..accept The Focus on the Beach##12065
+		step
+			goto Dragonblight,26.32,64.87
+			.from Captain Emmy Malin##26762
+			.collect Ley Line Focus Control Ring##36751|q 12065
+		step
+			goto Dragonblight,26.32,64.87
+			.from Captain Emmy Malin##26762
+			.collect Captain Malin's Letter##36756|q 12067 |future
+			.use Captain Malin's Letter##36756
+			..accept A Letter for Home##12067
+		step
+			goto Dragonblight,26.53,65.07
+			.use the Ley Line Focus Control Ring##36751
+			.info It takes a few seconds to complete the goal after you use the item.
+			.goal Retrieve the Ley Line Focus Information|q 12065/1
+		step
+			goto Dragonblight,29.00,55.45
+			.talk Image of Archmage Modera##26673
+			..turnin The Focus on the Beach##12065
+			..accept Atop the Woodlands##12083
+		step
+			goto Dragonblight,29.04,55.42
+			.talk Commander Saia Azuresteel##26459
+			..turnin A Letter for Home##12067
+		step
+			goto Dragonblight,28.73,57.10
+			.talk Sarendryana##26837
+			..accept Strengthen the Ancients##12092
+		step
+			goto Dragonblight,33.92,62.77
+			.talk Woodlands Walker##26421
+			.info They have a chance to attack you instead of giving you the bark.
+			.info You can find them all around the Lothalor Woodlands area.
+			.collect Bark of the Walkers##36786|n
+			.use the Bark of the Walkers##36786
+			.info Use them on Lothalor Ancients around this area.
+			.info They look like larger dazed tree creatures.
+			.' Strengthen 3 Lothalor Ancients|q 12092/1
+		step
+			goto Dragonblight,32.61,71.39
+			.from Lieutenant Ta'zinni##26815
+			.info He looks like a troll that walks around this area with a guard.
+			.info They walk in a clockwise circle around the large stone half circle with purple symbols on it.
+			.collect Ley Line Focus Amulet##36779|q 12083
+		step
+			goto Dragonblight,32.33,71.33
+			.use the Ley Line Focus Control Amulet##36779
+			.info It takes a few seconds to complete the goal after you use the item.
+			.goal Retrieve the Ley Line Focus Information|q 12083/1
+		step
+			goto Dragonblight,28.73,57.10
+			.talk Sarendryana##26837
+			..turnin Strengthen the Ancients##12092
+		step
+			goto Dragonblight,29.00,55.45
+			.talk Image of Archmage Modera##26673
+			..turnin Atop the Woodlands##12083
+			..accept Search Indu'le Village##12098
+		step
+			goto Dragonblight,40.25,66.86
+			.' Interact with NPC: Mage-Commander Evenstar
+			.info He looks like a dead blood elf wearing a robe, underwater.
+			..turnin Search Indu'le Village##12098
+			..accept The End of the Line##12107
+		step
+			goto Dragonblight,39.79,66.98
+			.use the Ley Line Focus Control Talisman##36815
+			.info Underwater.
+			.info It takes a few seconds to complete the goal after you use the item.
+			.' Retrieve the Ley Line Focus Information|q 12107/1
+		step
+			goto Dragonblight,48.26,74.35
+			.talk Trapper Mau'i##26228
+			..accept Planning for the Future##11960
+		step
+			goto Dragonblight,48.01,74.87
+			.talk Elder Ko'nani##26194
+			..turnin Travel to Moa'ki Harbor##12117
+			..accept Let Nothing Go To Waste##11958
+		step
+			goto Dragonblight,53.11,66.52
+			.goal Observe the Azure Dragonshrine|q 12107/2
+		step
+			goto Dragonblight,45.93,68.66
+			.collect 12 Snowfall Glade Pup##35692|q 11960/1
+			.info They look like small wolverines.
+			.info They are usually close to the buildings around this area.
+			.' You can find more around (1)|at 43.82,68.46
+			.' You can find more around (2)|at 42.78,71.67
+			.' You can find more around (3)|at 43.37,71.68
+			.' You can find more around (4)|at 44.47,71.46
+		step
+			goto Dragonblight,43.86,70.43
+			.from Snowfall Glade Reaver##26197, Snowfall Glade Wolvar##26198, Snowfall Glade Shaman##26201
+			.info They look like wolverines.
+			.info You can find them all around the Snowfall Glade area.
+			.collect 6 Stolen Moa'ki Goods##35686|q 11958/1
+			.' You can find more around|at 49.12,69.76
+		step
+			goto Dragonblight,48.26,74.35
+			.talk Trapper Mau'i##26228
+			..turnin Planning for the Future##11960
+		step
+			goto Dragonblight,48.01,74.87
+			.talk Elder Ko'nani##26194
+			..turnin Let Nothing Go To Waste##11958
+			..accept Slay Loguhn##11959
+		step
+			goto Dragonblight,46.31,59.15
+			.kill Loguhn##26196|n
+			.collect Blood of Loguhn##35688|q 11959 |future
+		step
+			.use the Blood of Loguhn##35688
+			.goal Smear Loguhn's Blood|q 11959/1
+		step
+			goto Dragonblight,48.01,74.87
+			.talk Elder Ko'nani##26194
+			..turnin Slay Loguhn##11959
+		step
+			goto Dragonblight,49.14,75.66
+			.talk Toalu'u the Mystic##26595
+			..accept Spiritual Insight##12028
+		step
+			goto Dragonblight,48.94,75.79
+			.use Toalu'u's Spiritual Incense##35907
+			.' Release Your Spirit |havebuff Spell_Shadow_ConeOfSilence |q 12028 |future
+		step
+			.' Watch the dialogue.
+			.goal Attain Spiritual Insight Concerning Indu'le Village|q 12028/1
+		step
+			goto Dragonblight,49.14,75.66
+			.talk Toalu'u the Mystic##26595
+			..turnin Spiritual Insight##12028
+			..accept Elder Mana'loa##12030
+		step
+			goto Dragonblight,47.70,76.63
+			.talk Tua'kea##26245
+			..accept Tua'kea's Crab Traps##12009
+		step
+			.use Tua'kea's Breathing Bladder##37265
+			.' Gain Waterbreathing |havebuff INV_Drink_Waterskin_03 |q 12009 |future
+		step
+			goto Dragonblight,47.74,79.97
+			.' Interact with gameobject: Wrecked Crab Trap
+			.info It looks like a broken small broken brown cage on the ground underwater.
+			..accept Signs of Big Watery Trouble##12011
+		step
+			goto Dragonblight,47.70,76.63
+			.talk Tua'kea##26245
+			..turnin Signs of Big Watery Trouble##12011
+			..accept The Bait##12016
+		step
+			goto Dragonblight,43.28,81.84
+			.from Kili'ua##26521
+			.info He looks like a huge crab.
+			.info He walks around this area on this small island.
+			.get The Flesh of "Two Huge Pincers"##35831|q 12016/1
+		step
+			goto Dragonblight,47.70,76.63
+			.talk Tua'kea##26245
+			..turnin The Bait##12016
+			..accept Meat on the Hook##12017
+		step
+			goto Dragonblight,46.72,78.19
+			.use Tu'u'gwar's Bait##35838
+			.info Use it next to Tua'kea's Fishing Hook underwater.
+			.info It looks like a rope leading into the water, with a large hook on the end.
+			.kill Tu'u'gwar|q 12017/1
+			.info He swims to you.
+		step
+			goto Dragonblight,46.58,77.72
+			.collect 8 Tua'kea Crab Trap##35802|q 12009/1
+			.info They look like small brown cages on the ground underwater.
+			.info You can find them all around the Moa'ki Harbor area.
+			.' You can find more around (1)|at 49.40,79.93
+			.' You can find more around (2)|at 50.70,77.29
+		step
+			goto Dragonblight,47.70,76.63
+			.talk Tua'kea##26245
+			..turnin Tua'kea's Crab Traps##12009
+			..turnin Meat on the Hook##12017
+		step
+			goto Dragonblight,36.74,65.17
+			.' Interact with gameobject: Elder Mana'loa
+			..turnin Elder Mana'loa##12030
+			..accept Freedom for the Lingering##12031
+		step
+			goto Dragonblight,38.09,66.29
+			.from Indu'le Mystic##26336, Indu'le Fisherman##26343, Indu'le Warrior##26344
+			.info They look like walrus people spirits.
+			.info Deranged Indu'le Villagers will not count for the quest goal.
+			.info You can find them all around the Indu'le Village area.
+			.' Put 15 Indu'le Spirits to Rest|q 12031/1
+		step
+			goto Dragonblight,36.74,65.17
+			.' Interact with gameobject: Elder Mana'loa.
+			..turnin Freedom for the Lingering##12031
+			..accept Conversing With the Depths##12032
+		step
+			goto Dragonblight,33.99,83.45
+			.' Interact with gameobject: The Pearl of the Depths.
+			.' Watch the dialogue.
+			.info A huge sea monster, Oacha'noa, will appear in the water nearby.
+			.info You will eventually receive a 30 second buff.
+			.info Jump into the water toward Oacha'noa when you have the buff.
+			.' Obey Oacha'noa's Compulsion|q 12032/1
+		step
+			goto Dragonblight,29.00,55.46
+			.talk Image of Archmage Modera##26673
+			..turnin The End of the Line##12107
+			..accept Gaining an Audience##12119
+		step
+			goto Dragonblight,49.14,75.65
+			.talk Toalu'u the Mystic##26595
+			..turnin Conversing With the Depths##12032
+		step
+			goto Dragonblight,78.56,48.27
+			.talk High Commander Halford Wyrmbane##27136
+			..turnin High Commander Halford Wyrmbane##12174
+			..accept Naxxramas and the Fall of Wintergarde##12235
+		step
+			goto Dragonblight,77.10,50.12
+			.talk Gryphon Commander Urik##27317
+			..turnin Naxxramas and the Fall of Wintergarde##12235
+			..accept Flight of the Wintergarde Defender##12237
+		step
+			goto Dragonblight,77.30,49.99
+			.use the Wintergarde Gryphon Whistle##37287
+			.info It flies down to you and lands.
+			.' Ride the Wintergarde Gryphon |invehicle |q 12237
+		step
+			goto Dragonblight,86.41,50.36
+			.' Rescue 10 Helpless Villagers|q 12237/1
+			.info Use the "Rescue Villager" ability on your action bar on Helpless Wintergarde Villagers.
+			.info They look like humans running scared on the ground.
+			.info They are spread out all around this area.
+			.info You must be close to them to be able to pick them up.
+			.' Return the Helpless Villagers|at 77.23,49.97
+			.info Use the "Drop Off Villager" ability on your action bar.
+		step
+			goto Dragonblight,77.10,50.12
+			.' Stop Riding the Wintergarde Gryphon |outvehicle |q 12237
+			.info Click the red arrow on your action bar.
+		step
+			goto Dragonblight,77.10,50.12
+			.talk Gryphon Commander Urik##27317
+			..turnin Flight of the Wintergarde Defender##12237
+			..accept Return to the High Commander##12251
+		step
+			goto Dragonblight,78.56,48.27
+			.talk High Commander Halford Wyrmbane##27136
+			..turnin Return to the High Commander##12251
+			..accept Rescue from Town Square##12253
+			..accept The Demo-gnome##12275
+		step
+			goto Dragonblight,78.64,48.18
+			.talk Commander Lynore Windstryke##27155
+			..accept The Fate of the Dead##12258
+		step
+			goto Dragonblight,79.15,47.17
+			.talk Zelig the Visionary##27314
+			..accept Imprints on the Past##12282
+		step
+			goto Dragonblight,77.85,50.29
+			.talk Siege Engineer Quarterflash##27159
+			..turnin The Demo-gnome##12275
+			..accept The Search for Slinkin##12276
+			..accept The Bleeding Ore##12272
+		step
+			goto Dragonblight,77.80,50.34
+			.talk Highlord Leoric Von Zeldig##27156
+			..accept Not In Our Mine##12269
+		step
+			goto Dragonblight,78.85,50.89
+			.collect Scrying Orb##37538|q 12282/1
+			.info Upstairs inside the building.
+		step
+			goto Dragonblight,80.03,50.01
+			.' Rescue 6 Trapped Wintergarde Villagers|q 12253/1
+			.info Kill the Vengeful Geists next to Trapped Wintergarde Villagers.
+			.info The Trapped Wintergarde Villagers look like humans.
+			.info They can be outside or inside the buildings around this area. |notinsticky
+		step
+			goto Dragonblight,80.03,50.01
+			.kill 15 Vengeful Geist##27370|q 12258/1
+			.' You can find more inside the buildings around this area.
+		step
+			goto Dragonblight,81.52,42.21
+			.' Interact with NPC: Slinkin the Demo-gnome
+			.info Inside the mine.
+			..turnin The Search for Slinkin##12276
+			..accept Leave Nothing to Chance##12277
+		step
+			goto Dragonblight,80.74,41.32
+			.collect Wintergarde Mine Bomb##37465|q 12277
+			.info Inside the mine.
+		step
+			goto Dragonblight,80.14,45.35
+			.use the Wintergarde Mine Bomb##37465
+			.info Use it in the entrance to the mine at this location.
+			.info Run out of the mine after using item.
+			.info Don't stand too close to the bomb, it can damage you.
+			.' Destroy the Lower Wintergarde Mine Shaft|q 12277/2
+		step
+			goto Dragonblight,80.41,44.81
+			.use the Wintergarde Mine Bomb##37465
+			.info Use it in the entrance to the mine at this location.
+			.info Run deeper into the mine after using item.
+			.info There are still quests to complete inside the mine.
+			.info Don't stand too close to the bomb, it can damage you.
+			.' Destroy the Upper Wintergarde Mine Shaft|q 12277/1
+		step
+			goto Dragonblight,80.30,41.87
+			.collect 10 Strange Ore##37359|q 12272/1
+			.info They look like dark colored mining nodes with light blue crystals.
+			.info You can find them on the ground all throughout the mine.
+		step
+			goto Dragonblight,80.30,41.87
+			.from Risen Wintergarde Miner##27401
+			.info You can find them all throughout the mine.
+			.get 10 Wintergarde Miner's Card##37411|q 12269/1
+		step
+			goto Dragonblight,77.80,50.34
+			.talk Highlord Leoric Von Zeldig##27156
+			..turnin Not In Our Mine##12269
+		step
+			goto Dragonblight,77.84,50.30
+			.talk Siege Engineer Quarterflash##27159
+			..turnin The Bleeding Ore##12272
+			..turnin Leave Nothing to Chance##12277
+			..accept Understanding the Scourge War Machine##12281
+		step
+			goto Dragonblight,78.56,48.27
+			.talk High Commander Halford Wyrmbane##27136
+			..turnin Rescue from Town Square##12253
+			..accept Find Durkon!##12309
+			..turnin Understanding the Scourge War Machine##12281
+		step
+			goto Dragonblight,78.65,48.18
+			.talk Commander Lynore Windstryke##27155
+			..turnin The Fate of the Dead##12258
+		step
+			goto Dragonblight,79.15,47.17
+			.talk Zelig the Visionary##27314
+			..turnin Imprints on the Past##12282
+			..accept Orik Trueheart and the Forgotten Shore##12287
+		step
+			goto Dragonblight,79.06,53.20
+			.talk Cavalier Durkon##27318
+			..turnin Find Durkon!##12309
+			..accept The Noble's Crypt##12311
+		step
+			goto Dragonblight,78.60,52.38
+			.kill Necrolord Amarion##27508|q 12311/1
+			.info Inside the crypt, on the bottom floor.
+		step
+			goto Dragonblight,78.62,52.28
+			.' Interact with gameobject: Flesh-bound Tome.
+			.info Inside the crypt, on the bottom floor.
+			..accept Secrets of the Scourge##12312
+		step
+			goto Dragonblight,79.06,53.20
+			.talk Cavalier Durkon##27318
+			..turnin The Noble's Crypt##12311
+			..turnin Secrets of the Scourge##12312
+			..accept Mystery of the Tome##12319
+		step
+			goto Dragonblight,78.56,48.27
+			.talk High Commander Halford Wyrmbane##27136
+			..turnin Mystery of the Tome##12319
+			..accept Understanding the Language of Death##12320
+		step
+			goto Dragonblight,76.78,47.42
+			.talk Inquisitor Hallard##27316
+			..turnin Understanding the Language of Death##12320
+			..accept A Righteous Sermon##12321
+		step
+			goto Dragonblight,76.78,47.42
+			.' Watch the dialogue.
+			.info Downstairs inside the building.
+			.' Hear the Righteous Sermon|q 12321/1
+		step
+			goto Dragonblight,78.56,48.27
+			.talk High Commander Halford Wyrmbane##27136
+			..turnin A Righteous Sermon##12321
+			..accept Into Hostile Territory##12325
+		step
+			goto Dragonblight,77.20,49.54
+			.' Interact with NPC: Wintergarde Gryphon
+			.' Borrow the Wintergarde Gryphon|invehicle |q 12325
+		step
+			goto Dragonblight,89.60,46.86
+			.' Fly to Duke August Foehammer|outvehicle |q 12325 |noway
+		step
+			goto Dragonblight,89.68,46.37
+			.talk Duke August Foehammer##27157
+			..turnin Into Hostile Territory##12325
+			..accept Steamtank Surprise##12326
+		step
+			goto Dragonblight,89.76,46.88
+			.' Interact with gameobject: Alliance Steam Tank
+			.' Take Control of an Alliance Steam Tank |invehicle |q 12326
+		step
+			goto Dragonblight,88.74,48.71
+			.' Sabotage 6 Plague Wagons|q 12326/1
+			.info Use the "Drop Off Gnome" ability on your action bar next to Plague Wagons.
+			.info They look like metal carts with pots of orange liquid on the back of them on the ground around this area.
+			.info Protect the gnomes while they sabotage the carts.
+			.info Allow the gnomes to completely finish working on a Plague Wagon before using the "Drop Off Gnome" ability again.
+			.' You can find more around|at 87.40,51.67
+		step
+			goto Dragonblight,85.70,49.88
+			.' Drop Off the 7th Legion Elite|q 12326/2
+			.info In front of the crypt entrance.
+			.info Use the "Drop Off Soldier" ability on your action bar.
+		step
+			goto Dragonblight,85.94,50.87
+			.talk Ambo Cash##1293
+			..turnin Steamtank Surprise##12326
+			..accept Scattered To The Wind##12455
+		step
+			goto Dragonblight,85.86,51.02
+			.talk Yord "Calamity" Icebeard##27319
+			..accept Breaking Off A Piece##12462
+		step
+			goto Dragonblight,83.92,46.82
+			.collect 8 Wintergarde Munitions##37879|q 12455/1
+			.info They look like long brown wooden boxes on the ground around this area.
+			.' You can find more around (1)|at 86.29,52.05
+			.' You can find more around (2)|at 88.44,49.73
+		step
+			goto Dragonblight,85.94,50.87
+			.talk Ambo Cash##1293
+			..turnin Scattered To The Wind##12455
+			..accept The Chain Gun And You##12457
+		step
+			goto Dragonblight,86.23,51.06
+			.' Interact with gameobject: 7th Legion Chain Gun
+			.info Inside the crypt.
+			.' Save 8 Injured 7th Legion Soldiers|q 12457/1
+			.info Use the "Call Out Injured Soldier" ability on your action bar, to make the Injured Soldiers walk to you.
+			.info Use the "7th Legion Chain Gun" ability to kill the enemies and protect the Injured Soldiers as they walk.
+		step
+			.' Stop Controlling the 7th Legion Chain Gun|outvehicle |q 12457
+			.info Click the yellow arrow on your action bar.
+		step
+			goto Dragonblight,85.94,50.87
+			.talk Ambo Cash##1293
+			..turnin The Chain Gun And You##12457
+			..accept Plunderbeard Must Be Found!##12463
+		step
+			goto Dragonblight,84.35,51.00
+			.kill Necrolord X'avius##27826|q 12462/2
+			.info Inside the crypt.
+		step
+			goto Dragonblight,86.68,52.89
+			.kill Necrolord Horus##27805|q 12462/1
+			.info Inside the crypt.
+		step
+			goto Dragonblight,85.42,52.49
+			.' Kill enemies around this area
+			.info Inside the crypt, in all of the 3 rooms.
+			.' Slay 15 Naxxramas Scourge|q 12462/3
+		step
+			goto Dragonblight,84.17,54.68
+			.' Interact with gameobject: Plunderbeard
+			.info Inside the crypt.
+			..turnin Plunderbeard Must Be Found!##12463
+			..accept Plunderbeard's Journal##12465
+		step
+			goto Dragonblight,82.69,54.11
+			.' Kill enemies around this area
+			.info Inside the crypt.
+			.get Page 4 of Plunderbeard's Journal##37910|q 12465/1
+			.get Page 5 of Plunderbeard's Journal##37911|q 12465/2
+			.get Page 6 of Plunderbeard's Journal##37912|q 12465/3
+			.get Page 7 of Plunderbeard's Journal##37913|q 12465/4
+			.' You can find more around|at 81.10,53.48
+		step
+			goto Dragonblight,85.94,50.87
+			.talk Ambo Cash##1293
+			..turnin Plunderbeard's Journal##12465
+			..accept Chasing Icestorm: The 7th Legion Front##12466
+		step
+			goto Dragonblight,85.86,51.03
+			.talk Yord "Calamity" Icebeard##27319
+			..turnin Breaking Off A Piece##12462
+		step
+			goto Dragonblight,87.17,57.49
+			.talk Orik Trueheart##27347
+			..turnin Orik Trueheart and the Forgotten Shore##12287
+			..accept The Murkweed Elixir##12290
+		step
+			goto Dragonblight,89.71,65.89
+			.collect 5 Murkweed##37569|q 12290/1
+			.info They look like small purple plants on the ground around this area.
+			.' You can find more around|at 90.01,71.04
+		step
+			goto Dragonblight,87.17,57.49
+			.talk Orik Trueheart##27347
+			..turnin The Murkweed Elixir##12290
+			..accept The Forgotten Tale##12291
+		step
+			goto Dragonblight,86.04,64.14
+			.use the Murkweed Elixir##37570
+			.' Enter the Spirit Form |havebuff INV_Poison_MindNumbing |q 12291
+		step
+			goto Dragonblight,86.48,65.49
+			.talk Forgotten Peasant##27226
+			.' Tell him "Sorry to have bothered you, friend. Carry on!"
+			.' Question a Forgotten Peasant|q 12291/1
+		step
+			goto Dragonblight,86.48,65.49
+			.talk Forgotten Rifleman##27225
+			.' Tell him "I'm sure Arthas will be back any day now, soldier. Keep your chin up!"
+			.' Question a Forgotten Rifleman|q 12291/2
+		step
+			goto Dragonblight,86.48,65.49
+			.talk Forgotten Footman##27229
+			.' Tell him "I'm sure everything will work out, footman."
+			.' Question a Forgotten Footman|q 12291/4
+		step
+			goto Dragonblight,85.98,68.75
+			.talk Forgotten Knight##27224
+			.' Tell him "I must be going now, soldier. Stay vigilant!"
+			.' Question a Forgotten Knight|q 12291/3
+		step
+			goto Dragonblight,87.17,57.49
+			.talk Orik Trueheart##27347
+			..turnin The Forgotten Tale##12291
+			..accept The Truth Shall Set Us Free##12301
+		step
+			goto Dragonblight,86.80,66.18
+			.use Orik's Crystalline Orb##37577
+			.info Use it near the blue glowing circle on the ground.
+			.' Watch the dialogue.
+			.' Redeem the Forgotten|q 12301/1
+		step
+			goto Dragonblight,87.17,57.49
+			.talk Orik Trueheart##27347
+			..turnin The Truth Shall Set Us Free##12301
+			..accept Parting Thoughts##12305
+		step
+			goto Dragonblight,79.15,47.17
+			.talk Zelig the Visionary##27314
+			..turnin Parting Thoughts##12305
+			..accept What Secrets Men Hide##12475
+		step
+			goto Dragonblight,78.65,48.18
+			.talk Commander Lynore Windstryke##27155
+			..accept The Return of the Crusade?##12476
+		step
+			goto Dragonblight,78.55,48.24
+			.talk High Commander Halford Wyrmbane##27136
+			..accept The Path of Redemption##12477
+		step
+			goto Dragonblight,87.58,38.12
+			.collect Onslaught Map##37930|q 12475/1
+			.info Inside the building.
+		step
+			goto Dragonblight,85.55,37.02
+			.' Kill Onslaught enemies around this area.
+			.info Only enemies that look like humans will drop the quest item.
+			.get The Path of Redemption##37931|q 12477/1
+			.' Slay 20 Scarlet Onslaught|q 12476/1
+		step
+			goto Dragonblight,78.55,48.24
+			.talk High Commander Halford Wyrmbane##27136
+			..turnin The Path of Redemption##12477
+		step
+			goto Dragonblight,78.65,48.18
+			.talk Commander Lynore Windstryke##27155
+			..turnin The Return of the Crusade?##12476
+		step
+			goto Dragonblight,79.15,47.17
+			.talk Zelig the Visionary##27314
+			..turnin What Secrets Men Hide##12475
+			..accept Frostmourne Cavern##12478
+		step
+			goto Dragonblight,57.91,54.16
+			.talk Tariolstrasz##26443
+			..turnin Gaining an Audience##12119
+			..accept Speak with your Ambassador##12766
+		step
+			goto Dragonblight,57.91,54.16|n
+			.talk Tariolstrasz##26443
+			.' Tell him "Steward, please allow me to ride one of the drakes to the queen's chamber at the top of the temple."
+			.' Begin Flying to the Top of the Temple|goto 59.7,53,1 |q 12458 |future
+		step
+			goto Dragonblight,59.60,54.47
+			.talk Lord Itharius##27785
+			..accept Seeds of the Lashers##12458
+		step
+			goto Dragonblight,60,54.5
+			.talk Chromie##27856
+			..accept Mystery of the Infinite##12470
+		step
+			goto Dragonblight,60.07,54.20
+			.talk Nalice##27765
+			..accept The Obsidian Dragonshrine##12447
+		step
+			goto Dragonblight,59.51,53.33|n
+			.talk Torastrasza##26949
+			.' Tell him "Yes, please, I would like to return to the ground level of the temple."
+			.' Begin Flying to the Ground Level of the Temple|goto 58,55.15,1 |q 12467 |future
+		step
+			goto Dragonblight,71.92,38.99
+			.use Hourglass of Eternity##37923
+			.goal Hourglass of Eternity protected|q 12470/1
+		step
+			goto Dragonblight,64.74,27.93
+			.talk Legion Commander Tyralion##27844
+			..turnin Chasing Icestorm: The 7th Legion Front##12466
+			..accept Chasing Icestorm: Thel'zan's Phylactery##12467
+		step
+			goto Dragonblight,64.61,27.45
+			.talk "Wyrmbait"##27843
+			.' Tell him "Wyrmbait, eh?  Welp, go fetch us Icestorm!"
+			.' Watch the dialogue
+			.info Icestorm will fly to you and become chained by the harpoon guns nearby.
+			.kill Icestorm##26287|n
+			.info Let your allies fight him for a bit, to build aggro, before you attack him, so he won't attack you.
+			.collect Thel'zan's Phylactery##37920|q 12467/1
+			.info It appears on the ground after you kill Icestorm.
+		step
+			goto Dragonblight,64.42,26.94
+			.talk Duane##26978
+			..accept Pest Control##12142
+		step
+			goto Dragonblight,68.32,33.22
+			.' Kill Magnataur enemies around this area
+			.info They look like large blue centaurs.
+			.' Slay 3 Dragonblight Magnataur|q 12142/2
+			.' You can find more around (1)|at 65.58,41.27
+			.' You can find more around (2)|at 64.55,47.42
+		step
+			goto Dragonblight,70.24,32.69
+			.' Kill Snowplain enemies around this area
+			.info They look like kobolds.
+			.' Slay 10 Snowplain Snobolds|q 12142/1
+			.' You can find more around (1)|at 64.97,42.89
+			.' You can find more around (2)|at 65.12,49.85
+		step
+			goto Dragonblight,64.42,26.94
+			.talk Duane##26978
+			..turnin Pest Control##12142
+			..accept Canyon Chase##12143
+		step
+			goto Dragonblight,72.34,28.73
+			.kill Chilltusk##27005|q 12143/1
+			.info He looks like a Magnataur that walks around in this canyon.
+			.collect Emblazoned Battle Horn##36855|q 12146 |future
+		step
+			.use the Emblazoned Battle Horn##36855
+			..accept Disturbing Implications##12146
+		step
+			goto Dragonblight,75.07,20.22
+			.use Zelig's Scrying Orb##37933
+			.info Inside the cave.
+			.' Watch the dialogue.
+			.' Reveal the Secrets of the Past|q 12478/1
+		step
+			goto Dragonblight,78.57,48.23
+			.talk High Commander Halford Wyrmbane##27136
+			..turnin Chasing Icestorm: Thel'zan's Phylactery##12467
+			..accept Finality##12472
+		step
+			goto Dragonblight,79.15,47.17
+			.talk Zelig the Visionary##27314
+			..turnin Frostmourne Cavern##12478
+		step
+			goto Dragonblight,81.18,50.65
+			.talk Legion Commander Yorik##27857
+			..turnin Finality##12472
+			..accept An End And A Beginning##12473
+		step
+			goto Dragonblight,80.94,50.63
+			.' Watch the dialogue.
+			.info Inside the crypt.
+			.' Kill the enemies that attack
+			.info Your allies will help you fight.
+			.kill Thel'zan the Duskbringer##27383|n
+			.info After you kill him, there is a little more dialogue to wait for before the quest completes.
+			.' Defeat Thel'zan the Duskbringer|q 12473/1
+		step
+			goto Dragonblight,78.57,48.23		
+			.talk High Commander Halford Wyrmbane##27136
+			..turnin An End And A Beginning##12473
+			..accept To Fordragon Hold!##12474
+		step
+			goto Dragonblight,60.00,55.08
+			.talk Lauriel Trueblade##27803
+			..turnin Speak with your Ambassador##12766
+			..accept Report to the Ruby Dragonshrine##12460
+		step
+			goto Dragonblight,60.02,55.20
+			.talk Aurastrasza##26983
+			..turnin Disturbing Implications##12146
+		step
+			goto Dragonblight,60,54.5
+			.talk Chromie##27856
+			..turnin Mystery of the Infinite##12470
+		step
+			goto Dragonblight,52.21,50.03
+			.talk Ceristrasz##27506
+			..turnin Report to the Ruby Dragonshrine##12460
+			..accept Heated Battle##12416
+		step
+			goto Dragonblight,52.68,46.31
+			.kill 12 Frigid Ghoul Attacker##27685|q 12416/1
+			.info They look like zombies.
+			.kill 8 Frigid Geist Attacker##27686|q 12416/2
+			.info They looks like frail humans crouching on the ground.
+			.kill Frigid Abomination Attacker##27531|q 12416/3
+			.info They look like abominations.
+			.' You can find more around (1)|at 50.92,52.52
+			.' You can find more around (2)|at 49.35,51.10
+		step
+			goto Dragonblight,52.21,50.03
+			.talk Ceristrasz##27506
+			..turnin Heated Battle##12416
+			..accept Return to the Earth##12417
+		step
+			goto Dragonblight,48.25,47.14
+			.collect Ruby Acorn##37727|n |q 12417 |future
+			.info They look like small red stones on the ground.
+			.info You can find them all around the Ruby Dragonshrine area.
+			.use the Ruby Acorn##37727
+			.info Use them on Ruby Keeper corpses.
+			.info They look like large red dragons on fire on the ground.
+			.' Return 6 Ruby Keepers to the Earth|q 12417/1
+		step
+			goto Dragonblight,52.21,50.03
+			.talk Ceristrasz##27506
+			..turnin Return to the Earth##12417
+			..accept Through Fields of Flame##12418
+		step
+			goto Dragonblight,47.64,48.97
+			.kill Dahlia Suntouch##27680|n
+			.' Cleanse the Ruby Corruption|q 12418/2
+			.collect Ruby Brooch##37833|q 12419 |future
+		step
+			.use the Ruby Brooch##37833
+			..accept The Fate of the Ruby Dragonshrine##12419
+		step
+			goto Dragonblight,46.99,50.82
+			.kill 6 Frigid Necromancer##27539|q 12418/1
+			.info They look like humans wearing robes.
+			.info You can find them all around the outside of the tree.
+		step
+			goto Dragonblight,52.21,50.03
+			.talk Ceristrasz##27506
+			..turnin Through Fields of Flame##12418
+			..accept The Steward of Wyrmrest Temple##12768
+		step
+			goto Dragonblight,35.21,30.05
+			.talk Serinar##26593
+			..turnin The Obsidian Dragonshrine##12447
+			..accept No One to Save You##12262
+			..accept No Place to Run##12261
+		step
+			goto Dragonblight,41.38,31.86
+			.use the Destructive Wards##37445
+			.' Kill the enemies that attack in waves
+			.goal Fully Charge the Destructive Ward|q 12261/1
+		step
+			goto Dragonblight,38.19,31.90
+			.kill 6 Burning Depths Necrolyte##27356|q 12262/1
+			.info They look like humans wearing robes and carrying staves.
+			.kill 10 Smoldering Skeleton##27360|q 12262/2
+			.info They look like skeletons with red smoke rising out of the ground beneath them.
+			.info You can find them all around this area.
+		step
+			goto Dragonblight,35.21,30.05
+			.talk Serinar##26593
+			..turnin No One to Save You##12262
+			..turnin No Place to Run##12261
+			..accept The Best of Intentions##12263
+		step
+			goto Dragonblight,35.21,30.05
+			.' Watch the dialogue.
+			.info Inside the cave.
+			.info You will gain the buff automatically after a few seconds.
+			.' Gain the Burning Depths Necrolyte Disguise |havebuff Spell_Shadow_NetherCloak |q 12263
+		step
+			goto Dragonblight,35.03,31.95|n
+			.' Move along the corridor to the end|goto 34.03,26.37,1 |q 12263
+		step
+			goto Dragonblight,31.4,30.9
+			.goal Uncover the Magmawyrm Resurrection Chamber|q 12263/1
+		step
+			goto Dragonblight,35.21,30.05
+			.talk Serinar##26593
+			..turnin The Best of Intentions##12263
+			..accept Culling the Damned##12264
+			..accept Defiling the Defilers##12265
+		step
+			goto Dragonblight,31.87,29.61
+			.' Destroy 8 Necromantic Runes|q 12265/1
+			.info They look like round purple symbols on the ground around this area inside the cave.
+			.info If you couldn't jump up the rocks to take the shortcut, continue follow the path up in the cave until you reach this location.
+		step
+			goto Dragonblight,31.87,29.61
+			.kill 3 Burning Depths Necromancer##27358|q 12264/1
+			.info They look like humans wearing robes and carrying orange glowing staves.
+			.kill 6 Smoldering Construct##27362|q 12264/2
+			.info They look like hunched skeletons with red smoke rising out of the bodies.
+			.kill 6 Smoldering Geist##27363|q 12264/3
+			.info They look like frail humans crouching on the ground.
+			.info Inside the cave.
+		step
+			goto Dragonblight,35.21,30.05
+			.talk Serinar##26593
+			..turnin Culling the Damned##12264
+			..turnin Defiling the Defilers##12265
+			..accept Neltharion's Flame##12267
+		step
+			goto Dragonblight,31.41,31.01
+			.use Neltharion's Flame##37539
+			.info Use it on the edge of the rock, next to the lava inside the cave.
+			.info If you couldn't jump up the rocks to take the shortcut, continue follow the path up in the cave until you reach this location.
+			.' Cleanse the Summoning Area|q 12267/1
+		step
+			goto Dragonblight,31.41,31.01
+			.' Watch the dialogue.
+			.info Inside the cave.
+			.kill Rothin the Decaying##27355|q 12267/2
+		step
+			goto Dragonblight,35.21,30.05
+			.talk Serinar##26593
+			..turnin Neltharion's Flame##12267
+			..accept Tales of Destruction##12266
+		step
+			goto Dragonblight,37.81,23.41
+			.talk Highlord Bolvar Fordragon##27872
+			..turnin To Fordragon Hold!##12474
+			..accept Audience With The Dragon Queen##12495
+		step
+			goto Dragonblight,57.91,54.17
+			.talk Tariolstrasz##26443
+			..turnin The Steward of Wyrmrest Temple##12768
+			..accept Informing the Queen##12123
+		step
+			goto Dragonblight,60.07,54.20
+			.talk Nalice##27765
+			..turnin Tales of Destruction##12266
+		step
+			goto Dragonblight,59.83,54.66
+			.talk Alexstrasza the Life-Binder##26917
+			..turnin Audience With The Dragon Queen##12495
+			..accept Galakrond and the Scourge##12497
+			..turnin Informing the Queen##12123
+			..accept Report to Lord Devrestrasz##12435
+		step
+			goto Dragonblight,59.79,54.70
+			.talk Krasus##27990
+			..turnin The Fate of the Ruby Dragonshrine##12419
+		step
+			goto Dragonblight,59.52,53.32
+			.talk Torastrasza##26949
+			..turnin Galakrond and the Scourge##12497
+			..accept On Ruby Wings##12498
+		step
+			goto Dragonblight,59.73,53.12
+			.use the Ruby Beacon of the Dragon Queen##38302
+			.' Interact with NPC: Wyrmrest Vanquisher
+			.info It flies to you.
+			.' Ride the Wyrmrest Vanquisher|invehicle|q 12498
+		step
+			goto Dragonblight,54.3,30.8
+			.' Ride the Wyrmrest Vanquisher |invehicle |q 12498 |use the Ruby Beacon of the Dragon Queen##38302
+			.kill Thiassi the Lightning Bringer##28018|n
+			.info He walks around this small area on top of the hill.
+			.info Use the abilities on your action bar.
+			.kill Grand Necrolord Antiok##28006|n
+			.info He appears after you kill Thiassi the Lightning Bringer.
+			.info He will knock you off your dragon.
+			.collect Scythe of Antiok##38305|q 12498/2
+			.info It appears on the ground after you kill Grand Necrolord Antiok.
+		step
+			goto Dragonblight,56.05,34.4
+			.' Ride the Wyrmrest Vanquisher |invehicle |q 12498 |use the Ruby Beacon of the Dragon Queen##38302
+			.kill 30 Wastes Scavenger##28005|q 12498/1
+		step
+			goto Dragonblight,64.90,73.64
+			.talk Nishera the Garden Keeper##27255
+			..accept Cycle of Life##12454
+		step
+			goto Dragonblight,63.44,71.90
+			.from Emerald Lasher##27254
+			.info They look like plants with large petals.
+			.info You can find them all around the Emerald Dragonshrine area.
+			.get 3 Lasher Seed##140458|q 12458/1
+		step
+			goto Dragonblight,63.94,73.22
+			.kill 5 Emerald Skytalon##27244|q 12454/1
+			.info They look like owls flying in the air above the lake.
+		step
+			goto Dragonblight,64.90,73.64
+			.talk Nishera the Garden Keeper##27255
+			..turnin Cycle of Life##12454
+			..accept The Plume of Alystros##12456
+		step
+			goto Dragonblight,64.78,77.6
+			.use Skytalon Molts##37881
+			.from Alystros the Verdant Keeper##27249
+			.get The Plume of Alystros##37880|q 12456/1
+		step
+			goto Dragonblight,64.90,73.64
+			.talk Nishera the Garden Keeper##27255
+			..turnin The Plume of Alystros##12456
+		step
+			goto Dragonblight,59.60,54.47
+			.talk Lord Itharius##27785
+			..turnin Seeds of the Lashers##12458
+			..accept That Which Creates Can Also Destroy##12459
+		step
+			goto Dragonblight,64.42,26.94
+			.talk Duane##26978
+			..turnin Canyon Chase##12143
+		step
+			goto Dragonblight,55.8,41.8
+			.from Reanimated Frost Wyrm##26841|use Seeds of Nature's Wrath##37887
+			.kill Weakened Reanimated Frost Wyrm##27821|q 12459/1
+		step
+			goto Dragonblight,48.46,24.13
+			.talk Nozzlerust Supply Runner##26896
+			..accept Return to Sender##12469
+		step
+			goto Dragonblight,54.47,23.60
+			.talk Narf##26647
+			..accept Nozzlerust Defense##12043
+		step
+			goto Dragonblight,54.70,23.25
+			.talk Zivlix##26661
+			..accept Shaved Ice##12045
+		step
+			goto Dragonblight,55.02,23.43
+			.talk Xink##26660
+			..turnin Return to Sender##12469
+			..accept Stocking Up##12044
+		step
+			goto Dragonblight,57.74,16.46
+			.from Crystalline Ice Elemental##26316
+			.get 4 Ice Shard Cluster##36728|q 12045/1
+			.' You can find more around (1)|at 53.30,19.09
+			.' You can find more around (2)|at 49.86,18.52
+		step
+			goto Dragonblight,56.19,27.07
+			.kill Wastes Taskmaster##26493|q 12043/1
+			.info They look like humans wearing robes.
+			.' You can find more around (1)|at 59.02,31.14
+			.' You can find more around (2)|at 51.80,31.23
+		step
+			goto Dragonblight,56.19,27.07
+			.kill 12 Wastes Digger##26492|q 12043/2
+			.info They look like zombies.
+			.collect 8 Composite Ore##36727|q 12044/1
+			.info They look like carts with ore in them on the ground.
+			.' You can find more around (1)|at 59.02,31.14
+			.' You can find more around (2)|at 51.80,31.23
+		step
+			goto Dragonblight,55.03,23.42
+			.talk Xink##26660
+			..turnin Stocking Up##12044
+		step
+			goto Dragonblight,54.70,23.25
+			.talk Zivlix##26661
+			..turnin Shaved Ice##12045
+			..accept Soft Packaging##12046
+		step
+			goto Dragonblight,54.47,23.60
+			.talk Narf##26647
+			..turnin Nozzlerust Defense##12043
+		step
+			goto Dragonblight,51.75,24.79
+			.from Jormungar Tunneler##26467
+			.info They look like large grubs around this area.
+			.info Dragonbone Condors will also drop the quest item.
+			.info They look like birds.
+			.get 12 Thin Animal Hide##36729|q 12046/1
+		step
+			goto Dragonblight,54.70,23.25
+			.talk Zivlix##26661
+			..turnin Soft Packaging##12046
+			..accept Something That Doesn't Melt##12047
+		step
+			goto Dragonblight,55.02,23.43
+			.talk Xink##26660
+			..accept Hard to Swallow##12049
+		step
+			goto Dragonblight,59.48,23.04
+			.from Hulking Jormungar##26293
+			.info They look like centipedes standing upright.
+			.info They are elite, but you don't kill them.
+			.info Just fight one until it opens its mouth.
+			.info You will get a message on your screen when it opens its mouth.
+			.use the Potent Explosive Charges##36732
+			.info Use them on the Hulking Jormungar after it opens its mouth.
+			.get 6 Seared Jormungar Meat##36731|q 12049/1
+			.info They appear on the ground after the Hulking Jormungar dies.
+		step
+			goto Dragonblight,57.28,24.29
+			.collect 12 Splintered Bone Chunk##36730|q 12047/1
+			.info They look like small white pointed bones near the huge bones on the ground around this area.
+			.' You can find more around (1)|at 59.96,27.16
+			.' You can find more around (2)|at 62.80,28.91
+		step
+			goto Dragonblight,55.02,23.43
+			.talk Xink##26660
+			..turnin Hard to Swallow##12049
+		step
+			goto Dragonblight,54.70,23.25
+			.talk Zivlix##26661
+			..turnin Something That Doesn't Melt##12047
+		step
+			goto Dragonblight,54.47,23.60
+			.talk Narf##26647
+			..accept Harp on This!##12052
+		step
+			goto Dragonblight,55.02,23.43
+			.talk Xink##26660
+			..accept Lumber Hack##12050
+		step
+			goto Dragonblight,45.44,7.36
+			.use Xink's Shredder Control Device##36734
+			.info Fly to this location with the dragon and use the item here.
+			.' Control a Shredder |invehicle |q 12050
+			.info It walks up to you.
+		step
+			goto Dragonblight,44.99,9.26
+			.kill Mistress of the Coldwind##26890|q 12052/1
+			.info Use the abilities on your action bar.
+			.info She flies in the air around this area.
+		step
+			goto Dragonblight,45.76,11.52
+			.collect 50 Coldwind Lumber##36733|q 12050/1
+			.info Use the "Gather Lumber" ability on your action bar next to Coldwind Trees.
+			.info They look like trees with small pieces of paper with X's on them on the ground around this area.
+			.' You can find more around|at 50.18,18.62
+		step
+			goto Dragonblight,50.18,18.62
+			.' Kill Coldwind enemies around this area
+			.info You can find more to the southeast.
+			.' Slay 15 Harpies|q 12052/2
+			.' You can find more around|at 45.76,11.52
+		step
+			goto Dragonblight,
+			.' Stop Controlling the Shredder |outvehicle |q 12052
+			.info Click the red arrow on your action bar.
+		step
+			goto Dragonblight,54.47,23.60
+			.talk Narf##26647
+			..turnin Harp on This!##12052
+		step
+			goto Dragonblight,55.03,23.42
+			.talk Xink##26660
+			..turnin Lumber Hack##12050
+		step
+			goto Dragonblight,54.47,23.60
+			.talk Narf##26647
+			..accept Stiff Negotiations##12112
+		step
+			goto Dragonblight,59.40,18.18
+			.talk Zort##26659
+			..turnin Stiff Negotiations##12112
+			..accept Slim Pickings##12075
+		step
+			goto Dragonblight,56.16,11.93
+			.collect Sample of Rockflesh##36765|q 12075/1
+			.info Inside the cave.
+		step
+			goto Dragonblight,59.40,18.18
+			.talk Zort##26659
+			..turnin Slim Pickings##12075
+			..accept Messy Business##12076
+		step
+			goto Dragonblight,58.99,17.81
+			.talk Ko'char the Unbreakable##26473
+			..accept Stomping Grounds##12079
+		step
+			goto Dragonblight,60.67,18.58
+			.from Ice Heart Jormungar Feeder##26358
+			.info Don't kill them, wait for them to cast a poison on you.
+			.use Zort's Scraper##36775
+			.info Use it when you are affected by the poison.
+			.info After you collect the spit, you can kill them.
+			.get 2 Vial of Corrosive Spit##36768|q 12076/1
+			.' You can find more around (1)|at 60.06,15.81
+			.' You can find more around (2)|at 56.74,19.64
+		step
+			goto Dragonblight,59.40,18.18
+			.talk Zort##26659
+			..turnin Messy Business##12076
+			..accept Apply This Twice A Day##12077
+		step
+			goto Dragonblight,58.99,17.81
+			.talk Ko'char the Unbreakable##26473
+			..turnin Apply This Twice A Day##12077
+		step
+			goto Dragonblight,59.40,18.18
+			.talk Zort##26659
+			..accept Worm Wrangler##12078
+		step
+			.use Zort's Protective Elixir##36770
+			.info This will give you a buff that protects you from the spit attacks the centipede enemies use.
+			.' Become Undigestible| havebuff INV_Potion_93 |q 12078
+		step
+			goto Dragonblight,57.47,12.28
+			.use the Sturdy Crates##36771
+			.info Use them on Ice Heart Jormungar Spawns.
+			.info They look like smaller blue centipedes.
+			.info You can find them all throughout inside the cave.
+			.collect 3 Captured Jormungar Spawn##36772|q 12078/1
+			.info They appear on the ground after you use the Sturdy Crates on Ice Heart Jormungar Spawns.
+		step
+			goto Dragonblight,57.47,12.28
+			.kill 8 Ice Heart Jormungar Feeder##26358|q 12079/1
+			.info You can find them all throughout inside the cave.
+		step
+			goto Dragonblight,59.40,18.18
+			.talk Zort##26659
+			..turnin Worm Wrangler##12078
+		step
+			goto Dragonblight,58.99,17.81
+			.talk Ko'char the Unbreakable##26473
+			..turnin Stomping Grounds##12079
+		step
+			goto Dragonblight,89.5,19.1
+			.from Overseer Deathgaze##27122|use Seeds of Nature's Wrath##37887
+			.kill Weakened Overseer Deathgaze##27807|q 12459/3
+		step
+			goto Dragonblight,86.1,47
+			.from Turgid the Vile##27808|use Seeds of Nature's Wrath##37887
+			.kill Weakened Turgid the Vile##27809|q 12459/2
+		step
+			goto Dragonblight,59.84,54.65
+			.talk Alexstrasza the Life-Binder##26917
+			..turnin On Ruby Wings##12498
+			..accept Return To Angrathar##12499
+		step
+			goto Dragonblight,59.60,54.47
+			.talk Lord Itharius##27785
+			..turnin That Which Creates Can Also Destroy##12459
+		step
+			goto Dragonblight,59.24,54.32
+			.talk Lord Devrestrasz##27575
+			..turnin Report to Lord Devrestrasz##12435
+			..accept Defending Wyrmrest Temple##12372
+		step
+			goto Dragonblight,58.35,55.22
+			.talk Wyrmrest Defender##27629
+			.' Tell him "We need to get into the fight. Are you ready?"
+			.' Fly with the Wyrmrest Defender |invehicle |q 12372
+		step
+			goto Dragonblight,55.47,66.14
+			.' Destabilize the Azure Dragonshrine|q 12372/3
+			.info Use the "Destabilize Azure Dragonshrine" ability on your action bar.
+		step
+			goto Dragonblight,56.96,65.31
+			.kill 3 Azure Dragon##27608|q 12372/1
+			.info Use the abilities on your action bar. |notinsticky
+			.info They look like larger blue dragons flying all around this area.
+			.' You can find more all around Wyrmrest Temple around|at 58.78,58.38
+		step
+			goto Dragonblight,56.96,65.31
+			.kill 5 Azure Drake##27682|q 12372/2
+			.info Use the abilities on your action bar.
+			.info They look like smaller blue dragons flying all around this area
+			.' You can find more all around Wyrmrest Temple around|at 58.78,58.38
+		step
+			goto Dragonblight,59.24,54.32
+			.talk Lord Devrestrasz##27575
+			..turnin Defending Wyrmrest Temple##12372
+		step
+			goto Dragonblight,37.81,23.41
+			.talk Highlord Bolvar Fordragon##27872
+			..turnin Return To Angrathar##12499
+		step
+			goto Dragonblight,38.42,19.25
+			.talk Alexstrasza the Life-Binder##31333
+			..accept Reborn From The Ashes##13347
+		step
+			goto Dragonblight,38,19.6
+			.collect Fordragon's Shield##44474|q 13347/1
+			.info It looks like a small metal shield on the ground.
+		step
+			goto Stormwind City,79.99,38.47
+			.talk King Varian Wrynn##29611
+			..turnin Reborn From The Ashes##13347
+		step
+			.' Congratulations! +115 quests for achievement "Might of Dragonblight".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[74-empty] Grizzly Hills",[[
