@@ -3476,7 +3476,7 @@ startlevel 72
 			.info They have a chance to attack you instead of giving you the bark.
 			.info You can find them all around the Lothalor Woodlands area.
 			.collect Bark of the Walkers##36786|n
-			.use the Bark of the Walkers##36786
+			.use Bark of the Walkers##36786
 			.info Use them on Lothalor Ancients around this area.
 			.info They look like larger dazed tree creatures.
 			.' Strengthen 3 Lothalor Ancients|q 12092/1
@@ -3502,8 +3502,7 @@ startlevel 72
 			..accept Search Indu'le Village##12098
 		step
 			goto Dragonblight,40.25,66.86
-			.' Interact with NPC: Mage-Commander Evenstar
-			.info He looks like a dead blood elf wearing a robe, underwater.
+			.talk Mage-Commander Evenstar##26873
 			..turnin Search Indu'le Village##12098
 			..accept The End of the Line##12107
 		step
@@ -3669,7 +3668,7 @@ startlevel 72
 			..accept Flight of the Wintergarde Defender##12237
 		step
 			goto Dragonblight,77.30,49.99
-			.use the Wintergarde Gryphon Whistle##37287
+			.use Wintergarde Gryphon Whistle##37287
 			.info It flies down to you and lands.
 			.' Ride the Wintergarde Gryphon |invehicle |q 12237
 		step
@@ -3730,8 +3729,7 @@ startlevel 72
 			.' You can find more inside the buildings around this area.
 		step
 			goto Dragonblight,81.52,42.21
-			.' Interact with NPC: Slinkin the Demo-gnome
-			.info Inside the mine.
+			.talk Slinkin the Demo-gnome##27412
 			..turnin The Search for Slinkin##12276
 			..accept Leave Nothing to Chance##12277
 		step
@@ -3831,10 +3829,10 @@ startlevel 72
 		step
 			goto Dragonblight,77.20,49.54
 			.' Interact with NPC: Wintergarde Gryphon
-			.' Borrow the Wintergarde Gryphon|invehicle |q 12325
+			.' Borrow the Wintergarde Gryphon |invehicle |q 12325
 		step
 			goto Dragonblight,89.60,46.86
-			.' Fly to Duke August Foehammer|outvehicle |q 12325 |noway
+			.' Fly to Duke August Foehammer |outvehicle |q 12325 |noway
 		step
 			goto Dragonblight,89.68,46.37
 			.talk Duke August Foehammer##27157
@@ -4636,13 +4634,1249 @@ startlevel 72
 			.' Congratulations! +115 quests for achievement "Might of Dragonblight".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[74-empty] Grizzly Hills",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[74-beta] Grizzly Hills",[[
 author danaton
 description This guide contain quest-chain (??) for Grizzly Hills location.
 startlevel 74
 		step
+			goto Dragonblight,77.1,50.1
+			.talk Gryphon Commander Urik##27317
+			..accept The Hills Have Us##12511
 		step
-			.' "Fo' Grizzle My Shizzle".
+			goto Grizzly Hills,31.80,59.55
+			.' Interact with gameobject: Amberseed
+			.info Inside the building.
+			..accept Mmm... Amberseeds!##12225
+		step
+			goto Grizzly Hills,32.10,59.96
+			.talk Master Woodsman Anderhol##27277
+			..turnin Mmm... Amberseeds!##12225
+			..accept Just Passing Through##12226
+			..accept Replenishing the Storehouse##12212
+			..accept Them or Us!##12215
+		step
+			goto Grizzly Hills,31.84,60.17
+			.talk Lieutenant Dumont##26875
+			..turnin The Hills Have Us##12511
+			..accept Local Support##12292
+		step
+			goto Grizzly Hills,29.49,52.64
+			.collect 5 Blackroot Stalk##37246|q 12226/1
+			.info They look like tall grass plants on the ground around this area.
+			.' You can find more around|at 29.18,57.09
+		step
+			goto Grizzly Hills,15.87,65.27
+			.collect Cedar Chest##37572|q 12292/1
+			.info Inside the building.
+			.info Avoid Conquest Hold as you travel here.
+		step
+			goto Grizzly Hills,20.72,55.17
+			.from Tallhorn Stag##26363+
+			.info They look like brown deer bucks.
+			.get 8 Succulent Venison##37185|q 12212/1
+			.info These may have a low drop rate.
+			.info Graymist Hunters will kill them as well.
+			.' You can find more around (1)|at 24.67,58.08
+			.' You can find more around (2)|at 27.18,55.30
+		step
+			goto Grizzly Hills,25.38,55.60
+			.kill 6 Graymist Hunter##26592|q 12215/1
+			.info They look like gray wolves.
+			.' You can find more around (1)|at 24.15,49.33
+		step
+			goto Grizzly Hills,32.10,59.96
+			.talk Master Woodsman Anderhol##27277
+			..turnin Just Passing Through##12226
+			..accept Doing Your Duty##12227
+			..turnin Replenishing the Storehouse##12212
+			..accept Take Their Rear!##12216
+			..turnin Them or Us!##12215
+			..accept Eagle Eyes##12217
+		step
+			goto Grizzly Hills,31.83,60.17
+			.talk Lieutenant Dumont##26875
+			..turnin Local Support##12292
+			..accept Close the Deal##12293
+			..accept Troll Season!##12210
+		step
+			goto Grizzly Hills,32.22,58.92
+			.' Interact with gameobject: Amberpine Outhouse
+			.' Choose "Use the outhouse."
+			.' Watch the dialogue.
+			.collect Partially Processed Amberseeds##37250|q 12227/1
+		step
+			goto Grizzly Hills,34.45,58.30
+			.kill 5 Imperial Eagle##26369|q 12217/1
+			.info They look like bald eagles.
+			.info They fly around and land on rocks and logs on the ground around this area.
+			.' You can find more around (1)|at 35.28,60.25
+			.' You can find more around (2)|at 36.93,60.46
+			.' You can find more around (3)|at 38.37,53.05
+			.' You can find more around (4)|at 32.15,47.65
+		step
+			goto Grizzly Hills,34.77,55.61
+			.talk Ivan##27469
+			..turnin Close the Deal##12293
+			..accept A Tentative Pact##12294
+		step
+			goto Grizzly Hills,29.57,51.92
+			.from Grizzly Bear##27131
+			.info All along the river.
+			.get 8 Grizzly Flank##37200|q 12216/1
+			.' You can find more around (1)|at 30.72,46.48
+			.' You can find more around (2)|at 29.36,56.13
+		step
+			goto Grizzly Hills,29.91,59.78
+			.talk Scout Captain Carter##27783
+			..accept Blackriver Skirmish##12444
+		step
+			goto Grizzly Hills,28.35,62.42
+			.' Slay 10 Horde in Blackriver|q 12444/1
+			.info You can kill NPCs or players.
+		step
+			goto Grizzly Hills,29.91,59.78
+			.talk Scout Captain Carter##27783
+			..turnin Blackriver Skirmish##12444
+		step
+			goto Grizzly Hills,32.10,59.96
+			.talk Master Woodsman Anderhol##27277
+			..turnin Doing Your Duty##12227
+			..turnin Take Their Rear!##12216
+			..turnin Eagle Eyes##12217
+		step
+			goto Grizzly Hills,31.83,60.17
+			.talk Lieutenant Dumont##26875
+			..turnin A Tentative Pact##12294
+			..accept An Exercise in Diplomacy##12295
+		step
+			goto Grizzly Hills,32.42,59.94
+			.talk Woodsman Drake##27391
+			..accept Secrets of the Flamebinders##12222
+			..accept Thinning the Ranks##12223
+		step
+			goto Grizzly Hills,30.35,75.75
+			.from Dragonflayer Flamebinder##27259+
+			.info These look like women.
+			.info They can also be inside the buildings around this area.
+			.get 3 Flame-Imbued Talisman##37229|q 12222/1
+			.' You can find more around|at 28.06,74.09
+		step
+			goto Grizzly Hills,30.35,75.75
+			.kill 12 Dragonflayer Huscarl##27260|q 12223/1
+			.info They can also be inside the buildings around this area.
+			.' You can find more around|at 28.06,74.09
+		step
+			goto Grizzly Hills,32.42,59.94
+			.talk Woodsman Drake##27391
+			..turnin Thinning the Ranks##12223 
+			..turnin Secrets of the Flamebinders##12222
+			..accept The Thane of Voldrune##12255
+		step
+			goto Grizzly Hills,23.02,80.16
+			.talk Barblefink##27495
+			..accept Seeking Solvent##12443
+		step
+			goto Grizzly Hills,22.12,81.25
+			.talk Lieutenant Stuart##27562
+			..accept Keep Them at Bay!##12316
+		step
+			goto Grizzly Hills,21.99,80.72
+			.talk Sergeant Downey##27602
+			..accept Smoke 'Em Out##12323
+		step
+			goto Grizzly Hills,17.87,79.79
+			.use The Smoke Bomb##37621
+			.info Use it on Venture Co. Stragglers.
+			.info They look like Horde enemies inside the buildings around this area.
+			.info They are not in the ships.
+			.' Smoke Out 20 Venture Company Stragglers|q 12323/1
+			.' You can find more around (1)|at 16.11,76.83
+			.' You can find more around (2)|at 14.47,76.78
+		step
+			goto Grizzly Hills,13.75,78.13
+			.kill 10 Horde in Venture Bay|q 12316/1
+			.info You can kill NPCs or players.
+		step
+			goto Grizzly Hills,16.44,80.32
+			.' Click Element 115
+			.info It looks like a red canister inside the ship, on the main deck level.
+			.info HURRY after picking this up, it only lasts for 4 minutes.
+			.info In the next step, get back to the questgivers as fast as you can.
+			.collect Element 115##37664|q 12443/1
+		step
+			goto Grizzly Hills,21.99,80.72
+			.talk Sergeant Downey##27602
+			..turnin Smoke 'Em Out##12323
+		step
+			goto Grizzly Hills,22.12,81.25
+			.talk Lieutenant Stuart##27562
+			..turnin Keep Them at Bay!##12316
+		step
+			goto Grizzly Hills,23.02,80.16
+			.talk Barblefink##27495
+			..turnin Seeking Solvent##12443
+		step
+			goto Grizzly Hills,26.6,77.8
+			.talk Flamebringer##27292
+			.' Control the flight on Flamebringer |invehicle |q 12255
+		step
+			goto Grizzly Hills,27.06,72.86
+			.kill Thane Torvald Eriksson##27377|q 12255/1
+			.info Use the abilities on your action bar.
+			.info Move out of Volley if Wing buffet is on cooldown.
+			.info At the top of the tower.
+		step
+			goto Grizzly Hills,16.19,47.60
+			.talk Samir##26424
+			..turnin Troll Season!##12210
+			..accept Filling the Cages##11984
+		step
+			goto Grizzly Hills,16.37,48.26
+			.talk Budd##26422
+			.' Tell him "Come on, Budd. Time to play with the ice trolls!"
+			.' Get Budd's Attention |havebuff INV_Misc_Head_Troll_01 |q 11984
+		step
+			goto Grizzly Hills,13.79,58.47
+			.use the Bounty Hunter's Cage##35736
+			.info He will aggro enemies on the way to capture a troll.
+			.info Be sure to protect him or you will have to go back and get him from the hut.
+			.info Use it on a troll that Budd stuns.
+			.info To stun a troll, use Budd's "Tag Troll" ability on your pet bar near any Drakkari troll around this area.
+			.info He will sneak up and stun a nearby troll.
+			.' Capture a Live Ice Troll|q 11984/1
+		step
+			goto Grizzly Hills,16.19,47.60
+			.talk Samir##26424
+			..turnin Filling the Cages##11984
+		step
+			goto Grizzly Hills,16.42,47.81
+			.talk Drakuru##26423
+			..accept Truce?##11989
+		step
+			goto Grizzly Hills,16.54,47.81
+			.collect Dull Carving Knife##38083|q 11989
+			.info Stuck into the side of the tree stump.
+		step
+			goto Grizzly Hills,16.43,47.81
+			.use the Dull Carving Knife##38083
+			.' Take the Blood Oath |havebuff Spell_Shadow_LifeDrain |q 11989
+		step
+			goto Grizzly Hills,16.42,47.81
+			.talk Drakuru##26423
+			.' Choose "Shake Drakuru's outstretched hand."
+			.' Form a Blood Pact With Drakuru|q 11989/1
+		step
+			goto Grizzly Hills,16.42,47.81
+			.talk Drakuru##26423
+			..turnin Truce?##11989
+			..accept Vial of Visions##11990
+		step
+			goto Grizzly Hills,15.96,47.79
+			.talk Ameenah##26474
+			.buy Imbued Vial##18256|q 11990/1
+		step
+			goto Grizzly Hills,15.01,44.39
+			.collect 3 Haze Leaf##37085|q 11990/2
+			.info They look like small bushy plants with purple flowers on them on the ground around this area.
+			.' You can find more around (1)|at 16.63,43.34
+			.' You can find more around (2)|at 13.39,41.84
+		step
+			goto Grizzly Hills,15.23,40.35
+			.collect Waterweed Frond##35795|q 11990/3
+			.info They look like tall bushy green plants underwater around this area.
+		step
+			goto Grizzly Hills,16.42,47.81
+			.talk Drakuru##26423
+			..turnin Vial of Visions##11990
+			..accept Subject to Interpretation##11991
+		step
+			goto Grizzly Hills,15.73,46.69
+			.talk Prigmon##26519
+			..accept Scourgekabob##12484
+		step
+			goto Grizzly Hills,15.70,46.86
+			.collect Scourged Troll Mummy##38149|q 12484
+		step
+			goto Grizzly Hills,16.78,48.22
+			.use the Scourged Troll Mummy##38149
+			.info Use it next to the burning pile of mummies.
+			.' Burn a Mummified Carcass|q 12484/1
+		step
+			goto Grizzly Hills,16.67,48.29
+			.talk Mack Fearsen##26604
+			..turnin Scourgekabob##12484
+		step
+			goto Grizzly Hills,16.67,48.29
+			.' Watch the dialogue.
+			.talk Mack Fearsen##26604
+			..accept Seared Scourge##12029
+		step
+			goto Grizzly Hills,15.73,46.69
+			.talk Prigmon##26519
+			..accept Shimmercap Stew##12483
+		step
+			goto Grizzly Hills,11.42,54.39
+			.collect 5 Shimmering Snowcap##35782|q 12483/2
+			.info They look like patches of blue glowing mushrooms on the ground around this area.
+			.' You can find more around (1)|at 11.05,57.10
+			.' You can find more around (2)|at 11.09,59.55
+			.' You can find more around (3)|at 10.66,62.76
+		step
+			goto Grizzly Hills,12.73,60.84
+			.from Drakkari Warrior##26425, Drakkari Shaman##26447
+			.info They look like trolls.
+			.info You can find them all around in the Ruins of Drak'Zin.
+			.collect 5 Frozen Mojo##35799|q 11991
+		step
+			goto Grizzly Hills,13.27,60.86
+			.use Drakuru's Elixir##35797
+			.info Use it next to the brazier at the top of the stairs.
+			.talk Image of Drakuru##26500
+			..turnin Subject to Interpretation##11991
+			..accept Sacrifices Must be Made##12007
+		step
+			goto Grizzly Hills,13.51,59.61
+			.from Ice Serpent##26446
+			.info They look like thin blue dragons.
+			.info You can find them all around in the Ruins of Drak'Zin.
+			.get 5 Ice Serpent Eye##35798|q 12483/1
+		step
+			goto Grizzly Hills,14.51,38.01
+			.from Warlord Zim'bo##26544
+			.collect Zim'bo's Mojo##35836|q 12007
+		step
+			goto Grizzly Hills,17.93,36.48
+			.' Interact with gameobject: Seer of Zeb'Halak
+			.info At the top of the temple.
+			.' Choose "Remove the Eye of the Prophets from the idol's face."
+			.collect Eye of the Prophets##35806|q 12007/1
+		step
+			goto Grizzly Hills,17.46,36.37
+			.use Drakuru's Elixir##35797
+			.info Use it next to the brazier at the top of the temple.
+			.talk Image of Drakuru##26543
+			..turnin Sacrifices Must be Made##12007
+			..accept Heart of the Ancients##12042
+		step
+			goto Grizzly Hills,15.61,36.25
+			.collect 5 Sweetroot##37087|q 12483/3
+			.info They look like green spikey plants on the ground around this area.
+			.info You can find them all around the Zeb'Halak area.
+		step
+			goto Grizzly Hills,16.20,29.32
+			.use Mack's Dark Grog##35908
+			.info Throw it at the trolls running around on the ground nearby.
+			.info Don't let the trolls get too close to you, they'll attack you.
+			.' Burn 20 Scourge Trolls|q 12029/1
+		step
+			goto Grizzly Hills,15.74,46.69
+			.talk Prigmon##26519
+			..turnin Shimmercap Stew##12483
+			..accept Say Hello to My Little Friend##12190
+		step
+			goto Grizzly Hills,16.67,48.29
+			.talk Mack Fearsen##26604
+			..turnin Seared Scourge##12029
+		step
+			goto Grizzly Hills,26.41,35.70
+			.talk Envoy Ducal##26821
+			..turnin An Exercise in Diplomacy##12295
+		step
+			goto Grizzly Hills,26.48,35.77
+			.talk Sergei##27486
+			..accept Northern Hospitality##12299
+		step
+			goto Grizzly Hills,25.61,33.30
+			.talk Katja##27545
+			..accept Wolfsbane Root##12307
+		step
+			goto Grizzly Hills,24.28,32.23
+			.kill 8 Conquest Hold Marauder##27424|q 12299/1
+			.' You can find more around|at 24.09,36.38
+		step
+			goto Grizzly Hills,26.48,35.77
+			.talk Sergei##27486
+			..turnin Northern Hospitality##12299
+		step
+			goto Grizzly Hills,26.30,38.48
+			.' Uproot 8 Wolfsbane Roots|q 12307/1
+			.info They look like thorny vine plants on the ground around this area.
+			.' You can find more around|at 29.26,36.23
+		step
+			goto Grizzly Hills,25.61,33.30
+			.talk Katja##27545
+			..turnin Wolfsbane Root##12307
+		step
+			goto Grizzly Hills,26.48,35.77
+			.talk Sergei##27486
+			..accept Test of Mettle##12300
+		step
+			goto Grizzly Hills,21.91,29.80
+			.kill Sergeant Bonesnap##27493|n
+			.' Perform the Test of Mettle|q 12300/1
+		step
+			goto Grizzly Hills,21.93,29.93
+			.talk Captured Trapper##27497
+			..turnin Test of Mettle##12300
+			..accept Words of Warning##12302
+		step
+			goto Grizzly Hills,26.47,31.80
+			.talk Caged Prisoner##27499
+			..turnin Words of Warning##12302
+			..accept Escape from Silverbrook##12308
+		step
+			goto Grizzly Hills,26.25,31.11
+			.' Watch the dialogue.
+			.info Follow the Freed Alliance Scout as he walks.
+			.' Interact with NPC: Ducal's Horse
+			.' Ride with Ducal |invehicle |q 12308
+		step
+			goto Grizzly Hills,32.38,59.14
+			.' Watch the dialogue.
+			.info Use the abilities on your action bar to make the horse run faster and fight enemies as you ride with Ducal.
+			.info You will ride back to Amberpine Lodge.
+			.' Escape from Silverbrook|q 12308/1 |noway
+		step
+			goto Grizzly Hills,32.42,59.94
+			.talk Woodsman Drake##27391
+			..turnin The Thane of Voldrune##12255
+		step
+			goto Grizzly Hills,31.83,60.17
+			.talk Lieutenant Dumont##26875
+			..turnin Escape from Silverbrook##12308
+			..accept A Swift Response##12310
+		step
+			goto Grizzly Hills,36.24,67.84
+			.kill Vladek##27547|q 12310/2
+			.info Inside the building.
+		step
+			goto Grizzly Hills,36.12,68.64
+			.from Silverbrook Hunter##27546+
+			.collect Mikhail's Journal##36940 |n
+			.use Mikhail's Journal##36940
+			..accept Descent into Darkness##12105
+		step
+			goto Grizzly Hills,36.12,68.64
+			.kill 7 Silverbrook Hunter##27546|q 12310/1
+			.info They look like humans.
+		step
+			goto Grizzly Hills,31.83,60.17
+			.talk Lieutenant Dumont##26875
+			..turnin A Swift Response##12310
+			..turnin Descent into Darkness##12105
+			..accept Report to Gryan Stoutmantle... Again##12109
+		step
+			goto Grizzly Hills,31.16,59.47
+			.talk Hierophant Thayreen##27295
+			..accept The Failed World Tree##12219
+			..accept A Dark Influence##12220
+		step
+			goto Grizzly Hills,30.44,43.80
+			.use the Geomancer's Orb##37173
+			.info Inside the cave.
+			.' Use the Orb Beneath Vordrassil's Tears|q 12220/3
+		step
+			goto Grizzly Hills,32.23,45.89
+			.use the Geomancer's Orb##37173
+			.info Inside the cave.
+			.' Use the Orb Beneath Vordrassil's Limb|q 12220/2
+		step
+			goto Grizzly Hills,39.82,50.50
+			.from Entropic Ooze##26366
+			.get 6 Slime Sample##37199|q 12219/1
+		step
+			goto Grizzly Hills,41.15,54.64
+			.use the Geomancer's Orb##37173
+			.info Inside the cave.
+			.' Use the Orb Beneath Vordrassil's Heart|q 12220/1
+		step
+			goto Grizzly Hills,31.16,59.47
+			.talk Hierophant Thayreen##27295
+			..turnin The Failed World Tree##12219
+			..turnin A Dark Influence##12220
+			..accept A Possible Link##12246
+			..accept Children of Ursoc##12247
+		step
+			goto Grizzly Hills,48.07,58.86
+			.talk Orsonn##27274
+			.' Tell him "You're free to go Orsonn, but first tell me what's wrong with the furbolg."
+			.' Listen to Orsonn's Story|q 12247/1
+		step
+			goto Grizzly Hills,66.89,62.40
+			.talk Kodian##27275
+			.' Ask him "Who was this stranger?"
+			.' Listen to Kodian's Story|q 12247/2
+		step
+			goto Grizzly Hills,65.98,58.61
+			.' Kill enemies around this area
+			.info They look like furbolgs.
+			.collect 8 Crazed Furbolg Blood##37251|q 12246/1
+			.' You can find more around|at 65.77,54.58
+		step
+			goto Grizzly Hills,31.16,59.47
+			.talk Hierophant Thayreen##27295
+			..turnin A Possible Link##12246
+			..turnin Children of Ursoc##12247
+			..accept Vordrassil's Sapling##12248
+			..accept Vordrassil's Seeds##12250
+		step
+			goto Grizzly Hills,50.73,42.66
+			.use the Verdant Torch##37306
+			.info Inside the huge tree, on the bottom floor.
+			.collect Vordrassil's Ashes##37303|q 12248/1
+		step
+			goto Grizzly Hills,50.73,42.70
+			.collect 8 Vordrassil's Seed##37302|q 12250/1
+			.info They look like small brown pine cones on the ground.
+			.info You can find them all around the Grizzlemaw area.
+			.info They can be inside or outside the huge tree.
+		step
+			goto Grizzly Hills,40.47,42.65
+			.talk Rheanna##27484
+			..accept Life or Death##12296
+		step
+			goto Grizzly Hills,39.64,43.37
+			.talk Pipthwack##27416
+			..accept Pieces Parts##12268
+		step
+			goto Grizzly Hills,39.54,43.57
+			.talk Synipus##27371
+			..accept Shredder Repair##12244
+		step
+			goto Grizzly Hills,39.37,43.87
+			.talk Sergeant Hartsman##27468
+			..accept Kick 'Em While They're Down##12289
+		step
+			goto Grizzly Hills,34.12,40.46
+			.' Interact with NPC: Broken-down Shredder
+			.info They look like humanoid metal shredding machines around this area.
+			.info You will take control of the shredder machines.
+			.info You need to return the machine to your allies.
+			.info At the return location, use the "Shredder Delivery" ability on your action bar to return the shredders.
+			.' Deliver 3 Shredders|q 12244/1
+			.' Return the Shredders|at 39.53,43.40
+		step
+			goto Grizzly Hills,34.12,40.46
+			.use the Renewing Bandage##37576
+			.info Use it on Wounded Westfall Infantry.
+			.info They look like Alliance soldiers kneeling on the ground around this area.
+			.info You can find them all around the Blue Sky Logging Grounds area.
+			.' Heal 10 Westfall Infantry|q 12296/1
+		step
+			goto Grizzly Hills,34.12,40.46
+			.collect 2 High Tension Spring##37416|q 12268/3
+			.info They look like metal springs on the ground around this area.
+		step
+			goto Grizzly Hills,34.12,40.46
+			.collect 3 Notched Sprocket##37413|q 12268/2
+			.info They look like metal cog wheels laying flat on the ground around this area.
+		step
+			goto Grizzly Hills,34.12,40.46
+			.collect 4 Grooved Cog##37412|q 12268/1
+			.info They look like metal cog wheels sticking vertically out of the ground around this area.
+		step
+			goto Grizzly Hills,34.12,40.46
+			.' Kill enemies around this area
+			.info You can kill NPCs or players.
+			.' Eliminate 15 Horde Units|q 12289/1
+			.' You can find more around|at 33.45,36.07
+		step
+			goto Grizzly Hills,39.37,43.87
+			.talk Sergeant Hartsman##27468
+			..turnin Kick 'Em While They're Down##12289
+		step
+			goto Grizzly Hills,39.54,43.57
+			.talk Synipus##27371
+			..turnin Shredder Repair##12244
+		step
+			goto Grizzly Hills,39.64,43.37
+			.talk Pipthwack##27416
+			..turnin Pieces Parts##12268
+		step
+			goto Grizzly Hills,40.47,42.65
+			.talk Rheanna##27484
+			..turnin Life or Death##12296
+		step
+			goto Grizzly Hills,36.95,32.35
+			.' Interact with gameobject: Heart of the Ancients
+			.info Inside the building.
+			..turnin Heart of the Ancients##12042
+			..accept My Heart is in Your Hands##12802
+		step
+			goto Grizzly Hills,45.13,28.63
+			.' Kill Drakkari enemies around this area
+			.info They look like trolls.
+			.info You can find them all around the Drak'atal Passage.
+			.collect 5 Desperate Mojo##36743|q 12802
+		step
+			goto Grizzly Hills,45.03,28.41
+			.use Drakuru's Elixir##35797
+			.info Use it next to the brazier at this location.
+			.talk Image of Drakuru##26701
+			..turnin My Heart is in Your Hands##12802
+			..accept Voices From the Dust##12068
+		step
+			goto Grizzly Hills,59.42,26.00
+			.talk Captain Gryan Stoutmantle##26212
+			..turnin Report to Gryan Stoutmantle... Again##12109
+			..accept Hollowstone Mine##12158
+			..accept Softening the Blow##11998
+		step
+			goto Grizzly Hills,55.13,23.38
+			.talk Petrov##26932
+			..turnin Hollowstone Mine##12158
+			..accept Souls at Unrest##12159
+		step
+			goto Grizzly Hills,53.98,22.68
+			.from Undead Miner##26891
+			.info Inside the mine.
+			.use the Miner's Lantern##37932
+			.info Use it on their corpses.
+			.' Put 8 Miners at Rest|q 12159/1
+		step
+			goto Grizzly Hills,55.13,23.38
+			.talk Petrov##26932
+			..turnin Souls at Unrest##12159
+			..accept A Name from the Past##12160
+		step
+			goto Grizzly Hills,59.42,26.00
+			.talk Captain Gryan Stoutmantle##26212
+			..turnin A Name from the Past##12160
+		step
+			goto Grizzly Hills,59.17,26.18
+			.talk Private Arun##27582
+			..accept Ruuna the Blind##12161
+		step
+			goto Grizzly Hills,44.04,47.94
+			.talk Ruuna the Blind##27581
+			..turnin Ruuna the Blind##12161
+			..accept Ruuna's Request##12328
+		step
+			goto Grizzly Hills,46.01,41.06
+			.from Fern Feeder Moth##27421
+			.info They look like yellow and blue flying insects.
+			.get 4 Gossamer Dust##37662|q 12328/1
+			.' You can find more around (1)|at 48.82,35.78
+			.' You can find more around (2)|at 51.31,29.72
+			.' You can find more around (3)|at 55.54,33.24
+		step
+			goto Grizzly Hills,44.04,47.94
+			.talk Ruuna the Blind##27581
+			..turnin Ruuna's Request##12328
+			..accept Out of Body Experience##12327
+		step
+			goto Grizzly Hills,44.09,47.89
+			.use the Gossamer Potion##37661
+			.' Begin the Out of Body Experience |havebuff Spell_Holy_BlessedLife |q 12327
+		step
+			.' Watch the dialogue.
+			.' Experience the Vision from the Past|q 12327/1
+		step
+			.' Return to Ruuna the Blind |nobuff Spell_Holy_BlessedLife |q 12327
+			.info You will return when the "Out of Body Experience" buff expires.
+			.info You can also right-click the buff near your minimap to remove the buff and return early.
+		step
+			goto Grizzly Hills,44.04,47.94
+			.talk Ruuna the Blind##27581
+			..turnin Out of Body Experience##12327
+			..accept Fate and Coincidence##12329
+		step
+			goto Grizzly Hills,57.52,41.26
+			.talk Sasha##26935
+			..turnin Fate and Coincidence##12329
+			..accept Sasha's Hunt##12134
+			..accept Anatoly Will Talk##12330
+		step
+			goto Grizzly Hills,62.57,41.77
+			.kill 12 Solstice Hunter##26389|q 12134/1
+			.info They look like humans.
+			.info You can find them all around Solstice Village.
+		step
+			goto Grizzly Hills,62.19,42.39
+			.use the Tranquilizer Dart##37665
+			.info Use it on Tatjana.
+			.info Make sure to target Tatjana, and not the horse.
+			.' Interact with NPC: Tatjana's Horse
+			.' Ride Tatjana's Horse|invehicle
+		step
+			goto Grizzly Hills,57.75,41.69
+			.' Watch the dialogue.
+			.info You will eventually run to this location.
+			.' Deliver Tatjana|q 12330/1 |noway
+		step
+			goto Grizzly Hills,57.52,41.26
+			.talk Sasha##26935
+			..turnin Sasha's Hunt##12134
+			..turnin Anatoly Will Talk##12330
+			..accept A Sister's Pledge##12411
+		step
+			goto Grizzly Hills,64.82,43.42
+			.talk Anya##27646
+			..turnin A Sister's Pledge##12411
+		step
+			goto Grizzly Hills,69.10,40.10
+			.talk Hugh Glass##26484
+			..accept A Bear of an Appetite##12279
+		step
+			goto Grizzly Hills,69.10,40.10
+			.talk Hugh Glass##26484
+			.buy Howlin' Good Moonshine##35796|q 11998/1
+		step
+			goto Grizzly Hills,59.80,27.57
+			.talk Brugar Stoneshear##26226
+			..turnin Softening the Blow##11998
+			..accept Brothers in Battle##12002
+		step
+			goto Grizzly Hills,63.68,23.14
+			.talk Fallen Earthen Warrior##26335
+			..accept Find Kurun!##11981
+		step
+			goto Grizzly Hills,64.29,19.77
+			.' Interact with gameobject: Battered Journal
+			.info It looks like an open book on the ground.
+			..accept The Damaged Journal##11986
+		step
+			goto Grizzly Hills,63.90,22.28
+			.' Interact with gameobject: Missing Journal Page
+			.info They look like yellow torn pieces of paper on the ground around this area.
+			.info You can also find them inside the buildings.
+			.collect 8 Missing Journal Page##35737|q 11986
+		step
+			.use the Incomplete Journal##35739
+			.collect Brann Bronzebeard's Journal##35738|q 11986/1
+		step
+			goto Grizzly Hills,63.90,22.28
+			.kill 10 Runic Battle Golem##26284|q 12002/1
+		step
+			goto Grizzly Hills,59.76,27.44
+			.talk Torthen Deepdig##26361
+			..turnin The Damaged Journal##11986
+			..accept The Runic Keystone##11988
+		step
+			goto Grizzly Hills,59.80,27.56
+			.talk Brugar Stoneshear##26226
+			..turnin Brothers in Battle##12002
+			..accept Uncovering the Tunnels##12003
+		step
+			goto Grizzly Hills,63.45,28.22
+			.' Investigate the South Building|q 12003/3
+			.info Inside the building.
+		step
+			goto Grizzly Hills,66.58,24.34
+			.' Investigate the East Building|q 12003/2
+			.info Inside the building.
+		step
+			goto Grizzly Hills,62.69,20.83
+			.' Investigate the North Building|q 12003/1
+			.info Inside the building.
+		step
+			goto Grizzly Hills,62.99,21.61
+			.' Kill Rune enemies around this area
+			.info Inside the building.
+			.info They look like dwarves wearing dark metal armor.
+			.info Only enemies that look like dwarves will drop the quest item.
+			.info If you go into the canyon, try to stay close to the exit, if possible.
+			.info You will be leaving the Thor Modan area in the next step.
+			.collect 5 Runic Keystone Fragment##35747|q 11988/1
+			.' Inside the building|at 63.66,27.22
+			.' Inside the building|at 66.03,23.72
+			.' Throughout the canyon that starts|at 65.07,19.62
+		step
+			goto Grizzly Hills,59.76,27.44
+			.talk Torthen Deepdig##26361
+			..turnin The Runic Keystone##11988
+			..accept The Runic Prophecies##11993
+		step
+			goto Grizzly Hills,59.80,27.56
+			.talk Brugar Stoneshear##26226
+			..turnin Uncovering the Tunnels##12003
+			..accept The Fate of Orlond##12010
+		step
+			goto Grizzly Hills,65.77,17.76
+			.talk Kurun##26260
+			..turnin Find Kurun!##11981
+			..accept Raining Down Destruction##11982
+		step
+			goto Grizzly Hills,65.70,13.73
+			.collect 5 Boulder##35734|q 11982
+			.info They look like big grey rocks on the ground around this area.
+			.info Not all of the grey rocks will be clickable.
+			.' You can find more around (1)|at 67.39,12.22
+			.' You can find more around (2)|at 69.80,10.96
+			.' You can find more around (3)|at 71.72,11.61
+		step
+			goto Grizzly Hills,67.67,14.95
+			.use the Boulder##35734+
+			.info Use them on Iron Rune-Shapers in the canyon below.
+			.info They look like dwarves wearing dark metal armor.
+			.info You can use the boulders on the same enemy repeatedly.
+			.info Stay on the north side of the canyon when throwing the boulders.
+			.info You will have to turn in the quest on the north side of the canyon.
+			.' Disrupt 5 Iron Dwarf Operations|q 11982/1
+		step
+			goto Grizzly Hills,65.77,17.76
+			.talk Kurun##26260
+			..turnin Raining Down Destruction##11982
+			..accept Rallying the Troops##12070
+		step
+			goto Grizzly Hills,67.63,10.64
+			.use Shard of the Earth##36764
+			.info Use it on Grizzly Hills Giants  around this area.
+			.info They must be fighting an enemy for the item to work.
+			.' Rally 5 Grizzly Hills Giants|q 12070/1
+			.' You can find more around|at 70.08,6.40
+		step
+			goto Grizzly Hills,67.63,10.64
+			.kill 5 Iron Rune Avenger##26786|q 12070/2
+			.info They appear after you rally the Grizzly Hills Giants around this area.
+			.' You can find more around|at 70.08,6.40
+		step
+			goto Grizzly Hills,65.77,17.76
+			.talk Kurun##26260
+			..turnin Rallying the Troops##12070
+			..accept Into the Breach##11985
+		step
+			goto Grizzly Hills,67.50,15.28
+			.' Jump down carefully into the water below|at 67.44,16.10
+			.talk Surveyor Orlond##26514
+			..turnin The Fate of Orlond##12010
+			..accept Steady as a Rock?##12014
+		step
+			goto Grizzly Hills,68.52,16.21
+			.'  Interact with gameobject: Third Rune Plate
+			.info On the metal door inside the canyon.
+			.' Decipher the Third Prophecy|q 11993/3
+		step
+			goto Grizzly Hills,68.99,14.42
+			.'  Interact with gameobject: First Rune Plate
+			.info On the metal door inside the canyon.
+			.' Decipher the First Prophecy|q 11993/1
+		step
+			goto Grizzly Hills,70.18,14.68
+			.'  Interact with gameobject: Second Rune Plate
+			.info On the metal door inside the canyon.
+			.' Decipher the Second Prophecy|q 11993/2
+		step
+			goto Grizzly Hills,69.93,14.21
+			.from Subterranean Thresher##26522
+			.info They look like dinosaurs swimming in the water inside the canyon.
+			.get Portable Seismograph##35837|q 12014/2
+		step
+			goto Grizzly Hills,70.60,13.41
+			.use the Portable Seismograph##35837
+			.info Inside the canyon.
+			.'  Interact with gameobject: Portable Seismograph
+			.info It appears on the ground.
+			.collect Thor Modan Stability Profile##35819|q 12014/1
+		step
+			goto Grizzly Hills,70.21,12.93
+			.kill Iron Thane Argrum##26348|q 11985/1
+			.info Inside the canyon.
+		step
+			goto Grizzly Hills,59.76,27.44
+			.talk Torthen Deepdig##26361
+			..turnin The Runic Prophecies##11993
+		step
+			goto Grizzly Hills,59.80,27.56
+			.talk Brugar Stoneshear##26226
+			..turnin Steady as a Rock?##12014
+			..accept Check Up on Raegar##12128
+		step
+			goto Grizzly Hills,65.77,17.76
+			.talk Kurun##26260
+			..turnin Into the Breach##11985
+			..accept Gavrock##12081
+		step
+			goto Grizzly Hills,73.76,34.02
+			.talk Harkor##26884
+			..turnin Say Hello to My Little Friend##12190
+			..accept Nice to Meat You##12113
+			..accept Therapy##12114
+		step
+			goto Grizzly Hills,73.91,34.12
+			.talk Kraz##26886
+			..accept It Takes Guts....##12116
+		step
+			goto Grizzly Hills,79.76,33.61
+			.talk Gavrock##26420
+			..turnin Gavrock##12081
+			..accept Runes of Compulsion##12093
+		step
+			goto Grizzly Hills,77.70,37.37
+			.use the Fishing Net##37542
+			.info Use it near Schools of Northern Salmon around this area.
+			.info They look like groups of small fish in the water around this area.
+			.collect 6 Northern Salmon##37501|q 12279/1
+			.' You can find more around|at 80.56,42.78
+		step
+			goto Grizzly Hills,78.79,43.70
+			.kill Overseer Brunon##26923|q 12093/4
+			.info Kill the 4 enemies channeling on the object to release Overseer Brunon.
+		step
+			goto Grizzly Hills,75.02,37.16
+			.kill Overseer Lochli##26922|q 12093/3
+			.info Kill the 4 enemies channeling on the object to release Overseer Lochli.
+		step
+			goto Grizzly Hills,71.85,34.27
+			.kill Overseer Korgan##26921|q 12093/2
+			.info Kill the 4 enemies channeling on the object to release Overseer Korgan.
+		step
+			goto Grizzly Hills,67.53,29.46
+			.kill Overseer Durval##26920|q 12093/1
+			.info Kill the 4 enemies channeling on the object to release Overseer Durval.
+		step
+			goto Grizzly Hills,79.76,33.61
+			.talk Gavrock##26420
+			..turnin Runes of Compulsion##12093
+			..accept Latent Power##12094
+		step
+			goto Grizzly Hills,71.29,39.66
+			.use the Shard of Gavrock##36787
+			Draw Power from the First Ancient Stone|q 12094/1
+		step
+			goto Grizzly Hills,74.11,44.15
+			.use the Shard of Gavrock##36787
+			Draw Power from the Third Ancient Stone|q 12094/3
+		step
+			goto Grizzly Hills,78.85,39.89
+			.use Shard of Gavrock##36787
+			Draw Power from the Second Ancient Stone|q 12094/2
+		step
+			goto Grizzly Hills,79.76,33.61
+			.talk Gavrock##26420
+			..turnin Latent Power##12094
+			..accept Free at Last##12099
+		step
+			goto Grizzly Hills,74.58,42.25
+			.use Gavrock's Runebreaker##36796
+			.info Use it on Runed Giants.
+			.info They look like large walking trees around this area.
+			.info If they become aggressive, try using it again after they are at half health.
+			.info You may have to use it on the same enemy multiple times.
+			.' Free 4 Runed Giants|q 12099/1
+			.' You can find more around|at 68.72,34.23
+		step
+			goto Grizzly Hills,69.10,40.10
+			.talk Hugh Glass##26484
+			..turnin A Bear of an Appetite##12279
+		step
+			goto Grizzly Hills,79.76,33.61
+			.talk Gavrock##26420
+			..turnin Free at Last##12099
+		step
+			goto Grizzly Hills,75.19,39.54
+			.from Longhoof Grazer##26418
+			.get 10 Shovelhorn Steak##36875|q 12113/2
+			.' You can find more around (1)|at 72.18,35.36
+			.' You can find more around (2)|at 68.33,30.37
+		step
+			goto Grizzly Hills,75.19,39.54
+			.from Duskhowl Prowler##27408
+			.get 10 Fibrous Worg Meat##36819|q 12113/1
+			.' You can find more around (1)|at 72.18,35.36
+			.' You can find more around (2)|at 68.33,30.37
+		step
+			goto Grizzly Hills,71.25,20.20
+			.collect 5 Drakkari Canopic Jar##36825|q 12116/1
+			.info They look like grey vases on the ground around this area inside the crypt.
+			.info Any nearby Drakkari enemy will become aggressive and attack you when you loot these.
+		step
+			goto Grizzly Hills,69.38,18.20
+			.collect Drakkari Tablets##36757|q 12068/1
+			.info Inside the crypt.
+		step
+			goto Grizzly Hills,69.47,17.50
+			.talk Harrison Jones##26814
+			..accept Dun-da-Dun-tah!##12082
+			.info This is an escort quest.
+			.info Wait if the quest isn't available as someone else is likely doing it.
+			.info He can take up to 5 minutes to respawn.
+		step
+			goto Grizzly Hills,73.52,24.03
+			.' Watch the dialogue.
+			.info Follow Harrison Jones and protect him while he walks.
+			.info He eventually walks to this location outside the building.
+			.' Allow Harrison to Escort You to Safety|q 12082/1 |noway
+		step
+			goto Grizzly Hills,71.51,26.99
+			.' Kill Drakkari enemies around this area
+			.info They look like trolls.
+			.info You can find them all around the Drakil'jin Ruins area.
+			.collect 5 Sacred Mojo##36758|q 12068
+		step
+			goto Grizzly Hills,71.51,26.99
+			.kill 10 Drakkari Protector##26797|q 12114/1
+			.kill 10 Drakkari Oracle##26795|q 12114/2
+			.info You can find them all around the Drakil'jin Ruins area.
+		step
+			goto Grizzly Hills,71.72,26.14
+			.use Drakuru's Elixir##35797
+			.info Use it next to the brazier.
+			.talk Image of Drakuru##26787
+			..turnin Voices From the Dust##12068
+		step
+			goto Grizzly Hills,73.76,34.02
+			.talk Harkor##26884
+			..turnin Dun-da-Dun-tah!##12082
+			..turnin Nice to Meat You##12113
+			..turnin Therapy##12114
+		step
+			goto Grizzly Hills,73.91,34.12
+			.talk Kraz##26886
+			..turnin It Takes Guts....##12116
+			..accept Drak'aguul's Mallet##12120
+		step
+			goto Grizzly Hills,72.51,29.80
+			.from Drak'aguul##26919
+			.info He walks along the stairs around this area.
+			.info He has 2 guards that walk with him.
+			.get Drakil'jin Mallet##36826|q 12120/1
+		step
+			goto Grizzly Hills,73.91,34.12
+			.talk Kraz##26886
+			..turnin Drak'aguul's Mallet##12120
+			..accept See You on the Other Side##12121
+		step
+			goto Grizzly Hills,71.53,24.66
+			.use the Charged Drakil'jin Mallet##36834
+			.' Watch the dialogue.
+			.' Receive Death by Warlord Jin'arrak|q 12121/1
+		step
+			goto Grizzly Hills,71.53,24.66
+			.' Enter the Other Side |havebuff Ability_Creature_Cursed_02 |q 12121
+			.info You will receive the buff automatically.
+			.info It will take a few seconds to complete this step.
+		step
+			goto Grizzly Hills,69.41,19.48
+			.talk Gan'jo##26924
+			..turnin See You on the Other Side##12121
+			..accept Chill Out, Mon##12137
+		step
+			goto Grizzly Hills,69.36,19.57
+			.collect Snow of Eternal Slumber##36859|q 12137/1
+			.info Inside the crypt.
+		step
+			goto Grizzly Hills,69.41,19.48
+			.talk Gan'jo##26924
+			.' Tell him _"I am ready to return to the realm of the living."_
+			.' Leave the Spirit Realm |nobuff Ability_Creature_Cursed_02|q 12137
+		step
+			goto Grizzly Hills,70.61,19.84
+			.use the Snow of Eternal Slumber##36859
+			.info Use it on Ancient Drakkari.
+			.info They look like spirit trolls around this area inside the crypt.
+			.info Follow them when they run to nearby mummies on the ground.
+			.collect 5 Drakkari Spirit Particles##36868|q 12137/2
+			.info They appear when the Ancient Drakkari enemies reach the mummies.
+		step
+			goto Grizzly Hills,73.91,34.12
+			.talk Kraz##26886
+			..turnin Chill Out, Mon##12137
+			..accept Jin'arrak's End##12152
+		step
+			goto Grizzly Hills,71.25,19.66
+			.collect Sacred Drakkari Offering##36870|q 12152
+			.info Inside the crypt.
+		step
+			.use the Drakkari Spirit Dust##36873
+			.collect Infused Drakkari Offering##37063|q 12152
+		step
+			goto Grizzly Hills,71.53,24.65
+			.use the Infused Drakkari Offering##37063
+			.' Watch the dialogue.
+			.' Destroy Warlord Jin'arrak|q 12152/1
+		step
+			goto Grizzly Hills,73.91,34.12
+			.talk Kraz##26886
+			..turnin Jin'arrak's End##12152
+		step
+			goto Grizzly Hills,76.97,48.44
+			.talk Mountaineer Kilian##26885
+			..accept The Captive Prospectors##12180
+		step
+			goto Grizzly Hills,77.09,48.65
+			.talk Raegar Breakbrow##26883
+			..turnin Check Up on Raegar##12128
+			..accept The Perfect Plan##12129
+		step
+			goto Grizzly Hills,75.71,53.55
+			.' Kill enemies around this area
+			.info Any enemies will drop keys, except Iron Rune-Smiths.
+			.collect Dun Argol Cage Key##37013|q 12180
+		step
+			goto Grizzly Hills,76.48,55.36
+			.' Interact with gameobject: Dun Argol Cage
+			.info Inside the building.
+			.' Watch the dialogue
+			.' Rescue Prospector Gann|q 12180/1
+		step
+			goto Grizzly Hills,76.22,57.58
+			.' Kill enemies around this area
+			.info Any enemies will drop keys, except Iron Rune-Smiths.
+			.collect Dun Argol Cage Key##37013|q 12180
+		step
+			goto Grizzly Hills,76.30,58.54
+			.' Interact with gameobject: Dun Argol Cage
+			.' Watch the dialogue
+			.' Rescue Prospector Torgan|q 12180/2
+		step
+			goto Grizzly Hills,76.22,57.58
+			.' Kill enemies around this area
+			.info Any enemies will drop keys, except Iron Rune-Smiths.
+			.collect Dun Argol Cage Key##37013|q 12180
+		step
+			goto Grizzly Hills,76.01,61.03
+			.' Interact with gameobject: Dun Argol Cage
+			.' Watch the dialogue
+			.' Rescue Prospector Varana|q 12180/3
+		step
+			goto Grizzly Hills,76.22,57.58
+			.from Iron Rune-Smith##26408
+			.info You can find them all around the Dun Argol area.
+			.info They can also be inside the buildings.
+			.collect Golem Blueprint Section 1##36849|q 12129
+			.collect Golem Blueprint Section 2##36850|q 12129
+			.collect Golem Blueprint Section 3##36851|q 12129
+		step
+			.use the Golem Blueprint Section 1##36849
+			.collect War Golem Blueprint##36848|q 12129/1
+		step
+			goto Grizzly Hills,77.09,48.65
+			.talk Raegar Breakbrow##26883
+			..turnin The Perfect Plan##12129
+			..accept Why Fabricate When You Can Appropriate?##12130
+		step
+			goto Grizzly Hills,76.97,48.44
+			.talk Mountaineer Kilian##26885
+			..turnin The Captive Prospectors##12180
+			..accept Looking the Part##12183
+		step
+			goto Grizzly Hills,76.62,54.81
+			.from Iron Rune Overseer##27177
+			.get Overseer's Uniform##37035|q 12183/1
+			.' You can find more around (1)|at 76.13,57.97
+			.' You can find more around (2)|at 78.41,59.36
+		step
+			goto Grizzly Hills,76.22,57.58
+			.collect 8 War Golem Part##36852|q 12130/1
+			.info They look like various shaped grey metal objects on the ground.
+			.info They can also be inside the buildings.
+			.info You can find them all around the Dun Argol area.
+		step
+			goto Grizzly Hills,77.09,48.65
+			.talk Raegar Breakbrow##26883
+			..turnin Why Fabricate When You Can Appropriate?##12130
+			..accept We Have the Power##12131
+		step
+			goto Grizzly Hills,76.97,48.44
+			.talk Mountaineer Kilian##26885
+			..turnin Looking the Part##12183
+			..accept Cultivating an Image##12184
+		step
+			goto Grizzly Hills,74.89,56.92
+			.from Rune-Smith Durar##26409
+			.info Inside the building.
+			.get Durar's Power Cell##36857|q 12131/1
+		step
+			goto Grizzly Hills,76.82,59.35
+			.from Rune-Smith Kathorn##26410
+			.info Inside the building.
+			.get Kathorn's Power Cell##36858|q 12131/2
+		step
+			goto Grizzly Hills,76.22,57.58
+			.' Kill enemies around this area
+			.info Only the enemies that look like dwarves will count for this quest goal.
+			.info You can find them all around the Dun Argol area.
+			.use Kilian's Camera##37045
+			.info Use it on their corpses.
+			.' Capture 8 Iron Dwarf Images|q 12184/1
+		step
+			goto Grizzly Hills,77.09,48.65
+			.talk Raegar Breakbrow##26883
+			..turnin We Have the Power##12131
+			..accept ... Or Maybe We Don't##12138
+		step
+			goto Grizzly Hills,76.97,48.44
+			.talk Mountaineer Kilian##26885
+			..turnin Cultivating an Image##12184
+			..accept Put on Your Best Face for Loken##12185
+		step
+			goto Grizzly Hills,77.82,53.24
+			.use the Golem Control Unit##36936
+			.info This will summon a Depleted War Golem to follow you around.
+			.info If your golem disappears, use this item again to summon another one.
+			.kill Lightning Sentry##26407|n
+			.info They look like air elementals.
+			.info Kill them with the golem next to you.
+			.info Make sure you're close to them when you kill them, or the golem won't collect the charge level.
+			.collect 10 Charge Levels|q 12138/1
+			.' You can find more around (1)|at 75.62,51.49
+			.' You can find more around (2)|at 73.54,54.76
+			.' You can find more around (3)|at 72.64,59.96
+		step
+			goto Grizzly Hills,74.74,54.47
+			.' Get on Your Mount
+			.info Make sure you are mounted and not in combat.
+			.info You will use the Overseer Disguise Kit in the next guide step.
+			.info If you are already mounted when you use the item, it will let you ride your mount while disguised, so you can run faster.
+			.use the Overseer Disguise Kit##37071
+			.info It can be used anywhere in the Dun Argol subzone.
+			.' Wear the Disguise |havebuff INV_Mask_01 |q 12185
+		step
+			goto Grizzly Hills,81.54,60.30
+			.' Interact with gameobject: Loken's Pedestal
+			.info Inside the building.
+			.' Watch the dialogue.
+			.info If you don't want to watch the dialogue, you don't have to wait.
+			.info You can leave the building and start running down the mountain to the questgivers.
+			.info The quest goal will complete as you are running down the mountain.
+			.' Receive the Message from Loken|q 12185/1
+		step
+			.' Remove the Iron Rune Overseer Disguise |nobuff INV_Mask_01 |q 12185
+			.info Right-click the "Iron Rune Overseer Disguise" buff near your minimap.
+			.info Make sure you're in a safe spot before removing the disguise.
+		step
+			goto Grizzly Hills,77.09,48.65
+			.talk Raegar Breakbrow##26883
+			..turnin ... Or Maybe We Don't##12138
+			..accept The Iron Thane and His Anvil##12153
+			..accept Blackout##12154
+		step
+			goto Grizzly Hills,76.97,48.44
+			.talk Mountaineer Kilian##26885
+			..turnin Put on Your Best Face for Loken##12185
+		step
+			goto Grizzly Hills,76.79,63.01
+			.use the Golem Control Unit##36865
+			.info Downstairs inside the building.
+			.' Control a War Golem |invehicle |q 12153
+		step
+			goto Grizzly Hills,76.37,63.72
+			.kill Iron Thane Furyhammer##26405|q 12153/1
+			.info Downstairs inside the building.
+			.info Use the abilities on your action bar.
+			.info Use the "EMP" ability to stun The Anvil and remove Iron Thane Furyhammer's Shield.
+			.info Use the "Charged Smash" ability Iron Thane Furyhammer.
+		step
+			.' Stop Controlling the War Golem |outvehicle |q 12153
+			.info Click the yellow arrow on your action bar.
+		step
+			goto Grizzly Hills,76.47,63.24
+			.use Raegar's Explosives##36935
+			.info Downstairs inside the building.
+			.' Destroy the Dun Argol Power Crystal|q 12154/1
+		step
+			goto Grizzly Hills,77.09,48.65
+			.talk Raegar Breakbrow##26883
+			..turnin The Iron Thane and His Anvil##12153
+			..turnin Blackout##12154
+		step
+			goto Grizzly Hills,31.2,59.5
+			.talk Hierophant Thayreen##27295
+			..turnin Vordrassil's Sapling##12248
+			..turnin Vordrassil's Seeds##12250
+		step
+			.' Congratulations! +89/85 quests for achievement "Fo' Grizzle My Shizzle".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[74-empty] Zul'Drak",[[

@@ -25,7 +25,7 @@
 	<Script file="A-Loremaster-BurningCrusade.lua"/>
 	<Script file="A-Loremaster-Northrend.lua"/>
 	<Script file="GuideAchievement-Beta.lua"/>
-	<Script file="Guide09.lua"/>
+	<Script file="A-Holidays.lua"/>
 	<Script file="Guide10.lua"/>
 	<Script file="Guide11.lua"/>
 	<Script file="Guide12.lua"/>
