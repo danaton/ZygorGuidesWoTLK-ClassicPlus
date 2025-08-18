@@ -3234,9 +3234,9 @@ startlevel 68
 			.' Congratulations! +130 quests for achievement "I've Toured the Fjord".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[72-beta] Dragonblight",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[72] Dragonblight",[[
 author danaton
-description This guide contain quest-chain (??) for Dragonblight location.
+description This guide contain quest-chain (115) for Dragonblight location.
 startlevel 72
 		step
 			goto Borean Tundra,63.80,46.12
@@ -3944,7 +3944,7 @@ startlevel 72
 			..accept The Forgotten Tale##12291
 		step
 			goto Dragonblight,86.04,64.14
-			.use the Murkweed Elixir##37570
+			.use Murkweed Elixir##37570
 			.' Enter the Spirit Form |havebuff INV_Poison_MindNumbing |q 12291
 		step
 			goto Dragonblight,86.48,65.49
@@ -4167,7 +4167,7 @@ startlevel 72
 			.collect Ruby Acorn##37727|n |q 12417 |future
 			.info They look like small red stones on the ground.
 			.info You can find them all around the Ruby Dragonshrine area.
-			.use the Ruby Acorn##37727
+			.use Ruby Acorn##37727
 			.info Use them on Ruby Keeper corpses.
 			.info They look like large red dragons on fire on the ground.
 			.' Return 6 Ruby Keepers to the Earth|q 12417/1
@@ -4304,13 +4304,13 @@ startlevel 72
 			..accept On Ruby Wings##12498
 		step
 			goto Dragonblight,59.73,53.12
-			.use the Ruby Beacon of the Dragon Queen##38302
+			.use Ruby Beacon of the Dragon Queen##38302
 			.' Interact with NPC: Wyrmrest Vanquisher
 			.info It flies to you.
 			.' Ride the Wyrmrest Vanquisher|invehicle|q 12498
 		step
 			goto Dragonblight,54.3,30.8
-			.' Ride the Wyrmrest Vanquisher |invehicle |q 12498 |use the Ruby Beacon of the Dragon Queen##38302
+			.' Ride the Wyrmrest Vanquisher |invehicle |q 12498 |use Ruby Beacon of the Dragon Queen##38302
 			.kill Thiassi the Lightning Bringer##28018|n
 			.info He walks around this small area on top of the hill.
 			.info Use the abilities on your action bar.
@@ -4321,7 +4321,7 @@ startlevel 72
 			.info It appears on the ground after you kill Grand Necrolord Antiok.
 		step
 			goto Dragonblight,56.05,34.4
-			.' Ride the Wyrmrest Vanquisher |invehicle |q 12498 |use the Ruby Beacon of the Dragon Queen##38302
+			.' Ride the Wyrmrest Vanquisher |invehicle |q 12498 |use Ruby Beacon of the Dragon Queen##38302
 			.kill 30 Wastes Scavenger##28005|q 12498/1
 		step
 			goto Dragonblight,64.90,73.64
@@ -4401,6 +4401,7 @@ startlevel 72
 			.info They look like carts with ore in them on the ground.
 			.' You can find more around (1)|at 59.02,31.14
 			.' You can find more around (2)|at 51.80,31.23
+			.' You can find more around (3)|at 52.1,38.3
 		step
 			goto Dragonblight,55.03,23.42
 			.talk Xink##26660
@@ -4447,6 +4448,7 @@ startlevel 72
 			.info They look like small white pointed bones near the huge bones on the ground around this area.
 			.' You can find more around (1)|at 59.96,27.16
 			.' You can find more around (2)|at 62.80,28.91
+			.' You can find more around (3)|at 53.13,25.7
 		step
 			goto Dragonblight,55.02,23.43
 			.talk Xink##26660
@@ -4636,7 +4638,7 @@ startlevel 72
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[74-beta] Grizzly Hills",[[
 author danaton
-description This guide contain quest-chain (??) for Grizzly Hills location.
+description This guide contain quest-chain (89) for Grizzly Hills location.
 startlevel 74
 		step
 			goto Dragonblight,77.1,50.1

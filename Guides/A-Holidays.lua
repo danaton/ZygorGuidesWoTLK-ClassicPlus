@@ -173,23 +173,23 @@ startlevel 80
 		step
 			goto Teldrassil,55.1,60.4
 			.talk Teldrassil Flame Warden##25906
-			.' Honor the flames of Teldrassil|achieve 1023/10
-		step
-			goto Azuremyst Isle,44.5,52.4
-			.talk Azuremyst Isle Flame Warden##25888
-			.' Honor the flames of Azuremyst Isle|achieve 1023/2
-		step
-			goto Bloodmyst Isle,55.6,68.1
-			.talk Bloodmyst Isle Flame Warden##25891
-			.' Honor the flames of Bloodmyst Isle|achieve 1023/3
+			.' Honor the flames of Teldrassil!|achieve 1023/10
 		step
 			goto Darkshore,37,46.2
 			.talk Darkshore Flame Warden##25893
-			.' Honor the flames of Darkshore|achieve 1023/4
+			.' Honor the flames of Darkshore!|achieve 1023/4
+		step
+			goto Azuremyst Isle,44.5,52.4
+			.talk Azuremyst Isle Flame Warden##25888
+			.' Honor the flames of Azuremyst Isle!|achieve 1023/2
+		step
+			goto Bloodmyst Isle,55.6,68.1
+			.talk Bloodmyst Isle Flame Warden##25891
+			.' Honor the flames of Bloodmyst Isle!|achieve 1023/3
 		step
 			goto Ashenvale,37.8,54.7
 			.talk Ashenvale Flame Warden##25883
-			.' Honor the flames of Ashenvale|achieve 1023/1
+			.' Honor the flames of Ashenvale!|achieve 1023/1
 		step
 			goto Ashenvale,70,69.2
 			.' Interact with gameobject: Horde Bonfire
@@ -262,20 +262,20 @@ startlevel 80
 			.use Flame of Thunder Bluff##23180
 			..accept Stealing Thunder Bluff's Flame##9325
 		step
-			goto The Barrens,52.2,27.9
-			.' Interact with gameobject: Horde Bonfire
-			.' Desecrate the Horde's Barrens bonfire!|achieve 1029/10
-		step
-			goto Durotar,52,47.2
-			.' Interact with gameobject: Horde Bonfire
-			.' Desecrate the Horde's Durotar bonfire!|achieve 1029/3
-		step
 			goto Orgrimmar,46.9,38.7
 			.' Interact with gameobject: Flame of Orgrimmar
 			.collect Flame of Orgrimmar##23179|achieve 1145 |future
 		step
 			.use Flame of Orgrimmar##23179
 			..accept Stealing Orgrimmar's Flame##9324
+		step
+			goto Durotar,52,47.2
+			.' Interact with gameobject: Horde Bonfire
+			.' Desecrate the Horde's Durotar bonfire!|achieve 1029/3
+		step
+			goto The Barrens,52.2,27.9
+			.' Interact with gameobject: Horde Bonfire
+			.' Desecrate the Horde's Barrens bonfire!|achieve 1029/10
 		step
 			goto Ironforge,63.8,25.3
 			.talk Festival Loremaster##16817
