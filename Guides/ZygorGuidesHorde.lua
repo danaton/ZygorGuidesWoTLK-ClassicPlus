@@ -3189,8 +3189,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Troll (1-13)",[[
 		..accept Return to Quinn##430
 	step //180
 		goto 52.8,28.5
-		Go inside of the house and up the stairs and click on the Dusty Spellbooks.
-		.get Remedy of Arugal##3155 |q 422/1
+		.' Go inside of the house and up the stairs and click on the Dusty Spellbooks.
+		.get Remedy of Arugal##3155|q 422/1
 	step //181
 		goto 53.4,12.6
 		.talk Deathstalker Quinn##1951
@@ -3946,8 +3946,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept Arugal's Folly (1)##422
 	step //162
 		goto 52.82,28.46
-		.Go inside the house and click the Dusty Spellbooks on the second floor
-		..get Remedy of Arugal##3155|q 422/1
+		.' Go inside the house and click the Dusty Spellbooks on the second floor
+		.get Remedy of Arugal##3155|q 422/1
 	step //163
 		goto 45.5,21.3
 		.' Enter the Dead Fields|goal Enter the Dead Fields|q 437/1

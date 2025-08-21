@@ -283,20 +283,25 @@ startlevel 70
 			..turnin The Mastermind##10099
 		step
 			goto Hellfire Peninsula,66.1,48.8
-			.' Click the Trampled Skeletons|tip They look like little brown ribcages and spines.  You will find them on the grey road.  They are very easy to miss, but once you find one you will find them really fast.
+			.' Click the Trampled Skeletons
+			.info They look like little brown ribcages and spines. You will find them on the grey road. They are very easy to miss, but once you find one you will find them really fast.
 			.' Cleanse 8 Trampled Skeletons|goal 8 Cleanse Trampled Skeleton|q 10047/1
 		step
 			goto Hellfire Peninsula,58.7,47
-			.' Use your Flaming Torch on the Eastern Thrower to burn it|goal Eastern Thrower Burned|q 10078/1|use Flaming Torch##26002|tip It's a big catapult.
+			.' Use your Flaming Torch on the Eastern Thrower to burn it|goal Eastern Thrower Burned|q 10078/1|use Flaming Torch##26002
+			.info It's a big catapult.
 		step
 			goto Hellfire Peninsula,55.9,46.7
-			.' Use your Flaming Torch on the Central Eastern Thrower to burn it|goal Central Eastern Thrower Burned|q 10078/2|use Flaming Torch##26002|tip It's a big catapult.
+			.' Use your Flaming Torch on the Central Eastern Thrower to burn it|goal Central Eastern Thrower Burned|q 10078/2|use Flaming Torch##26002
+			.info It's a big catapult.
 		step
 			goto Hellfire Peninsula,53.5,47.2
-			.' Use your Flaming Torch on the Central Western Thrower to burn it|goal Central Western Thrower Burned|q 10078/3|use Flaming Torch##26002|tip It's a big catapult.
+			.' Use your Flaming Torch on the Central Western Thrower to burn it|goal Central Western Thrower Burned|q 10078/3|use Flaming Torch##26002
+			.info It's a big catapult.
 		step
 			goto Hellfire Peninsula,52.8,47.1
-			.' Use your Flaming Torch on the Western Thrower to burn it|goal Western Thrower Burned|q 10078/4|use Flaming Torch##26002|tip It's a big catapult.
+			.' Use your Flaming Torch on the Western Thrower to burn it|goal Western Thrower Burned|q 10078/4|use Flaming Torch##26002
+			.info It's a big catapult.
 		step
 			goto Hellfire Peninsula,65.8,67.2
 			.from Bleeding Hollow Grunt##16871, Bleeding Hollow Peon##16907, Bleeding Hollow Necrolyte##19422, Bleeding Hollow Tormentor##19424

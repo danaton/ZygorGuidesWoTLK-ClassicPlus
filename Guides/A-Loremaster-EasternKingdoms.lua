@@ -580,22 +580,25 @@ startlevel 20
 			.kill 20 Harvest Watcher|q 9/1
 			.get 3 Okra##732|q 38/4|tip Do not sell to vendor!
 			.from Harvest Watcher##114+
-			.collect 5 Flask of Oil##814|q 103/1 |future
+			.collect 5 Flask of Oil##814|q 103 |future
 			.' Flask of Oil needed on the future! Do not sell to vendor!
-			.collect 5 Hops##1274|q 117/1|future
+			.collect 5 Hops##1274|q 117 |future
 			.' You can find more Harvest Watchers|at 53.5,29.4|n
 			.' And a big spot on this field|at 44.87,35.68
 		step
 			goto Westfall,59.02,33.34
 			.from Young Goretusk##454, Goretusk##157, Great Goretusk##547
-			.get 8 Goretusk Liver##723|q 22/1|tip Do not sell to vendor!
-			.get 3 Goretusk Snout##731|q 38/3|tip Do not sell to vendor!
+			.get 8 Goretusk Liver##723|q 22/1
+			.info Do not sell to vendor!
+			.get 3 Goretusk Snout##731|q 38/3
+			.info Do not sell to vendor!
 			.' You can find more around (1)|at 51.01,36.09
 			.' You can find more around (2)|at 59.60,43.53
 		step
 			goto Westfall,59.05,61.74
 			.from Young Fleshripper##199, Fleshripper##1109, Greater Fleshripper##154
-			.get 3 Stringy Vulture Meat##729|q 38/1|tip Do not sell to vendor!
+			.get 3 Stringy Vulture Meat##729|q 38/1
+			.info Do not sell to vendor!
 		step
 			goto Westfall,56.0,31.2
 			.talk Farmer Saldean##233

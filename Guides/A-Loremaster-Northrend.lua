@@ -4636,7 +4636,7 @@ startlevel 72
 			.' Congratulations! +115 quests for achievement "Might of Dragonblight".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[74-beta] Grizzly Hills",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[74] Grizzly Hills",[[
 author danaton
 description This guide contain quest-chain (89) for Grizzly Hills location.
 startlevel 74
@@ -5109,11 +5109,11 @@ startlevel 74
 			.' Ask him "Who was this stranger?"
 			.' Listen to Kodian's Story|q 12247/2
 		step
-			goto Grizzly Hills,65.98,58.61
-			.' Kill enemies around this area
+			goto Grizzly Hills,65.5,57.57
+			.from Frostpaw Warrior##26357, Frostpaw Shaman##26428, Frostpaw Trapper##26434
 			.info They look like furbolgs.
-			.collect 8 Crazed Furbolg Blood##37251|q 12246/1
-			.' You can find more around|at 65.77,54.58
+			.get 8 Crazed Furbolg Blood##37251|q 12246/1
+			.' You can find more around|at 51.75,47.4
 		step
 			goto Grizzly Hills,31.16,59.47
 			.talk Hierophant Thayreen##27295
@@ -5166,19 +5166,15 @@ startlevel 74
 			.' Heal 10 Westfall Infantry|q 12296/1
 		step
 			goto Grizzly Hills,34.12,40.46
+			.collect 4 Grooved Cog##37412|q 12268/1
+			.info They look like metal cog wheels sticking vertically out of the ground around this area.
+			.collect 3 Notched Sprocket##37413|q 12268/2
+			.info They look like metal cog wheels laying flat on the ground around this area.
 			.collect 2 High Tension Spring##37416|q 12268/3
 			.info They look like metal springs on the ground around this area.
 		step
 			goto Grizzly Hills,34.12,40.46
-			.collect 3 Notched Sprocket##37413|q 12268/2
-			.info They look like metal cog wheels laying flat on the ground around this area.
-		step
-			goto Grizzly Hills,34.12,40.46
-			.collect 4 Grooved Cog##37412|q 12268/1
-			.info They look like metal cog wheels sticking vertically out of the ground around this area.
-		step
-			goto Grizzly Hills,34.12,40.46
-			.' Kill enemies around this area
+			.from Wounded Skirmisher##27463
 			.info You can kill NPCs or players.
 			.' Eliminate 15 Horde Units|q 12289/1
 			.' You can find more around|at 33.45,36.07
@@ -5206,7 +5202,7 @@ startlevel 74
 			..accept My Heart is in Your Hands##12802
 		step
 			goto Grizzly Hills,45.13,28.63
-			.' Kill Drakkari enemies around this area
+			.from Drakkari Defender##26704, Drakkari Witch Doctor##27555
 			.info They look like trolls.
 			.info You can find them all around the Drak'atal Passage.
 			.collect 5 Desperate Mojo##36743|q 12802
@@ -5268,7 +5264,7 @@ startlevel 74
 			..accept Out of Body Experience##12327
 		step
 			goto Grizzly Hills,44.09,47.89
-			.use the Gossamer Potion##37661
+			.use Gossamer Potion##37661
 			.' Begin the Out of Body Experience |havebuff Spell_Holy_BlessedLife |q 12327
 		step
 			.' Watch the dialogue.
@@ -5304,7 +5300,7 @@ startlevel 74
 			goto Grizzly Hills,57.75,41.69
 			.' Watch the dialogue.
 			.info You will eventually run to this location.
-			.' Deliver Tatjana|q 12330/1 |noway
+			.' Deliver Tatjana|q 12330/1
 		step
 			goto Grizzly Hills,57.52,41.26
 			.talk Sasha##26935
@@ -5380,8 +5376,8 @@ startlevel 74
 			.info If you go into the canyon, try to stay close to the exit, if possible.
 			.info You will be leaving the Thor Modan area in the next step.
 			.collect 5 Runic Keystone Fragment##35747|q 11988/1
-			.' Inside the building|at 63.66,27.22
-			.' Inside the building|at 66.03,23.72
+			.' Inside the building (1)|at 63.66,27.22
+			.' Inside the building (2)|at 66.03,23.72
 			.' Throughout the canyon that starts|at 65.07,19.62
 		step
 			goto Grizzly Hills,59.76,27.44
@@ -5475,6 +5471,11 @@ startlevel 74
 			.kill Iron Thane Argrum##26348|q 11985/1
 			.info Inside the canyon.
 		step
+			goto Grizzly Hills,65.77,17.76
+			.talk Kurun##26260
+			..turnin Into the Breach##11985
+			..accept Gavrock##12081
+		step
 			goto Grizzly Hills,59.76,27.44
 			.talk Torthen Deepdig##26361
 			..turnin The Runic Prophecies##11993
@@ -5483,11 +5484,6 @@ startlevel 74
 			.talk Brugar Stoneshear##26226
 			..turnin Steady as a Rock?##12014
 			..accept Check Up on Raegar##12128
-		step
-			goto Grizzly Hills,65.77,17.76
-			.talk Kurun##26260
-			..turnin Into the Breach##11985
-			..accept Gavrock##12081
 		step
 			goto Grizzly Hills,73.76,34.02
 			.talk Harkor##26884
@@ -5533,16 +5529,16 @@ startlevel 74
 			..accept Latent Power##12094
 		step
 			goto Grizzly Hills,71.29,39.66
-			.use the Shard of Gavrock##36787
-			Draw Power from the First Ancient Stone|q 12094/1
+			.use Shard of Gavrock##36787
+			.' Draw Power from the First Ancient Stone|q 12094/1
 		step
 			goto Grizzly Hills,74.11,44.15
-			.use the Shard of Gavrock##36787
-			Draw Power from the Third Ancient Stone|q 12094/3
+			.use Shard of Gavrock##36787
+			.' Draw Power from the Third Ancient Stone|q 12094/3
 		step
 			goto Grizzly Hills,78.85,39.89
 			.use Shard of Gavrock##36787
-			Draw Power from the Second Ancient Stone|q 12094/2
+			.' Draw Power from the Second Ancient Stone|q 12094/2
 		step
 			goto Grizzly Hills,79.76,33.61
 			.talk Gavrock##26420
@@ -5567,14 +5563,10 @@ startlevel 74
 			..turnin Free at Last##12099
 		step
 			goto Grizzly Hills,75.19,39.54
-			.from Longhoof Grazer##26418
-			.get 10 Shovelhorn Steak##36875|q 12113/2
-			.' You can find more around (1)|at 72.18,35.36
-			.' You can find more around (2)|at 68.33,30.37
-		step
-			goto Grizzly Hills,75.19,39.54
 			.from Duskhowl Prowler##27408
 			.get 10 Fibrous Worg Meat##36819|q 12113/1
+			.from Longhoof Grazer##26418
+			.get 10 Shovelhorn Steak##36875|q 12113/2
 			.' You can find more around (1)|at 72.18,35.36
 			.' You can find more around (2)|at 68.33,30.37
 		step
@@ -5640,7 +5632,7 @@ startlevel 74
 			..accept See You on the Other Side##12121
 		step
 			goto Grizzly Hills,71.53,24.66
-			.use the Charged Drakil'jin Mallet##36834
+			.use Charged Drakil'jin Mallet##36834
 			.' Watch the dialogue.
 			.' Receive Death by Warlord Jin'arrak|q 12121/1
 		step
@@ -5685,24 +5677,24 @@ startlevel 74
 		step
 			goto Grizzly Hills,71.53,24.65
 			.use the Infused Drakkari Offering##37063
-			.' Watch the dialogue.
+			.' Watch the dialogue
 			.' Destroy Warlord Jin'arrak|q 12152/1
 		step
 			goto Grizzly Hills,73.91,34.12
 			.talk Kraz##26886
 			..turnin Jin'arrak's End##12152
 		step
-			goto Grizzly Hills,76.97,48.44
-			.talk Mountaineer Kilian##26885
-			..accept The Captive Prospectors##12180
-		step
 			goto Grizzly Hills,77.09,48.65
 			.talk Raegar Breakbrow##26883
 			..turnin Check Up on Raegar##12128
 			..accept The Perfect Plan##12129
 		step
+			goto Grizzly Hills,76.97,48.44
+			.talk Mountaineer Kilian##26885
+			..accept The Captive Prospectors##12180
+		step
 			goto Grizzly Hills,75.71,53.55
-			.' Kill enemies around this area
+			.from Runic War Golem##26347, Lightning Sentry##26407, Runic Lightning Gunner##26414
 			.info Any enemies will drop keys, except Iron Rune-Smiths.
 			.collect Dun Argol Cage Key##37013|q 12180
 		step
@@ -5713,7 +5705,7 @@ startlevel 74
 			.' Rescue Prospector Gann|q 12180/1
 		step
 			goto Grizzly Hills,76.22,57.58
-			.' Kill enemies around this area
+			.from Runic War Golem##26347, Lightning Sentry##26407, Runic Lightning Gunner##26414
 			.info Any enemies will drop keys, except Iron Rune-Smiths.
 			.collect Dun Argol Cage Key##37013|q 12180
 		step
@@ -5723,7 +5715,7 @@ startlevel 74
 			.' Rescue Prospector Torgan|q 12180/2
 		step
 			goto Grizzly Hills,76.22,57.58
-			.' Kill enemies around this area
+			.from Runic War Golem##26347, Lightning Sentry##26407, Runic Lightning Gunner##26414
 			.info Any enemies will drop keys, except Iron Rune-Smiths.
 			.collect Dun Argol Cage Key##37013|q 12180
 		step
@@ -5804,7 +5796,7 @@ startlevel 74
 			..accept Put on Your Best Face for Loken##12185
 		step
 			goto Grizzly Hills,77.82,53.24
-			.use the Golem Control Unit##36936
+			.use Golem Control Unit##36936
 			.info This will summon a Depleted War Golem to follow you around.
 			.info If your golem disappears, use this item again to summon another one.
 			.kill Lightning Sentry##26407|n
@@ -5816,7 +5808,7 @@ startlevel 74
 			.' You can find more around (2)|at 73.54,54.76
 			.' You can find more around (3)|at 72.64,59.96
 		step
-			goto Grizzly Hills,74.74,54.47
+			goto Grizzly Hills,79.9,59.5
 			.' Get on Your Mount
 			.info Make sure you are mounted and not in combat.
 			.info You will use the Overseer Disguise Kit in the next guide step.
