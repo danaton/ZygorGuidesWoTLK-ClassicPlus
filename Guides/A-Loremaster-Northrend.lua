@@ -5882,13 +5882,882 @@ startlevel 74
 			.' "The Empire of Zul'Drak".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[76-empty] Sholazar Basin",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[76] Sholazar Basin",[[
 author danaton
-description This guide contain quest-chain (??) for Sholazar Basin location.
+description This guide contain quest-chain (78) for Sholazar Basin location.
 startlevel 76
 		step
+			goto Dalaran,68.55,42.05
+			.talk Archmage Pentarus##28160
+			..accept Where in the World is Hemet Nesingwary?##12521
 		step
-			.' "Into the Basin"
+			goto Dalaran,68.55,42.05
+			.talk Archmage Pentarus##28160
+			.' Tell him "I'm ready to fly to Sholazar Basin."
+			.' Begin Flying to Sholazar Basin |invehicle |q 12521
+		step
+			goto Sholazar Basin,39.11,56.87|n
+			.' Fly to Sholazar Basin|goto Sholazar Basin,39.11,56.87,1|q 12521
+		step
+			goto Sholazar Basin,39.68,58.66
+			.talk Monte Muzzleshot##27987
+			..turnin Where in the World is Hemet Nesingwary?##12521
+			..accept Welcome to Sholazar Basin##12489
+		step
+			goto Sholazar Basin,27.24,59.89
+			.talk Debaar##28032
+			..accept Venture Co. Misadventure##12524
+		step
+			goto Sholazar Basin,26.87,58.94
+			.talk Chad##28497
+			..accept It Could Be Anywhere!##12624
+		step
+			goto Sholazar Basin,27.10,58.64
+			.talk Hemet Nesingwary##27986
+			..turnin Welcome to Sholazar Basin##12489
+		step
+			goto Sholazar Basin,25.35,58.47
+			.talk Weslex Quickwrench##28033
+			..accept Need an Engine, Take an Engine##12522
+		step
+			goto Sholazar Basin,38.67,56.73
+			.collect Flying Machine Engine##38334|q 12522/1
+			.info Before the crashed plane.
+		step
+			goto Sholazar Basin,35.55,47.42
+			.talk Engineer Helice##28787
+			..accept Engineering a Disaster##12688
+		step
+			goto Sholazar Basin,37.39,50.54
+			.' Escort Engineer Helice Out of Swindlegrin's Dig|q 12688/1
+			.info Follow Engineer Helice and protect her as she walks.
+		step
+			goto Sholazar Basin,35.10,47.89
+			.' Kill 15 Venture Company Members|q 12524/1
+		step
+			goto 35.10,47.89
+			.from Venture Co. Excavator##28123, Venture Co. Ruffian##28124
+			.collect Golden Engagement Ring##38642|q 12624/1
+		step
+			goto Sholazar Basin,26.87,58.94
+			.talk Chad##28497
+			..turnin It Could Be Anywhere!##12624
+		step
+			goto Sholazar Basin,27.10,58.64
+			.talk Hemet Nesingwary##27986
+			..turnin Engineering a Disaster##12688
+		step
+			goto Sholazar Basin,27.24,59.89
+			.talk Debaar##28032
+			..turnin Venture Co. Misadventure##12524
+			..accept Wipe That Grin Off His Face##12525
+		step
+			goto Sholazar Basin,25.35,58.47
+			.talk Weslex Quickwrench##28033
+			..turnin Need an Engine, Take an Engine##12522
+			..accept Have a Part, Give a Part##12523
+		step
+			goto Sholazar Basin,35.97,50.34
+			.kill Meatpie##28188|q 12525/2
+			.info He looks like a blue ogre that walks up and down this platform, and around this area.
+		step
+			goto Sholazar Basin,35.67,50.16
+			.kill Foreman Swindlegrin##28186|q 12525/1
+			.info He walks around on top of this platform.
+		step
+			goto Sholazar Basin,35.10,47.89
+			.collect 7 Venture Co. Spare Parts##38349|q 12523/1
+			.info They look like metal assorted parts on the ground around this area.
+		step
+			goto Sholazar Basin,27.24,59.89
+			.talk Debaar##28032
+			..turnin Wipe That Grin Off His Face##12525
+		step
+			goto Sholazar Basin,25.35,58.47
+			.talk Weslex Quickwrench##28033
+			..turnin Have a Part, Give a Part##12523
+		step
+			goto Sholazar Basin,25.41,58.47
+			.talk Professor Calvert##28266
+			..accept Aerial Surveillance##12696
+		step
+			goto Sholazar Basin,26.67,59.03
+			.talk Buck Cantwell##28031
+			..accept Dreadsaber Mastery: Becoming a Predator##12549
+		step
+			goto Sholazar Basin,27.09,58.65
+			.talk Hemet Nesingwary##27986
+			..accept Rhino Mastery: The Test##12520
+		step
+			goto Sholazar Basin,27.08,59.90
+			.talk Drostan##28328
+			..accept Kick, What Kick?##12589
+		step
+			goto Sholazar Basin,27.08,59.90
+			.use RJR Rifle##38573
+			.info Use it on Lucky Wilhelm nearby.
+			.info He looks like a gnome with an apple on his head.
+			.info Use th RJR Rifle repeatedly until you hit the apple.
+			.' Shoot the Apple on Lucky Wilhelm's Head|q 12589/1
+		step
+			goto Sholazar Basin,27.08,59.90
+			.talk Drostan##28328
+			..turnin Kick, What Kick?##12589
+			..accept The Great Hunter's Challenge##12592
+		step
+			goto Sholazar Basin,25.23,53.59
+			.kill 15 Dreadsaber##28001|q 12549/1
+			.kill 15 Shardhorn Rhino##28009|q 12520/1
+		step
+			goto Sholazar Basin,26.67,59.03
+			.talk Buck Cantwell##28031
+			..turnin Dreadsaber Mastery: Becoming a Predator##12549
+			..accept Dreadsaber Mastery: Stalking the Prey##12550
+		step
+			goto Sholazar Basin,27.09,58.64
+			.talk Hemet Nesingwary##27986
+			..turnin Rhino Mastery: The Test##12520
+			..accept Rhino Mastery: The Chase##12526
+		step
+			goto Sholazar Basin,26.70,59.56
+			.talk Korg the Cleaver##28046
+			..accept A Steak Fit for a Hunter##12804
+		step
+			goto Sholazar Basin,26.78,60.07
+			.talk Grimbooze Thunderbrew##29157
+			..accept Some Make Lemonade, Some Make Liquor##12634
+		step
+			goto Sholazar Basin,27.24,59.89
+			.talk Debaar##28032
+			..accept Crocolisk Mastery: The Trial##12551
+		step
+			goto Sholazar Basin,25.59,66.54
+			.talk Oracle Soo-rahm##28191
+			..turnin Rhino Mastery: The Chase##12526
+			..accept An Offering for Soo-rahm##12543
+		step
+			goto Sholazar Basin,28.47,67.06
+			.from Longneck Grazer##28129+
+			.get 5 Longneck Grazer Steak##40394|q 12804/1
+		step
+			goto Sholazar Basin,49.95,61.53
+			.talk Pilot Vic##28746
+			..turnin Aerial Surveillance##12696
+			..accept An Embarassing Incident##12699
+			..accept Force of Nature##12803
+		step
+			goto Sholazar Basin,50.48,62.13
+			.talk Tamara Wobblesprocket##28568
+			..accept The Part-time Hunter##12654
+		step
+			.use Vic's Emergency Air Tank##40390
+			.' Gain Water Breathing |havebuff Spell_Frost_ManaRecharge |q 12699
+		step
+			goto Sholazar Basin,48.31,63.37
+			.' Interact with gameobject: Raised Mud
+			.info They look like piles of dirt underwater in this lake.
+			.info This might take what feels like an eternity to finally find Vic's Keys.
+			.collect Vic's Keys##39264|q 12699/1
+		step
+			goto Sholazar Basin,49.95,61.53
+			.talk Pilot Vic##28746
+			..turnin An Embarassing Incident##12699
+			..accept Reconnaissance Flight##12671
+		step
+			goto Sholazar Basin,49.95,61.53|n
+			.' Begin Flying the Flying Machine |invehicle |q 12671
+		step
+			goto Sholazar Basin,70.56,37.09|n
+			.' Watch the dialogue.
+			.info Use the "Air-to-Air Rockets" ability on your action bar to kill the bats that attack.
+			.info You don't need to target the bats.
+			.' Scout the Scourge|goto Sholazar Basin,70.56,37.09,1|q 12671
+		step
+			goto Sholazar Basin,50.05,61.36|n
+			.' Complete the Reconnaissance Flight|q 12671/1
+			.info Use the "Land Flying Machine" ability on your action bar at this location.
+			.info Get close to the ground inside the ring of blue crystals.
+		step
+			goto Sholazar Basin,49.95,61.52
+			.talk Pilot Vic##28746
+			..turnin Reconnaissance Flight##12671
+		step
+			goto Sholazar Basin,50.52,77.22
+			.from Pitch##28097
+			.get Pitch's Remains##38703|q 12654/1
+		step
+			goto Sholazar Basin,50.53,76.59
+			.talk Tracker Gekgek##28095
+			..accept Playing Along##12528
+		step
+			goto Sholazar Basin,50.88,72.82
+			.kill 15 Mangal Crocolisk##28002|q 12551/1
+		step
+			goto Sholazar Basin,50.88,72.82
+			.from Emperor Cobra##28011
+			.get 5 Intact Cobra Fang##38505|q 12543/1
+		step
+			goto Sholazar Basin,50.88,72.82
+			.' Kill 60 Game Animals|q 12592/1
+		step
+			goto Sholazar Basin,50.05,73.1
+			.' Interact with gameobject: Sturdy Vine
+			.info They look like brown vines that hang from trees around this area.
+			.talk Adventurous Dwarf##28604
+			.info Rarely, a Dwarf will fall down.
+			.info Ask them for an orange.
+			.collect Orange##38656|q 12634/1
+			.collect 2 Banana Bunch##38653|q 12634/2
+			.collect Papaya##38655|q 12634/3
+		step
+			goto Sholazar Basin,33.1,40.55
+			.' Interact with gameobject: Dreadsaber Track
+			.info They look like brown paw prints on the ground around this area.
+			.' Identify 3 Shango Tracks|q 12550/1
+		step
+			goto Sholazar Basin,26.67,59.03
+			.talk Buck Cantwell##28031
+			..turnin Dreadsaber Mastery: Stalking the Prey##12550
+			..accept Dreadsaber Mastery: Ready to Pounce##12558
+		step
+			goto Sholazar Basin,26.70,59.56
+			.talk Korg the Cleaver##28046
+			..turnin A Steak Fit for a Hunter##12804
+		step
+			goto Sholazar Basin,26.78,60.07
+			.talk Grimbooze Thunderbrew##29157
+			..turnin Some Make Lemonade, Some Make Liquor##12634
+			..accept Still At It##12644
+		step
+			goto Sholazar Basin,27.1,59.9
+			.talk Drostan##28328
+			..turnin The Great Hunter's Challenge##12592
+		step
+			goto Sholazar Basin,27.24,59.89
+			.talk Debaar##28032
+			..turnin Crocolisk Mastery: The Trial##12551
+			..accept Crocolisk Mastery: The Plan##12560
+		step
+			goto Sholazar Basin,26.67,59.99
+			.talk "Tipsy" McManus##28566
+			.' Tell him "I'm ready to start the distillation, uh, Tipsy."
+			.' Perform the Distillation
+			.info Stand here, you can reach all of the objects you need to click from here.
+			.info Click the items on the ground or on the machine that he yells at you during the process, it's random.
+			.collect Thunderbrew's Jungle Punch##38688|q 12644/1
+			.info It looks like a wooden barrel that appears near you after you complete the distillation.
+		step
+			goto Sholazar Basin,26.78,60.07
+			.talk Grimbooze Thunderbrew##29157
+			..turnin Still At It##12644
+			..accept The Taste Test##12645
+		step
+			goto Sholazar Basin,27.4,59.4
+			.use Jungle Punch Sample##38697
+			.info Use it on Hadrius Harlowe.
+			.' Watch the dialogue
+			.' Complete Hadrius' Taste Test|q 12645/2
+		step
+			goto Sholazar Basin,27.10,58.64
+			.use Jungle Punch Sample##38697
+			.info Use it on Hemet Nesingwary.
+			.' Watch the dialogue
+			.' Complete Hemet's Taste Test|q 12645/1
+		step
+			goto Sholazar Basin,25.59,66.51
+			.talk Oracle Soo-rahm##28191
+			..turnin An Offering for Soo-rahm##12543
+			..accept The Bones of Nozronn##12544
+		step
+			goto Sholazar Basin,26.10,71.56
+			.use Soo-rahm's Incense##38519
+			.' Watch the dialogue.
+			.' Reveal the Location of Farunn|q 12544/1
+		step
+			goto Sholazar Basin,27.10,58.65
+			.talk Hemet Nesingwary##27986
+			..turnin The Bones of Nozronn##12544
+			..accept Rhino Mastery: The Kill##12556
+		step
+			goto Sholazar Basin,34.13,32.92
+			.from Shango##28297
+			.info He looks like an orange and black tiger that walks around this area.
+			.get Shango's Pelt##38523|q 12558/1
+		step
+			goto Sholazar Basin,47.4,43.9
+			.from Farunn##28288
+			.info He looks like a big grey rhino that walks around this area.
+			.get Farunn's Horn##38522|q 12556/1
+		step
+			goto Sholazar Basin,37.39,41.82
+			.collect 5 Sandfern##38553|q 12560/1
+			.info They look like leafy green plants on the ground along the beach around this area.
+		step
+			goto Sholazar Basin,50.48,62.13
+			.use Jungle Punch Sample##38697
+			.info Use it on Tamara Wobblesprocket.
+			.' Watch the dialogue.
+			.' Complete Tamara's Taste Test|q 12645/3
+		step
+			goto Sholazar Basin,50.48,62.12
+			.talk Tamara Wobblesprocket##28568
+			..turnin The Part-time Hunter##12654
+		step
+			goto Sholazar Basin,26.67,59.03
+			.talk Buck Cantwell##28031
+			..turnin Dreadsaber Mastery: Ready to Pounce##12558
+		step
+			goto Sholazar Basin,27.09,58.64
+			.talk Hemet Nesingwary##27986
+			..turnin Rhino Mastery: The Kill##12556
+		step
+			goto Sholazar Basin,26.78,60.07
+			.talk Grimbooze Thunderbrew##29157
+			..turnin The Taste Test##12645
+		step
+			goto Sholazar Basin,27.25,59.89
+			.talk Debaar##28032
+			..turnin Crocolisk Mastery: The Plan##12560
+			..accept Crocolisk Mastery: The Ambush##12569
+		step
+			goto Sholazar Basin,46.53,63.45
+			.use Sandfern Disguise##38564
+			.from Bushwhacker##28317
+			.get Bushwhacker's Jaw##38559|q 12569/1
+		step
+			goto Sholazar Basin,54.99,69.12
+			.talk High-Shaman Rakjak##28082
+			..turnin Playing Along##12528
+			..accept The Ape Hunter's Slave##12529
+		step
+			.use Goregek's Shackles##38619
+			.talk Goregek the Gorilla Hunter##28214
+			..accept Tormenting the Softknuckles##12530
+		step
+			goto Sholazar Basin,60.63,70.58
+			.kill 8 Hardknuckle Forager##28098|q 12529/1
+		step
+			goto Sholazar Basin,66.73,73.86
+			.use Softknuckle Poker##38467
+			.info Use it on Softknuckles around this area.
+			.info They look like baby gorillas around this area.
+			.kill Hardknuckle Matriarch##28213|q 12530/1
+			.info She will eventually appear and run around this area after you poke enough Softknuckles.
+			.info You will see a message in your chat when she appears.
+		step
+			goto Sholazar Basin,66.73,73.86
+			.kill 6 Hardknuckle Charger##28096|q 12529/2
+		step
+			goto Sholazar Basin,55.00,69.12
+			.talk High-Shaman Rakjak##28082
+			..turnin The Ape Hunter's Slave##12529
+			..turnin Tormenting the Softknuckles##12530
+			..accept The Wasp Hunter's Apprentice##12533
+		step
+			goto Sholazar Basin,55.49,69.68
+			.talk Elder Harkek##28138
+			..accept The Sapphire Queen##12534
+		step
+			goto Sholazar Basin,57.15,79.22
+			.from Sapphire Hive Queen##28087
+			.info Inside the cave.
+			.get Stinger of the Sapphire Queen##38477|q 12534/1
+		step
+			goto Sholazar Basin,60.94,78.55
+			.kill 6 Sapphire Hive Wasp##28086|q 12533/1
+			.kill 9 Sapphire Hive Drone##28085|q 12533/2
+		step
+			goto Sholazar Basin,54.99,69.11
+			.talk High-Shaman Rakjak##28082
+			..turnin The Wasp Hunter's Apprentice##12533
+			..turnin The Sapphire Queen##12534
+		step
+			goto Sholazar Basin,55.50,69.68
+			.talk Elder Harkek##28138
+			..accept Flown the Coop!##12532
+		step
+			goto Sholazar Basin,57.47,70.77
+			.use Chicken Net##38689
+			.info Use it on Chicken Escapees around this area.
+			.info They look like tiny chickens running on the ground around this area.
+			.' Interact with NPC: Chicken Escapee
+			.info They will stop running after you use the Chicken Net.
+			.collect 12 Captured Chicken##38483|q 12532/1
+		step
+			goto Sholazar Basin,55.50,69.69
+			.talk Elder Harkek##28138
+			..turnin Flown the Coop!##12532
+			..accept The Underground Menace##12531
+		step
+			goto Sholazar Basin,54.99,69.11
+			.talk High-Shaman Rakjak##28082
+			..accept Mischief in the Making##12535
+		step
+			goto Sholazar Basin,51.52,86.50
+			.from Serfex the Reaver##28083
+			.info He looks like a pile of jumping rocks moving on the ground along the river bank around this area.
+			.get Claw of Serfex##38473|q 12531/1
+		step
+			goto Sholazar Basin,55.88,85.90
+			.collect 8 Skyreach Crystal Cluster##38504|q 12535/1
+			.info They look like clusters of white crystals on the ground along the river bank around this area.
+		step
+			goto Sholazar Basin,54.99,69.11
+			.talk High-Shaman Rakjak##28082
+			..turnin The Underground Menace##12531
+			..turnin Mischief in the Making##12535
+			..accept A Rough Ride##12536
+		step
+			goto Sholazar Basin,57.28,68.38
+			.talk Captive Crocolisk##28298
+			.' Tell him "You look safe enough... let's do this."
+			.' Ride the Captive Crocolish |invehicle |q 12536
+		step
+			goto Sholazar Basin,46.25,39.47|n
+			.' Travel to Mistwhisper Refuge|q 12536/1
+		step
+			.use Zepik's Hunting Horn##38512
+			.info Use this if Zepik is not next to you.
+			.talk Zepik the Gorloc Hunter##28668
+			..turnin A Rough Ride##12536
+			..accept Lightning Definitely Strikes Twice##12537
+			..accept The Mist Isn't Listening##12538
+		step
+			goto Sholazar Basin,45.38,37.19
+			.use Skyreach Crystal Clusters##38510
+			.' Interact with gameobject: Arranged Crystal Formation
+			.' Sabotage the Mistwhisper Weather Shrine|q 12537/1
+		step
+			.use Zepik's Hunting Horn##38512
+			.info Use this if Zepik is not next to you.
+			.talk Zepik the Gorloc Hunter##28216
+			..turnin Lightning Definitely Strikes Twice##12537
+		step
+			goto Sholazar Basin,44.41,36.67
+			.' Kill Mistwhisper enemies around this area.
+			.' Slay 12 Mistwhisper Gorlocs|q 12538/1
+		step
+			.use Zepik's Hunting Horn##38512
+			.info Use this if Zepik is not next to you.
+			.talk Zepik the Gorloc Hunter##28216
+			..turnin The Mist Isn't Listening##12538
+			..accept Hoofing It##12539
+		step
+			goto Sholazar Basin,27.25,59.89
+			.talk Debaar##28032
+			..turnin Crocolisk Mastery: The Ambush##12569
+		step
+			goto Sholazar Basin,27.10,58.65
+			.talk Hemet Nesingwary##27986
+			..accept In Search of Bigger Game##12595
+		step
+			goto Sholazar Basin,42.34,28.70
+			.talk Dorian Drakestalker##28376
+			..turnin In Search of Bigger Game##12595
+			..accept Sharpening Your Talons##12603
+			..accept Securing the Bait##12605
+		step
+			goto Sholazar Basin,46.62,26.61
+			.from Primordial Drake Egg##28408
+			.info They look like white eggs on the ground next to trees around this area.
+			.' Interact with NPC: Primordial Hatchling
+			.info They appear after you kill the eggs.
+			.get 6 Primordial Hatchling##38600|q 12605/1
+		step
+			goto Sholazar Basin,46.62,26.61
+			.kill 6 Primordial Drake##28378|q 12603/1
+			.info They walk on the ground and fly in the air around this area.
+		step
+			goto Sholazar Basin,42.34,28.70
+			.talk Dorian Drakestalker##28376
+			..turnin Sharpening Your Talons##12603
+			..turnin Securing the Bait##12605
+		step
+			goto Sholazar Basin,42.07,28.66
+			.talk Colvin Norrington##28771
+			..accept Reagent Agent##12681
+			..accept Burning to Help##12683
+		step
+			goto Sholazar Basin,42.11,28.89
+			.talk Zootfizzle##28374
+			..accept A Mammoth Undertaking##12607
+			..accept My Pet Roc##12658
+		step
+			goto Sholazar Basin,40.95,40.76
+			.from Bittertide Hydra##28003
+			.info They will spit Hydra Sputum on you.
+			.use Sample Container##39164
+			.info Use it when you have the Hydra Sputum debuff.
+			.get 5 Sputum Samples|q 12683/1
+			.kill 5 Bittertide Hydra##28003|q 12683/2
+		step
+			goto Sholazar Basin,43.02,33.23
+			.use Mammoth Harness##38627
+			.info Use it on a Shattertusk Mammoth around this area.
+			.info It won't work on Shattertusk Bulls.
+			.' Ride a Shattertusk Mammoth |invehicle |q 12607
+		step
+			goto Sholazar Basin,42.17,29.07
+			.' Deliver the Shattertusk Mammoth|q 12607/1
+			.info Use the "Hand Over Mammoth" ability on your action bar.
+		step
+			goto Sholazar Basin,42.11,28.90
+			.talk Zootfizzle##28374
+			..turnin A Mammoth Undertaking##12607
+		step
+			goto Sholazar Basin,42.07,28.67
+			.talk Colvin Norrington##28771
+			..turnin Burning to Help##12683
+		step
+			goto Sholazar Basin,42.34,28.70
+			.talk Dorian Drakestalker##28376
+			..accept Post-partum Aggression##12614
+		step
+			goto Sholazar Basin,47.38,21.14
+			.kill Broodmother Slivina##28467|q 12614/1
+			.info She walks around this small area.
+			.info Use the abilities on your action bar.
+			.info Hemet Nesingway rides with you and places traps on the ground.
+			.info Make Broodmother Slivina run over the traps to cause extra damage.
+		step
+			.' Stop Riding the Mammoth |outvehicle |q 12614
+			.info Click the red arrow on your action bar.
+		step
+			goto Sholazar Basin,56.63,26.88
+			.collect 7 Roc Egg##38705|q 12658/1
+			.info They look like white eggs in nests on the ground around this area.
+		step
+			goto Sholazar Basin,56.63,26.88
+			.from Goretalon Rocs##28004
+			.info They perch on bones and fly in the air around this area.
+			.get 5 Twisted Roc Talon##39161|q 12681/1
+		step
+			goto Sholazar Basin,42.34,28.70
+			.talk Dorian Drakestalker##28376
+			..turnin Post-partum Aggression##12614
+		step
+			goto Sholazar Basin,42.07,28.67
+			.talk Colvin Norrington##28771
+			..turnin Reagent Agent##12681
+		step
+			goto Sholazar Basin,42.11,28.90
+			.talk Zootfizzle##28374
+			..turnin My Pet Roc##12658
+		step
+			goto Sholazar Basin,64.55,48.61
+			.talk Avatar of Freya##27801
+			..turnin Force of Nature##12803
+			..accept An Issue of Trust##12561
+		step
+			goto Sholazar Basin,70.09,51.38
+			.kill 6 Blighted Corpse##28101|q 12561/1
+			.kill 10 Bonescythe Ravager##28108|q 12561/2
+		step
+			goto Sholazar Basin,64.55,48.61
+			.talk Avatar of Freya##27801
+			..turnin An Issue of Trust##12561
+			..accept Returned Sevenfold##12611
+		step
+			goto Sholazar Basin,66.70,44.12
+			.info Deathbolts look like a purple shadow spell when he's casting it.
+			.use Freya's Ward##38657
+			.info Use it on Thalgran Blightbringer when he begins casting Deathbolts to reflect them back at him.
+			.kill Thalgran Blightbringer##28443|q 12611/1
+		step
+			goto Sholazar Basin,64.55,48.61
+			.talk Avatar of Freya##27801
+			..turnin Returned Sevenfold##12611
+			..accept The Fallen Pillar##12612
+			..accept Salvaging Life's Strength##12805
+		step
+			goto Sholazar Basin,65.08,60.31
+			.talk Cultist Corpse##28464
+			..turnin The Fallen Pillar##12612
+			..accept Cultist Incursion##12608
+		step
+			goto Sholazar Basin,68.95,59.50
+			.from Lifeblood Elemental##29124
+			.use Lifeblood Gem##40397
+			.info Use it on their corpses.
+			.' Recover 8 Lifeblood Energy|q 12805/1
+		step
+			goto Sholazar Basin,64.55,48.61
+			.talk Avatar of Freya##27801
+			..turnin Cultist Incursion##12608
+			..turnin Salvaging Life's Strength##12805
+			..accept Exterminate the Intruders##12617
+			..accept Weapons of Destruction##12660
+		step
+			goto Sholazar Basin,56.31,41.74
+			.' Interact with gameobject: Unstable Explosives
+			.info They look like big metal spiked balls on the ground around this area.
+			.' Destroy 4 Unstable Explosives|q 12660/1
+		step
+			goto Sholazar Basin,56.31,41.74
+			.kill 8 Cultist Infiltrator##28373|q 12617/1
+		step
+			goto Sholazar Basin,64.55,48.61
+			.talk Avatar of Freya##27801
+			..turnin Exterminate the Intruders##12617
+			..turnin Weapons of Destruction##12660
+			..accept The Lifewarden's Wrath##12620
+		step
+			goto Sholazar Basin,50.07,37.44
+			.use Freya's Horn##38684
+			.info Use it at the top of this huge pillar.
+			.' Release The Lifewarden's Wrath|q 12620/1
+		step
+			goto Sholazar Basin,64.55,48.61
+			.talk Avatar of Freya##27801
+			..turnin The Lifewarden's Wrath##12620
+			..accept Freya's Pact##12621
+		step
+			goto Sholazar Basin,64.55,48.61
+			.talk Avatar of Freya##27801
+			.' Tell her "I want to stop the Scourge as much as you do. How can I help?"
+			.' Receive Freya's Pact|q 12621/1
+		step
+			goto Sholazar Basin,64.55,48.61
+			.talk Avatar of Freya##27801
+			..turnin Freya's Pact##12621
+			..accept Powering the Waygate - The Maker's Perch##12559
+		step
+			goto Sholazar Basin,26.2,35.5
+			.' Interact with gameobject: Activation Switch Gamma
+			.info Inside the building.
+			.' Engage the Activation Switch Gamma|q 12559/1
+		step
+			goto Sholazar Basin,64.55,48.61
+			.talk Avatar of Freya##27801
+			..turnin Powering the Waygate - The Maker's Perch##12559
+			..accept Powering the Waygate - The Maker's Overlook##12613
+		step
+			goto Sholazar Basin,80.38,55.82
+			.' Interact with gameobject: Timeworn Coffer
+			.info Up on the balcony of the building.
+			..accept A Timeworn Coffer##12691
+		step
+			goto Sholazar Basin,89.07,52.90
+			.' Interact with gameobject: Activation Switch Theta
+			.info Inside the building.
+			.' Engage the Activation Switch Theta|q 12613/1
+		step
+			goto Sholazar Basin,88.49,52.98
+			.from Sholazar Guardian##28069
+			.info Inside the building.
+			.get Huge Stone Key##39227|q 12691/1
+		step
+			goto Sholazar Basin,80.38,55.82
+			.' Interact with gameobject: Timeworn Coffer
+			.info Up on the balcony of the building.
+			..turnin A Timeworn Coffer##12691
+		step
+			goto Sholazar Basin,64.55,48.61
+			.talk Avatar of Freya##27801
+			..turnin Powering the Waygate - The Maker's Overlook##12613
+			..accept The Etymidian##12548
+		step
+			goto Sholazar Basin,40.35,83.08|n
+			.' Enter the Waygate
+			.' Teleport to Un'Goro Crater|goto Un'Goro Crater,50.40,7.92,1|q 12548
+		step
+			goto Un'Goro Crater,47.37,9.22
+			.talk The Etymidian##28092
+			..turnin The Etymidian##12548
+			..accept The Activation Rune##12547
+		step
+			goto Un'Goro Crater,48.17,2.50
+			.from High Cultist Herenn##28601
+			.info Inside the building.
+			.get Omega Rune##38708|q 12547/1
+		step
+			goto Un'Goro Crater,47.37,9.22
+			.talk The Etymidian##28092
+			..turnin The Activation Rune##12547
+			..accept Back Through the Waygate##12797
+		step
+			goto Un'Goro Crater,50.48,7.80|n
+			.' Enter the Waygate
+			.' Teleport to Sholazar Basin|goto Sholazar Basin,40.25,82.73,1|q 12797
+		step
+			goto Sholazar Basin,64.55,48.61
+			.talk Avatar of Freya##27801
+			..turnin Back Through the Waygate##12797
+			..accept Reclamation##12546
+		step
+			goto Sholazar Basin,68.36,39.52
+			.use Omega Rune##38709
+			.' Call Forth the Etymidian |invehicle |q 12546
+		step
+			goto Sholazar Basin,69.92,38.52
+			.kill Bythius the Flesh-Shaper##28212|q 12546/2
+			.info He looks like a big abomination that walks around this area.
+			.info Use the abilities on your action bar.
+		step
+			goto Sholazar Basin,70.06,37.23
+			.kill Urgreth of the Thousand Tombs##28103|q 12546/3
+			.info Use the abilities on your action bar.
+		step
+			goto Sholazar Basin,69.98,34.03
+			.kill Hailscorn##28208|q 12546/4
+			.info Use the abilities on your action bar.
+		step
+			goto Sholazar Basin,69.75,37.77
+			.' Kill enemies around this area.
+			.info Use the abilities on your action bar.
+			.' Destroy 200 Scourge Minions|q 12546/1
+		step
+			.' Release the Etymidian |outvehicle |q 12546
+			.info Click the red arrow on your action bar.
+		step
+			goto Sholazar Basin,64.55,48.61
+			.talk Avatar of Freya##27801
+			..turnin Reclamation##12546
+		step
+			goto Sholazar Basin,55.00,69.12
+			.talk High-Shaman Rakjak##28082
+			..turnin Hoofing It##12539
+			..accept Just Following Orders##12540
+		step
+			goto Sholazar Basin,55.70,64.98
+			.talk Injured Rainspeaker Oracle##28217
+			.' Choose <Reach down and pull the Injured Rainspeaker Oracle to its feet.>
+			.kill Ravenous Mangal Crocolisk##28325|n
+			.' Locate the Injured Rainspeaker Oracle|q 12540/1
+		step
+			goto Sholazar Basin,55.70,64.98
+			.talk Injured Rainspeaker Oracle##28217
+			..turnin Just Following Orders##12540
+			..accept Fortunate Misunderstandings##12570
+		step
+			goto Sholazar Basin,55.7,64.9
+			.talk Injured Rainspeaker Oracle##28217
+			.' Tell him "I am ready to travel to your village now."
+			.' Begin Escorting the Injured Rainspeaker Oracle|goto Sholazar Basin,54.28,61.52,1|q 12570
+		step
+			goto Sholazar Basin,53.17,57.24
+			.' Escort the Injured Rainspeaker Oracle to Rainspeaker Canopy|q 12570/1
+			.info Follow the Injured Rainspeaker Oracle and protect him as he walks.
+		step
+			goto Sholazar Basin,54.59,56.36
+			.talk High-Oracle Soo-say##28027
+			..turnin Fortunate Misunderstandings##12570
+			..accept Make the Bad Snake Go Away##12571
+		step
+			.use Lafoo's Bug Bag##38622
+			.info Use this if Lafoo is not next to you.
+			.talk Lafoo##28120
+			..accept Gods like Shiny Things##12572
+		step
+			goto Sholazar Basin,58.47,54.38
+			.kill Venomtip##28358|q 12571/2
+			.info He looks like a purple snake that walks around this area.
+		step
+			goto Sholazar Basin,54.94,51.75
+			.use Lafoo's Bug Bag##38622
+			.info Use this if Lafoo is not next to you.
+			.collect 6 Shiny Treasures##38575|q 12572/1
+			.info Walk next to the twinkles of light on the ground around this area.
+			.info Lafoo will dig next to the twinkles of light.
+			.info Lafoo won't always dig up Sparkling Treasure, sometimes it's different items or some animal that runs away.
+		step
+			goto Sholazar Basin,54.94,51.75
+			.kill 10 Emperor Cobra##28011|q 12571/1
+		step
+			goto Sholazar Basin,54.59,56.35
+			.talk High-Oracle Soo-say##28027
+			..turnin Make the Bad Snake Go Away##12571
+			..turnin Gods like Shiny Things##12572
+			..accept Making Peace##12573
+		step
+			goto Sholazar Basin,51.30,64.63
+			.talk Shaman Vekjik##28315
+			.' Tell him "Shaman Vekjik, I have spoken with the big-tongues and they desire peace. I have brought this offering on their behalf."
+			.' Extend the Peace Offering to Shaman Vekjik|q 12573/1
+		step
+			goto Sholazar Basin,54.59,56.35
+			.talk High-Oracle Soo-say##28027
+			..turnin Making Peace##12573
+			..accept Back So Soon?##12574
+		step
+			goto Sholazar Basin,42.15,38.65
+			.talk Mistcaller Soo-gan##28114
+			..turnin Back So Soon?##12574
+			..accept The Lost Mistwhisper Treasure##12575
+			..accept Forced Hand##12576
+		step
+			goto Sholazar Basin,41.65,19.53
+			.collect Mistwhisper Treasure##38601|q 12575/2
+		step
+			goto Sholazar Basin,41.28,19.96
+			.' Watch the dialogue
+			.kill Warlord Tartek##28105|q 12575/1
+		step
+			goto Sholazar Basin,40.96,22.40
+			.kill 8 Frenzyheart Spearbearer##28080|q 12576/1
+			.kill 6 Frenzyheart Scavenger##28081|q 12576/2
+		step
+			goto Sholazar Basin,42.15,38.65
+			.talk Mistcaller Soo-gan##28114
+			..turnin The Lost Mistwhisper Treasure##12575
+			..turnin Forced Hand##12576
+			..accept Home Time!##12577
+		step
+			goto Sholazar Basin,54.59,56.35
+			.talk High-Oracle Soo-say##28027
+			..turnin Home Time!##12577
+			..accept The Angry Gorloc##12578
+		step
+			goto Sholazar Basin,54.59,56.35
+			.talk High-Oracle Soo-say##28027
+			.' Ask him "I need to find Moodle, do you have his stress ball?"
+			.collect Moodle's Stress Ball##38624|q 12578
+		step
+			goto Sholazar Basin,75.92,53.68
+			.' Travel to Mosswalker Village|q 12578/1
+		step
+			.use Moodle's Stress Ball##38624
+			.info Use this if Moodle is not next to you.
+			.talk Moodle##28122
+			..turnin The Angry Gorloc##12578
+			..accept Lifeblood of the Mosswalker Shrine##12579
+			..accept The Mosswalker Savior##12580
+		step
+			goto Sholazar Basin,75.97,51.12
+			.talk Mosswalker Victim##28113+
+			.' Choose <Check for a pulse...>
+			.info They won't all live to be rescued.
+			.' Rescue 6 Mosswalker Victims|q 12580/1
+		step
+			.use Moodle's Stress Ball##38624
+			.info Use this if Moodle is not next to you.
+			.talk Moodle##28122
+			..turnin The Mosswalker Savior##12580
+		step
+			goto Sholazar Basin,72.08,54.57
+			.collect 10 Lifeblood Shard##39063|q 12579/1
+			.info They look like small red crystals on the ground around this area.
+		step
+			.use Moodle's Stress Ball##38624
+			.info Use this if Moodle is not next to you.
+			.talk Moodle##28122
+			..turnin Lifeblood of the Mosswalker Shrine##12579
+			..accept A Hero's Burden##12581
+		step
+			goto Sholazar Basin,72.12,57.61
+			.kill Artruis the Heartless##28659|q 12581/1
+			.info Inside the cave.
+			.info While fighting him, you will need to kill 1 of the 2 enemies encased in ice nearby before you can kill him.
+			.info Kill Jaloot if you want to be friendly with the Frenzyheart Tribe.
+			.info Kill Zepik the Gorloc Hunter if you want to be friendly with the Oracles.
+		step
+			goto Sholazar Basin,72.1,57.7
+			.' Interact with gameobject: Artruis' Phylactery
+			.info Inside the cave.
+			.info It appears after you kill Artruis the Heartless.
+			..turnin A Hero's Burden##12581
+		step
+			.' Congratulations! +78/75 quests for achievement "Into the Basin".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[77-empty] The Storm Peaks",[[

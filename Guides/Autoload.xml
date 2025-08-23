@@ -20,7 +20,7 @@
 
 	<Script file="DanatonQuestInstancesA.lua"/>
 	<Script file="DanatonQuestInstancesH.lua"/>
-	<Script file="A-Loremaster-Classic.lua"/>
+	<Script file="A-Loremaster-Kalimdor.lua"/>
 	<Script file="A-Loremaster-EasternKingdoms.lua"/>
 	<Script file="A-Loremaster-BurningCrusade.lua"/>
 	<Script file="A-Loremaster-Northrend.lua"/>

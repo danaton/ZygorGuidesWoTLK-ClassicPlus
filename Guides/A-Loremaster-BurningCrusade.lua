@@ -1090,7 +1090,8 @@ startlevel 70
 			..turnin Natural Enemies##9743
 		step
 			goto Zangarmarsh,14.5,61.6
-			.collect 40 Mature Spore Sac##24290|q 9739|tip They look like pink balls tied to a little string bobbing on the ground.  You need 30 extra to turn in for Sporeggar reputation, so you can accept quests. |future
+			.collect 40 Mature Spore Sac##24290|q 9739 |future
+			.info They look like pink balls tied to a little string bobbing on the ground. You need 30 extra to turn in for Sporeggar reputation, so you can accept quests.
 		step
 			goto Zangarmarsh,13.6,59.8
 			.' Go here to Investigate the Spawning Glen|goal Investigate the Spawning Glen|q 9701/1
@@ -1098,8 +1099,8 @@ startlevel 70
 			goto Zangarmarsh,19.1,63.9
 			.talk Fahssn##17923
 			..turnin The Sporelings' Plight##9739
-			..'Turn in all your Mature Spore Sacs
-			..'Turn in all your Bog Lord Tendrils
+			.' Turn in all your Mature Spore Sacs
+			.' Turn in all your Bog Lord Tendrils
 			..accept Sporeggar##9919
 		step
 			goto Zangarmarsh,23.3,66.2
@@ -1108,8 +1109,8 @@ startlevel 70
 			..accept A Question of Gluttony##9702
 		step
 			goto Zangarmarsh,27,63.3
-			.' Click the Discarded Nutriments|tip They look like green glowing mushroom stalks on the ground.
-			.get 10 Discarded Nutriment|q 9702/1
+			.collect 10 Discarded Nutriment|q 9702/1
+			.info They look like green glowing mushroom stalks on the ground.
 		step
 			goto Zangarmarsh,23.3,66.2
 			.talk Watcher Leesa'oh##17831
@@ -1131,7 +1132,8 @@ startlevel 70
 			..turnin Fertile Spores##9806
 		step
 			goto Zangarmarsh,25.4,42.9
-			.' Use your Ironvine Seeds on the Serpent Lake Controls|use Ironvine Seeds##24355|tip The pump controls look like a little box with some levers on it.
+			.' Use your Ironvine Seeds on the Serpent Lake Controls|use Ironvine Seeds##24355
+			.info The pump controls look like a little box with some levers on it.
 			.' Marshlight Lake Controls Disabled|q 9720/2
 		step
 			goto Zangarmarsh,26.8,43
@@ -1151,7 +1153,8 @@ startlevel 70
 			..accept Secrets of the Daggerfen##9848
 		step
 			goto Zangarmarsh,41.7,27.3
-			.' Click the Wanted Poster|tip On a pink crystal post.
+			.' Click the Wanted Poster
+			.info On a pink crystal post.
 			..accept Wanted: Chieftain Mummaki##10116
 		step
 			goto Zangarmarsh,41.9,27.2
@@ -1161,11 +1164,13 @@ startlevel 70
 			..accept Daggerfen Deviance##10115
 		step
 			goto Zangarmarsh,26.4,22.8
-			.' Click the Daggerfen Poison Vial|tip Little clear bottle with white liquid in it, sitting on the ground next to a hut.
+			.' Click the Daggerfen Poison Vial
+			.info Little clear bottle with white liquid in it, sitting on the ground next to a hut.
 			.get Daggerfen Poison Vial|q 9848/2
 		step
 			goto Zangarmarsh,24.4,27
-			.' Click the Daggerfen Poison Manual|tip At the top of the big tower, to the right as you reach the top, on the floor.
+			.' Click the Daggerfen Poison Manual
+			.info At the top of the big tower, to the right as you reach the top, on the floor.
 			.get Daggerfen Poison Manual|q 9848/1
 		step
 			goto Zangarmarsh,23.8,26.8
@@ -1207,7 +1212,8 @@ startlevel 70
 			.get 8 Fenclaw Hide|q 9834/1
 		step
 			goto Zangarmarsh,50.4,40.8
-			.' Locate the drain in Serpent Lake|q 9731/1|tip Swim straight down at this spot.
+			.' Locate the drain in Serpent Lake|q 9731/1
+			.info Swim straight down at this spot.
 		step
 			goto Zangarmarsh,35.9,58.6
 			.kill 12 Marshfang Slicer|q 9833/1
@@ -1218,12 +1224,14 @@ startlevel 70
 			..accept Stealing Back the Mushrooms##9709
 		step
 			goto Zangarmarsh,22.4,46.1
-			.kill Terrorclaw|q 9902/1|tip On a little island.
+			.kill Terrorclaw|q 9902/1
+			.info On a little island.
 		step
 			goto Zangarmarsh,17.3,38.4
-			.from Marshlight Bleeder##18133|tip They are all around this area on the land, to the north and south.
+			.from Marshlight Bleeder##18133
+			.info They are all around this area on the land, to the north and south.
 			.get 6 Marshlight Bleeder Venom|q 9830/1
-			.' You'll be able to find more around 19.6,33.3
+			.' You'll be able to find more around|at 19.6,33.3
 		step
 			goto Zangarmarsh,17.3,10.2
 			.kill 10 Ango'rosh Mauler|q 9839/2
@@ -1231,7 +1239,8 @@ startlevel 70
 			.get 10 Box of Mushrooms|q 9709/1
 		step
 			goto Zangarmarsh,18.3,7.7
-			.kill 1 Overlord Gorefist|q 9839/1|tip Follow the path up the hill. Overlord Gorefist is inside the small house on the left.
+			.kill 1 Overlord Gorefist|q 9839/1
+			.info Follow the path up the hill. Overlord Gorefist is inside the small house on the left.
 		step
 			goto Zangarmarsh,40.8,28.7
 			.talk Puluu##18009
@@ -1249,12 +1258,13 @@ startlevel 70
 			..turnin Overlord Gorefist##9839
 		step
 			goto Zangarmarsh,42.2,41.4
-			.kill Mragesh|q 9905/1|tip He is a big brown hydra underwater.
+			.kill Mragesh|q 9905/1
+			.info He is a big brown hydra underwater.
 		step
 			goto Zangarmarsh,23.3,66.2
 			.talk Watcher Leesa'oh##17831
 			..turnin Stealing Back the Mushrooms##9709
-			..'Don't follow her when she walks away
+			.' Don't follow her when she walks away
 		step
 			goto Zangarmarsh,41.6,27.3
 			.talk Maktu##18010
@@ -1270,8 +1280,8 @@ startlevel 70
 			..turnin Blacksting's Bane##9896
 		step
 			goto Zangarmarsh,49.3,60.6
-			.' Click the Feralfen Idols|tip They are small grey and green eagle statues on the ground.
-			.get 6 Feralfen Idol|q 9787/1
+			.collect 6 Feralfen Idol|q 9787/1
+			.info They are small grey and green eagle statues on the ground.
 		step
 			goto Zangarmarsh,68.2,49.4
 			.talk Anchorite Ahuurn##18003
