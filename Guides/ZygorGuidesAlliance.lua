@@ -4829,7 +4829,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 	step //4
 		goto 56.6,52.6
 		.talk Thor##523
-		.fpath Sentinel Hill, Westfall
+		fpath Sentinel Hill, Westfall|q 109
 	step //5
 		goto 54.0,52.9
 		.talk Scout Galiaan##878
@@ -4989,8 +4989,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		.kill 20 Harvest Watcher##114|q 9/1
 		.get 3 Okra##732|q 38/4
 		.from Harvest Watcher##114
-		.collect 5 Flask of Oil##814|q 103/1 |future
-		.' You can find more Harvest Watchers at 53.5,29.4|n
+		.collect 5 Flask of Oil##814|q 103 |future
+		.' You can find more Harvest Watchers (1)|at 53.5,29.4
+		.' You can find more Harvest Watchers (2)|at 44.75,35.5
 	step //41
 		goto 56,31.2
 		.talk Farmer Saldean##233
@@ -5015,6 +5016,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		.talk Captain Danuvin##821
 		..turnin Patrolling Westfall##102
 	step //47
+		goto 56.6,52.6|n
+		.talk Thor##523
 		.' Fly to Stormwind City|goto Stormwind City|noway|q 4811 |future
 	step //48
 		goto Stormwind City,22.6,56.1|n
@@ -5041,8 +5044,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..accept The Cliffspring River##4762
 	step //54
 		goto 40.3,53
-		.kill 8 Blackwood Pathfinder|q 985/1
-		.kill 5 Blackwood Windtalker|q 985/2
+		.kill 8 Blackwood Pathfinder##2167|q 985/1
+		.kill 5 Blackwood Windtalker##2324|q 985/2
 	step //55
 		goto 38.4,52.9
 		.' Use Tharnariun's Hope on a Rabid Thistle Bear|use Tharnariun's Hope##7586
@@ -5068,10 +5071,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 	step //60
 		goto 37.8,44.1
 		.' Use your Empty Water Tube in your bags in the moonwell water|use Empty Water Tube##14338
-		.get Moonwell Water Tube|q 4812/1
+		.collect Moonwell Water Tube##14339|q 4812/1
 	step //61
 		goto 47.3,48.7
-		.' Click the Mysterious Red Crystal|tip It's a big red crystal sitting at the top of this hill.
+		.' Click the Mysterious Red Crystal
+		.info It's a big red crystal sitting at the top of this hill.
 		..turnin As Water Cascades##4812
 		..accept The Fragments Within##4813
 	step //62
@@ -5080,8 +5084,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..accept Bashal'Aran (3)##956
 	step //63
 		goto 47.4,36.8
-		.from Deth'ryll Satyrs##2212+
-		.get Ancient Moonstone Seal|q 956/1
+		.from Deth'ryll Satyrs##2212
+		.get Ancient Moonstone Seal##5338|q 956/1
 	step //64
 		goto 44.2,36.3
 		.talk Asterion##3650
@@ -5089,36 +5093,39 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..accept Bashal'Aran (4)##957
 	step //65
 		goto 42,28.6
-		.' Click the Buzzbox 411|tip It's a metal box with levers on it, sitting on the beach.
+		.' Click the Buzzbox 411
+		.info It's a metal box with levers on it, sitting on the beach.
 		..accept Buzzbox 323##1002
 	step //66
 		goto 48.4,30.7
-		.kill 20 Rabid Thistle Bear|q 2138/1
-		.from Moonstalker##2069+
-		.get 6 Moonstalker Fang|q 1002/1
+		.kill 20 Rabid Thistle Bear##2164|q 2138/1
+		.from Moonstalker##2069
+		.get 6 Moonstalker Fang##5413|q 1002/1
 	step //67
 		ding 16
 	step //68
 		goto 51.3,24.6
-		.' Click Buzzbox 323|tip It's a metal box with some levers on it, on the side of the road.
+		.' Click Buzzbox 323
+		.info It's a metal box with some levers on it, on the side of the road.
 		..turnin Buzzbox 323##1002
 		..accept Buzzbox 525##1003
 	step //69
-		'Jump down into the water below the bridge to 50.9,25.7|goto 50.9,25.7
+		.' Jump down into the water below the bridge to|goto 50.9,25.7
 		.' Use your Empty Sampling Tube at the bottom of this waterfall|use Empty Sampling Tube##12350
-		.get Cliffspring River Sample|q 4762/1
+		.collect Cliffspring River Sample##12349|q 4762/1
 	step //70
 		goto 44.2,20.6
-		.' Click the Beached Sea Turtle's hand|tip It looks like a huge sea turtle skeleton on the beach.
+		.' Click the Beached Sea Turtle's hand
+		.info It looks like a huge sea turtle skeleton on the beach.
 		..accept Beached Sea Turtle##4725 //? or 4725,4727,4731,4732
 	step //71
-		'Go underwater to 39.6,27.5|goto 39.6,27.5
-		.' Click the Mist Veil's Lockbox|tip It's a small grey chest at the very bottom of the ship.
-		.get Mist Veil's Lockbox|q 982/2
+		.' Go underwater to|goto 39.6,27.5
+		.collect Mist Veil's Lockbox##12192|q 982/2
+		.info It's a small grey chest at the very bottom of the ship.
 	step //72
-		'Go underwater to 38.2,28.8|goto 38.2,28.8
-		.' Click the Silver Dawning's Lockbox|tip It's a small grey chest at the very bottom of this ship.
-		.get Silver Dawning's Lockbox|q 982/1
+		.' Go underwater to|goto 38.2,28.8
+		.collect Silver Dawning's Lockbox##12191|q 982/1
+		.info It's a small grey chest at the very bottom of this ship.
 	step //73
 		goto 38.1,41.2
 		.talk Gorbold Steelhand##6301
@@ -5155,23 +5162,26 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..accept The Fall of Ameth'Aran##953
 	step //81
 		goto 41.5,59.1
-		.from Cursed Highborne##2176+, Writhing Highborne##2177+, Wailing Highborne##2178+
-		.get 7 Highborne Relic|q 958/1
+		.from Cursed Highborne##2176, Writhing Highborne##2177, Wailing Highborne##2178
+		.get 7 Highborne Relic##5360|q 958/1
 	step //82
 		goto 43.3,58.7
-		.' Click the Lay of Ameth'Aran |tip It's a stone tablet laying flat on the ground.
-		.' Read the Lay of Ameth'Aran |q 953/1
+		.' Click the Lay of Ameth'Aran
+		.info It's a stone tablet laying flat on the ground.
+		.' Read the Lay of Ameth'Aran|q 953/1
 	step //83
 		goto 43.3,59.7
 		.from Anaya Dawnrunner##3667
-		.get Anaya's Pendant|q 963/1
+		.get Anaya's Pendant##5382|q 963/1
 	step //84
 		goto 42.4,61.8
-		.' Click the Ancient Flame|tip It's a stone podium with a green coming out of the top of it, inside a dark colored broken gazebo.
+		.' Click the Ancient Flame
+		.info It's a stone podium with a green coming out of the top of it, inside a dark colored broken gazebo.
 		.' Destroy the seal at the ancient flame|goal Destroy the seal at the ancient flame|q 957/1
 	step //85
 		goto 42.6,63.1
-		.' Click the Fall of Ameth'Aran|tip It's a stone tablet standing upright on the ground.
+		.' Click the Fall of Ameth'Aran
+		.info It's a stone tablet standing upright on the ground.
 		.' Read the Fall of Ameth'Aran|goal Read the Fall of Ameth'Aran|q 953/2
 	step //86
 		goto 40.3,59.7
@@ -5191,18 +5201,18 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..turnin Bashal'Aran (4)##957
 	step //90
 		goto 52.4,35.9|n
-		.' The path up to Tharnariun's Hope starts here|goto Darkshore,52.4,35.9,0.5|noway|c
+		.' The path up to Tharnariun's Hope starts here|goto Darkshore,52.4,35.9,0.5|noway|q 2139
 	step //91
 		goto 51.5,38.2
-		.kill Den Mother|q 2139/1
+		.kill Den Mother##6788|q 2139/1
 	step //92
 		goto 54.6,31.8|n
-		.' The path up to Cave Mushrooms starts here|goto Darkshore,54.6,31.8,0.5|noway|c
+		.' The path up to Cave Mushrooms starts here|goto Darkshore,54.6,31.8,0.5|noway|q 947
 	step //93
 		goto 55.1,33.6
 		.' Click the mushrooms up the hill, inside the cave
-		.get 5 Scaber Stalk|q 947/1
-		.get 1 Death Cap|q 947/2
+		.collect 5 Scaber Stalk##5271|q 947/1
+		.collect 1 Death Cap##5270|q 947/2
 	step //94
 		goto 38.8,43.4
 		.talk Tharnariun Treetender##3701
@@ -5214,10 +5224,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 	step //96
 		ding 17
 	step //97
-		'Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+		.' Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|q 27 |future
 		only NightElf Druid
 	step //98
-		goto Darnassus|goto Darnassus|noway|c
+		goto Darnassus|goto Darnassus|noway|q 27 |future
 		only NightElf Druid
 	step //99
 		goto Darnassus,35.2,8.1
@@ -5225,8 +5235,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..accept A Lesson to Learn##27
 		only NightElf Druid
 	step //100
-		'Remember, you have the spell Teleport: Moonglade
-		.' Teleport to Moonglade|goto Moonglade|cast Teleport: Moonglade|c
+		.' Remember, you have the spell Teleport: Moonglade
+		.' Teleport to Moonglade|goto Moonglade|cast Teleport: Moonglade|q 27
 		only NightElf Druid
 	step //101
 		goto Moonglade,56.2,30.5
@@ -5235,8 +5245,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..accept Trial of the Lake##29
 		only NightElf Druid
 	step //102
-		'Go south in the lake to 57.6,57.8|goto 57.6,57.8
-		.' Click the Bauble Container underwater|tip It looks like a wooden vase thing underwater on top of a big hill.  They spawn randomly, so you may have to search around the lake for another Bauble container.
+		.' Go south in the lake to|goto 57.6,57.8
+		.' Click the Bauble Container underwater
+		.info It looks like a wooden vase thing underwater on top of a big hill. They spawn randomly, so you may have to search around the lake for another Bauble container.
 		.collect Shrine Bauble##15877|q 29/1
 		only NightElf Druid
 	step //103
@@ -5253,10 +5264,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 	step //105
 		goto 44.2,45.3
 		.talk Silva Fil'naveth##11800
-		..'Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+		.' Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|q 272
 		only NightElf Druid
 	step //106
-		'Fly to Auberdine|goto Darkshore,36.4,45.6,0.3|noway|c
+		.' Fly to Auberdine|goto Darkshore,36.4,45.6,0.3|noway|q 272
 		only NightElf Druid
 	step //107
 		goto Darkshore,48.9,11.3
@@ -5265,10 +5276,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		only NightElf Druid
 	step //108
 		goto 32.4,43.8|n
-		'Ride the boat to Stormwind Harbor|goto Stormwind City|noway|c
+		.' Ride the boat to Stormwind Harbor|goto Stormwind City|noway|q 272
 		only NightElf Druid
 	step //109
-		'Fly to Sentinel Hill|goto Westfall,53.4,50.8,3|noway|c
+		.' Fly to Sentinel Hill|goto Westfall,53.4,50.8,3|noway|q 272
 		only NightElf Druid
 	step //110
 		goto Westfall,18.0,33.0
@@ -5276,13 +5287,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		.collect Half Pendant of Aquatic Endurance##15882|q 272/1
 		only NightElf Druid
 	step //111
-		'Teleport to Moonglade|goto Moonglade|cast Teleport: Moonglade|c
+		.' Teleport to Moonglade|goto Moonglade|cast Teleport: Moonglade|q 272
 		only NightElf Druid
 	step //112
 		goto Moonglade,36,42
 		.' Stand next to the tree that looks like a woman
 		.' Click the Half Pendant of Aquatic Agility in your bags|use Half Pendant of Aquatic Agility##15883
-		.get Pendant of the Sea Lion|q 272/1
+		.collect Pendant of the Sea Lion|q 272/1
 		only NightElf Druid
 	step //113
 		goto 56.2,30.5
@@ -5293,10 +5304,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 	step //114
 		goto 44.2,45.3|n
 		.talk Silva Fil'naveth##11800
-		..'Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+		.' Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|q 5061
 		only NightElf Druid
 	step //115
-		goto Darnassus|goto Darnassus|noway|c
+		goto Darnassus|goto Darnassus|noway|q 5061
 		only NightElf Druid
 	step //116
 		goto Darnassus,35.2,8.1
@@ -5304,17 +5315,17 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..turnin Aquatic Form##5061
 		only NightElf Druid
 	step //117
-		'Go to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+		.' Go to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
 		only NightElf Druid
 	step //118
-		'Fly to Auberdine|goto Darkshore,36.4,45.6,0.3|noway|c
+		.' Fly to Auberdine|goto Darkshore,36.4,45.6,0.3|noway|c
 		only NightElf Druid
 	step //119
-		'Hearth to Sentinel Hill|goto Westfall,52.9,53.6,0.5|use Hearthstone##6948|noway|c
+		.' Hearth to Sentinel Hill|goto Westfall,52.9,53.6,0.5|use Hearthstone##6948|noway|q 13
 	step //120
 		goto Westfall,31.4,44.5
-		.kill 15 Defias Looter|q 13/2
-		.kill 15 Defias Pillager|q 13/1
+		.kill 15 Defias Looter##590|q 13/2
+		.kill 15 Defias Pillager##589|q 13/1
 	step //121
 		goto 56.3,47.5
 		.talk Gryan Stoutmantle##234
@@ -5323,25 +5334,29 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..accept The Defias Brotherhood (1)##65
 	step //122
 		goto 52.6,72.3
-		.kill 15 Defias Highwayman|q 14/1
-		.kill 5 Defias Pathstalker|q 14/2
-		.kill 5 Defias Knuckleduster|q 14/3
+		.kill 15 Defias Highwayman##122|q 14/1
+		.kill 5 Defias Pathstalker##121|q 14/2
+		.kill 5 Defias Knuckleduster##449|q 14/3
 	step //123
 		goto 56.3,47.5
 		.talk Gryan Stoutmantle##234
 		..turnin The People's Militia (3)##14
 	step //
-		'Fly to Ironforge|goto Ironforge|noway|c
+		goto 56.6,52.6|n
+		.talk Thor##523
+		.' Fly to Ironforge|goto Ironforge|noway|q 2039 |future
 	step //
-		goto Dun Morogh,62.2,29.2
+		goto Ironforge,69.18,50.56
 		.talk Gnoarn##6569
 		..accept Find Bingles##2039
 	step //124
-		'Fly to Thelsamar|goto Loch Modan,33.9,50.8,0.5|noway|c
+		goto Ironforge,55.5,47.7|n
+		.talk Gryth Thurden##1573
+		.' Fly to Thelsamar|goto Loch Modan,33.9,50.8,0.5|noway|q 2039
 	step //125
 		goto 35.5,48.4
 		.talk Innkeeper Hearthstove##6732
-		home Thelsamar
+		home Thelsamar|q 255 |future
 	step //126
 		goto 34.7,43.2
 		.talk Magistrate Bluntnose##1139
@@ -5353,9 +5368,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 	step //128
 		goto 35.4,18.5
 		.' Click Miners' League Crates inside the cave
-		.get 4 Miners' Gear|q 307/1
+		.collect 4 Miners' Gear##2640|q 307/1
 	step //129
-		'Go outside to 24.8,18.4|goto 24.8,18.4
+		.' Go outside to|goto 24.8,18.4
 		.talk Mountaineer Stormpike##1343
 		..turnin Filthy Paws##307
 	step //130
@@ -5368,13 +5383,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..turnin Ironband's Excavation##436
 		..accept Gathering Idols##297
 	step //132
-		'Go northeast to 65.9,65.6|goto 65.9,65.6
+		goto 65.9,65.6
 		.talk Prospector Ironband##1344
 		..accept Excavation Progress Report##298
 	step //133
 		goto 68.1,63.2
-		.from Stoneplinter Digger##1167+, Stonesplinter Geomancer##1165+ 
-		.get 8 Carved Stone Idol|q 297/1
+		.from Stoneplinter Digger##1167, Stonesplinter Geomancer##1165
+		.get 8 Carved Stone Idol##2636|q 297/1
 	step //134
 		goto 64.9,66.7
 		.talk Magmar Fellhew##1345
@@ -5391,16 +5406,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..accept Crocolisk Hunting##385
 	step //138
 		goto 77.4,58.3
-		.kill 6 Mountain Buzzard|q 257/1
+		.kill 6 Mountain Buzzard##1194|q 257/1
 	step //139
 		goto 83.5,65.5
 		.talk Daryl the Youngling##1187
 		..turnin A Hunter's Boast##257
-		.'The next quest is timed. Make sure you are ready.
+		.' The next quest is timed. Make sure you are ready.
 		..accept A Hunter's Challenge##258
 	step //140
 		goto 65.3,39.1
-		.kill 5 Elder Mountain Boar|q 258/1
+		.kill 5 Elder Mountain Boar##1192|q 258/1
 	step //141
 		goto 83.5,65.5
 		.talk Daryl the Youngling##1187
@@ -5412,32 +5427,33 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..accept Bingles' Missing Supplies##2038
 	step //143
 		goto 55.2,54
-		.from Loch Crocolisk##1693+
-		.get 5 Crocolisk Meat|q 385/1
-		.get 6 Crocolisk Skin|q 385/2
+		.from Loch Crocolisk##1693
+		.get 5 Crocolisk Meat##2924|q 385/1
+		.get 6 Crocolisk Skin##2925|q 385/2
+		.' You can find more crocolisk|at 54.99,38.4
 	step //144
 		goto 48.7,30.1
-		.' Click Bingles's Toolbucket|tip It's a little silver bucket on the ground.
-		.get Bingles' Wrench|q 2038/1
+		.collect Bingles' Wrench##7343|q 2038/1
+		.info It's a little silver bucket on the ground.
 	step //145
 		goto 54.2,26.6
-		.' Click Bingles' Blastencapper|tip It's the little bitty barrel to the right of the hut entrance with a fuse on it.
-		.get Bingles' Blastencapper|q 2038/4
+		.collect Bingles' Blastencapper##7376|q 2038/4
+		.info It's the little bitty barrel to the right of the hut entrance with a fuse on it.
 	step //146
 		goto 51.8,24.1
-		.' Click Bingles's Toolbucket|tip It's a little silver bucket on the ground.
-		.get Bingles' Hammer|q 2038/3
+		.collect Bingles' Hammer##7346|q 2038/3
+		.info It's a little silver bucket on the ground.
 	step //147
 		goto 48.1,21.1
-		.' Click Bingles' Toolbucket|tip It's a little silver bucket on the ground.
-		.get Bingles' Screwdriver|q 2038/2
+		.collect Bingles' Screwdriver##7345|q 2038/2
+		.info It's a little silver bucket on the ground.
 	step //148
 		goto 46,13.6
 		.talk Chief Engineer Hinderweir VII##1093
 		..accept A Dark Threat Looms (1)##250
 	step //149
 		goto 56,13.3
-		.' Click the Suspicious Barrel|tip Its a little barrel sitting on the ground right next to the wall.
+		.info Its a little barrel sitting on the ground right next to the wall.
 		..turnin A Dark Threat Looms (1)##250
 		..accept A Dark Threat Looms (2)##199
 	step //150
@@ -5446,11 +5462,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..turnin A Dark Threat Looms (2)##199
 	step //151
 		goto 67.1,22.2
-		.kill 4 Mo'grosh Ogre|q 255/1
-		.kill 4 Mo'grosh Enforcer|q 255/3
+		.kill 4 Mo'grosh Ogre##1178|q 255/1
+		.kill 4 Mo'grosh Enforcer##1179|q 255/3
 	step //152
 		goto 75,19.8
-		.kill 4 Mo'grosh Brute|q 255/2
+		.kill 4 Mo'grosh Brute##1180|q 255/2
 	step //153
 		goto 63.6,47.9
 		.talk Bingles Blastenheimer##6577
@@ -5466,7 +5482,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 	step //156
 		goto 43,64
 		.from Ol' Sooty##1225
-		.get Ol' Sooty's Head|q 271/1
+		.get Ol' Sooty's Head##2713|q 271/1
 	step //157
 		goto 83.5,65.5
 		.talk Daryl the Youngling##1187
@@ -5477,7 +5493,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		.talk Vyrin Swiftwind##1156
 		..turnin Vyrin's Revenge (2)##531
 	step //159
-		'Hearth to Thelsamar|goto Loch Modan,35.1,46.9,3|use Hearthstone##6948|noway|c
+		.' Hearth to Thelsamar|goto Loch Modan,35.1,46.9,3|use Hearthstone##6948|noway|q 255
 	step //160
 		goto 34.7,43.2
 		.talk Magistrate Bluntnose##1139
@@ -5490,17 +5506,21 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 	step //162
 		ding 19
 	step //163
-		'Fly to Ironforge|goto Ironforge|noway|c
+		goto 33.9,51|n
+		.talk Thorgrum Borrelson##1572
+		.' Fly to Ironforge|goto Ironforge|noway|q 301
 	step //164
 		goto Ironforge,74.7,11.7
 		.talk Prospector Stormpike##1356
 		..turnin Report to Ironforge##301
 	step //165
-		'Fly to Stormwind City|goto Stormwind City|noway|c
+		goto Ironforge,55.5,47.7|n
+		.talk Gryth Thurden##1573
+		.' Fly to Stormwind City|goto Stormwind City|noway|q 244 |future
 	step //166
-		'Go outside to Elwynn Forest|goto Elwynn Forest|noway|c
+		.' Go outside to Elwynn Forest|goto Elwynn Forest|noway|q 244 |future
 	step //167
-		'Go east to Redridge Mountains|goto Redridge Mountains|noway|c
+		.' Go east to Redridge Mountains|goto Redridge Mountains|noway|q 244 |future
 	step //168
 		goto Redridge Mountains,15.3,71.5
 		.talk Guard Parker##464
@@ -5513,7 +5533,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 	step //170
 		goto 30.6,59.4
 		.talk Ariena Stormfeather##931
-		..fpath Lakeshire
+		fpath Lakeshire|q 246
 	step //171
 		goto 33.5,49
 		.talk Marshal Marris##382
@@ -5532,12 +5552,12 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..accept Hilary's Necklace##3741
 	step //175
 		goto 29.1,55.1
-		.' Click the Glinting Mud|tip The Glinting Mud spawns in random places around this area, so some searching may be necessary.
-		.get Hilary's Necklace|q 3741/1
+		.collect Hilary's Necklace##10958|q 3741/1
+		.info The Glinting Mud spawns in random places around this area, so some searching may be necessary.
 	step //176
 		goto 41.5,54.6
-		.' Click the Sunken Chest
-		.get Oslow's Toolbox|q 125/1
+		.collect Oslow's Toolbox##1309|q 125/1
+		.info At the bottom of the lake.
 	step //177
 		goto 32.1,48.6
 		.talk Foreman Oslow##341
@@ -5562,7 +5582,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 	step //182
 		goto 27.0,44.8
 		.talk Innkeeper Brianna##6727
-		home Lakeshire
+		home Lakeshire|q 129
 	step //183
 		goto 26.5,45.3
 		.talk Wiley the Black##266
@@ -5582,37 +5602,45 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		..turnin A Free Lunch##129
 		..accept Visit the Herbalist##130
 	step //187
-		'Fly to Sentinel Hill|goto Westfall,53.4,50.8,3|noway|c
+		goto 30.6,59.4|n
+		.talk Ariena Stormfeather##931
+		.' Fly to Sentinel Hill|goto Westfall,53.4,50.8,3|noway|q 132
 	step //188
 		goto Westfall,56.3,47.5
 		.talk Gryan Stoutmantle##234
 		..turnin The Defias Brotherhood (2)##132
 		..accept The Defias Brotherhood (3)##135
 	step //189
-		'Fly to Stormwind City|goto Stormwind City|noway|c
+		goto Westfall,56.6,52.6|n
+		.talk Thor##523
+		.' Fly to Stormwind City|goto Stormwind City|noway|q 135
 	step //190
 		goto Stormwind City,78.3,70.7
 		.talk Master Mathias Shaw##332
 		..turnin The Defias Brotherhood (3)##135
 		..accept The Defias Brotherhood (4)##141
 	step //191
-		'Fly to Sentinel Hill|goto Westfall,53.4,50.8,3|noway|c
+		goto Stormwind City,71,72.5|n
+		.talk Dungar Longdrink##352
+		.' Fly to Sentinel Hill|goto Westfall,53.4,50.8,3|noway|q 141
 	step //192
 		goto Westfall,56.3,47.5
 		.talk Gryan Stoutmantle##234
 		..turnin The Defias Brotherhood (4)##141
 		..accept The Defias Brotherhood (5)##142
 	step //193
-		'Fly to Stormwind City|goto Stormwind City|noway|c
+		goto Westfall,56.6,52.6|n
+		.talk Thor##523
+		.' Fly to Stormwind City|goto Stormwind City|noway|q 118
 	step //194
-		'Go outside to Elwynn Forest|goto Elwynn Forest|noway|c
+		.' Go outside to Elwynn Forest|goto Elwynn Forest|noway|q 118
 	step //195
 		goto Elwynn Forest,41.7,65.5
 		.talk Smith Argus##514
 		..turnin The Price of Shoes##118
 		..accept Return to Verner##119
 	step //196
-		'Hearth to Lakeshire|goto Redridge Mountains,26.9,44.9,0.5|use Hearthstone##6948|noway|c
+		.' Hearth to Lakeshire|goto Redridge Mountains,26.9,44.9,0.5|use Hearthstone##6948|noway|q 130
 	step //197
 		goto Redridge Mountains,21.9,46.3
 		.talk Martie Jainrose##342
@@ -5631,17 +5659,17 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 	step //200
 		goto 34.2,67.4
 		.from Black Dragon Whelp##441
-		.get 6 Underbelly Whelp Scale|q 122/1
+		.get 6 Underbelly Whelp Scale##1221|q 122/1
 		.from Great Goretusk##547
-		.get 5 Great Goretusk Snout|q 92/1
+		.get 5 Great Goretusk Snout##2296|q 92/1
 	step //201
 		goto 19.3,73.2
-		.from Tarantula##442+
-		.get 5 Crisp Spider Meat|q 92/3
+		.from Tarantula##442
+		.get 5 Crisp Spider Meat##1081|q 92/3
 	step //202
 		goto 26.8,80.2
-		.kill 10 Redridge Mongrel|q 246/1
-		.kill 6 Redridge Poacher|q 246/2
+		.kill 10 Redridge Mongrel##423|q 246/1
+		.kill 6 Redridge Poacher##424|q 246/2
 	step //203
 		goto 30.7,60
 		.talk Deputy Feldon##1070
@@ -5659,13 +5687,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (20-25
 	startlevel 20
 	step //1
 		goto Redridge Mountains,48.2,73.3
-		.from Murloc Flesheater##422+, Murloc Shorestriker##1083+, Murloc Minor Tidecaller##548+
+		.from Murloc Flesheater##422, Murloc Shorestriker##1083, Murloc Minor Tidecaller##548
 		.get 10 Spotted Sunfish|q 127/1
 		.collect 8 Murloc Fin##1468|q 150/1 |future
 	step //2
 		goto 55.5,74.7
-		.from Dire Condor##428+
-		.get 5 Tough Condor Meat|q 92/2
+		.from Dire Condor##428
+		.get 5 Tough Condor Meat##1080|q 92/2
 	step //3
 		goto 70.6,78.8
 		.from Blackrock Grunt##440+, Blackrock Outrunner##485+

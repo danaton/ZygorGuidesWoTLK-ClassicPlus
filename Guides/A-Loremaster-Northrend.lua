@@ -5873,13 +5873,1593 @@ startlevel 74
 			.' Congratulations! +89/85 quests for achievement "Fo' Grizzle My Shizzle".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[74-empty] Zul'Drak",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[74-beta] Zul'Drak",[[
 author danaton
-description This guide contain quest-chain (??) for Zul'Drak location.
+description This guide contain quest-chain (100) for Zul'Drak location.
 startlevel 74
 		step
+			goto Dalaran,48.5,45.3
+			.talk Shifty Vickers##30137
+			..accept The Champion's Call!##12974
 		step
-			.' "The Empire of Zul'Drak".
+			goto Zul'Drak,40.3,66.6
+			.talk Commander Kunz##28039
+			..accept First Things First##12792
+		step
+			goto Zul'Drak,32.03,74.43
+			.talk Sergeant Riannah##29137
+			..turnin First Things First##12792
+		step
+			goto Zul'Drak,32.02,75.60
+			.talk Elder Shaman Moky##29733
+			..accept This Just In: Fire Still Hot!##12859
+		step
+			goto Zul'Drak,32.14,75.74
+			.talk Crusader Lord Lantinga##29687
+			..accept In Search Of Answers##12902
+		step
+			goto Zul'Drak,32.18,75.64
+			.talk Chief Rageclaw##29690
+			..accept Trolls Is Gone Crazy!##12861
+		step
+			goto Zul'Drak,34.91,83.89
+			.' Interact with gameobject: Orders From Drakuru
+			..turnin In Search Of Answers##12902
+			..accept Orders From Drakuru##12883
+		step
+			goto Zul'Drak,34.04,82.74
+			.' Kill Drakuru enemies around this area.
+			.info They look like trolls.
+			.collect Drakuru "Lock Opener"##41161|n
+			.use the Drakuru "Lock Opener"##41161
+			.info Use them next to Captured Rageclaws.
+			.info They look like wolverine humanoids stuck in metal traps on the ground around this area.
+			.info You can find them all around the Rageclaw Den area.
+			.' Free 8 Captured Rageclaws|q 12861/1
+		step
+			goto Zul'Drak,34.04,82.74
+			.use the Rageclaw Fire Extinguisher##41131
+			.info Use it next to fires around this area.
+			.info You may have to use it multiple times to put the fires out.
+			.info You can find them all around the Rageclaw Den area.
+			.' Douse 15 Hut Fires|q 12859/1
+		step
+			goto Zul'Drak,32.02,75.60
+			.talk Elder Shaman Moky##29733
+			..turnin This Just In: Fire Still Hot!##12859
+		step
+			goto Zul'Drak,32.18,75.64
+			.talk Chief Rageclaw##29690
+			..turnin Trolls Is Gone Crazy!##12861
+		step
+			goto Zul'Drak,32.14,75.74
+			.talk Crusader Lord Lantinga##29687
+			..turnin Orders From Drakuru##12883
+			..accept The Ebon Watch##12884
+			..accept Crusader Forward Camp##12894
+		step
+			goto Zul'Drak,25.28,63.97
+			.talk Crusader MacKellar##29689
+			..turnin Crusader Forward Camp##12894
+			..accept That's What Friends Are For...##12903
+		step
+			goto Zul'Drak,25.23,63.88
+			.talk Engineer Reed##29688
+			..accept Making Something Out Of Nothing##12901
+		step
+			goto Zul'Drak,25.06,51.61
+			.' Find Crusader Dargath|q 12903/1
+		step
+			goto Zul'Drak,19.75,56.44
+			.talk Gymer##29647
+			..accept A Great Storm Approaches##12912
+		step
+			goto Zul'Drak,17.62,57.58
+			.' Find Gerk|q 12903/2
+		step
+			goto Zul'Drak,15.71,59.40
+			.' Find Burr|q 12903/3
+			.info Laying on a metal table.
+		step
+			goto Zul'Drak,17.24,59.01
+			.collect 10 Scourge Scrap Metal##41399|q 12901/1
+			.info They look like pieces of metal with various shapes on the ground around this area.
+			.info You can find them all around the Thrym's End area.
+		step
+			goto Zul'Drak,25.23,63.88
+			.talk Engineer Reed##29688
+			..turnin Making Something Out Of Nothing##12901
+			..turnin A Great Storm Approaches##12912
+			..accept Gymer's Salvation##12914
+		step
+			goto Zul'Drak,25.27,63.96
+			.talk Crusader MacKellar##29689
+			..turnin That's What Friends Are For...##12903
+		step
+			goto Zul'Drak,14.06,73.80
+			.talk Stefan Vadu##28518
+			..turnin The Ebon Watch##12884
+			..accept Kickin' Nass and Takin' Manes##12630
+		step
+			goto Zul'Drak,13.03,69.38
+			.from Withered Troll##28519
+			.use Stefan's Steel Toed Boot##38659
+			.info use it next to their corpses.
+			.info Nass will die to AoE attacks easily.
+			.' Speak With Stefan Here (If Nass Dies) |at 14.06,73.80
+			.get 10 Hair Samples|q 12630/1
+			.' You can find more around (1)|at 15.20,69.00
+			.' You can find more around (2)|at 17.98,69.23
+			.' You can find more around (3)|at 20.99,68.48
+		step
+			goto Zul'Drak,13.03,69.38
+			.from Withered Troll##28519
+			.collect Writhing Choker##38673|n
+			.use the Writhing Choker##38673
+			..accept Darkness Calling##12633
+			.' You can find more around (1)|at 15.20,69.00
+			.' You can find more around (2)|at 17.98,69.23
+			.' You can find more around (3)|at 20.99,68.48
+			only GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,13.03,69.38
+			.from Withered Troll##28519
+			.collect Unliving Choker##38660|n
+			.use the Unliving Choker##38660
+			..accept An Invitation, of Sorts...##12631
+			.' You can find more around (1)|at 15.20,69.00
+			.' You can find more around (2)|at 17.98,69.23
+			.' You can find more around (3)|at 20.99,68.48
+			only !GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,15.06,73.12
+			.from Icetouched Earthrager##29436
+			.info They look like blue and white elementals holding clubs.
+			.info You can find them all surrounding Ebon Watch.
+			.collect 6 Diatomaceous Earth##41503|q 12914/2
+		step
+			goto Zul'Drak,14.06,73.80
+			.talk Stefan Vadu##28518
+			..turnin Kickin' Nass and Takin' Manes##12630
+			..turnin An Invitation, of Sorts...##12631
+			..accept Near Miss##12637
+			only !GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,14.06,73.80
+			.talk Stefan Vadu##28518
+			..turnin Kickin' Nass and Takin' Manes##12630
+			..turnin Darkness Calling##12633
+			..accept Close Call##12638
+			only GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,14.28,74.04
+			.talk Bloodrose Datura##28532
+			..accept Taking a Stand##12795
+		step
+			goto Zul'Drak,14.28,74.04
+			.talk Bloodrose Datura##28532
+			.' Tell her "Stefan told me you would demonstrate the purpose of this item."
+			.' Expose the Choker's Purpose|q 12637/1
+			only !GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,14.28,74.04
+			.talk Bloodrose Datura##28532
+			.' Tell her "Stefan told me you would demonstrate the purpose of this item."
+			.' Expose the Choker's Purpose|q 12638/1
+			only GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,14.06,73.80
+			.talk Stefan Vadu##28518
+			..turnin Close Call##12638
+			..accept Silver Lining##12643
+			only GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,14.06,73.80
+			.talk Stefan Vadu##28518
+			..turnin Near Miss##12637
+			..accept You Can Run, But You Can't Hide##12629
+			only !GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,20.24,73.71
+			.from Putrid Abomination##28564
+			.info You can find them all around the Reliquary of Agony area.
+			.collect 5 Putrid Abomination Guts##38686|q 12629/1 |or
+			.' You can find more around|at 18.38,80.93
+			only !GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,20.24,73.71
+			.from Putrid Abomination##28564
+			.info You can find them all around the Reliquary of Agony area.
+			.collect 5 Putrid Abomination Guts##38686|q 12643/1
+			.' You can find more around|at 18.38,80.93
+			only GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,20.24,73.71
+			.talk Gooey Ghoul Drool##29856
+			.info They look like small oozes on the ground around this area.
+			.info You can find them all around the Reliquary of Agony area.
+			.info Turning on Name Plates can help find these.
+			.collect 5 Gooey Ghoul Drool##38687|q 12629/2
+			only !GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,20.24,73.71
+			.talk Gooey Ghoul Drool##29856
+			.info They look like small oozes on the ground around this area.
+			.info You can find them all around the Reliquary of Agony area.
+			.info Turning on Name Plates can help find these.
+			.collect 5 Gooey Ghoul Drool##38687|q 12643/2
+			only GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,14.06,73.80	
+			.talk Stefan Vadu##28518
+			..turnin Silver Lining##12643
+			..accept Suit Up!##12649
+			only GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,14.06,73.80	
+			.talk Stefan Vadu##28518
+			..turnin You Can Run, But You Can't Hide##12629
+			..accept Dressing Down##12648
+			only !GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,20.26,74.00
+			.use the Ensorcelled Choker##38699
+			.' Wear the Scourge Disguise |havebuff Spell_Shadow_UnstableAffliction_3 |q 12648
+			only !GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,20.26,74.00
+			.use the Ensorcelled Choker##38699
+			.' Wear the Scourge Disguise |havebuff Spell_Shadow_UnstableAffliction_3 |q 12649
+			only GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,19.87,75.44
+			.talk Gristlegut##28589
+			..accept Feedin' Da Goolz##12652
+		step
+			goto Zul'Drak,19.87,75.44
+			.talk Gristlegut##28589
+			.buy Bitter Plasma##38698|q 12648/1
+			only !GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,19.87,75.44
+			.talk Gristlegut##28589
+			.buy Bitter Plasma##38698|q 12649/1
+			only GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,20.71,73.34
+			.use Bowels and Brains Bowl##38701
+			.info Use it near Decaying Ghouls.
+			.info They look like zombies.
+			.info You can find them all around the Reliquary of Agony area.
+			.info Be careful, Blightguards (black ghosts) can see through your disguise.
+			.' Feed 10 Decaying Ghouls|q 12652/1
+		step
+			goto Zul'Drak,19.87,75.44
+			.talk Gristlegut##28589
+			..turnin Feedin' Da Goolz##12652
+		step
+			goto Zul'Drak,14.06,73.80
+			.talk Stefan Vadu##28518
+			..turnin Dressing Down##12648
+			..accept Infiltrating Voltarus##12661
+			only !GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,14.06,73.80
+			.talk Stefan Vadu##28518
+			..turnin Suit Up!##12649
+			..accept Infiltrating Voltarus##12661
+			only GetQuestsCompleted(12238)
+		step
+			goto Zul'Drak,24.98,58.82
+			.from Banshee Soulclaimer##29646
+			.info They look like white ghosts flying in the air around this area.
+			.info You can find them all around the Dead Fields area.
+			.get 6 Banshee Essence##41504|q 12914/1
+		step
+			goto Zul'Drak,25.23,63.88
+			.talk Engineer Reed##29688
+			..turnin Gymer's Salvation##12914
+			..accept Our Only Hope##12916
+		step
+			goto Zul'Drak,17.62,57.58
+			.talk Gerk##29455
+			..accept Light Won't Grant Me Vengeance##12904
+		step
+			goto Zul'Drak,17.24,59.01
+			.from Vargul Runelord##29450, Vargul Slayer##29451
+			.info Only Slayer and Deathwaker enemies will count for the quest goal.
+			.info You can find them all around the Thrym's End area.
+			.' Slay 15 Varguls|q 12904/1
+		step
+			goto Zul'Drak,17.62,57.58
+			.talk Gerk##29455
+			..turnin Light Won't Grant Me Vengeance##12904
+		step
+			goto Zul'Drak,19.74,56.41
+			.' Interact with gameobject: Scourge Enclosure
+			.' Blow Up the Scourge Enclosure|q 12916/1
+		step
+			goto Zul'Drak,19.74,56.41
+			.talk Gymer##29647
+			..turnin Our Only Hope##12916
+			..accept The Storm King's Vengeance##12919
+		step
+			goto Zul'Drak,19.74,56.41
+			.talk Gymer##29647
+			.' Tell him "I'm ready, Gymer. Let's go!"
+			.' Ride on Gymer's Shoulder |invehicle |q 12919
+		step
+			goto Zul'Drak,30.06,44.67
+			.kill Algar the Chosen##29872|q 12919/2
+			.info He flies around this area, in a counter-clockwise pattern, on a large skeletal dragon.
+			.info use the abilties on your action bar.
+			.info Pick up the blue electricity balls on the ground around this area to heal yourself.
+		step
+			goto Zul'Drak,32.50,63.81
+			.kill Prince Navarius##29821|q 12919/4
+			.info use the abilties on your action bar.
+			.info Pick up the blue electricity balls on the ground around this area to heal yourself.
+		step
+			goto Zul'Drak,31.12,61.97
+			.kill Thrym##29895|q 12919/3
+			.info He appears after you kill Prince Navarius.
+			.info use the abilties on your action bar.
+			.info Pick up the blue electricity balls on the ground around this area to heal yourself.
+		step
+			goto Zul'Drak,22.72,58.42
+			.' Kill enemies around this area.
+			.info You can find them all around this area.
+			.info use the abilties on your action bar.
+			.info Only Undead enemies will count for the quest goal.
+			.info Pick up the blue electricity balls on the ground around this area to heal yourself.
+			.' Slay 100 Scourge|q 12919/1
+		step
+			goto Zul'Drak,28.46,51.16
+			.' Stop Riding on Gymer's Shoulder |outvehicle |q 12919
+			.info Click the red arrow on your action bar.
+		step
+			goto Zul'Drak,28.46,51.16
+			.use the Ensorcelled Choker##38699
+			.' Wear the Ghoul Disguise |havebuff Spell_Shadow_UnstableAffliction_3 |q 12661
+		step
+			goto Zul'Drak,28.37,44.87|n
+			.' Teleport Up to Voltarus|goto 28.07,45.16,0.2 |q 12661
+			.info Stand on the teleport pad.
+		step
+			goto Zul'Drak,27.08,46.16
+			.talk Overlord Drakuru##28503
+			..accept Dark Horizon##12664 |or
+			..accept Reunited##12663 |or
+		step
+			goto Zul'Drak,29.84,48.03
+			.talk Gorebag##28666
+			.' Ask him "Uhh, can you send me on the tour of Zul'Drak?"
+			.' Begin the Tour of Zul'Drak |invehicle |q 12664 |or
+			.' Begin the Tour of Zul'Drak |invehicle |q 12663 |or
+		step
+			goto Zul'Drak,27.79,44.60
+			.' Watch the dialogue.
+			.' Complete the Tour of Zul'Drak|q 12664/1 |or
+			.' Complete the Tour of Zul'Drak|q 12663/1 |or
+		step
+			goto Zul'Drak,27.08,46.16
+			.talk Overlord Drakuru##28503
+			..turnin Dark Horizon##12664 |or
+			..turnin Reunited##12663 |or
+			.' Complete Overlord Drakuru's Task |q 12661/1
+		step
+			goto Zul'Drak,28.39,44.88|n
+			.' Teleport to the Ground|goto 28.05,44.85,0.2 |q 12661
+			.info Stand on the lower teleport pad.
+			.info Inside the floating building.
+		step
+			goto Zul'Drak,28.05,44.85
+			.use Stefan's Horn##41390
+			.talk Stefan Vadu##28518
+			..turnin Infiltrating Voltarus##12661
+			..accept So Far, So Bad##12669
+		step
+			goto Zul'Drak,28.37,44.87|n
+			.' Teleport Up to Voltarus|goto 28.07,45.16,0.2 |q 12669
+			.info Stand on the teleport pad.
+		step
+			goto Zul'Drak,27.08,46.16
+			.talk Overlord Drakuru##28503
+			..accept It Rolls Downhill##12673
+		step
+			goto Zul'Drak,28.39,44.88|n
+			.' Teleport to the Ground|goto 28.05,44.85,0.2 |q 12673
+			.info Stand on the lower teleport pad.
+			.info Inside the floating building.
+		step
+			goto Zul'Drak,28.86,46.33
+			.use the Scepter of Suggestion##39157
+			.info Keep your Scourge Disguise active.
+			.info Use it on Blight Geists.
+			.info They look like frail humanoids crouching on the ground.
+			.info This will allow you to temporarily control a Blight Geist as a pet.
+			.use the Blight Geists to Harvest Blight Crystals
+			.info The Crystallized Blight look like orange crystals.
+			.info You can find them all around the Reliquary of Pain area.
+			.info Use the "Harvest Blight Crystal" ability on your Blight Geists' pet action bar near Crystallized Blight, and then follow the Blight Geists back to the teleport pad to deliver the crystals.
+			.collect 7 Blight Crystals|q 12673/1
+		step
+			goto Zul'Drak,28.86,46.33
+			.use the Diluting Additive##39154
+			.info Keep your Scourge Disguise active.
+			.info Use it next to Blight Cauldrons.
+			.info They look like large pots with orange liquid in them on the back of cart vehicles.
+			.info You can find them all around the Reliquary of Pain area.
+			.' Dilute 5 Cauldrons|q 12669/2
+		step
+			goto Zul'Drak,28.37,44.87|n
+			.' Teleport Up to Voltarus|goto 28.07,45.16,0.2 |q 12673
+			.info Stand on the teleport pad.
+		step
+			goto Zul'Drak,27.08,46.16
+			.talk Overlord Drakuru##28503
+			..turnin It Rolls Downhill##12673
+			.' Complete Drakuru's Task|q 12669/1
+		step
+			goto Zul'Drak,28.39,44.88|n
+			.' Teleport to the Ground|goto 28.05,44.85,0.2 |q 12669
+			.info Stand on the lower teleport pad.
+			.info Inside the floating building.
+		step
+			goto Zul'Drak,28.05,44.85
+			.use Stefan's Horn##41390
+			.talk Stefan Vadu##28518
+			..turnin So Far, So Bad##12669
+			..accept Hazardous Materials##12677
+		step
+			goto Zul'Drak,28.37,44.87|n
+			.' Teleport Up to Voltarus|goto 28.07,45.16,0.2 |q 12677
+			.info Stand on the teleport pad.
+		step
+			goto Zul'Drak,27.08,46.16
+			.talk Overlord Drakuru##28503
+			..accept Zero Tolerance##12686
+		step
+			goto Zul'Drak,27.56,43.05
+			.collect 5 Harvested Blight Crystal##39159|q 12677/2
+			.info They look like wooden crates on the ground.
+			.info You can find them all around the Voltarus area, in the outermost ring inside the floating building.
+		step
+			goto Zul'Drak,28.39,44.88|n
+			.' Teleport to the Ground|goto 28.05,44.85,0.2 |q 12686
+			.info Stand on the lower teleport pad.
+			.info Inside the floating building.
+		step
+			goto Zul'Drak,30.50,51.62
+			.use the Scepter of Empowerment##39206
+			.info Use it on a Servant of Drakuru around this area.
+			.info This will give a Hand of Drakuru minion to control.
+			.kill Darmuk##28793|q 12686/1
+			.info He walks around this area.
+			.info Do not attack him yourself.
+			.info Use the abilities on your minion's action bar to fight him.
+		step
+			goto Zul'Drak,28.37,44.87|n
+			.' Teleport Up to Voltarus|goto 28.07,45.16,0.2 |q 12686
+			.info Stand on the teleport pad.
+		step
+			goto Zul'Drak,27.08,46.16
+			.talk Overlord Drakuru##28503
+			..turnin Zero Tolerance##12686
+		step
+			goto Zul'Drak,28.39,44.88|n
+			.' Teleport to the Ground|goto 28.05,44.85,0.2 |q 12677
+			.info Stand on the lower teleport pad.
+			.info Inside the floating building.
+		step
+			goto Zul'Drak,28.05,44.85
+			.use Stefan's Horn##41390
+			.talk Stefan Vadu##28518
+			..turnin Hazardous Materials##12677
+			..accept Sabotage##12676
+		step
+			goto Zul'Drak,28.37,44.87|n
+			.' Teleport Up to Voltarus|goto 28.07,45.16,0.2 |q 12676
+			.info Stand on the teleport pad.
+		step
+			goto Zul'Drak,27.08,46.16
+			.talk Overlord Drakuru##28503
+			..accept Fuel for the Fire##12690
+		step
+			goto Zul'Drak,28.39,44.88|n
+			.' Teleport to the Ground|goto 28.05,44.85,0.2 |q 12690
+			.info Stand on the lower teleport pad.
+			.info Inside the floating building.
+		step
+			goto Zul'Drak,28.86,46.33
+			.use the Explosive Charges##39165
+			.info Use them next to Scourgewagons.
+			.info They look like catapult carts on the ground.
+			.info You can find them all around the Reliquary of Pain area.
+			.' Destroy 5 Scourgewagons|q 12676/1
+		step
+			.use the Scepter of Command##39238
+			.info Use it on Bloated Abominations around this area.
+			.info You will gain control of an abomination.
+			.info Send your Bloated Abomination northeast into the troll area.
+			.info Try to gather up groups of Drakkari Skullcrusher trolls so that they are all near you.
+			.info Use the "Burst at the Seams" ability on your pet action bar when the group of trolls are near you, to kill them.
+			.info Keep repeating this process.
+			.' Slay 60 Drakkari Skullcrushers|q 12690/1 |goto 32.43,39.69
+			.' Lure 3 Drakkari Chieftains|q 12690/2 |goto 33.70,37.70
+			.info They will appear as you kill trolls with your abominations.
+			.info When they appear, kill them with the other trolls.
+		step
+			goto Zul'Drak,28.37,44.87|n
+			.' Teleport Up to Voltarus|goto 28.07,45.16,0.2 |q 12690
+			.info Stand on the teleport pad.
+		step
+			goto Zul'Drak,27.08,46.16
+			.talk Overlord Drakuru##28503
+			..turnin Fuel for the Fire##12690
+			..accept Disclosure##12710
+			.' Complete Drakuru's Task|q 12676/2
+		step
+			goto Zul'Drak,28.39,44.88|n
+			.' Teleport to Drakuru's Upper Chamber|goto 27.35,42.52,0.2 |q 12710
+			.info Stand on the upper teleport pad.
+			.info Inside the floating building.
+		step
+			goto Zul'Drak,27.27,42.38
+			.' Interact with gameobject: Musty Coffin
+			.info Upstairs inside the floating building.
+			.' Watch the dialogue
+			.info Follow Malmortis as he walks.
+			.' Explore Drakuru's Upper Chamber|q 12710/1
+		step
+			goto Zul'Drak,28.40,44.89|n
+			.' Teleport to the Main Floor of Voltarus|goto 28.07,45.16,0.2 |q 12710
+			.info Stand on the upper teleport pad.
+			.info Inside the floating building.
+		step
+			goto Zul'Drak,27.08,46.16
+			.talk Overlord Drakuru##28503
+			..turnin Disclosure##12710
+			.' Learn Drakuru's Secret|q 12676/3
+		step
+			goto Zul'Drak,28.39,44.88|n
+			.' Teleport to the Ground|goto 28.05,44.85,0.2 |q 12676
+			.info Stand on the lower teleport pad.
+			.info Inside the floating building.
+		step
+			goto Zul'Drak,28.05,44.85
+			.use Stefan's Horn##41390
+			.talk Stefan Vadu##28518
+			..turnin Sabotage##12676
+			..accept Betrayal##12713
+		step
+			goto Zul'Drak,28.37,44.87|n
+			.' Teleport Up to Voltarus|goto 28.07,45.16,0.2 |q 12713
+			.info Stand on the teleport pad.
+			.' Prepare For a Difficult Fight
+			.info You are about to fight Overlord Drakuru.
+			.info You will talk to him and he will teleport you to the top of the floating building.
+			.info A dialogue will begin and your Ghoul Disguise will fail intentionally as part of the quest.
+			.' Capture a Blightblood Troll Minion
+			.info During the dialogue, 4 orange Blightblood Trolls will appear around the circle platform.
+			.info Use the "Scepter of Domination" quest item on one of them to control it as a minion.
+			.info It will help you fight Overlord Drakuru.
+			.info If your minion dies during the fight, use the quest item again on another Blightblood Troll to get another minion to fight for you.
+			.' Avoid the Orange Areas on the Ground
+			.info Overlord Drakuru will toss orange crystals at you, which will explode and create orange areas on the ground that will damage you badly.
+			.info Try to avoid the orange areas on the ground, while trying to help your Blightblood Troll minion damage Overlord Drakuru, as much as you can.
+			.info The orange areas on the ground will start to disappear after some time, so try to position yourself so that they don't infect too much of the ground.
+			.info Repeat this process until you win the fight.
+			.info If you have trouble, try to find someone to help you, or skip the quest.
+		step
+			goto Zul'Drak,27.08,46.16
+			.talk Overlord Drakuru##28503
+			.' Tell him "I am ready to accompany you, Drakuru."
+			.' Teleport to the Top fo Voltarus with Drakuru|goto 28.34,45.28,0.2 |q 12713
+		step
+			goto Zul'Drak,28.39,44.87
+			.' Watch the dialogue.
+			.use the Scepter of Domination##39664
+			.info Use it on one of the Blightblood Trolls that appear.
+			.from Overlord Drakuru##28998
+			.info Avoid the orange areas on the ground.
+			.info If your minion dies, use the quest item another one.
+			.info If you have trouble, try to find someone to help you, or skip the quest.
+			.get Drakuru's Skull##40425|q 12713/1
+			.info After a dialogue, it appears on the ground nearby.
+		step
+			goto Zul'Drak,28.62,44.55
+			.' Interact with gameobject: Drakuru's Last Wish
+			.info On top of the floating building.
+			.' Choose _"I'm ready."_
+			.' Teleport to the Ground|q 12713
+		step
+			goto Zul'Drak,27.82,50.29
+			.use Stefan's Horn##41390
+			.talk Stefan Vadu##28518
+			..turnin Betrayal##12713
+		step
+			goto Zul'Drak,25.28,63.96
+			.talk Crusader MacKellar##29689
+			..turnin The Storm King's Vengeance##12919
+		step
+			goto Zul'Drak,39.42,66.96
+			.talk Commander Falstaav##28059
+			..turnin Taking a Stand##12795
+			..accept Defend the Stand##12503
+			..accept Parachutes for the Argent Crusade##12740
+		step
+			goto Zul'Drak,40.52,65.61
+			.talk Hexxer Ubungo##28062
+			..accept The Blessing of Zim'Abwa##12565
+		step
+			goto Zul'Drak,37.43,67.01
+			.use the Crusader Parachute##39615
+			.info Use it on Argent (friendly) NPC's around this area.
+			.info It may not work on all of them.
+			.' Equip 10 Argent Forces with a Parachute|q 12740/1
+		step
+			goto Zul'Drak,37.43,67.01
+			.from Carrion Eater##28022, Rotting Abomination##28023, Rampaging Geist##28026, Sky Terror##28246
+			.collect 10 Drakkari Offerings##38551|q 12565
+		step
+			goto Zul'Drak,37.43,67.01
+			.from Carrion Eater##28022, Rotting Abomination##28023, Rampaging Geist##28026, Sky Terror##28246
+			.' Destroy 10 Scourge at The Argent Stand|q 12503/1
+		step
+			goto Zul'Drak,36.70,72.57
+			.' Interact with gameobject: Zim'Abwa
+			..turnin The Blessing of Zim'Abwa##12565
+		step
+			goto Zul'Drak,39.42,66.96
+			.talk Commander Falstaav##28059
+			..turnin Defend the Stand##12503
+			..turnin Parachutes for the Argent Crusade##12740
+		step
+			goto Zul'Drak,40.27,66.62
+			.talk Commander Kunz##28039
+			..accept New Orders for Sergeant Stackhammer##12505
+			..accept Pa'Troll##12596
+		step
+			goto Zul'Drak,40.52,65.61
+			.talk Hexxer Ubungo##28062
+			..accept Trouble at the Altar of Sseratus##12506
+		step
+			goto Zul'Drak,48.77,78.86
+			.talk Captain Brandon##28042
+			..accept Something for the Pain##12597
+		step
+			goto Zul'Drak,58.07,72.43
+			.talk Captain Rupert##28044
+			..accept Throwing Down##12598
+		step
+			goto Zul'Drak,58.68,72.49
+			.talk Dr. Rogers##28125
+			..accept Leave No One Behind##12512
+		step
+			goto Zul'Drak,49.45,74.71
+			.use the Crusader's Bandage##38330
+			.info use it on Crusader Josephine.
+			.info Inside the building.
+			.info In the next guide step, HURRY. She will only stay alive for 3 minutes.
+			.' Heal Crusader Josephine |havebuff Spell_Shadow_LifeDrain |q 12512
+		step
+			goto Zul'Drak,58.15,72.30
+			.' Save Crusader Josephine|q 12512/3
+			.info She will follow you, bring her safely to this location.
+			.info Protect her and try to avoid allowing enemies to attack her as you walk.
+			.info Don't mount because she won't be able to keep up.
+			.info HURRY - She will only stay alive for 3 minutes.
+			.info If you don't make it in time, go back to the previous guide step to try again.
+		step
+			goto Zul'Drak,53.58,75.00
+			.use the Crusader's Bandage##38330
+			.info use it on Crusader Lamoof.
+			.info Inside the building.
+			.info In the next guide step, HURRY. He will only stay alive for 2 minutes.
+			.' Heal Crusader Lamoof |havebuff Spell_Shadow_LifeDrain |q 12512
+		step
+			goto Zul'Drak,58.15,72.30
+			.' Save Crusader Lamoof|q 12512/2
+			.info He will follow you, bring him safely to this location.
+			.info Protect him and try to avoid allowing enemies to attack him as you walk.
+			.info Don't mount because he won't be able to keep up.
+			.info HURRY - He will only stay alive for 2 minutes.
+			.info If you don't make it in time, go back to the previous guide step to try again.
+		step
+			goto Zul'Drak,55.18,69.48
+			.use the High Impact Grenade##38574
+			.info Use it next to the Nerubian Tunnels.
+			.info They look like dirt mounds on the ground around this area.
+			.info Inside and outside the building.
+			.' Seal 5 Nerubian Tunnels|q 12598/1
+		step
+			goto Zul'Drak,50.67,69.86
+			.use the Crusader's Bandage##38330
+			.info Use it on Crusader Jonathan.
+			.info Inside the building.
+			.info In the next guide step, HURRY. He will only stay alive for 3 minutes.
+			.' Heal Crusader Jonathan |havebuff Spell_Shadow_LifeDrain |q 12512
+		step
+			goto Zul'Drak,58.15,72.30
+			.' Save Crusader Jonathan|q 12512/1
+			.info He will follow you, bring him safely to this location.
+			.info Protect him and try to avoid allowing enemies to attack him as you walk.
+			.info Don't mount because he won't be able to keep up.
+			.info HURRY - He will only stay alive for 3 minutes.
+			.info If you don't make it in time, go back to the previous guide step to try again.
+		step
+			goto Zul'Drak,58.07,72.43
+			.talk Captain Rupert##28044
+			..turnin Throwing Down##12598
+			.' Complete Captain Rupert's Task|q 12596/2
+			..accept Cocooned!##12606
+		step
+			goto Zul'Drak,58.68,72.49
+			.talk Dr. Rogers##28125
+			..turnin Leave No One Behind##12512
+		step
+			goto Zul'Drak,58.26,72.05
+			.talk Specialist Cogwheel##28284
+			..accept Skimmer Spinnerets##12553
+		step
+			goto Zul'Drak,58.07,72.04
+			.talk Sergeant Moonshard##28283
+			..accept Death to the Necromagi##12552
+		step
+			goto Zul'Drak,55.18,69.48
+			.from Nerubian Cocoon##28413
+			.info They look like squirming white cocoons on the ground around this area.
+			.info They may not all contain Captive Footmen.
+			.info Inside and outside the building.
+			.' Free 3 Captive Footmen|q 12606/1
+			.' You can find more around|at 52.70,66.82
+		step
+			goto Zul'Drak,56.78,81.62
+			.from Hath'ar Skimmer##28258
+			.info They look like smaller brown spiders around this area.
+			.get 5 Intact Skimmer Spinneret##38514|q 12553/1
+		step
+			goto Zul'Drak,56.78,81.62
+			.kill 8 Hath'ar Necromagus##28257|q 12552/1
+			.info They look like larger darker colored spiders around this area.
+			.' You can find more inside the building|at 60.15,79.25
+		step
+			goto Zul'Drak,58.07,72.43
+			.talk Captain Rupert##28044
+			..turnin Cocooned!##12606
+		step
+			goto Zul'Drak,58.07,72.04
+			.talk Sergeant Moonshard##28283
+			..turnin Death to the Necromagi##12552
+			..accept Malas the Corrupter##12554
+		step
+			goto Zul'Drak,58.26,72.05
+			.talk Specialist Cogwheel##28284
+			..turnin Skimmer Spinnerets##12553
+			..accept Crashed Sprayer##12583
+		step
+			goto Zul'Drak,58.07,72.43
+			.talk Captain Rupert##28044
+			..accept Pure Evil##12584
+		step
+			goto Zul'Drak,48.90,75.62
+			.collect Plague Sprayer Parts##38560|q 12583/1
+		step
+			goto Zul'Drak,58.26,72.05
+			.talk Specialist Cogwheel##28284
+			..turnin Crashed Sprayer##12583
+			..accept A Tangled Skein##12555
+		step
+			goto Zul'Drak,57.39,80.28
+			.use Tangled Skein Thrower##38515
+			.info Use it on Plague Sprayers.
+			.info They look like machines flying in the air around this area.
+			.' Web and Destroy 5 Plague Sprayers|q 12555/1
+		step
+			goto Zul'Drak,61,78
+			.from Malas the Corrupter##28255
+			.get Head of the Corrupter##38521|q 12554/1
+		step
+			goto Zul'Drak,60.15,79.25
+			.collect 10 Chunk of Saronite##38562|q 12584/1
+			.info They look like small green rocks on the ground inside the building.
+			.info They can be upstairs too.
+		step
+			goto Zul'Drak,58.26,72.05
+			.talk Specialist Cogwheel##28284
+			..turnin A Tangled Skein##12555
+		step
+			goto Zul'Drak,58.07,72.04
+			.talk Sergeant Moonshard##28283
+			..turnin Malas the Corrupter##12554
+		step
+			goto Zul'Drak,48.15,63.89
+			.talk Captain Grondel##28043
+			..accept Creature Comforts##12599
+		step
+			goto Zul'Drak,48.43,56.36
+			.talk Gurgthock##30007
+			..turnin The Champion's Call!##12974
+			..accept The Amphitheater of Anguish: Yggdras!##12932
+		step
+			goto Zul'Drak,47.73,56.86
+			.' Watch the dialogue.
+			.info An elite enemy appears in the arena.
+			.info Attack him quickly to avoid him despawning.
+			.kill Yggdras##30014|q 12932/1
+		step
+			goto Zul'Drak,48.47,56.42
+			.talk Wodin the Troll-Servant##30009
+			..turnin The Amphitheater of Anguish: Yggdras!##12932
+		step
+			goto Zul'Drak,48.43,56.36
+			.talk Gurgthock##30007
+			..accept The Amphitheater of Anguish: Magnataur!##12933
+		step
+			goto Zul'Drak,47.73,56.86
+			.' Watch the dialogue.
+			.info An elite enemy appears and runs into the arena.
+			.info Attack him quickly to avoid him despawning.
+			.kill Stinkbeard##30017|q 12933/1
+		step
+			goto Zul'Drak,48.47,56.42
+			.talk Wodin the Troll-Servant##30009
+			..turnin The Amphitheater of Anguish: Magnataur!##12933
+		step
+			goto Zul'Drak,48.43,56.36
+			.talk Gurgthock##30007
+			..accept The Amphitheater of Anguish: From Beyond!##12934
+		step
+			goto Zul'Drak,47.73,56.86
+			.' Watch the dialogue.
+			.info An elite enemy appears in the arena.
+			.info It can be 1 of 4 different enemies, and it's random.
+			.info Attack it quickly to avoid it despawning.
+			.kill Gargoral the Water Lord##30024|q 12934/1
+		step
+			goto Zul'Drak,48.47,56.42
+			.talk Wodin the Troll-Servant##30009
+			..turnin The Amphitheater of Anguish: From Beyond!##12934
+		step
+			goto Zul'Drak,48.43,56.36
+			.talk Gurgthock##30007
+			..accept The Amphitheater of Anguish: Tuskarrmageddon!##12935
+		step
+			goto Zul'Drak,47.73,56.86
+			.' Watch the dialogue.
+			.info An elite enemy appears and jumps into the arena.
+			.info Attack him quickly to avoid him despawning.
+			.kill Orinoko Tuskbreaker##30020|q 12935/1
+		step
+			goto Zul'Drak,48.47,56.42
+			.talk Wodin the Troll-Servant##30009
+			..turnin The Amphitheater of Anguish: Tuskarrmageddon!##12935
+		step
+			goto Zul'Drak,48.43,56.36
+			.talk Gurgthock##30007
+			..accept The Amphitheater of Anguish: Korrak the Bloodrager!##12936
+		step
+			goto Zul'Drak,47.73,56.86
+			.' Watch the dialogue.
+			.info An elite enemy appears and runs into the arena.
+			.info Attack him quickly to avoid him despawning.
+			.kill Korrak the Bloodrager##30023|q 12936/1
+		step
+			goto Zul'Drak,48.47,56.42
+			.talk Wodin the Troll-Servant##30009
+			..turnin The Amphitheater of Anguish: Korrak the Bloodrager!##12936
+		step
+			goto Zul'Drak,48.43,56.36
+			.talk Gurgthock##30007
+			..accept The Champion of Anguish##12948
+		step
+			goto Zul'Drak,47.73,56.86
+			.' Watch the dialogue.
+			.info An elite enemy appears and jumps into the arena.
+			.info Attack him quickly to avoid him despawning.
+			.from Enormos##30021
+			.info Once you damage the mammoth enough, Vladof the Butcher will dismount.
+			.info When this happens, someone in your group can click the mammoth to ride it and use it like a vehicle to fight Vladof the Butcher.
+			.kill Vladof the Butcher##30022|q 12948/1
+		step
+			goto Zul'Drak,48.47,56.42
+			.talk Wodin the Troll-Servant##30009
+			..turnin The Champion of Anguish##12948
+		step
+			goto Zul'Drak,35.62,52.23
+			.talk Captain Arnath##28045
+			..accept Siphoning the Spirits##12799
+		step
+			goto Zul'Drak,35.03,52.11
+			.talk Alchemist Finklestein##28205
+			..accept Lab Work##12557
+		step
+			goto Zul'Drak,34.96,51.57
+			.' Interact with gameobject: Withered Batwing
+			.info It looks like small skeleton bones.
+			.info On the bottom shelf on the bookcase.
+			.info Inside the building.
+			.' Find the Withered Batwing|q 12557/2
+		step
+			goto Zul'Drak,34.94,51.57
+			.' Interact with gameobject: Amberseed
+			.info It looks like a brown spikey ball.
+			.info On the bottom shelf (and the 3rd shelf down) on the bookcase.
+			.info Inside the building.
+			.' Find the Amberseed|q 12557/3
+		step
+			goto Zul'Drak,34.83,51.57
+			.' Interact with gameobject: Muddy Mire Maggots
+			.info It looks like a bag of yellow grain.
+			.info On the ground inside the building.
+			.' Find the Muddy Mire Maggot|q 12557/1
+		step
+			goto Zul'Drak,35.09,53.42
+			.' Interact with gameobject: Chilled Serpent Mucus.
+			.info It looks like a small skinny green vial.
+			.info On the 3rd shelf down on the bookcase.
+			.info Inside the building.
+			.' Find the Chilled Serpent Mucus|q 12557/4
+		step
+			goto Zul'Drak,35.03,52.11
+			.talk Alchemist Finklestein##28205
+			..turnin Lab Work##12557
+			.' Complete Alchemist Finklestein's Task|q 12596/4
+		step
+			goto Zul'Drak,37.80,60.91
+			.from Lost Drakkari Spirit##29129
+			.info They look like blue troll ghosts.
+			.info You can find them all around the Pools of Zha'jin area.
+			.get 5 Ancient Ectoplasm##38335|q 12799/1
+		step
+			goto Zul'Drak,35.62,52.23
+			.talk Captain Arnath##28045
+			..turnin Siphoning the Spirits##12799
+			..accept Stocking the Shelves##12609
+			..accept Clipping Their Wings##12610
+		step
+			goto Zul'Drak,35.74,48.66
+			.from Trapdoor Crawler##28221
+			.info They look like orange and black spiders around this area.
+			.info They can be underground, get close to the jumping rocks on the ground to get them to come out of the ground.
+			.collect 7 Fresh Spider Ichor##38610|q 12609/1
+			.' You can find more around|at 37.75,55.10
+		step
+			goto Zul'Drak,35.74,48.66
+			.from Zul'Drak Bat##28233
+			.info They look like grey bats around this area.
+			.collect 7 Unblemished Bat Wing##38620|q 12610/1
+			.' You can find more around|at 37.75,55.10
+		step
+			goto Zul'Drak,35.62,52.23
+			.talk Captain Arnath##28045
+			..turnin Stocking the Shelves##12609
+			..turnin Clipping Their Wings##12610
+		step
+			goto Zul'Drak,40.40,48.20
+			.talk Sergeant Stackhammer##28056
+			..turnin New Orders for Sergeant Stackhammer##12505
+			..accept Argent Crusade, We Are Leaving!##12504
+		step
+			goto Zul'Drak,40.37,48.20
+			.talk Corporal Maga##28099
+			..accept Mopping Up##12508
+		step
+			goto Zul'Drak,40.28,39.45
+			.' Investigate the Main building at the Altar of Sseratus|q 12506/1
+			.info Walk into the doorway of the building.
+		step
+			goto Zul'Drak,40.38,44.81
+			.talk Argent Soldier##28041+
+			.info They look like friendly NPCs wearing Alliance armor.
+			.info You can find them all around the Altar of Sseratus area.
+			.' Tell them "Soldier, you have new orders. You're to pull back and report to the sergeant!"
+			.' Tell 10 Argent Soldiers to Report Back to the Sergeant|q 12504/1
+		step
+			goto Zul'Drak,40.38,44.81
+			.' Kill enemies around this area
+			.info They look like blue trolls.
+			.info You can find them all around the Altar of Sseratus area.
+			.collect Strange Mojo##38321 |n
+			.use the Strange Mojo##38321
+			..accept Strange Mojo##12507
+		step
+			goto Zul'Drak,40.38,44.81
+			.' Kill enemies around this area
+			.info They look like blue trolls.
+			.info You can find them all around the Altar of Sseratus area.
+			.' Slay 10 Followers of Sseratus|q 12508/1
+		step
+			goto Zul'Drak,40.40,48.20
+			.talk Sergeant Stackhammer##28056
+			..turnin Argent Crusade, We Are Leaving!##12504
+		step
+			goto Zul'Drak,40.37,48.20
+			.talk Corporal Maga##28099
+			..turnin Mopping Up##12508
+		step
+			goto Zul'Drak,40.83,66.64
+			.talk Eitrigg##28244
+			..turnin Pure Evil##12584
+		step
+			goto Zul'Drak,40.53,65.60
+			.talk Hexxer Ubungo##28062
+			..turnin Trouble at the Altar of Sseratus##12506
+			..turnin Strange Mojo##12507
+			..accept Precious Elemental Fluids##12510
+		step
+			goto Zul'Drak,40.18,68.93
+			.talk Sub-Lieutenant Jax##28309
+			..accept The Drakkari Do Not Need Water Elementals!##12562
+		step
+			goto Zul'Drak,42.18,77.54
+			.kill Crazed Water Spirit##16570|n
+			.info They look like water elementals.
+			.info You can find them all around the Drak'Sotra Fields area.
+			.collect 3 Water Elemental Link##38323|n
+			.info These have low drop rates.
+			.use the Water Elemental Link##38323
+			.info These will create Tethers to the Plane of Water.
+			.info You need 3 links to create 1 tether.
+			.use the Tether to the Plane of Water##38324
+			.info Water Elemental Links will not drop from enemies if you have a Tether to the Plane of Water in your bags.
+			.kill Watery Lord##28118|n
+			.info They appear after you use Tethers to the Plane of Water.
+			.collect 3 Precious Elemental Fluids##38325|q 12510/1
+		step
+			goto Zul'Drak,42.18,77.54
+			.collect 5 Mature Water-Poppy##38552|q 12597/1
+			.info They look like larger and taller plants on the ground around this area.
+			.info You can find them all around the Drak'Sotra Fields area.
+		step
+			goto Zul'Drak,42.18,77.54
+			.kill 10 Drakkari Water Binder##28303|q 12562/1
+			.info They look like trolls.
+			.info You can find them all around the Drak'Sotra Fields area.
+		step
+			goto Zul'Drak,48.77,78.86
+			.talk Captain Brandon##28042
+			..turnin Something for the Pain##12597
+			.' Complete Captain Brandon's Task|q 12596/1
+		step
+			goto Zul'Drak,40.18,68.93
+			.talk Sub-Lieutenant Jax##28309
+			..turnin The Drakkari Do Not Need Water Elementals!##12562
+		step
+			goto Zul'Drak,40.53,65.60
+			.talk Hexxer Ubungo##28062
+			..turnin Precious Elemental Fluids##12510
+			..accept Mushroom Mixer##12514
+		step
+			goto Zul'Drak,41.33,65.13
+			.talk Apprentice Pestlepot##28204
+			..accept Gluttonous Lurkers##12527
+		step
+			goto Zul'Drak,43.53,59.14
+			.' Interact with NPC: Zul'Drak Rat
+			.info They look like small rats that run on the ground.
+			.info You can find them all around the Drak'Agal area.
+			.info To see the rats easier, enable the "Critters and Companions" option in the "Names" section of your Interface settings.
+			.collect 5 Zul'Drak Rat##38380|n
+			.info Collect 5 rats before using any on a Lurking Basilisk.
+			.info You have to use 5 of them on each Lurking Basilisk.
+			.use the Zul'Drak Rat##38380+
+			.info use them on Lurking Basilisks.
+			.info They look like large green lizard enemies.
+			.' Interact with NPC: Gorged Lurking Basilisk
+			.info They appear after you use 5 Zul'Drak Rats on a Lurking Basilisk.
+			.collect 5 Basilisk Crystals##38382|q 12527/1
+		step
+			goto Zul'Drak,43.53,59.14
+			.collect 20 Dead Thornwood##38563|q 12599/1
+			.info They look like dark colored thorny roots on the ground.
+			.info You can find them all around the Drak'Agal area.
+		step
+			goto Zul'Drak,43.53,59.14
+			.collect 10 Muddlecap Fungus##38326|q 12514/1
+			.info They look like groups of grey mushrooms on the ground.
+			.info You can find them all around the Drak'Agal area.
+		step
+			goto Zul'Drak,48.15,63.89
+			.talk Captain Grondel##28043
+			..turnin Creature Comforts##12599
+			.' Complete Captain Grondel's Task|q 12596/3
+		step
+			goto Zul'Drak,40.27,66.62
+			.talk Commander Kunz##28039
+			..turnin Pa'Troll##12596
+		step
+			goto Zul'Drak,40.53,65.60
+			.talk Hexxer Ubungo##28062
+			..turnin Mushroom Mixer##12514
+			..accept Too Much of a Good Thing##12516
+		step
+			goto Zul'Drak,35.02,52.11
+			.talk Alchemist Finklestein##28205
+			..turnin Gluttonous Lurkers##12527
+		step
+			goto Zul'Drak,40.44,42.55
+			.use the Modified Mojo##38332
+			.info Use it on the Prophet of Sseratus.
+			.info He looks like a giant green snake.
+			.info He will become weakened and non-elite.
+			.kill Muddled Prophet of Sseratus##28151|q 12516/1
+		step
+			goto Zul'Drak,40.53,65.60
+			.talk Hexxer Ubungo##28062
+			..turnin Too Much of a Good Thing##12516
+			..accept To the Witch Doctor##12623
+		step
+			goto Zul'Drak,44.08,64.56
+			.' Kill enemies around this area
+			.collect 10 Drakkari Offerings##38551|q 12615 |future
+		step
+			goto Zul'Drak,59.50,58.05
+			.talk Witch Doctor Khufu##28479
+			..turnin To the Witch Doctor##12623
+			..accept Breaking Through Jin'Alai##12627
+			..accept The Blessing of Zim'Torga##12615
+		step
+			goto Zul'Drak,59.15,56.20
+			.talk Scalper Ahunae##28484
+			..accept The Leaders at Jin'Alai##12622
+		step
+			goto Zul'Drak,59.56,57.33
+			.' Interact with gameobject: Zim'Torga
+			.info It looks like a stone statue.
+			..turnin The Blessing of Zim'Torga##12615
+		step
+			goto Zul'Drak,57.62,61.70
+			.' Interact with gameobject: Purple Cauldron
+			.' Disturb the Purple Cauldron|q 12627/3
+		step
+			goto Zul'Drak,55.70,64.31
+			.' Interact with gameobject: Green Cauldron
+			.' Disturb the Green Cauldron|q 12627/2
+		step
+			goto Zul'Drak,57.19,65.32
+			.' Interact with gameobject: Blue Cauldron
+			.' Disturb the Blue Cauldron|q 12627/1
+		step
+			goto Zul'Drak,58.76,62.74
+			.' Interact with gameobject: Red Cauldron
+			.' Disturb the Red Cauldron|q 12627/4
+		step
+			goto Zul'Drak,57.34,63.49
+			.' Kill Jin'Alai enemies around this area
+			.info They look like trolls.
+			.from Kutube'sa##28494
+			.info He looks like a larger troll that appears next to his wooden totem.
+			.info You will see him yell in your chat when he appears.
+			.' Interact with gameobject: Treasure of Kutube'sa
+			.info It appears on the ground after you kill him.
+			.get Treasure of Kutube'sa##38637|q 12622/1
+		step
+			goto Zul'Drak,58.09,62.10
+			.' Kill Jin'Alai enemies around this area
+			.info They look like trolls.
+			.from Gawanil##28495
+			.info He looks like a larger troll that appears next to his wooden totem.
+			.info You will see him yell in your chat when he appears.
+			.' Interact with gameobject: Treasure of Gawanil
+			.info It appears on the ground after you kill him.
+			.get Treasure of Gawanil##38639|q 12622/2
+		step
+			goto Zul'Drak,56.43,64.90
+			.' Kill Jin'Alai enemies around this area
+			.info They look like trolls.
+			.from Chulo the Mad##28496
+			.info He looks like a larger troll that appears next to his wooden totem.
+			.info You will see him yell in your chat when he appears.
+			.' Interact with gameobject: Treasure of Chulo the Mad
+			.info It appears on the ground after you kill him.
+			.get Treasure of Chulo the Mad##38638|q 12622/3
+		step
+			goto Zul'Drak,59.50,58.05
+			.talk Witch Doctor Khufu##28479
+			..turnin Breaking Through Jin'Alai##12627
+			..accept To Speak With Har'koa##12628
+		step
+			goto Zul'Drak,59.98,57.93
+			.talk Chronicler To'kini##28527
+			..accept Relics of the Snow Leopard Goddess##12635
+		step
+			goto Zul'Drak,59.15,56.20
+			.talk Scalper Ahunae##28484
+			..turnin The Leaders at Jin'Alai##12622
+			..accept Sealing the Rifts##12640
+		step
+			goto Zul'Drak,59.39,56.41
+			.talk Element-Tamer Dagoda##28480
+			..accept The Frozen Earth##12639
+		step
+			goto Zul'Drak,63.71,70.39
+			.talk Har'koa##28401
+			..turnin To Speak With Har'koa##12628
+			..accept But First My Offspring##12632
+		step
+			goto Zul'Drak,62.30,68.28
+			.from Cursed Offspring of Har'koa##28404
+			.info They look like dark colored leopards.
+			.info You can find them all around the Altar of Har'koa area.
+			.use Whisker of Har'koa##38676
+			.info Use it on their corpses.
+			.' Resurrect 7 Cursed Offsprings of Har'koa|q 12632/1
+		step
+			goto Zul'Drak,62.30,68.28
+			.collect 10 Har'koan Relic##38677|q 12635/1
+			.info They look like grey stone tablets on the ground.
+			.info They are usually leaning against an object or a wall.
+			.info You can find them all around the Altar of Har'koa area.
+		step
+			goto Zul'Drak,63.71,70.39
+			.talk Har'koa##28401
+			..turnin But First My Offspring##12632
+			..accept Spirit of Rhunok##12642
+		step
+			goto Zul'Drak,59.97,57.93
+			.talk Chronicler To'kini##28527
+			..turnin Relics of the Snow Leopard Goddess##12635
+			..accept Plundering Their Own##12650
+			..accept Tails Up##13549
+		step
+			goto Zul'Drak,59.50,58.04
+			.talk Witch Doctor Khufu##28479
+			..accept The Blessing of Zim'Rhuk##12655
+		step
+			goto Zul'Drak,59.21,44.67
+			.' Interact with gameobject: Zim'Rhuk
+			.info Be careful to avoid the elite enemies as you travel here.
+			..turnin The Blessing of Zim'Rhuk##12655
+		step
+			goto Zul'Drak,53.42,39.01
+			.talk Spirit of Rhunok##28561
+			..turnin Spirit of Rhunok##12642
+			..accept My Prophet, My Enemy##12646
+		step
+			goto Zul'Drak,54.08,47.55
+			.from Prophet of Rhunok##28442
+			.info Underwater.
+			.get Arctic Bear God Mojo##38695|q 12646/1
+		step
+			goto Zul'Drak,56.43,45.60
+			.from Elemental Rift##28452+
+			.info They look like large balls of electricity.
+			.info You can find them all around the Drak'Mabwa area.
+			.' Seal 7 Elemental Rifts|q 12640/1
+		step
+			goto Zul'Drak,56.43,45.60
+			.from Frozen Earth##28411
+			.info They look like grey rock elementals.
+			.info You can find them all around the Drak'Mabwa area.
+			.collect 7 Essence of the Frozen Earth##38681|q 12639/1
+		step
+			goto Zul'Drak,56.43,45.60
+			.' Kill enemies around this area
+			.info You can find them all around the Drak'Mabwa area.
+			.collect 10 Drakkari Offerings##38551|q 12655
+		step
+			goto Zul'Drak,59.21,44.67
+			.' Interact with gameobject: Zim'Rhuk
+			.info Be careful to avoid the elite enemies as you travel here.
+			..turnin The Blessing of Zim'Rhuk##12655
+		step
+			goto Zul'Drak,54.16,45.86
+			.' Kill enemies around this area
+			.info They look like trolls.
+			.collect 7 Rhunokian Artifact##38700|q 12650/1
+			.' You can find more around|at 53.46,38.08
+		step
+			goto Zul'Drak,53.42,39.01
+			.talk Spirit of Rhunok##28561
+			..turnin My Prophet, My Enemy##12646
+			..accept An End to the Suffering##12647
+		step
+			goto Zul'Drak,53.38,35.79
+			.from Rhunok's Tormentor##28575
+			.info In the doorway of the building.
+			.collect Tormentor's Incense##38696|q 12647 |future
+		step
+			goto Zul'Drak,53.51,34.94
+			.use Tormentor's Incense##38696
+			.info Use it next to Rhunok.
+			.info He looks like a giant white bear laying on the ground inside the building.
+			.kill Rhunok##28416|q 12647/1
+		step
+			goto Zul'Drak,53.42,39.01
+			.talk Spirit of Rhunok##28561
+			..turnin An End to the Suffering##12647
+			..accept Back to Har'koa##12653
+		step
+			goto Zul'Drak,59.15,56.20
+			.talk Scalper Ahunae##28484
+			..turnin Sealing the Rifts##12640
+			..accept Scalps!##12659
+		step
+			goto Zul'Drak,59.39,56.41
+			.talk Element-Tamer Dagoda##28480
+			..turnin The Frozen Earth##12639
+			..accept Bringing Down Heb'Jin##12662
+		step
+			goto Zul'Drak,59.97,57.92
+			.talk Chronicler To'kini##28527
+			..turnin Plundering Their Own##12650
+		step
+			goto Zul'Drak,63.71,70.39
+			.talk Har'koa##28401
+			..turnin Back to Har'koa##12653
+			..accept I Sense a Disturbance##12665
+		step
+			goto Zul'Drak,63.71,70.39
+			.talk Har'koa##28401
+			.' Tell her "Great and powerful Har'koa, please call for one of your children that it might stealthily carry me into the Altar of Quetz'lun."
+			.' Ride with a Child of Har'koa |invehicle |q 12665
+		step
+			goto Zul'Drak,75.78,58.34
+			.' Watch the dialogue
+			.' Reveal Quetz'lun's Fate|q 12665/1
+		step
+			goto Zul'Drak,63.66,70.28
+			.' Watch the dialogue
+			.' Return to Har'koa |outvehicle |q 12665
+		step
+			goto Zul'Drak,63.71,70.39
+			.talk Har'koa##28401
+			..turnin I Sense a Disturbance##12665
+			..accept Preparations for the Underworld##12666
+		step
+			goto Zul'Drak,62.30,68.28
+			.' Kill enemies around this area.
+			.info They look like trolls.
+			.info You can find them all around the Altar of Har'koa area.
+			.collect 8 Sacred Adornment##39150|q 12666/1
+		step
+			goto Zul'Drak,63.71,70.39
+			.talk Har'koa##28401
+			..turnin Preparations for the Underworld##12666
+			..accept Seek the Wind Serpent Goddess##12667
+		step
+			goto Zul'Drak,73.82,68.55
+			.use To'kini's Blowgun##44890
+			.info Use it on Frost Leopards.
+			.info They look like white leopards around this area.
+			.info You can only use the blowgun while not in combat.
+			.info They will become tranquilized and clickable.
+			.' Interact with NPC: Frost Leopard
+			.' Choose "Lift the frost leopard's tail to check if it's a male or a female."
+			.info If they are male, they will attack you.
+			.' Recover 3 Female Frost Leopards|q 13549/1
+		step
+			goto Zul'Drak,73.82,68.55
+			.use To'kini's Blowgun##44890
+			.info Use it on Icepaw Bears.
+			.info They look like white bears around this area.
+			.info You can only use the blowgun while not in combat.
+			.info They will become tranquilized and clickable.
+			.' Interact with NPC: Icepaw Bear
+			.' Choose "Lift the icepaw bear's tail to check if it's a male or a female."
+			.info If they are male, they will attack you.
+			.info You can use Feign Death with your pet dismissed to avoid combat entirely.
+			.' Recover 3 Female Icepaw Bears|q 13549/2
+		step
+			goto Zul'Drak,75.34,58.64
+			.talk Quetz'lun's Spirit##28030
+			..turnin Seek the Wind Serpent Goddess##12667
+			..accept Setting the Stage##12672
+		step
+			goto Zul'Drak,74.04,58.65
+			.collect 10 Underworld Power Fragment##39156|q 12672/1
+			.info They look like large floating dark colored crystals.
+			.info You can find them all around the Altar of Quetz'lun area.
+			.info If you have trouble spotting them, you can remove the death screen effect to make it easier to see.
+		step
+			goto Zul'Drak,75.34,58.64
+			.talk Quetz'lun's Spirit##28030
+			..turnin Setting the Stage##12672
+			..accept Foundation for Revenge##12668
+		step
+			goto Zul'Drak,74.04,58.65
+			.' Kill enemies around this area
+			.info They look like trolls.
+			.info Kill them near Soul Fonts.
+			.info They look like altars shaped like dragon heads.
+			.info You can find them all around the Altar of Quetz'lun area.
+			.info Make sure they have the "Soul Font Void" buff on them before you kill them.
+			.' Kill 12 Trolls Near a Soul Font|q 12668/1
+		step
+			goto Zul'Drak,75.34,58.64
+			.talk Quetz'lun's Spirit##28030
+			..turnin Foundation for Revenge##12668
+			..accept Hell Hath a Fury##12674
+		step
+			goto Zul'Drak,73.56,60.78
+			.use Quetz'lun's Hexxing Stick##39158
+			.info Use it on on High Priestess Tua-Tua.
+			.from High Priestess Tua-Tua##28754
+			.info Make sure she has the "Quetz'lun's Hex" buff before you kill her.
+			.' Hex High Priestess Tua-Tua at Death|q 12674/2
+		step
+			goto Zul'Drak,74.53,57.39
+			.use Quetz'lun's Hexxing Stick##39158
+			.info Use it on on High Priest Mu'funu.
+			.from High Priest Mu'funu##28752
+			.info Make sure he has the "Quetz'lun's Hex" buff before you kill him.
+			.' Hex High Priest Mu'funu at Death|q 12674/1
+		step
+			goto Zul'Drak,76.36,54.91
+			.use Quetz'lun's Hexxing Stick##39158
+			.info Use it on on High Priest Hawinni.
+			.info He looks like a big brute that walks along this path around this area.
+			.from High Priest Hawinni##28756
+			.info Make sure he has the "Quetz'lun's Hex" buff before you kill him.
+			.' Hex High Priest Hawinni at Death|q 12674/3
+		step
+			goto Zul'Drak,75.34,58.64
+			.talk Quetz'lun's Spirit##28030
+			..turnin Hell Hath a Fury##12674
+			..accept One Last Thing##12675
+		step
+			goto Zul'Drak,63.71,70.39
+			.talk Har'koa##28401
+			..turnin One Last Thing##12675
+			..accept Blood of a Dead God##12684
+		step
+			goto Zul'Drak,64.20,52.58
+			.' Interact with gameobject: Heb'Jin's Drum
+			.' Watch the dialogue
+			.info Heb'Jin flies down to you on a bat.
+			.use the Bat Net##39041
+			.info Use it on Heb'Jin's Bat to pin it to the ground.
+			.kill Heb'Jin##28636|q 12662/1
+		step
+			goto Zul'Drak,64.09,54.17
+			.' Kill Heb'Drakkar enemies around this area
+			.info They look like trolls, some riding bats.
+			.info You can find them all around the Heb'Drakkar area.
+			.use Ahunae's Knife##38731
+			.info Use it on their corpses.
+			.' Scalp 10 Heb'Drakkar Trolls|q 12659/1
+		step
+			goto Zul'Drak,73.44,50.50
+			.from Blood of Mam'toth##28779
+			.info They look like blue oozes.
+			.info You can find them all around the Mam'toth Crater area.
+			.get 7 Blood of Mam'toth##39167|q 12684/1
+		step
+			goto Zul'Drak,63.71,70.39
+			.talk Har'koa##28401
+			..turnin Blood of a Dead God##12684
+			..accept You Reap What You Sow##12685
+		step
+			goto Zul'Drak,75.35,58.65
+			.use Quetz'lun's Ritual##39187
+			.info Use it next to Quetz'lun.
+			.info Druids can not use this quest item if shapeshifted.
+			.' Watch the dialogue
+			.info He will become weakened and non-elite.
+			.kill Drained Prophet of Quetz'lun##28795|q 12685/1
+		step
+			goto Zul'Drak,59.50,58.04
+			.talk Witch Doctor Khufu##28479
+			..turnin You Reap What You Sow##12685
+		step
+			goto Zul'Drak,59.97,57.93
+			.talk Chronicler To'kini##28527
+			..turnin Tails Up##13549
+			..accept Hexed Caches##12709
+		step
+			goto Zul'Drak,60.25,57.73
+			.talk Har'koa##28401
+			..accept The Key of Warlord Zol'Maz##12712
+			.' She can sometimes be found|at 63.71,70.39
+		step
+			goto Zul'Drak,59.40,56.41
+			.talk Element-Tamer Dagoda##28480
+			..turnin Bringing Down Heb'Jin##12662
+			..accept Enchanted Tiki Warriors##12708
+		step
+			goto Zul'Drak,59.15,56.20
+			.talk Scalper Ahunae##28484
+			..turnin Scalps!##12659
+			..accept Wooly Justice##12707
+		step
+			goto Zul'Drak,72.09,41.50
+			.use Medallion of Mam'toth##39268
+			.info Use it on an Enraged Mammoth around this area.
+			.' Interact with NPC: Enraged Mammoth
+			.' Ride an Enraged Mammoth |invehicle |q 12707
+		step
+			goto Zul'Drak,72.09,41.50
+			.from Mam'toth Disciple##28861
+			.info Use the abilities on your action bar.
+			.info If your mammoth dies, use the item again on another mammoth to get a new one to ride.
+			.' Trample 12 Mam'toth Disciples to Death|q 12707/1
+		step
+			goto Zul'Drak,68.20,35.37
+			.from Drek'Maz##28918
+			.info Inside the building.
+			.collect Drek'Maz's Tiki##39315|q 12712 |future
+		step
+			goto Zul'Drak,67.94,32.72
+			.from Yara##28917
+			.info Inside the building.
+			.collect Yara's Sword##39313|q 12712 |future
+		step
+			goto Zul'Drak,63.82,37.09
+			.from Tiri##28916
+			.info Inside the building.
+			.collect Tiri's Magical Incantation##39316|q 12712 |future
+		step
+			.use Tiri's Magical Incantation##39316
+			.collect Tiki Dervish Ceremony##39314|q 12712 |future
+		step
+			goto Zul'Drak,66.07,35.48
+			.collect 12 Zol'Maz Stronghold Cache##39301|q 12709/1
+			.info They look like yellow wooden boxes on the ground.
+			.info You can find them all around the Zol'Maz Stronghold area.
+			.use Tiki Hex Remover##39305
+			.info You loot these from enemies around this area.
+			.info Using these will remove Zol'Maz Stronghold Hexes you get from opening these caches.
+		step
+			goto Zul'Drak,66.07,35.48
+			.from Enchanted Tiki Warrior##28882
+			.info They look like floating wooden masks with spears.
+			.info You can find them all around the Zol'Maz Stronghold area.
+			.' Destroy 12 Enchanted Tiki Warriors|q 12708/1
+		step
+			goto Zul'Drak,66.16,33.47
+			.use the Tiki Dervish Ceremony##39314
+			.info Near the doorway of the building.
+			.' Watch the dialogue
+			.from Warlord Zol'Maz##28902
+			.get Key of Warlord Zol'Maz##39318|q 12712/1
+		step
+			goto Zul'Drak,69.99,20.96
+			.talk Ha'wana##33025
+			..accept Eggs for Dubra'Jin##13556
+		step
+			goto Zul'Drak,71.87,20.04
+			.' Interact with NPC: Gundrak Raptor Egg
+			.info They look like brown and white eggs with blue spots on them on the ground around this area.
+			.info You can also kill any raptors you see while collecting eggs, but they have a very low drop rate on the quest item.
+			.collect 12 Gundrak Raptor Egg##44921|q 13556/1
+			.' You can find more around (1)|at 74.02,21.31
+			.' You can find more around (2)|at 73.27,18.47
+			.' You can find more around (3)|at 75.18,17.06
+			.' You can find more around (4)|at 76.85,17.79
+		step
+			goto Zul'Drak,69.99,20.96
+			.talk Ha'wana##33025
+			..turnin Eggs for Dubra'Jin##13556
+		step
+			goto Zul'Drak,59.40,56.42
+			.talk Element-Tamer Dagoda##28480
+			..turnin Enchanted Tiki Warriors##12708
+		step
+			goto Zul'Drak,59.15,56.20
+			.talk Scalper Ahunae##28484
+			..turnin Wooly Justice##12707
+		step
+			goto Zul'Drak,59.97,57.92
+			.talk Chronicler To'kini##28527
+			..turnin Hexed Caches##12709
+		step
+			goto Zul'Drak,60.26,57.74
+			.talk Har'koa##28401
+			..turnin The Key of Warlord Zol'Maz##12712
+			..accept Rampage##12721
+		step
+			goto Zul'Drak,78.6,25.2
+			.use Key of Warlord Zol'Maz##39434
+			.info Unlocks the anchors chaining Akali.
+			.' Akali unfettered from his chains|q 12721/1
+		step
+			goto Zul'Drak,59.5,58.1
+			.talk Witch Doctor Khufu##28479
+			..turnin Rampage##12721
+		step
+			.' Congratulations! +100 quests for achievement "The Empire of Zul'Drak".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[76] Sholazar Basin",[[
