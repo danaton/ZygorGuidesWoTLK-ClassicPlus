@@ -1577,7 +1577,7 @@ startlevel 68
 			..accept Zedd's Probably Dead##11274
 		step
 			goto Howling Fjord,60.25,51.33
-			.use the Incense Burner##33637
+			.use Incense Burner##33637
 			.info Use it in the doorway of the building.
 			.' Enter the Spirit World |havebuff Spell_Holiday_ToW_SpiceCloud |q 11343
 		step
@@ -1713,7 +1713,7 @@ startlevel 68
 			..accept Drop It then Rock It!##11429
 		step
 			goto Howling Fjord,64.89,40.10
-			.use the Alliance Banner##34051
+			.use Alliance Banner##34051
 			.' Place the Alliance Banner|q 11429/2
 		step
 			goto Howling Fjord,64.89,40.10
@@ -1730,7 +1730,7 @@ startlevel 68
 			.info Inside the building.
 		step
 			goto Howling Fjord,68.81,54.85
-			.use the Incense Burner##33774
+			.use Incense Burner##33774
 			.' Enter the Spirit World |havebuff Spell_Holiday_ToW_SpiceCloud |q 11344
 		step
 			goto Howling Fjord,68.81,54.85
@@ -1806,7 +1806,7 @@ startlevel 68
 			.' You can find more around (4)|at 75.96,67.46
 		step
 			goto Howling Fjord,68.84,68.76
-			.use the Trained Rock Falcon##34111
+			.use Trained Rock Falcon##34111
 			.info Use it on Fjord Turkeys around this area.
 			.info You will be attacked each time you capture a turkey.
 			.collect 5 Fjord Turkey##34112|q 11465/1
@@ -1831,7 +1831,7 @@ startlevel 68
 			.collect Large Barrel##34133|q 11483/1
 		step
 			goto Howling Fjord,64.77,52.67
-			.use the Harpoon Control Mechanism##34032
+			.use Harpoon Control Mechanism##34032
 			.info Use it next to the big metal harpoon gun.
 			.' Control the Harpoon |invehicle |q 11421
 		step
@@ -1984,7 +1984,7 @@ startlevel 68
 			.collect 10 Fjord Grub##34102|q 11468
 		step
 			goto Howling Fjord,70.40,66.75
-			.use the Trained Rock Falcon##34121
+			.use Trained Rock Falcon##34121
 			.' Click Fjord Hawk
 			.info Use it on Fjord Hawks around this area.
 			.info Most of them are flying above you around this area.
@@ -2008,7 +2008,7 @@ startlevel 68
 			..accept News From the East##11501
 		step
 			goto Howling Fjord,76.66,67.67
-			.use the Trained Rock Falcon##34124
+			.use Trained Rock Falcon##34124
 			.' Control a Trained Falcon Hawk |havebuff Hawk Hunting##44407|q 11470
 		step
 			goto Howling Fjord,76.7,67.7
@@ -2144,21 +2144,21 @@ startlevel 68
 			..accept Mission: Eternal Flame##11202
 		step
 			goto Howling Fjord,48.26,55.94
-			.use the Ever-burning Torches##33164
+			.use Ever-burning Torches##33164
 			.' Destroy the Southwest Plague Tank|q 11202/1
 		step
 			goto Howling Fjord,47.95,52.96
-			.use the Ever-burning Torches##33164
+			.use Ever-burning Torches##33164
 			.' Destroy the Northwest Plague Tank|q 11202/2
 		step
 			goto Howling Fjord,51.29,50.09
-			.use the Ever-burning Torches##33164
+			.use Ever-burning Torches##33164
 			.info Up on the cliff.
 			.info Follow the path on the outskirts of Halgrind.
 			.' Destroy the Northeast Plague Tank|q 11202/3
 		step
 			goto Howling Fjord,51.55,57.73
-			.use the Ever-burning Torches##33164
+			.use Ever-burning Torches##33164
 			.info Up on the cliff.
 			.info Follow the path on the outskirts of Halgrind.
 			.' Destroy the Southeast Plague Tank|q 11202/4
@@ -2275,7 +2275,7 @@ startlevel 68
 			.info It looks like an orca that swims in the water around this area.
 			.get Sin'dorei Scrying Crystal##34235|q 11510/1
 		step
-			.use the Fish Bladder##34076
+			.use Fish Bladder##34076
 			.info This will allow you to breathe underwater for 3 minutes.
 			.' Gain Water Breathing |havebuff Water Breathing##44235|q 11434
 		step
@@ -2522,19 +2522,19 @@ startlevel 68
 			..accept A Return to Resting##11568
 		step
 			goto Howling Fjord,57.64,77.41
-			.use the Bundle of Vrykul Artifacts##34624
+			.use Bundle of Vrykul Artifacts##34624
 			.' Return the Shield of Aesirites|q 11568/1
 		step
 			goto Howling Fjord,59.30,77.20
-			.use the Bundle of Vrykul Artifacts##34624
+			.use Bundle of Vrykul Artifacts##34624
 			.' Return the Staff of Storm's Fury|q 11568/2
 		step
 			goto Howling Fjord,59.78,79.40
-			.use the Bundle of Vrykul Artifacts##34624
+			.use Bundle of Vrykul Artifacts##34624
 			.' Return the Frozen Heart of Isuldof|q 11568/3
 		step
 			goto Howling Fjord,61.89,80.14
-			.use the Bundle of Vrykul Artifacts##34624
+			.use Bundle of Vrykul Artifacts##34624
 			.' Return the Ancient Armor of the Kvaldir|q 11568/4
 		step
 			goto Howling Fjord,40.29,60.25
@@ -2681,7 +2681,7 @@ startlevel 68
 			goto Howling Fjord,22.73,31.08
 			.' Kill enemies around this area.
 			.collect Scourge Device##33961|n
-			.use the Scourge Device##33961
+			.use Scourge Device##33961
 			..accept It's a Scourge Device##11395
 		step
 			goto Howling Fjord,24.25,32.46
@@ -2690,7 +2690,7 @@ startlevel 68
 			..accept Bring Down Those Shields##11396
 		step
 			goto Howling Fjord,22.69,31.17
-			.use the Scourging Crystal Controller##33960
+			.use Scourging Crystal Controller##33960
 			.info Use it near the Scourge Crystal.
 			.info It looks like a large floating purple crystal.
 			.kill Scourging Crystal##24464|n
@@ -2699,7 +2699,7 @@ startlevel 68
 			.' Destroy the Scourging Crystal|q 11396/1
 		step
 			goto Howling Fjord,21.91,28.78
-			.use the Scourging Crystal Controller##33960
+			.use Scourging Crystal Controller##33960
 			.info Use it near the Scourge Crystal.
 			.info It looks like a large floating purple crystal.
 			.kill Scourging Crystal##24464|n
@@ -2708,7 +2708,7 @@ startlevel 68
 			.' Destroy the Scourging Crystal|q 11396/1
 		step
 			goto Howling Fjord,21.51,24.63
-			.use the Scourging Crystal Controller##33960
+			.use Scourging Crystal Controller##33960
 			.info Use it near the Scourge Crystal.
 			.info It looks like a large floating purple crystal.
 			.kill Scourging Crystal##24464|n
@@ -2791,11 +2791,11 @@ startlevel 68
 			.' You can find more around (1)|at 52.58,10.15
 			.' You can find more around (2)|at 50.97,3.19
 		step
-			.use the Tough Ram Meat##33352
+			.use Tough Ram Meat##33352
 			.collect Giant Yeti Meal##33477|q 11284
 		step
 			goto Howling Fjord,60.50,11.85
-			.use the Giant Yeti Meal##33477
+			.use Giant Yeti Meal##33477
 			.info Use it near Shatterhorn inside the mine.
 			.info You can use it from decently far away.
 			.info He will wake up and attack you.
@@ -2814,7 +2814,7 @@ startlevel 68
 			..accept The Book of Runes##11346
 		step
 			goto Howling Fjord,63.92,19.57
-			.use the Fresh Barbfish Bait##34013
+			.use Fresh Barbfish Bait##34013
 			.info Use it next to the Sunken Boat underwater.
 			.kill Frostfin##24500|q 11410/1
 		step
@@ -2827,7 +2827,7 @@ startlevel 68
 			.collect Book of Runes - Chapter 3##33780|q 11346
 			.' You can find more around|at 67.78,28.95
 		step
-			.use the Book of Runes - Chapter 1##33778
+			.use Book of Runes - Chapter 1##33778
 			.collect The Book of Runes##33781|q 11346/1
 		step
 			goto Howling Fjord,61.48,22.86
@@ -2881,7 +2881,7 @@ startlevel 68
 			.kill Spore##23876|n
 			.info They look like orange spikey balls.
 			.info You can find them all around the Twisted Glade area.
-			.use the Enchanted Ice Core##33607
+			.use Enchanted Ice Core##33607
 			.info Use it on their corpses.
 			.' Freeze 8 Spores|q 11319/1
 		step
@@ -2943,7 +2943,7 @@ startlevel 68
 			..turnin Preying Upon the Weak##11292
 		step
 			goto Howling Fjord,62.66,16.80
-			.use the Feathered Charm##34026
+			.use Feathered Charm##34026
 			.info Use it on Steelfeather.
 			.info She looks like a hippogryph flies in the sky above Fort Wildevar around this area.
 			.info You can easily find and select Steelfeather by typing "/tar Steelfeather" into your chat.
@@ -2959,7 +2959,7 @@ startlevel 68
 			..turnin Keeper Witherleaf##11428
 		step
 			goto Howling Fjord,70.41,23.92
-			.use the Rune of Command##33796
+			.use Rune of Command##33796
 			.info Use it on a neutral Stone Giant around this area.
 			.info It will not work on a Runed Stone Giant.
 			.' Test the Rune of Command|q 11348/1
@@ -2989,7 +2989,7 @@ startlevel 68
 			.info It appears on the ground after Feknut's Firecrackers.
 		step
 			goto Howling Fjord,29.21,7.56 
-			.use the Worg Disguise##33618
+			.use Worg Disguise##33618
 			.' Wear the Worg Disguise |havebuff Worg Disguise##68347 |q 11325
 		step
 			goto Howling Fjord,29.69,5.67
@@ -3010,7 +3010,7 @@ startlevel 68
 			.info He looks like a larger grey wolf that walks around this area.
 		step
 			goto Howling Fjord,29.21,7.56
-			.use the Worg Disguise##33618
+			.use Worg Disguise##33618
 			.' Wear the Worg Disguise |havebuff Worg Disguise##68347|q 11414
 		step
 			goto Howling Fjord,29.69,5.67
@@ -3019,7 +3019,7 @@ startlevel 68
 			..accept Eyes of the Eagle##11416
 		step
 			goto Howling Fjord,44.40,26.40
-			.use the Westguard Command Insignia##33311
+			.use Westguard Command Insignia##33311
 			.talk Westguard Sergeant##24060
 			..turnin Operation: Skornful Wrath##11248
 			..accept Towers of Certain Doom##11245
@@ -3027,63 +3027,63 @@ startlevel 68
 			..accept Burn Skorn, Burn!##11247
 		step
 			goto Howling Fjord,43.66,28.57
-			.use the Sergeant's Torch##33321
+			.use Sergeant's Torch##33321
 			.info Use it inside this building.
 			.' Set the Northwest Longhouse Ablaze|q 11247/1
 		step
 			goto Howling Fjord,43.66,28.57
-			.use the Sergeant's Flare##33323
+			.use Sergeant's Flare##33323
 			.' Target the Northwest Tower|q 11245/1
 		step
 			goto Howling Fjord,46.33,28.21
-			.use the Sergeant's Torch##33321
+			.use Sergeant's Torch##33321
 			.info Use it inside this building.
 			.' Set the Northeast Longhouse Ablaze|q 11247/2
 		step
 			goto Howling Fjord,45.93,30.71
-			.use the Sergeant's Torch##33321
+			.use Sergeant's Torch##33321
 			.info Use it inside this building.
 			.' Set the Barracks Ablaze|q 11247/3
 		step
-			.use the Westguard Command Insignia##33311
+			.use Westguard Command Insignia##33311
 			.talk Westguard Sergeant##24060
 			..turnin Burn Skorn, Burn!##11247
 		step
 			goto Howling Fjord,46.44,33.21
-			.use the Sergeant's Flare##33323
+			.use Sergeant's Flare##33323
 			.' Target the East Tower|q 11245/2
 		step
 			goto Howling Fjord,46.95,36.37
-			.use the Sergeant's Flare##33323
+			.use Sergeant's Flare##33323
 			.' Target the Southeast Tower|q 11245/4
 		step
 			goto Howling Fjord,44.86,35.07
 			.' Kill Winterskorn enemies around this area.
 			.collect Vrykul Scroll of Ascension##33314 |n
-			.use the Vrykul Scroll of Ascension##33314
+			.use Vrykul Scroll of Ascension##33314
 			..accept Stop the Ascension!##11249
 		step
 			goto Howling Fjord,44.86,35.07
-			.use the Vrykul Scroll of Ascension##33339
+			.use Vrykul Scroll of Ascension##33339
 			.' Watch the dialogue.
 			.info Halfdan the Ice-Hearted appears nearby.
 			.kill Halfdan the Ice-Hearted##23671|q 11249/1
 		step
 			goto Howling Fjord,44.86,35.07
 			.' Kill Winterskorn enemies around this area.
-			.use The Sergeant's Machete##33310
+			.use Sergeant's Machete##33310
 			.info Use it on their corpses.
 			.' Dismember 20 Winterskorn Vrykul|q 11246/1
 		step
-			.use The Westguard Command Insignia##33311
+			.use Westguard Command Insignia##33311
 			.talk Westguard Sergeant##24060
 			..turnin Gruesome, But Necessary##11246
 		step
 			goto Howling Fjord,43.30,35.93
-			.use the Sergeant's Flare##33323
+			.use Sergeant's Flare##33323
 			.' Target the Southwest Tower|q 11245/3
 		step
-			.use the Westguard Command Insignia##33311
+			.use Westguard Command Insignia##33311
 			.talk Westguard Sergeant##24060
 			..turnin Towers of Certain Doom##11245
 			..accept All Hail the Conqueror of Skorn!##11250
@@ -3130,11 +3130,11 @@ startlevel 68
 			.info They look like large humans.
 			.info You can find them all around the Gjalerbron area.
 			.collect Gjalerbron Attack Plans##33289 |n
-			.use the Gjalerbron Attack Plans##33289
+			.use Gjalerbron Attack Plans##33289
 			..accept Gjalerbron Attack Plans##11237
 		step
 			goto Howling Fjord,29.21,7.56
-			.use the Worg Disguise##33618
+			.use Worg Disguise##33618
 			.' Wear the Worg Disguise |havebuff Worg Disguise##68347 |q 11416
 		step
 			goto Howling Fjord,29.69,5.67
@@ -3222,7 +3222,7 @@ startlevel 68
 			.' You can find more around|at 33.25,9.33
 		step
 			goto Howling Fjord,35.12,11.70
-			.use the Awakening Rod##34083
+			.use Awakening Rod##34083
 			.info Use them on Dormant Vrykul.
 			.info They look like vrykul sleeping upright inside the walls like mummies around this area inside the building.
 			.kill 5 Dormant Vrykul##24669|q 11432/1
@@ -3320,7 +3320,7 @@ startlevel 72
 			goto Dragonblight,28.48,49.48
 			.kill Blighted Elk##26616|n
 			.info They look like deer bucks around this area.
-			.use the Liquid Fire of Elune##36956
+			.use Liquid Fire of Elune##36956
 			.info Use it on their corpses.
 			.' Cleanse 6 Blighted Elk Corpses|q 12166/1
 			.' You can find more around (1)|at 31.09,47.25
@@ -3329,7 +3329,7 @@ startlevel 72
 			goto Dragonblight,28.48,49.48
 			.kill Rabid Grizzly##26643|n
 			.info They look like diseased bears around this area.
-			.use the Liquid Fire of Elune##36956
+			.use Liquid Fire of Elune##36956
 			.info Use it on their corpses.
 			.' Cleanse 6 Rabid Grizzly Corpses|q 12166/2
 			.' You can find more around (1)|at 31.09,47.25
@@ -3343,7 +3343,7 @@ startlevel 72
 			.' Interact with NPC: Dead Mage Hunter
 			.info They look like dead bodies on the ground around this area.
 			.collect Mage Hunter Personal Effects##35792|n
-			.use the Mage Hunter Personal Effects##35792
+			.use Mage Hunter Personal Effects##35792
 			.info You may have to find and use multiple of these.
 			.collect Moonrest Gardens Plans##35783|q 12000/1
 		step
@@ -3407,7 +3407,7 @@ startlevel 72
 			..turnin The High Cultist##12169
 		step
 			goto Dragonblight,26.47,57.22
-			.use the Surge Needle Teleporter##36747
+			.use Surge Needle Teleporter##36747
 			.info You will be teleported up to a floating platform.
 			.' Teleport to the Surge Needle|goto 19.48,59.59,0.2|q 12060
 		step
@@ -3416,7 +3416,7 @@ startlevel 72
 			.info On the floating platform.
 			.' Observe the Object on the Surge Needle|q 12060/1
 		step
-			.use the Surge Needle Teleporter##36747
+			.use Surge Needle Teleporter##36747
 			.info On the floating platform.
 			.' Return to the Ground|goto 17.64,59,0.2|q 12060
 		step
@@ -3454,7 +3454,7 @@ startlevel 72
 			..accept A Letter for Home##12067
 		step
 			goto Dragonblight,26.53,65.07
-			.use the Ley Line Focus Control Ring##36751
+			.use Ley Line Focus Control Ring##36751
 			.info It takes a few seconds to complete the goal after you use the item.
 			.goal Retrieve the Ley Line Focus Information|q 12065/1
 		step
@@ -3488,7 +3488,7 @@ startlevel 72
 			.collect Ley Line Focus Amulet##36779|q 12083
 		step
 			goto Dragonblight,32.33,71.33
-			.use the Ley Line Focus Control Amulet##36779
+			.use Ley Line Focus Control Amulet##36779
 			.info It takes a few seconds to complete the goal after you use the item.
 			.goal Retrieve the Ley Line Focus Information|q 12083/1
 		step
@@ -3507,7 +3507,7 @@ startlevel 72
 			..accept The End of the Line##12107
 		step
 			goto Dragonblight,39.79,66.98
-			.use the Ley Line Focus Control Talisman##36815
+			.use Ley Line Focus Control Talisman##36815
 			.info Underwater.
 			.info It takes a few seconds to complete the goal after you use the item.
 			.' Retrieve the Ley Line Focus Information|q 12107/1
@@ -3553,7 +3553,7 @@ startlevel 72
 			.kill Loguhn##26196|n
 			.collect Blood of Loguhn##35688|q 11959 |future
 		step
-			.use the Blood of Loguhn##35688
+			.use Blood of Loguhn##35688
 			.goal Smear Loguhn's Blood|q 11959/1
 		step
 			goto Dragonblight,48.01,74.87
@@ -3738,14 +3738,14 @@ startlevel 72
 			.info Inside the mine.
 		step
 			goto Dragonblight,80.14,45.35
-			.use the Wintergarde Mine Bomb##37465
+			.use Wintergarde Mine Bomb##37465
 			.info Use it in the entrance to the mine at this location.
 			.info Run out of the mine after using item.
 			.info Don't stand too close to the bomb, it can damage you.
 			.' Destroy the Lower Wintergarde Mine Shaft|q 12277/2
 		step
 			goto Dragonblight,80.41,44.81
-			.use the Wintergarde Mine Bomb##37465
+			.use Wintergarde Mine Bomb##37465
 			.info Use it in the entrance to the mine at this location.
 			.info Run deeper into the mine after using item.
 			.info There are still quests to complete inside the mine.
@@ -4093,7 +4093,7 @@ startlevel 72
 			.info He looks like a Magnataur that walks around in this canyon.
 			.collect Emblazoned Battle Horn##36855|q 12146 |future
 		step
-			.use the Emblazoned Battle Horn##36855
+			.use Emblazoned Battle Horn##36855
 			..accept Disturbing Implications##12146
 		step
 			goto Dragonblight,75.07,20.22
@@ -4182,7 +4182,7 @@ startlevel 72
 			.' Cleanse the Ruby Corruption|q 12418/2
 			.collect Ruby Brooch##37833|q 12419 |future
 		step
-			.use the Ruby Brooch##37833
+			.use Ruby Brooch##37833
 			..accept The Fate of the Ruby Dragonshrine##12419
 		step
 			goto Dragonblight,46.99,50.82
@@ -4202,7 +4202,7 @@ startlevel 72
 			..accept No Place to Run##12261
 		step
 			goto Dragonblight,41.38,31.86
-			.use the Destructive Wards##37445
+			.use Destructive Wards##37445
 			.' Kill the enemies that attack in waves
 			.goal Fully Charge the Destructive Ward|q 12261/1
 		step
@@ -4438,7 +4438,7 @@ startlevel 72
 			.info They are elite, but you don't kill them.
 			.info Just fight one until it opens its mouth.
 			.info You will get a message on your screen when it opens its mouth.
-			.use the Potent Explosive Charges##36732
+			.use Potent Explosive Charges##36732
 			.info Use them on the Hulking Jormungar after it opens its mouth.
 			.get 6 Seared Jormungar Meat##36731|q 12049/1
 			.info They appear on the ground after the Hulking Jormungar dies.
@@ -4551,7 +4551,7 @@ startlevel 72
 			.' Become Undigestible| havebuff INV_Potion_93 |q 12078
 		step
 			goto Dragonblight,57.47,12.28
-			.use the Sturdy Crates##36771
+			.use Sturdy Crates##36771
 			.info Use them on Ice Heart Jormungar Spawns.
 			.info They look like smaller blue centipedes.
 			.info You can find them all throughout inside the cave.
@@ -4839,7 +4839,7 @@ startlevel 74
 			.' Get Budd's Attention |havebuff INV_Misc_Head_Troll_01 |q 11984
 		step
 			goto Grizzly Hills,13.79,58.47
-			.use the Bounty Hunter's Cage##35736
+			.use Bounty Hunter's Cage##35736
 			.info He will aggro enemies on the way to capture a troll.
 			.info Be sure to protect him or you will have to go back and get him from the hut.
 			.info Use it on a troll that Budd stuns.
@@ -4860,7 +4860,7 @@ startlevel 74
 			.info Stuck into the side of the tree stump.
 		step
 			goto Grizzly Hills,16.43,47.81
-			.use the Dull Carving Knife##38083
+			.use Dull Carving Knife##38083
 			.' Take the Blood Oath |havebuff Spell_Shadow_LifeDrain |q 11989
 		step
 			goto Grizzly Hills,16.42,47.81
@@ -4900,7 +4900,7 @@ startlevel 74
 			.collect Scourged Troll Mummy##38149|q 12484
 		step
 			goto Grizzly Hills,16.78,48.22
-			.use the Scourged Troll Mummy##38149
+			.use Scourged Troll Mummy##38149
 			.info Use it next to the burning pile of mummies.
 			.' Burn a Mummified Carcass|q 12484/1
 		step
@@ -5074,12 +5074,12 @@ startlevel 74
 			..accept A Dark Influence##12220
 		step
 			goto Grizzly Hills,30.44,43.80
-			.use the Geomancer's Orb##37173
+			.use Geomancer's Orb##37173
 			.info Inside the cave.
 			.' Use the Orb Beneath Vordrassil's Tears|q 12220/3
 		step
 			goto Grizzly Hills,32.23,45.89
-			.use the Geomancer's Orb##37173
+			.use Geomancer's Orb##37173
 			.info Inside the cave.
 			.' Use the Orb Beneath Vordrassil's Limb|q 12220/2
 		step
@@ -5088,7 +5088,7 @@ startlevel 74
 			.get 6 Slime Sample##37199|q 12219/1
 		step
 			goto Grizzly Hills,41.15,54.64
-			.use the Geomancer's Orb##37173
+			.use Geomancer's Orb##37173
 			.info Inside the cave.
 			.' Use the Orb Beneath Vordrassil's Heart|q 12220/1
 		step
@@ -5123,7 +5123,7 @@ startlevel 74
 			..accept Vordrassil's Seeds##12250
 		step
 			goto Grizzly Hills,50.73,42.66
-			.use the Verdant Torch##37306
+			.use Verdant Torch##37306
 			.info Inside the huge tree, on the bottom floor.
 			.collect Vordrassil's Ashes##37303|q 12248/1
 		step
@@ -5159,7 +5159,7 @@ startlevel 74
 			.' Return the Shredders|at 39.53,43.40
 		step
 			goto Grizzly Hills,34.12,40.46
-			.use the Renewing Bandage##37576
+			.use Renewing Bandage##37576
 			.info Use it on Wounded Westfall Infantry.
 			.info They look like Alliance soldiers kneeling on the ground around this area.
 			.info You can find them all around the Blue Sky Logging Grounds area.
@@ -5228,7 +5228,7 @@ startlevel 74
 			goto Grizzly Hills,53.98,22.68
 			.from Undead Miner##26891
 			.info Inside the mine.
-			.use the Miner's Lantern##37932
+			.use Miner's Lantern##37932
 			.info Use it on their corpses.
 			.' Put 8 Miners at Rest|q 12159/1
 		step
@@ -5291,7 +5291,7 @@ startlevel 74
 			.info You can find them all around Solstice Village.
 		step
 			goto Grizzly Hills,62.19,42.39
-			.use the Tranquilizer Dart##37665
+			.use Tranquilizer Dart##37665
 			.info Use it on Tatjana.
 			.info Make sure to target Tatjana, and not the horse.
 			.' Interact with NPC: Tatjana's Horse
@@ -5340,7 +5340,7 @@ startlevel 74
 			.info You can also find them inside the buildings.
 			.collect 8 Missing Journal Page##35737|q 11986
 		step
-			.use the Incomplete Journal##35739
+			.use Incomplete Journal##35739
 			.collect Brann Bronzebeard's Journal##35738|q 11986/1
 		step
 			goto Grizzly Hills,63.90,22.28
@@ -5404,7 +5404,7 @@ startlevel 74
 			.' You can find more around (3)|at 71.72,11.61
 		step
 			goto Grizzly Hills,67.67,14.95
-			.use the Boulder##35734+
+			.use Boulder##35734
 			.info Use them on Iron Rune-Shapers in the canyon below.
 			.info They look like dwarves wearing dark metal armor.
 			.info You can use the boulders on the same enemy repeatedly.
@@ -5461,7 +5461,7 @@ startlevel 74
 			.get Portable Seismograph##35837|q 12014/2
 		step
 			goto Grizzly Hills,70.60,13.41
-			.use the Portable Seismograph##35837
+			.use Portable Seismograph##35837
 			.info Inside the canyon.
 			.'  Interact with gameobject: Portable Seismograph
 			.info It appears on the ground.
@@ -5501,7 +5501,7 @@ startlevel 74
 			..accept Runes of Compulsion##12093
 		step
 			goto Grizzly Hills,77.70,37.37
-			.use the Fishing Net##37542
+			.use Fishing Net##37542
 			.info Use it near Schools of Northern Salmon around this area.
 			.info They look like groups of small fish in the water around this area.
 			.collect 6 Northern Salmon##37501|q 12279/1
@@ -5656,7 +5656,7 @@ startlevel 74
 			.' Leave the Spirit Realm |nobuff Ability_Creature_Cursed_02|q 12137
 		step
 			goto Grizzly Hills,70.61,19.84
-			.use the Snow of Eternal Slumber##36859
+			.use Snow of Eternal Slumber##36859
 			.info Use it on Ancient Drakkari.
 			.info They look like spirit trolls around this area inside the crypt.
 			.info Follow them when they run to nearby mummies on the ground.
@@ -5672,11 +5672,11 @@ startlevel 74
 			.collect Sacred Drakkari Offering##36870|q 12152
 			.info Inside the crypt.
 		step
-			.use the Drakkari Spirit Dust##36873
+			.use Drakkari Spirit Dust##36873
 			.collect Infused Drakkari Offering##37063|q 12152
 		step
 			goto Grizzly Hills,71.53,24.65
-			.use the Infused Drakkari Offering##37063
+			.use Infused Drakkari Offering##37063
 			.' Watch the dialogue
 			.' Destroy Warlord Jin'arrak|q 12152/1
 		step
@@ -5732,7 +5732,7 @@ startlevel 74
 			.collect Golem Blueprint Section 2##36850|q 12129
 			.collect Golem Blueprint Section 3##36851|q 12129
 		step
-			.use the Golem Blueprint Section 1##36849
+			.use Golem Blueprint Section 1##36849
 			.collect War Golem Blueprint##36848|q 12129/1
 		step
 			goto Grizzly Hills,77.09,48.65
@@ -5813,7 +5813,7 @@ startlevel 74
 			.info Make sure you are mounted and not in combat.
 			.info You will use the Overseer Disguise Kit in the next guide step.
 			.info If you are already mounted when you use the item, it will let you ride your mount while disguised, so you can run faster.
-			.use the Overseer Disguise Kit##37071
+			.use Overseer Disguise Kit##37071
 			.info It can be used anywhere in the Dun Argol subzone.
 			.' Wear the Disguise |havebuff INV_Mask_01 |q 12185
 		step
@@ -5841,7 +5841,7 @@ startlevel 74
 			..turnin Put on Your Best Face for Loken##12185
 		step
 			goto Grizzly Hills,76.79,63.01
-			.use the Golem Control Unit##36865
+			.use Golem Control Unit##36865
 			.info Downstairs inside the building.
 			.' Control a War Golem |invehicle |q 12153
 		step
@@ -5873,9 +5873,9 @@ startlevel 74
 			.' Congratulations! +89/85 quests for achievement "Fo' Grizzle My Shizzle".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[74-beta] Zul'Drak",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[74] Zul'Drak",[[
 author danaton
-description This guide contain quest-chain (100) for Zul'Drak location.
+description This guide contain quest-chain (101) for Zul'Drak location.
 startlevel 74
 		step
 			goto Dalaran,48.5,45.3
@@ -5902,23 +5902,32 @@ startlevel 74
 			.talk Chief Rageclaw##29690
 			..accept Trolls Is Gone Crazy!##12861
 		step
+			goto Zul'Drak,32.3,75.7
+			.' Interact with gameobject: Wanted!
+			..accept Wanted: Ragemane's Flipper##12857
+		step
 			goto Zul'Drak,34.91,83.89
 			.' Interact with gameobject: Orders From Drakuru
 			..turnin In Search Of Answers##12902
 			..accept Orders From Drakuru##12883
 		step
+			goto Zul'Drak,38.6,84.4
+			.from Ragemane##29664
+			.get Ragemane's Flipper##41115|q 12857/1
+			.info Underwater.
+		step
 			goto Zul'Drak,34.04,82.74
 			.' Kill Drakuru enemies around this area.
 			.info They look like trolls.
 			.collect Drakuru "Lock Opener"##41161|n
-			.use the Drakuru "Lock Opener"##41161
+			.use Drakuru "Lock Opener"##41161
 			.info Use them next to Captured Rageclaws.
 			.info They look like wolverine humanoids stuck in metal traps on the ground around this area.
 			.info You can find them all around the Rageclaw Den area.
 			.' Free 8 Captured Rageclaws|q 12861/1
 		step
 			goto Zul'Drak,34.04,82.74
-			.use the Rageclaw Fire Extinguisher##41131
+			.use Rageclaw Fire Extinguisher##41131
 			.info Use it next to fires around this area.
 			.info You may have to use it multiple times to put the fires out.
 			.info You can find them all around the Rageclaw Den area.
@@ -5930,6 +5939,7 @@ startlevel 74
 		step
 			goto Zul'Drak,32.18,75.64
 			.talk Chief Rageclaw##29690
+			..turnin Wanted: Ragemane's Flipper##12857
 			..turnin Trolls Is Gone Crazy!##12861
 		step
 			goto Zul'Drak,32.14,75.74
@@ -5957,14 +5967,28 @@ startlevel 74
 			goto Zul'Drak,17.62,57.58
 			.' Find Gerk|q 12903/2
 		step
+			goto Zul'Drak,17.62,57.58
+			.talk Gerk##29455
+			..accept Light Won't Grant Me Vengeance##12904
+		step
 			goto Zul'Drak,15.71,59.40
 			.' Find Burr|q 12903/3
 			.info Laying on a metal table.
 		step
 			goto Zul'Drak,17.24,59.01
+			.from Vargul Runelord##29450, Vargul Slayer##29451
+			.info Only Slayer and Deathwaker enemies will count for the quest goal.
+			.info You can find them all around the Thrym's End area.
+			.' Slay 15 Varguls|q 12904/1
+		step
+			goto Zul'Drak,17.24,59.01
 			.collect 10 Scourge Scrap Metal##41399|q 12901/1
 			.info They look like pieces of metal with various shapes on the ground around this area.
 			.info You can find them all around the Thrym's End area.
+		step
+			goto Zul'Drak,17.62,57.58
+			.talk Gerk##29455
+			..turnin Light Won't Grant Me Vengeance##12904
 		step
 			goto Zul'Drak,25.23,63.88
 			.talk Engineer Reed##29688
@@ -5984,9 +6008,9 @@ startlevel 74
 			goto Zul'Drak,13.03,69.38
 			.from Withered Troll##28519
 			.use Stefan's Steel Toed Boot##38659
-			.info use it next to their corpses.
+			.info Use it next to their corpses.
 			.info Nass will die to AoE attacks easily.
-			.' Speak With Stefan Here (If Nass Dies) |at 14.06,73.80
+			.' Speak With Stefan Here (If Nass Dies)|at 14.06,73.80
 			.get 10 Hair Samples|q 12630/1
 			.' You can find more around (1)|at 15.20,69.00
 			.' You can find more around (2)|at 17.98,69.23
@@ -5995,22 +6019,22 @@ startlevel 74
 			goto Zul'Drak,13.03,69.38
 			.from Withered Troll##28519
 			.collect Writhing Choker##38673|n
-			.use the Writhing Choker##38673
+			.use Writhing Choker##38673
 			..accept Darkness Calling##12633
 			.' You can find more around (1)|at 15.20,69.00
 			.' You can find more around (2)|at 17.98,69.23
 			.' You can find more around (3)|at 20.99,68.48
-			only GetQuestsCompleted(12238)
+			only if ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,13.03,69.38
 			.from Withered Troll##28519
 			.collect Unliving Choker##38660|n
-			.use the Unliving Choker##38660
+			.use Unliving Choker##38660
 			..accept An Invitation, of Sorts...##12631
 			.' You can find more around (1)|at 15.20,69.00
 			.' You can find more around (2)|at 17.98,69.23
 			.' You can find more around (3)|at 20.99,68.48
-			only !GetQuestsCompleted(12238)
+			only if not ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,15.06,73.12
 			.from Icetouched Earthrager##29436
@@ -6023,14 +6047,14 @@ startlevel 74
 			..turnin Kickin' Nass and Takin' Manes##12630
 			..turnin An Invitation, of Sorts...##12631
 			..accept Near Miss##12637
-			only !GetQuestsCompleted(12238)
+			only if not ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,14.06,73.80
 			.talk Stefan Vadu##28518
 			..turnin Kickin' Nass and Takin' Manes##12630
 			..turnin Darkness Calling##12633
 			..accept Close Call##12638
-			only GetQuestsCompleted(12238)
+			only if ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,14.28,74.04
 			.talk Bloodrose Datura##28532
@@ -6040,39 +6064,39 @@ startlevel 74
 			.talk Bloodrose Datura##28532
 			.' Tell her "Stefan told me you would demonstrate the purpose of this item."
 			.' Expose the Choker's Purpose|q 12637/1
-			only !GetQuestsCompleted(12238)
+			only if not ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,14.28,74.04
 			.talk Bloodrose Datura##28532
 			.' Tell her "Stefan told me you would demonstrate the purpose of this item."
 			.' Expose the Choker's Purpose|q 12638/1
-			only GetQuestsCompleted(12238)
+			only if ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,14.06,73.80
 			.talk Stefan Vadu##28518
 			..turnin Close Call##12638
 			..accept Silver Lining##12643
-			only GetQuestsCompleted(12238)
+			only if ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,14.06,73.80
 			.talk Stefan Vadu##28518
 			..turnin Near Miss##12637
 			..accept You Can Run, But You Can't Hide##12629
-			only !GetQuestsCompleted(12238)
+			only if not ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,20.24,73.71
 			.from Putrid Abomination##28564
 			.info You can find them all around the Reliquary of Agony area.
 			.collect 5 Putrid Abomination Guts##38686|q 12629/1 |or
 			.' You can find more around|at 18.38,80.93
-			only !GetQuestsCompleted(12238)
+			only if not ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,20.24,73.71
 			.from Putrid Abomination##28564
 			.info You can find them all around the Reliquary of Agony area.
 			.collect 5 Putrid Abomination Guts##38686|q 12643/1
 			.' You can find more around|at 18.38,80.93
-			only GetQuestsCompleted(12238)
+			only if ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,20.24,73.71
 			.talk Gooey Ghoul Drool##29856
@@ -6080,7 +6104,7 @@ startlevel 74
 			.info You can find them all around the Reliquary of Agony area.
 			.info Turning on Name Plates can help find these.
 			.collect 5 Gooey Ghoul Drool##38687|q 12629/2
-			only !GetQuestsCompleted(12238)
+			only if not ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,20.24,73.71
 			.talk Gooey Ghoul Drool##29856
@@ -6088,29 +6112,29 @@ startlevel 74
 			.info You can find them all around the Reliquary of Agony area.
 			.info Turning on Name Plates can help find these.
 			.collect 5 Gooey Ghoul Drool##38687|q 12643/2
-			only GetQuestsCompleted(12238)
+			only if ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,14.06,73.80	
 			.talk Stefan Vadu##28518
 			..turnin Silver Lining##12643
 			..accept Suit Up!##12649
-			only GetQuestsCompleted(12238)
+			only if ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,14.06,73.80	
 			.talk Stefan Vadu##28518
 			..turnin You Can Run, But You Can't Hide##12629
 			..accept Dressing Down##12648
-			only !GetQuestsCompleted(12238)
+			only if not ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,20.26,74.00
-			.use the Ensorcelled Choker##38699
+			.use Ensorcelled Choker##38699
 			.' Wear the Scourge Disguise |havebuff Spell_Shadow_UnstableAffliction_3 |q 12648
-			only !GetQuestsCompleted(12238)
+			only if not ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,20.26,74.00
-			.use the Ensorcelled Choker##38699
+			.use Ensorcelled Choker##38699
 			.' Wear the Scourge Disguise |havebuff Spell_Shadow_UnstableAffliction_3 |q 12649
-			only GetQuestsCompleted(12238)
+			only if ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,19.87,75.44
 			.talk Gristlegut##28589
@@ -6119,12 +6143,12 @@ startlevel 74
 			goto Zul'Drak,19.87,75.44
 			.talk Gristlegut##28589
 			.buy Bitter Plasma##38698|q 12648/1
-			only !GetQuestsCompleted(12238)
+			only if not ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,19.87,75.44
 			.talk Gristlegut##28589
 			.buy Bitter Plasma##38698|q 12649/1
-			only GetQuestsCompleted(12238)
+			only if ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,20.71,73.34
 			.use Bowels and Brains Bowl##38701
@@ -6142,13 +6166,13 @@ startlevel 74
 			.talk Stefan Vadu##28518
 			..turnin Dressing Down##12648
 			..accept Infiltrating Voltarus##12661
-			only !GetQuestsCompleted(12238)
+			only if not ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,14.06,73.80
 			.talk Stefan Vadu##28518
 			..turnin Suit Up!##12649
 			..accept Infiltrating Voltarus##12661
-			only GetQuestsCompleted(12238)
+			only if ZGV.completedQuests[12238]
 		step
 			goto Zul'Drak,24.98,58.82
 			.from Banshee Soulclaimer##29646
@@ -6160,20 +6184,6 @@ startlevel 74
 			.talk Engineer Reed##29688
 			..turnin Gymer's Salvation##12914
 			..accept Our Only Hope##12916
-		step
-			goto Zul'Drak,17.62,57.58
-			.talk Gerk##29455
-			..accept Light Won't Grant Me Vengeance##12904
-		step
-			goto Zul'Drak,17.24,59.01
-			.from Vargul Runelord##29450, Vargul Slayer##29451
-			.info Only Slayer and Deathwaker enemies will count for the quest goal.
-			.info You can find them all around the Thrym's End area.
-			.' Slay 15 Varguls|q 12904/1
-		step
-			goto Zul'Drak,17.62,57.58
-			.talk Gerk##29455
-			..turnin Light Won't Grant Me Vengeance##12904
 		step
 			goto Zul'Drak,19.74,56.41
 			.' Interact with gameobject: Scourge Enclosure
@@ -6192,24 +6202,24 @@ startlevel 74
 			goto Zul'Drak,30.06,44.67
 			.kill Algar the Chosen##29872|q 12919/2
 			.info He flies around this area, in a counter-clockwise pattern, on a large skeletal dragon.
-			.info use the abilties on your action bar.
+			.info Use the abilties on your action bar.
 			.info Pick up the blue electricity balls on the ground around this area to heal yourself.
 		step
 			goto Zul'Drak,32.50,63.81
 			.kill Prince Navarius##29821|q 12919/4
-			.info use the abilties on your action bar.
+			.info Use the abilties on your action bar.
 			.info Pick up the blue electricity balls on the ground around this area to heal yourself.
 		step
 			goto Zul'Drak,31.12,61.97
 			.kill Thrym##29895|q 12919/3
 			.info He appears after you kill Prince Navarius.
-			.info use the abilties on your action bar.
+			.info Use the abilties on your action bar.
 			.info Pick up the blue electricity balls on the ground around this area to heal yourself.
 		step
 			goto Zul'Drak,22.72,58.42
 			.' Kill enemies around this area.
 			.info You can find them all around this area.
-			.info use the abilties on your action bar.
+			.info Use the abilties on your action bar.
 			.info Only Undead enemies will count for the quest goal.
 			.info Pick up the blue electricity balls on the ground around this area to heal yourself.
 			.' Slay 100 Scourge|q 12919/1
@@ -6219,7 +6229,7 @@ startlevel 74
 			.info Click the red arrow on your action bar.
 		step
 			goto Zul'Drak,28.46,51.16
-			.use the Ensorcelled Choker##38699
+			.use Ensorcelled Choker##38699
 			.' Wear the Ghoul Disguise |havebuff Spell_Shadow_UnstableAffliction_3 |q 12661
 		step
 			goto Zul'Drak,28.37,44.87|n
@@ -6228,25 +6238,47 @@ startlevel 74
 		step
 			goto Zul'Drak,27.08,46.16
 			.talk Overlord Drakuru##28503
-			..accept Dark Horizon##12664 |or
-			..accept Reunited##12663 |or
+			..accept Dark Horizon##12663
+			only if ZGV.completedQuests[12649]
+		step
+			goto Zul'Drak,27.08,46.16
+			.talk Overlord Drakuru##28503
+			..accept Reunited##12664
+			only if ZGV.completedQuests[12648]
 		step
 			goto Zul'Drak,29.84,48.03
 			.talk Gorebag##28666
 			.' Ask him "Uhh, can you send me on the tour of Zul'Drak?"
-			.' Begin the Tour of Zul'Drak |invehicle |q 12664 |or
-			.' Begin the Tour of Zul'Drak |invehicle |q 12663 |or
+			.' Begin the Tour of Zul'Drak |invehicle |q 12663
+			only if ZGV.completedQuests[12649]
+		step
+			goto Zul'Drak,29.84,48.03
+			.talk Gorebag##28666
+			.' Ask him "Uhh, can you send me on the tour of Zul'Drak?"
+			.' Begin the Tour of Zul'Drak |invehicle |q 12664
+			only if ZGV.completedQuests[12648]
 		step
 			goto Zul'Drak,27.79,44.60
 			.' Watch the dialogue.
-			.' Complete the Tour of Zul'Drak|q 12664/1 |or
-			.' Complete the Tour of Zul'Drak|q 12663/1 |or
+			.' Complete the Tour of Zul'Drak|q 12663/1
+			only if ZGV.completedQuests[12649]
+		step
+			goto Zul'Drak,27.79,44.60
+			.' Watch the dialogue.
+			.' Complete the Tour of Zul'Drak|q 12664/1
+			only if ZGV.completedQuests[12648]
 		step
 			goto Zul'Drak,27.08,46.16
 			.talk Overlord Drakuru##28503
-			..turnin Dark Horizon##12664 |or
-			..turnin Reunited##12663 |or
+			..turnin Reunited##12663
 			.' Complete Overlord Drakuru's Task |q 12661/1
+			only if ZGV.completedQuests[12649]
+		step
+			goto Zul'Drak,27.08,46.16
+			.talk Overlord Drakuru##28503
+			..turnin Dark Horizon##12664
+			.' Complete Overlord Drakuru's Task |q 12661/1
+			only if ZGV.completedQuests[12648]
 		step
 			goto Zul'Drak,28.39,44.88|n
 			.' Teleport to the Ground|goto 28.05,44.85,0.2 |q 12661
@@ -6273,19 +6305,19 @@ startlevel 74
 			.info Inside the floating building.
 		step
 			goto Zul'Drak,28.86,46.33
-			.use the Scepter of Suggestion##39157
+			.use Scepter of Suggestion##39157
 			.info Keep your Scourge Disguise active.
 			.info Use it on Blight Geists.
 			.info They look like frail humanoids crouching on the ground.
 			.info This will allow you to temporarily control a Blight Geist as a pet.
-			.use the Blight Geists to Harvest Blight Crystals
+			.use Blight Geists to Harvest Blight Crystals
 			.info The Crystallized Blight look like orange crystals.
 			.info You can find them all around the Reliquary of Pain area.
 			.info Use the "Harvest Blight Crystal" ability on your Blight Geists' pet action bar near Crystallized Blight, and then follow the Blight Geists back to the teleport pad to deliver the crystals.
 			.collect 7 Blight Crystals|q 12673/1
 		step
 			goto Zul'Drak,28.86,46.33
-			.use the Diluting Additive##39154
+			.use Diluting Additive##39154
 			.info Keep your Scourge Disguise active.
 			.info Use it next to Blight Cauldrons.
 			.info They look like large pots with orange liquid in them on the back of cart vehicles.
@@ -6331,7 +6363,7 @@ startlevel 74
 			.info Inside the floating building.
 		step
 			goto Zul'Drak,30.50,51.62
-			.use the Scepter of Empowerment##39206
+			.use Scepter of Empowerment##39206
 			.info Use it on a Servant of Drakuru around this area.
 			.info This will give a Hand of Drakuru minion to control.
 			.kill Darmuk##28793|q 12686/1
@@ -6372,21 +6404,21 @@ startlevel 74
 			.info Inside the floating building.
 		step
 			goto Zul'Drak,28.86,46.33
-			.use the Explosive Charges##39165
+			.use Explosive Charges##39165
 			.info Use them next to Scourgewagons.
 			.info They look like catapult carts on the ground.
 			.info You can find them all around the Reliquary of Pain area.
 			.' Destroy 5 Scourgewagons|q 12676/1
 		step
-			.use the Scepter of Command##39238
+			.use Scepter of Command##39238|goto 32.43,39.69
 			.info Use it on Bloated Abominations around this area.
 			.info You will gain control of an abomination.
 			.info Send your Bloated Abomination northeast into the troll area.
 			.info Try to gather up groups of Drakkari Skullcrusher trolls so that they are all near you.
 			.info Use the "Burst at the Seams" ability on your pet action bar when the group of trolls are near you, to kill them.
 			.info Keep repeating this process.
-			.' Slay 60 Drakkari Skullcrushers|q 12690/1 |goto 32.43,39.69
-			.' Lure 3 Drakkari Chieftains|q 12690/2 |goto 33.70,37.70
+			.' Slay 60 Drakkari Skullcrushers|q 12690/1 |goto 33.70,37.70
+			.' Lure 3 Drakkari Chieftains|q 12690/2
 			.info They will appear as you kill trolls with your abominations.
 			.info When they appear, kill them with the other trolls.
 		step
@@ -6459,7 +6491,7 @@ startlevel 74
 		step
 			goto Zul'Drak,28.39,44.87
 			.' Watch the dialogue.
-			.use the Scepter of Domination##39664
+			.use Scepter of Domination##39664
 			.info Use it on one of the Blightblood Trolls that appear.
 			.from Overlord Drakuru##28998
 			.info Avoid the orange areas on the ground.
@@ -6494,7 +6526,7 @@ startlevel 74
 			..accept The Blessing of Zim'Abwa##12565
 		step
 			goto Zul'Drak,37.43,67.01
-			.use the Crusader Parachute##39615
+			.use Crusader Parachute##39615
 			.info Use it on Argent (friendly) NPC's around this area.
 			.info It may not work on all of them.
 			.' Equip 10 Argent Forces with a Parachute|q 12740/1
@@ -6538,7 +6570,7 @@ startlevel 74
 			..accept Leave No One Behind##12512
 		step
 			goto Zul'Drak,49.45,74.71
-			.use the Crusader's Bandage##38330
+			.use Crusader's Bandage##38330
 			.info use it on Crusader Josephine.
 			.info Inside the building.
 			.info In the next guide step, HURRY. She will only stay alive for 3 minutes.
@@ -6553,7 +6585,7 @@ startlevel 74
 			.info If you don't make it in time, go back to the previous guide step to try again.
 		step
 			goto Zul'Drak,53.58,75.00
-			.use the Crusader's Bandage##38330
+			.use Crusader's Bandage##38330
 			.info use it on Crusader Lamoof.
 			.info Inside the building.
 			.info In the next guide step, HURRY. He will only stay alive for 2 minutes.
@@ -6568,14 +6600,14 @@ startlevel 74
 			.info If you don't make it in time, go back to the previous guide step to try again.
 		step
 			goto Zul'Drak,55.18,69.48
-			.use the High Impact Grenade##38574
+			.use High Impact Grenade##38574
 			.info Use it next to the Nerubian Tunnels.
 			.info They look like dirt mounds on the ground around this area.
 			.info Inside and outside the building.
 			.' Seal 5 Nerubian Tunnels|q 12598/1
 		step
 			goto Zul'Drak,50.67,69.86
-			.use the Crusader's Bandage##38330
+			.use Crusader's Bandage##38330
 			.info Use it on Crusader Jonathan.
 			.info Inside the building.
 			.info In the next guide step, HURRY. He will only stay alive for 3 minutes.
@@ -6862,7 +6894,7 @@ startlevel 74
 			.info They look like blue trolls.
 			.info You can find them all around the Altar of Sseratus area.
 			.collect Strange Mojo##38321 |n
-			.use the Strange Mojo##38321
+			.use Strange Mojo##38321
 			..accept Strange Mojo##12507
 		step
 			goto Zul'Drak,40.38,44.81
@@ -6899,10 +6931,10 @@ startlevel 74
 			.info You can find them all around the Drak'Sotra Fields area.
 			.collect 3 Water Elemental Link##38323|n
 			.info These have low drop rates.
-			.use the Water Elemental Link##38323
+			.use Water Elemental Link##38323
 			.info These will create Tethers to the Plane of Water.
 			.info You need 3 links to create 1 tether.
-			.use the Tether to the Plane of Water##38324
+			.use Tether to the Plane of Water##38324
 			.info Water Elemental Links will not drop from enemies if you have a Tether to the Plane of Water in your bags.
 			.kill Watery Lord##28118|n
 			.info They appear after you use Tethers to the Plane of Water.
@@ -6944,7 +6976,7 @@ startlevel 74
 			.collect 5 Zul'Drak Rat##38380|n
 			.info Collect 5 rats before using any on a Lurking Basilisk.
 			.info You have to use 5 of them on each Lurking Basilisk.
-			.use the Zul'Drak Rat##38380+
+			.use Zul'Drak Rat##38380
 			.info use them on Lurking Basilisks.
 			.info They look like large green lizard enemies.
 			.' Interact with NPC: Gorged Lurking Basilisk
@@ -6980,7 +7012,7 @@ startlevel 74
 			..turnin Gluttonous Lurkers##12527
 		step
 			goto Zul'Drak,40.44,42.55
-			.use the Modified Mojo##38332
+			.use Modified Mojo##38332
 			.info Use it on the Prophet of Sseratus.
 			.info He looks like a giant green snake.
 			.info He will become weakened and non-elite.
@@ -7210,10 +7242,10 @@ startlevel 74
 			..accept Preparations for the Underworld##12666
 		step
 			goto Zul'Drak,62.30,68.28
-			.' Kill enemies around this area.
+			.from Claw of Har'koa##28402, Har'koan Subduer##28403
 			.info They look like trolls.
 			.info You can find them all around the Altar of Har'koa area.
-			.collect 8 Sacred Adornment##39150|q 12666/1
+			.get 8 Sacred Adornment##39150|q 12666/1
 		step
 			goto Zul'Drak,63.71,70.39
 			.talk Har'koa##28401
@@ -7260,7 +7292,7 @@ startlevel 74
 			..accept Foundation for Revenge##12668
 		step
 			goto Zul'Drak,74.04,58.65
-			.' Kill enemies around this area
+			.from Quetz'lun Worshipper##28747
 			.info They look like trolls.
 			.info Kill them near Soul Fonts.
 			.info They look like altars shaped like dragon heads.
@@ -7309,12 +7341,12 @@ startlevel 74
 			.' Interact with gameobject: Heb'Jin's Drum
 			.' Watch the dialogue
 			.info Heb'Jin flies down to you on a bat.
-			.use the Bat Net##39041
+			.use Bat Net##39041
 			.info Use it on Heb'Jin's Bat to pin it to the ground.
 			.kill Heb'Jin##28636|q 12662/1
 		step
 			goto Zul'Drak,64.09,54.17
-			.' Kill Heb'Drakkar enemies around this area
+			.from Heb'Drakkar Striker##28465, Heb'Drakkar Headhunter##28600
 			.info They look like trolls, some riding bats.
 			.info You can find them all around the Heb'Drakkar area.
 			.use Ahunae's Knife##38731
@@ -7409,7 +7441,7 @@ startlevel 74
 			.' Destroy 12 Enchanted Tiki Warriors|q 12708/1
 		step
 			goto Zul'Drak,66.16,33.47
-			.use the Tiki Dervish Ceremony##39314
+			.use Tiki Dervish Ceremony##39314
 			.info Near the doorway of the building.
 			.' Watch the dialogue
 			.from Warlord Zol'Maz##28902
@@ -7459,7 +7491,7 @@ startlevel 74
 			.talk Witch Doctor Khufu##28479
 			..turnin Rampage##12721
 		step
-			.' Congratulations! +100 quests for achievement "The Empire of Zul'Drak".
+			.' Congratulations! +101/100 quests for achievement "The Empire of Zul'Drak".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[76] Sholazar Basin",[[
