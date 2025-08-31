@@ -8372,13 +8372,1290 @@ startlevel 76
 			.' Congratulations! +78/75 quests for achievement "Into the Basin".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[77-empty] The Storm Peaks",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[77] The Storm Peaks",[[
 author danaton
-description This guide contain quest-chain (??) for The Storm Peaks location.
+description This guide contain quest-chain (106/100) for The Storm Peaks location.
 startlevel 77
 		step
+			goto Stormwind City,61.2,70.7
+			.talk Auctioneer Jaxon##15659
+			.buy 5 Frostweave Cloth##33470|q 12930 |future
+			.info You need to keep these for a later quest.
 		step
-			.' "The Summit of Storm Peaks".
+			goto Dalaran,31.27,49.6
+			.talk Rin Duoctane##30490
+			..accept Luxurious Getaway!##12853
+		step
+			goto The Storm Peaks,41.02,86.44
+			.talk Jeer Sparksocket##29431
+			..turnin Luxurious Getaway!##12853
+			..accept Clean Up##12818
+		step
+			goto The Storm Peaks,41.15,86.15
+			.talk Gretchen Fizzlespark##29473
+			..accept They Took Our Men!##12843
+			..accept Equipment Recovery##12844
+		step
+			goto The Storm Peaks,40.93,85.31
+			.talk Ricket##29428
+			..accept Reclaimed Rations##12827
+			..accept Expression of Gratitude##12836
+		step
+			goto The Storm Peaks,39.39,86.36
+			.collect 10 Charred Wreckage##40603|q 12818/1
+			.info They look like various shaped metal parts on the ground around this area.
+		step
+			goto The Storm Peaks,41.02,86.44
+			.talk Jeer Sparksocket##29431
+			..turnin Clean Up##12818
+			..accept Just Around the Corner##12819
+		step
+			goto The Storm Peaks,35.10,87.78
+			.collect Sparksocket's Tools##40642|q 12819/1
+			.info In the middle of the mine field.
+			.info You will be shot down if you try to fly, you must walk and try to avoid the mines.
+			.info While walking, try to navigate carefully through the wider paths.
+			.info If you position yourself carefully, you can also use the mines to knock yourself over other mines, closer to this location.
+			.info You may get knocked around in order to get to this spot, but just keep trying.
+		step
+			goto The Storm Peaks,30.38,85.66
+			.kill Gnarlhide##30003|q 12836/1
+		step
+			goto The Storm Peaks,31.30,85.50
+			.from Savage Hill Mystic##29622, Savage Hill Brute##29623
+			.info They look like gnolls.
+			.collect 16 Dried Gnoll Rations##40645|q 12827/1
+			.info They look like wooden boxes on the ground around this area.
+			.info The ration boxes will give multiple quest items at once, so focus on those.
+			.' You can find more around|at 34.99,83.30
+		step
+			goto The Storm Peaks,41.02,86.44
+			.talk Jeer Sparksocket##29431
+			..turnin Just Around the Corner##12819
+			..accept Slightly Unstable##12826
+		step
+			goto The Storm Peaks,40.93,85.31
+			.talk Ricket##29428
+			..turnin Slightly Unstable##12826
+			..accept A Delicate Touch##12820
+			..turnin Reclaimed Rations##12827
+			..turnin Expression of Gratitude##12836
+			..accept Ample Inspiration##12828
+		step
+			goto The Storm Peaks,44.31,81.82
+			.use Improved Land Mines##40676
+			.info Use them to place mines on the ground around this area.
+			.info Try to place them so that the Garm Invaders and Snowblind Followers will run over the mines and die.
+			.info You don't need to try to avoid enemies, they won't attack you.
+			.' Slay 12 Garm Attackers|q 12820/1
+		step
+			goto The Storm Peaks,41.67,80.01
+			.talk Tore Rumblewrench##29430
+			..accept Moving In##12829
+			..accept Ore Repossession##12830
+		step
+			goto The Storm Peaks,41.63,80.04
+			.' Interact with gameobject: U.D.E.D. Dispenser
+			.' Choose <Retrieve a bomb from the dispenser.>
+			.info Hurry to the mammoth location.
+			.info You will need to use or destroy the bomb within ~45 seconds, or it will blow up in your bags and damage you.
+			.collect U.D.E.D.##40686|q 12828 |n
+			.use U.D.E.D.##40686
+			.info Use it on an Ironwool Mammoth.
+			.info They look like grey hairy elephants around this area.
+			.' Interact with gameobject: Mammoth Meat
+			.info They look like pieces of meat and bone that appear on the ground after you blow up an Ironwool Mammoth.
+			.collect 8 Hearty Mammoth Meat##40728|q 12828/1
+			.' You can find the mammoths around|at 43.95,79.02
+		step
+			goto The Storm Peaks,41.51,74.89
+			.talk Injured Goblin Miner##29434
+			.info Inside the cave.
+			.info He offers an escort quest.
+			.info If he's not here, someone may be escorting him.
+			.info Wait until he respawns.
+			..accept Only Partly Forgotten##12831
+		step
+			goto The Storm Peaks,47.13,70.95
+			.from Icetip Crawler##29461+
+			.info They look like purple spider around this area inside the cave.
+			.get Icetip Venom Sac##40944|q 12831/1
+		step
+			goto The Storm Peaks,43.48,75.24
+			.talk Injured Goblin Miner##29434
+			.info Inside the cave.
+			.info He offers an escort quest.
+			.info If he's not here, someone may be escorting him.
+			.info Wait until he respawns.
+			..turnin Only Partly Forgotten##12831
+			..accept Bitter Departure##12832
+		step
+			goto The Storm Peaks,43.48,75.24
+			.talk Injured Goblin Miner##29434
+			.' Tell them "I'm ready - let's get you out of here."
+			.' Watch the dialogue
+			.info Follow the Injured Goblin Miner and protect them while walking.
+			.info They eventually walks to this location outside the cave.
+			.' Escort the Injured Goblin Miner to K3|at 40.20,78.99|q 12832/1
+		step
+			goto The Storm Peaks,40.42,78.23
+			.from Snowblind Digger##29413
+			.info They look like kobolds.
+			.info You can find them inside the southeast part of the Crystalweb Cavern cave, at the dig site.
+			.get 5 Impure Saronite Ore##40744|q 12830/1
+		step
+			goto The Storm Peaks,40.42,78.23
+			.from Crystalweb Weaver##29411, Crystalweb Spitter##29412
+			.info They look like spiders.
+			.info You can find them all throughout the Crystalweb Cavern cave.
+			.' Slay 12 Crystalweb Spiders|q 12829/1
+		step
+			goto The Storm Peaks,41.67,80.01
+			.talk Tore Rumblewrench##29430
+			..turnin Moving In##12829
+			..turnin Ore Repossession##12830
+		step
+			goto The Storm Peaks,40.93,85.31
+			.talk Ricket##29428
+			..turnin A Delicate Touch##12820
+			..turnin Ample Inspiration##12828
+			..turnin Bitter Departure##12832
+			..accept Cell Block Tango##12821
+		step
+			goto The Storm Peaks,45.12,82.38
+			.collect Transporter Power Cell##40731|q 12821/2
+			.info Next to a dead goblin.
+		step
+			goto The Storm Peaks,50.66,81.91
+			.use Transporter Power Cell##40731
+			.info You will be teleported back to K3.
+			.' Activate the Garm Teleporter|q 12821/1
+		step
+			goto The Storm Peaks,40.93,85.31
+			.talk Ricket##29428
+			..turnin Cell Block Tango##12821
+			..accept Know No Fear##12822
+		step
+			goto The Storm Peaks,50.01,81.76
+			.talk Gino##29432
+			..accept A Flawless Plan##12823
+		step
+			goto The Storm Peaks,50.50,77.82
+			.use Hardpacked Explosive Bundle##41431
+			.info Upstairs inside the cave, on the top floor.
+			.info You will be attacked.
+			.' Place the Explosive Bundle|q 12823/1
+		step
+			goto The Storm Peaks,50.45,78.32
+			.' Watch the dialogue
+			.info Tormar Frostgut will walk up behind you.
+			.info Upstairs inside the cave, on the top floor.
+			.kill Tormar Frostgut##29626|q 12823/2
+		step
+			goto The Storm Peaks,48.22,81.08
+			.kill 6 Garm Watcher##29409|q 12822/1
+			.info They look like large blue centaurs.
+			.info Inside and outside the cave.
+		step
+			goto The Storm Peaks,48.22,81.08
+			.kill 8 Snowblind Devotee##29407|q 12822/2
+			.info They look like kobolds.
+			.info Inside and outside the cave.
+		step
+			goto The Storm Peaks,50.01,81.76
+			.talk Gino##29432
+			..turnin A Flawless Plan##12823
+			..accept Demolitionist Extraordinaire##12824
+		step
+			goto The Storm Peaks,40.93,85.31
+			.talk Ricket##29428
+			..turnin Know No Fear##12822
+			..turnin Demolitionist Extraordinaire##12824
+			..accept When All Else Fails##12862
+		step
+			goto The Storm Peaks,40.78,71.57
+			.from Sifreldar Storm Maiden##29323, Sifreldar Runekeeper##29331
+			.info They look like blue humans.
+			.info You can find them all around the Sifreldar Village area.
+			.collect Cold Iron Key##40641|n
+			.' Interact with gameobject: Rusty Cage
+			.info They look like brown wooden and metal cages.
+			.info They can also be inside the buildings around the lower level of the village.
+			.' Free 5 Goblin Prisoners|q 12843/1
+		step
+			goto The Storm Peaks,40.78,71.57
+			.collect 8 K3 Equipment##40726|q 12844/1
+			.info They look like wooden crates on the ground.
+			.info You can find them all around the Sifreldar Village area.
+			.info They can also be inside all of the buildings around this area.
+		step
+			goto The Storm Peaks,41.15,86.14
+			.talk Gretchen Fizzlespark##29473
+			..turnin They Took Our Men!##12843
+			..accept Leave No Goblin Behind##12846
+			..turnin Equipment Recovery##12844
+		step
+			goto The Storm Peaks,40.93,85.31
+			.talk Ricket##29428
+			.' Tell her "I am ready to head further into Storm Peaks."
+			.' Begin Flying in the D16 Propelled Delivery Device |invehicle |q 12862
+		step
+			goto The Storm Peaks,28.56,74.57|n
+			.' Fly to Frosthold |outvehicle |q 12862
+		step
+			goto The Storm Peaks,28.83,74.07
+			.talk Rork Sharpchin##29744
+			..turnin When All Else Fails##12862
+			..accept Ancient Relics##12870
+		step
+			goto The Storm Peaks,29.61,74.07
+			.talk Archaeologist Andorin##29650
+			..accept On Brann's Trail##12854
+		step
+			goto The Storm Peaks,29.40,73.77
+			.talk Lagnus##29743
+			..accept Offering Thanks##12863
+		step
+			goto The Storm Peaks,29.18,74.91
+			.talk Glorthal Stiffbeard##29727
+			..turnin Offering Thanks##12863
+			..accept Missing Scouts##12864
+		step
+			goto The Storm Peaks,29.82,75.72
+			.talk Fjorlin Frostbrow##29732
+			..accept Loyal Companions##12865
+		step
+			goto The Storm Peaks,36.43,77.30
+			.talk Frostborn Scout##29811
+			.' Ask him "Are you okay? I've come to take you back to Frosthold if you can stand."
+			.' Locate the Missing Scout|q 12864/1
+		step
+			goto The Storm Peaks,36.06,64.13
+			.collect Burlap-Wrapped Note##40947|q 12854/1
+			.info It looks like a pile of snow.
+		step
+			goto The Storm Peaks,42.83,58.50
+			.from Ice Steppe Rhino##29469
+			.info They look like hairy rhinos.
+			.info You can find them all around the Foot steppes area.
+			.collect 8 Fresh Ice Rhino Meat##41340|q 12865
+		step
+			goto The Storm Peaks,42.81,68.90
+			.talk Lok'lira the Crone##29481
+			..turnin Leave No Goblin Behind##12846
+			..accept The Crone's Bargain##12841
+		step
+			.from Overseer Syra##29518
+			.info She looks like a blue human that walks around this area on the middle floor inside the mine.
+			.get Runes of the Yrkvinn##40690|q 12841/1
+		step
+			goto The Storm Peaks,42.81,68.90
+			.talk Lok'lira the Crone##29481
+			..turnin The Crone's Bargain##12841
+			..accept Mildred the Cruel##12905
+		step
+			goto The Storm Peaks,44.39,68.93
+			.talk Mildred the Cruel##29885
+			..turnin Mildred the Cruel##12905
+			..accept Discipline##12906
+		step
+			goto The Storm Peaks,44.01,68.95
+			.use Disciplining Rod##42837
+			.info Use it on Exhausted Vrykul.
+			.info They look like vrykul men sitting on the ground around this area inside the mine.
+			.info They are mostly in the side tunnels inside the mine, on all floors.
+			.' Discipline 6 Exhausted Vrykuls|q 12906/1
+		step
+			goto The Storm Peaks,44.39,68.93
+			.talk Mildred the Cruel##29885
+			..turnin Discipline##12906
+			..accept Examples to be Made##12907
+		step
+			goto The Storm Peaks,45.41,69.10
+			.kill Garhal##30147|q 12907/1
+			.info Inside the mine, on the top floor.
+		step
+			goto The Storm Peaks,44.39,68.93
+			.talk Mildred the Cruel##29885
+			..turnin Examples to be Made##12907
+			..accept A Certain Prisoner##12908
+		step
+			goto The Storm Peaks,42.81,68.90
+			.talk Lok'lira the Crone##29481
+			..turnin A Certain Prisoner##12908
+			..accept A Change of Scenery##12921
+		step
+			goto The Storm Peaks,47.47,69.08
+			.talk Lok'lira the Crone##29975
+			..turnin A Change of Scenery##12921
+			..accept Is That Your Goblin?##12969
+		step
+			goto The Storm Peaks,48.25,69.76
+			.talk Agnetta Tyrsdottar##30154
+			.' Tell her "Skip the warmup, sister... or are you too scared to face someone your own size?"
+			.kill Agnetta Tyrsdottar##30154|q 12969/1
+		step
+			goto The Storm Peaks,47.47,69.08
+			.talk Lok'lira the Crone##29975
+			..turnin Is That Your Goblin?##12969
+			..accept The Hyldsmeet##12970
+		step
+			goto The Storm Peaks,47.47,69.08
+			.talk Lok'lira the Crone##29975
+			.' Tell her "Tell me about this proposal."
+			.' Listen to Lok'lira's Proposal|q 12970/1
+		step
+			goto The Storm Peaks,47.47,69.08
+			.talk Lok'lira the Crone##29975
+			..turnin The Hyldsmeet##12970
+			..accept Taking on All Challengers##12971
+		step
+			goto The Storm Peaks,48.16,70.30
+			.talk Victorious Challenger##30012
+			.' Tell them "Let's do this, sister."
+			.kill 6 Victorious Challenger##30012|q 12971/1
+			.' You can find more around (1)|at 50.38,68.02
+			.' You can find more around (2)|at 51.39,66.41
+		step
+			goto The Storm Peaks,47.47,69.08
+			.talk Lok'lira the Crone##29975
+			..turnin Taking on All Challengers##12971
+			..accept You'll Need a Bear##12972
+		step
+			goto The Storm Peaks,53.14,65.72
+			.talk Brijana##29592
+			..turnin You'll Need a Bear##12972
+			..accept Bearly Hanging On##12851
+		step
+			goto The Storm Peaks,53.12,65.62
+			.' Ride Icefang |invehicle |q 12851
+		step
+			goto The Storm Peaks,58.30,59.85
+			.' Burn 7 Frostworgs|q 12851/1
+			.info Use the "Flaming Arrow" ability on your action bar on Frostworgs.
+			.info They look like large white wolves around this area.
+		step
+			goto The Storm Peaks,58.30,59.85
+			.' Burn 15 Frost Giants|q 12851/2
+			.info Use the "Flaming Arrow" ability on your action bar on Frost Giants.
+			.info They look like large armored dwarves around this area.
+		step
+			goto The Storm Peaks,53.81,65.29
+			.' Return to Brijana |outvehicle |q 12851
+			.info Use the "Burst of Speed" ability to travel faster.
+			.info You will automatically be dropped off at this location.
+		step
+			goto The Storm Peaks,53.14,65.72
+			.talk Brijana##29592
+			..turnin Bearly Hanging On##12851
+			..accept Cold Hearted##12856
+		step
+			goto The Storm Peaks,65.00,60.45
+			.' Interact with NPC: Captive Proto-Drake
+			.info They look like dragons on chains flying in the air around this area.
+			.info Press the jump key if your Drake is bugged and can't move up and down to fix it.
+			.' Rescue 9 Brunnhildar Prisoners|q 12856/1
+			.info Use the ability on your action bar on Brunnhildar Prisoners.
+			.info They look like blue blocks of ice on the ground around this area.
+			.' Bring the prisoners to|at 49.09,66.89
+			.info Wait until you have the Captive Proto-Drakes holding 3 Brunnhildar Prisoners before you go to this location.
+			.info Once you leave the objective area the Captive Proto-Drakes will automatically fly back to Brunnhildar Village.
+			.info You will have to do this 3 times.
+		step
+			goto The Storm Peaks,65.00,60.45
+			.' Interact with NPC: Captive Proto-Drake##29708
+			.info They look like chained up dragons flying in the air around this area. |notinsticky
+			.' Free 3 Proto-Drakes|q 12856/2
+			.' Fly the Proto-Drakes to|at 49.09,66.89
+		step
+			goto The Storm Peaks,53.14,65.72
+			.talk Brijana##29592
+			..turnin Cold Hearted##12856
+			..accept Deemed Worthy##13063
+		step
+			goto The Storm Peaks,49.75,71.81
+			.talk Astrid Bjornrittar##29839
+			..turnin Deemed Worthy##13063
+			..accept Making a Harness##12900
+		step
+			goto The Storm Peaks,47.07,76.15
+			.from Icemane Yeti##29875
+			.info They look like large white gorillas with horns.
+			.info You can find them all around the Snowblind Terrace area.
+			.get 3 Icemane Yeti Hide##41424|q 12900/1
+		step
+			goto The Storm Peaks,49.75,71.81
+			.talk Astrid Bjornrittar##29839
+			..turnin Making a Harness##12900
+			..accept The Last of Her Kind##12983
+			..accept The Slithering Darkness##12989
+		step
+			goto The Storm Peaks,55.89,64.04
+			.kill 8 Ravenous Jormungar##29605|q 12989/1
+			.info They look like centipedes standing upright.
+			.info Inside and outside the cave.
+			.info The next	step is inside the cave, so try to kill them inside the cave, if possible.
+			.info If you find the Injured Icemaw Matriarch inside the cave, don't click her yet.
+			.info She looks like a dead white bear in the back of the cave.
+			.info You will do it in the next step, and it will take you back to Brunnhildar.
+		step
+			goto The Storm Peaks,54.79,60.37
+			.' Interact with NPC: Injured Icemaw Matriarch
+			.info Inside the cave.
+			.' Ride the Icemaw Matriarch |invehicle |q 12983
+		step
+			goto The Storm Peaks,49.82,71.12
+			.' Rescue the Icemaw Matriarch|q 12983/1
+			.info You will automatically be brought back to Brunnhildar Village.
+		step
+			goto The Storm Peaks,49.75,71.81
+			.talk Astrid Bjornrittar##29839
+			..turnin The Last of Her Kind##12983
+			..accept The Warm-Up##12996
+			..turnin The Slithering Darkness##12989
+		step
+			goto The Storm Peaks,49.68,70.64
+			.use Reins of the Warbear Matriarch##42481
+			.' Ride a Warbear Matriarch |invehicle |q 12996
+		step
+			goto The Storm Peaks,50.81,67.68
+			.kill Kirgaraak##29352|n
+			.info Use the abilities on your action bar.
+			.' Defeat Kirgaraak|q 12996/1
+		step
+			.' Stop Riding the Warbear Matriarch |outvehicle |q 12996
+			.info Click the red arrow on your action bar.
+		step
+			goto The Storm Peaks,49.75,71.81
+			.talk Astrid Bjornrittar##29839
+			..turnin The Warm-Up##12996
+			..accept Into the Pit##12997
+		step
+			goto The Storm Peaks,49.19,68.72
+			.use Reins of the Warbear Matriarch##42499
+			.' Ride a Warbear Matriarch |invehicle |q 12997
+		step
+			goto The Storm Peaks,49.19,68.56
+			.kill 6 Hyldsmeet Warbear##30174|q 12997/1
+			.info Use the abilities on your action bar.
+		step
+			.' Stop Riding the Warbear Matriarch |outvehicle |q 12997
+			.info Click the red arrow on your action bar.
+		step
+			goto The Storm Peaks,49.75,71.81
+			.talk Astrid Bjornrittar##29839
+			..turnin Into the Pit##12997
+			..accept Prepare for Glory##13061
+		step
+			goto The Storm Peaks,48.44,72.16
+			.talk Thyra Kvinnshal##30041
+			..accept Aberrations##12925
+		step
+			goto The Storm Peaks,48.33,72.13
+			.talk Iva the Vengeful##29997
+			..accept Off With Their Black Wings##12942
+			..accept Yulda's Folly##12968
+		step
+			goto The Storm Peaks,47.47,69.09
+			.talk Lok'lira the Crone##29975
+			..turnin Prepare for Glory##13061
+			..accept Lok'lira's Parting Gift##13062
+		step
+			goto The Storm Peaks,50.87,65.59
+			.talk Gretta the Arbiter##29796
+			..turnin Lok'lira's Parting Gift##13062
+			..accept The Drakkensryd##12886
+		step
+			goto The Storm Peaks,33.40,61.29
+			.use Hyldnir Harpoon##41058
+			.info Use it on Hyldsmeet Proto-Drakes.
+			.info They look like dragons with riders on them flying around this area.
+			.info You will harpoon and fly over to a new drake to fight the rider.
+			.kill Hyldsmeet Drakerider##29694|n
+			.' Defeat 10 Hyldsmeet Drakeriders|q 12886/1 |noway
+		step
+			.use Hyldnir Harpoon##41058
+			.info Use it on a Column Ornament.
+			.info They look like light fixtures on the side of the stone columns around the Temple of Storms area.
+			.' Stop Riding the Proto-Drake |outvehicle |q 12886
+		step
+			goto The Storm Peaks,33.42,57.95
+			.talk Thorim##29445
+			..turnin The Drakkensryd##12886
+			..accept Sibling Rivalry##13064
+		step
+			goto The Storm Peaks,33.42,57.95
+			.talk Thorim##29445
+			.' Ask him "Can you tell me what became of Sif?"
+			.' Hear Thorim's History|q 13064/1
+		step
+			goto The Storm Peaks,33.42,57.95
+			.talk Thorim##29445
+			..turnin Sibling Rivalry##13064
+			..accept Mending Fences##12915
+		step
+			goto The Storm Peaks,24.01,61.93
+			.kill Yulda the Stormspeaker##30046|q 12968/1
+			.info Inside the building.
+		step
+			goto The Storm Peaks,24.02,61.74
+			.' Interact with gameobject: Harpoon Crate
+			.info Inside the building.
+			..accept Valkyrion Must Burn##12953
+		step
+			goto The Storm Peaks,25.79,59.60
+			.' Interact with NPC: Valkyrion Harpoon Gun
+			.info They look like bronze dragon guns.
+			.' Start 6 Fires|q 12953/1
+			.info Use the ability on your action bar to shoot the tan bundles of straw near buildings and in wagons on the ground around this area.
+			.info If you have trouble shooter the further bundles, you can switch to using one of the other harpoon guns nearby.
+		step
+			.' Stop Controlling the Valkyrion Harpoon Gun |outvehicle |q 12953
+			.info Click the yellow arrow on your action bar.
+		step
+			goto The Storm Peaks,25.34,60.20
+			.from Valkyrion Aspirant##29569
+			.info They look like blue humans.
+			.info You can find them all around the Valkyrion and the Blighted Pool areas.
+			.collect 6 Vial of Frost Oil##41612|q 12925
+		step
+			goto The Storm Peaks,23.27,58.25
+			.use Vial of Frost Oil##41612
+			.info Use it on Plagued Proto-Drake Eggs.
+			.info They look like brown spiked eggs on the ground around this area.
+			.info If you run out of vials, kill Valkyrion Aspirant blue humans to get more.
+			.' Destroy 30 Plagued Proto-Drake Eggs|q 12925/1
+		step
+			goto The Storm Peaks,25.34,60.20
+			.kill 12 Nascent Val'kyr##29570|q 12942/1
+			.info They look like women with wings flying in the air.
+			.info You can find them all around the Valkyrion and the Blighted Pool areas.
+		step
+			goto The Storm Peaks,25.75,60.6
+			.from Valkyrion Aspirant##29569, Nascent Val'kyr##29570
+			.get 10 Relic of Ulduar##42780|q 12870/1
+		step
+			goto The Storm Peaks,28.83,74.07
+			.talk Rork Sharpchin##29744
+			..turnin Ancient Relics##12870
+		step
+			goto The Storm Peaks,29.18,74.91
+			.talk Glorthal Stiffbeard##29727
+			..turnin Missing Scouts##12864
+			..accept Stemming the Aggressors##12866
+		step
+			goto The Storm Peaks,29.61,74.07
+			.talk Archaeologist Andorin##29650
+			..turnin On Brann's Trail##12854
+			..accept Sniffing Out the Perpetrator##12855
+		step
+			goto The Storm Peaks,33.20,73.77
+			.use Fresh Ice Rhino Meat##41340
+			.info Use them on Stormcrest Eagles.
+			.info They look like white birds around the top of the mountain.
+			.info You can do this while mounted and don't need to target the eagles.
+			.' Feed 8 Stormcrest Eagles|q 12865/1
+		step
+			goto The Storm Peaks,29.82,75.72
+			.talk Fjorlin Frostbrow##29732
+			..turnin Loyal Companions##12865
+			..accept Baby Stealers##12867
+		step
+			goto The Storm Peaks,27.02,71.93
+			.collect 15 Stormcrest Eagle Egg##41341|q 12867/1
+			.info They look like white eggs on the ground around this area.
+			.info They are usually next to trees.
+			.' You can find more around (1)|at 29.19,66.56
+			.' You can find more around (2)|at 33.54,66.02
+			.' You can find more around (3)|at 36.38,67.29
+		step
+			goto The Storm Peaks,27.02,71.93
+			.kill 8 Frostfeather Screecher##29792|q 12866/1
+			.kill 8 Frostfeather Witch##29793|q 12866/2
+			.info They look like black harpies.
+			.' You can find more around (1)|at 29.19,66.56
+			.' You can find more around (2)|at 33.54,66.02
+			.' You can find more around (3)|at 36.38,67.29
+		step
+			goto The Storm Peaks,36.46,64.26
+			.use Frosthound's Collar##41430
+			.' Ride the Frosthound |invehicle |q 12855
+		step
+			goto The Storm Peaks,47.91,61.00
+			.' Track Down the Thief|q 12855/1
+			.info Use the abilities on your action bar.
+			.info Use the "Cast Net" on the dwarves.
+			.info Use the "Ice Slick" ability near the white piles of snow on the ground.
+			.info You will eventually ride to this location.
+		step
+			goto The Storm Peaks,48.55,60.82
+			.kill Tracker Thulin##29695|q 12855/2
+			.info Inside the cave.
+			.collect Brann's Communicator##40971|q 12855
+		step
+			.use Brann's Communicator##40971
+			.talk Brann Bronzebeard##29579
+			..turnin Sniffing Out the Perpetrator##12855
+			..accept Pieces to the Puzzle##12858
+		step
+			goto The Storm Peaks,48.44,72.15
+			.talk Thyra Kvinnshal##30041
+			..turnin Aberrations##12925
+		step
+			goto The Storm Peaks,48.33,72.13
+			.talk Iva the Vengeful##29997
+			..turnin Off With Their Black Wings##12942
+			..turnin Yulda's Folly##12968
+			..turnin Valkyrion Must Burn##12953
+		step
+			goto The Storm Peaks,70.18,61.09
+			.' Interact with gameobject: Granite Boulder
+			.info They look like large grey rocks on the ground around this area.
+			.collect Granite Boulder##41506|n
+			.info You can only carry 1 at a time.
+			.use Thorim's Charm of Earth##41505
+			.info Use it on Stormforged Iron Giants.
+			.info They look like large armored dwarves around this area.
+			.info Smaller dwarves will appear and attack them.
+			.info Help the dwarves	kill them.
+			.collect Slag Covered Metal##41556|q 12922 |future
+			.' You can find more around|at 74.60,62.96
+		step
+			.use the Slag Covered Metal##41556
+			..accept The Refiner's Fire##12922
+		step
+			goto The Storm Peaks,70.18,61.09
+			.' Interact with gameobject: Granite Boulder
+			.info They look like large grey rocks on the ground around this area.
+			.collect Granite Boulder##41506+ |n
+			.info You can only carry 1 at a time.
+			.use Thorim's Charm of Earth##41505
+			.info Use it on Stormforged Iron Giants.
+			.info They look like large armored dwarves around this area.
+			.info Smaller dwarves will appear and attack them.
+			.info Help the dwarves kill them.
+			.kill 5 Stormforged Iron Giant##29375|q 12915/2
+			.' You can find more around|at 74.60,62.96
+		step
+			goto The Storm Peaks,70.18,61.09
+			.from Seething Revenant##29504
+			.info They look like armored fire elementals.
+			.collect 10 Furious Spark##41558|q 12922/1
+			.' You can find more around|at 74.60,62.96
+		step
+			goto The Storm Peaks,77.35,62.88
+			.' Interact with gameobject: Granite Boulder
+			.info They look like large grey rocks on the ground around this area.
+			.collect Granite Boulder##41506|n
+			.info You can only carry 1 at a time.
+			.use Thorim's Charm of Earth##41505
+			.info Use it on Fjorn.
+			.info He looks like a much larger dwarf with brown armor that walks around this area.
+			.info Smaller dwarves will appear and attack him.
+			.info Help the dwarves kill them.
+			.kill Fjorn##29503|q 12915/1
+		step
+			goto The Storm Peaks,77.15,62.80
+			.' Interact with gameobject: Fjorn's Anvil
+			.info It looks like a huge blacksmith anvil.
+			..turnin The Refiner's Fire##12922
+			..accept A Spark of Hope##12956
+		step
+			goto The Storm Peaks,29.18,74.91
+			.talk Glorthal Stiffbeard##29727
+			..turnin Stemming the Aggressors##12866
+			..accept Sirana Iceshriek##12868
+		step
+			goto The Storm Peaks,29.82,75.72
+			.talk Fjorlin Frostbrow##29732
+			..turnin Baby Stealers##12867
+		step
+			goto The Storm Peaks,24.7,67.8
+			.kill Sirana Iceshriek##29794|q 12868/1
+		step
+			goto The Storm Peaks,33.42,57.95
+			.talk Thorim##29445
+			..turnin Mending Fences##12915
+			..turnin A Spark of Hope##12956
+			..accept Forging an Alliance##12924
+		step
+			goto The Storm Peaks,38.17,42.64
+			.from Library Guardian##29724
+			.info They look like mechanical gnomes on mechanical bird mounts.
+			.info You can find them all around the Inventory's Library area.
+			.collect 6 Inventor's Disk Fragment##41130|q 12858
+		step
+			.use Inventor's Disk Fragment##41130
+			.collect The Inventor's Disk##41132|q 12858/1
+		step
+			.use Brann's Communicator##40971
+			.talk Brann Bronzebeard##29579
+			..turnin Pieces to the Puzzle##12858
+			..accept Data Mining##12860
+		step
+			goto The Storm Peaks,38.17,42.64
+			.use The Inventor's Disk##41179
+			.info Use it near Databanks.
+			.info They look like floating geometric orbs.
+			.info You can find them all around the Inventory's Library area.
+			.' Gather 7 Hidden Data|q 12860/1
+		step
+			.use Brann's Communicator##40971
+			.talk Brann Bronzebeard##29579
+			..turnin Data Mining##12860
+			..accept The Library Console##13415
+		step
+			goto The Storm Peaks,37.43,46.80
+			.' Interact with gameobject: Inventor's Library Console
+			.info Inside the building.
+			..turnin The Library Console##13415
+			..accept Norgannon's Shell##12872
+		step
+			goto The Storm Peaks,37.53,46.52
+			.use Charged Disk##44704
+			.info Inside the building.
+			.' Watch the dialogue.
+			.from Archivist Mechaton##29775
+			.get Norgannon's Shell##41258|q 12872/1
+		step
+			.use Brann's Communicator##40971
+			.talk Brann Bronzebeard##29579
+			..turnin Norgannon's Shell##12872
+			..accept Aid from the Explorers' League##12871
+			..accept The Exiles of Ulduar##12885
+		step
+			goto The Storm Peaks,31.42,38.07
+			.talk Bouldercrag the Rockshaper##29801
+			..turnin The Exiles of Ulduar##12885
+			..accept Rare Earth##12930
+		step
+			goto The Storm Peaks,25.36,33.54
+			.collect 7 Enchanted Earth##41614|q 12930/1
+			.info They look like black rocks with snow on them on the ground.
+			.info You can find them all along the side of the cliff around this area.
+		step
+			goto The Storm Peaks,25.60,46.00
+			.from Stormforged Raider##29377, Stormforged Reaver##29382
+			.info They look like dwarves.
+			.info You can find them all around the Nidavelir and Narvir's Cradle areas.
+			.info The metal War Golems won't drop the quest item.
+			.collect 5 Frostweave Cloth##33470|q 12930/2
+			.' You can find more around|at 29.33,45.39
+		step
+			goto The Storm Peaks,31.42,38.07
+			.talk Bouldercrag the Rockshaper##29801
+			..turnin Rare Earth##12930
+			..accept Fighting Back##12931
+			..accept Relief for the Fallen##12937
+		step
+			goto The Storm Peaks,26.38,37.58
+			.use Telluric Poultice##41988
+			.info Use it on Fallen Earthen Defenders.
+			.info They look like dwarves made of stone kneeling on the ground around this area.
+			.info You only need to channel for a moment for credit.
+			.' Heal 8 Fallen Earthen Defenders|q 12937/1
+		step
+			goto The Storm Peaks,26.38,37.58
+			.from Stormforged Raider##29377, Stormforged Reaver##29382
+			.info They look like armored dwarves and metal golems around this area.
+			.' Slay 10 Stormforged Attackers|q 12931/1
+		step
+			goto The Storm Peaks,31.42,38.07
+			.talk Bouldercrag the Rockshaper##29801
+			..turnin Fighting Back##12931
+			..turnin Relief for the Fallen##12937
+			..accept Slaves of the Stormforged##12957
+			..accept The Dark Ore##12964
+		step
+			goto The Storm Peaks,27.35,49.80
+			.talk Captive Mechagnome##29384
+			.info They look like metal gnomes mining.
+			.info You can find them all throughout the Frozen Mine.
+			.' Tell them "I'm not a laborer. I'm here to free you from servitude in the mines."
+			.' Attempt to Free 6 Captive Mechagnomes|q 12957/1
+		step
+			goto The Storm Peaks,27.35,49.80
+			.kill 3 Stormforged Taskmaster##29369|q 12957/2
+			.info They look like dwarves with dark armor.
+			.info You can find them all throughout the Frozen Mine.
+		step
+			goto The Storm Peaks,27.35,49.80
+			.' Interact with gameobject: Ore Cart
+			.info They look like brown mining carts with ore in them.
+			.info You can find them on the ground all throughout the Frozen Mine.
+			.collect 5 Dark Ore Sample##42109|q 12964/1
+		step
+			goto The Storm Peaks,31.42,38.07
+			.talk Bouldercrag the Rockshaper##29801
+			..turnin Slaves of the Stormforged##12957
+			..turnin The Dark Ore##12964
+			..accept The Gifts of Loken##12965
+		step
+			goto The Storm Peaks,31.28,38.17
+			.talk Bruor Ironbane##30152
+			..accept Facing the Storm##12978
+		step
+			goto The Storm Peaks,24.02,42.64
+			.' Interact with gameobject: Loken's Fury
+			.info Inside this building.
+			.' Destroy Loken's Fury|q 12965/1
+		step
+			goto The Storm Peaks,26.16,47.69
+			.' Interact with gameobject: Loken's Power
+			.info Inside this building.
+			.' Destroy Loken's Power|q 12965/2
+		step
+			goto The Storm Peaks,24.55,48.42
+			.' Interact with gameobject: Loken's Favor
+			.info Inside this building.
+			.' Destroy Loken's Favor|q 12965/3
+		step
+			goto The Storm Peaks,25.75,46.60
+			.kill Stormforged War Golem##29380|n
+			.info They look like metal humanoid machines.
+			.info You can find them all around the Nidavelir area.
+			.collect Dark Armor Sample##42203|n
+			.use the Dark Armor Sample##42203
+			..accept Armor of Darkness##12979
+		step
+			goto The Storm Peaks,25.75,46.60
+			.from Stormforged War Golem##29380
+			.info They look like metal humanoid machines.
+			.info You can find them all around the Nidavelir area.
+			.get 4 Dark Armor Sample##42204|q 12979/1
+		step
+			goto The Storm Peaks,25.75,46.60
+			.' Slay 10 Nidavelir Stormforged|q 12978/1
+			.info They look like dwarves and metal golems.
+			.info You can find them all around the Nidavelir area.
+		step
+			goto The Storm Peaks,31.42,38.07
+			.talk Bouldercrag the Rockshaper##29801
+			..turnin The Gifts of Loken##12965
+		step
+			goto The Storm Peaks,31.28,38.17
+			.talk Bruor Ironbane##30152
+			..turnin Facing the Storm##12978
+			..turnin Armor of Darkness##12979
+			..accept The Armor's Secrets##12980
+		step
+			goto The Storm Peaks,32.04,40.73
+			.talk Attendant Tock##30190
+			.' Tell him "I found this strange armor plate. Can you tell me more about it?"
+			.info Inside the building.
+			.' Investigate the Armor Plate|q 12980/1
+			.info You will have to wait for the quest goal to complete.
+			.info You are waiting for the dialogue to finish that you started in the previous guide step.
+			.info When it completes, you will already be next to the NPC to turn in the quest.
+		step
+			goto The Storm Peaks,31.28,38.17
+			.talk Bruor Ironbane##30152
+			..turnin The Armor's Secrets##12980
+		step
+			goto The Storm Peaks,31.42,38.07
+			.talk Bouldercrag the Rockshaper##29801
+			..accept Valduran the Stormborn##12984
+		step
+			goto The Storm Peaks,24.28,52.15
+			.use Bouldercrag's War Horn##42419
+			.info Use it near Valduran the Stormborn.
+			.info Inside the building.
+			.' Watch the dialogue.
+			.info Allies will appear to help you fight.
+			.kill Valduran the Stormborn##29368|q 12984/1
+		step
+			goto The Storm Peaks,31.42,38.07
+			.talk Bouldercrag the Rockshaper##29801
+			..turnin Valduran the Stormborn##12984
+			..accept Destroy the Forges!##12988
+		step
+			goto The Storm Peaks,31.28,38.17
+			.talk Bruor Ironbane##30152
+			..accept Hit Them Where it Hurts##12991
+		step
+			goto The Storm Peaks,29.01,45.81
+			.use Bouldercrag's Bomb##42441
+			.' Damage the North Lightning Forge|q 12988/1
+		step
+			goto The Storm Peaks,29.49,45.89
+			.use Bouldercrag's Bomb##42441
+			.' Damage the Central Lightning Forge|q 12988/2
+		step
+			goto The Storm Peaks,30.22,46.14
+			.use Bouldercrag's Bomb##42441
+			Damage the South Lightning Forge|q 12988/3
+		step
+			goto The Storm Peaks,29.79,45.63
+			.kill 10 Stormforged Artificer##29376|q 12991/1
+			.info They look like armored dwarves.
+			.info You can find them all around the Narvir's Cradle area.
+		step
+			goto The Storm Peaks,31.28,38.17
+			.talk Bruor Ironbane##30152
+			..turnin Hit Them Where it Hurts##12991
+		step
+			goto The Storm Peaks,31.42,38.07
+			.talk Bouldercrag the Rockshaper##29801
+			..turnin Destroy the Forges!##12988
+			..accept A Colossal Threat##12993
+		step
+			goto The Storm Peaks,28.88,44.06
+			.collect Colossus Attack Specs##42475|q 12993/1
+			.info It looks like a white unrolled scroll.
+		step
+			goto The Storm Peaks,29.90,45.81
+			.collect Colossus Defense Specs##42476|q 12993/2
+			.info It looks like a white unrolled scroll.
+		step
+			goto The Storm Peaks,31.42,38.07
+			.talk Bouldercrag the Rockshaper##29801
+			..turnin A Colossal Threat##12993
+			..accept The Heart of the Storm##12998
+		step
+			goto The Storm Peaks,32.4,63.7
+			.' Interact with gameobject: Heart of the Storm
+			.info Inside the building.
+			.' Watch the dialogue.
+			.' Attempt to Secure the Heart of the Storm|at 36.10,60.92|q 12998/1
+		step
+			goto The Storm Peaks,31.42,38.07
+			.talk Bouldercrag the Rockshaper##29801
+			..turnin The Heart of the Storm##12998
+			..accept The Iron Colossus##13007
+		step
+			goto The Storm Peaks,27.17,35.90
+			.' Interact with gameobject: Jormungar Control Orb.
+			.' Control a Jormungar |invehicle |q 13007
+		step
+			goto The Storm Peaks,27.39,45.30
+			.kill Iron Colossus##30300|q 13007/1
+			.info He looks like a huge armored dwarf that walks around this area.
+			.info Use the abilities on your action bar.
+			.info Be sure to keep "Acid Breath" stacks at 5 when possible.
+			.info Use the "Submerge" ability on your action bar to be able to move around.
+			.info Use the "Emerge" ability on your action bar when underground, to come back to the surface.
+			.info Use the "Submerge" ability on your action bar when he jumps up to do a ground slam, then move behind him to avoid taking damage.
+		step
+			.' Stop Controlling the Jormungar |outvehicle |q 13007
+			.info Click the red arrow on your action bar.
+		step
+			goto The Storm Peaks,31.42,38.07
+			.talk Bouldercrag the Rockshaper##29801
+			..turnin The Iron Colossus##13007
+		step
+			goto The Storm Peaks,29.40,73.76
+			.talk Lagnus##29743
+			..turnin Aid from the Explorers' League##12871
+			..accept The Frostborn King##12873
+		step
+			goto The Storm Peaks,30.26,74.76
+			.talk Yorg Stormheart##29593
+			..turnin The Frostborn King##12873
+			..accept Fervor of the Frostborn##12874
+		step
+			goto The Storm Peaks,29.83,75.72
+			.talk Fjorlin Frostbrow##29732
+			.' Tell him "King Stormheart sent me to be tested as a frostborn would. I am ready for my test, Fjorlin."
+			.' Begin the Test |invehicle |q 12874
+		step
+			goto The Storm Peaks,53.48,35.10|n
+			.' Watch the dialogue.
+			.info This is a long flight.
+			.' Fly to the Iron Watcher|q 12874
+		step
+			goto The Storm Peaks,53.61,35.14
+			.collect Battered Storm Hammer##42624|q 12874
+		step
+			goto The Storm Peaks,53.55,37.86
+			.use Battered Storm Hammer##42624
+			.info Use it repeatedly on The Iron Watcher.
+			.info While he is stunned, you can fight him normally, or you can run away to let the hammer recharge, if you want to play it safe.
+			.info When his health is low enough, he will run to the end of the bridge.
+			.info When he's on the edge of the bridge, use the hammer on him and he will fall off.
+			.kill The Iron Watcher##30142|q 12874/1
+		step
+			goto The Storm Peaks,65.43,60.15
+			.talk King Jokkum##30105
+			..accept You Can't Miss Him##12966
+			..accept In Memoriam##12975
+			..accept Jormuttar is Soo Fat...##13011
+		step
+			goto The Storm Peaks,64.85,59.04
+			.talk Lorekeeper Randvir##30252
+			..accept Raising Hodir's Spear##13001
+		step
+			goto The Storm Peaks,75.38,63.57
+			.talk Njormeld##30099
+			..turnin You Can't Miss Him##12966
+			..accept Battling the Elements##12967
+		step
+			goto The Storm Peaks,75.71,63.91
+			.' Interact with NPC: Snorri
+			.' Accompany Snorri |invehicle |q 12967
+		step
+			goto The Storm Peaks,76.18,63.32
+			.kill 10 Seething Revenant##29504|q 12967/1
+			.info Use the "Gather Snow" ability on your action bar next to Snowdrifts.
+			.info They look like piles of white snow on the ground around this area.
+			.info Use the "Throw Snowball" ability on your action bar on Seething Revenants.
+			.info They look like armored fire elementals around this area.
+		step
+			.' Stop Accompanying Snorri |outvehicle |q 12967
+			.info Click the red arrow on your action bar.
+		step
+			goto The Storm Peaks,75.38,63.57
+			.talk Njormeld##30099
+			..turnin Battling the Elements##12967
+			.' Bring Fjorn's Anvil to Dun Niffelem|q 12924/1
+		step
+			goto The Storm Peaks,63.21,63.23
+			.talk Njormeld##30127
+			..turnin Forging an Alliance##12924
+			..accept A New Beginning##13009
+			..accept Forging a Head##12985
+		step
+			goto The Storm Peaks,70.12,60.06
+			.use Diamond Tipped Pick##42424
+			.info Use it on Dead Iron Giant corpses on the ground around this area.
+			.collect 8 Stormforged Eye##42423|q 12985/1
+		step
+			goto The Storm Peaks,71.58,50.25
+			.collect 8 Horn Fragment##42162|q 12975/1
+			.info They look like grey scraps on the ground around this area.
+		step
+			goto The Storm Peaks,65.43,60.15
+			.talk King Jokkum##30105
+			..turnin In Memoriam##12975
+			..accept A Monument to the Fallen##12976
+		step
+			goto The Storm Peaks,63.21,63.23
+			.talk Njormeld##30127
+			..turnin A Monument to the Fallen##12976
+			..turnin Forging a Head##12985
+			..accept Mounting Hodir's Helm##12987
+		step
+			goto The Storm Peaks,64.23,59.24
+			.use Tablets of Pronouncement##42442
+			.info Use it next to the tip of this ice spike.
+			.info You can use this item while flying.
+			.' Mount Hodir's Helm|q 12987/1
+		step
+			goto The Storm Peaks,63.21,63.23
+			.talk Njormeld##30127
+			..turnin Mounting Hodir's Helm##12987
+		step
+			goto The Storm Peaks,58.44,61.22
+			.from Stoic Mammoth##30260
+			.get 3 Stoic Mammoth Hide##42542|q 13001/2
+		step
+			goto The Storm Peaks,55.55,63.22
+			.use Everfrost Razor##42732
+			.info Use it on Dead Icemaw Bears inside the cave.
+			.info They look like dead white bears on the ground inside the cave.
+			.collect Icemaw Bear Flank##42733|q 13011
+		step
+			goto The Storm Peaks,54.71,60.75
+			.collect 3 Everfrost Shard##42541|q 13001/1
+			.info They look like ice crystals on the ground around this small area inside the cave.
+		step
+			goto The Storm Peaks,54.71,60.75
+			.use Icemaw Bear Flank##42733
+			.kill Jormuttar##30340|q 13011/1
+		step
+			goto The Storm Peaks,64.85,59.04
+			.talk Lorekeeper Randvir##30252
+			..turnin Raising Hodir's Spear##13001
+		step
+			goto The Storm Peaks,65.43,60.15
+			.talk King Jokkum##30105
+			..turnin Jormuttar is Soo Fat...##13011
+		step
+			goto The Storm Peaks,33.42,57.95
+			.talk Thorim##29445
+			..turnin A New Beginning##13009
+			..accept Veranus##13050
+		step
+			goto The Storm Peaks,30.26,74.76
+			.talk Yorg Stormheart##29593
+			..turnin Fervor of the Frostborn##12874
+			..accept An Experienced Guide##12875
+		step
+			goto The Storm Peaks,29.18,74.91
+			.talk Glorthal Stiffbeard##29727
+			..turnin Sirana Iceshriek##12868
+		step
+			goto The Storm Peaks,29.8,75.7
+			.talk Fjorlin Frostbrow##29732
+			..accept Unwelcome Guests##12876
+		step
+			goto The Storm Peaks,26.82,66.86
+			.talk Drom Frostgrip##29751
+			..turnin An Experienced Guide##12875|at 25.24,68.47
+			..accept The Lonesome Watcher##12877|at 25.24,68.47
+		step
+			goto The Storm Peaks,27.1,67.3
+			.from Stormforged Monitor##29862
+			.info He walks around this area with a metal golem inside the cave.
+			.get Frostgrip's Signet Ring##41393|q 12877/1
+		step
+			.from Stormforged Loreseeker##29843, Stormforged Pillager##29586
+			.' Slain Stormforged Invaders|q 12876/1
+		step
+			goto The Storm Peaks,39.24,59.65
+			.talk Creteus##30052
+			..turnin The Lonesome Watcher##12877
+			..accept Fate of the Titans##12986
+		step
+			goto The Storm Peaks,43.77,67.47
+			.collect 5 Small Proto-Drake Egg##42784|q 13050/1
+			.info They look like big spiked brown eggs in nests on top of the mountains around this area.
+			.' You can find more around|at 45.36,66.94
+		step
+			goto The Storm Peaks,33.42,57.95
+			.talk Thorim##29445
+			..turnin Veranus##13050
+			..accept Territorial Trespass##13051
+		step
+			goto The Storm Peaks,38.75,65.52
+			.use Stolen Proto-Dragon Eggs##42797
+			.info Use it in the big nest at the top of this mountain.
+			.' Watch the dialogue.
+			.info She flies to you.
+			.' Lure Veranus|q 13051/1
+		step
+			goto The Storm Peaks,33.42,57.95
+			.talk Thorim##29445
+			..turnin Territorial Trespass##13051
+			..accept Krolmir, Hammer of Storms##13010
+		step
+			goto The Storm Peaks,45.52,49.25
+			.use Creteus's Mobile Databank##42679
+			.info Use it at the top of the tower.
+			.' Watch the dialogue.
+			.' Investigate the Temple of Invention|q 12986/1
+		step
+			goto The Storm Peaks,52.59,56.93
+			.use Creteus's Mobile Databank##42679
+			.info Use it at the top of the tower.
+			.' Watch the dialogue.
+			.' Investigate the Temple of Winter|q 12986/2
+		step
+			goto The Storm Peaks,53.50,42.26
+			.use Creteus's Mobile Databank##42679
+			.info Use it at the top of the tower.
+			.' Watch the dialogue
+			.' Investigate the Temple of Order|q 12986/4
+		step
+			goto The Storm Peaks,64.36,46.71
+			.use Creteus's Mobile Databank##42679
+			.' Watch the dialogue
+			.' Investigate the Temple of Life|q 12986/3
+		step
+			goto The Storm Peaks,65.43,60.15
+			.talk King Jokkum##30105
+			.' Ask him "If it please you, King Jokkum, may I know what has become of Krolmir?"
+			.' Discover Krolmir's Fate|q 13010/1
+		step
+			goto The Storm Peaks,71.37,48.80
+			.talk Thorim##30390
+			..turnin Krolmir, Hammer of Storms##13010
+			..accept The Terrace of the Makers##13057
+		step
+			goto The Storm Peaks,56.27,51.37
+			.talk Thorim##30295
+			..turnin The Terrace of the Makers##13057
+			..accept The Earthen Oath##13005
+			..accept Loken's Lackeys##13035
+		step
+			goto The Storm Peaks,55.31,43.32
+			.use Horn of the Peaks##42840
+			.info Use it to summon earthen helpers that will help you fight.
+			.kill Eisenfaust##30341|q 13035/1
+			.info Inside the building.
+			.info Use your helpers' abilities on your pet bar as you fight.
+		step
+			goto The Storm Peaks,58.37,44.65
+			.use Horn of the Peaks##42840
+			.info Use it to summon earthen helpers that will help you fight.
+			.kill 7 Iron Sentinel##29984|q 13005/1
+			.info Use your helpers' abilities on your pet bar as you fight.
+		step
+			goto The Storm Peaks,58.37,44.65
+			.use Horn of the Peaks##42840
+			.info Use it to summon earthen helpers that will help you fight.
+			.' Slay 20 Iron Dwarf Assailants|q 13005/2
+			.info Use your helpers' abilities on your pet bar as you fight.
+		step
+			goto The Storm Peaks,48.72,45.64
+			.use Horn of the Peaks##42840
+			.info Use it to summon earthen helpers that will help you fight.
+			.kill Halefnir the Windborn##30376|q 13035/2
+			.info Use your helpers' abilities on your pet bar as you fight.
+		step
+			goto The Storm Peaks,44.94,38.04
+			.use Horn of the Peaks##42840
+			.info Use it to summon earthen helpers that will help you fight.
+			.kill Duronn the Runewrought##30353|q 13035/3
+			.info Use your helpers' abilities on your pet bar.
+		step
+			goto The Storm Peaks,56.27,51.37
+			.talk Thorim##30295
+			..turnin The Earthen Oath##13005
+			..turnin Loken's Lackeys##13035
+			..accept The Reckoning##13047
+		step
+			goto The Storm Peaks,39.24,59.65
+			.talk Creteus##30052
+			..turnin Fate of the Titans##12986
+			..accept The Hidden Relic##12878
+		step
+			goto The Storm Peaks,41.8,61.75
+			.' Interact with NPC: The Guardian's Charge|at 44.51,64.58
+			.info Inside the cave.
+			..turnin The Hidden Relic##12878
+			..accept Fury of the Frostborn King##12879
+		step
+			goto The Storm Peaks,38.25,61.71
+			.talk Creteus##30082
+			..turnin Fury of the Frostborn King##12879
+			..accept The Master Explorer##12880
+		step
+			goto The Storm Peaks,39.56,56.36
+			.talk Brann Bronzebeard##30382
+			..turnin The Master Explorer##12880
+			..accept The Brothers Bronzebeard##12973
+		step
+			goto The Storm Peaks,39.61,56.46|n
+			.' Interact with NPC: Brann's Flying Machine
+			.info At the bottom of the huge hole in the ground.
+			.' Begin Flying with Brann Bronzebeard |invehicle |q 12973
+		step
+			goto The Storm Peaks,30.06,73.81
+			.' Kill the enemies that attack.
+			.info They will jump onto the plane as you fly.
+			.' Watch the dialogue.
+			.' Accompany Brann Bronzebeard to Frosthold|q 12973/1
+		step
+			goto The Storm Peaks,30.26,74.76
+			.talk Velog Icebellow##30401
+			..turnin The Brothers Bronzebeard##12973
+		step
+			goto The Storm Peaks,29.8,75.7
+			.talk Fjorlin Frostbrow##29732
+			..turnin Unwelcome Guests##12876
+		step
+			goto The Storm Peaks,35.94,31.50
+			.talk Thorim##30399
+			.' Tell him "I'm with you, Thorim."
+			.' Watch the dialogue.
+			.info Follow Thorim.
+			.' Witness the Reckoning|q 13047/1
+		step
+			goto The Storm Peaks,65.44,60.15
+			.talk King Jokkum##30105
+			..turnin The Reckoning##13047
+		step
+			.' Congratulations! +106/100 quests for achievement "The Summit of Storm Peaks".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[none] Icecrown",[[
