@@ -9658,13 +9658,1886 @@ startlevel 77
 			.' Congratulations! +106/100 quests for achievement "The Summit of Storm Peaks".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[none] Icecrown",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Northrend\\[77] Icecrown",[[
 author danaton
-description This guide contain quest-chain (??) for Icecrown location.
+description This guide contain quest-chain (142) for Icecrown location.
 startlevel 77
 		step
+			goto Dalaran,67.72,47.21
+			.talk Officer Van Rossem##31081
+			..accept Preparations for War##13418
 		step
-			.' "Icecrown: The Final Goal".
+			goto Icecrown,87.46,75.83
+			.talk Highlord Tirion Fordring##28179
+			..accept Honor Above All Else##13036
+		step
+			goto Icecrown,87.09,75.85
+			.talk Crusade Commander Entari##30223
+			..turnin Honor Above All Else##13036
+			..accept Scourge Tactics##13008
+		step
+			goto Icecrown,86.75,76.60
+			.talk Father Gustav##30226
+			..accept Curing The Incurable##13040
+		step
+			goto Icecrown,86.06,75.77
+			.talk Crusader Lord Dalfors##30224
+			..accept Defending The Vanguard##13039
+		step
+			goto Icecrown,83.85,75.58
+			.kill Webbed Crusader##30273|n
+			.info They look like white squirming cocoons on the ground.
+			.info You can find them all around the Valley of Echoes area.
+			.' Free 8 Webbed Crusaders|q 13008/1
+		step
+			goto Icecrown,83.85,75.58
+			.from Forgotten Depths Acolyte##30205, Carrion Fleshstripper##30206, Forgotten Depths Slayer##30333
+			.info They look like spiders.
+			.info You can find them all around the Valley of Echoes area.
+			.' Slay 15 Forgotten Depths Nerubians|q 13039/1
+			.get 10 Forgotten Depths Venom Sac##42770|q 13040/1
+		step
+			goto Icecrown,86.06,75.77
+			.talk Crusader Lord Dalfors##30224
+			..turnin Defending The Vanguard##13039
+		step
+			goto Icecrown,86.75,76.60
+			.talk Father Gustav##30226
+			..turnin Curing The Incurable##13040
+		step
+			goto Icecrown,87.09,75.85
+			.talk Crusade Commander Entari##30223
+			..turnin Scourge Tactics##13008
+			..accept If There Are Survivors...##13044
+		step
+			goto Icecrown,87.01,79.02
+			.talk Penumbrius##30227
+			..turnin If There Are Survivors...##13044
+			..accept Into The Wild Green Yonder##13045
+		step
+			goto 87.10,79.14
+			.' Interact with NPC: Argent Skytalon
+			.' Ride an Argent Skytalon |invehicle |q 13045
+		step
+			goto Icecrown,78.40,64.61
+			.' Pick Up Captured Crusaders.
+			.info Use the "Grab Captured Crusader" ability on your action bar near Captured Crusaders.
+			.info They look like humans trapped in brown and white webbed cocoons.
+			.info You can find them all around the Scourgeholme area.
+			.' Bring Them to Safety
+			.info Fly them back to the Argent Vanguard.
+			.info Use the "Drop Off Captured Crusader" ability on your action bar.
+			.' Rescue 3 Captured Crusaders|q 13045/1
+			.' Bring the Captured Crusaders|at 86.85,76.60
+		step
+			goto Icecrown,87.46,75.83
+			.' Release the Argent Skytalon |outvehicle |q 13045
+			.info Click the red arrow on your action bar.
+		step
+			goto Icecrown,87.46,75.83
+			.talk Highlord Tirion Fordring##28179
+			..turnin Into The Wild Green Yonder##13045
+			..accept A Cold Front Approaches##13070
+		step
+			goto Icecrown,85.62,76.01
+			.talk Siegemaster Fezzik##30657
+			..turnin A Cold Front Approaches##13070
+			..accept The Last Line Of Defense##13086
+		step
+			goto Icecrown,85.33,75.84
+			.' Interact with NPC Argent Cannon
+			.info They look like mounted metal guns on top of the walls around this area.
+			.' Control the Argent Cannon |invehicle |q 13086
+		step
+			goto Icecrown,85.33,75.84
+			.kill 3 Frostbrood Destroyer##30575|q 13086/2
+			.info They look like skeletal dragons nearby.
+			.info Use the abilities on your action bar.
+		step
+			goto Icecrown,85.33,75.84
+			.' Kill enemies around this area.
+			.info On the ground and in the air nearby.
+			.info Use the abilities on your action bar.
+			.' Slay 100 Scourge Attackers|q 13086/1
+		step
+			.' Stop Controlling the Argent Cannon |outvehicle |q 13086
+			.info Click the yellow arrow on your action bar.
+		step
+			goto Icecrown,85.62,76.01
+			.talk Siegemaster Fezzik##30657
+			..turnin The Last Line Of Defense##13086
+		step
+			goto Icecrown,86.03,75.80
+			.talk Highlord Tirion Fordring##30677
+			..accept Once More Unto The Breach, Hero##13105
+			only if DeathKnight
+		step
+			goto Icecrown,86.03,75.80
+			.talk Highlord Tirion Fordring##30677
+			..accept Once More Unto The Breach, Hero##13104
+			only if not DeathKnight
+		step
+			goto Icecrown,83.02,72.94
+			.talk The Ebon Watcher##30596
+			..turnin Once More Unto The Breach, Hero##13105
+			..accept The Purging Of Scourgeholme##13118
+			..accept The Scourgestone##13122
+			only if DeathKnight
+		step
+			goto Icecrown,83.02,72.94
+			.talk The Ebon Watcher##30596
+			..turnin Once More Unto The Breach, Hero##13104
+			..accept The Purging Of Scourgeholme##13118
+			..accept The Scourgestone##13122
+			only if not DeathKnight
+		step
+			goto Icecrown,83.02,73.07
+			.talk Crusade Architect Silas##30686
+			..accept The Stone That Started A Revolution##13130
+		step
+			goto Icecrown,82.99,73.07
+			.talk Crusade Engineer Spitzpatrick##30714
+			..accept It Could kill Us All##13135
+		step
+			goto Icecrown,82.87,72.78
+			.talk Father Gustav##30683
+			..accept The Restless Dead##13110
+		step
+			goto Crystalsong Forest,61.77,58.87
+			.collect 10 Crystalline Heartwood##43217|q 13130/1
+			.info They look like pink glowing tree stumps on the ground.
+			.' You can find more around (1)|at 69.53,69.92
+			.' You can find more around (2)|at 75.58,66.02
+			.' You can find more around (3)|at 82.96,64.06
+		step
+			goto Crystalsong Forest,75.58,66.02
+			.collect 10 Ancient Elven Masonry##43218|q 13130/2
+			.info They look like blue stone column pieces on the ground.
+			.' You can find more around|at 82.96,64.06
+		step
+			goto Crystalsong Forest,78.19,59.09
+			.' Kill enemies around this area.
+			.collect 8 Crystallized Energy##43225|q 13135/1
+			.' You can find more around (1)|at 63.57,66.94
+			.' You can find more around (2)|at 61.01,54.67
+		step
+			goto Icecrown,83.02,73.07
+			.talk Crusade Architect Silas##30686
+			..turnin The Stone That Started A Revolution##13130
+		step
+			goto Icecrown,82.99,73.07
+			.talk Crusade Engineer Spitzpatrick##30714
+			..turnin It Could kill Us All##13135
+		step
+			goto Icecrown,77.31,68.19
+			.kill 3 Forgotten Depths High Priest##31037|q 13118/1
+			.info They are usually inside or next to the buildings around the Scourgeholme area.
+			.' You can find more around ()|at 79.21,64.00
+			.' You can find more around ()|at 75.65,61.06
+			.' You can find more around ()|at 79.06,60.42
+			.' You can find more around ()|at 78.79,56.27
+		step
+			goto Icecrown,78.00,63.16
+			.kill 3 Forgotten Depths Underking##31039|q 13118/2
+			.info They look like huge beetles.
+			.info You can find them all around the Scourgeholme area.
+		step
+			goto Icecrown,78.32,66.36
+			.kill 8 Reanimated Crusader##31043|q 13118/3
+			.info They look like skeletons.
+			.info You can find them all around the Scourgeholme area.
+		step
+			goto Icecrown,78.32,66.36
+			.kill Reanimated Crusader##31043|n
+			.info They look like skeletons.
+			.info You can find them all around the Scourgeholme area.
+			.use the Holy Water##43153
+			.info Use it on their corpses.
+			.' Free 10 Restless Souls|q 13110/1
+		step
+			goto Icecrown,78.00,63.16
+			.' Kill enemies around this area.
+			.info You can find them all around the Scourgeholme area.
+			.collect 15 Scourgestone##43169|q 13122/1
+		step
+			goto Icecrown,83.02,72.94
+			.talk The Ebon Watcher##30596
+			..turnin The Purging Of Scourgeholme##13118
+			..turnin The Scourgestone##13122
+			..accept The Air Stands Still##13125
+		step
+			goto Icecrown,82.87,72.78
+			.talk Father Gustav##30683
+			..turnin The Restless Dead##13110
+		step
+			goto Icecrown,77.33,61.90
+			.use War Horn of Acherus##43206
+			.info Use it on Salranax the Flesh Render inside the building.
+			.info He is elite, but don't worry.
+			.info Your allies will appear to help you kill him after you use the horn.
+			.kill Salranax the Flesh Render##30829|q 13125/1
+		step
+			goto Icecrown,80.08,61.16
+			.use War Horn of Acherus##43206
+			.info Use it on High Priest Yath'amon inside the building.
+			.info He is elite, but don't worry.
+			.info Your allies will appear to help you kill him after you use the horn.
+			.kill High Priest Yath'amon##30831|q 13125/3
+		step
+			goto Icecrown,76.48,53.70
+			.use War Horn of Acherus##43206
+			.info Use it on Underking Talonox.
+			.info He walks around this area.
+			.info He is elite, but don't worry.
+			.info Your allies will appear to help you kill him after you use the horn.
+			.kill Underking Talonox##30830|q 13125/2
+			.info High Lord Darion will open a Death Gate after Underking Talonox is defeated.
+		step
+			goto Icecrown,83.02,72.93
+			.talk The Ebon Watcher##30596
+			..turnin The Air Stands Still##13125
+		step
+			goto Icecrown,82.87,72.78
+			.talk Father Gustav##30683
+			..accept Into The Frozen Heart Of Northrend##13139
+		step
+			goto Icecrown,86.01,75.75
+			.talk Highlord Tirion Fordring##30677
+			..turnin Into The Frozen Heart Of Northrend##13139
+			..accept The Battle For Crusaders' Pinnacle##13141
+		step
+			goto Icecrown,80.08,71.94
+			.use Blessed Banner of the Crusade##43243
+			.info Your allies will appear and help you fight.
+			.' Kill the enemies that attack in waves
+			.info Groups of enemies will run up the path nearby.
+			.kill Halof the Deathbringer##30989|n
+			.' Complete the Battle for Crusaders' Pinnacle|q 13141/1
+		step
+			goto Icecrown,82.87,72.78
+			.talk Father Gustav##30683
+			..turnin The Battle For Crusaders' Pinnacle##13141
+			..accept The Crusaders' Pinnacle##13157
+		step
+			goto Icecrown,79.79,71.76
+			.talk Highlord Tirion Fordring##31044
+			..turnin The Crusaders' Pinnacle##13157
+			..accept A Tale of Valor##13068
+		step
+			goto Icecrown,79.39,72.88
+			.talk Marshal Ivalius##31241
+			..accept The Skybreaker##13225
+		step
+			.' On the Skybreaker Airship:
+			.talk High Captain Justin Bartlett##30344
+			..turnin Preparations for War##13418
+			..turnin The Skybreaker##13225
+			..accept The Broken Front##13231
+		step
+			.' On the Skybreaker Airship:
+			.talk Thassarian##29799
+			..accept It's All Fun and Games##12887
+		step
+			.' On the Skybreaker Airship:
+			.talk Knight-Captain Drosche##32302
+			..accept Joining the Assault##13341
+		step
+			.' On the Skybreaker Airship:
+			.talk Chief Engineer Boltwrench##30345
+			.info Downstairs inside the airship, on the bottom floor, near the front of the airship.
+			.info To get downstairs, run down the stairs in the center of the main deck.
+			..accept Get to Ymirheim!##13296
+		step
+			goto Icecrown,79.84,30.82
+			.talk Crusader Bridenbrad##30562
+			..turnin A Tale of Valor##13068
+			..accept A Hero Remains##13072
+		step
+			goto Icecrown,44.55,22.44
+			.use the Eyesore Blaster##41265
+			.info Use it repeatedly on The Ocular.
+			.info It looks like a huge blue glowing eye at the top of this tower.
+			.info You can use this item while flying.
+			.' Destroy The Ocular|q 12887/1
+		step
+			goto Icecrown,44.15,24.68
+			.talk Baron Sliver##29804
+			..turnin It's All Fun and Games##12887
+			..accept I Have an Idea, But First...##12891
+		step
+			goto Icecrown,43.23,25.19
+			.from Shadow Cultist##29717
+			.info They look like humans in purple shadowy robes.
+			.info You can find them all around the Shadow Vault area.
+			.info You can also find them up on the raised platforms and inside the building nearby.
+			.get Cultist Rod##41359|q 12891/1
+		step
+			goto Icecrown,43.23,25.19
+			.from Morbid Carcass##29719
+			.info They look like abominations.
+			.info You can find them all around the Shadow Vault area.
+			.info You can also find them up on the raised platforms and inside the building nearby.
+			.get Abomination Hook##41361|q 12891/2
+		step
+			goto Icecrown,43.23,25.19
+			.from Vault Geist##29720
+			.info They look like frail humanoids crouching on the ground.
+			.info You can find them all around the Shadow Vault area.
+			.info You can also find them up on the raised platforms and inside the building nearby.
+			.get Geist Rope##41362|q 12891/3
+		step
+			goto Icecrown,43.23,25.19
+			.' Kill enemies around this area
+			.info Only Undead enemies will drop the quest item.
+			.info You can find them all around the Shadow Vault area.
+			.info You can also find them up on the raised platforms and inside the building nearby.
+			.get 5 Scourge Essence##41363|q 12891/4
+		step
+			goto Icecrown,44.15,24.68
+			.talk Baron Sliver##29804
+			..turnin I Have and Idea, But First...##12891
+			..accept Free Your Mind##12893
+		step
+			goto Icecrown,44.42,27.00
+			.kill Vile##29769|n
+			.info He looks like a larger abomination.
+			.info On the raised platform.
+			.use Soveriegn Rod##41366
+			.info Use it on his corpse.
+			.' Turn Vile|q 12893/1
+		step
+			goto Icecrown,41.75,24.49
+			.kill Lady Nightswood##29770|n
+			.info She looks like a banshee.
+			.info On the raised platform.
+			.use Soveriegn Rod##41366
+			.info Use it on her corpse.
+			.' Turn Lady Nightswood|q 12893/2
+		step
+			goto Icecrown,46.08,20.83
+			.kill The Leaper##29840|n
+			.info He looks like a larger Geist.
+			.info He runs along the path of the raised tower platform, outside, high off the ground.
+			.info The platform almost wraps around the whole tower.
+			.use Soveriegn Rod##41366
+			.info Use it on his corpse.
+			.' Turn the Leaper|q 12893/3
+		step
+			goto Icecrown,44.15,24.68
+			.talk Baron Sliver##29804
+			..turnin Free Your Mind##12893
+			..accept If He Cannot Be Turned##12896
+		step
+			goto Icecrown,44.72,19.76
+			.' Interact with gameobject: General's Weapon Rack
+			.info Inside the building.
+			.info Be careful, a level 80 elite enemy will appear and attack you.
+			.info If you have trouble, try to find someone to help you.
+			.info It is important to get this quest done, since it unlocks a quest hub.
+			.kill General Lightsbane##29851|q 12896/1
+		step
+			goto Icecrown,62.56,51.33
+			.talk Ground Commander Koup##31808
+			..turnin Joining the Assault##13341
+		step
+			goto Icecrown,56.99,62.57
+			.talk Frazzle Geargrinder##31776
+			..turnin Get to Ymirheim!##13296
+		step
+			.' Move inside the cave|goto 57,57.25,0.3 |q 13308 |future
+		step
+			goto Icecrown,54.5,59.3
+			.talk Darkspeaker R'khem##31892
+			..accept Mind Tricks##13308
+		step
+			goto Icecrown,55.1,59.4
+			.from Foreman Thaldrin##31399
+			.get Foreman's Key##44153|q 13308/1
+		step
+			goto Icecrown,54.5,59.3
+			.talk Darkspeaker R'khem##31892
+			..turnin Mind Tricks##13308
+		step
+			goto Icecrown,66.75,64.04
+			.talk Dying Soldier##31304
+			.info They look like alliance soldiers laying on the ground.
+			.info You won't be able to talk to them if they are already dead.
+			.info You can find them all around the Broken Front Area.
+			.' Tell them "Stay with me, friend. I must know what happened here."
+			.' Question the Dying Soldier |q 13231/1
+		step
+			goto Icecrown,67.21,63.29
+			.talk Dying Soldier##31304
+			.info The Dying Soldier you talked to in the previous step.
+			..accept Finish Me!##13232
+		step
+			goto Icecrown,69.82,64.53
+			.talk Dying Soldier##31304
+			.info They look like alliance soldiers laying on the ground around this area.
+			.info You won't be able to talk to them if they are already dead.
+			.info You can find them all around the Broken Front Area.
+			.info You can do this while being mounted.
+			.' Tell them "Travel well, hero of the Alliance!"
+			.' Slay 5 Dying Alliance Soldiers|q 13232/1
+		step
+			goto Icecrown,79.79,71.76
+			.talk Highlord Tirion Fordring##31044
+			..turnin A Hero Remains##13072
+			..accept The Keeper's Favor##13073
+		step
+			goto Icecrown,87.06,77.02
+			.talk Arch Druid Lilliandra##30630
+			.' Tell her "It's a pleasure to meet you as well, Archdruid. I am on a task from Tirion and time is short, might I trouble you for a portal to Moonglade?"
+			.' Interact with gameobject: Moonglade Portal
+			.info It appears nearby.
+			.info You can use your Teleport Moonglade spell instead if you like.|only Druid
+			.' Teleport to Moonglade|goto Moonglade|q 13073
+		step
+			goto Moonglade,36.20,41.81
+			.talk Keeper Remulos##11832
+			..turnin The Keeper's Favor##13073
+			..accept Hope Within the Emerald Nightmare##13074
+		step
+			goto Moonglade,34.63,41.48
+			.' Interact with gameobject: Emerald Acorn
+			.info They look like brown pinecones on the ground, usually near trees.
+			.info You can find them all around the Shrine of Remulos area.
+			.collect 3 Emerald Acorn##43006|q 13074/1
+		step
+			.' Wake from the Dream |nobuff Spell_Nature_Sleep |q 13074
+			.info Right-click the "Fitful Dream" buff near your minimap.
+		step
+			goto Moonglade,36.20,41.81
+			.talk Keeper Remulos##11832
+			..turnin Hope Within the Emerald Nightmare##13074
+			..accept The Boon of Remulos##13075
+		step
+			goto Moonglade,36.20,41.81
+			.talk Keeper Remulos##11832
+			.' Speak with Keeper Remulos
+			.' Interact with gameobject: Moonglade Return Portal|goto Icecrown|q 13075
+			.info It appears next to Keeper Remulos.
+		step
+			goto Icecrown,79.85,30.82
+			.talk Crusader Bridenbrad##30562
+			..turnin The Boon of Remulos##13075
+			..accept Time Yet Remains##13076
+		step
+			.' On the Skybreaker Airship:
+			.talk High Captain Justin Bartlett##30344
+			..turnin The Broken Front##13231
+			..turnin Finish Me!##13232
+			..accept ...All the Help We Can Get##13286
+			..accept Your Attention, Please##13290
+		step
+			.' On the Skybreaker Airship:
+			.talk Thassarian##29799
+			..turnin If He Cannot Be Turned##12896
+			..accept The Shadow Vault##12898
+			..turnin ...All the Help We Can Get.##13286
+			..accept Poke and Prod##13287
+		step
+			.' On the Skybreaker Airship:
+			.talk Chief Engineer Boltwrench##30345
+			.info Downstairs inside the airship, on the bottom floor, near the front of the airship.
+			.info To get downstairs, run down the stairs in the center of the main deck.
+			..turnin Your Attention, Please##13290
+			..accept Borrowed Technology##13291
+		step
+			goto Icecrown,42.84,24.92
+			.talk Baron Sliver##29343
+			..turnin The Shadow Vault##12898
+			..accept The Duke##12938
+			..accept Blackwatch##13106
+		step
+			goto Icecrown,44.66,20.34
+			.talk Duke Lankral##30002
+			..turnin The Duke##12938
+			..accept Honor Challenge##12939
+		step
+			goto Icecrown,43.63,25.13
+			.talk The Leaper##30074
+			..accept Eliminate the Competition##12955
+		step
+			goto Icecrown,37.86,25.12
+			.talk Efrem the Faithful##30081
+			.' Tell him "I challenge you to a duel, Scarlet scum!"
+			.kill Efrem the Faithful##30081|n
+			.info He will eventually surrender.
+			.' Defeat Efrem the Faithful|q 12955/2
+		step
+			goto Icecrown,36.14,23.57
+			.talk Tinky Wickwhistle##30162
+			.' Tell her "Sorry, Tinky, but I can't afford you as a distraction while I'm doing what needs to be done here."
+			.kill Tinky Wickwhistle##30162|n
+			.info She will eventually surrender.
+			.' Defeat Tinky Wickwhistle|q 12955/4
+		step
+			goto Icecrown,37.07,22.47
+			.talk Sigrid Iceborn##30086
+			.' Tell her "I've heard that vrykul women cannot fight at all. If you wish to prove me wrong, you can try."
+			.kill Sigrid Iceborn##30086|n
+			.info She will eventually surrender.
+			.' Defeat Sigrid Iceborn|q 12955/1
+		step
+			goto Icecrown,37.86,22.93
+			.talk Onu'zun##30180
+			.' Tell him "I have bad news for you Onu'zun: I'm gonna have to cut short your dreams!"
+			.kill Onu'zun##30180|n
+			.info He will eventually surrender.
+			.' Defeat Onu'zun |q 12955/3
+		step
+			goto Icecrown,37.21,23.81
+			.use Challenge Flag##41372
+			.info Use it on Mjordin Combatants.
+			.info They look like large humans fighting around this area.
+			.kill Mjordin Combatant##30037|n
+			.' Challenge and Defeat 6 Mjordin Combatants|q 12939/1
+		step
+			goto Icecrown,43.63,25.13
+			.talk The Leaper##30074
+			..turnin Eliminate the Competition##12955
+			..accept The Bone Witch##12999
+		step
+			goto Icecrown,44.66,20.34
+			.talk Duke Lankral##30002
+			..turnin Honor Challenge##12939
+			..accept Shadow Vault Decree##12943
+		step
+			goto Icecrown,41.04,23.87
+			.talk Vaelen the Flayed##30056
+			.info Follow the path around to get to him.
+			..accept Get the Key##12949
+		step
+			goto Icecrown,40.12,23.93
+			.use Shadow Vault Decree##41776
+			.info Use it on Thane Ulfrang the Mighty.
+			.info Inside the building.
+			.' Watch the dialogue
+			.kill Thane Ulfrang the Mighty##29919|q 12943/1
+		step
+			goto Icecrown,37.15,23.21
+			.from Instructor Hroegar##29915
+			.info He looks like a larger human wearing a white cape.
+			.info He walks around this area.
+			.get Key to Vaelan's Chains##41843|q 12949/1
+		step
+			goto Icecrown,41.04,23.87
+			.talk Vaelen the Flayed##30056
+			..turnin Get the Key##12949
+			..accept Let the Baron Know##12951
+		step
+			goto Icecrown,42.84,24.92
+			.talk Baron Sliver##29343
+			..turnin Let the Baron Know##12951
+			..accept Vaelen Has Returned##13085
+		step
+			goto Icecrown,43.16,25.15
+			.talk Vile##30216
+			..accept Crush Dem Vrykuls!##12992
+		step
+			goto Icecrown,43.11,21.07
+			.talk Vaelen the Flayed##30218
+			..turnin Vaelen Has Returned##13085
+			..accept Ebon Blade Prisoners##12982
+		step
+			goto Icecrown,44.66,20.34
+			.talk Duke Lankral##30002
+			..turnin Shadow Vault Decree##12943
+			..accept Vandalizing Jotunheim##13084
+		step
+			goto Icecrown,33.59,27.83
+			.' Kill enemies around this area
+			.collect Jotunheim Cage Key##42422|n
+			.' Interact with gameobject: Jotunheim Cage
+			.info They look like wooden cages.
+			.info You can find them all around the Jotunheim area.
+			.' Set 8 Ebon Blade Prisoners Free|q 12982/1
+			.' You can find more around (1)|at 29.72,36.30
+			.' You can find more around (2)|at 28.69,45.38
+		step
+			goto Icecrown,33.59,27.83
+			.' Interact with gameobject: Vrykul Banner
+			.info They look like large wooden posts with dark colored banners hanging from them.
+			.info You can find them all around the Jotunheim area.
+			.' Burn 10 Vrykul Banners|q 13084/1
+			.' You can find more around (1)|at 29.72,36.30
+			.' You can find more around (2)|at 28.69,45.38
+		step
+			goto Icecrown,33.59,27.83
+			.' Kill enemies around this area
+			.info They look like large humans.
+			.info You can find them all around the Jotunheim area.
+			.collect 15 Vrykul Bones##43089|q 13092 |future
+			.' You can find more around (1)|at 29.72,36.30
+			.' You can find more around (2)|at 28.69,45.38
+		step
+			goto Icecrown,32.50,42.94
+			.talk The Bone Witch##30232
+			..turnin The Bone Witch##12999
+			..accept Deep in the Bowels of the Underhalls##13042
+			..accept Reading the Bones##13092
+		step
+			goto Icecrown,32.50,42.94
+			.talk The Bone Witch##30232
+			.info Choose the "Fate Rune of Fleet Feet" quest reward.
+			.info Use it afterward to get a run speed buff.
+			..turnin Reading the Bones##13092
+		step
+			goto Icecrown,36.11,33.07
+			.talk Bethod Feigr##30406
+			..accept Revenge for the Vargul##13059
+		step
+			goto Icecrown,33.11,37.68
+			.use Bethod's Sword##42928
+			.info Inside the building, on the middle floor.
+			.info You will be attacked.
+			.' Issue a Challenge Using Bethod's Sword|q 13059/1
+		step
+			goto Icecrown,33.11,37.68
+			.' Kill the enemies that attack
+			.info Inside the building, on the middle floor.
+			.kill Thane Illskar##30475|q 13059/2
+		step
+			goto Icecrown,34.01,36.34
+			.kill Apprentice Osterkilgr##30409|n
+			.info He walks around this area inside the building, under the stairs on the bottom floor.
+			.info Don't kill him too quickly, just weaken him until he starts talking, then you can kill him.
+			.' Beat the Information Out of Apprentice Osterkilgr|q 13042/1
+			.kill Apprentice Osterkilgr##30409|q 13042/2
+			.collect Dr. Terrible's "Building a Better Flesh Giant"##42772|q 13043 |future
+		step
+			.use Dr. Terrible's "Building a Better Flesh Giant"##42772
+			..accept The Sum is Greater than the Parts##13043
+		step
+			goto Icecrown,33.37,33.17
+			.' Interact with NPC: Nergeld
+			.info Inside the building, on the bottom floor.
+			.' Kill the enemies that attack in waves
+			.info Use the abilities on your action bar.
+			.kill Dr. Terrible##30404|q 13043/1
+		step
+			goto Icecrown,36.11,33.07
+			.talk Bethod Feigr##30406
+			..turnin Revenge for the Vargul##13059
+		step
+			goto Icecrown,34.60,34.98
+			.' Kill enemies around this area
+			.info They look like large humans.
+			.info Inside the building.
+			.info You can find them all around the Jotunheim area.
+			.' Slay 15 Jotunheim Vrykul|q 12992/1
+		step
+			goto Icecrown,32.50,42.94
+			.talk The Bone Witch##30232
+			..turnin Deep in the Bowels of the Underhalls##13042
+			..turnin The Sum is Greater than the Parts##13043
+			..accept The Art of Being a Water Terror##13091
+		step
+			goto Icecrown,31.36,41.22
+			.' Interact with gameobject: Lock Gate
+			.' Control a Water Terror |invehicle |q 13091
+		step
+			goto Icecrown,31.45,39.66
+			.' Kill enemies around this area
+			.info They look like large humans.
+			.info You can find them all around the Jotunheim area.
+			.info Use the abilities on your action bar.
+			.' Slay 10 Jotunheim Vrykul While Possessing a Water Terror|q 13091/1
+		step
+			.' Stop Controlling the Water Terror |outvehicle |q 13091
+			.info Click the red arrow on your action bar.
+		step
+			goto Icecrown,32.50,42.94
+			.talk The Bone Witch##30232
+			..turnin The Art of Being a Water Terror##13091
+			..accept Through the Eye##13121
+		step
+			goto Icecrown,43.16,25.15
+			.talk Vile##30216
+			..turnin Crush Dem Vrykuls!##12992
+		step
+			goto Icecrown,43.11,21.07
+			.talk Vaelen the Flayed##30218
+			..turnin Ebon Blade Prisoners##12982
+		step
+			goto Icecrown,44.66,20.33
+			.talk Duke Lankral##30002
+			..turnin Vandalizing Jotunheim##13084
+		step
+			goto Icecrown,42.84,24.92
+			.talk Baron Sliver##29343
+			..accept To the Rise with all Due Haste!##12806
+		step
+			goto Icecrown,19.54,48.15
+			.talk Lord-Commander Arete##29344
+			..turnin To the Rise with all Due Haste!##12806
+			..accept The Story Thus Far...##12807
+		step
+			goto Icecrown,19.54,48.15
+			.talk Lord-Commander Arete##29344
+			.' Tell him "Lord-Commander, I would hear your tale."
+			.' Listen to Lord-Commander Arete's Tale|q 12807/1
+		step
+			goto Icecrown,19.54,48.15
+			.talk Lord-Commander Arete##29344
+			..turnin The Story Thus Far...##12807
+			..accept Blood in the Water##12810
+		step
+			goto Icecrown,9.31,40.48
+			.' Kill Onslaught enemies around this area
+			.info They look like humans in red and white armor all around the Onslaught Harbor area.
+			.info They can also be flying in the air on white birds.
+			.collect Scarlet Onslaught Trunk Key##40652|n
+			.' Interact with gameobject: Scarlet Onslaught Trunk
+			.info They look like small wooden boxes on the ground.
+			.info You can find them all around the Onslaught Harbor area.
+			.info You may not always find a quest item in the chests.
+			.collect Note from the Grand Admiral##40666|q 12839 |future
+		step
+			.use the Note from the Grand Admiral##40666
+			..accept The Grand (Admiral's) Plan##12839
+		step
+			goto Icecrown,13.87,46.23
+			.kill Ravenous Jaws##29392|n
+			.info They look like hammerhead sharks.
+			.info You can find them underwater around the outskirts, and inside the Onslaught Harbor area.
+			.use the Gore Bladder##40551
+			.info Use it on their corpses.
+			.' Collect Blood from 10 Ravenous Jaws|q 12810/1
+		step
+			goto Icecrown,19.54,48.15
+			.talk Lord-Commander Arete##29344
+			..turnin Blood in the Water##12810
+			..accept You'll Need a Gryphon##12814
+			..turnin The Grand (Admiral's) Plan##12839
+			..accept In Strict Confidence##12840
+		step
+			goto Icecrown,7.03,41.92
+			.kill Captain Hartford##29490|n
+			.info On the top deck of the ship.
+			.' Beat and kill Captain Hartford for Information|q 12840/2
+		step
+			goto Icecrown,5.67,41.94
+			.kill Captain Welsington##29489|n
+			.info On the top deck of the ship.
+			.' Beat and kill Captain Welsington for Information|q 12840/1
+		step
+			goto Icecrown,8.26,43.23
+			.kill Onslaught Gryphon Rider##29333|n
+			.info They look like humans flying on white birds.
+			.info You can find them all around the Onslaught Harbor area.
+			.collect Onslaught Gryphon Reins##40970|q 12814
+		step
+			.use the Onslaught Gryphon Reins##40970
+			.' Take Control of an Onslaught Gryphon |invehicle |q 12814
+		step
+			goto Icecrown,19.64,47.80
+			.' Deliver the Onslaught Gryphon to Uzo Deathcaller|q 12814/1
+			.info Use the ability on your action bar.
+			.info Next to Uzo Deathcaller.
+			.info On the platform on the side of the cliff.
+		step
+			goto Icecrown,19.64,47.80
+			.talk Uzo Deathcaller##29405
+			..turnin You'll Need a Gryphon##12814
+		step
+			goto Icecrown,19.54,48.15
+			.talk Lord-Commander Arete##29344
+			..turnin In Strict Confidence##12840
+			..accept Second Chances##12847
+		step
+			goto Icecrown,26.2,62.3
+			.' Interact with gameobject: Eye of the Lich King
+			.info It looks like a floating blue orb.
+			.info Inside the building.
+			.info Follow the path around to get to it.
+			.' Choose "Grasp the Eye of the Lich King and focus your will upon it to scry for important information."
+			.' Watch the dialogue
+			.' Gain Information for The Bone Witch|q 13121/1
+		step
+			goto Icecrown,35.39,66.32
+			.talk Darkrider Arly##30631
+			..turnin Blackwatch##13106
+			..accept Where Are They Coming From?##13117
+		step
+			goto Icecrown,37.06,71.09
+			.' Interact with gameobject: Summoning Altar
+			.info They look like small stone stages with green summoning circles on them on the ground.
+			.' Investigate a Summoning Altar|q 13117/1
+		step
+			goto Icecrown,35.39,66.32
+			.talk Darkrider Arly##30631
+			..turnin Where Are They Coming From?##13117
+			..accept Destroying the Altars##13119
+			..accept Death's Gaze##13120
+		step
+			goto Icecrown,30.55,65.11
+			.' Interact with gameobject: Cauldron Area Orb Stand
+			.' Place the Orb in the Cauldron Area|q 13120/3
+		step
+			goto Icecrown,32.59,70.55
+			.' Interact with gameobject: Abomination Lab Orb Stand
+			.' Place the Orb in the Abomination Lab|q 13120/1
+		step
+			goto Icecrown,34.59,69.64
+			.' Interact with gameobject: Flesh Giant Lab Orb Stand
+			.' Place the Orb in the Flesh Giant Lab|q 13120/2
+		step
+			goto Icecrown,37.14,71.11
+			.kill Master Summoner Zarod##30746|n
+			.info He looks like a lich wearing a purple robe.
+			.info He walks around this area.
+			.collect Master Summoner's Staff##43159|q 13119
+		step
+			goto Icecrown,36.75,70.72
+			.use Master Summoner's Staff##43159
+			.info You can do this while flying.
+			.' Destroy the First Summoning Altar|q 13119/1 |
+		step
+			goto Icecrown,36.60,71.64
+			.use Master Summoner's Staff##43159
+			.info You can do this while flying.
+			.' Destroy the Second Summoning Altar|q 13119/2
+		step
+			goto Icecrown,37.36,71.52
+			.use Master Summoner's Staff##43159
+			.info You can do this while flying.
+			.' Destroy the Fourth Summoning Altar|q 13119/4
+		step
+			goto Icecrown,37.36,71.52
+			.use Master Summoner's Staff##43159
+			.info You can do this while flying.
+			.' Destroy the Third Summoning Altar|q 13119/3
+		step
+			goto Icecrown,35.39,66.32
+			.talk Darkrider Arly##30631
+			..turnin Destroying the Altars##13119
+			..turnin Death's Gaze##13120
+			..accept Spill Their Blood##13134
+		step
+			goto Icecrown,31.76,64.80
+			.talk Father Kamaros##31279
+			..accept I'm Not Dead Yet!##13221
+			.info This is an escort quest.
+			.info You may need to wait if he isn't present.
+		step
+			goto Icecrown,31.98,57.02
+			.' Watch the dialogue
+			.info Follow Father Kamaros and protect him as he walks.
+			.info He eventually walks to this location.
+			.' Escort Father Kamaros to Safety|q 13221/1
+		step
+			goto Icecrown,32.22,68.09
+			.kill Spiked Ghoul##30597|n
+			.info They look like grey zombies with spikes on the backs.
+			.info You can find them all around the Fleshwerks area.
+			.collect Jagged Shard##43242|q 13136 |future
+		step
+			.use the Jagged Shard##43242
+			..accept Jagged Shards##13136
+		step
+			goto Icecrown,32.22,68.09
+			.' Interact with gameobject: Embalming Fluid
+			.info They look like larger glass orbs with green liquid in them, in short metal stands.
+			.info You can find them all around the Fleshwerks area.
+			.' Destroy 5 Vats of Embalming Fluid|q 13134/2
+		step
+			goto Icecrown,32.22,68.09
+			.' Interact with gameobject: Blood Orb
+			.info They look like smaller glass orbs with red liquid in them, in taller metal stands.
+			.info You can find them all around the Fleshwerks area.
+			.' Shatter 5 Blood Orbs|q 13134/1
+		step
+			goto Icecrown,32.22,68.09
+			.from Spiked Ghoul##30597
+			.info They look like grey zombies with spikes on the backs.
+			.info You can find them all around the Fleshwerks area.
+			.get 10 Jagged Shard##43242|q 13136/1
+		step
+			goto Icecrown,35.39,66.32
+			.talk Darkrider Arly##30631
+			..turnin Spill Their Blood##13134
+		step
+			goto Icecrown,35.50,66.45
+			.talk Crusader Olakin Sainrith##30708
+			..turnin Jagged Shards##13136
+			..accept I'm Smelting... Smelting!##13138
+			..accept The Runesmiths of Malykriss##13140
+		step
+			goto Icecrown,58.09,70.87
+			.use Bag of Jagged Shards##43289
+			.info Next to a huge vent on the ground with a tornado of fire rising out of it.
+			.collect Smelted Metal Bar##43288|q 13138/1
+		step
+			goto Icecrown,58.91,73.64
+			.from Skeletal Runesmith##30921
+			.info They look like skeletons.
+			.info You can find them alll around the Malykriss: The Vile Hold area.
+			.get 5 Runed Saronite Plate##43291|q 13140/1
+		step
+			goto Icecrown,68.89,65.59
+			.collect 3 Pile of Bones##43609|q 13291
+			.info They look like small groups of white bones on the ground.
+			.info You can find them all around the Broken Front area.
+		step
+			goto Icecrown,68.89,65.59
+			.collect 3 Abandoned Armor##43616|q 13291
+			.info They look like metal armor chest pieces on the ground.
+			.info You can find them all around the Broken Front area.
+		step
+			goto Icecrown,68.89,65.59
+			.collect 3 Abandoned Helm##43610|q 13291
+			.info They look like small metal helmets on the ground.
+			.info You can find them all around the Broken Front area.
+		step
+			goto Icecrown,68.89,65.59
+			.use Smuggled Solution##44048
+			.info Use it multiple times.
+			.info A skeletal dragon will fly down and die each time.
+			.' Conduct 3 Field Tests|q 13291/1
+		step
+			goto Icecrown,68.89,65.59
+			.kill 5 Hulking Abomination##31140|q 13287/1
+			.info You can find them all around the Broken Front area.
+		step
+			goto Icecrown,68.89,65.59
+			.kill 5 Malefic Necromancer##31155|q 13287/2
+			.info They look like skeletons wearing brown capes.
+			.info You can find them all around the Broken Front area.
+		step
+			goto Icecrown,68.89,65.59
+			.kill 5 Shadow Adept##31145|q 13287/3
+			.info They look like humans channeling a green spell on objects.
+			.info You can find them all around the Broken Front area.
+		step
+			goto Icecrown,79.79,71.76
+			.talk Highlord Tirion Fordring##31044
+			..turnin Time Yet Remains##13076
+			..accept The Touch of an Aspect##13077
+		step
+			goto Dragonblight,59.83,54.66
+			.talk Alexstrasza the Life-Binder##26917
+			..turnin The Touch of an Aspect##13077
+			..accept Dahlia's Tears##13078
+		step
+			goto Dragonblight,51.98,47.10
+			.collect Dahlia's Tears##43084|q 13078/1
+			.info They look like small yellow flowers on the ground around this area.
+			.' You can find more around (1)|at 50.36,52.09
+			.' You can find more around (2)|at 43.92,51.88
+		step
+			goto Dragonblight,59.83,54.66
+			.talk Alexstrasza the Life-Binder##26917
+			..turnin Dahlia's Tears##13078
+			..accept The Boon of Alexstrasza##13079
+		step
+			goto Icecrown,79.85,30.82
+			.talk Crusader Bridenbrad##30562
+			..turnin The Boon of Alexstrasza##13079
+			..accept Hope Yet Remains##13080
+		step
+			.' On the Skybreaker Airship:
+			.talk Absalan the Pious##31259
+			..turnin I'm Not Dead Yet!##13221
+		step
+			.' On the Skybreaker Airship:
+			.talk Thassarian##29799
+			..turnin Poke and Prod##13287
+			..accept That's Abominable!##13288
+			..accept Exploiting an Opening##13386
+			..accept Against the Giants##13294
+		step
+			.' On the Skybreaker Airship:
+			.talk Chief Engineer Boltwrench##30345
+			.info Downstairs inside the airship, on the bottom floor, near the front of the airship.
+			.info To get downstairs, run down the stairs in the center of the main deck.
+			..turnin Borrowed Technology##13291
+			..accept Killohertz##13383
+		step
+			goto Icecrown,67.92,60.67
+			.kill Hulking Abomination##31140|n
+			.info You can find them south and southeast of this location.
+			.collect Chilled Abomination Guts##43966|n
+			.info You can only have 1 at a time.
+			.use the Abomination Reanimation Kit##43968
+			.info You will take control of a Hulking Abomination.
+			.info It spawns in as aggressive.
+			.info Make it Defensive or Passive or it will aggro nearby enemies.
+			.info Send your Hulking Abomination into groups of undead enemies near this location.
+			.info Gather them up so that a group of many are attacking your abomination.
+			.info Use the "Burst at the Seams" ability on your pet action bar when you have many attacking your abomination.
+			.info Your abomination will blow up and kill the enemies.
+			.info Do this multiple times.
+			.' Explode 15 Icy Ghouls|q 13288/1
+			.' Explode 15 Vicious Geists|q 13288/2
+			.' Explode 15 Risen Alliance Soldiers|q 13288/3
+		step
+			goto Icecrown,51.75,86.69
+			.talk Captain Kendall##31444
+			..turnin Exploiting an Opening##13386
+			..accept Securing the Perimeter##13387
+		step
+			goto Icecrown,53.05,89.49
+			.kill 10 Hulking Horror##31413|q 13387/1
+			.info Inside the building, on the ground floor.
+			.info You can find them all around this area.
+		step
+			goto Icecrown,51.75,86.69
+			.talk Captain Kendall##31444
+			..turnin Securing the Perimeter##13387
+			..accept Set it Off!##13388
+		step
+			goto Icecrown,54.35,86.24
+			.' Interact with gameobject: Saronite Bomb Stack
+			.info Inside the building, on the ground floor.
+			.info You will fall down the huge whole after you accept the quest.
+			..turnin Set it Off!##13388
+			..accept A Short Fuse##13389
+		step
+			goto Icecrown,53.99,87.29
+			.' Interact with gameobject: Pulsing Crystal
+			.info Underwater.
+			.info Underground, beneath Icecrown Citadel.
+			..turnin A Short Fuse##13389
+			..accept A Voice in the Dark##13390
+		step
+			goto Icecrown,53.81,86.93
+			.talk Matthias Lehner##31237
+			.info Be careful to not accidentally click the portal near him.
+			..turnin A Voice in the Dark##13390
+			..accept Time to Hide##13391
+		step
+			goto Icecrown,55.23,86.71
+			.from Faceless Lurker##31691
+			.info They look like elephant people.
+			.info Underground around this area.
+			.info You can find them all around the Naz'anak: The Forgotten Depths area.
+			.get 3 Faceless One's Blood##44001|q 13391/1
+		step
+			goto Icecrown,53.81,86.93
+			.talk Matthias Lehner##31237
+			.info Be careful to not accidentally click the portal near him.
+			..turnin Time to Hide##13391
+			..accept Return to the Surface##13392
+		step
+			goto Icecrown,53.79,86.84|n
+			.' Interact with gameobject: Surface Portal
+			.info Underground, beneath Icecrown Citadel.
+			.' Escape Naz'anak: The Forgotten Depths|goto Icecrown,49.07,71.56,1|q 13392
+		step
+			goto Icecrown,79.79,71.76
+			.talk Highlord Tirion Fordring##31044
+			..turnin Hope Yet Remains##13080
+			..accept The Will of the Naaru##13081
+		step
+			goto Icecrown,79.90,71.84|n
+			.' Watch the dialogue.
+			.info Rhydian will approach nearby and cast a portal.
+			.' Interact with gameobject: Portal to Shattrath
+			.' Teleport to Shattrath City|goto Shattrath City|q 13081
+		step
+			goto Shattrath City,54.00,44.64
+			.talk A'dal##18481
+			..turnin The Will of the Naaru##13081
+			..accept The Boon of A'dal##13082
+			.info You will be teleported back to Dalaran after you accept the quest.
+		step
+			goto Icecrown,68.95,73.05
+			.from Pustulent Horror##31139
+			.get 5 Pustulant Spine##43997|q 13294/1
+			.' You can find more around|at 64.8,60.15
+		step
+			goto Icecrown,79.85,30.82
+			.talk Crusader Bridenbrad##30562
+			..turnin The Boon of A'dal##13082
+		step
+			goto Icecrown,79.78,30.83
+			.' Interact with gameobject: Bridenbrad's Possessions
+			..accept Light Within the Darkness##13083
+		step
+			.' On the Skybreaker Airship:
+			.talk Thassarian##29799
+			..turnin That's Abominable!##13288
+			..turnin Return to the Surface##13392
+			..turnin Against the Giants##13294
+			..accept Field Repairs##13393
+			..accept Sneak Preview##13315
+		step
+			goto Icecrown,54,42.9
+			.talk Kibli Killohertz##32444
+			..turnin Killohertz##13383
+		step
+			goto Icecrown,53.93,44.68
+			.' Visit the South of Aldur'thar|q 13315/1
+			.info Fly over this location.
+		step
+			goto Icecrown,53.96,41.08
+			.' Visit the Central of Aldur'thar|q 13315/2
+			.info Fly over this location.
+		step
+			goto Icecrown,53.99,34.92
+			.' Visit the North of Aldur'thar|q 13315/3
+			.info Fly over this location.
+		step
+			goto Icecrown,51.05,34.06
+			.' Visit the Northwest of Aldur'thar|q 13315/4
+			.info Fly over this location.
+		step
+			goto Icecrown,44.06,24.54
+			.talk Keritose Bloodblade##30946
+			..accept Parting Gifts##13168
+		step
+			goto Icecrown,44.13,24.71
+			.' Interact with gameobject: Eye of Dominion
+			.' Choose <Seize control of an Eidolon Watcher through the eye.>
+			.' Seize Control of an Eidolon Watcher|q 13168/1
+		step
+			.' Release the Eidolon Watcher |outvehicle |q 13168
+			.info Click the red arrow on your action bar.
+		step
+			goto Icecrown,44.06,24.54
+			.talk Keritose Bloodblade##30946
+			..turnin Parting Gifts##13168
+			..accept An Undead's Best Friend##13169
+			..accept Honor is for the Weak##13170
+			..accept From Whence They Came##13171
+		step
+			goto Icecrown,44.13,24.71
+			.' Interact with gameobject: Eye of Dominion
+			.' Choose <Seize control of an Eidolon Watcher through the eye.>
+			.' Seize Control of an Eidolon Watcher |invehicle |q 13169
+		step
+			goto Icecrown,40.57,32.49
+			.' Feed 18 Hungering Plaguehounds|q 13169/1
+			.info Use the "Feed Hungering Plaguehound" ability on Hungering Plaguehounds.
+			.info They look like demon dogs.
+			.info You can find them all around the Weeping Quarry area.
+			.' You can find more around|at 37.67,41.04
+		step
+			goto Icecrown,40.57,32.49
+			.' Assassinate 20 Restless Lookouts|q 13170/1
+			.info Use the "Assassinate Restless Lookout" ability on Restless Lookouts, when you are behind them.
+			.info They look like ghouls.
+			.info You can find them all around the Weeping Quarry area.
+			.' You can find more around|at 37.67,41.04
+		step
+			goto Icecrown,40.57,32.49
+			.' Banish 10 Scourge Crystals|q 13171/1
+			.info Use the "Banish Scourge Crystal" ability on Scourge Crystals.
+			.info They look like large purple crystals floating above stone pillars.
+			.info You can find them all around the Weeping Quarry area.
+			.' You can find more around|at 37.67,41.04
+		step
+			.' Release the Eidolon Watcher |outvehicle |q 13169
+			.info Click the red arrow on your action bar.
+		step
+			goto Icecrown,44.06,24.54
+			.talk Keritose Bloodblade##30946
+			..turnin An Undead's Best Friend##13169
+			..turnin Honor is for the Weak##13170
+			..turnin From Whence They Came##13171
+			..accept Seeds of Chaos##13172
+			..accept Amidst the Confusion##13174
+		step
+			goto Icecrown,44.06,24.54
+			.talk Keritose Bloodblade##30946
+			.' Tell him "I am prepared to join the assault, Keritose. Do you have a skeletal gryphon ready for me?"
+			.' Join the Assault |invehicle |q 13172
+		step
+			goto Icecrown,39.24,39.08
+			.' Kill enemies around this area
+			.info Use the ability on your action bar on the enemies on the ground as you fly.
+			.info You can find them all around the Weeping Quarry area.
+			.' Slaughter 80 Weeping Quarry Undead|q 13172/1
+		step
+			.' Stop Riding the Skeletal Gryphon |outvehicle |q 13172
+			.info Click the red arrow on your action bar.
+			.info Wait to do this until you know you will land in a safe area.
+		step
+			goto Icecrown,37.23,41.65
+			.collect Weeping Quarry Schedule##43690|q 13174/4
+			.info It looks like a rolled up scroll.
+		step
+			goto Icecrown,38.66,39.41
+			.collect Weeping Quarry Map##43691|q 13174/3
+			.info It looks like a flat brown piece of paper.
+		step
+			goto Icecrown,39.16,36.68
+			.collect Weeping Quarry Ledger##43689|q 13174/2
+			.info It looks like a rolled up scroll.
+		step
+			goto Icecrown,39.11,33.65
+			.collect Weeping Quarry Document##43688|q 13174/1
+			.info It looks like an unrolled scroll, under a canopy.
+		step
+			goto Icecrown,44.06,24.54
+			.talk Keritose Bloodblade##30946
+			..turnin Seeds of Chaos##13172
+			..turnin Amidst the Confusion##13174
+			..accept Vereth the Cunning##13155
+		step
+			goto Icecrown,32.50,42.94
+			.talk The Bone Witch##30232
+			..turnin Through the Eye##13121
+			..accept Find the Ancient Hero##13133
+		step
+			goto Icecrown,27.29,48.23
+			.talk Slumbering Mjordin##30718
+			.info They look like upright sleeping vrykul along the walls inside the building.
+			.info You can find them all around the Halls of the Ancestors area.
+			.info It's random, but you will eventually find Iskalder.
+			.' Choose "Waken the slumbering mjordin to see if it is really the ancient hero, Iskalder."
+			.use The Bone Witch's Amulet##43166
+			.info Use it on Iskalder once you find him.
+			.info He will begin following you.
+			.' Deliver Iskalder to The Bone Witch|at Icecrown,32.50,42.94|q 13133/1
+			.info You can fly to the cave without losing Iskalder.
+		step
+			goto Icecrown,32.50,42.94
+			.talk The Bone Witch##30232
+			..turnin Find the Ancient Hero##13133
+			..accept Not-So-Honorable Combat##13137
+		step
+			goto Icecrown,28.75,52.2
+			.' Interact with gameobject: Battlescar Signal Fire
+			.' Watch the dialogue.
+			.kill Possessed Iskalder##30924|q 13137/1
+		step
+			goto Icecrown,32.50,42.94
+			.talk The Bone Witch##30232
+			..turnin Not-So-Honorable Combat##13137
+			..accept Banshee's Revenge##13142
+		step
+			goto Icecrown,17.5,56.15
+			.' Interact with gameobject: War Horn of Jotunheim
+			.' Watch the dialogue.
+			.kill Overthane Balargarde##31016|q 13142/1
+		step
+			.' Move inside the cathedral|goto Icecrown,9.49,45.17,0.3|q 12847
+		step
+			goto Icecrown,9.5,47.3
+			.kill Archbishop Landgren##29542|q 12847/1
+			.use Arete's Gate##40730|q 12847/2
+			.info Use on his corpse.
+		step
+			.' Watch the dialogue
+			.talk Lord-Commander Arete##29560
+			..turnin Second Chances##12847
+			..accept The Admiral Revealed##12852
+		step
+			.' Move inside the cave|goto Icecrown,9.23,49.22,0.3|q 12852
+		step
+			goto Icecrown,9.1,46.2
+			.use Lord-Commander's Nullifier##40917
+			.info Use to destroy the sphere.
+			.kill Grand Admiral Westwind##29621|q 12852/1
+		step
+			goto Icecrown,19.54,48.15
+			.talk Lord-Commander Arete##29344
+			..turnin The Admiral Revealed##12852
+		step
+			goto Icecrown,32.50,42.94
+			.talk The Bone Witch##30232
+			..turnin Banshee's Revenge##13142
+			..accept Battle at Valhalas##13213
+		step
+			goto Icecrown,30.7,29
+			.talk Geirrvif##31135
+			..turnin Battle at Valhalas##13213
+			..accept Battle at Valhalas: Fallen Heroes##13214
+		step
+			goto Icecrown,30.7,29
+			.goal Fallen Heroes Defeated|q 13214/1
+		step
+			goto Icecrown,31.6,31
+			.talk Gjonner the Merciless##31154
+			..turnin Battle at Valhalas: Fallen Heroes##13214
+		step
+			goto Icecrown,30.7,29
+			.talk Geirrvif##31135
+			..accept Battle at Valhalas: Khit'rix the Dark Master##13215
+		step
+			goto Icecrown,30.7,29
+			.goal Khit'rix the Dark Master Defeated|q 13215/1
+		step
+			goto Icecrown,31.6,31
+			.talk Gjonner the Merciless##31154
+			..turnin Battle at Valhalas: Khit'rix the Dark Master##13215
+		step
+			goto Icecrown,30.7,29
+			.talk Geirrvif##31135
+			..accept Battle at Valhalas: The Return of Sigrid Iceborn##13216
+		step
+			goto Icecrown,30.7,29
+			.goal Sigrid Iceborn Defeated|q 13216/1
+		step
+			goto Icecrown,31.6,31
+			.talk Gjonner the Merciless##31154
+			..turnin Battle at Valhalas: The Return of Sigrid Iceborn##13216
+		step
+			goto Icecrown,30.7,29
+			.talk Geirrvif##31135
+			..accept Battle at Valhalas: Carnage!##13217
+		step
+			goto Icecrown,30.7,29
+			.goal Carnage Defeated|q 13217/1
+		step
+			goto Icecrown,31.6,31
+			.talk Gjonner the Merciless##31154
+			..turnin Battle at Valhalas: Carnage!##13217
+		step
+			goto Icecrown,30.7,29
+			.talk Geirrvif##31135
+			..accept Battle at Valhalas: Thane Deathblow##13218
+		step
+			goto Icecrown,30.7,29
+			.goal Thane Banahogg Defeated|q 13218/1
+		step
+			goto Icecrown,31.6,31
+			.talk Gjonner the Merciless##31154
+			..turnin Battle at Valhalas: Thane Deathblow##13218
+		step
+			goto Icecrown,30.7,29
+			.talk Geirrvif##31135
+			..accept Battle at Valhalas: Final Challenge##13219
+		step
+			goto Icecrown,30.7,29
+			.goal Prince Sandoval Defeated|q 13219/1
+		step
+			goto Icecrown,31.6,31
+			.talk Gjonner the Merciless##31154
+			..turnin Battle at Valhalas: Final Challenge##13219
+		step
+			goto Icecrown,35.50,66.45
+			.talk Crusader Olakin Sainrith##30708
+			..turnin I'm Smelting... Smelting!##13138
+			..turnin The Runesmiths of Malykriss##13140
+			..accept By Fire Be Purged##13211
+		step
+			goto Icecrown,35.39,66.32
+			.talk Darkrider Arly##30631
+			..accept A Visit to the Doctor##13152
+		step
+			goto Icecrown,35.81,66.99
+			.' Interact with gameobject: Metal Stake
+			.info Inside the cave, on the bottom floor.
+			.' Free Patches|q 13152/1
+		step
+			goto Icecrown,35.81,66.99
+			.' Watch the dialogue.
+			.info Inside the cave, on the bottom floor.
+			.kill Doctor Sabnok##30992|n
+			.info "Patches" will kill him, you don't have to fight, just stand close to them.
+			.' Help Patches kill Doctor Sabnok|q 13152/2
+		step
+			goto Icecrown,34.43,68.39
+			.use Olakin's Torch##43524
+			.info Use it near Festering Corpses.
+			.info They look like dead soldiers on the ground.
+			.info You can find them inside and outside the cave.
+			.' Burn 7 Festering Corpses|q 13211/1
+		step
+			goto Icecrown,35.50,66.44
+			.talk Crusader Olakin Sainrith##30708
+			..turnin By Fire Be Purged##13211
+		step
+			goto Icecrown,35.39,66.32
+			.talk Darkrider Arly##30631
+			..turnin A Visit to the Doctor##13152
+			..accept Killing Two Scourge With One Skeleton##13144
+		step
+			goto Icecrown,31.73,70.29
+			.' Interact with gameobject: Grasping Arm
+			.info They look like green skeleton arms on the ground.
+			.info You can find them all around the Fleshwerks area.
+			.info You will gain Burning Skeleton minions.
+			.info You can only have one minion at a time.
+			.' Use the Burning Skeleton Minions
+			.info Stand next to Chained Abominations with your Burning Skeletons, but don't attack them yourself.
+			.info They are along the edge of the platform around this area.
+			.info You can fly without losing your minions.
+			.' Burn 3 Chained Abominations|q 13144/1
+			.' You can find Grasping Arms around|at 34.02,68.99
+		step
+			goto Icecrown,35.39,66.32
+			.talk Darkrider Arly##30631
+			..turnin Killing Two Scourge With One Skeleton##13144
+			..accept He's Gone to Pieces##13212
+		step
+			goto Icecrown,34.15,68.95
+			.from Corpulent Horror##30696
+			.info They look like abominations.
+			.get Olakin's Torso##43526|q 13212/1
+			.get Olakin's Legs##43527|q 13212/2
+			.get Olakin's Left Arm##43528|q 13212/3
+			.get Olakin's Right Arm##43529|q 13212/4
+			.' You can find more around|at 35.57,71.00
+		step
+			goto Icecrown,35.39,66.32
+			.talk Darkrider Arly##30631
+			..turnin He's Gone to Pieces##13212
+			..accept Putting Olakin Back Together Again##13220
+		step
+			goto Icecrown,34.70,65.99
+			.collect Spool of Thread##43567|q 13220
+			.info Inside the cave, on the top floor.
+		step
+			goto Icecrown,36.61,67.57
+			.collect The Doctor's Cleaver##43568|q 13220
+			.info Inside the cave, on the bottom floor.
+		step
+			goto Icecrown,35.59,66.72
+			.use Crusader Olakin's Remains##43564
+			.info On the stone table.
+			.info Inside the cave, on the top level.
+			.' Watch the dialogue
+			.' Revive Crusader Olakin Sainrith|q 13220/1
+		step
+			goto Icecrown,35.39,66.32
+			.talk Darkrider Arly##30631
+			..turnin Putting Olakin Back Together Again##13220
+			..accept The Flesh Giant Champion##13235
+		step
+			goto Icecrown,29.75,61.26
+			.talk Margrave Dhakar##31306
+			.' Tell him "Let's kill this... thing... and get this over with."
+			.' Watch the dialogue
+			.info Your allies will help you fight.
+			.kill Morbidus##30698|q 13235/1
+		step
+			goto Icecrown,35.39,66.32
+			.talk Darkrider Arly##30631
+			..turnin The Flesh Giant Champion##13235
+		step
+			goto Icecrown,54.15,71.17
+			.talk Vereth the Cunning##30944
+			..turnin Vereth the Cunning##13155
+			..accept New Recruit##13143
+		step
+			goto Icecrown,55.59,72.16
+			.kill Lithe Stalker##30894|n
+			.info They look like geists on the bridge.
+			.info Don't kill it, just weaken it to about 20-25% health.
+			.use Sigil of the Ebon Blade##43315
+			.info Use it on a weakened Lithe Stalker.
+			.info It will begin following you.
+			.' Subdue a Lithe Stalker |havebuff INV_Sword_126 |q 13143
+		step
+			goto Icecrown,55.29,70.27
+			.' Watch the dialogue.
+			.info The Lithe Stalker will run here once you bring it close to this location.
+			.' Return the Subdued Lithe Stalker|q 13143/1
+		step
+			goto Icecrown,54.15,71.17
+			.talk Vereth the Cunning##30944
+			..turnin New Recruit##13143
+			..accept The Vile Hold##13145
+		step
+			goto Icecrown,60.81,68.70
+			.' Explore the Icy Lookout|q 13145/3
+			.info Fly near the lookout platform.
+		step
+			goto Icecrown,58.08,70.87
+			.' Explore the Blood Forge|q 13145/2
+			.info Fly near the hole in the ground with a fire tornado rising out of it.
+		step
+			goto Icecrown,59.05,73.74
+			.' Explore the Runeworks|q 13145/4
+			.info Fly near the blacksmith anvils.
+		step
+			goto Icecrown,56.18,80.49
+			.' Explore the Altar of Sacrifice|q 13145/1
+			.info Fly near the tall stone monument.
+		step
+			goto Icecrown,54.15,71.17
+			.talk Vereth the Cunning##30944
+			..turnin The Vile Hold##13145
+			..accept Generosity Abounds##13146
+			..accept Matchmaker##13147
+			..accept Stunning View##13160
+		step
+			goto Icecrown,54.25,70.62
+			.' Interact with gameobject: Eye of Dominion
+			.' Choose <Seize control of a Lithe Stalker through the eye.>
+			.' Seize Control of a Lithe Stalker |invehicle |q 13146
+		step
+			goto Icecrown,57.93,73.72
+			.' Chain Scourge Bombs
+			.info Use the "Iron Chain" ability on your action bar on Scourge Bombs.
+			.info They look like large, round, spiked metal bombs on the ground.
+			.info Drag the Scourge Bombs next to Lumbering Atrocities (abominations) around this area.
+			.info Use the "Leap" ability on your action bar to get around faster.
+			.' Deliver 4 Scourge Bomb Gifts|q 13146/1
+			.' You can find more Scourge Bombs around|at 57.47,75.88
+		step
+			goto Icecrown,59.02,73.78
+			.' Throw Rocks at Umbral Brutes
+			.info Use the "Throw Rock" ability on your action bar on Umbral Brutes.
+			.info They look like muscular zombies.
+			.info Try to throw the rocks when they are already near skeletons.
+			.info They will attack the skeletons and start fights.
+			.info Use the "Leap" ability on your action bar to get around faster.
+			.' Start 5 Worker Fights|q 13147/1
+		step
+			goto Icecrown,59.01,76.27
+			.' Push Iceskin Sentries Off the Cliffs
+			.info Use the "Heave" ability on your action bar next to Iceskin Sentries.
+			.info They look like gargoyles perched up along the cliffs.
+			.info Use the "Leap" ability on your action bar to get around faster, and jump up the cliffs.
+			.' Destroy 12 Iceskin Sentries|q 13160/1
+			.' You can find more around|at 60.55,72.06
+		step
+			.' Release the Lithe Stalker |outvehicle |q 13160
+			.info Click the red arrow on your action bar.
+		step
+			goto Icecrown,54.15,71.17
+			.talk Vereth the Cunning##30944
+			..turnin Generosity Abounds##13146
+			..turnin Matchmaker##13147
+			..turnin Stunning View##13160
+			..accept The Rider of the Unholy##13161
+			..accept The Rider of Frost##13162
+			..accept The Rider of Blood##13163
+		step
+			goto Icecrown,55.9,80.2
+			.kill Rokir##31160|q 13161/1
+		step
+			goto Icecrown,59.4,72.2
+			.kill Baelok##31159|q 13163/1
+		step
+			goto Icecrown,61.9,68.6
+			.kill Sapph##31161|q 13162/1
+		step
+			goto Icecrown,54.15,71.17
+			.talk Vereth the Cunning##30944
+			..turnin The Rider of the Unholy##13161
+			..turnin The Rider of Frost##13162
+			..turnin The Rider of Blood##13163
+			..accept The Fate of Bloodbane##13164
+		step
+			goto Icecrown,54.4,86.1
+			.kill Orbaz Bloodbane##31283|q 13164/1
+		step
+			goto Icecrown,54.15,71.17
+			.talk Vereth the Cunning##30944
+			..turnin The Fate of Bloodbane##13164
+		step
+			goto Icecrown,65.82,53.08
+			.from Scavenging Geist##31847
+			.info They look like frail humanoids crouching on the ground.
+			.info You can find them all around the southern part of the Valley of Lost Hope area.
+			.get 5 Demolisher Parts##44529|q 13393/1
+		step
+			goto Icecrown,68.01,51.88
+			.talk Wrecked Demolisher##31868
+			..turnin Field Repairs##13393
+		step
+			goto Icecrown,68.02,51.59
+			.talk Matthias Lehner##32408
+			..accept Do Your Worst##13394
+		step
+			goto Icecrown,68.0,51.8
+			.' Interact with gameobject: Refurbished Demolisher
+			.' Control the Refurbished Demolisher |invehicle |q 13394
+		step
+			goto Icecrown,64.22,45.77
+			.kill 150 Decomposed Ghoul##31812|q 13394/1
+			.info They look like zombies.
+			.kill 20 Frostskull Magus##31813|q 13394/2
+			.info They look like smaller skeletons wearing capes.
+			.kill 2 Bone Giant##31815|q 13394/3
+			.info They look like huge skeletons that walk around.
+			.info You can find them all around the northern part of the Valley of Lost Hope area.
+			.info Use the abilities on your action bar.
+		step
+			.' Leave the Refurbished Demolisher |outvehicle |q 13394
+			.info Click the yellow arrow on your action bar.
+			.info Kill any nearby enemies first, so you will be safe.
+		step
+			goto Icecrown,64.52,44.00
+			.talk Matthias Lehner##32404
+			..turnin Do Your Worst##13394
+			..accept Army of the Damned##13395
+		step
+			goto Icecrown,65.44,43.97
+			.kill Lordaeron Footsoldier##31254|n
+			.info Use the abilities on your action bar.
+			.info Use the "Gift of the Lich King" ability near their corpses.
+			.' Raise 100 Ghoulish Minions|q 13395/1
+		step
+			goto Icecrown,64.52,44.00
+			.' Dispel the Vision |outvehicle |q 13395
+			.info Click the red arrow on your action bar.
+			.info Go to this location first.
+		step
+			goto Icecrown,64.52,44.00
+			.talk Matthias Lehner##32404
+			..turnin Army of the Damned##13395
+			..accept Futility##13396
+		step
+			.' On the Skybreaker Airship:
+			.talk Thassarian##29799
+			..turnin Futility##13396
+			..turnin Sneak Preview##13315
+			..accept Sindragosa's Fall##13397
+			..accept Drag and Drop##13318
+			..accept Chain of Command##13319
+			..accept Cannot Reproduce##13320
+		step
+			goto Icecrown,53.89,46.84
+			.kill Overseer Faedris##32250|q 13319/1
+			.info Inside the tent.
+		step
+			goto Icecrown,53.96,45.71
+			.kill Bitter Initiate##32238|n
+			.info They look like humans wearing robes.
+			.collect Orb of Illusion##44246|n
+			.use the Orb of Illusion##44246
+			.info Use them on Dark Subjugators.
+			.info They look like humans wearing robes and carrying staves.
+			.info A gargoyle will fly down and kill them.
+			.' Drag and Drop 3 Dark Subjugators|q 13318/1
+		step
+			goto Icecrown,49.71,34.34
+			.use Partitioned Flask##44251
+			.info Next to the cauldron with the purple smoke rising out of it.
+			.' Dark Sample Collected|q 13320/3
+		step
+			goto Icecrown,49.11,34.21
+			.use Partitioned Flask##44251
+			.info Next to the cauldron with the green smoke rising out of it.
+			.' Green Sample Collected|q 13320/2
+		step
+			goto Icecrown,48.98,33.26
+			.use Partitioned Flask##44251
+			.info Next to the cauldron with the grey smoke rising out of it.
+			.' Blue Sample Collected|q 13320/1
+		step
+			goto Icecrown,49.40,31.20
+			.kill Overseer Savryn##32291|q 13319/4
+			.info Under the canopy.
+		step
+			goto Icecrown,54.72,32.62
+			.kill Overseer Jhaeqon##32285|q 13319/2
+			.info Inside the tent.
+		step
+			goto Icecrown,53.68,29.20
+			.kill Overseer Veraj##32263|q 13319/3
+			.info Under the canopy.
+		step
+			.' On the Skybreaker Airship:
+			.talk Thassarian##29799
+			..turnin Drag and Drop##13318
+			..turnin Chain of Command##13319
+			..accept Not a Bug##13342
+			..accept Need More Info##13345
+		step
+			.' On the Skybreaker Airship:
+			.talk Chief Engineer Boltwrench##30345
+			.info Downstairs inside the airship, on the bottom floor, near the front of the airship.
+			.info To get downstairs, run down the stairs in the center of the main deck.
+			..turnin Cannot Reproduce##13320
+			..accept Retest Now##13321
+		step
+			goto Icecrown,55.26,29.28
+			.kill Enslaved Minion##32260|n
+			.info They look like blue voidwalkers.
+			.use Rod of Siphening##44433
+			.info Use it near their corpses.
+			.collect 5 Dark Matter##44434|q 13342
+		step
+			goto Icecrown,53.79,33.55
+			.' Interact with gameobject: Summoning Stone
+			.info It looks like a large floating purple crystal.
+			.' Summon the Dark Messenger|q 13342/1
+		step
+			goto Icecrown,52.35,30.14
+			.from Cult Researcher##32297
+			.info They look like humans wearing black wearings and carrying daggers.
+			.info Be careful, if you use mana, they have an ability that drains your mana and damages you for the same amount.
+			.info Inside the building.
+			.info If you have trouble, try to get someone to help you.
+			.info It's important to get this quest done, since it unlocks more quests.
+			.collect Cult of the Damned Research - Page 1##44459|q 13345
+			.collect Cult of the Damned Research - Page 2##44460|q 13345
+			.collect Cult of the Damned Research - Page 3##44461|q 13345
+		step
+			.use the Cult of the Damned Research - Page 1##44459
+			.collect Cult of the Damned Thesis##44462|q 13345/1
+		step
+			goto Icecrown,51.90,32.81
+			.use Diluted Cult Tonic##44307
+			.info Use it repeatedly, to keep the "Dark Discernment" buff active.
+			.info This buff allows enemies to drop Tainted Essences.
+			.' Kill enemies around this area
+			.info Inside and outside the building.
+			.info Only enemies that look like humans will drop the quest item.
+			.info You can find them all around the Aldur'thar: The Desolation Gate area.
+			.collect 10 Tainted Essence##44301|n
+			.use Tainted Essence##44301
+			.info Use them once you have 10 essences.
+			.collect Writhing Mass##44304|q 13321
+		step
+			goto Icecrown,49.32,33.88
+			.use Writhing Mass##44304
+			.info Use it next to one 1 of the 3 cauldrons around this area.
+			.info Each of the cauldrons will give you a different stat buff for 2 hours, depending on the smoke color.
+			.info Purple = Spell Power.
+			.info Green = Stamina.
+			.info Grey = Attack Power.
+			.' Banish the Writhing Mass|q 13321/1
+		step
+			goto Icecrown,72.31,36.66
+			.kill 5 Wyrm Reanimator##31731|q 13397/1
+			.info They look like humans wearing robes.
+			.' You can find more around (1)|at 72.00,43.46
+			.' You can find more around (2)|at 73.54,42.42
+			.' You can find more around (3)|at 74.84,44.11
+		step
+			goto Icecrown,69.30,38.74
+			.kill 8 Cultist Corrupter##31738|q 13397/2
+			.info They look like humans wearing robes and carrying staves.
+			.info You can find them all around the Sindragos's Fall area.
+			.' You can find more around|at 73.54,43.15
+		step
+			goto Icecrown,69.30,38.74
+			.kill 3 Vrykul Necrolord##31783|q 13397/3
+			.info They look like large zombies carrying staves.
+			.info You can find them all around the Sindragos's Fall area.
+			.' You can find more around|at 73.54,43.15
+		step
+			.' On the Skybreaker Airship:
+			.talk Thassarian##29799
+			..turnin Not a Bug##13342
+			..turnin Sindragosa's Fall##13397
+			..turnin Need More Info##13345
+			..accept Raise the Barricades##13332
+			..accept No Rest For The Wicked##13346
+		step
+			.' On the Skybreaker Airship:
+			.talk Chief Engineer Boltwrench##30345
+			.info Downstairs inside the airship, on the bottom floor, near the front of the airship.
+			.info To get downstairs, run down the stairs in the center of the main deck.
+			..turnin Retest Now##13321
+		step
+			goto Icecrown,71.55,37.62
+			.talk Matthias Lehner##32423
+			..accept Where Dragons Fell##13398
+		step
+			goto Icecrown,69.30,38.74
+			.from Frostbrood Whelp##31718
+			.info They look like tiny skeleton dragons flying low to the ground.
+			.info You can find them all around the Sindragos's Fall area.
+			.get 6 Whelp Bone Dust##44631|q 13398/1
+			.' You can find more around|at 73.54,43.15
+		step
+			goto Icecrown,71.55,37.62
+			.talk Matthias Lehner##32423
+			..turnin Where Dragons Fell##13398
+			..accept Time for Answers##13399
+		step
+			goto Icecrown,50.51,30.00
+			.collect Alumeth's Skull##44476|q 13346
+			.info Inside the building.
+			.info You may need help with this.
+		step
+			goto Icecrown,52.82,30.69
+			.collect Alumeth's Heart##44477|q 13346
+			.info Inside the building.
+			.info You may need help with this.
+		step
+			goto Icecrown,52.83,29.73
+			.collect Alumeth's Scepter##44478|q 13346
+			.info Inside the building.
+			.info You may need help with this.
+		step
+			goto Icecrown,52.99,28.99
+			.collect Alumeth's Robes##44479|q 13346
+			.info Inside the building.
+			.info You may need help with this.
+		step
+			.use Alumeth's Skull##44476
+			.collect Alumeth's Remains##44480|q 13346
+		step
+			goto Icecrown,51.93,28.71
+			.use Alumeth's Remains##44480
+			.kill Alumeth the Ascended##32300|n
+			.info Inside the building.
+			.info You may need help with this.
+			.' Defeat Alumeth the Ascended|q 13346/1
+		step
+			goto Icecrown,49.89,40.47
+			.use Barricade Construction Kit##44127
+			.info Use it near the bursts of purple light and smoke that appear hovering over the ground.
+			.info You can find them all around the Valley of Fallen Heroes area.
+			.' Construct 8 Barricades|q 13332/1
+		step
+			goto Icecrown,49.16,73.12
+			.talk Matthias Lehner##32497
+			..turnin Time for Answers##13399
+			..accept The Hunter and the Prince##13400
+		step
+			goto Icecrown,49.17,73.91
+			.' Interact with gameobject: Bloodstained Stone
+			.info They look like blocky chunks of grey stone on the ground.
+			.info They appear in random locations around this area.
+			.' Watch the dialogue.
+			.info Illidan Stormrage will appear and attack you.
+			.kill Illidan Stormrage##32588|n
+			.info Use the abilities on your action bar.
+			.info Use the "Parry" ability on your action bar until your mana is full.
+			.info Once your mana is full, use the "Stomp" ability, the immediately use the "Annihilate" ability.
+			.info Repeat this process until you kill him.
+			.' Find Out the Prince's Destiny|q 13400/1
+		step
+			goto Icecrown,49.16,73.12
+			.talk Matthias Lehner##32497
+			..turnin The Hunter and the Prince##13400
+			..accept Knowledge is a Terrible Burden##13401
+		step
+			.' On the Skybreaker Airship:
+			.talk Thassarian##29799
+			..turnin Raise the Barricades##13332
+			..turnin No Rest For The Wicked##13346
+			..turnin Knowledge is a Terrible Burden##13401
+			..accept Tirion's Help##13402
+		step
+			goto Icecrown,79.79,71.76
+			.talk Highlord Tirion Fordring##31044
+			..turnin Light Within the Darkness##13083
+			..turnin Tirion's Help##13402
+			..accept Tirion's Gambit##13403
+		step
+			goto Icecrown,45.40,78.23
+			.from Cultist Acolyte##32507
+			.info They look like humans wearing robes.
+			.collect Cultist Acolyte's Hood##44784|q 13403
+		step
+			.use the Cultist Acolyte's Hood##44784
+			.' Wear the Cultist Disguise |havebuff Ability_Rogue_MasterOfSubtlety|q 13403
+		step
+			goto Icecrown,44.41,76.21|n
+			.talk Highlord Tirion Fordring##32239
+			.' Tell him "I'm ready, Highlord."
+			.' Begin Following Highlord Tirion Fordring|goto 42.79,77.9,0.3|q 13403
+		step
+			goto Icecrown,42.78,78.79
+			.' Watch the dialogue
+			.info Follow Highlord Tirion Fordring as he walks.
+			.info He eventually walks to this location inside the building.
+			.' Witness Tirion's Gambit|q 13403/1
+		step
+			goto Icecrown,42.83,78.76
+			.' Interact with gameobject: Escape Portal
+			.info Inside the building.
+			.' Escape to Crusaders' Pinnacle|q 13403
+		step
+			goto Icecrown,79.79,71.76
+			.talk Highlord Tirion Fordring##31044
+			..turnin Tirion's Gambit##13403
+		step
+			.' Congratulations! +142/140 quests for achievement "Icecrown: The Final Goal".
 ]])
 
 ZygorGuidesViewer.AllianceInstalled=true
