@@ -33,7 +33,7 @@ startlevel 15
 			..turnin The Defias Brotherhood (1)##65
 			..accept The Defias Brotherhood (2)##132
 		step //7
-			.'Hearth to Sentinel Hill|goto Westfall,52.89,53.66,3|use Hearthstone##6948|noway|c
+			.' Hearth to Sentinel Hill|goto Westfall,52.89,53.66,3|use Hearthstone##6948|noway|q 132
 		step //8
 			goto Westfall,56.32,47.54
 			.talk Marshal Gryan Stoutmantle##234
@@ -55,7 +55,6 @@ startlevel 15
 			.get A Mysterious Message##1381|q 142/1
 			.' Moves variably into this position|at 36.23,43.97
 			.' Or in this position|at 44.5,25.45
-			.info Dungeon: Deadmines Quest Chain.
 		step //12
 			goto Westfall,56.32,47.54
 			.talk Marshal Gryan Stoutmantle##234
@@ -65,7 +64,7 @@ startlevel 15
 			.talk The Defias Traitor##467
 			..accept The Defias Brotherhood (6)##155
 		step //14
-			.'Follow the Defias Traitor.
+			.' Follow the Defias Traitor.
 			goto Westfall,42.56,71.71
 			.goal Escort The Defias Traitor to discover where VanCleef is hiding.|q 155/1
 		step //15
@@ -109,7 +108,7 @@ startlevel 15
 			..accept Deviate Hides##1486
 		step
 			goto The Barrens,47.73,34.82
-			.' Go To Instance!|tip Good luck!
+			.' Go To Instance!
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackfathom Deeps (20)",[[
@@ -175,7 +174,7 @@ startlevel 23
 			..accept Blueleaf Tubers##1221
 		step
 			goto Thousand Needles,30.7,24.3
-			.' Click to Journal
+			.' Interact with gameobject: Lonebrow's Journal
 			..accept Lonebrow's Journal##1100
 		step
 			goto Feralas,89.6,46.6
@@ -252,10 +251,10 @@ startlevel 25
 			..accept The Dark Iron War##303
 		step
 			goto Wetlands,62.2,28.3
-			.kill 10 Dark Iron Dwarf|q 303/1
-			.kill 5 Dark Iron Tunneler|q 303/2
-			.kill 5 Dark Iron Saboteur|q 303/3
-			.kill 5 Dark Iron Demolitionist|q 303/4
+			.kill 10 Dark Iron Dwarf##1051|q 303/1
+			.kill 5 Dark Iron Tunneler##1053|q 303/2
+			.kill 5 Dark Iron Saboteur##1052|q 303/3
+			.kill 5 Dark Iron Demolitionist##1054|q 303/4
 		step
 			goto Wetlands,49.67,18.25
 			.talk Motley Garmason##1074
@@ -336,8 +335,8 @@ startlevel 35
 			..accept Murdaloc##739
 		step
 			goto Badlands,50.70,67.70
-			.kill 1 Murdaloc|q 739/1
-			.kill 12 Stonevault Bonesnapper|q 739/2
+			.kill 1 Murdaloc##2945|q 739/1
+			.kill 12 Stonevault Bonesnapper##2893|q 739/2
 		step
 			goto Badlands,51.20,76.60
 			.talk Theldurin the Lost##2785
@@ -364,7 +363,6 @@ startlevel 35
 			.collect 1 Krom Stoutarm's Treasure##8027|q 1360/1
 		step
 			goto Badlands,35.3,13.4
-			.' Collect Carved Urn
 			.collect 4 Carved Stone Urn##4610|q 704/1
 			.kill Shadowforge Dwarf|n
 			.get 8 Dentrium Power Stone##8009|q 2418/1
@@ -482,55 +480,55 @@ startlevel 45
 			..accept The Pariah's Instructions##7067
 		step //6
 			goto Desolace,29.10,62.57|n
-			.' Go To Entrance|goto Maraudon,38.43,57.97|noway |q 7065
+			.' Go To Entrance|goto Maraudon,38.43,57.97,0.5|noway |q 7065
 			.info If done, skip manually.
 		step //7
 			goto Desolace,28.1,62.4
-			.kill The Nameless Prophet##13718 |n
-			.collect 1 Amulet of Spirits##17757 |n |q 7067
+			.kill The Nameless Prophet##13718|n
+			.collect Amulet of Spirits##17757|q 7067
 			.info If done, skip manually.
 		step //8
 			goto Desolace,28.43,63.98|n
-			.' Go To Down Tunnel|goto Desolace,28.43,63.98|noway |q 7065
+			.' Go To Down Tunnel|goto Desolace,28.43,63.98,0.5|noway |q 7065
 			.info If done, skip manually.
 		step //9
 			goto Desolace,29.09,61.76|n
-			.' Next to Left Tunnel|goto Desolace,29.09,61.76|noway |q 7067
+			.' Next to Left Tunnel|goto Desolace,29.09,61.76,0.5|noway |q 7067
 			.info If done, skip manually.
 		step //10
 			goto Desolace,29.05,55.43|n
-			.' Jump off carefully|goto Desolace,29.05,55.43|noway |q 7067
+			.' Jump off carefully|goto Desolace,29.05,55.43,0.5|noway |q 7067
 			.info If done, skip manually.
 		step //11
 			goto Desolace,29.7,60.5
 			.' Use Amulet of Spirits on Spirit of Gelk|use Amulet of Spirits##17757|n
-			.from Spirit of Gelk##12239|n
-			.collect 1 Gem of the Second Khan##17762|n |q 7067
+			.from Spirit of Gelk##12239
+			.collect Gem of the Second Khan##17762|q 7067
 			.info If done, skip manually.
 		step //12
 			goto Desolace,28.51,55.96
-			.' Next to Bridge|goto Desolace,28.51,55.96|noway |q 7067
+			.' Next to Bridge|goto Desolace,28.51,55.96,0.5|noway |q 7067
 			.info If done, skip manually.
 		step //13
 			goto Desolace,27.28,56.93
-			.' Next to other Bridge|goto Desolace,27.28,56.93|noway |q 7067
+			.' Next to other Bridge|goto Desolace,27.28,56.93,0.5|noway |q 7067
 			.from Shadowshard Smasher##11778
 			.get 10 Shadowshard Fragment##17756|q 7070/1
 			.info If done, skip manually.
 		step //14
 			goto Desolace,29.58,57.50
-			.' Next to Right Tunnel|goto Desolace,29.58,57.50|noway |q 7067
+			.' Next to Right Tunnel|goto Desolace,29.58,57.50,0.5|noway |q 7067
 			.info If done, skip manually.
 		step //15
 			goto Desolace,29.7,60.5
 			.' Jump Down
 			.' Use Amulet of Spirits on Spirit of Kolk|use Amulet of Spirits##17757|n
 			.from Spirit of Kolk##12240|n
-			.collect 1 Gem of the First Khan##17761|n |q 7067
+			.collect Gem of the First Khan##17761|q 7067
 			.info If done, skip manually.
 		step //16
 			goto Desolace,29.3,63.9
-			.' Next to Orange Tunnel|goto Desolace,29.3,63.9|noway |q 7065
+			.' Next to Orange Tunnel|goto Desolace,29.3,63.9,0.5|noway |q 7065
 			.info If done, skip manually.
 		step //17
 			goto Desolace,32.1,64
@@ -541,17 +539,17 @@ startlevel 45
 			.use Coated Cerulean Vial##17693|q 7041/2
 		step //19
 			goto Desolace,34.6,64.07
-			.' Next to Upper Tunnel|goto Desolace,34.6,64.07|noway |q 7065
+			.' Next to Upper Tunnel|goto Desolace,34.6,64.07,0.5|noway |q 7065
 			.info If done, skip manually.
 		step //20
 			goto Desolace,34.3,60.63
-			.' Jump Down|goto Desolace,34.6,60.46|noway |q 7065
+			.' Jump Down|goto Desolace,34.6,60.46,0.5|noway |q 7065
 			.info If done, skip manually.
 		step //21
 			goto Desolace,35.8,60.4
 			.' Use Amulet of Spirits on Spirit of Magra|use Amulet of Spirits##17757|n
 			.from Spirit of Magra##12241|n
-			.collect 1 Gem of the Third Khan##17763|n |q 7067
+			.collect Gem of the Third Khan##17763|q 7067
 			.info If done, skip manually.
 		step //22
 			goto Desolace,36,64.2
@@ -593,9 +591,9 @@ startlevel 47
 		step //8
 			goto Feralas,58.27,56.09
 			.from Grizzled Ironfur Bear##5272, Ironfur Bear##5268, Ironfur Patriarch##5274
-			.get 3 Ironfur Liver|q 1452/2
+			.get 3 Ironfur Liver##6258|q 1452/2
 			.from Groddoc Ape##5260, Groddoc Thunderer##5262
-			.get 3 Groddoc Liver|q 1452/3
+			.get 3 Groddoc Liver##6259|q 1452/3
 			.' You can find more around|at 58.15,58.50
 		step //9
 			goto Feralas,31.90,45.60
@@ -608,7 +606,7 @@ startlevel 47
 		step //11
 			goto Un'Goro Crater,67.3,32.6
 			.from Bloodpetal Lasher##6509, Bloodpetal Flayer##6510, Bloodpetal Thresher##6511, Bloodpetal Trapper##6512
-			.get 15 Bloodpetal|q 4141/1
+			.get 15 Bloodpetal##11316|q 4141/1
 		step //12
 			goto Un'Goro Crater,42.9,9.6
 			.talk Muigin##9119
@@ -617,7 +615,7 @@ startlevel 47
 		step //13
 			goto Tanaris,45.20,37.93
 			.from Roc##5428, Fire Roc##5429, Searing Roc##5430
-			.get 3 Roc Gizzard|q 1452/1
+			.get 3 Roc Gizzard##6257|q 1452/1
 		step //14
 			goto Tanaris,52.70,46.00
 			.talk Marvon Rivetseeker##7771
@@ -637,9 +635,8 @@ startlevel 47
 			..accept Haze of Evil##4143
 		step //17
 			goto The Barrens,62.5,38.5
-			.' Click the little brown box outside the house on the ground
+			.collect Stone Circle##10556|q 3444/1
 			.info It's a small wooden chest to the right of the doorway to a small house.
-			.get Stone Circle|q 3444/1
 		step //18
 			goto The Hinterlands,27.00,48.50
 			.talk Rhapsody Shindigger##5634
@@ -652,7 +649,7 @@ startlevel 47
 			..accept Jammal'an the Prophet##1446
 		step //20
 			goto The Hinterlands,57.56,86.76
-			.get Ancient Egg|q 4787/1
+			.collect Ancient Egg##12402|q 4787/1
 			.' In Cave
 		step //21
 			goto Stormwind,69.50,40.40
@@ -713,7 +710,8 @@ startlevel 50
 			..accept Overmaster Pyron##4262
 		step //9
 			goto Burning Steppes,64.1,41.8
-			.' Click the Thaurissan Relics|tip They look like little white stone statues on the ground around this area.
+			.' Click the Thaurissan Relics
+			.info They look like little white stone statues on the ground around this area.
 			.' Gather Information from 12 Thaurissan Relics|goal 12 Information Recovered|q 3701/1
 		step //10
 			goto Burning Steppes,65.30,24.20
@@ -726,12 +724,12 @@ startlevel 50
 			..accept Ribbly Screwspigot##4136
 		step //12
 			goto Burning Steppes,21.99,11.98
-			.kill Overmaster Pyron|q 4262/1
+			.kill Overmaster Pyron##9026|q 4262/1
 			.' Pyron standing at the entrance to Blackrock Depth.
 		step //13
 			goto Searing Gorge,37.94,30.84
 			.talk Lanie Reed##2941
-			..fpath Thorium Point
+			.fpath Thorium Point, Searing Gorge
 		step //14
 			goto Searing Gorge,39.1,39
 			.talk Kalaran Windblade##8479
@@ -742,9 +740,9 @@ startlevel 50
 		step //15
 			goto Searing Gorge,30.8,72.8
 			.from Tempered War Golem##5855, Heavy War Golem##5854
-			.get 4 Golem Oil|q 3442/2
+			.get 4 Golem Oil##10511|q 3442/2
 			.from Blazing Elemental##5850, Inferno Elemental##5852, Magma Elemental##5855
-			.get 4 Heart of Flame|q 3442/1
+			.get 4 Heart of Flame##10509|q 3442/1
 		step //16
 			goto Searing Gorge,39,38.9
 			.talk Kalaran Windblade##8479
@@ -753,7 +751,7 @@ startlevel 50
 		step //17
 			goto Searing Gorge,42.4,47.1
 			.from Dark Iron Steamsmith##5840, Dark Iron Slaver##5844, Dark Iron Taskmaster##5846
-			.get 8 Thorium Plated Dagger|q 3443/1
+			.get 8 Thorium Plated Dagger##10551|q 3443/1
 		step //18
 			goto Searing Gorge,39,38.9
 			.talk Kalaran Windblade##8479
@@ -762,7 +760,7 @@ startlevel 50
 		step //19
 			goto Searing Gorge,29.1,25.9
 			.from Twilight Dark Shaman##5860, Twilight Fire Guard##5861, Twilight Geomancer##5862, Twilight Idolater##8419
-			.get Symbol of Ragnaros|q 3452/1
+			.get Symbol of Ragnaros##10552|q 3452/1
 		step //20
 			goto Searing Gorge,39,38.9
 			.talk Kalaran Windblade##8479
@@ -778,20 +776,20 @@ startlevel 50
 			..accept Set Them Ablaze!##3463
 		step //21
 			goto Searing Gorge,33.3,54.5
-			.' Click the Sentry Brazier|tip At the top of the tower, click the little metal blazer on the ground.
 			.' Set the Northern Tower Ablaze|goal Northern Tower Ablaze|q 3463/4
+			.info At the top of the tower, click the little metal blazer on the ground.
 		step //22
 			goto Searing Gorge,35.7,60.7
-			.' Click the Sentry Brazier|tip At the top of the tower, click the little metal blazer on the ground.
 			.' Set the Western Tower Ablaze|goal Western Tower Ablaze|q 3463/1
+			.info At the top of the tower, click the little metal blazer on the ground.
 		step //23
 			goto Searing Gorge,44,60.9
-			.' Click the Sentry Brazier|tip At the top of the tower, click the little metal blazer on the ground.
 			.' Set the Southern Tower Ablaze|goal Southern Tower Ablaze|q 3463/2
+			.info At the top of the tower, click the little metal blazer on the ground.
 		step //24
 			goto Searing Gorge,50.1,54.7
-			.' Click the Sentry Brazier|tip At the top of the tower, click the little metal blazer on the ground.
 			.' Set the Eastern Tower Ablaze|goal Eastern Tower Ablaze|q 3463/3
+			.info At the top of the tower, click the little metal blazer on the ground.
 		step //25
 			goto Searing Gorge,39.1,39
 			.talk Squire Maltrake##8509
@@ -848,20 +846,20 @@ startlevel 55
 			.info Can be skipped for a short route.
 		step //2
 			goto Eastern Plaguelands,24.9,63.6
-			.kill 20 Plaguehound Runt|q 5542/1
-			.kill 30 Plaguebat|q 5543/1
+			.kill 20 Plaguehound Runt##8596|q 5542/1
+			.kill 30 Plaguebat##8600|q 5543/1
 			.from Carrion Grub##8603, Carrion Devourer##8605
-			.get 15 Slab of Carrion Worm Meat|q 5544/1
+			.get 15 Slab of Carrion Worm Meat##13853|q 5544/1
 			.info Required for full completion.
 			.info Can be skipped for a short route.
 		step //3
 			goto Eastern Plaguelands,52.5,49.1
-			.kill 5 Plaguehound|q 5542/2
+			.kill 5 Plaguehound##8597|q 5542/2
 			.info Required for full completion.
 			.info Can be skipped for a short route.
 		step //4
 			goto Eastern Plaguelands,44.4,35.5
-			.kill 5 Frenzied Plaguehound|q 5542/3
+			.kill 5 Frenzied Plaguehound##8598|q 5542/3
 			.info Required for full completion.
 			.info Can be skipped for a short route.
 		step //5
@@ -959,7 +957,7 @@ startlevel 57
 			goto Burning Steppes,90.4,55.9
 			.' Use your Draco-Incarcinatrix 900 on Black Broodlings and kill them|use Draco-Incarcinatrix 900##12284
 			.' Click the red crystals that float over their corpses.
-			.get 8 Broodling Essence|q 4726/1
+			.get 8 Broodling Essence##12283|q 4726/1
 		step
 			goto Burning Steppes,65.2,23.9
 			.talk Tinkee Steamboil##10267
@@ -1112,9 +1110,9 @@ startlevel 59
 			..accept The Path of Anguish##10142
 		step
 			goto Hellfire Peninsula,65.8,54.1
-			.kill 1 Dreadcaller|q 10142/1
-			.kill 4 Flamewaker Imp|q 10142/2
-			.kill 6 Infernal Warbringer|q 10142/3
+			.kill 1 Dreadcaller##19434|q 10142/1
+			.kill 4 Flamewaker Imp##19136|q 10142/2
+			.kill 6 Infernal Warbringer##19261|q 10142/3
 		step
 			goto Hellfire Peninsula,61.7,60.8
 			.talk Sergeant Altumus##19309
@@ -1127,7 +1125,7 @@ startlevel 59
 			..accept Fel Orc Scavengers##10482
 		step
 			goto Hellfire Peninsula,60.4,52.1
-			.kill 20 Bonechewer Orc|q 10482/1
+			.' Slain 20 Bonechewer Orc|q 10482/1
 		step
 			goto Hellfire Peninsula,50.9,60.2
 			.talk Lieutenant Amadi##16820
@@ -1136,7 +1134,7 @@ startlevel 59
 		step
 			goto Hellfire Peninsula,65.8,67.2
 			.from Bleeding Hollow Grunt##16871, Bleeding Hollow Dark Shaman##16873, Bleeding Hollow Peon##16907
-			.get Cursed Talisman|q 10483/1
+			.get Cursed Talisman##30157|q 10483/1
 		step
 			goto Hellfire Peninsula,71,63.4
 			.talk Corporal Ironridge##21133
@@ -1160,7 +1158,8 @@ author danaton
 startlevel 59
 		step
 			.' You must complete Hellfire Ramparts questline before proceeding with this chain.
-			.' Next line will check the condition|tip Manually skip this step
+			.' Next line will check the condition
+			.info Manually skip this step.
 			..turnin Weaken the Ramparts##9575
 		step
 			goto Hellfire Peninsula,56.4,66.7
@@ -1205,7 +1204,7 @@ startlevel 70
 			goto Hellfire Peninsula,56.7,62.6
 			.' Need friendly rep from Honor Hold |rep Honor Hold,Friendly
 			.talk Logistics Officer Ulrike##17657
-			.buy 1##30622
+			.buy Flamewrought Key##30622
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Heroic Instance Keys\\Auchindoun (70)",[[
@@ -1217,7 +1216,7 @@ startlevel 70
 			goto Shattrath City,62.0,68.8
 			//.' Need honored rep from Lower City |rep Lower City,Honored
 			.talk Nakodu##21655
-			.buy 1##30633
+			.buy Auchenai Key##30633
 ]])
 
 ZygorGuidesViewer.AllianceInstalled=true

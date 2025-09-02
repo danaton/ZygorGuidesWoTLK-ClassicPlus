@@ -14,7 +14,7 @@ startlevel 10
 		step
 			goto Azuremyst Isle,78.6,45.4
 			.from Vale Moth##16520
-			.get 8 Vial of Moth Blood|q 9369/1
+			.get 8 Vial of Moth Blood##22889|q 9369/1
 			only !Draenei
 		step
 			goto Azuremyst Isle,80.4,45.9
@@ -40,7 +40,7 @@ startlevel 10
 			..accept Volatile Mutations##10302
 		step
 			goto Azuremyst Isle,78.94,42.7
-			.kill 8 Volatile Mutation|q 10302/1
+			.kill 8 Volatile Mutation##16516|q 10302/1
 		step
 			goto Azuremyst Isle,79.1,46.5
 			.talk Botanist Taerix##16514
@@ -51,19 +51,23 @@ startlevel 10
 		step
 			goto Azuremyst Isle,74.9,50.4
 			.from Mutated Root Lasher##16517
-			.get 10 Lasher Sample|q 9293/1
-			.get 3 Corrupted Flower|q 9799/1
+			.get 10 Lasher Sample##22934|q 9293/1
+		step
+			goto Azuremyst Isle,74.9,50.4
+			.collect 3 Corrupted Flower##24416|q 9799/1
 			.info The Corrupted Flowers are tall red flowers around this area.
 		step
 			goto Azuremyst Isle,79.1,46.5
 			.talk Botanist Taerix##16514
 			..turnin What Must Be Done...##9293
 			..accept Healing the Lake##9294
+		step
+			goto Azuremyst Isle,79.1,46.6
 			.talk Apprentice Vishael##20233
 			..turnin Botanical Legwork##9799
 		step
 			goto Azuremyst Isle,77.3,58.7
-			.' Interact with Irradiated Power Crystal
+			.' Interact with gameobject: Irradiated Power Crystal
 			.info It's a huge purple crystal sitting in the lake.
 			.' Disperse the Neutralizing Agent|q 9294/1
 		step
@@ -83,9 +87,8 @@ startlevel 10
 		step
 			goto Azuremyst Isle,84.7,65.6
 			.' Go through the tunnel into the small clearing|at 82.93,61.52
-			.' Collect the Emitter Spare Parts
+			.collect 4 Emitter Spare Part##22978|q 9305/1
 			.info They look like purple crystal guns sitting on the ground.
-			.get 4 Emitter Spare Part|q 9305/1
 		step
 			goto Azuremyst Isle,85.32,67.5
 			.' Use your Inoculating Crystal on Nestlewood Owlkins|use Inoculating Crystal##22962
@@ -106,7 +109,7 @@ startlevel 10
 			..accept The Blood Elves##10303
 		step
 			goto Azuremyst Isle,71,63
-			.kill 10 Blood Elf Scout|q 10303/1
+			.kill 10 Blood Elf Scout##16521|q 10303/1
 		step
 			goto Azuremyst Isle,72,60.8
 			.talk Tolaan##16546
@@ -115,8 +118,9 @@ startlevel 10
 		step
 			goto Azuremyst Isle,69.3,65.7
 			.kill Surveyor Candress##16522|q 9311/1
-			.'Get the Blood Elf Plans
-			.' Click the Blood Elf Plans|use Blood Elf Plans##24414
+			.collect Blood Elf Plans##24414|q 9798 |future
+		step
+			.use Blood Elf Plans##24414
 			..accept Blood Elf Plans##9798
 		step
 			goto Azuremyst Isle,79.5,51.4
@@ -141,7 +145,7 @@ startlevel 10
 			goto Azuremyst Isle,61.9,51.6
 			.' Use your Draenei Fishing Net next to the Schools of Red Snapper|use Draenei Fishing Net##23654
 			.info They look like little round schools of fish in the water.
-			.get 10 Red Snapper|q 9452/1
+			.collect 10 Red Snapper##23614|q 9452/1
 		step
 			goto Azuremyst Isle,61.1,54.2
 			.talk Diktynna##17101
@@ -163,13 +167,15 @@ startlevel 10
 		step
 			goto Azuremyst Isle,52.9,61.44
 			.from Blood Elf Bandit##17591|n
-			.collect 1 Blood Elf Communication##23910|q 9616
-			..accept Bandits!##9616|use Blood Elf Communication##23910
+			.collect Blood Elf Communication##23910|q 9616
+		step
+			.use Blood Elf Communication##23910
+			..accept Bandits!##9616
 		step
 			goto Azuremyst Isle,50.3,56.6
 			.from Moongraze Stag##17200
-			.get 6 Moongraze Stag Tenderloin|q 9454/1
-			.' You can find more|at 56.32,63.79
+			.get 6 Moongraze Stag Tenderloin##23676|q 9454/1
+			.' You can find more Stags|at 56.32,63.79
 		step
 			goto Azuremyst Isle,47,70.2
 			.talk Admiral Odesyus##17240
@@ -181,7 +187,7 @@ startlevel 10
 		step
 			goto Azuremyst Isle,47.6,73
 			.from Skittering Crawler##17216
-			.get 6 Skittering Crawler Meat|q 9512/1
+			.get 6 Skittering Crawler Meat##23757|q 9512/1
 		step
 			goto Azuremyst Isle,46.7,70.5
 			.talk "Cookie" McWeaksauce##17246
@@ -207,8 +213,10 @@ startlevel 10
 		step
 			goto Azuremyst Isle,50,44.2
 			.kill Infected Nightstalker Runt##17202|n
-			.collect 1 Faintly Glowing Crystal##23678|q 9455
-			..accept Strange Findings##9455|use Faintly Glowing Crystal##23678
+			.collect Faintly Glowing Crystal##23678|q 9455
+		step
+			.use Faintly Glowing Crystal##23678
+			..accept Strange Findings##9455
 		step
 			goto Azuremyst Isle,55.2,41.6
 			.talk Totem of Coo##17361
@@ -226,12 +234,12 @@ startlevel 10
 			..accept Totem of Vark##9542
 		step
 			goto Azuremyst Isle,59.6,67.6
-			.' Collect the Nautical Compass under the blue canopy with a green stripe on it
-			.get Nautical Compass##23738|q 9506/1
+			.collect Nautical Compass##23738|q 9506/1
+			.info Collect the Nautical Compass under the blue canopy with a green stripe on it.
 		step
 			goto Azuremyst Isle,58.6,66.4
-			.' Collect the Nautical Map sitting on a box under a green canopy
-			.get Nautical Map##23739|q 9506/2
+			.collect Nautical Map##23739|q 9506/2
+			.info Collect the Nautical Map sitting on a box under a green canopy.
 		step
 			goto Azuremyst Isle,47,70.2
 			.talk Admiral Odesyus##17240
@@ -247,9 +255,8 @@ startlevel 10
 			..accept Precious and Fragile Things Need Special Handling##9523
 		step
 			goto Azuremyst Isle,46.53,65.99
-			.' Collect a Hollowed Out Tree
+			.collect Hollowed Out Tree##23790|q 9530/1
 			.info They look like tall, skinny tree stumps around this area.
-			.get Hollowed Out Tree|q 9530/1
 		step
 			goto Azuremyst Isle,49,51.1
 			.talk Dulvi##17488
@@ -262,12 +269,12 @@ startlevel 10
 		step
 			goto Azuremyst Isle,50.6,46.2
 			.from Moongraze Buck##17201
-			.get 6 Moongraze Buck Hide|q 10324/1
-			.' You can find more 1|at 52.72,42.38
-			.' You can find more 2|at 55.05,29.83
+			.get 6 Moongraze Buck Hide##23677|q 10324/1
+			.' You can find more around|at 52.72,42.38
+			.' You can find more around|at 55.05,29.83
 		step
 			goto Azuremyst Isle,44.15,40.15
-			.kill 8 Infected Nightstalker Runt|q 9456/1
+			.kill 8 Infected Nightstalker Run##17202t|q 9456/1
 		step
 			goto Azuremyst Isle,49.8,51.9
 			.talk Acteon##17110
@@ -278,8 +285,8 @@ startlevel 10
 			..turnin Nightstalker Clean Up, Isle 2...##9456
 		step
 			goto Azuremyst Isle,41.15,66.45
-			.' Collect the small piles of purple leaves
-			.get 5 Pile of Leaves|q 9530/2
+			.collect 5 Pile of Leaves##23791|q 9530/2
+			.info Collect the small piles of purple leaves.
 		step
 			goto Azuremyst Isle,47,70.2
 			.talk Admiral Odesyus##17240
@@ -293,8 +300,8 @@ startlevel 10
 		step
 			goto Azuremyst Isle,28.5,66.4
 			.from Bristlelimb Ursa##17185, Bristlelimb Windcaller##17184, Bristlelimb Furbolg##17183
-			.collect 8 Bristlelimb Key##23801|n
-			.' Click the yellow cages
+			.collect Bristlelimb Key##23801|n
+			.' Interact with gameobject: The yellow cages
 			.' Free 8 Stillpine Captives|goal 8 Stillpine Captive Freed|q 9544/1
 		step
 			goto Azuremyst Isle,18.5,84.3
@@ -317,22 +324,27 @@ startlevel 10
 		step
 			goto Azuremyst Isle,14.8,92
 			.from Raving Owlbeast##17188, Aberrant Owlbeast##17187, Deranged Owlbeast##17186
-			.get Remains of Cowlen's Family|q 9527/1
+			.get Remains of Cowlen's Family##23789|q 9527/1
 		step
 			goto Azuremyst Isle,16.6,94.5
 			.talk Cowlen##17311
 			..turnin All That Remains##9527
 		step
 			goto Azuremyst Isle,36.1,77
-			.' Click the white glowing orbs
-			.get 8 Ancient Relic|q 9523/1
-			.kill 5 Wrathscale Myrmidon|q 9513/1
-			.kill 5 Wrathscale Naga|q 9513/2
-			.kill 5 Wrathscale Siren|q 9513/3
-			.from Wrathscale Myrmidon##17194, Wrathscale Naga##17193, Wrathscale Siren##17195
-			.' Get a Rune Covered Tablet
-			.' Click the Rune Covered Tablet
-			..accept Rune Covered Tablet##9514|use Rune Covered Tablet##23759
+			.collect 8 Ancient Relic##23779|q 9523/1
+			.info Collect the white glowing orbs.
+		step
+			goto Azuremyst Isle,36.1,77
+			.kill 5 Wrathscale Myrmidon##17194|q 9513/1
+			.kill 5 Wrathscale Naga##17193|q 9513/2
+			.kill 5 Wrathscale Siren##17195|q 9513/3
+		step
+			goto Azuremyst Isle,36.1,77
+			.from Wrathscale Naga##17193, Wrathscale Myrmidon##17194, Wrathscale Siren##17195
+			.collect Rune Covered Tablet##23759|q 9514 |future
+		step
+			.use Rune Covered Tablet##23759
+			..accept Rune Covered Tablet##9514
 		step
 			goto Azuremyst Isle,47,70.2
 			.talk Admiral Odesyus##17240
@@ -351,7 +363,7 @@ startlevel 10
 		step
 			goto Azuremyst Isle,48.2,72.5
 			.from Engineer "Spark" Overgrind##17243
-			.get Traitor's Communication|q 9537/1
+			.get Traitor's Communication##23899|q 9537/1
 		step
 			goto Azuremyst Isle,47,70.2
 			.talk Admiral Odesyus##17240
@@ -360,7 +372,7 @@ startlevel 10
 		step
 			goto Azuremyst Isle,25.2,74.2
 			.' Follow the path to the bottom of the cave|at 27.12,76.91
-			.kill Warlord Sriss'tiz|q 9515/1
+			.kill Warlord Sriss'tiz##17298|q 9515/1
 		step
 			goto Azuremyst Isle,47,70.2
 			.talk Priestess Kyleen Il'dinare##17241
@@ -397,12 +409,13 @@ startlevel 10
 			..turnin Beasts of the Apocalypse!##9560
 		step
 			goto Azuremyst Isle,33.8,25.7
-			.from Siltfin Murloc##17190, Siltfin Oracle##17191, Siltfin Hunter##17192
-			.' Click the Stillpine Grain bags near the murloc huts
-			.get 5 Stillpine Grain|q 9562/1
+			.collect 5 Stillpine Grain##23849|q 9562/1
+		step
+			goto Azuremyst Isle,35,22
 			.from Murgurgala##17475
-			.' Get Gurf's Dignity|n
-			.' Click Gurf's Dignity|use Gurf's Dignity##23850
+			.collect Gurf's Dignity##23850|q 9564 |future
+		step
+			.use Gurf's Dignity##23850
 			..accept Gurf's Dignity##9564
 		step
 			goto Azuremyst Isle,44.7,23.6
@@ -424,13 +437,12 @@ startlevel 10
 		step
 			goto Azuremyst Isle,47.4,16.0
 			.' Go upstairs in the cave
-			.kill 9 Crazed Wildkin|q 9573/2
+			.kill 9 Crazed Wildkin##17189|q 9573/2
 		step
 			goto Azuremyst Isle,47.4,14.1
 			.kill Chieftain Oomooroo##17448|q 9573/1
 		step
 			goto Azuremyst Isle,46.7,20.6
-			.' Go outside the cave
 			.talk High Chief Stillpine##17440
 			..turnin Blood Crystals##9566
 		step
@@ -443,9 +455,9 @@ startlevel 10
 			..accept The Kurken is Lurkin'##9570
 		step
 			goto Azuremyst Isle,49.9,13.0
-			.' Go inside the big cave
 			.from The Kurken##17447
-			.get The Kurken's Hide|q 9570/1
+			.info Go inside the big cave.
+			.get The Kurken's Hide##23860|q 9570/1
 		step
 			goto Azuremyst Isle,47.0,22.3
 			.' Go outside the cave
@@ -556,7 +568,7 @@ startlevel 20
 			.' Declare Your Power|q 9666/2
 		step
 			goto Bloodmyst Isle,68.26,80.89
-			.' Interact with Princess Stillpine's Cage
+			.' Interact with gameobject: Princess Stillpine's Cage
 			.' Save Princess Stillpine|q 9667/1
 		step
 			goto Bloodmyst Isle,63.00,87.54
@@ -565,7 +577,7 @@ startlevel 20
 			..accept Report to Exarch Admetius##9668
 		step
 			goto Bloodmyst Isle,55.23,59.11
-			.' Click Wanted Poster
+			.' Interact with gameobject: Wanted Poster
 			..accept WANTED: Deathclaw##9646
 		step
 			goto Bloodmyst Isle,53.25,57.75
@@ -595,26 +607,23 @@ startlevel 20
 			..accept Blood Watch##9694
 		step
 			goto Bloodmyst Isle,60.7,42.0
-			.' Collect Ruinous Polyspore
-			.info They look like brown mushrooms on the ground around this area.
 			.collect Ruinous Polyspore##24042|q 9648/3
+			.info They look like brown mushrooms on the ground around this area.
 		step
 			goto Bloodmyst Isle,62.3,53.0
-			.' Collect Blood Mushroom
-			.info They look like orange glowing mushrooms on the ground around this area.
 			.collect Blood Mushroom##24040|q 9648/2
+			.info They look like orange glowing mushrooms on the ground around this area.
 		step
 			goto Bloodmyst Isle,61.35,67.99
-			.' Collect Aquatic Stinkhorn
-			.info They look like big mushrooms with spikes on them underwater in the red water around this area.
 			.collect Aquatic Stinkhorn##24041|q 9648/1
+			.info They look like big mushrooms with spikes on them underwater in the red water around this area.
 		step
 			goto Bloodmyst Isle,58.20,83.35
 			.' Use the Crystal Mining Pick on Impact Site Crystal|use Crystal Mining Pick##23875
 			.collect Impact Site Crystal Sample##23878|q 9581/1
 		step
 			goto Bloodmyst Isle,47.8,94.4
-			.kill Cruelfin##17496 |n
+			.kill Cruelfin##17496|n
 			.info He looks like an orange murloc that walks along the beach around this area.
 			..accept Cruelfin's Necklace##9576|use Red Crystal Pendant##23870
 		step
@@ -624,9 +633,8 @@ startlevel 20
 			.' Tag 6 Blacksilt Scouts|q 9629/1
 		step
 			goto Bloodmyst Isle,44.4,82.4
-			.' Click Fel Cone Fungus
-			.info They look like big brown mushrooms on the ground around this area.
 			.collect Fel Cone Fungus##24043|q 9648/4
+			.info They look like big brown mushrooms on the ground around this area.
 		step
 			goto Bloodmyst Isle,56.4,56.8
 			.talk Jessera of Mac'Aree##17663
@@ -671,12 +679,12 @@ startlevel 20
 			.from Wrathscale Marauder##17334, Wrathscale Sorceress##17336
 			.info They are all around this whole area.
 			.info It will likely take a while before this item drops.
-			.collect Survey Data Crystal##23932|q 9628/1
+			.get Survey Data Crystal##23932|q 9628/1
 		step
 			goto Bloodmyst Isle,62.62,47.94
 			.from Wrathscale Marauder##17334, Wrathscale Sorceress##17336
 			.info They are all around this whole area.
-			.collect 10 Irradiated Crystal Shard##23984|q 9641/1
+			.get 10 Irradiated Crystal Shard##23984|q 9641/1
 		step
 			goto Bloodmyst Isle,52.6,53.2
 			.talk Harbinger Mikolaas##17423
@@ -696,11 +704,10 @@ startlevel 20
 			.get 6 Crystallized Bark##23869|q 9574/1
 		step
 			goto Bloodmyst Isle,36.50,71.36
-			.' Collect Nazzivus Monument Glyph
 			.collect Nazzivus Monument Glyph##23859|q 9567/1
 		step
 			goto Bloodmyst Isle,36.64,73.50
-			.kill Tzerak##17528 |n
+			.kill Tzerak##17528|n
 			.info He looks like a felguard that walks around the whole Nazzivian area.
 			..accept Signs of the Legion##9594|use Tzerak's Armor Plate##23900
 		step
@@ -749,7 +756,7 @@ startlevel 20
 			..accept Talk to the Hand##10064
 		step
 			goto Bloodmyst Isle,41.11,49.92
-			.from Elder Brown Bear##17348+
+			.from Elder Brown Bear##17348
 			.get 8 Elder Brown Bear Flank##24026|q 9580/1
 		step
 			goto Bloodmyst Isle,41.11,49.92
@@ -771,9 +778,8 @@ startlevel 20
 			.kill 5 Axxarien Hellcaller##17342|q 9569/3
 		step
 			goto Bloodmyst Isle,41.46,33.50
-			.' Click Corrupted Crystal
-			.info They look like big red crystals on the ground around this area.
 			.collect 5 Corrupted Crystal##23863|q 9569/4
+			.info They look like big red crystals on the ground around this area.
 		step
 			goto Bloodmyst Isle,37.1,30.3
 			.from Deathclaw##17661
@@ -826,10 +832,10 @@ startlevel 20
 		step
 			goto Bloodmyst Isle,48.06,34.68
 			.kill 10 Royal Blue Flutterer##17350|q 9647/1
-			.' You can find more|at 34.8,44
+			.' You can find more around|at 34.8,44
 		step
 			goto Bloodmyst Isle,52.5,22.3
-			Confirm the Sun Portal Site|q 9700/1
+			.' Confirm the Sun Portal Site|q 9700/1
 		step
 			goto Bloodmyst Isle,52.5,22.3
 			.kill 5 Void Anomaly##17550|q 9700/2
@@ -841,10 +847,9 @@ startlevel 20
 			..accept Artifacts of the Blacksilt##9549
 		step
 			goto Bloodmyst Isle,40.4,20.1
-			.' Collect Clopper's Equipment
+			.collect Clopper's Equipment##23830|q 9548/1 
 			.info It looks like a wooden crate on the ground next to a murloc hut.
 			.info It can spawn in any of the little murloc camps along the beach around this area.
-			.collect Clopper's Equipment##23830|q 9548/1 
 		step
 			goto Bloodmyst Isle,38.7,21.2
 			.from Blacksilt Seer##17330
@@ -856,8 +861,9 @@ startlevel 20
 			.talk Clopper Wizbang##17421
 			..turnin Pilfered Equipment##9548
 			..turnin Artifacts of the Blacksilt##9549
-			.' Use Weathered Treasure Map|use Weathered Treasure Map##23837
-			..accept A Map to Where?##9550|use Weathered Treasure Map##23837
+		step
+			.use Weathered Treasure Map##23837
+			..accept A Map to Where?##9550
 		step
 			goto Bloodmyst Isle,55.85,57.00
 			.talk Tracker Lyceon##17642
@@ -872,7 +878,7 @@ startlevel 20
 			..turnin I Shoot Magic Into the Darkness##9700
 		step
 			goto Bloodmyst Isle,61.16,41.89
-			.' Interact with Battered Ancient Book
+			.' Interact with gameobject: Battered Ancient Book
 			..turnin A Map to Where?##9550
 			..accept Deciphering the Book##9557
 		step
@@ -894,7 +900,7 @@ startlevel 20
 			..accept Searching for Galaen##9578
 		step
 			goto Bloodmyst Isle,61.18,49.64
-			.' Interact with Mound of Dirt
+			.' Interact with gameobject: Mound of Dirt
 			..turnin Nolkai's Words##9561
 		step
 			goto Bloodmyst Isle,74.06,33.92
@@ -902,10 +908,9 @@ startlevel 20
 			..accept Restoring Sanctity##9687
 		step
 			goto Bloodmyst Isle,59.9,35.7
-			.' Collect Dragon Bone
+			.collect 8 Dragon Bone##24185|q 9687/1
 			.info They look like orange and white spiked bones planted in the ground around this area.
 			.info You can find more the west.
-			.collect 8 Dragon Bone##24185|q 9687/1
 		step
 			goto Bloodmyst Isle,74.06,33.92
 			.talk Prince Toreth##17674
@@ -913,11 +918,10 @@ startlevel 20
 			..accept Into the Dream##9688
 		step
 			goto Bloodmyst Isle,71.39,28.34
-			.' Collect Ysera's Tear
+			.collect 2 Ysera's Tear##24049|q 9649/1
 			.info They look like a green mushrooms on the ground around this area.
 			.info You can usually find 2 without going up the mountain.
 			.info If you can't, though, you can find more by following the path up the mountain nearby.
-			.collect 2 Ysera's Tear##24049|q 9649/1
 		step
 			goto Bloodmyst Isle,75.4,29.6
 			.kill 5 Veridian Whelp##17588|q 9688/1
@@ -931,7 +935,7 @@ startlevel 20
 			..accept Razormaw##9689
 		step
 			goto Bloodmyst Isle,72.67,20.78
-			.' Interact with Ever-burning Pyre
+			.' Interact with gameobject: Ever-burning Pyre
 			.info Keepclicking it until Razormaw flies down to fight you.
 			.kill Razormaw##17592|q 9689/1
 		step
@@ -964,7 +968,7 @@ startlevel 20
 			..accept Ending the Bloodcurse##9683
 		step
 			goto Bloodmyst Isle,85.94,54.32
-			.' Interact with Statue of Queen Azshara
+			.' Interact with gameobject: Statue of Queen Azshara
 			.kill Atoph the Bloodcursed##17715|q 9683/1
 		step
 			goto Bloodmyst Isle,79.15,22.65
@@ -985,7 +989,7 @@ startlevel 20
 			..accept Galaen's Fate##9579
 		step
 			goto Bloodmyst Isle,37.56,61.24
-			.' Interact with Galaen's Journal
+			.' Interact with gameobject: Galaen's Journal
 			.info Inside the building.
 			..accept Galaen's Journal - The Fate of Vindicator Saruan##9706
 		step
@@ -994,10 +998,8 @@ startlevel 20
 			.get Galaen's Amulet##23873|q 9579/1
 		step
 			goto Bloodmyst Isle,39.6,58.9
-			.from Sunhawk Reclaimer##17606
-			.' Collect Medical Supplies
+			.collect 12 Medical Supplies##24236|q 9703/1
 			.info They look like silver metal boxes on the ground around this area.
-			.get 12 Medical Supplies##24236|q 9703/1
 		step
 			goto Bloodmyst Isle,53.24,57.74
 			.talk Morae##17434
@@ -1014,10 +1016,10 @@ startlevel 20
 			..accept Don't Drink the Water##9748
 		step
 			goto Bloodmyst Isle,39.6,45.3
-			.' Use the Flare Gun on Matis the Cruel |use Flare Gun##24278
+			.' Use the Flare Gun on Matis the Cruel|use Flare Gun##24278
 			.info Use it before you engage him.
 			.info He walks along this road.
-			.kill Matis the Cruel##17664 |n
+			.kill Matis the Cruel##17664|n
 			.info Don't kill him, just get him to low health.
 			.info The NPC that appears will fight him for you.
 			.' Capture Matis the Cruel|q 9711/1
@@ -1145,7 +1147,7 @@ startlevel 20
 			only Draenei
 		step
 			goto Bloodmyst Isle,14.25,53.67
-			.kill Sironas##17678 |n
+			.kill Sironas##17678|n
 			.info Follow Demolitionist Legoso and protect him.
 			.info Stay close to him.
 			.' Watch the dialogue
@@ -1160,7 +1162,7 @@ startlevel 20
 			.kill Zarakh##17683|q 9669/3
 		step
 			goto Bloodmyst Isle,18.19,37.78
-			.kill Webbed Creature##17680 |n
+			.kill Webbed Creature##17680|n
 			.info They look like wriggling white cocoons on the ground around this area.
 			.' Free 5 Expedition Researchers|q 9670/1
 		step
@@ -1209,8 +1211,8 @@ startlevel 10
 			..accept The Balance of Nature (1)##456
 		step
 			goto Teldrassil,58.5,45.9
-			.kill 7 Young Nightsaber|q 456/1
-			.kill 4 Young Thistle Boar|q 456/2
+			.kill 7 Young Nightsaber##2031|q 456/1
+			.kill 4 Young Thistle Boar##1984|q 456/2
 		step
 			goto Teldrassil,58.7,44.3
 			.talk Conservator Ilthalaine##2079
@@ -1231,9 +1233,9 @@ startlevel 10
 			..accept The Woodland Protector (2)##459
 		step
 			goto Teldrassil,56.5,45.5
-			.from Grell##1988+, Grellkin##1989+
-			.get 8 Fel Moss|q 459/1
-			.' POS-Spot|at Teldrassil,54.47,39.24
+			.from Grell##1988, Grellkin##1989
+			.get 8 Fel Moss##3297|q 459/1
+			.' You can find more Grells|at 54.47,39.24
 		step
 			goto Teldrassil,57.6,45.3
 			.talk Tarindrella##1992
@@ -1244,12 +1246,12 @@ startlevel 10
 			..accept Webwood Venom##916
 		step
 			goto Teldrassil,58.8,36.8
-			.kill 7 Mangy Nightsaber|q 457/1
-			.kill 7 Thistle Boar|q 457/2
+			.kill 7 Mangy Nightsaber##2032|q 457/1
+			.kill 7 Thistle Boar##1985|q 457/2
 		step
 			goto Teldrassil,58.3,32.9
-			.from Webwood Spider##1986+
-			.get 10 Webwood Venom Sac|q 916/1
+			.from Webwood Spider##1986
+			.get 10 Webwood Venom Sac##5166|q 916/1
 		step
 			goto Teldrassil,54.6,33
 			.talk Iverron##8584
@@ -1271,31 +1273,30 @@ startlevel 10
 			..accept Iverron's Antidote (1)##3521
 		step
 			goto Teldrassil,55.2,39.6
-			.from Grell##1988+, Grellkin##1989+
-			.get 7 Hyacinth Mushroom|q 3521/1
+			.from Grell##1988, Grellkin##1989
+			.get 7 Hyacinth Mushroom##10639|q 3521/1
 		step
 			goto Teldrassil,57.7,38.5
-			.' Click Moonpetal Lilies|tip The Moonpetal Lillies look like tall flower with orange petals around the pond here.
-			.get 4 Moonpetal Lily|q 3521/2
+			.collect 4 Moonpetal Lily##10641|q 3521/2
+			.info The Moonpetal Lillies look like tall flower with orange petals around the pond here.
 		step
 			goto Teldrassil,56.7,32.1
-			.from Webwood Spider##1986+
-			.get Webwood Ichor|q 3521/3
+			.from Webwood Spider##1986
+			.get Webwood Ichor##10640|q 3521/3
 		step
-			.'Go into the cave at 56.8,31.7|goto 56.8,31.7|n
+			.' Go into the cave at 56.8,31.7|goto 56.8,31.7|n
 			.' Follow the path in the middle, then go left
-			.' Go up to the ledge above|goto Teldrassil,55.8,25.5,0.5|c
+			.' Go up to the ledge above|goto Teldrassil,55.8,25.5,0.5|q 917
 		step
 			goto Teldrassil,56.7,26.4
-			.' Click a Webwood Egg
-			.get Webwood Egg|q 917/1
+			.collect Webwood Egg##5167|q 917/1
 		step
 			goto Teldrassil,57.8,41.7
 			.talk Gilshalan Windwalker##2082
 			..turnin Webwood Egg##917
 			..accept Tenaron's Summons##920
 		step
-			.'Follow the ramp to the top of the tree|goto Teldrassil,59.4,39.0,0.5|noway|c
+			.' Follow the ramp to the top of the tree|goto Teldrassil,59.4,39.0,0.5|noway|q 920
 		step
 			goto Teldrassil,59.1,39.4
 			.talk Tenaron Stormgrip##3514
@@ -1313,11 +1314,11 @@ startlevel 10
 		step
 			goto Teldrassil,59.9,33.1
 			.' Use your Crystal Phial in the moonwell water|use Crystal Phial##5185
-			.get Filled Crystal Phial|q 921/1
+			.collect Filled Crystal Phial##5184|q 921/1
 		step
 			goto Teldrassil,59.1,39.4
 			.talk Tenaron Stormgrip##3514
-			..'Go to the top of the big tree
+			.' Go to the top of the big tree
 			..turnin Crown of the Earth (1)##921
 			..accept Crown of the Earth (2)##928
 		step
@@ -1330,14 +1331,14 @@ startlevel 10
 			..accept Zenn's Bidding##488
 		step
 			goto Teldrassil,63.8,54.2
-			.from Strigid Owl##1995+
-			.get 3 Strigid Owl Feather|q 488/2
+			.from Strigid Owl##1995
+			.get 3 Strigid Owl Feather##3411|q 488/2
 		step
 			goto Teldrassil,60.6,58.2
-			.from Webwood Lurker##1998+
-			.get 3 Webwood Spider Silk|q 488/3
-			.from Nightsaber##2042+
-			.get 3 Nightsaber Fang|q 488/1
+			.from Webwood Lurker##1998
+			.get 3 Webwood Spider Silk##3412|q 488/3
+			.from Nightsaber##2042
+			.get 3 Nightsaber Fang##3409|q 488/1
 		step
 			goto Teldrassil,60.4,56.3
 			.talk Zenn Foulhoof##2150
@@ -1368,7 +1369,7 @@ startlevel 10
 		step
 			goto Teldrassil,63.3,58.1
 			.' Use your Jade Phial in the moonwell water|use Jade Phial##5619
-			.get Filled Jade Phial|q 929/1
+			.collect Filled Jade Phial##5639|q 929/1
 		step
 			goto Teldrassil,66.3,58.5
 			.talk Gaerolas Talvethren##2107
@@ -1376,12 +1377,12 @@ startlevel 10
 			..accept Gnarlpine Corruption##476
 		step
 			goto Teldrassil,68,59.6
-			.' Click Tallonkai's Dresser|tip To the right in the small house.
-			.get Emerald Dreamcatcher|q 2438/1
+			.collect Emerald Dreamcatcher##8048|q 2438/1
+			.info To the right in the small house.
 		step
 			goto Teldrassil,63.6,62.3
-			.' Click Fel Cones|tip They are big, brown, green smoking pine cones at the base of trees.
-			.get 3 Fel Cone|q 489/1
+			.collect 3 Fel Cone##3418|q 489/1
+			.info They are big, brown, green smoking pine cones at the base of trees.
 		step
 			goto Teldrassil,56,57.3
 			.talk Athridas Bearmantle##2078
@@ -1409,10 +1410,10 @@ startlevel 10
 			..accept Timberling Sprouts##919
 		step
 			goto Teldrassil,61.2,66.8
-			.from Timberling##2022+
-			.get 8 Timberling Seed|q 918/1
-			.' Click Timberling Sprouts|tip They are brown and green bulbs on the ground.
-			.get 12 Timberling Sprout|q 919/1
+			.from Timberling##2022
+			.get 8 Timberling Seed##5168|q 918/1
+			.collect 12 Timberling Sprout##5169|q 919/1
+			.info They are brown and green bulbs on the ground.
 		step
 			goto Teldrassil,60.9,68.5
 			.talk Denalan##2080
@@ -1421,15 +1422,16 @@ startlevel 10
 			..turnin Timberling Sprouts##919
 		step
 			goto Teldrassil,68.3,53.7
-			.kill 7 Gnarlpine Mystic|q 2459/1
+			.kill 7 Gnarlpine Mystic##7235|q 2459/1
 		step
 			goto Teldrassil,69.4,53.3
 			.from Ferocitas the Dream Eater##7234
-			.get Gnarlpine Necklace|n
-			.' Click the Gnarlpine Necklace|use Gnarlpine Necklace##8049
-			.get Tallonkai's Jewel|q 2459/2
+			.collect Gnarlpine Necklace##8049|q 2459
 		step
-			.'Go to the top of the tower to 55.6,56.9|goto 55.6,56.9
+			.use Gnarlpine Necklace##8049
+			.collect Tallonkai's Jewel##8050|q 2459/2
+		step
+			.' Go to the top of the tower to|at 55.6,56.9
 			.talk Tallonkai Swiftroot##3567
 			..turnin Ferocitas the Dream Eater##2459
 		step
@@ -1438,29 +1440,29 @@ startlevel 10
 			..accept The Road to Darnassus##487
 		step
 			goto Teldrassil,46.7,53.5
-			.kill 6 Gnarlpine Ambusher|q 487/1
+			.kill 6 Gnarlpine Ambusher##2152|q 487/1
 		step
-			.'Go southwest into the cave at 44.4,57.8|goto Teldrassil,44.4,57.8,0.5|c
+			.' Go southwest into the cave at|goto Teldrassil,44.4,57.8,0.5|q 483
 		step
 			goto Teldrassil,43.7,61.2
-			.' Click the Chest of the Black Feather|tip On the top floor of the cave, across the bridge to the right, in the small room, on the right on the ground.
-			.get Black Feather Quill|q 483/2
+			.collect Black Feather Quill##3406|q 483/2
+			.info On the top floor of the cave, across the bridge to the right, in the small room, on the right on the ground.
 		step
 			goto Teldrassil,44.4,60.7
-			.' Click the Chest of Nesting|tip On the top floor of the cave, across the middle bridge, on the ground to the right in the small room.
-			.get Rune of Nesting|q 483/4
+			.collect Rune of Nesting##3408|q 483/4
+			.info On the top floor of the cave, across the middle bridge, on the ground to the right in the small room.
 		step
-			.'Go downstairs to 44.9,61.6|goto 44.9,61.6
+			.' Go downstairs to|at 44.9,61.6
 			.talk Oben Rageclaw##7317
 			..accept The Sleeping Druid##2541
 		step
-			.'Go to the next room over to 45.6,58.7|goto 45.6,58.7
-			.from Gnarlpine Shaman##2009+
-			.get Shaman Voodoo Charm|q 2541/1
+			.' Go to the next room over to|at 45.6,58.7
+			.from Gnarlpine Shaman##2009
+			.get Shaman Voodoo Charm##8363|q 2541/1
 		step
 			goto Teldrassil,45.7,57.4
-			.' Click the Chest of the Raven Claw|tip At the bottom of the cave, up across the bridge, on a ledge.
-			.get Raven Claw Talisman|q 483/1
+			.collect Raven Claw Talisman##3405|q 483/1
+			.info At the bottom of the cave, up across the bridge, on a ledge.
 		step
 			goto Teldrassil,44.9,61.6
 			.talk Oben Rageclaw##7317
@@ -1472,20 +1474,21 @@ startlevel 10
 			.' Use the Voodoo Charm on his corpse|use Voodoo Charm##8149
 			.' Release Oben Rageclaw's spirit|goal Release Oben Rageclaw's spirit|q 2561/1
 		step
-			.'Go through the tunnel back to where Oben Rageclaw is to 44.7,62.5|goto 44.7,62.5
-			.' Click the Chest of the Sky|tip Down the path at the bottom of the cave, next to Greenpaw.
-			.get Sapphire of Sky|q 483/3
+			.' Go through the tunnel back to where Oben Rageclaw is to|at 44.7,62.5
+			.collect Sapphire of Sky##3407|q 483/3
+			.info Down the path at the bottom of the cave, next to Greenpaw.
 		step
-			.'Go back up the path to 44.9,61.6|goto 44.9,61.6
+			.' Go back up the path to|at 44.9,61.6
 			.talk Oben Rageclaw##7317
 			..turnin Druid of the Claw##2561
 		step
 			goto Teldrassil,42.4,67.1
 			.' Use your Tourmaline Phial in the moonwell water|use Tourmaline Phial##5621
-			.get Filled Tourmaline Phial|q 933/1
+			.collect Filled Tourmaline Phial##5645|q 933/1
 		step
 			goto Teldrassil,42.6,76.1
-			.' Click the Strange Fruited Plant|tip It looks like a big pink glowing plant.
+			.' Interact with gameobject: Strange Fruited Plant
+			.info It looks like a big pink glowing plant.
 			..accept The Glowing Fruit##930
 		step
 			goto Teldrassil,60.9,68.5
@@ -1497,13 +1500,13 @@ startlevel 10
 			..turnin The Relics of Wakening##483
 			..accept Ursal the Mauler##486
 		step
-			.'Go north to Fel Rock|goto Teldrassil,54.7,52.8,0.5|c
+			.' Go north to Fel Rock|goto Teldrassil,54.7,52.8,0.5|q 932
 		step
-			.'Go inside the cave to 52.8,50.2|goto 52.8,50.2
+			.' Go inside the cave to|at 52.8,50.2
 			.from Lord Melenas##2038
-			.get Melenas' Head|q 932/1
+			.get Melenas' Head##5221|q 932/1
 		step
-			'Go outside and go to the top of the tower to 55.6,56.9|goto 55.6,56.9
+			.' Go outside and go to the top of the tower to|at 55.6,56.9
 			.talk Tallonkai Swiftroot##3567
 			..turnin Twisted Hatred##932
 		step
@@ -1522,11 +1525,11 @@ startlevel 10
 		step
 			goto Teldrassil,38.4,34.1
 			.' Click the Amethyst Phial in your bags|use Amethyst Phial##18152
-			.get Filled Amethyst Phial|q 7383/1
+			.collect Filled Amethyst Phial##18151|q 7383/1
 		step
 			goto 37.4,37.3
-			.from Bloodfeather Rogue##2017+, Bloodfeather Sorceress##2018+, Bloodfeather Harpy##2015+
-			.get 6 Bloodfeather Belt|q 937/1
+			.from Bloodfeather Harpy##2015, Bloodfeather Rogue##2017, Bloodfeather Sorceress##2018
+			.get 6 Bloodfeather Belt##5204|q 937/1
 		step
 			goto Teldrassil,38.3,34.4
 			.talk Sentinel Arynia Cloudsbreak##3519
@@ -1534,7 +1537,8 @@ startlevel 10
 			..accept Teldrassil##940
 		step
 			goto Teldrassil,34.7,29
-			.' Click the Strange Fronded Plant|tip It's a big glowing pink plant up on a hill.
+			.' Interact with gameobject: Strange Fronded Plant
+			.info It's a big glowing pink plant up on a hill.
 			..accept The Shimmering Frond##931
 		step
 			goto Teldrassil,31.5,31.6
@@ -1580,7 +1584,7 @@ startlevel 10
 			..accept Grove of the Ancients##952
 		step
 			goto Teldrassil,42.5,33
-			.from Timberling Trampler##2027+, Timberling Mire Beast##2029+, Elder Timberling##2030+
+			.from Timberling Trampler##2027, Timberling Mire Beast##2029, Elder Timberling##2030
 			.get 5 Mossy Tumor##5170|q 923/1
 		step
 			goto Darnassus,38.2,21.6
@@ -1591,7 +1595,7 @@ startlevel 10
 			goto Teldrassil,60.9,68.5
 			.talk Denalan##2080
 			..turnin Return to Denalan##2498
-			..accept Oakenscowl#2499
+			..accept Oakenscowl##2499
 		step
 			goto Teldrassil,53.8,75.1
 			.from Oakenscowl##2166
@@ -1601,7 +1605,7 @@ startlevel 10
 			.talk Denalan##2080
 			..turnin Oakenscowl##2499
 		step
-			.' Go into the pink portal to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+			.' Go into the pink portal to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|q 6344
 		step
 			goto Teldrassil,56.3,92.4
 			.talk Nessa Shadowsong##10118
@@ -1615,7 +1619,7 @@ startlevel 10
 		step
 			goto Teldrassil,58.4,94
 			.talk Vesprystus##3838
-			.'Fly to Auberdine|goto Darkshore,36.4,45.6,0.5|noway|c
+			.' Fly to Auberdine|goto Darkshore,36.4,45.6,0.5|noway|q 6342
 		step
 			goto Darkshore,36.8,44.3
 			.talk Laird##4200
@@ -1624,7 +1628,7 @@ startlevel 10
 		step
 			goto Darkshore,36.3,45.6
 			.talk Caylais Moonfeather##3841
-			.'Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+			.' Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|q 6343
 		step
 			goto Teldrassil,56.3,92.4
 			.talk Nessa Shadowsong##10118
@@ -1635,7 +1639,7 @@ startlevel 10
 			..turnin Grove of the Ancients##952
 			.' This quest can be turning in the following quest-guide - Darkshore
 		step
-			.' Completed!|tip Use next guide - Darkshore
+			.' Congratulations! +35 quests for achievement "Loremaster of Kalimdor".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[20] Darkshore",[[
@@ -1809,12 +1813,12 @@ startlevel 20
 			.collect Cliffspring River Sample##12349|q 4762/1
 		step
 			goto Darkshore,55.64,36.13
-			.' Сan be found on the upper level of the cave
 			.collect 1 Death Cap##5270|q 947/2
+			.info Сan be found on the upper level of the cave.
 		step
 			goto Darkshore,55.1,33.6
-			.' Inside the cave
 			.collect 5 Scaber Stalk##5271|q 947/1
+			.info Inside the cave.
 		step
 			goto Darkshore,48.4,30.7
 			.kill 20 Rabid Thistle Bear##2164|q 2138/1
@@ -1830,7 +1834,7 @@ startlevel 20
 			.talk Beached Sea Turtle##991009
 			..accept Beached Sea Turtle##4725
 		step
-			.' Hearth to Auberdine|goto Darkshore,37,44.10|use Hearthstone##6948|noway|q 4723
+			.' Hearth to Auberdine|goto Darkshore,37,44.10,0.3|use Hearthstone##6948|noway|q 4723
 		step
 			goto Darkshore,35.7,43.7
 			.talk Cerellean Whiteclaw##3644
@@ -1879,28 +1883,25 @@ startlevel 20
 		step
 			goto Darkshore,37.8,44
 			.' Use Empty Cleansing Bowl on a Moonwell|use Empty Cleansing Bowl##12346
-			.' Manually skip this step!
+			.collect Filled Cleansing Bowl##12347|q 4763
 		step
 			goto Darkshore,52.4,35.9|n
-			.' The path up to Tharnariun's Hope starts here|goto Darkshore,52.4,35.9,0.5|noway|c
+			.' The path up to Tharnariun's Hope starts here|goto Darkshore,52.4,35.9,0.5|noway|q 2139
 		step
 			goto Darkshore,51.5,38.2
 			.kill Den Mother##6788|q 2139/1
 		step
 			goto Darkshore,50.7,34.9
-			.collect 1 Blackwood Grain Sample##12342|q 4763/1
-			.' Manually skip this step
+			.collect Blackwood Grain Sample##12342|q 4763
 		step
 			goto Darkshore,51.8,33.5
-			.collect 1 Blackwood Nut Sample##12343|q 4763/1
-			.' Manually skip this step
+			.collect Blackwood Nut Sample##12343|q 4763
 		step
 			goto Darkshore,52.9,33.4
-			.collect 1 Blackwood Fruit Sample##12341|q 4763/1
-			.' Manually skip this step
+			.collect Blackwood Fruit Sample##12341|q 4763
 		step
 			goto Darkshore,52.43,33.37
-			.' Use EFilled Cleansing Bowl on a Bonfire|use Filled Cleansing Bowl##12347
+			.' Use Filled Cleansing Bowl on a Bonfire|use Filled Cleansing Bowl##12347
 			.kill 1 Xabraxxis##10373|q 4763/1
 			.collect Talisman of Corruption##12355|q 4763/1
 		step
@@ -1940,12 +1941,12 @@ startlevel 20
 			..accept The Fall of Ameth'Aran##953
 		step
 			goto Darkshore,42.4,61.8
-			.' Click the Ancient Flame
+			.' Interact with gameobject: Ancient Flame
 			.info It's a stone podium with a green coming out of the top of it, inside a dark colored broken gazebo.
 			.goal Destroy the seal at the ancient flame|q 957/1
 		step
 			goto Darkshore,42.6,63.1
-			.' Click the Fall of Ameth'Aran
+			.' Interact with gameobject: Fall of Ameth'Aran
 			.info It's a stone tablet standing upright on the ground.
 			.goal Read the Fall of Ameth'Aran|q 953/2
 		step
@@ -1954,7 +1955,7 @@ startlevel 20
 			.get Anaya's Pendant##5382|q 963/1
 		step
 			goto Darkshore,43.3,58.7
-			.' Click the Lay of Ameth'Aran
+			.' Interact with gameobject: Lay of Ameth'Aran
 			.info It's a stone tablet laying flat on the ground.
 			.goal Read the Lay of Ameth'Aran|q 953/1
 		step
@@ -2040,7 +2041,7 @@ startlevel 20
 			.' Jump on the table with the remains on it
 			.' Click your Phial of Scrying in your bags|use Phial of Scrying##5251
 			.' Create the Scrying Bowl
-			.' Click the Scrying Bowl
+			.' Interact with gameobject: Scrying Bowl
 			..turnin The Master's Glaive##944
 			..accept The Twilight Camp##949
 			.' Click the Twilight Tome
@@ -2126,14 +2127,14 @@ startlevel 20
 		step
 			goto Ashenvale,34.4,48
 			.talk Daelyshia##4267
-			..fpath Astranaar, Ashenvale
+			.fpath Astranaar, Ashenvale|q 973
 		step
 			goto Ashenvale,26.2,38.6
 			.talk Delgren the Purifier##3663
 			..turnin The Tower of Althalaxx (5)##973
 			..accept The Tower of Althalaxx (6)##1140
 		step
-			goto Ashenvale,66.63,56.90
+			goto Ashenvale,66.63,56.90|n
 			.' Move Path Here|at 72.21,49.83
 			.' Free the Highborne soul in Night Run|q 1140/1
 		step
@@ -2277,6 +2278,8 @@ startlevel 20
 			goto Wetlands,10.8,60.4
 			.talk Archaeologist Flagongut##2911
 			..turnin The Absent Minded Prospector (5)##943
+		step
+			.' Congratulations! +0 quests for achievement "Loremaster of Kalimdor".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[30] Ashenvale",[[
