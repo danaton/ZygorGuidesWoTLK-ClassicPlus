@@ -46,6 +46,8 @@ startlevel 10
 			.talk Botanist Taerix##16514
 			..turnin Volatile Mutations##10302
 			..accept What Must Be Done...##9293
+		step
+			goto Azuremyst Isle,79.1,46.6
 			.talk Apprentice Vishael##20233
 			..accept Botanical Legwork##9799
 		step
@@ -166,8 +168,8 @@ startlevel 10
 			..turnin Word from Azure Watch##9314
 		step
 			goto Azuremyst Isle,52.9,61.44
-			.from Blood Elf Bandit##17591|n
-			.collect Blood Elf Communication##23910|q 9616
+			.kill Blood Elf Bandit##17591|n
+			.collect Blood Elf Communication##23910|q 9616 |future
 		step
 			.use Blood Elf Communication##23910
 			..accept Bandits!##9616
@@ -201,8 +203,12 @@ startlevel 10
 			goto Azuremyst Isle,49.40,51.0
 			.talk Cryptographer Aurren##17232
 			..accept Learning the Language##9538
-			.' Click the Stillpine Furbolg Language Primer in your bags|use Stillpine Furbolg Language Primer##23818
-			.' Click the Totem of Akida next to Cryptographer Aurren
+		step
+			.use Stillpine Furbolg Language Primer##23818
+			.' Stillpine Furbolg Language Primer Read|q 9538/1
+		step
+			goto Azuremyst Isle,49.4,51
+			.talk Totem of Akida##17360
 			.info In the middle of town, next to the giant bone altar thing with the huge pink crystal in it.
 			..turnin Learning the Language##9538
 			..accept Totem of Coo##9539
@@ -213,7 +219,7 @@ startlevel 10
 		step
 			goto Azuremyst Isle,50,44.2
 			.kill Infected Nightstalker Runt##17202|n
-			.collect Faintly Glowing Crystal##23678|q 9455
+			.collect Faintly Glowing Crystal##23678|q 9455 |future
 		step
 			.use Faintly Glowing Crystal##23678
 			..accept Strange Findings##9455
@@ -301,7 +307,7 @@ startlevel 10
 			goto Azuremyst Isle,28.5,66.4
 			.from Bristlelimb Ursa##17185, Bristlelimb Windcaller##17184, Bristlelimb Furbolg##17183
 			.collect Bristlelimb Key##23801|n
-			.' Interact with gameobject: The yellow cages
+			.' Interact with gameobject: Bristlelimb Cage
 			.' Free 8 Stillpine Captives|goal 8 Stillpine Captive Freed|q 9544/1
 		step
 			goto Azuremyst Isle,18.5,84.3
@@ -370,8 +376,9 @@ startlevel 10
 			..turnin Show Gnomercy##9537
 			..accept Deliver Them From Evil...##9602
 		step
+			.' Follow the path to the bottom of the cave|goto 27.12,76.91,0.3|q 9515
+		step
 			goto Azuremyst Isle,25.2,74.2
-			.' Follow the path to the bottom of the cave|at 27.12,76.91
 			.kill Warlord Sriss'tiz##17298|q 9515/1
 		step
 			goto Azuremyst Isle,47,70.2
@@ -427,16 +434,17 @@ startlevel 10
 			.talk Stillpine the Younger##17445
 			..accept Chieftain Oomooroo##9573
 		step
+			.' Go inside the big cave|goto 45.3,19.5,0.3|q 9565
+		step
+			.' Go to lower tunnel|goto 46.7,15.56,0.3|q 9565
+		step
 			goto Azuremyst Isle,50.5,11.5
-			.' Go inside the big cave|at 45.3,19.5
-			.' Go to lower tunnel|at 46.7,15.56
-			.' Interact with the Blood Crystal
+			.' Interact with gameobject: Blood Crystal
 			.info It's a huge red crystal on a little dirt island in the water.
 			..turnin Search Stillpine Hold##9565
 			..accept Blood Crystals##9566
 		step
 			goto Azuremyst Isle,47.4,16.0
-			.' Go upstairs in the cave
 			.kill 9 Crazed Wildkin##17189|q 9573/2
 		step
 			goto Azuremyst Isle,47.4,14.1
@@ -460,7 +468,6 @@ startlevel 10
 			.get The Kurken's Hide##23860|q 9570/1
 		step
 			goto Azuremyst Isle,47.0,22.3
-			.' Go outside the cave
 			.talk Kurz the Revelator##17443
 			..turnin The Kurken is Lurkin'##9570
 			..accept The Kurken's Hide##9571
@@ -520,7 +527,6 @@ startlevel 20
 			goto Azuremyst Isle,47.04,70.21
 			.talk Admiral Odesyus##17240
 			.' Warn Admiral Odesyus|q 9663/3
-			..accept The Bloodcurse Legacy##9751
 		step
 			goto Bloodmyst Isle,63.00,87.54
 			.talk Kessel##17649
@@ -556,16 +562,16 @@ startlevel 20
 			.info Eventually, High Chief Bristelimb will yell in the chat box and spawn at this location.
 			.from High Chief Bristlelimb##17702
 			.info He walks around this small area after he spawns.
-			.collect 1 The High Chief's Key##24099|q 9667 
+			.collect The High Chief's Key##24099|q 9667 
 		step
 			goto Bloodmyst Isle,68.86,68.25
-			.kill Lord Xiz##17701|q 9666/1
+			.kill Lord Xiz##17701|q 9666/2
 			.info He walks back and forth around this small area.
 		step
 			goto Bloodmyst Isle,68.86,68.25
-			.' Use the Draenei Banner on Lord Xiz's corpse |use Draenei Banner##24084
+			.' Use the Draenei Banner on Lord Xiz's corpse|use Draenei Banner##24084
 			.info His corpse will be at the location you killed him.
-			.' Declare Your Power|q 9666/2
+			.' Declare Your Power|q 9666/1
 		step
 			goto Bloodmyst Isle,68.26,80.89
 			.' Interact with gameobject: Princess Stillpine's Cage
@@ -625,7 +631,10 @@ startlevel 20
 			goto Bloodmyst Isle,47.8,94.4
 			.kill Cruelfin##17496|n
 			.info He looks like an orange murloc that walks along the beach around this area.
-			..accept Cruelfin's Necklace##9576|use Red Crystal Pendant##23870
+			.collect Red Crystal Pendant##23870|q 9576 |future
+		step
+			.use Red Crystal Pendant##23870
+			..accept Cruelfin's Necklace##9576
 		step
 			goto Bloodmyst Isle,47.8,94.4
 			.' Use the Murloc Tagger on Blacksilt Scouts|use Murloc Tagger##23995
@@ -695,10 +704,6 @@ startlevel 20
 			.talk Vindicator Boros##17684
 			..turnin Irradiated Crystal Shards##9641
 		step
-			goto Bloodmyst Isle,55.09,57.99
-			.talk Vindicator Aalesia##17433
-			..accept On the Offensive##9568
-		step
 			goto Bloodmyst Isle,50.9,74
 			.from Corrupted Treant##17352
 			.get 6 Crystallized Bark##23869|q 9574/1
@@ -709,23 +714,20 @@ startlevel 20
 			goto Bloodmyst Isle,36.64,73.50
 			.kill Tzerak##17528|n
 			.info He looks like a felguard that walks around the whole Nazzivian area.
-			..accept Signs of the Legion##9594|use Tzerak's Armor Plate##23900
+			.collect Tzerak's Armor Plate##23900|q 9594 |future
+		step
+			.use Tzerak's Armor Plate##23900
+			..accept Signs of the Legion##9594
 		step
 			goto Bloodmyst Isle,37.7,76.7
 			.kill 8 Nazzivus Satyr##17337|q 9594/1
 			.kill 8 Nazzivus Felsworn##17339|q 9594/2
-		step
-			goto Bloodmyst Isle,37.8,75
-			.kill 10 Nazzivus Satyr##17337|q 9568/1
-			.kill 5 Nazzivus Rogue##17338|q 9568/2
-			.kill 5 Nazzivus Felsworn##17339|q 9568/3
 		step
 			goto Bloodmyst Isle,55.09,57.99
 			.talk Vindicator Aalesia##17433
 			..turnin Know Thine Enemy##9567
 			.info Watch the dialogue.
 			..turnin Signs of the Legion##9594
-			..turnin On the Offensive##9568
 			..accept Containing the Threat##9569
 		step
 			goto Bloodmyst Isle,53.24,57.74
@@ -767,14 +769,12 @@ startlevel 20
 			.kill Zevrax##17494|q 9569/1
 		step
 			goto Bloodmyst Isle,41.31,30.69
-			.' Use the Crystal Mining Pick |use Crystal Mining Pick##23877
+			.' Use the Crystal Mining Pick|use Crystal Mining Pick##23877
 			.info It looks like a huge red crystal in the ground.
 			.collect Axxarien Crystal Sample##23880|q 9585/1
 		step
 			goto Bloodmyst Isle,41.46,33.50
 			.kill 5 Axxarien Shadowstalker##17340|q 9569/2
-		step
-			goto Bloodmyst Isle,41.46,33.50
 			.kill 5 Axxarien Hellcaller##17342|q 9569/3
 		step
 			goto Bloodmyst Isle,41.46,33.50
@@ -824,6 +824,13 @@ startlevel 20
 			.talk Prophet Velen##17468
 			..turnin Audience with the Prophet##9698
 			..accept Truth or Fiction##9699
+		step
+			goto Azuremyst Isle,47,70.2
+			.talk Admiral Odesyus##17240
+			..accept The Bloodcurse Legacy##9751|or
+			.info You can also pick up a letter from the mailbox (if the letter arrived), this is a different start of the same quest.
+			.collect A Letter from the Admiral##24132|n
+			..accept The Bloodcurse Legacy##9672|use A Letter from the Admiral##24132 |or
 		step
 			goto Bloodmyst Isle,55.43,55.27
 			.talk Vindicator Boros##17684
@@ -887,8 +894,8 @@ startlevel 20
 			..turnin Deciphering the Book##9557
 		step
 			goto Bloodmyst Isle,54.67,53.94
-			.' Watch the dialogue
 			.talk Anchorite Paetheus##17424
+			.' Watch the dialogue.
 			..accept Nolkai's Words##9561
 		step
 			goto Bloodmyst Isle,53.25,57.03
@@ -925,8 +932,6 @@ startlevel 20
 		step
 			goto Bloodmyst Isle,75.4,29.6
 			.kill 5 Veridian Whelp##17588|q 9688/1
-		step
-			goto Bloodmyst Isle,75.4,29.6
 			.kill 5 Veridian Broodling##17589|q 9688/2
 		step
 			goto Bloodmyst Isle,74.06,33.92
@@ -945,7 +950,8 @@ startlevel 20
 		step
 			goto Bloodmyst Isle,79.15,22.65
 			.talk Captain Edward Hanes##17712
-			..turnin The Bloodcurse Legacy##9751
+			..turnin The Bloodcurse Legacy##9751 |or
+			..turnin The Bloodcurse Legacy##9672 |or
 			..accept The Bloodcursed Naga##9674
 		step
 			goto Bloodmyst Isle,81.21,21.85
@@ -1168,8 +1174,6 @@ startlevel 20
 		step
 			goto Bloodmyst Isle,18.19,37.78
 			.kill 8 Myst Leecher##17523|q 9669/1
-		step
-			goto Bloodmyst Isle,18.19,37.78
 			.kill 8 Myst Spinner##17522|q 9669/2
 		step
 			goto Bloodmyst Isle,24.87,34.37
