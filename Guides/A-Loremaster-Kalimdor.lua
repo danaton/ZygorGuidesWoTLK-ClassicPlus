@@ -1648,7 +1648,7 @@ startlevel 10
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[20] Darkshore",[[
 author danaton
-description This guide contain quest-chain (67 quests) for Darkshore location.
+description This guide contain quest-chain (66 quests) for Darkshore location.
 startlevel 20
 		step
 			goto Darnassus,31.2,84.5
@@ -1752,6 +1752,7 @@ startlevel 20
 			goto Darkshore,39.4,43.5
 			.talk Terenthis##3693
 			..turnin How Big a Threat? (2)##985
+			.' Watch the dialogue.
 			..accept Thundris Windweaver##4761
 		step
 			goto Darkshore,37.7,43.4
@@ -1804,11 +1805,11 @@ startlevel 20
 			..turnin Buzzbox 411##1001
 			..accept Buzzbox 323##1002
 		step
-			.' Go underwater to|at 39.6,27.5
+			goto Darkshore,39.6,27.5
 			.collect Mist Veil's Lockbox##12192|q 982/2
 			.info It's a small grey chest at the very bottom of the ship.
 		step
-			.' Go underwater to|at 38.2,28.8
+			goto Darkshore,38.2,28.8
 			.collect Silver Dawning's Lockbox##12191|q 982/1
 			.info It's a small grey chest at the very bottom of this ship.
 		step
@@ -1837,8 +1838,6 @@ startlevel 20
 			goto Darkshore,44.2,20.6
 			.talk Beached Sea Turtle##991009
 			..accept Beached Sea Turtle##4725
-		step
-			.' Hearth to Auberdine|goto Darkshore,37,44.10,0.3|use Hearthstone##6948|noway|q 4723
 		step
 			goto Darkshore,35.7,43.7
 			.talk Cerellean Whiteclaw##3644
@@ -1906,7 +1905,7 @@ startlevel 20
 		step
 			goto Darkshore,52.43,33.37
 			.' Use Filled Cleansing Bowl on a Bonfire|use Filled Cleansing Bowl##12347
-			.kill 1 Xabraxxis##10373|q 4763/1
+			.kill 1 Xabraxxis##10373|n
 			.collect Talisman of Corruption##12355|q 4763/1
 		step
 			goto Darkshore,55,24.9
@@ -1924,7 +1923,7 @@ startlevel 20
 			..accept The Tower of Althalaxx (3)##967
 		step
 			goto Darkshore,53.1,18.1
-			.talk Beached Sea Turtle##001009
+			.' Interact with gameobject: Beached Sea Turtle
 			..accept Beached Sea Turtle##4727
 		step
 			goto Darkshore,37.4,40.1
@@ -1972,7 +1971,7 @@ startlevel 20
 			..turnin The Fall of Ameth'Aran##953
 		step
 			goto Darkshore,36,70.9
-			.talk Beached Sea Creature##001008
+			.' Interact with gameobject: Beached Sea Creature
 			..accept Beached Sea Creature##4728
 		step
 			goto Darkshore,36.3,76.7
@@ -1983,7 +1982,7 @@ startlevel 20
 			.get 6 Fine Crab Chunks##12237|q 1138/1
 		step
 			goto Darkshore,31.7,83.7
-			.talk Beached Sea Turtle##001009
+			.' Interact with gameobject: Beached Sea Turtle
 			..accept Beached Sea Turtle##4731
 		step
 			goto Darkshore,37.6,82.4
@@ -1997,7 +1996,7 @@ startlevel 20
 			..turnin Buzzbox 525##1003
 		step
 			goto Darkshore,37.1,62.2
-			.talk Beached Sea Turtle##001009
+			.' Interact with gameobject: Beached Sea Turtle
 			..accept Beached Sea Turtle##4722
 		step
 			goto Darkshore,36.6,45.6
@@ -2021,6 +2020,7 @@ startlevel 20
 			goto Darkshore,39.4,43.5
 			.talk Terenthis##3693
 			..turnin A Lost Master (1)##986
+			.' Watch the dialogue.
 			..accept A Lost Master (2)##993
 		step
 			goto Darkshore,37.4,40.1
@@ -2055,10 +2055,16 @@ startlevel 20
 			goto Darkshore,38.7,87.4
 			.talk Therylune##3584
 			..accept Therylune's Escape##945
+		step
+			goto Darkshore,40.52,87.13
+			.goal Escort Therylune away from the Master's Glaive|q 945/1
+		step
+			goto Darkshore,38.5,86.2
 			.from Twilight Disciple##2338, Twilight Thug##2339
 			.collect Book: The Powers Below##5352|q 1143/1 |future
-			..accept The Powers Below##968|use Book: The Powers Below##5352
-			.goal Escort Therylune away from the Master's Glaive|q 945/1	
+		step
+			.use Book: The Powers Below##5352
+			..accept The Powers Below##968
 		step
 			goto Darkshore,35.7,83.7
 			.talk Prospector Remtravel##2917
@@ -2069,17 +2075,19 @@ startlevel 20
 			.' Prospector Remtravel as he searches for the mysterious fossil|q 731/1
 		step
 			goto Darkshore,32.7,80.8
-			.talk Beached Sea Creature##001008
+			.' Interact with gameobject: Beached Sea Creature
 			..accept Beached Sea Creature##4730
 		step
 			goto Darkshore,31.2,85.6
-			.talk Beached Sea Turtle##001009
+			.' Interact with gameobject: Beached Sea Turtle
 			..accept Beached Sea Turtle##4732
 		step
 			goto Darkshore,45,85.3
 			.talk Volcor##3692
 			..turnin A Lost Master (2)##993
 			..accept Escape Through Force##994
+		step
+			goto Darkshore,41.71,82.11
 			.goal Protect Volcor until you reach the road|q 994/1
 		step
 			goto Darkshore,43.5,76.3
@@ -2090,7 +2098,10 @@ startlevel 20
 			goto Darkshore,44.4,76.4
 			.talk Kerlonian Evershade##11218
 			..accept The Sleeper Has Awakened##5321
-			.' Click Kerlonian's Chest next to him
+			.info Warning! Escorting quest!
+		step
+			goto Darkshore,44.39,76.31
+			.' Interact with gameobject: Kerlonian's Chest
 			.collect Horn of Awakening##13536|q 5321/2
 		step
 			goto Ashenvale,26.8,36.8
@@ -2114,14 +2125,18 @@ startlevel 20
 			goto Ashenvale,26.2,38.6
 			.talk Delgren the Purifier##3663
 			..turnin The Tower of Althalaxx (4)##970
+			.' Watch the dialogue.
 			..accept The Tower of Althalaxx (5)##973
 		step
 			goto Ashenvale,22.7,51.9
 			.talk Therysil##3585
 			..turnin Therylune's Escape##945
 		step
+			.' Move forward along the road|goto Ashenvale,21.5,58.99,0.5|q 973
+		step
+			.' Climb up the hill|goto 25.88,63.11,0.3|q 973
+		step
 			goto Ashenvale,25.3,60.7
-			.' Go to Path-Up|at 25.88,63.11
 			.from Ilkrud Magthrull##3664+
 			.get Ilkrud Magthrulls Tome##5533|q 973/1
 		step
@@ -2138,8 +2153,9 @@ startlevel 20
 			..turnin The Tower of Althalaxx (5)##973
 			..accept The Tower of Althalaxx (6)##1140
 		step
+			.' You need to go up this path|goto 72.21,49.83,0.3|q 1140
+		step
 			goto Ashenvale,66.63,56.90|n
-			.' Move Path Here|at 72.21,49.83
 			.' Free the Highborne soul in Night Run|q 1140/1
 		step
 			goto Ashenvale,81.6,48.6
@@ -2149,7 +2165,7 @@ startlevel 20
 			.talk Suralais Farwind##22935
 			.fpath Forest Song, Ashenvale|q 1140
 		step
-			goto Ashenvale,85.1,43.4
+			goto Ashenvale,85.1,43.4|n
 			.talk Suralais Farwind##22935
 			.' Fly to Astranaar, Ashenvale|goto Ashenvale,35.5,50.2,5|noway|q 1140
 		step
@@ -2158,9 +2174,9 @@ startlevel 20
 			..turnin The Tower of Althalaxx (6)##1140
 			..accept The Tower of Althalaxx (7)##1167
 		step
-			goto Ashenvale,34.4,48
+			goto Ashenvale,34.4,48|n
 			.talk Daelyshia##4267
-			.' Fly to Auberdine, Darkshore|goto Darkshore,36.4,45.6,0.5|noway|q 4730
+			.' Fly to Auberdine, Darkshore|goto Darkshore,36.4,45.6,5|noway|q 4730
 		step
 			goto Darkshore,36.6,45.6
 			.talk Gwennyth Bly'Leggonde##10219
@@ -2224,37 +2240,29 @@ startlevel 20
 			goto Darkshore,58.3,21.9
 			.collect 6 Mathystra Relic##5273|q 951/1
 		step
-			goto Darkshore,39.3,44.08
-			.talk Sentinel Selarin##3694
-			..accept Trek to Ashenvale##990
-		step
 			goto Darkshore,43.5,76.3
 			.talk Onu##3616
 			..turnin Mathystra Relics##951
 		step
 			goto Darkshore,31.3,87.4
-			.talk Beached Sea Creature##001008
+			.' Interact with gameobject: Beached Sea Creature
 			..accept Beached Sea Creature##4733
 		step
 			goto Ashenvale,26.2,38.6
 			.talk Delgren the Purifier##3663
 			..turnin The Tower of Althalaxx (9)##981
 		step
-			goto Ashenvale,36.6,49.6
-			.talk Raene Wolfrunner##3691
-			..turnin Trek to Ashenvale##990
-		step
-			goto Ashenvale,34.4,48
+			goto Ashenvale,34.4,48|n
 			.talk Daelyshia##4267
-			.' Fly to Auberdine, Darkshore|goto Darkshore,36.4,45.6,0.5|noway|q 4733
+			.' Fly to Auberdine, Darkshore|goto Darkshore,36.4,45.6,5|noway|q 4733
 		step
 			goto Darkshore,36.6,45.6
 			.talk Gwennyth Bly'Leggonde##10219
 			..turnin Beached Sea Creature##4733
 		step
-			goto Darkshore,36.3,45.6
+			goto Darkshore,36.3,45.6|n
 			.talk Caylais Moonfeather##3841
-			.' Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|q 741
+			.' Fly to Rut'theran Village, Teldrassil|goto Teldrassil,56.3,92.4,5|noway|q 741
 		step
 			goto Darnassus,31.2,84.5
 			.talk Chief Archaeologist Greywhisker##2912
@@ -2271,19 +2279,19 @@ startlevel 20
 			..accept The Absent Minded Prospector (5)##943
 		step
 			goto Wetlands,38.9,52.2
-			.' In cave on Hill
 			.collect Flagongut's Fossil##5234|q 943/2
+			.info In a cave on a hill.
 		step
 			goto Wetlands,34.46,47.13
 			.from Mottled Raptor##1020, Mottled Screecher##1021, Mottled Scytheclaw##1022, Mottled Razormaw##1023
-			.' Drop chance 10% on Raptor
+			.info Drop chance 10% on Raptor.
 			.get Stone of Relu##5233|q 943/1
 		step
 			goto Wetlands,10.8,60.4
 			.talk Archaeologist Flagongut##2911
 			..turnin The Absent Minded Prospector (5)##943
 		step
-			.' Congratulations! +0 quests for achievement "Loremaster of Kalimdor".
+			.' Congratulations! +66 quests for achievement "Loremaster of Kalimdor".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[30] Ashenvale",[[
@@ -2305,12 +2313,17 @@ startlevel 30
 			goto Darkshore,38.7,87.4
 			.talk Therylune##3584
 			..accept Therylune's Escape##945
+		step
+			goto Darkshore,40.52,87.13
 			.' Escort Therylune away from the Master's Glaive|q 945/1
 		step
 			goto Darkshore,44.4,76.4
 			.talk Kerlonian Evershade##11218
 			..accept The Sleeper Has Awakened##5321
-			.' Click Kerlonian's Chest next to him
+			.info Warning! Escorting quest!
+		step
+			goto Darkshore,44.39,76.31
+			.' Interact with gameobject: Kerlonian's Chest
 			.collect Horn of Awakening##13536|q 5321/2
 		step
 			goto Ashenvale,26.8,36.8
@@ -2327,13 +2340,13 @@ startlevel 30
 			..accept Bathran's Hair##1010
 		step
 			goto Ashenvale,29.6,24
-			.' Collect the Plant Bundles
+			.collect 5 Bathran's Hair##5437|q 1010/1
 			.info They look like little white straw teepees on the ground around this area.
-			.get 5 Bathran's Hair|q 1010/1
 		step
 			goto Ashenvale,26.4,38.6
 			.talk Orendil Broadleaf##3847
 			..turnin Bathran's Hair##1010
+			.' Watch the dialogue.
 			..accept Orendil's Cure##1020
 		step
 			goto Ashenvale,26.2,38.9
@@ -2341,9 +2354,10 @@ startlevel 30
 			..accept Supplies to Auberdine##976
 		step
 			goto Ashenvale,28.6,14.6
-			.' Protect Feero Ironhand|q 976/1
-			.kill Aligar the Tormentor##3898 |n
-			.kill Balizar the Umbrage##3899 |n
+			.goal Protect Feero Ironhand|q 976/1
+			.kill Aligar the Tormentor##3898|n
+			.kill Balizar the Umbrage##3899|n
+			.kill Caedakar the Vicious##3900|n
 		step
 			goto Ashenvale,26.2,38.9
 			.talk Delgren the Purifier##3663
@@ -2371,18 +2385,18 @@ startlevel 30
 			goto Ashenvale,37.4,51.8
 			.talk Pelturas Whitemoon##3894
 			..turnin Orendil's Cure##1020
+			.' Watch the dialogue.
 			..accept Elune's Tear##1033
 		step
-			.' The path to 'Elune's Tear' starts here|goto Ashenvale,44.0,55.0|noway|q 1033
+			.' The path to 'Elune's Tear' starts here|goto Ashenvale,44,55,0.3|q 1033
 		step
 			goto Ashenvale,46.2,46
-			.' Collect an Elune's Tear
+			.collect Elune's Tear##5493|q 1033/1
 			.info They look like big white pearls at the base of the tree on the island in the middle of the lake.
-			.get Elune's Tear|q 1033/1
 		step
 			goto Ashenvale,36.23,33.37
 			.from Dal Bloodclaw##3987
-			.get Dal Bloodclaw's Skull|q 1054/1
+			.get Dal Bloodclaw's Skull##5544|q 1054/1
 		step
 			goto Ashenvale,36.6,49.6
 			.talk Raene Wolfrunner##3691
@@ -2391,47 +2405,50 @@ startlevel 30
 			goto Ashenvale,37.4,51.8
 			.talk Pelturas Whitemoon##3894
 			..turnin Elune's Tear##1033
+			.' Watch the dialogue.
 			..accept The Ruins of Stardust##1034
 		step
 			goto Ashenvale,33.7,66.5
-			.' Collect Stardust Covered Bushes
+			.collect 5 Handful of Stardust##5494|q 1034/1
 			.info They look like sparkling bushes around this area.
-			.get 5 Handful of Stardust|q 1034/1
 		step
 			goto Ashenvale,37.4,51.8
 			.talk Pelturas Whitemoon##3894
 			..turnin The Ruins of Stardust##1034
+			.' Watch the dialogue.
 			..accept Fallen Sky Lake##1035
 		step
 			goto Ashenvale,20.3,42.3
-			.' Interact with Teronis Corpse
+			.' Interact with gameobject: Teronis Corpse
 			.info Teronis' Corpse is on the little island in the middle of the lake.
 			..turnin Raene's Cleansing (1)##991
 			..accept Raene's Cleansing (2)##1023
+		step
+			goto Ashenvale,20.3,42.3
 			.from Saltspittle Warrior##3739, Saltspittle Puddlejumper##3737, Saltspittle Muckdweller##3740, Saltspittle Oracle##3742
-			.get Glowing Gem|q 1023/1
+			.get Glowing Gem##5463|q 1023/1
 		step
 			goto Ashenvale,14.8,31.3
 			.talk Talen##3846
 			..accept The Ancient Statuette##1007
 		step
 			goto Ashenvale,14.2,20.6
-			.' Collect the Ancient Statuette
+			.collect Ancient Statuette##5424|q 1007/1
 			.info Looks like a stone figurine on the ground.
-			.get Ancient Statuette|q 1007/1
 		step
 			goto Ashenvale,14.8,31.3
 			.talk Talen##3846
 			..turnin The Ancient Statuette##1007
+			.' Watch the dialogue.
 			..accept Ruuzel##1009
 		step
 			goto Ashenvale,7.4,12.6
 			.from Ruuzel##3943
-			.get Ring of Zoram|q 1009/1
+			.get Ring of Zoram##5445|q 1009/1
 		step
 			goto Ashenvale,14.2,26.8
 			.from Wrathtail Sorceress##3717, Wrathtail Wave Rider##3713
-			.get 20 Wrathtail Head|q 1008/1
+			.get 20 Wrathtail Head##5490|q 1008/1
 		step
 			goto Ashenvale,14.8,31.3
 			.talk Talen##3846
@@ -2458,10 +2475,10 @@ startlevel 30
 			..accept Raene's Cleansing (4)##1026
 		step
 			goto Ashenvale,50.9,60.2
-			.kill 1 Foulweald Den Watcher|q 1025/1
-			.kill 2 Foulweald Ursa|q 1025/2
-			.kill 10 Foulweald Totemic|q 1025/3
-			.kill 12 Foulweald Warrior|q 1025/4
+			.kill 1 Foulweald Den Watcher##3746|q 1025/1
+			.kill 2 Foulweald Ursa##3749|q 1025/2
+			.kill 10 Foulweald Totemic##3750|q 1025/3
+			.kill 12 Foulweald Warrior##3743|q 1025/4
 		step
 			goto Ashenvale,49.8,67.2
 			.talk Sentinel Velene Starstrike##3885
@@ -2469,9 +2486,10 @@ startlevel 30
 		step
 			goto Ashenvale,49.4,69.3
 			.from Befouled Water Elemental##3917+
-			.collect 5 Intact Elemental Bracer##12220|q 1016|sticky
-			.' Use your Divining Scroll on the Intact Elemental Bracers|use Divining Scroll##5456
-			.get Divined Scroll|q 1016/1
+			.collect 5 Intact Elemental Bracer##12220|q 1016
+		step
+			.use Divining Scroll##5456
+			.collect Divined Scroll##5455|q 1016/1
 		step
 			goto Ashenvale,49.8,67.2
 			.talk Sentinel Velene Starstrike##3885
@@ -2480,7 +2498,7 @@ startlevel 30
 		step
 			goto Ashenvale,66.7,82.2
 			.from Shadethicket Oracle##3931
-			.get Fallen Moonstone|q 1035/1
+			.get Fallen Moonstone##5508|q 1035/1
 		step
 			goto Ashenvale,85.2,44.7
 			.talk Kayneth Stillwind##3848
@@ -2512,21 +2530,18 @@ startlevel 30
 		step
 			goto Ashenvale,78,42.6
 			.from Geltharis##4619
-			.get Branch of Cenarius|q 1031/1
+			.get Branch of Cenarius##5461|q 1031/1
 		step
 			goto Ashenvale,81.3,49.1
-			.' Collect the Chalice of Elune
+			.collect Chalice of Elune##23760|q 9519/1
 			.info It's a blue glowing pedestal sitting ont he right side of the red tower thing.
-			.get Chalice of Elune|q 9519/1
 		step
 			goto Ashenvale,80.3,49.1
-			.' Collect the Tainted Wood bundles
+			.collect 5 Satyrnaar Fel Wood##24081|q 9517/2
 			.info They look like little bundles of wood on the ground around this area.
-			.get 5 Satyrnaar Fel Wood|q 9517/2
 		step
 			goto Ashenvale,75.3,72.3
-			.' Collect the Bottle of Disease on the table
-			.get Bottle of Disease|q 1011/1
+			.collect Bottle of Disease##5440|q 1011/1
 		step
 			goto Ashenvale,61.9,83.9
 			.talk Sentinel Farsong##14733
@@ -2534,12 +2549,14 @@ startlevel 30
 		step
 			goto Ashenvale,54.4,35.4
 			.from Withered Ancient##3919, Crazed Ancient##3834
-			.collect Wooden Key##5475|q 1026|sticky
-			.' Open the small chest here
-			.get Iron Shaft|q 1026/1
+			.collect Wooden Key##5475|q 1026
+		step
+			goto Ashenvale,54.4,35.4
+			.collect Iron Shaft##5464|q 1026/1
+			.info Open the small chest.
 		step
 			goto Ashenvale,50.5,39.1
-			.' Collect the Tome of Mel'Thandris
+			.' Interact with gameobject: Tome of Mel'Thandris
 			.info Through the cave, down the path, sitting on a little round table.
 			.' View the Tome of Mel'Thandris|q 1022/1
 		step
@@ -2550,16 +2567,17 @@ startlevel 30
 		step
 			goto Ashenvale,74.1,73.6
 			.from Rotting Slime##3928
-			.' Click the Rusty Chest that spawns
-			.get Iron Pommel|q 1027/1
+			.info Open the chest that appears nearby.
+			.collect Iron Pommel##5519|q 1027/1
 		step
 			goto Ashenvale,53.5,46.3
 			.talk Shael'dryn##3916
 			..turnin Raene's Cleansing (5)##1027
+			.' Watch the dialogue.
 			..accept Raene's Cleansing (6)##1028
 		step
 			goto Ashenvale,56.4,49.2
-			.' Interact with the Hidden Shrine
+			.' Interact with gameobject: Hidden Shrine
 			.info Follow the path up the mountain. It's a little stone shrine in a hollowed out tree. The path dead ends into the Hidden Shrine.
 			..turnin Raene's Cleansing (6)##1028
 			..accept Raene's Cleansing (7)##1055
@@ -2579,8 +2597,11 @@ startlevel 30
 			..turnin Raene's Cleansing (8)##1029
 			..accept Raene's Cleansing (9)##1030
 		step
+			goto Ashenvale,51.65,75
+			.use Dartol's Rod of Transformation##5462
+			.' Use Dartol's Rod of Transformation|havebuff INV_Misc_MonsterClaw_04|q 1030
+		step
 			goto Ashenvale,50.8,75.1
-			.' Use Dartol's Rod of Transformation|use Dartol's Rod of Transformation##5462
 			.talk Krolg##3897
 			..turnin Raene's Cleansing (9)##1030
 			..accept Raene's Cleansing (10)##1045
@@ -2590,8 +2611,11 @@ startlevel 30
 			.get 1 Ran Bloodtooth's Skull##5388|q 1045/3
 			.kill 4 Bloodtooth Guard##3932|q 1045/2
 		step
+			goto Ashenvale,51.65,75
+			.use Dartol's Rod of Transformation##5462
+			.' Use Dartol's Rod of Transformation|havebuff INV_Misc_MonsterClaw_04|q 1045
+		step
 			goto Ashenvale,50.8,75.1
-			.' Use Dartol's Rod of Transformation|use Dartol's Rod of Transformation##5462
 			.talk Krolg##3897
 			..turnin Raene's Cleansing (10)##1045
 			..accept Raene's Cleansing (11)##1046
@@ -2607,6 +2631,7 @@ startlevel 30
 			goto Ashenvale,85.2,44.7
 			.talk Kayneth Stillwind##3848
 			..turnin Forsaken Diseases##1011
+			.' Watch the dialogue.
 			..turnin The Lost Chalice##9519
 			..accept Insane Druids##1012
 		step
@@ -2630,35 +2655,38 @@ startlevel 30
 		step
 			goto Ashenvale,79,46.2
 			.from Xavian Felsworn##3755, Xavian Betrayer##3754, Xavian Rogue##3752, Xavian Hellcaller##3757
-			.get 16 Satyr Horns|q 1032/1
+			.get 16 Satyr Horns##5481|q 1032/1
 		step
 			goto Ashenvale,88.8,59.5
 			.kill Overseer Gorthak##17304|q 9518/1
 		step
 			goto Ashenvale,86.4,52.9
-			.' Collect the Lumber Piles
+			.collect 15 Warsong Lumber##23776|q 9517/1
 			.info The Lumber Piles look like stacked planks of wood around this area.
-			.get 15 Warsong Lumber|q 9517/1
-			.kill 2 Warsong Shredder|q 9518/2
-			.kill 5 Horde Deforester|q 9518/3
-			.kill 10 Horde Scout|q 9518/4
+			.kill 2 Warsong Shredder##11684|q 9518/2
+			.kill 5 Horde Deforester##11681|q 9518/3
+			.kill 10 Horde Scout##11680|q 9518/4
 		step
 			goto Ashenvale,83.8,67.7
-			.kill 6 Mannoroc Lasher|q 9516/1
-			.kill 6 Roaming Felguard|q 9516/2
-			.kill 6 Searing Infernal|q 9516/3
-			.' Interact with the Fertile Dirt Mounds
-			.' Plant 8 Tree Seedlings|goal 8 Tree Seedling Planted|q 9526/1
-			.get Diabolical Plans|n
-			.' Click the Diabolical Plans|use Diabolical Plans##23777
+			.kill 6 Mannoroc Lasher##11697|q 9516/1
+			.kill 6 Roaming Felguard##6115|q 9516/2
+			.kill 6 Searing Infernal##6073|q 9516/3
+			.' Interact with gameobject: Fertile Dirt Mounds
+			.' Plant 8 Tree Seedlings|q 9526/1
+		step
+			goto Ashenvale,83.8,67.7
+			.from Searing Infernal##6073, Roaming Felguard##6115, Mannoroc Lasher##11697
+			.collect Diabolical Plans##23777|q 9520 |future
+		step
+			.use Diabolical Plans##23777
 			..accept Diabolical Plans##9520
 		step
-			.' Start to Going Down this tunnel|goto Ashenvale,75.7,75.3|noway|q 1012
+			.' Start to Going Down this tunnel|goto Ashenvale,75.7,75.3,0.3|q 1012
 		step
 			goto Ashenvale,77.1,74
 			.kill Taneel Darkwood##3940|q 1012/1
 		step
-			.' Jump Down Here|goto Ashenvale,77.44,75.14|noway|q 1012
+			.' Jump Down Here|goto Ashenvale,77.44,75.14,0.3|q 1012
 		step
 			goto Ashenvale,78,72.7
 			.kill Uthil Mooncall##3941|q 1012/2
@@ -2698,7 +2726,7 @@ startlevel 30
 			.talk Illiyana##3901
 			..turnin Satyr Slaying!##1032
 		step
-			.' Go To Canyon|goto Ashenvale,84.19,71.85|noway|q 9522
+			.' Go To Canyon|goto Ashenvale,84.19,71.85,0.3|q 9522
 		step
 			goto Ashenvale,89.8,76.7
 			.kill Gorgannon##17300|q 9522/1
@@ -2716,7 +2744,7 @@ startlevel 30
 			..accept Velinde's Effects##1038
 		step
 			goto Darnassus,62.3,83.3
-			.collect 1 Velinde's Journal##5520|q 1038/1
+			.collect Velinde's Journal##5520|q 1038/1
 		step
 			goto Darnassus,61.8,39.2
 			.talk Thyn'tel Bladeweaver##8026
@@ -2747,7 +2775,7 @@ startlevel 30
 		step
 			goto Duskwood,73.5,79.1
 			.' Find evidence of the Scythe of Elune|q 1043/1
-			.info Interact with Mound of Dirt
+			.info Interact with Mound of Dirt.
 		step
 			goto Duskwood,75.3,49
 			.talk Jonathan Carevin##661
