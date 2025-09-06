@@ -209,7 +209,6 @@ startlevel 10
 		step
 			goto Azuremyst Isle,49.4,51
 			.talk Totem of Akida##17360
-			.info In the middle of town, next to the giant bone altar thing with the huge pink crystal in it.
 			..turnin Learning the Language##9538
 			..accept Totem of Coo##9539
 		step
@@ -755,7 +754,6 @@ startlevel 20
 			.talk Harbinger Mikolaas##17423
 			..turnin The Second Sample##9584
 			..accept The Final Sample##9585
-			..accept Talk to the Hand##10064
 		step
 			goto Bloodmyst Isle,41.11,49.92
 			.from Elder Brown Bear##17348
@@ -785,6 +783,31 @@ startlevel 20
 			.from Deathclaw##17661
 			.info It looks like a brown bear that walks around this small area.
 			.get Deathclaw's Paw##24025|q 9646/1
+		step
+			goto Bloodmyst Isle,42.15,21.23
+			.talk Clopper Wizbang##17421
+			..turnin Explorers' League, Is That Something for Gnomes?##10063
+			..accept Pilfered Equipment##9548
+			..accept Artifacts of the Blacksilt##9549
+		step
+			goto Bloodmyst Isle,40.4,20.1
+			.collect Clopper's Equipment##23830|q 9548/1 
+			.info It looks like a wooden crate on the ground next to a murloc hut.
+			.info It can spawn in any of the little murloc camps along the beach around this area.
+		step
+			goto Bloodmyst Isle,38.7,21.2
+			.from Blacksilt Seer##17330
+			.get 3 Crude Murloc Idol##23834|q 9549/1
+			.from Blacksilt Shorestriker##17328
+			.get 6 Crude Murloc Knife##23833|q 9549/2
+		step
+			goto Bloodmyst Isle,42.15,21.23
+			.talk Clopper Wizbang##17421
+			..turnin Pilfered Equipment##9548
+			..turnin Artifacts of the Blacksilt##9549
+		step
+			.use Weathered Treasure Map##23837
+			..accept A Map to Where?##9550
 		step
 			goto Bloodmyst Isle,55.09,57.99
 			.talk Vindicator Aalesia##17433
@@ -847,31 +870,6 @@ startlevel 20
 			goto Bloodmyst Isle,52.5,22.3
 			.kill 5 Void Anomaly##17550|q 9700/2
 		step
-			goto Bloodmyst Isle,42.15,21.23
-			.talk Clopper Wizbang##17421
-			..turnin Explorers' League, Is That Something for Gnomes?##10063
-			..accept Pilfered Equipment##9548
-			..accept Artifacts of the Blacksilt##9549
-		step
-			goto Bloodmyst Isle,40.4,20.1
-			.collect Clopper's Equipment##23830|q 9548/1 
-			.info It looks like a wooden crate on the ground next to a murloc hut.
-			.info It can spawn in any of the little murloc camps along the beach around this area.
-		step
-			goto Bloodmyst Isle,38.7,21.2
-			.from Blacksilt Seer##17330
-			.get 3 Crude Murloc Idol##23834|q 9549/1
-			.from Blacksilt Shorestriker##17328
-			.get 6 Crude Murloc Knife##23833|q 9549/2
-		step
-			goto Bloodmyst Isle,42.15,21.23
-			.talk Clopper Wizbang##17421
-			..turnin Pilfered Equipment##9548
-			..turnin Artifacts of the Blacksilt##9549
-		step
-			.use Weathered Treasure Map##23837
-			..accept A Map to Where?##9550
-		step
 			goto Bloodmyst Isle,55.85,57.00
 			.talk Tracker Lyceon##17642
 			..turnin Culling the Flutterers##9647
@@ -910,7 +908,7 @@ startlevel 20
 			.' Interact with gameobject: Mound of Dirt
 			..turnin Nolkai's Words##9561
 		step
-			goto Bloodmyst Isle,74.06,33.92
+			goto Bloodmyst Isle,75.1,34.4
 			.talk Prince Toreth##17674
 			..accept Restoring Sanctity##9687
 		step
@@ -919,7 +917,7 @@ startlevel 20
 			.info They look like orange and white spiked bones planted in the ground around this area.
 			.info You can find more the west.
 		step
-			goto Bloodmyst Isle,74.06,33.92
+			goto Bloodmyst Isle,75.1,34.4
 			.talk Prince Toreth##17674
 			..turnin Restoring Sanctity##9687
 			..accept Into the Dream##9688
@@ -934,7 +932,7 @@ startlevel 20
 			.kill 5 Veridian Whelp##17588|q 9688/1
 			.kill 5 Veridian Broodling##17589|q 9688/2
 		step
-			goto Bloodmyst Isle,74.06,33.92
+			goto Bloodmyst Isle,75.1,34.4
 			.talk Prince Toreth##17674
 			..turnin Into the Dream##9688
 			..accept Razormaw##9689
@@ -944,7 +942,7 @@ startlevel 20
 			.info Keepclicking it until Razormaw flies down to fight you.
 			.kill Razormaw##17592|q 9689/1
 		step
-			goto Bloodmyst Isle,74.06,33.92
+			goto Bloodmyst Isle,75.1,34.4
 			.talk Prince Toreth##17674
 			..turnin Razormaw##9689
 		step
@@ -2808,7 +2806,7 @@ startlevel 30
 			..accept Southsea Freebooters##887
 		step
 			goto The Barrens,62.6,37.5
-			.' Interact with Wanted Poster.
+			.' Interact with gameobject: Wanted Poster
 			..accept WANTED: Baron Longshore##895
 		step
 			goto The Barrens,62.4,37.6
@@ -2818,9 +2816,9 @@ startlevel 30
 		step
 			goto The Barrens,63.6,49.15
 			.from Baron Longshore##3467
-			.get 1 Baron Longshore's Head##5084|q 895/1
-			.' Can be resurrected here (1)|at 64.2,47.1
-			.' Can be resurrected here (2)|at 62.6,49.8
+			.get Baron Longshore's Head##5084|q 895/1
+			.' Can be spawn here (1)|at 64.2,47.1
+			.' Can be spawn here (2)|at 62.6,49.8
 		step
 			goto The Barrens,64,43.92
 			.kill 12 Southsea Brigand##3381|q 887/1
@@ -2845,10 +2843,10 @@ startlevel 30
 			..accept Stolen Booty##888
 		step
 			goto The Barrens,63.6,49.3
-			.collect 1 Telescopic Lens##5077|q 888/2
+			.collect Telescopic Lens##5077|q 888/2
 		step
 			goto The Barrens,62.6,49.6
-			.collect 1 Shipment of Boots##5076|q 888/1
+			.collect Shipment of Boots##5076|q 888/1
 		step
 			goto The Barrens,62.7,36.2
 			.talk Gazlowe##3391
@@ -2862,7 +2860,7 @@ startlevel 30
 		step
 			goto The Barrens,61.63,4.5
 			.from Venture Co. Enforcer##3283, Venture Co. Overseer##3286
-			.get 1 Cats Eye Emerald##5097|q 896/1
+			.get Cats Eye Emerald##5097|q 896/1
 		step
 			goto The Barrens,56.5,7.5
 			.talk Wizzlecrank's Shredder##3439
@@ -2870,7 +2868,7 @@ startlevel 30
 		step
 			goto The Barrens,56.3,8.6
 			.from Supervisor Lugwizzle##3445
-			.get 1 Ignition Key##5050|q 858/1
+			.get Ignition Key##5050|q 858/1
 		step
 			goto The Barrens,56.5,7.5
 			.talk Wizzlecrank's Shredder##3439
@@ -2881,7 +2879,7 @@ startlevel 30
 			.goal Escort Wizzlecrank out of the Venture Co. drill site|q 863/1
 		step
 			goto The Barrens,52.4,11.6
-			.' Interact with: Control Console.
+			.' Interact with gameobject: Control Console.
 			..turnin Samophlange (1)##894
 			..accept Samophlange (2)##900
 		step
@@ -2895,16 +2893,16 @@ startlevel 30
 			.goal Main Control Valve|q 900/1
 		step
 			goto The Barrens,52.4,11.6
-			.' Interact with: Control Console.
+			.' Interact with gameobject: Control Console.
 			..turnin Samophlange (2)##900
 			..accept Samophlange (3)##901
 		step
 			goto The Barrens,52.8,10.4
 			.from Tinkerer Sniggles##3471
-			.get 1 Console Key##5089|q 901/1
+			.get Console Key##5089|q 901/1
 		step
 			goto The Barrens,52.4,11.6
-			.' Interact with: Control Console.
+			.' Interact with gameobject: Control Console.
 			..turnin Samophlange (3)##901
 			..accept Samophlange (4)##902
 		step
@@ -2959,9 +2957,17 @@ startlevel 30
 			.talk Faldreas Goeth'Shael##3996
 			..accept Journey to Stonetalon Peak##1056
 		step
+			.' Follow this tunnel to the very end|goto 42.3,71.1,0.3|q 1070
+			only if ZGV.completedQuests[1483]
+		step
 			goto The Barrens,63,37.2
 			.talk Sputtervalve##3442
 			..accept Ziz Fizziks##1483
+		step
+			goto Stonetalon Mountains,59,62.6
+			.talk Ziz Fizziks##4201
+			..turnin Ziz Fizziks##1483
+			..accept Super Reaper 6000##1093
 		step
 			goto Stonetalon Mountains,59.9,66.8
 			.talk Kaela Shadowspear##4080
@@ -2972,11 +2978,6 @@ startlevel 30
 			.talk Gaxim Rustfizzle##4077
 			..turnin On Guard in Stonetalon (2)##1085
 			..accept A Gnome's Respite##1071
-		step
-			goto Stonetalon Mountains,59,62.6
-			.talk Ziz Fizziks##4201
-			..turnin Ziz Fizziks##1483
-			..accept Super Reaper 6000##1093
 		step
 			goto Stonetalon Mountains,71.9,60
 			.talk Piznik##4276
@@ -2991,12 +2992,12 @@ startlevel 30
 		step
 			goto Stonetalon Mountains,63.8,53.75
 			.from Venture Co. Operator##3988
-			.get Super Reaper 6000 Blueprints |q 1093/1
-			.' You can find more|at Stonetalon Mountains,72.56,56.43
+			.get Super Reaper 6000 Blueprints##5734|q 1093/1
+			.' You can find more|at 72.56,56.43
 		step
 			goto Stonetalon Mountains,61.7,55.5
-			.kill 10 Venture Co. Logger|q 1071/1
-			.kill 10 Venture Co. Deforester|q 1071/2
+			.kill 10 Venture Co. Logger##3989|q 1071/1
+			.kill 10 Venture Co. Deforester##3991|q 1071/2
 		step
 			goto Stonetalon Mountains,59,62.6
 			.talk Ziz Fizziks##4201
@@ -3009,10 +3010,11 @@ startlevel 30
 			..turnin A Gnome's Respite##1071
 			..accept An Old Colleague##1072
 			..accept A Scroll from Mauren##1075
+			..accept Castpipe's Task##2931
 		step
 			goto Stonetalon Mountains,53.4,42.7
 			.from Pridewing Wyvern##4012, Pridewing Consort##4014
-			.get 12 Pridewing Venom Sac|q 1134/1
+			.get 12 Pridewing Venom Sac##5808|q 1134/1
 		step
 			goto Stonetalon Mountains,37.1,8.1
 			.talk Keeper Albagorm##3994
@@ -3054,10 +3056,11 @@ startlevel 30
 			..turnin Further Instructions (2)##1095
 			..accept Gerenzo Wrenchwhistle##1096
 		step
+			.' Climb up here|goto 69.05,39.95,0.3|q 1096
+		step
 			goto Stonetalon Mountains,64.5,40.3
 			.from Gerenzo Wrenchwhistle##4202
-			.get 1 Gerenzo's Mechanical Arm##5736|q 1096/1
-			.' Path Up here|at 69.05,39.95
+			.get Gerenzo's Mechanical Arm##5736|q 1096/1
 		step
 			goto Stonetalon Mountains,59,62.6
 			.talk Ziz Fizziks##4201
@@ -3075,7 +3078,7 @@ startlevel 30
 		step
 			goto Westfall,54.6,41.2
 			.from Dust Devil##832
-			.get 1 Dust Devil Debris##5669|q 1076/1
+			.get Dust Devil Debris##5669|q 1076/1
 			.' You can find more|at 43.71,41.42
 			.' You can find more|at 46.05,48.2
 		step
@@ -3088,6 +3091,10 @@ startlevel 30
 			.talk Lomac Gearstrip##4081
 			..turnin An Old Colleague##1072
 			..accept Ineptitude + Chemicals = Fun (1)##1073
+		step
+			goto Ironforge,69.8,48.1
+			.talk Master Mechanic Castpipe##7950
+			..turnin Castpipe's Task##2931
 		step
 			goto Ironforge,24.2,74.7
 			.talk Auctioneer Redmuse##8720
@@ -3107,11 +3114,11 @@ startlevel 30
 			..accept Covert Ops - Beta##1080
 		step
 			goto Stonetalon Mountains,66.1,51.3
-			.collect 1 Venture Co. Engineering Plans##5718|q 1079/1
+			.collect Venture Co. Engineering Plans##5718|q 1079/1
 			.info Lying on the crate.
 		step
 			goto Stonetalon Mountains,74.5,59.3
-			.collect 1 Venture Co. Letters##5717|q 1080/1
+			.collect Venture Co. Letters##5717|q 1080/1
 			.info Lying on the crate.
 		step
 			goto Stonetalon Mountains,59.7,67
@@ -3128,7 +3135,7 @@ startlevel 30
 		step
 			goto Stonetalon Mountains,33.9,69.9
 			.from Charred Ancient##4028, Blackened Ancient##4029, Vengeful Ancient##4030
-			.get 1 Corroded Shrapnel##5664|q 1084/1
+			.get Corroded Shrapnel##5664|q 1084/1
 		step
 			goto Stonetalon Mountains,33.9,69.9
 			.from Rogue Flame Spirit##4036, Burning Ravager##4037, Burning Destroyer##4038
@@ -3206,7 +3213,7 @@ startlevel 40
 			..accept Reagents for Reclaimers Inc. (2)##1459
 		step
 			goto Desolace,56.54,17.83
-			.' Interact with object: Malem Chest
+			.' Interact with gameobject: Malem Chest
 			..turnin Vahlarriel's Search (1)##1437
 			..accept Vahlarriel's Search (2)##1465
 		step
@@ -3219,12 +3226,12 @@ startlevel 40
 			..accept Sceptre of Light##5741
 		step
 			goto Desolace,36.11,30.45
-			.' Interact with object: Karnitol's Chest
+			.' Interact with gameobject: Karnitol's Chest
 			..turnin The Karnitol Shipwreck (1)##1454
 			..accept The Karnitol Shipwreck (2)##1455
 		step
 			goto Desolace,36.07,30.41
-			.' Interact with object: Rackmore's Log
+			.' Interact with gameobject: Rackmore's Log
 			..accept Claim Rackmore's Treasure!##6161
 		step
 			goto Desolace,32.78,31.37
@@ -3237,10 +3244,9 @@ startlevel 40
 			..accept Kodo Roundup##5561
 		step
 			goto Desolace,51.31,58.04
-			.' Interact with object: Kodo Bones.
+			.collect 10 Kodo Bone##13703|q 5501/1
 			.info They look like large white horned animal skulls on the ground around this area.
 			.info A Kodo Apparition may appear and attack you.
-			.collect 10 Kodo Bone##13703|q 5501/1
 		step
 			goto Desolace,51.41,58.45
 			.from Aged Kodo##4700
@@ -3251,7 +3257,7 @@ startlevel 40
 			..accept Ghost-o-plasm Round Up##6134
 		step
 			goto Desolace,54.45,63.19
-			.use the Kodo Kombobulator##13892
+			.use Kodo Kombobulator##13892
 			.info Use it on Kodo enemies around this area.
 			.info You can find more all around this bone graveyard area.
 			.' Tame 5 Kodos|q 5561/1
@@ -3276,7 +3282,7 @@ startlevel 40
 			.' Reach Friendly Reputation with the Gelkis Clan Centaur|q 1382/1
 		step
 			goto Desolace,64.25,91.40
-			.use Crate of Ghost Magnets##15848|n
+			.use Crate of Ghost Magnets##15848
 			.from Magrami Spectre##11560
 			.get 8 Ghost-o-plasm##15849|q 6134/1
 		step
@@ -3374,12 +3380,12 @@ startlevel 40
 			.collect Rackmore's Golden Key##15881|q 6161/2
 		step
 			goto Desolace,28.19,6.62
-			.' Interact with object: Serpent Statue
+			.' Interact with gameobject: Serpent Statue
 			.from Lord Kragaru##12369
 			.get Book of the Ancients##15803|q 6027/1
 		step
 			goto Desolace,30.00,8.70
-			.' Interact with object: Rackmore's Chest
+			.' Interact with gameobject: Rackmore's Chest
 			.info On the ground at the base of the tree.
 			turnin Claim Rackmore's Treasure!##6161
 		step
@@ -3409,7 +3415,7 @@ startlevel 40
 			..accept Stealing Supplies##1370
 		step
 			goto Desolace,70.90,75.47
-			.' Interact with object: Sack of Meat
+			.' Interact with gameobject: Sack of Meat
 			.info They look like tan leather bags on the ground near the buildings around this area.
 			.info Not all of the tan bags you see will be clickable.
 			.collect 6 Crudely Dried Meat##6069|q 1370/1
@@ -3432,7 +3438,7 @@ startlevel 40
 		step
 			goto Swamp of Sorrows,65.1,22
 			.from Ongeku##5622
-			.get 1 Draenethyst Shard##6190|q 1373/1
+			.get Draenethyst Shard##6190|q 1373/1
 		step
 			goto Ironforge,67.91,17.52
 			.talk Roetten Stonehammer##5637
@@ -3450,7 +3456,7 @@ startlevel 40
 		step
 			goto Desolace,65.9,80.4
 			.from Khan Jehn##5601
-			.get 1 Khan Jehn's Head##6072|q 1374/1
+			.get Khan Jehn's Head##6072|q 1374/1
 		step
 			goto Desolace,36.22,79.25
 			.talk Uthek the Wise##5397
@@ -3459,12 +3465,12 @@ startlevel 40
 		step
 			goto Desolace,31.7,61.6
 			.from Maraudine Centaur|n
-			.get 1 War Horn Mouthpiece##6074|q 1380
+			.collect War Horn Mouthpiece##6074|q 1380
 		step
 			goto Desolace,29.75,53.20
 			.use War Horn Mouthpiece##6074|n
 			.from Khan Hratha##5402
-			.get 1 Maraudine Key Fragment##6077|q 1380/1
+			.get Maraudine Key Fragment##6077|q 1380/1
 		step
 			goto Desolace,33.9,53.5
 			.talk Melizza Brimbuzzle##12277
@@ -3519,7 +3525,8 @@ startlevel 50
 			..turnin James Hyal (1)##1301
 			..accept James Hyal (2)##1302
 		step
-			.' Ride the boat to Theramore|goto Dustwallow Marsh|at Wetlands,5.05,63.4|q 1302
+			goto Wetlands,5.05,63.4|n
+			.' Ride the boat to Theramore|goto Dustwallow Marsh|q 1302
 		step
 			goto Dustwallow Marsh,67.9,51.6
 			.talk Sergeant Amelyn##23835
@@ -3538,17 +3545,18 @@ startlevel 50
 			..accept Propaganda War##11128
 		step
 			goto Dustwallow Marsh,67.9,58.7
-			.' Click the Deserter Propoganda boxes on the ship|tip A pile of boxes on the bottom deck of the ship in the Captain's quarters.
-			.get Deserter Propaganda|q 11128/1
+			.collect Deserter Propaganda##33008|q 11128/1
+			.info A pile of boxes on the bottom deck of the ship in the Captain's quarters.
 		step
 			goto Dustwallow Marsh,68.3,51.0
 			.talk Calia Hastings##23566
 			..turnin Propaganda War##11128
+			.' Watch the dialogue.
 			..accept Discrediting the Deserters##11133
 		step
 			.talk Theramore Guard##4979
 			.' Give them each a flier.
-			.'Distribute 6 Leaflets|goal 6 Leaflets Distributed|q 11133/1
+			.' Distribute 6 Leaflets|goal 6 Leaflets Distributed|q 11133/1
 		step
 			goto Dustwallow Marsh,68.3,51.0
 			.talk Calia Hastings##23566
@@ -3617,7 +3625,7 @@ startlevel 50
 		step
 			goto Dustwallow Marsh,64.7,41.3
 			.from Mudrock Spikeshell##4397
-			.get 8 Forked Mudrock Tongue|q 1204/1
+			.get 8 Forked Mudrock Tongue##5883|q 1204/1
 		step
 			goto Dustwallow Marsh,64,30
 			.from Garn Mathers##23679
@@ -3632,6 +3640,8 @@ startlevel 50
 			.talk "Swamp Eye" Jarl##4792
 			..turnin The Hermit of Swamplight Manor##11177
 			..accept Marsh Frog Legs##1218
+		step
+			goto Dustwallow Marsh,55.6,26.1
 			.talk Mordant Grimsby##23843
 			..accept What's Haunting Witch Hill?##11180
 		step
@@ -3642,7 +3652,7 @@ startlevel 50
 		step
 			goto Dustwallow Marsh,55.75,25.7
 			.from Giant Marsh Frog##23979
-			.get 10 Marsh Frog Leg|q 1218/1
+			.get 10 Marsh Frog Leg##33202|q 1218/1
 		step
 			goto Dustwallow Marsh,55.4,26.3
 			.talk "Swamp Eye" Jarl##4792
@@ -3659,9 +3669,8 @@ startlevel 50
 			..accept The Witch's Bane##11181
 		step
 			goto Dustwallow Marsh,56,27
-			.' Click Witchbane plants
+			.collect 9 Witchbane##33112|q 11181/1
 			.info They are bright green fern looking plants with a tall pink flower in the middle of them.
-			.get 9 Witchbane|q 11181/1
 		step
 			goto Dustwallow Marsh,55.4,26.3
 			.talk Mordant Grimsby##23843
@@ -3702,6 +3711,7 @@ startlevel 50
 			goto Dustwallow Marsh,63.7,17
 			.talk Renn McGill##23569
 			..turnin Recover the Cargo!##11140
+			.' Watch the dialogue.
 			..accept Jaina Must Know##11141
 		step
 			goto Dustwallow Marsh,46.7,23.1
@@ -3710,7 +3720,8 @@ startlevel 50
 		step
 			goto Dustwallow Marsh,47,19
 			.' Fight Bloodfen Screechers and Bloodfen Raptors
-			.' Use your Sturdy Rope on the raptors when they are almost dead|use Sturdy Rope##33069|tip You will see a message in your chat window letting you know when you can capture the raptor.  Do not kill the raptors or you won't be able to capture them.
+			.' Use your Sturdy Rope on the raptors when they are almost dead|use Sturdy Rope##33069
+			.info You will see a message in your chat window letting you know when you can capture the raptor. Do not kill the raptors or you won't be able to capture them.
 			.' Capture 6 Raptors|goal 6 Raptors Captured|q 11146/1
 		step
 			goto Dustwallow Marsh,46.9,17.5
@@ -3732,8 +3743,8 @@ startlevel 50
 		step
 			goto Dustwallow Marsh,44,16
 			.from Grimtotem Breaker##23592
-			.get Grimtotem Key##33061|n
-			.' Click the Blackhoof Cages
+			.collect Grimtotem Key##33061|n
+			.' Interact with gameobject: Blackhoof Cages
 			.info The Blackhoof Cages are yellow cages around this area.
 			.' Free 5 Theramore Prisoners|goal 5 Theramore Prisoners Freed|q 11145/1
 		step
@@ -3744,22 +3755,25 @@ startlevel 50
 		step
 			goto Dustwallow Marsh,35.1,23
 			.from Darkmist Spider##4376, Darkmist Hatchling##4377, Darkmist Recluse##4378, Darkmist Silkspinner##4379
-			.get 20 Unpopped Darkmist Eye|q 1206/1
+			.get 20 Unpopped Darkmist Eye##5884|q 1206/1
 		step
 			goto Dustwallow Marsh,29.7,47.6
 			.talk Inspector Tarem##23567
 			..turnin Inspecting the Ruins##11123
-			.' Click the Suspicious Hoofprints
+		step
+			goto Dustwallow Marsh,29.7,47.6
+			.' Interact with gameobject: Suspicious Hoofprints
 			.info They look like a set of 3 toed tan muddy footprints on the ground next to the path.
 			..accept Suspicious Hoofprints##1284
 		step
 			goto Dustwallow Marsh,29.8,48.3
-			.' Click the Theramore Guard Badge
+			.' Interact with gameobject: Theramore Guard Badge
 			.info A very tiny grey badge laying on a board ont he floor in the burnt down house.
 			..accept Lieutenant Paval Reethe (1)##1252
 		step
 			goto Dustwallow Marsh,29.6,48.6
-			.' Click the Black Shield|tip Hanging on the brick chimney wall.
+			.' Interact with gameobject: Black Shield
+			.info Hanging on the brick chimney wall.
 			..accept The Black Shield (1)##1253
 		step
 			goto Dustwallow Marsh,42.3,72.9
@@ -3767,7 +3781,7 @@ startlevel 50
 			..turnin Mission to Mudsprocket##11214
 		step
 			goto Dustwallow Marsh,41.8,73.1
-			.' Click the Wanted Poster
+			.' Interact with gameobject: Wanted Poster
 			.info To the right of the stairway entrance to the big hut.
 			..accept WANTED: Goreclaw the Ravenous##11184
 		step
@@ -3800,9 +3814,10 @@ startlevel 50
 			..accept Secure the Cargo!##11207
 		step
 			goto Dustwallow Marsh,53,56
-			.' Click the Zeppelin Cargo|tip They look like wooden boxes on the ground around this area.
-			.get 8 Zeppelin Cargo|q 11207/1
-			.' Use your Ooze Buster on oozes|use Ooze Buster##33108|tip You have to be near a Power Core Fragment (the things that connect lightning to you).
+			.collect 8 Zeppelin Cargo##33163|q 11207/1
+			.info They look like wooden boxes on the ground around this area.
+			.' Use your Ooze Buster on oozes|use Ooze Buster##33108
+			.info You have to be near a Power Core Fragment (the things that connect lightning to you).
 			.' Dissolve 10 Oozes|goal 10 Oozes Dissolved|q 11174/1
 		step
 			goto Dustwallow Marsh,53.6,56.9
@@ -3899,7 +3914,7 @@ startlevel 50
 		step
 			goto Dustwallow Marsh,58,18.1
 			.from Razorspine##23841
-			.get 1 Razorspine's Sword##33110|q 1203/1
+			.get Razorspine's Sword##33110|q 1203/1
 		step
 			goto Dustwallow Marsh,55.4,26.3
 			.talk "Swamp Eye" Jarl##4792
@@ -3907,8 +3922,9 @@ startlevel 50
 		step
 			goto Dustwallow Marsh,47.2,46.6
 			.from Apothecary Cylla##23881
-			.get the Sealed Letter|n
-			.' Click the Sealed Letter|use Sealed Letter##33114
+			.collect Sealed Letter##33114|q 11185 |future
+		step
+			.use Sealed Letter##33114
 			..accept The Apothecary's Letter##11185
 		step
 			goto Dustwallow Marsh,47,50
@@ -3922,7 +3938,7 @@ startlevel 50
 		step
 			goto Dustwallow Marsh,41.7,51.4
 			.from Darkfang Creepers##4412, Noxious Shredders##4348
-			.get 6 Marsh Venom|q 11173/1
+			.get 6 Marsh Venom##33103|q 11173/1
 		step
 			goto Dustwallow Marsh,36.1,54.3
 			.' Fight Balos Jacken until he surrenders.
@@ -3938,6 +3954,8 @@ startlevel 50
 			.talk Apprentice Garion##23601
 			..turnin The Reagent Thief##11173
 			..turnin The Grimtotem Weapon##11169
+		step
+			goto Dustwallow Marsh,46.1,57.4
 			.talk Apprentice Morlann##23600
 			..turnin Direhorn Raiders##11156
 		step
@@ -3951,7 +3969,7 @@ startlevel 50
 		step
 			goto Dustwallow Marsh,35,65
 			.from Bloodfen Razormaw##4356, Bloodfen Lashtail##4357
-			.get 5 Bloodfen Feather|q 11158/1
+			.get 5 Bloodfen Feather##33085|q 11158/1
 		step
 			goto Dustwallow Marsh,42.3,72.9
 			.talk Drazzit Dripvalve##23572
@@ -3966,12 +3984,11 @@ startlevel 50
 			goto Dustwallow Marsh,39,66
 			.from Firemane Scout##4329, Firemane Ash Tail##4331
 			.' Use Brogg's Totem on their corpses|use Brogg's Totem##33088
-			.get 10 Black Dragonkin Essence|q 11161/1
+			.get 10 Black Dragonkin Essence##33087|q 11161/1
 		step
 			goto Dustwallow Marsh,38.1,69.4
-			.' Click the Stonemaul Banner
+			.collect Stonemaul Banner##33086|q 11160/1
 			.info It looks like a hanging tiger skin with an eye painted on it inside the cave.
-			.get Stonemaul Banner|q 11160/1
 		step
 			goto Dustwallow Marsh,41.9,74
 			.talk Brogg##23579
@@ -3980,12 +3997,11 @@ startlevel 50
 			..accept Spirits of Stonemaul Hold##11159
 		step
 			goto Dustwallow Marsh,46,74
-			.' Click the Wyrmtails.
+			.collect 8 Wyrmtail##33175|q 11217/1
 			.info They look like green balls on the ground.
-			.get 8 Wyrmtail|q 11217/1
 		step
 			goto Dustwallow Marsh,46,69
-			.' Click the Ogre Remains.
+			.' Interact with gameobject: Ogre Remains
 			.info They look like big white bones on the ground.
 			.from Stonemaul Spirit##23786
 			.' Lay 10 Stonemaul Spirits to rest|goal 10 Stonemaul Spirits laid to rest|q 11159/1
@@ -4022,11 +4038,14 @@ startlevel 50
 		step
 			goto Dustwallow Marsh,43.1,15
 			.from Grimtotem Elder##23714
-			.get 4 Grimtotem Note##33050|n
+			.collect 4 Grimtotem Note##33050|q 11144
+		step
 			.' Click the Grimtotem Notes in your bags to combine them|use Grimtotem Note##33050
-			.get Grimtotem Battle Plan|q 11144/1
-			.' Click the Blackhoof Armaments|tip The Blackhoof Armaments look like wooden weapon with huge spears on them around this area.
-			.get 7 Blackhoof Armaments|q 11148/1
+			.collect Grimtotem Battle Plan##33051|q 11144/1
+		step
+			goto Dustwallow Marsh,43.1,15
+			.collect 7 Blackhoof Armaments##33071|q 11148/1
+			.info The Blackhoof Armaments look like wooden weapon with huge spears on them around this area.
 		step
 			goto Dustwallow Marsh,46.6,24.6
 			.talk Captain Darill##23568
