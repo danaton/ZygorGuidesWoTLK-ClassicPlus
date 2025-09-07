@@ -1308,7 +1308,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		..accept Moonglade##5921
 		only NightElf Druid
 	step //125
-		'He gives you a spell called Teleport: Moonglade
+		.' He gives you a spell called Teleport: Moonglade
 		.' Teleport to Moonglade|goto Moonglade|cast Teleport: Moonglade|q 5921
 		only NightElf Druid
 	step //126
@@ -1323,8 +1323,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 		.goal Seek out the Great Bear Spirit and learn what it has to share with you about the nature of the bear.|q 5929/1
 		only NightElf Druid
 	step //128
-		'He gives you a spell called Teleport: Moonglade
-		.' Teleport to Moonglade|goto Moonglade|cast Teleport: Moonglade|q 5929
+		.' He gives you a spell called Teleport: Moonglade
+		.' Teleport to Moonglade|goto Moonglade,56.26,32.46,1|q 5929
 		only NightElf Druid
 	step //129
 		goto 56.2,30.5
@@ -4845,7 +4845,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 	step //6
 		goto 52.9,53.7
 		.talk Innkeeper Heather##8931
-		home Sentinel Hill|q 109
+		home Sentinel Hill|q 12 |future
 	step //7
 		goto 56.3,47.5
 		.talk Gryan Stoutmantle##234
@@ -4964,6 +4964,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		only NightElf Druid
 	step //33
 		.' Hearth to Sentinel Hill|goto Westfall,52.9,53.6,0.5|use Hearthstone##6948|noway|q 9
+		only NightElf Druid
 	step //34
 		goto 53.8,42.5
 		.from Goretusk##157, Young Goretusk##454

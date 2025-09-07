@@ -4183,10 +4183,9 @@ startlevel 50
 			.kill 10 Saltstone Crystalhide##4151|q 1175/2
 		step
 			goto Thousand Needles,83.06,61.38
-			.' Collect Rocket Car Rubble
+			.collect 30 Rocket Car Parts##5798|q 1110/1
 			.info They look like various machine parts scattered on the ground.
 			.info You can find them all throughout the Shimmering Flats.
-			collect 30 Rocket Car Parts##5798|q 1110/1
 			.' You can find more around (1)|at 77.95,53.29
 			.' You can find more around (2)|at 73.56,56.98
 			.' You can find more around (3)|at 71.30,66.70
@@ -4280,7 +4279,7 @@ startlevel 50
 		step
 			goto Stranglethorn Vale,42.6,18.4
 			.kill Foreman Cozzle##4723|n
-			.get 1 Cozzle's Key##5851|q 1182
+			.collect Cozzle's Key##5851|q 1182
 		step
 			goto Stranglethorn Vale,43.3,20.3
 			.info Open Cozzle's Footlocker in hut.
@@ -4341,8 +4340,8 @@ startlevel 50
 			..accept Razzeric's Tweaking##1187
 		step
 			goto Dustwallow Marsh,54.1,56.5
-			.info Open Gizmorium Shipping Crate.
 			.collect Seaforium Booster##5862|q 1187/1
+			.info Open Gizmorium Shipping Crate.
 		step
 			goto Stranglethorn Vale,27.1,77.2
 			.talk Crank Fizzlebub##2498
@@ -4434,7 +4433,7 @@ startlevel 50
 			..accept Super Sticky##4504
 		step
 			goto Tanaris,51.84,27.02
-			.' Click Wanted Poster.
+			.' Interact with gameobject: Wanted Poster
 			..accept WANTED: Caliph Scorpidsting##2781
 			..accept WANTED: Andre Firebeard##2875
 		step
@@ -4492,9 +4491,8 @@ startlevel 50
 			.get Firebeard's Head##9246|q 2875/1
 		step
 			goto Tanaris,72.19,46.77
-			.' Collect Stolen Cargo.
-			.info Upstairs inside the building.
 			.collect Stoley's Shipment##9244|q 2873/1
+			.info Upstairs inside the building.
 		step
 			goto Tanaris,73.26,46.42
 			.kill 10 Southsea Pirate##7855|q 8366/1
@@ -4570,9 +4568,8 @@ startlevel 50
 			..accept Gahz'ridian##3161
 		step
 			goto Tanaris,40.45,72.67
-			.' Collect Gahz'ridian.
-			.info They look like small piles of sand on the ground around this area.
 			.collect 30 Gahz'ridian Ornament##8443|q 3161/1
+			.info They look like small piles of sand on the ground around this area.
 			.' You can find more around (1)|at 46.96,65.87
 			.' You can find more around (2)|at 53,44
 		step
@@ -4679,9 +4676,8 @@ startlevel 50
 			..accept The Scrimshank Redemption##10
 		step
 			goto Tanaris,55.97,71.18
-			.' Collect Scrimshank's Surveying Gear
-			.info Inside the cave.
 			.collect Scrimshank's Surveying Gear##8593|q 10/1
+			.info Inside the cave.
 		step
 			.use the OOX-17/TN Distress Beacon##8623
 			..accept Find OOX-17/TN!##351
@@ -4927,7 +4923,7 @@ startlevel 50
 			.info Dungeon: The Sunken Temple Quest Chain.
 		step
 			goto The Hinterlands,41,59.8
-			.collect 1 Violet Tragan##8526|q 2641/1
+			.collect Violet Tragan##8526|q 2641/1
 			.info Purple mushroom underwater.
 		step
 			goto The Hinterlands,67,50.4
@@ -5012,8 +5008,8 @@ startlevel 50
 			.' Kill enemies around this area.
 			.info Inside and outside the cave.
 			.info Any enemy in Feralas can drop this item.
-			.collect OOX-22/FE Distress Beacon##8705 |n
-			.info If you reach level  47 before finding this item, skip the quest.
+			.collect OOX-22/FE Distress Beacon##8705|q 2766 |future
+		step
 			.use the OOX-22/FE Distress Beacon##8705
 			..accept Find OOX-22/FE!##2766
 		step
@@ -5070,7 +5066,7 @@ startlevel 50
 			.' You can find more through in cave|at 53.15,56.25
 		step
 			goto Feralas,54.6,75.8
-			.collect 1 Hippogryph Egg##8564|q 2741 |future
+			.collect Hippogryph Egg##8564|q 2741 |future
 			.' You can find more|at 58,76.3
 		step
 			goto Feralas,59.67,66.85
@@ -5102,15 +5098,15 @@ startlevel 50
 			.info Dungeon: The Sunken Temple Quest Chain.
 		step
 			goto Feralas,73.31,56.31
-			.' Interact with Large Leather Backpacks.
+			.' Interact with gameobject: Large Leather Backpacks
 			..turnin The Woodpaw Gnolls##4131
 			..accept The Writhing Deep##4135
 		step
-			.use the Undelivered Parcel##11463
+			.use Undelivered Parcel##11463
 			..accept Thalanaar Delivery##4281
 		step
 			goto Feralas,72.08,63.75
-			.' Interact with Zukk'ash Pod.
+			.' Interact with gameobject: Zukk'ash Pod
 			..turnin The Writhing Deep##4135
 			..accept Freed from the Hive##4265
 		step
@@ -5148,7 +5144,8 @@ startlevel 50
 		step
 			goto Feralas,53.3,31.8
 			.from Rage Scar Yeti##5296, Ferocious Rage Scar##5299
-			.get 1 Pristine Yeti Hide##18969|n
+			.collect Pristine Yeti Hide##18969|q 7735 |future
+		step
 			.use Pristine Yeti Hide##18969
 			..accept Pristine Yeti Hide##7735
 		step
@@ -5170,6 +5167,8 @@ startlevel 50
 		step
 			goto Feralas,38.8,13.2
 			.use Troyas' Stave##9263|q 2879/1
+		step
+			goto Feralas,38.8,13.2
 			.' Interact with gameobject: Equinex Monolith
 			..turnin The Stave of Equinex##2879
 			..accept The Morrow Stone##2942
@@ -5180,8 +5179,8 @@ startlevel 50
 			..accept Wandering Shay##2845
 		step
 			goto Feralas,38.3,10.3
-			.' Open Shay's Chest.
 			.collect 1 Shay's Bell##9189|q 2845/2
+			.info Open Shay's Chest.
 		step
 			goto Feralas,42.4,22
 			.use Shay's Bell##9189
@@ -5343,27 +5342,12 @@ startlevel 60
 		step
 			goto Felwood,38.87,58.49
 			.kill 4 Jaedenar Hound##7125|q 5155/1
-			.info You can find more in the caves nearby in this area.
-			.' You can find more around (1)|at 37.87,60.72
-			.' You can find more around (2)|at 35.12,60.26
-		step
-			goto Felwood,38.87,58.49
 			.kill 4 Jaedenar Guardian##7113|q 5155/2
-			.info You can find more in the caves nearby in this area.
-			.' You can find more around (1)|at 37.87,60.72
-			.' You can find more around (2)|at 35.12,60.26
-		step
-			goto Felwood,38.87,58.49
 			.kill 6 Jaedenar Adept##7115|q 5155/3
-			.info You can find more in the caves nearby in this area.
-			.' You can find more around (1)|at 37.87,60.72
-			.' You can find more around (2)|at 35.12,60.26
-		step
-			goto Felwood,38.87,58.49
 			.kill 6 Jaedenar Cultist##7112|q 5155/4
 			.info You can find more in the caves nearby in this area.
-			You can find more around (1)|at 37.87,60.72
-			You can find more around (2)|at 35.12,60.26
+			.' You can find more around (1)|at 37.87,60.72
+			.' You can find more around (2)|at 35.12,60.26
 		step
 			goto Felwood,51.21,82.11
 			.talk Greta Mosshoof##10922
@@ -5397,12 +5381,11 @@ startlevel 60
 		step
 			goto Felwood,48.32,92.99
 			.from Deadwood Warrior##7153, Deadwood Gardener##7154, Deadwood Pathfinder##7155
-			.' Reach Unfriendly Reputation with the Timbermaw Hold Faction
+			.' Reach Unfriendly Reputation with the Timbermaw Hold Faction|condition rep("Timbermaw Hold")==Unfriendly
 			.info You are about to go through a long tunnel soon, full of level 52-54 enemies.
 			.info If you are not at least Unfriendly with this faction, you will be attacked.
 			.' You can find more around (1)|at 46.51,88.13
 			.' You can find more around (2)|at 48.77,89.62
-			only if rep("Timbermaw Hold")>=Unfriendly
 		step
 			goto Felwood,35.20,59.87
 			.use the Empty Canteen##12922
@@ -5414,10 +5397,6 @@ startlevel 60
 		step
 			goto Felwood,41.36,41.19
 			.kill 2 Entropic Beast##9878|q 5156/2
-			.info Be careful to avoid the elite Infernal Sentries around this area.
-			.' You can find more around|at 43.63,40.55
-		step
-			goto Felwood,41.36,41.19
 			.kill 2 Entropic Horror##9879|q 5156/3
 			.info Be careful to avoid the elite Infernal Sentries around this area.
 			.' You can find more around|at 43.63,40.55
@@ -5425,7 +5404,9 @@ startlevel 60
 			goto Felwood,39.07,22.35
 			.kill Xavaric##10648|q 4906/4
 			.collect Flute of Xavaric##11668|q 939 |future
-			..accept Flute of Xavaric##939|use Flute of Xavaric##11668
+		step
+			.use Flute of Xavaric##11668
+			..accept Flute of Xavaric##939
 		step
 			goto Felwood,40.73,19.72
 			.kill 8 Jadefire Hellcaller##7111|q 4906/1
@@ -5449,8 +5430,8 @@ startlevel 60
 			goto Felwood,51.35,81.51
 			.talk Eridan Bluewind##9116
 			..turnin Flute of Xavaric##939
-			..accept Felbound Ancients##4441
 			..turnin Further Corruption##4906
+			..accept Felbound Ancients##4441
 		step
 			goto Felwood,50.89,81.62
 			.talk Taronn Redfeather##10921
@@ -5463,7 +5444,7 @@ startlevel 60
 			goto Felwood,53.82,86.71
 			.talk Arathandris Silversky##9528
 			.' Tell her "I need a Cenarion beacon."
-			.collect 1 Cenarion Beacon##11511|q 5882|future
+			.collect Cenarion Beacon##11511|q 5882 |future
 		step
 			goto Felwood,48.32,92.99
 			.from Deadwood Warrior##7153, Deadwood Gardener##7154, Deadwood Pathfinder##7155
@@ -5473,7 +5454,7 @@ startlevel 60
 		step
 			goto Felwood,53.82,86.71
 			.talk Arathandris Silversky##9528
-			..accept Salve via Hunting##5887|instant
+			..accept Salve via Hunting##4103|instant
 		step
 			goto Darnassus,39.51,83.92
 			.use Eridan's Vial##11682
@@ -5494,34 +5475,40 @@ startlevel 60
 			.talk Eridan Bluewind##9116
 			..turnin Felbound Ancients##4441
 			..accept Purified!##4442
+			.' Watch the dialogue.
 			..turnin Purified!##4442
 		step
+			goto Felwood,35.85,61.25|n
+			.' Move towards the cave|goto 35.85,61.25,0.5 |q 5165
+		step
 			goto Felwood,36.27,56.29
-			.' Interact with Brazier of Pain
+			.' Interact with gameobject: Brazier of Pain
 			.info Downstairs inside the cave, on the top level.
 			.' Extinguish the Brazier of Pain|q 5165/1
 		step
 			goto Felwood,36.48,55.18
-			.' Interact with Brazier of Hatred
+			.' Interact with gameobject: Brazier of Hatred
 			.info Downstairs inside the cave, on the top level.
-			.' Extinguish the Brazier of Hatred|q 5165/2
-		step
-			goto Felwood,37.93,54.3
-			.' Interact with Brazier of Malice
-			.info Downstairs inside the cave, on the bottom level.
-			.' Extinguish the Brazier of Malice|q 5165/3
+			.' Extinguish the Brazier of Hatred|q 5165/4
 		step
 			goto Felwood,36.73,53.26
-			.' Interact with Brazier of Suffering
+			.' Interact with gameobject: Brazier of Suffering
 			.info Downstairs inside the cave, on the bottom level.
-			.' Extinguish the Brazier of Suffering|q 5165/4
+			.' Extinguish the Brazier of Suffering|q 5165/3
+		step
+			goto Felwood,37.7,52.7
+			.' Interact with gameobject: Brazier of Malice
+			.info Downstairs inside the cave, on the bottom level.
+			.' Extinguish the Brazier of Malice|q 5165/2
 		step
 			goto Felwood,36.29,55.96
 			.from Jaedenar Enforcer##7114, Jaedenar Darkweaver##7118, Jaedenar Warlock##7120, Jaedenar Legionnaire##9862
 			.info All around inside the cave, on both levels.
 			.info Once you get this item, you will accept a quest from it that you will turn in on the top level of the cave.
 			.collect Blood Red Key##13140|q 5202 |future
-			..accept A Strange Red Key##5202|use the Blood Red Key##13140
+		step
+			.use the Blood Red Key##13140
+			..accept A Strange Red Key##5202
 		step
 			goto Felwood,36.21,55.50
 			.talk Captured Arko'narin##11016
@@ -5541,8 +5528,16 @@ startlevel 60
 			..turnin Rescue From Jaedenar##5203
 			..accept Retribution of the Light##5204
 		step
-			goto Felwood,35.4,58.7
-			.kill Rakaiah##9518|at 38.27,50.55|q 5204/1
+			goto Felwood,38.49,59.35|n
+			.' Move forward from here|goto 38.49,59.35,0.5 |q 5204
+		step
+			goto Felwood,35.45,59.64|n
+			.' Go down into the already familiar cave|goto 35.45,59.64,0.5 |q 5204
+		step
+			goto Felwood,38.27,50.55
+			.kill Rakaiah##9518|q 5204/1
+		step
+			goto Felwood,38.5,50.4
 			.talk Remains of Trey Lightforge##11020
 			..turnin Retribution of the Light##5204
 			..accept The Remains of Trey Lightforge##5385
@@ -5561,8 +5556,9 @@ startlevel 60
 			.talk Jessir Moonbow##11019
 			..turnin The Remains of Trey Lightforge##5385
 		step
-			goto Felwood,49.7,30.7
+			goto Felwood,49.55,29.65
 			.use Flute of the Ancients##11445
+			.info Use to see Arei.
 			.talk Arei##9598
 			..accept Ancient Spirit##4261
 		step
@@ -5599,6 +5595,514 @@ startlevel 60
 			..turnin A Little Slime Goes a Long Way (1)##4512
 		step
 			.' Congratulations! +21 quests for achievement "Loremaster of Kalimdor".
+]])
+
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Un'Goro Crater",[[
+author danaton
+description This guide contain quest-chain (46 quests) for Un'Goto Crater location.
+startlevel 60
+		step
+			.' First you need to complete Felwood Quest Guide.
+		step
+			goto Ironforge,75.77,23.37
+			.talk Laris Geardawdle##9616
+			..accept A Little Slime Goes a Long Way (2)##4513
+		step
+			.use Bag of Empty Ooze Containers##11955
+			.collect 10 Empty Pure Sample Jar##11953|q 4513 |future
+		step
+			goto Ironforge,24.2,74.7
+			.talk Auctioneer Redmuse##8720
+			.buy 1 Mithril Casing##10561|future |q 4244
+			.info Don't Selling!
+		step
+			goto Darnassus,67.4,15.6
+			.talk Innkeeper Saelienne##6735
+			..accept Assisting Arch Druid Staghelm##3763
+		step
+			goto Darnassus,34.8,9.3
+			.talk Arch Druid Fandral Staghelm##3516
+			..turnin Assisting Arch Druid Staghelm##3763
+			..accept Un'Goro Soil##3764
+		step
+			goto The Barrens,62.4,38.7
+			.talk Liv Rizzlefix##8496
+			..accept Volcanic Activity##4502
+		step
+			goto Tanaris,51.57,26.76
+			.talk Tran'rek##7876
+			..accept Super Sticky##4504
+		step
+			goto Un'Goro Crater,71.64,75.96
+			.talk Torwa Pathfinder##9619
+			..accept The Apes of Un'Goro##4289
+			..accept The Fare of Lar'korwi##4290
+		step
+			goto Un'Goro Crater,63.02,68.50
+			.' Interact with gameobject: A Wrecked Raft
+			..accept It's a Secret to Everybody (1)##3844
+		step
+			goto Un'Goro Crater,63.12,69.02
+			.' Interact with gameobject: A Small Pack
+			.info Underwater.
+			..turnin It's a Secret to Everybody (2)##3844
+			..accept It's a Secret to Everybody (3)##3845
+		step
+			.use A Small Pack##11107
+			.collect Large Compass##11104|q 3845/1
+			.collect Curled Map Parchment##11105|q 3845/2
+			.collect Lion-headed Key##11106|q 3845/3
+		step
+			goto Un'Goro Crater,68.75,56.66
+			.collect Piece of Threshadon Carcass##11504|q 4290/1
+			.info Avoid the elite t-rex that sometimes walks near this location.
+		step
+			goto Un'Goro Crater,71.64,75.97
+			.talk Torwa Pathfinder##9619
+			..turnin The Fare of Lar'korwi##4290
+			..accept The Scent of Lar'korwi##4291
+		step
+			goto Un'Goro Crater,67.32,73.05
+			.from Lar'korwi Mate##9683
+			.info Stand on the pile of purple eggs to get it to appear.
+			.get 2 Ravasaur Pheromone Gland##11509|q 4291/1
+			.' You can find more eggs (1)|at 62.87,80.48
+			.' You can find more eggs (2)|at 60.92,72.23
+			.' You can find more eggs (3)|at 66.60,66.73
+		step
+			goto Un'Goro Crater,71.63,75.97
+			.talk Torwa Pathfinder##9619
+			..turnin The Scent of Lar'korwi##4291
+			..accept The Bait for Lar'korwi##4292
+		step
+			.use Torwa's Pouch##11568
+			..collect Preserved Threshadon Meat##11569|q 4292
+			..collect Preserved Pheromone Mixture##11570|q 4292
+		step
+			goto Un'Goro Crater,79.92,49.90
+			.use the Preserved Threshadon Meat##11569
+			.info Use this first.
+			.use the Preserved Pheromone Mixture##11570
+			.info Use this second.
+			.from Lar'korwi##9684
+			.info He's level 56, but you should be able to kill him at this level.
+			.info If you have trouble, try to find someone to help you.
+			.get Lar'korwi's Head##11510|q 4292/1
+		step
+			goto Un'Goro Crater,46.38,13.45
+			.talk Karna Remtravel##9618
+			..accept Chasing A-Me 01 (1)##4243
+		step
+			goto Un'Goro Crater,42.94,9.64
+			.talk Muigin##9119
+			.accept Muigin and Larion##4141
+		step
+			goto Un'Goro Crater,44.66,8.11
+			.talk Linken##8737
+			..turnin It's a Secret to Everybody (3)##3845
+			..accept It's a Secret to Everybody (4)##3908
+			.info Winterspring Quest-Chain.
+		step
+			goto Un'Goro Crater,45.23,5.84
+			.talk Gryfe##10583
+			.fpath Marshal's Refuge, Un'Goro Crater|q 4243
+		step
+			goto Un'Goro Crater,67.65,16.76
+			.talk A-Me 01##9623
+			..turnin Chasing A-Me 01 (1)##4243
+			..accept Chasing A-Me 01 (2)##4244
+			..turnin Chasing A-Me 01 (2)##4244
+		step
+			goto Un'Goro Crater,64.02,16.32
+			.info Inside and outside the cave.
+			.info The gorillas share spawn points.
+			.info If you can't find any more of these, kill the other types of gorillas to get them to spawn.
+			.from Un'Goro Stomper##6513, Un'Goro Gorilla##6514, Un'Goro Thunderer##6516
+			.get 2 Un'Goro Gorilla Pelt##11478|q 4289/1
+			.get 2 Un'Goro Stomper Pelt##11479 |q 4289/2
+			.get 2 Un'Goro Thunderer Pelt##11480|q 4289/3
+		step
+			goto Un'Goro Crater,67.65,16.76
+			.talk A-Me 01##9623
+			..accept Chasing A-Me 01 (3)##4245
+		step
+			goto Un'Goro Crater,46.32,13.68
+			.goal Protect A-Me 01 Until You Reach Karna Remtravel|q 4245/1
+		step
+			goto Un'Goro Crater,46.38,13.45
+			.talk Karna Remtravel##9618
+			..turnin Chasing A-Me 01 (3)##4245
+		step
+			goto Un'Goro Crater,59.96,30.56
+			.from Tar Beast##6517, Tar Lurker##6518, Tar Lord##6519, Tar Creeper##6527
+			.get 12 Super Sticky Tar##11834|q 4504/1
+			.' You can find more around (1)|at 59.75,24.49
+			.' You can find more around (2)|at 63.54,23.41
+		step
+			goto Un'Goro Crater,71.46,38.72
+			.' Kill Bloodpetal enemies around this area.
+			.info They look like walking plants.
+			.collect 15 Bloodpetal##11316|q 4141/1
+			.collect A Mangled Journal##11116|q 3884 |future
+			.' You can find more around ()|at 66.08,35.13
+			.' You can find more around ()|at 69.26,24.59
+			.' You can find more around ()|at 55.87,34.69
+		step
+			.use A Mangled Journal##11116
+			..accept Williden's Journal##3884
+		step
+			goto Un'Goro Crater,42.94,9.64
+			.talk Muigin##9119
+			..turnin Muigin and Larion##4141
+		step
+			goto Un'Goro Crater,43.95,7.14
+			.talk Williden Marshal##9270
+			..turnin Williden's Journal##3884
+			..accept Expedition Salvation##3881
+		step
+			goto Un'Goro Crater,43.89,7.24
+			talk Hol'anyee Marshal##9271
+			..accept Alien Ecology##3883
+		step
+			goto Un'Goro Crater,41.92,2.70
+			.talk J.D. Collie##9117
+			..accept Crystals of Power##4284
+		step
+			.collect 7 Red Power Crystal##11186|q 4284/1
+			.collect 7 Yellow Power Crystal##11188|q 4284/2
+			.collect 7 Green Power Crystal##11185|q 4284/3
+			.collect 7 Blue Power Crystal##11184|q 4284/4
+			.info They look clusters of red, yellow, green, or blue crystals on the ground around this area.
+			.info They tend to be around the base of trees, or near the cliffs surrounding Un'Goro Crater.
+			.info Stick to searching around the eastern side of the zone, since there are lower level enemies there, and the crystals can spawn anywhere in the zone.
+			.info Kill enemies here and there as you search around, to continue gaining experience.
+			.info You can skip it manually and continue completing quests without forgetting about this step.
+		step
+			goto Un'Goro Crater,43.50,7.42
+			.talk Spark Nilminer##9272
+			..accept Roll the Bones##3882
+		step
+			goto Un'Goro Crater,43.55,8.42
+			.' Interact with gameobject: Beware of Pterrordax
+			..accept Beware of Pterrordax##4501
+		step
+			goto Un'Goro Crater,43.62,8.50
+			.talk Spraggle Frock##9997
+			..accept Lost!##4492
+		step
+			goto Un'Goro Crater,42.9,9.6
+			.talk Muigin##9119
+			..accept A Visit to Gregan##4142
+		step
+			goto Un'Goro Crater,44.24,11.59
+			.talk Shizzle##9998
+			..accept Shizzle's Flyer##4503
+		step
+			goto Un'Goro Crater,34.7,40.4
+			.' Open Package of Empty Ooze in your bags|use Bag of Empty Ooze Containers##11955
+			.from Glutinous Ooze##6559
+			.use Empty Pure Sample Jar##11953|q 4513/1
+		step
+			goto Un'Goro Crater,30.93,50.43
+			.talk Krakle##10302
+			..accept Finding the Source##974
+		step
+			goto Un'Goro Crater,38.47,66.11
+			.collect Research Equipment##11112|q 3881/2
+		step
+			goto Un'Goro Crater,49.70,45.74
+			.use Krakle's Thermometer##12472
+			.info At the top of the mountain.
+			.' Find the Hottest Area of Fire Plume Ridge|q 974/1
+		step
+			goto Un'Goro Crater,50.8,47.1
+			.from Scorching Elemental##6520, Living Blaze##6521, Blazing Invader##14460
+			.get 9 Un'Goro Ash##11829|q 4502/1
+		step
+			goto Un'Goro Crater,51.90,49.85
+			.talk Ringo##9999
+			.info If he's not here, someone may be escorting him.
+			.info Wait until he respawns.
+			..turnin Lost!##4492
+			..accept A Little Help From My Friends##4491
+		step
+			goto Un'Goro Crater,43.62,8.51
+			.' Watch the dialogue.
+			.info Ringo will follow you, protect him as you walk.
+			.info He will faint multiple times as he walks, so make sure he is with you at all times.
+			.info You will see a message in your chat when he faints.
+			.use Spraggle's Canteen##11804
+			.info Use it on Ringo to revive him when he faints.
+			.goal Escort Ringo to Spraggle Frock at Marshal's Refuge|q 4491/1
+		step
+			goto Un'Goro Crater,43.62,8.51
+			.talk Spraggle Frock##9997
+			..turnin A Little Help From My Friends##4491
+		step
+			goto Un'Goro Crater,68.51,36.54
+			.collect Crate of Foodstuffs##11113|q 3881/1
+		step
+			goto Un'Goro Crater,71.64,75.97
+			.talk Torwa Pathfinder##9619
+			..turnin The Apes of Un'Goro##4289
+			..turnin The Bait for Lar'korwi##4292
+			..accept The Mighty U'cha##4301
+		step
+			goto Un'Goro Crater,48.74,85.21
+			.use the Unused Scraping Vial##11132
+			.info Inside the cave.
+			.collect Hive Wall Sample##11131|q 3883/1
+		step
+			goto Un'Goro Crater,59.18,53.99
+			.from Diemetradon##9163
+			.get 8 Dinosaur Bone##11114|q 3882/1
+			.get 8 Webbed Diemetradon Scale##11830|q 4503/1
+			.' You can find more around (1)|at 56.74,63.47
+			.' You can find more around (2)|at 49.24,61.78
+			.' You can find more around (3)|at 50.79,67.25
+			.' You can find more around (4)|at 45.26,68.91
+			.' You can find more around (5)|at 41.52,56.95
+		step
+			goto Un'Goro Crater,30.93,50.44
+			.talk Krakle##10302
+			..turnin Finding the Source##974
+			..accept The New Springs##980
+			.info Winterspring Quest-Chain.
+		step
+			goto Un'Goro Crater,21.75,59.39
+			.kill 10 Frenzied Pterrordax##9167|q 4501/1
+			.collect 8 Webbed Pterrordax Scale##11831|q 4503/2
+			.' You can find more around (1)|at 23.26,49.89
+			.' You can find more around (2)|at 22.81,41.53
+			.' You can find more around (3)|at 23.36,41.24
+			.' You can find more around (4)|at 39.05,47.06
+			.' You can find more around (5)|at 28.28,33.06
+			.' You can find more around (6)|at 34.49,37.63
+			.' You can find more around (7)|at 31.25,44.33
+		step
+			goto Un'Goro Crater,44.23,11.59
+			.talk Shizzle##9998
+			..turnin Shizzle's Flyer##4503
+		step
+			goto Un'Goro Crater,43.62,8.50
+			.talk Spraggle Frock##9997
+			..turnin Beware of Pterrordax##4501
+		step
+			goto Un'Goro Crater,43.50,7.43
+			.talk Spark Nilminer##9272
+			..turnin Roll the Bones##3882
+		step
+			goto Un'Goro Crater,43.89,7.24
+			.talk Hol'anyee Marshal##9271
+			..turnin Alien Ecology##3883
+		step
+			goto Un'Goro Crater,43.95,7.14
+			.talk Williden Marshal##9270
+			..turnin Expedition Salvation##3881
+		step
+			goto Un'Goro Crater,68.15,12.58
+			.from U'cha##9622
+			.info Upstairs inside the cave.
+			.get U'cha's Pelt##11476|q 4301/1
+		step
+			goto Un'Goro Crater,71.63,75.96
+			.talk Torwa Pathfinder##9619
+			..turnin The Mighty U'cha##4301
+		step
+			.collect 7 Red Power Crystal##11186|q 4284/1
+			.collect 7 Yellow Power Crystal##11188|q 4284/2
+			.collect 7 Green Power Crystal##11185|q 4284/3
+			.collect 7 Blue Power Crystal##11184|q 4284/4
+			.info They look clusters of red, yellow, green, or blue crystals on the ground around this area.
+			.info They tend to be around the base of trees, or near the cliffs surrounding Un'Goro Crater.
+			.info Stick to searching around the eastern side of the zone, since there are lower level enemies there, and the crystals can spawn anywhere in the zone.
+			.info Kill enemies here and there as you search around, to continue gaining experience.
+		step
+			goto Un'Goro Crater,41.92,2.70
+			.talk J.D. Collie##9117
+			..turnin Crystals of Power##4284
+			..accept The Northern Pylon##4285
+			..accept The Eastern Pylon##4287
+			..accept The Western Pylon##4288
+		step
+			goto Un'Goro Crater,56.48,12.45
+			.' Interact with gameobject: Northern Crystal Pylon
+			.' Choose "I want to examine this pylon."
+			.goal Discover and Examine the Northern Crystal Pylon|q 4285/1
+		step
+			goto Un'Goro Crater,77.24,49.97
+			.' Interact with gameobject: Eastern Crystal Pylon
+			.' Choose "I want to examine this pylon."
+			.goal Discover and Examine the Eastern Crystal Pylon|q 4287/1
+		step
+			goto Un'Goro Crater,23.79,59.19
+			.' Interact with gameobject: Western Crystal Pylon
+			.' Choose "I want to examine this pylon."
+			.goal Discover and Examine the Western Crystal Pylon|q 4288/1
+		step
+			goto Un'Goro Crater,44.7,54.5
+			.collect 30 Un'Goro Soil##11018|q 3785 |future
+			.' You can find more around (1)|at 52.5,78.9
+			.' You can find more around (2)|at 44.4,83.2
+			.' You can find more around (3)|at 41.1,79.8
+			.' You can find more around (4)|at 36.4,76.3
+			.' You can find more around (5)|at 36.4,69.7
+			.' You can find more around (6)|at 31,78.8
+			.' You can find more around (7)|at 30.5,70
+			.' You can find more around (8)|at 33.1,65.3
+			.' You can find more around (9)|at 28,62.8
+			.' You can find more around (10)|at 40.8,59.6
+		step
+			goto Un'Goro Crater,41.92,2.70
+			.talk J.D. Collie##9117
+			..turnin The Northern Pylon##4285
+			..turnin The Eastern Pylon##4287
+			..turnin The Western Pylon##4288
+			..accept Making Sense of It##4321
+		step
+			goto Un'Goro Crater,41.92,2.70
+			.talk J.D. Collie##9117
+			..turnin Making Sense of It##4321
+		step
+			goto Tanaris,51.57,26.76
+			.talk Tran'rek##7876
+			..turnin Super Sticky##4504
+		step
+			goto The Barrens,62.4,38.7
+			.talk Liv Rizzlefix##8496
+			..turnin Volcanic Activity##4502
+		step
+			goto Winterspring,60.7,38.2
+			.talk Meggi Peppinrocker##11754
+			..accept Trouble in Winterspring!##6603
+		step
+			goto Winterspring,31.27,45.16
+			.talk Donova Snowden##9298
+			..turnin The New Springs##980
+			..turnin It's a Secret to Everybody##3908
+			..accept The Videre Elixir##3909
+			..turnin Trouble in Winterspring!##6603
+		step
+			goto Feralas,45.1,25.6
+			.talk Gregan Brewspewer##7775
+			..turnin A Visit to Gregan##4142
+		step
+			goto Feralas,45.1,25.6
+			.talk Gregan Brewspewer##7775
+			.buy Bait##11141|q 3909 |future
+		step
+			goto Feralas,44.6,10.5
+			.use Bait##11141
+			.collect Evoroot##11242|q 3909 |future
+		step
+			goto Feralas,45.1,25.6
+			.talk Gregan Brewspewer##7775
+			.collect Videre Elixir##11243|q 3909/1
+		step
+			goto Winterspring,31.27,45.16
+			.talk Donova Snowden##9298
+			..turnin The Videre Elixir##3909
+			..accept Meet at the Grave##3912
+		step
+			goto Tanaris,53.96,28.76
+			.use Videre Elixir##11243|q 3912
+			.info As soon as you drink, you will die immediately.
+			.info Without resurrecting, run to the next step.
+		step
+			goto Tanaris,53.92,23.33
+			.talk Gaeriyan##9299
+			..turnin Meet at the Grave##3912
+			..accept A Grave Situation##3913
+		step
+			goto Tanaris,53.8,29.1
+			.' Interact with gameobject: A Conspicuous Gravestone
+			..turnin A Grave Situation##3913
+			..accept Linken's Sword##3914
+		step
+			goto Un'Goro Crater,44.7,8.1
+			.talk Linken##8737
+			..turnin Linken's Sword##3914
+			..accept A Gnome's Assistance##3941
+		step
+			goto Un'Goro Crater,41.9,2.7
+			.talk J.D. Collie##9117
+			..turnin A Gnome's Assistance##3941
+			..accept Linken's Memory##3942
+		step
+			goto Felwood,51.3,81.5
+			.talk Eridan Bluewind##9116
+			..turnin Linken's Memory##3942
+			..accept Silver Heart##4084
+		step
+			goto Felwood,54.9,85.83
+			.from Angerclaw Bear##8956, Felpaw Wolf##8959
+			.get 11 Silvery Claws##11172|q 4084/1
+		step
+			goto Felwood,48.8,21.6
+			.from Irontree Wanderer##7138, Irontree Stomper##7139
+			.get Irontree Heart##11173|q 4084/2
+		step
+			goto Felwood,51.3,81.5
+			.talk Eridan Bluewind##9116
+			..turnin Silver Heart##4084
+			..accept Aquementas##4005
+		step
+			.use Eridan's Supplies##11617
+			.collect Book of Aquor##11169|q 4005 |future
+			.collect 11 Silvery Claws##11172|q 4005 |future
+			.collect Irontree Heart##11173|q 4005 |future
+		step
+			goto Tanaris,70.4,50
+			.use Book of Aquor##11169
+			.from Aquementas##9453
+			.get 1 Silver Totem of Aquementas##11522|q 4005/1
+		step
+			goto Un'Goro Crater,41.9,2.7
+			.talk J.D. Collie##9117
+			..turnin Aquementas##4005
+			..accept Linken's Adventure##3961
+		step
+			goto Un'Goro Crater,44.7,8.1
+			.talk Linken##8737
+			..turnin Linken's Adventure##3961
+			..accept It's Dangerous to Go Alone##3962
+		step
+			goto Un'Goro Crater,49.4,49.3
+			.use Silver Totem of Aquementas##11522
+			.from Blazerunner##9376
+			.get 1 Golden Flame##11179|q 3962/2
+			.info Chest in cave.
+		step
+			goto Un'Goro Crater,44.7,8.1
+			.talk Linken##8737
+			..turnin It's Dangerous to Go Alone##3962
+		step
+			goto Darnassus,31.5,8.2
+			.talk Jenal##9047
+			..turnin Un'Goro Soil##3764
+		step
+			goto Darnassus,34.8,9.3
+			.talk Arch Druid Fandral Staghelm##3516
+			..accept Morrowgrain Research (1)##3781
+		step
+			goto Darnassus,35.4,8.4
+			.talk Mathrengyl Bearwalker##4217
+			..turnin Morrowgrain Research (1)##3781
+			..accept Morrowgrain Research (2)##3785
+		step
+			.collect 10 Un'Goro Soil##11018|q 3785 |future
+			.use Evergreen Pouch##11020
+			.collect 10 Morrowgrain##11040|q 3785/1
+		step
+			goto Darnassus,35.4,8.4
+			.talk Mathrengyl Bearwalker##4217
+			..turnin Morrowgrain Research (2)##3785
+		step
+			goto Ironforge,75.77,23.37
+			.talk Laris Geardawdle##9616
+			..turnin A Little Slime Goes a Long Way (2)##4513
+		step
+			.' Congratulations! +46 quests for achievement "Loremaster of Kalimdor".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Winterspring",[[
@@ -5640,10 +6144,9 @@ startlevel 60
 			..accept Felnok Steelspring##4808
 		step
 			goto The Hinterlands,15.76,53.78
-			.' Click Wildkin Feather.
+			.collect 15 Wildkin Feather##10819|q 3661/1
 			.info They look large brown and white feathers on the ground around this area.
 			.info They can be found around most of the Hinterlands, except in the eastern part.
-			.collect 15 Wildkin Feather##10819|q 3661/1
 			.' You can find more around (1)|at 22.17,55.01
 			.' You can find more around (2)|at 28.43,54.20
 			.' You can find more around (3)|at 33.90,48.74
@@ -5668,9 +6171,8 @@ startlevel 60
 			..accept Threat of the Winterfall##5082
 		step
 			goto Winterspring,31.35,45.53
-			.' Click Moontouched Feather.
-			.info They look like large blue feathers on the ground around this area.
 			.collect 10 Moontouched Feather##12383|q 978/1
+			.info They look like large blue feathers on the ground around this area.
 			.' You can find more around (1)|at 30.95,47.02
 			.' You can find more around (2)|at 29.39,46.67
 			.' You can find more around (3)|at 30.18,45.24
@@ -5693,10 +6195,11 @@ startlevel 60
 			goto Winterspring,30.57,37.17
 			.' Kill Winterfall enemies around this area.
 			.collect Empty Firewater Flask##12771|q 5083 |future
-			.use the Empty Firewater Flask##12771
-			..accept Winterfall Firewater##5083
 			.' You can find more around (1)|at 39.46,43.70
 			.' You can find more around (2)|at 41.78,43.14
+		step
+			.use the Empty Firewater Flask##12771
+			..accept Winterfall Firewater##5083
 		step
 			goto Winterspring,31.27,45.16
 			.talk Donova Snowden##9298
@@ -5705,7 +6208,7 @@ startlevel 60
 			..accept Falling to Corruption##5084
 		step
 			goto Felwood,60.20,5.87
-			.' Interact with: Deadwood Cauldron.
+			.' Interact with gameobject: Deadwood Cauldron
 			.info Try to kite the enemies near the cauldron away one at a time to fight them alone, until you can kill the rest.
 			.info If you have trouble, try to find someone to help you.
 			..turnin Falling to Corruption##5084
@@ -5751,7 +6254,7 @@ startlevel 60
 		step
 			goto Winterspring,62.3,36.6
 			.talk Maethrya##11138
-			fpath Everlook, Winterspring|q 5249
+			.fpath Everlook, Winterspring|q 5249
 		step
 			goto Winterspring,51.97,30.39
 			talk Wynd Nightchaser##11079
@@ -5774,24 +6277,20 @@ startlevel 60
 			.' You can find it in this waypoint (4)|at 57.3,32,8
 		step
 			goto Winterspring,50.88,41.71
-			.' Click Highborne Relic Fragment.
-			.info Two enemies will appear and attack you.
 			.collect Second Relic Fragment##12897|q 5245/2
+			.info Two enemies will appear and attack you.
 		step
 			goto Winterspring,52.42,41.50
-			.' Click Highborne Relic Fragment.
-			.info Two enemies will appear and attack you.
 			.collect Fourth Relic Fragment##12899|q 5245/4
+			.info Two enemies will appear and attack you.
 		step
 			goto Winterspring,53.31,43.43
-			.' Click Highborne Relic Fragment.
-			.info Two enemies will appear and attack you.
 			.collect Third Relic Fragment##12898|q 5245/3
+			.info Two enemies will appear and attack you.
 		step
 			goto Winterspring,55.14,42.98
-			.' Click Highborne Relic Fragment.
-			.info Two enemies will appear and attack you.
 			.collect First Relic Fragment##12896|q 5245/1
+			.info Two enemies will appear and attack you.
 		step
 			goto Winterspring,60.88,37.62
 			.talk Umi Rumplesnicker##10305
@@ -5821,17 +6320,17 @@ startlevel 60
 			.get 8 Uncracked Chillwind Horn##12444|q 4809/1
 		step
 			goto Winterspring,59,59.78
-			Interact with: Damaged Crate
+			.' Interact with gameobject: Damaged Crate
 			..turnin Enraged Wildkin (2)##4861
 			..accept Enraged Wildkin (3)##4863
 		step
 			goto Winterspring,61.41,60.68
-			.' Interact with: Jaron's Wagon
+			.' Interact with gameobject: Jaron's Wagon
 			..turnin Enraged Wildkin (3)##4863
 			..accept Enraged Wildkin (4)##4864
 		step
 			goto Winterspring,61.39,60.73
-			.' Interact with: Jaron's Supplies
+			.' Interact with gameobject: Jaron's Supplies
 			.collect Jaron's Supplies##12525|q 4864/1
 		step
 			goto Winterspring,63.07,59.47
@@ -5863,7 +6362,7 @@ startlevel 60
 		step
 			goto Winterspring,59.84,74.12
 			.' Cross the bridge|at 62.42,67.44
-			Discover Darkwhisper Gorge|q 4842/1
+			.' Discover Darkwhisper Gorge|q 4842/1
 		step
 			goto Winterspring,62.5,57.9
 			.kill Brumeran##10807|q 5055/1
@@ -6000,516 +6499,6 @@ startlevel 60
 			..turnin Troubled Spirits of Kel'Theril##5245
 		step
 			.' Congratulations! +22 quests for achievement "Loremaster of Kalimdor".
-]])
-
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Un'Goro Crater",[[
-author danaton
-description This guide contain quest-chain (46 quests) for Un'Goto Crater location.
-startlevel 60
-		step
-			.' First you need to complete Felwood Quest-Chain.
-		step
-			goto Ironforge,75.77,23.37
-			.talk Laris Geardawdle##9616
-			..accept A Little Slime Goes a Long Way (2)##4513
-		step
-			.use Bag of Empty Ooze Containers##11955
-			.collect 10 Empty Pure Sample Jar##11953|q 4513 |future
-		step
-			goto Ironforge,24.2,74.7
-			.talk Auctioneer Redmuse##8720
-			.buy 1 Mithril Casing##10561|future |q 4244
-			.info Don't Selling!
-		step
-			goto Darnassus,67.4,15.6
-			.talk Innkeeper Saelienne##6735
-			..accept Assisting Arch Druid Staghelm##3763
-		step
-			goto Darnassus,34.8,9.3
-			.talk Arch Druid Fandral Staghelm##3516
-			..turnin Assisting Arch Druid Staghelm##3763
-			..accept Un'Goro Soil##3764
-		step
-			goto The Barrens,62.4,38.7
-			.talk Liv Rizzlefix##8496
-			..accept Volcanic Activity##4502
-		step
-			goto Tanaris,51.57,26.76
-			.talk Tran'rek##7876
-			..accept Super Sticky##4504
-		step
-			goto Un'Goro Crater,71.64,75.96
-			.talk Torwa Pathfinder##9619
-			..accept The Apes of Un'Goro##4289
-			..accept The Fare of Lar'korwi##4290
-		step
-			goto Un'Goro Crater,63.02,68.50
-			.' Interact with: A Wrecked Raft
-			..accept It's a Secret to Everybody (1)##3844
-		step
-			goto Un'Goro Crater,63.12,69.02
-			.' Interact with: A Small Pack
-			.info Underwater.
-			..turnin It's a Secret to Everybody (2)##3844
-			..accept It's a Secret to Everybody (3)##3845
-		step
-			.use A Small Pack##11107
-			.collect Large Compass##11104|q 3845/1
-			.collect Curled Map Parchment##11105|q 3845/2
-			.collect Lion-headed Key##11106|q 3845/3
-		step
-			goto Un'Goro Crater,68.75,56.66
-			.' Click Fresh Threshadon Carcass
-			.info Avoid the elite t-rex that sometimes walks near this location.
-			collect Piece of Threshadon Carcass##11504|q 4290/1
-		step
-			goto Un'Goro Crater,71.64,75.97
-			.talk Torwa Pathfinder##9619
-			..turnin The Fare of Lar'korwi##4290
-			..accept The Scent of Lar'korwi##4291
-		step
-			goto Un'Goro Crater,67.32,73.05
-			.from Lar'korwi Mate##9683
-			.info Stand on the pile of purple eggs to get it to appear.
-			.get 2 Ravasaur Pheromone Gland##11509|q 4291/1
-			.' You can find more eggs (1)|at 62.87,80.48
-			.' You can find more eggs (2)|at 60.92,72.23
-			.' You can find more eggs (3)|at 66.60,66.73
-		step
-			goto Un'Goro Crater,71.63,75.97
-			.talk Torwa Pathfinder##9619
-			..turnin The Scent of Lar'korwi##4291
-			..accept The Bait for Lar'korwi##4292
-		step
-			.use Torwa's Pouch##11568
-			..collect Preserved Threshadon Meat##11569|q 4292
-			..collect Preserved Pheromone Mixture##11570|q 4292
-		step
-			goto Un'Goro Crater,79.92,49.90
-			.use the Preserved Threshadon Meat##11569
-			.info Use this first.
-			.use the Preserved Pheromone Mixture##11570
-			.info Use this second.
-			.from Lar'korwi##9684
-			.info He's level 56, but you should be able to kill him at this level.
-			.info If you have trouble, try to find someone to help you.
-			.get Lar'korwi's Head##11510|q 4292/1
-		step
-			goto Un'Goro Crater,46.38,13.45
-			.talk Karna Remtravel##9618
-			..accept Chasing A-Me 01 (1)##4243
-		step
-			goto Un'Goro Crater,42.94,9.64
-			.talk Muigin##9119
-			.accept Muigin and Larion##4141
-		step
-			goto Un'Goro Crater,44.66,8.11
-			.talk Linken##8737
-			..turnin It's a Secret to Everybody (3)##3845
-			..accept It's a Secret to Everybody (4)##3908
-			.info Winterspring Quest-Chain.
-		step
-			goto Un'Goro Crater,45.23,5.84
-			.talk Gryfe##10583
-			fpath Marshal's Refuge, Un'Goro Crater|q 4243
-		step
-			goto Un'Goro Crater,67.65,16.76
-			.talk A-Me 01##9623
-			..turnin Chasing A-Me 01 (1)##4243
-			..accept Chasing A-Me 01 (2)##4244
-			..turnin Chasing A-Me 01 (2)##4244
-		step
-			goto Un'Goro Crater,64.02,16.32
-			.info Inside and outside the cave.
-			.info The gorillas share spawn points.
-			.info If you can't find any more of these, kill the other types of gorillas to get them to spawn.
-			.from Un'Goro Stomper##6513, Un'Goro Gorilla##6514, Un'Goro Thunderer##6516
-			.get 2 Un'Goro Gorilla Pelt##11478|q 4289/1
-			.get 2 Un'Goro Stomper Pelt##11479 |q 4289/2
-			.get 2 Un'Goro Thunderer Pelt##11480|q 4289/3
-		step
-			goto Un'Goro Crater,67.65,16.76
-			.talk A-Me 01##9623
-			..accept Chasing A-Me 01 (3)##4245
-		step
-			goto Un'Goro Crater,46.32,13.68
-			.goal Protect A-Me 01 Until You Reach Karna Remtravel|q 4245/1
-		step
-			goto Un'Goro Crater,46.38,13.45
-			.talk Karna Remtravel##9618
-			..turnin Chasing A-Me 01 (3)##4245
-		step
-			goto Un'Goro Crater,59.96,30.56
-			.from Tar Beast##6517, Tar Lurker##6518, Tar Lord##6519, Tar Creeper##6527
-			.get 12 Super Sticky Tar##11834|q 4504/1
-			.' You can find more around (1)|at 59.75,24.49
-			.' You can find more around (2)|at 63.54,23.41
-		step
-			goto Un'Goro Crater,71.46,38.72
-			.' Kill Bloodpetal enemies around this area.
-			.info They look like walking plants.
-			.collect 15 Bloodpetal##11316|q 4141/1
-			.collect A Mangled Journal##11116|q 3884 |future
-			.' You can find more around ()|at 66.08,35.13
-			.' You can find more around ()|at 69.26,24.59
-			.' You can find more around ()|at 55.87,34.69
-			.use A Mangled Journal##11116
-			..accept Williden's Journal##3884
-		step
-			goto Un'Goro Crater,42.94,9.64
-			.talk Muigin##9119
-			..turnin Muigin and Larion##4141
-		step
-			goto Un'Goro Crater,43.95,7.14
-			.talk Williden Marshal##9270
-			..turnin Williden's Journal##3884
-			..accept Expedition Salvation##3881
-		step
-			goto Un'Goro Crater,43.89,7.24
-			talk Hol'anyee Marshal##9271
-			..accept Alien Ecology##3883
-		step
-			goto Un'Goro Crater,41.92,2.70
-			.talk J.D. Collie##9117
-			..accept Crystals of Power##4284
-		step
-			.' Click Power Crystal
-			.info They look clusters of red, yellow, green, or blue crystals on the ground around this area.
-			.info They tend to be around the base of trees, or near the cliffs surrounding Un'Goro Crater.
-			.info Stick to searching around the eastern side of the zone, since there are lower level enemies there, and the crystals can spawn anywhere in the zone.
-			.info Kill enemies here and there as you search around, to continue gaining experience.
-			.collect 7 Red Power Crystal##11186|q 4284/1
-			.collect 7 Yellow Power Crystal##11188|q 4284/2
-			.collect 7 Green Power Crystal##11185|q 4284/3
-			.collect 7 Blue Power Crystal##11184|q 4284/4
-			.info You can skip it manually and continue completing quests without forgetting about this step.
-		step
-			goto Un'Goro Crater,43.50,7.42
-			.talk Spark Nilminer##9272
-			..accept Roll the Bones##3882
-		step
-			goto Un'Goro Crater,43.55,8.42
-			.' Click Beware of Pterrordax.
-			..accept Beware of Pterrordax##4501
-		step
-			goto Un'Goro Crater,43.62,8.50
-			.talk Spraggle Frock##9997
-			..accept Lost!##4492
-		step
-			goto Un'Goro Crater,42.9,9.6
-			.talk Muigin##9119
-			..accept A Visit to Gregan##4142
-		step
-			goto Un'Goro Crater,44.24,11.59
-			.talk Shizzle##9998
-			..accept Shizzle's Flyer##4503
-		step
-			goto Un'Goro Crater,34.7,40.4
-			.' Open Package of Empty Ooze in your bags|use Bag of Empty Ooze Containers##11955
-			.from Glutinous Ooze##6559
-			.use Empty Pure Sample Jar##11953|q 4513/1
-		step
-			goto Un'Goro Crater,30.93,50.43
-			.talk Krakle##10302
-			..accept Finding the Source##974
-		step
-			goto Un'Goro Crater,38.47,66.11
-			.' Click Research Equipment.
-			.collect Research Equipment##11112|q 3881/2
-		step
-			goto Un'Goro Crater,49.70,45.74
-			.use Krakle's Thermometer##12472
-			.info At the top of the mountain.
-			.' Find the Hottest Area of Fire Plume Ridge|q 974/1
-		step
-			goto Un'Goro Crater,50.8,47.1
-			.from Scorching Elemental##6520, Living Blaze##6521, Blazing Invader##14460
-			.get 9 Un'Goro Ash##11829|q 4502/1
-		step
-			goto Un'Goro Crater,51.90,49.85
-			.talk Ringo##9999
-			.info If he's not here, someone may be escorting him.
-			.info Wait until he respawns.
-			..turnin Lost!##4492
-			..accept A Little Help From My Friends##4491
-		step
-			goto Un'Goro Crater,43.62,8.51
-			.' Watch the dialogue.
-			.info Ringo will follow you, protect him as you walk.
-			.info He will faint multiple times as he walks, so make sure he is with you at all times.
-			.info You will see a message in your chat when he faints.
-			.use Spraggle's Canteen##11804
-			.info Use it on Ringo to revive him when he faints.
-			.goal Escort Ringo to Spraggle Frock at Marshal's Refuge|q 4491/1
-		step
-			goto Un'Goro Crater,43.62,8.51
-			.talk Spraggle Frock##9997
-			..turnin A Little Help From My Friends##4491
-		step
-			goto Un'Goro Crater,68.51,36.54
-			.' Click Crate of Foodstuffs.
-			.collect Crate of Foodstuffs##11113|q 3881/1
-		step
-			goto Un'Goro Crater,71.64,75.97
-			.talk Torwa Pathfinder##9619
-			..turnin The Apes of Un'Goro##4289
-			..turnin The Bait for Lar'korwi##4292
-			..accept The Mighty U'cha##4301
-		step
-			goto Un'Goro Crater,48.74,85.21
-			.use the Unused Scraping Vial##11132
-			.info Inside the cave.
-			.collect Hive Wall Sample##11131|q 3883/1
-		step
-			goto Un'Goro Crater,59.18,53.99
-			.from Diemetradon##9163
-			.get 8 Dinosaur Bone##11114|q 3882/1
-			.get 8 Webbed Diemetradon Scale##11830|q 4503/1
-			.' You can find more around (1)|at 56.74,63.47
-			.' You can find more around (2)|at 49.24,61.78
-			.' You can find more around (3)|at 50.79,67.25
-			.' You can find more around (4)|at 45.26,68.91
-			.' You can find more around (5)|at 41.52,56.95
-		step
-			goto Un'Goro Crater,30.93,50.44
-			.talk Krakle##10302
-			..turnin Finding the Source##974
-			..accept The New Springs##980
-			.info Winterspring Quest-Chain.
-		step
-			goto Un'Goro Crater,21.75,59.39
-			.kill 10 Frenzied Pterrordax##9167|q 4501/1
-			.collect 8 Webbed Pterrordax Scale##11831|q 4503/2
-			.' You can find more around (1)|at 23.26,49.89
-			.' You can find more around (2)|at 22.81,41.53
-			.' You can find more around (3)|at 23.36,41.24
-			.' You can find more around (4)|at 39.05,47.06
-			.' You can find more around (5)|at 28.28,33.06
-			.' You can find more around (6)|at 34.49,37.63
-			.' You can find more around (7)|at 31.25,44.33
-		step
-			goto Un'Goro Crater,44.23,11.59
-			.talk Shizzle##9998
-			..turnin Shizzle's Flyer##4503
-		step
-			goto Un'Goro Crater,43.62,8.50
-			.talk Spraggle Frock##9997
-			..turnin Beware of Pterrordax##4501
-		step
-			goto Un'Goro Crater,43.50,7.43
-			.talk Spark Nilminer##9272
-			..turnin Roll the Bones##3882
-		step
-			goto Un'Goro Crater,43.89,7.24
-			.talk Hol'anyee Marshal##9271
-			..turnin Alien Ecology##3883
-		step
-			goto Un'Goro Crater,43.95,7.14
-			.talk Williden Marshal##9270
-			..turnin Expedition Salvation##3881
-		step
-			goto Un'Goro Crater,68.15,12.58
-			.from U'cha##9622
-			.info Upstairs inside the cave.
-			.get U'cha's Pelt##11476|q 4301/1
-		step
-			goto Un'Goro Crater,71.63,75.96
-			.talk Torwa Pathfinder##9619
-			..turnin The Mighty U'cha##4301
-		step
-			.' Click Power Crystal
-			.info They look clusters of red, yellow, green, or blue crystals on the ground around this area.
-			.info They tend to be around the base of trees, or near the cliffs surrounding Un'Goro Crater.
-			.info Stick to searching around the eastern side of the zone, since there are lower level enemies there, and the crystals can spawn anywhere in the zone.
-			.info Kill enemies here and there as you search around, to continue gaining experience.
-			.collect 7 Red Power Crystal##11186|q 4284/1
-			.collect 7 Yellow Power Crystal##11188|q 4284/2
-			.collect 7 Green Power Crystal##11185|q 4284/3
-			.collect 7 Blue Power Crystal##11184|q 4284/4
-		step
-			goto Un'Goro Crater,41.92,2.70
-			.talk J.D. Collie##9117
-			..turnin Crystals of Power##4284
-			..accept The Northern Pylon##4285
-			..accept The Eastern Pylon##4287
-			..accept The Western Pylon##4288
-		step
-			goto Un'Goro Crater,56.48,12.45
-			.' Interact with: Northern Crystal Pylon
-			.' Choose "I want to examine this pylon."
-			.goal Discover and Examine the Northern Crystal Pylon|q 4285/1
-		step
-			goto Un'Goro Crater,77.24,49.97
-			.' Interact with: Eastern Crystal Pylon
-			.' Choose "I want to examine this pylon."
-			.goal Discover and Examine the Eastern Crystal Pylon|q 4287/1
-		step
-			goto Un'Goro Crater,23.79,59.19
-			.' Interact with: Western Crystal Pylon
-			.' Choose "I want to examine this pylon."
-			.goal Discover and Examine the Western Crystal Pylon|q 4288/1
-		step
-			goto Un'Goro Crater,44.7,54.5
-			.collect 20 Un'Goro Soil##11018|q 3764/1
-			.collect 10 Un'Goro Soil##11018|q 3785 |future
-			.' You can find more around (1)|at 52.5,78.9
-			.' You can find more around (2)|at 44.4,83.2
-			.' You can find more around (3)|at 41.1,79.8
-			.' You can find more around (4)|at 36.4,76.3
-			.' You can find more around (5)|at 36.4,69.7
-			.' You can find more around (6)|at 31,78.8
-			.' You can find more around (7)|at 30.5,70
-			.' You can find more around (8)|at 33.1,65.3
-			.' You can find more around (9)|at 28,62.8
-			.' You can find more around (10)|at 40.8,59.6
-		step
-			goto Un'Goro Crater,41.92,2.70
-			.talk J.D. Collie##9117
-			..turnin The Northern Pylon##4285
-			..turnin The Eastern Pylon##4287
-			..turnin The Western Pylon##4288
-			..accept Making Sense of It##4321
-		step
-			goto Un'Goro Crater,41.92,2.70
-			.talk J.D. Collie##9117
-			..turnin Making Sense of It##4321
-		step
-			goto Tanaris,51.57,26.76
-			.talk Tran'rek##7876
-			..turnin Super Sticky##4504
-		step
-			goto The Barrens,62.4,38.7
-			.talk Liv Rizzlefix##8496
-			..turnin Volcanic Activity##4502
-		step
-			goto Winterspring,60.7,38.2
-			.talk Meggi Peppinrocker##11754
-			..accept Trouble in Winterspring!##6603
-		step
-			goto Winterspring,31.27,45.16
-			.talk Donova Snowden##9298
-			..turnin The New Springs##980
-			..turnin It's a Secret to Everybody##3908
-			..accept The Videre Elixir##3909
-			..turnin Trouble in Winterspring!##6603
-		step
-			goto Feralas,45.1,25.6
-			.talk Gregan Brewspewer##7775
-			..turnin A Visit to Gregan##4142
-			.buy Bait##11141|q 3909 |future
-		step
-			goto Feralas,44.6,10.5
-			.use Bait##11141
-			.collect 1 Evoroot##11242|q 3909 |future
-		step
-			goto Feralas,45.1,25.6
-			.talk Gregan Brewspewer##7775
-			.collect 1 Videre Elixir##11243|q 3909/1
-		step
-			goto Winterspring,31.27,45.16
-			.talk Donova Snowden##9298
-			..turnin The Videre Elixir##3909
-			..accept Meet at the Grave##3912
-		step
-			goto Tanaris,53.96,28.76
-			.use Videre Elixir##11243|q 3912
-			.info As soon as you drink, you will die immediately.
-			.info Without resurrecting, run to the next step.
-		step
-			goto Tanaris,53.9,23.3
-			.talk Gaeriyan##9299
-			..turnin Meet at the Grave##3912
-			..accept A Grave Situation##3913
-		step
-			goto Tanaris,53.8,29.1
-			.' Interact with: A Conspicuous Gravestone
-			..turnin A Grave Situation##3913
-			..accept Linken's Sword##3914
-		step
-			goto Un'Goro Crater,44.7,8.1
-			.talk Linken##8737
-			..turnin Linken's Sword##3914
-			..accept A Gnome's Assistance##3941
-		step
-			goto Un'Goro Crater,41.9,2.7
-			.talk J.D. Collie##9117
-			..turnin A Gnome's Assistance##3941
-			..accept Linken's Memory##3942
-		step
-			goto Felwood,51.3,81.5
-			.talk Eridan Bluewind##9116
-			..turnin Linken's Memory##3942
-			..accept Silver Heart##4084
-		step
-			goto Felwood,54.9,85.83
-			.from Angerclaw Bear##8956, Felpaw Wolf##8959
-			.get 11 Silvery Claws##11172|q 4084/1
-		step
-			goto Felwood,48.8,21.6
-			.from Irontree Wanderer##7138, Irontree Stomper##7139
-			.get 1 Irontree Heart##11173|q 4084/2
-		step
-			goto Felwood,51.3,81.5
-			.talk Eridan Bluewind##9116
-			..turnin Silver Heart##4084
-			..accept Aquementas##4005
-		step
-			.use Eridan's Supplies##11617
-			.collect 1 Book of Aquor##11169|q 4005 |future
-			.collect 11 Silvery Claws##11172|q 4005 |future
-			.collect 1 Irontree Heart##11173|q 4005 |future
-		step
-			goto Tanaris,70.4,50
-			.use Book of Aquor##11169
-			.from Aquementas##9453
-			.get 1 Silver Totem of Aquementas##11522|q 4005/1
-		step
-			goto Un'Goro Crater,41.9,2.7
-			.talk J.D. Collie##9117
-			..turnin Aquementas##4005
-			..accept Linken's Adventure##3961
-		step
-			goto Un'Goro Crater,44.7,8.1
-			.talk Linken##8737
-			..turnin Linken's Adventure##3961
-			..accept It's Dangerous to Go Alone##3962
-		step
-			goto Un'Goro Crater,49.4,49.3
-			.use Silver Totem of Aquementas##11522
-			.from Blazerunner##9376
-			.get 1 Golden Flame##11179|q 3962/2
-			.info Chest in cave.
-		step
-			goto Un'Goro Crater,44.7,8.1
-			.talk Linken##8737
-			..turnin It's Dangerous to Go Alone##3962
-		step
-			goto Darnassus,31.5,8.2
-			.talk Jenal##9047
-			..turnin Un'Goro Soil##3764
-		step
-			goto Darnassus,34.8,9.3
-			.talk Arch Druid Fandral Staghelm##3516
-			..accept Morrowgrain Research (1)##3781
-		step
-			goto Darnassus,35.4,8.4
-			.talk Mathrengyl Bearwalker##4217
-			..turnin Morrowgrain Research (1)##3781
-			..accept Morrowgrain Research (2)##3785
-		step
-			.collect 10 Un'Goro Soil##11018|q 3785 |future
-			.use Evergreen Pouch##11020
-			.collect 10 Morrowgrain##11040|q 3785/1
-		step
-			goto Darnassus,35.4,8.4
-			.talk Mathrengyl Bearwalker##4217
-			..turnin Morrowgrain Research (2)##3785
-		step
-			goto Ironforge,75.77,23.37
-			.talk Laris Geardawdle##9616
-			..turnin A Little Slime Goes a Long Way (2)##4513
-		step
-			.' Congratulations! +46 quests for achievement "Loremaster of Kalimdor".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Azshara",[[
