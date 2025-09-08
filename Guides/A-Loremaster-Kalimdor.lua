@@ -6126,7 +6126,7 @@ startlevel 60
 			..accept Broodling Essence##4726
 		step
 			goto Burning Steppes,72.83,28.41
-			.use the Draco-Incarcinatrix 900##12284
+			.use Draco-Incarcinatrix 900##12284
 			.info Use it on Broodling enemies around this area.
 			.info They look like small flying dragons.
 			.info They share spawn points with the scorpids and wolves, so kill those also, if you can't find any.
@@ -6342,10 +6342,10 @@ startlevel 60
 			.' Watch the dialogue.
 			.info Follow Ranshalla and protect her as she walks.
 			.info Let her get attacked first, so she will help you fight.
-			.' Click Fire of Elune.
+			.' Interact with gameobject: Fire of Elune
 			.info They look like brown torch poles in each of the caves she walks into.
 			.info Click them to get her to start walking again.
-			.' Click Altar of Elune.
+			.' Interact with gameobject: Altar of Elune
 			.info It looks like a stone table, at this location, that she eventually walks to.
 			.goal Discover the Secret of the Altar of Elune|q 4901/1
 			.info If you have trouble, try to find someone to help you.
@@ -6355,13 +6355,19 @@ startlevel 60
 			.get 1 Blue-feathered Amulet##12524|q 4864/2
 			.info If you have trouble, try to find someone to help you.
 		step
+			.' Start going down here|goto 58.85,63.05,0.5 |q 969
+		step
+			.' Continue down the trail|goto 59.21,66.83,0.5 |q 969
+		step
 			goto Winterspring,61.6,68.5
-			.' First go down here|at 58.96,62.27
 			.from Frostmaul Giant##7428, Frostmaul Preserver##7429
 			.get 4 Frostmaul Shards##12334|q 969/1
 		step
+			.' Go back along the path|goto 60.55,61.75,0.5 |q 4842
+		step
+			.' Cross the bridge|goto 62.42,67.44,0.5 |q 4842
+		step
 			goto Winterspring,59.84,74.12
-			.' Cross the bridge|at 62.42,67.44
 			.' Discover Darkwhisper Gorge|q 4842/1
 		step
 			goto Winterspring,62.5,57.9
@@ -6422,8 +6428,10 @@ startlevel 60
 		step
 			goto Winterspring,69.6,38.3
 			.kill High Chief Winterfall##10738|q 5121/1
-			.collect 1 Crudely-written Log##12842|q 5123 |future
-			..accept The Final Piece##5123|use Crudely-written Log##12842
+			.collect Crudely-written Log##12842|q 5123 |future
+		step
+			.use Crudely-written Log##12842
+			..accept The Final Piece##5123
 		step
 			goto Winterspring,67.2,35.9
 			.kill 8 Winterfall Shaman##7439|q 8464/1
@@ -6497,6 +6505,7 @@ startlevel 60
 			goto Eastern Plaguelands,48.8,17.6
 			.talk Aurora Skycaller##10304
 			..turnin Troubled Spirits of Kel'Theril##5245
+			..accept Fragments of the Past (1)##5246
 		step
 			.' Congratulations! +22 quests for achievement "Loremaster of Kalimdor".
 ]])
@@ -6506,11 +6515,11 @@ author danaton
 description This guide contain quest-chain (12 Kalimdor + 13 Eastern Kingdoms quests) for Azshara location.
 startlevel 60
 		step
-			.' First required to complete Wintergrasp guide.
+			.' First you need to complete the Wintersprings guide.
 		step
 			goto Eastern Plaguelands,48.8,17.6
 			.talk Aurora Skycaller##10304
-			..accept Fragments of the Past##5246
+			..accept Fragments of the Past (1)##5246
 		step
 			goto Blasted Lands,67.6,19.3
 			.talk Ambassador Ardalan##7826
@@ -6573,7 +6582,7 @@ startlevel 60
 			..accept Heroes of Old (2)##2701
 		step
 			goto Swamp of Sorrows,33.3,66.2
-			.' Interact with object: Spectral Lockbox
+			.' Interact with gameobject: Spectral Lockbox
 			..turnin Heroes of Old (2)##2701
 		step
 			goto Swamp of Sorrows,34.3,66.1
@@ -6615,7 +6624,7 @@ startlevel 60
 		step
 			goto Azshara,11.9,77.6
 			.talk Jarrodenus##12577
-			fpath Talredis Point, Azshara|q 5536
+			.fpath Talredis Point, Azshara|q 5536
 		step
 			goto Azshara,17.3,70.6
 			.kill 6 Highborne Apparition|q 5535/1
