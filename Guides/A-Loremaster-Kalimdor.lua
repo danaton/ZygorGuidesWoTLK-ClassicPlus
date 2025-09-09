@@ -1386,6 +1386,10 @@ startlevel 10
 			.collect 3 Fel Cone##3418|q 489/1
 			.info They are big, brown, green smoking pine cones at the base of trees.
 		step
+			goto Teldrassil,60.4,56.3
+			.talk Zenn Foulhoof##2150
+			..turnin Seek Redemption!##489	
+		step
 			goto Teldrassil,56,57.3
 			.talk Athridas Bearmantle##2078
 			..turnin Gnarlpine Corruption##476
@@ -1400,10 +1404,6 @@ startlevel 10
 			.talk Corithras Moonrage##3515
 			..turnin Crown of the Earth (3)##929
 			..accept Crown of the Earth (4)##933
-		step
-			goto Teldrassil,60.4,56.3
-			.talk Zenn Foulhoof##2150
-			..turnin Seek Redemption!##489
 		step
 			goto Teldrassil,60.9,68.5
 			.talk Denalan##2080
@@ -1433,7 +1433,7 @@ startlevel 10
 			.use Gnarlpine Necklace##8049
 			.collect Tallonkai's Jewel##8050|q 2459/2
 		step
-			.' Go to the top of the tower to|at 55.6,56.9
+			goto Teldrassil,55.6,56.9
 			.talk Tallonkai Swiftroot##3567
 			..turnin Ferocitas the Dream Eater##2459
 		step
@@ -1508,7 +1508,7 @@ startlevel 10
 			.from Lord Melenas##2038
 			.get Melenas' Head##5221|q 932/1
 		step
-			.' Go outside and go to the top of the tower to|at 55.6,56.9
+			goto Teldrassil,55.6,56.9
 			.talk Tallonkai Swiftroot##3567
 			..turnin Twisted Hatred##932
 		step
@@ -1573,6 +1573,7 @@ startlevel 10
 			goto Darnassus,70.7,45.4
 			.talk Mydrannul##4241
 			..accept Nessa Shadowsong##6344
+			only NightElf
 		step
 			goto Darnassus,38.2,21.6
 			.talk Rellian Greenspyre##3517
@@ -1608,38 +1609,45 @@ startlevel 10
 			..turnin Oakenscowl##2499
 		step
 			.' Go into the pink portal to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|q 6344
+			only NightElf
 		step
 			goto Teldrassil,56.3,92.4
 			.talk Nessa Shadowsong##10118
 			..turnin Nessa Shadowsong##6344
 			..accept The Bounty of Teldrassil##6341
+			only NightElf
 		step
 			goto Teldrassil,58.4,94
 			.talk Vesprystus##3838
 			..turnin The Bounty of Teldrassil##6341
 			..accept Flight to Auberdine##6342
+			only NightElf
 		step
 			goto Teldrassil,58.4,94
 			.talk Vesprystus##3838
 			.' Fly to Auberdine|goto Darkshore,36.4,45.6,0.5|noway|q 6342
+			only NightElf
 		step
 			goto Darkshore,36.8,44.3
 			.talk Laird##4200
 			..turnin Flight to Auberdine##6342
 			..accept Return to Nessa##6343
+			only NightElf
 		step
 			goto Darkshore,36.3,45.6
 			.talk Caylais Moonfeather##3841
 			.' Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|q 6343
+			only NightElf
 		step
 			goto Teldrassil,56.3,92.4
 			.talk Nessa Shadowsong##10118
 			..turnin Return to Nessa##6343
+			only NightElf
 		step
 			goto Darkshore,43.6,76.3
 			.talk Onu##3616
 			..turnin Grove of the Ancients##952
-			.' This quest can be turning in the following quest-guide - Darkshore
+			.' This quest can be turning in the following quest-guide - Darkshore.
 		step
 			.' Congratulations! +35 quests for achievement "Loremaster of Kalimdor".
 ]])
@@ -6512,7 +6520,7 @@ startlevel 60
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Azshara",[[
 author danaton
-description This guide contain quest-chain (12 Kalimdor + 13 Eastern Kingdoms quests) for Azshara location.
+description This guide contain quest-chain (12 Kalimdor + 17 Eastern Kingdoms quests) for Azshara location.
 startlevel 60
 		step
 			.' First you need to complete the Wintersprings guide.
@@ -6641,24 +6649,20 @@ startlevel 60
 			..turnin A Land Filled with Hatred##5536
 		step
 			goto Azshara,42.3,64.1
-			.' Click the Rune of Sael'hai.
+			.collect Rubbing: Rune of Sael'hai##10566|q 3449/4
 			.info A tall, purple glowing monument looking thing.
-			.get Rubbing: Rune of Sael'hai|q 3449/4
 		step
 			goto Azshara,39.3,55.5
-			.' Click the Rune of Markri.
+			.collect Rubbing: Rune of Markri##10565|q 3449/3
 			.info A tall, purple glowing looking monument thing.
-			.get Rubbing: Rune of Markri|q 3449/3
 		step
 			goto Azshara,39.5,50.2
-			.' Click the Rune of Jin'yael.
+			.collect Rubbing: Rune of Jin'yael##10564|q 3449/2
 			.info A tall, purple glowing monument looking thing.
-			.get Rubbing: Rune of Jin'yael|q 3449/2
 		step
 			goto Azshara,36.9,53.2
-			.' Click the Rune of Beth'Amara.
+			.collect Rubbing: Rune of Beth'Amara##10563|q 3449/1
 			.info A tall, purple glowing monument looking thing.
-			.get Rubbing: Rune of Beth'Amara|q 3449/1
 		step
 			goto Azshara,41.5,52.5
 			.collect Sacred Highborne Writings##13313|q 5246/1
@@ -6668,16 +6672,15 @@ startlevel 60
 			..accept Kim'jael Indeed!##3601
 		step
 			goto Azshara,58.5,25
-			.' Click Kim'jael's Equipment box.
+			.collect Kim'jael's Compass##10717|q 3601/1
+			.collect Kim'jael's Scope##10715|q 3601/2
+			.collect Kim'jael's Stuffed Chicken##10722|q 3601/3
+			.collect Kim'jael's Wizzlegoober##10718|q 3601/4
 			.info It's a small crate sitting on the ground.
 			.' There are usually more boxes around (1)|at 58.7,29
 			.' There are usually more boxes around (2)|at 59.5,30.8
 			.' There are usually more boxes around (3)|at 56,30
 			.' There are usually more boxes around (4)|at 56.3,28.84
-			.get Kim'jael's Compass|q 3601/1
-			.get Kim'jael's Scope|q 3601/2
-			.get Kim'jael's Stuffed Chicken|q 3601/3
-			.get Kim'jael's Wizzlegoober|q 3601/4
 		step
 			goto Azshara,53.5,21.8
 			.talk Kim'jael##8420
@@ -6686,7 +6689,7 @@ startlevel 60
 		step
 			goto Azshara,47.2,42.9
 			.from Spitelash Siren##6195, Spitelash Myrmidon##6196, Spitelash Battlemaster##7885, Spitelash Enchantress##7886
-			.get Some Rune|q 5534/1
+			.get Some Rune##13815|q 5534/1
 		step
 			goto Azshara,53.5,21.8
 			.talk Kim'jael##8420
@@ -6695,12 +6698,18 @@ startlevel 60
 			goto Azshara,60.8,66.4
 			.talk Loramus Thalipedes##7783
 			.goal Conversation with Loramus|q 2744/1
+		step
+			goto Azshara,60.8,66.4
+			.talk Loramus Thalipedes##7783
 			..turnin The Demon Hunter##2744
 			..accept Loramus##3141
 		step
 			goto Azshara,60.8,66.4
 			.talk Loramus Thalipedes##7783
 			.goal Loramus' Story|q 3141/1
+		step
+			goto Azshara,60.8,66.4
+			.talk Loramus Thalipedes##7783
 			..turnin Loramus##3141
 			..accept Breaking the Ward##3508
 		step
@@ -6778,12 +6787,55 @@ startlevel 60
 			goto Stranglethorn Vale,50.5,20.3
 			.talk Galvan the Ancient##7802
 			..turnin The Formation of Felbane##3621
+			..accept Enchanted Azsharite Fel Weaponry##3625
+		step
+			.goal Wait for Galvan to finish forging the weaponry|q 3625/1
+		step
+			goto Stranglethorn Vale,50.5,20.3
+			.talk Galvan the Ancient##7802
+			..turnin Enchanted Azsharite Fel Weaponry##3625
+			..accept Return to the Blasted Lands##3626
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Fallen Hero of the Horde##7572
+			..turnin Return to the Blasted Lands##3626
+			..accept Uniting the Shattered Amulet##3627
+		step
+			goto Blasted Lands,42.6,13
+			.from Grol the Destroyer##7665
+			.get Amulet of Grol##10753|q 3627/2
+		step
+			goto Blasted Lands,40.8,30
+			.from Lady Sevine##7667
+			.get Amulet of Sevine##10754|q 3627/3
+		step
+			goto Blasted Lands,66.7,29.2
+			.from Archmage Allistarj##7666
+			.info Inside the cave.
+			.get Amulet of Allistarj##10755|q 3627/1
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Fallen Hero of the Horde##7572
+			..turnin Uniting the Shattered Amulet##3627
+			..accept You Are Rakh'likh, Demon##3628
+		step
+			goto Blasted Lands,48.18,22.98|n
+			.' Use of the teleport runes|goto 47.47,30.08,0.5 |q 3628
+		step
+			goto Blasted Lands,47.45,29.89
+			.use Ward of the Defiler##10757
+			.from Razelikh the Defiler##7664
+			.get Severed Horn of the Defiler##10759|q 3628/1
+		step
+			goto Swamp of Sorrows,34.3,66.1
+			.talk Fallen Hero of the Horde##7572
+			..turnin You Are Rakh'likh, Demon##3628
 		step
 			goto Eastern Plaguelands,48.8,17.6
 			.talk Aurora Skycaller##10304
 			..turnin Fragments of the Past (1)##5246
 		step
-			.' Congratulations! +12 quests for achievement "Loremaster of Kalimdor" and +13 quests for achievement "Loremaster of Eastern Kingdoms".
+			.' Congratulations! +12 quests for achievement "Loremaster of Kalimdor" and +17 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Kalimdor\\[60] Silithus",[[
@@ -6837,7 +6889,7 @@ startlevel 60
 			..accept Hive in the Tower##1126
 		step
 			goto Silithus,60.3,52.6
-			.collect 1 Silithid Goo##17345|q 1126
+			.collect Silithid Goo##17345|q 1126
 			.info At the very top of the tower.
 			.from Hive'Ashi Ambusher##13301
 			.get 1 Encrusted Silithid Object##17346|q 1126/1
@@ -6909,9 +6961,8 @@ startlevel 60
 			.' You can find more around (4)|at 59.11,23.46
 		step
 			goto Silithus,24.33,11.94
-			.' Click Twilight Tablet Fragment.
-			.info They look like small blue-glowing broken pieces of stone tablets on the ground around this area.
 			.collect 8 Twilight Tablet Fragment##20378|q 8284/1
+			.info They look like small blue-glowing broken pieces of stone tablets on the ground around this area.
 		step
 			goto Silithus,33.3,51.1
 			.talk Marshal Bluewall##17080
