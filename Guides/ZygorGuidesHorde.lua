@@ -1,6 +1,5 @@
 local ZygorGuidesViewer=ZygorGuidesViewer
 if not ZygorGuidesViewer then return end
---TRIAL if ZygorGuidesViewer.HordeInstalled then return end
 if UnitFactionGroup("player")~="Horde" then return end
 
 ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[[
@@ -23631,10 +23630,4 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Northrend (78-80
 		'Congratulations, you are now level 80!
 ]])
 
---TRIAL ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Main Guide (13-20)",[[
---TRIAL 	author support@zygorguides.com
---TRIAL 	step //1
---TRIAL 		' Thank you for trying the Zygor Guides Version 2.0 Leveling Guides Demo.  Please visit ZygorGuides.com to purchase the complete in-game Version 2.0 leveling guides.  Take care
---TRIAL 		level 13
---TRIAL ]])
-ZygorGuidesViewer.HordeInstalled=true --!TRIAL
+ZygorGuidesViewer.HordeInstalled=true

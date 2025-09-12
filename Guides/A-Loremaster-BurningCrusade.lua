@@ -1,21 +1,21 @@
 local ZygorGuidesViewer=ZygorGuidesViewer
 if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Alliance" then return end
+
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Hellfire Peninsula",[[
 author danaton
 description This guide contain quest-chain (81 quests) for Hellfire Peninsula location.
 startlevel 70
 		step
-			.'Go inside Nethergarde Keep at 63.5,17|goto Blasted Lands,63.5,17
+			.' Go inside Nethergarde Keep at 63.5,17|goto Blasted Lands,63.5,17
 			.talk Bernie Heisten##3546
-			..buy 1 Nethergarde Bitter|q 9563/1
-			.' Manually skip this step! For future quest needed!
+			.buy 1 Nethergarde Bitter##23848|q 9563 |future
 		step
 			goto 58.3,55.9
 			.talk Watch Commander Relthorn Netherwane##16841
 			..accept Through the Dark Portal##10119
 		step
-			.'Go into the big green portal to the Outlands|goto Hellfire Peninsula|noway|c
+			.' Go into the big green portal to the Outlands|goto Hellfire Peninsula|noway|c
 		step
 			goto Hellfire Peninsula,87.3,50.7
 			.talk Commander Duron##19229
@@ -29,7 +29,7 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,87.4,52.4
 			.talk Amish Wildhammer##18931
-			.'Fly to Honor Hold|goto Hellfire Peninsula,54.6,62.6,0.5|noway|c
+			.' Fly to Honor Hold|goto Hellfire Peninsula,54.6,62.6,0.5|noway|c
 		step
 			goto Hellfire Peninsula,54.5,62.8
 			.talk Marshal Isildor##19308
@@ -61,9 +61,9 @@ startlevel 70
 			..accept The Path of Anguish##10142
 		step
 			goto Hellfire Peninsula,60.4,52.1
-			.' Click the Salvaged Metal and Wood|They are scraps on the ground around this area.
-			.get 8 Salvaged Metal|q 10055/1
-			.get 8 Salvaged Wood|q 10055/2
+			.collect 8 Salvaged Metal|q 10055/1
+			.collect 8 Salvaged Wood|q 10055/2
+			.info They are scraps on the ground around this area.
 			.kill 20 Bonechewer Orc|q 10482/1
 		step
 			goto Hellfire Peninsula,65.8,54.1
@@ -113,9 +113,9 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,71.3,62.8
 			.talk Wing Commander Dabir'ee##19409
-			..'Take the flight
-			..'Click the bomb in your bags, bomb Gateway Shaadraz|goal Gateway Shaadraz Destroyed|q 10146/2|use Seaforium PU-36 Explosive Nether Modulator##28038
-			..'Click the bomb in your bags, bomb Gateway Murketh|goal Gateway Murketh Destroyed|q 10146/1|use Seaforium PU-36 Explosive Nether Modulator##28038
+			.' Take the flight
+			.' Click the bomb in your bags, bomb Gateway Shaadraz|goal Gateway Shaadraz Destroyed|q 10146/2|use Seaforium PU-36 Explosive Nether Modulator##28038
+			.' Click the bomb in your bags, bomb Gateway Murketh|goal Gateway Murketh Destroyed|q 10146/1|use Seaforium PU-36 Explosive Nether Modulator##28038
 		step
 			goto Hellfire Peninsula,71.4,62.7
 			.talk Forward Commander Kingston##19310
@@ -124,11 +124,11 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,71.4,62.5
 			.talk Wing Commander Dabir'ee##19409
-			..'Fly to Shatter Point|goto Hellfire Peninsula,78.5,35.1,1|noway|c
+			.' Fly to Shatter Point|goto Hellfire Peninsula,78.5,35.1,1|noway|c
 		step
 			goto Hellfire Peninsula,78.4,34.9
 			.talk Runetog Wildhammer##20234
-			..fpath Shatter Point, Hellfire Peninsula
+			.fpath Shatter Point, Hellfire Peninsula
 		step
 			goto Hellfire Peninsula,78.4,34.9
 			.talk Runetog Wildhammer##20234
@@ -143,10 +143,11 @@ startlevel 70
 			goto Hellfire Peninsula,78.3,34.5
 			.talk Gryphoneer Windbellow##20235
 			.' Take a flight to the Abyssal Shelf
-			.' Use the Area 52 Special bomb in your bags to bomb the mobs|use Area 52 Special##28132|tip If you don't complete this in the first run, you can keep flying until it's done.
-			..kill 20 Gan'arg Peon|q 10163/1
-			..kill 5 Mo'arg Overseer|q 10163/2
-			..'Destroy 5 Fel Cannons|goal 5 Fel Cannon Destroyed|q 10163/3
+			.' Use the Area 52 Special bomb in your bags to bomb the mobs|use Area 52 Special##28132
+			.info If you don't complete this in the first run, you can keep flying until it's done.
+			.kill 20 Gan'arg Peon|q 10163/1
+			.kill 5 Mo'arg Overseer|q 10163/2
+			.' Destroy 5 Fel Cannons|goal 5 Fel Cannon Destroyed|q 10163/3
 		step
 			goto Hellfire Peninsula,79.3,33.9
 			.talk Wing Commander Gryphongar##20232
@@ -155,7 +156,7 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,78.3,34.5|n
 			.talk Gryphoneer Windbellow##20235
-			..'Fly to Honor Point|goto Hellfire Peninsula,68.7,28.2,1|noway|c
+			.' Fly to Honor Point|goto Hellfire Peninsula,68.7,28.2,1|noway|c
 		step
 			goto Hellfire Peninsula,68.3,28.6
 			.talk Field Marshal Brock##20793
@@ -176,8 +177,8 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,63.4,32.5
 			.kill 3 Fel Cannon MKI##22461|q 10396/1
-			.' Spot 2|at 57.8,32.1
-			.' Spot 3|at 52.4,82.1
+			.' You can find more around (1)|at 57.8,32.1
+			.' You can find more around (2)|at 52.4,82.1
 		step
 			goto Hellfire Peninsula,68.3,28.6
 			.talk Field Marshal Brock##20793
@@ -187,8 +188,9 @@ startlevel 70
 			goto Hellfire Peninsula,53.1,26.5
 			.from Warbringer Arix'Amal##19298
 			.get Burning Legion Gate Key##29795|q 10397/3
+			.collect Burning Legion Missive##29588|q 10395 |future
 		step
-			.' Use Burning Legion Missive|use Burning Legion Missive##29588
+			.use Burning Legion Missive##29588
 			..accept The Dark Missive##10395
 		step
 			goto Hellfire Peninsula,53,27.6
@@ -200,7 +202,7 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,48.64,38.58
 			.collect 6 Shredder Spare Parts##28554|q 10236/1
-			.' Spot 2|at 46.7,42.3
+			.' You can find more around|at 46.7,42.3
 		step
 			goto Hellfire Peninsula,51.4,30.5
 			.talk Foreman Razelcraz##16915
@@ -222,10 +224,10 @@ startlevel 70
 			..accept Shizz Work##10629
 		step
 			goto Hellfire Peninsula,49.3,29.6
-			.' Use Felhound Whistle|use Felhound Whistle##30803
+			.use Felhound Whistle##30803
 			.from Deranged Helboar##16863
 			.collect Shredder Keys##30794|q 10629/1
-			.' Use the Felhound Whistle to summon a Fel Guard Hound. Take the Fel Guard Hound for a walk and kill some Deranged Helboars. Search for the Shredder Keys in the Fel Guard Hound's "leavings."
+			.info Use the Felhound Whistle to summon a Fel Guard Hound. Take the Fel Guard Hound for a walk and kill some Deranged Helboars. Search for the Shredder Keys in the Fel Guard Hound's "leavings."
 		step
 			goto Hellfire Peninsula,51.4,30.5
 			.talk Foreman Razelcraz##16915
@@ -234,7 +236,7 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,54.4,31.6
 			.kill Urga'zz##18976|q 10630/1
-			.' Urga'zz inside the mine.
+			.info Urga'zz inside the mine.
 		step
 			goto Hellfire Peninsula,51.4,30.5
 			.talk Foreman Razelcraz##16915
@@ -267,25 +269,25 @@ startlevel 70
 			..accept A Job for an Intelligent Man##9355
 			..accept When This Mine's a-Rockin'##10079
 		step
-			.'Go inside the cave to 54.9,62.9|goto 54.9,62.9
+			.' Go inside the cave to|goto 54.9,62.9
 			.kill 12 Gan'arg Sapper|q 10079/1
 		step
-			.'Go outside the cave to 52,62.6|goto 52,62.6
+			.' Go outside the cave to|goto 52,62.6
 			.talk Foreman Biggums##16837
 			..turnin When This Mine's a-Rockin'##10079
 			..accept The Mastermind##10099
 		step
-			.'Go inside the cave to 56.3,61.4|goto 56.3,61.4
-			.kill Z'kral|q 10099/1|tip He is all the way at the bottom of the cave way in the back of the big room.
+			.' Go inside the cave to|goto 56.3,61.4
+			.kill Z'kral|q 10099/1
+			.info He is all the way at the bottom of the cave way in the back of the big room.
 		step
-			'Go outside the cave to 52,62.6|goto 52,62.6
+			'Go outside the cave to|goto 52,62.6
 			.talk Foreman Biggums##16837
 			..turnin The Mastermind##10099
 		step
 			goto Hellfire Peninsula,66.1,48.8
-			.' Click the Trampled Skeletons
-			.info They look like little brown ribcages and spines. You will find them on the grey road. They are very easy to miss, but once you find one you will find them really fast.
 			.' Cleanse 8 Trampled Skeletons|goal 8 Cleanse Trampled Skeleton|q 10047/1
+			.info They look like little brown ribcages and spines. You will find them on the grey road. They are very easy to miss, but once you find one you will find them really fast.
 		step
 			goto Hellfire Peninsula,58.7,47
 			.' Use your Flaming Torch on the Eastern Thrower to burn it|goal Eastern Thrower Burned|q 10078/1|use Flaming Torch##26002
@@ -313,8 +315,8 @@ startlevel 70
 			..accept Cursed Talismans##10484
 		step
 			goto Hellfire Peninsula,55,86.8
-			.' Click the small book|tip It's a small white book laying on the steps of the house.
 			.get Mysteries of the Light|q 10058/1
+			.info It's a small white book laying on the steps of the house.
 		step
 			goto Hellfire Peninsula,58,79
 			.kill 10 Unyielding Sorcerer|q 10050/2
@@ -328,7 +330,8 @@ startlevel 70
 			..accept Ravager Egg Roundup##9349
 		step
 			goto Hellfire Peninsula,41.2,84.4
-			.' Click Ravenger Eggs|tip They look like big white eggs on the ground around this area.
+			.' Click Ravenger Eggs
+			.info They look like big white eggs on the ground around this area.
 			.from Razorfang Hatchling##16932+, Razorfang Ravager##16933+, Quillfang Skitterer##19189+
 			.get 12 Ravager Egg|q 9349/1
 		step
@@ -340,7 +343,8 @@ startlevel 70
 			goto Hellfire Peninsula,50.2,74.8
 			.from Deranged Helboar##16863
 			.get Tainted Helboar Meat|n
-			.' Use your Purification Mixture on the Tainted Helboar Meat|use Purification Mixture##23268|tip The meat won't become purified every time, it can become toxic as well.
+			.' Use your Purification Mixture on the Tainted Helboar Meat|use Purification Mixture##23268
+			.info The meat won't become purified every time, it can become toxic as well.
 			.get 8 Purified Helboar Meat|q 9361/1
 		step
 			goto Hellfire Peninsula,49.2,74.8
@@ -351,7 +355,8 @@ startlevel 70
 			goto Hellfire Peninsula,58.1,71.3
 			.from Bonestripper Buzzard##16972
 			.get 12 Plump Buzzard Wing|q 9356/1
-			.get 30 Zeppelin Debris|q 10161/1|tip They look like scraps of metal all over the ground.
+			.get 30 Zeppelin Debris|q 10161/1
+			.info They look like scraps of metal all over the ground.
 		step
 			goto Hellfire Peninsula,49.2,74.8
 			.talk "Screaming" Screed Luckheed##19367
@@ -361,10 +366,11 @@ startlevel 70
 			..turnin Smooth as Butter##9356
 		step
 			goto Hellfire Peninsula,47.8,65.8
-			.kill 15 Marauding Crust Burster##16857|q 9355/1|tip They are under the jumping piles of rocks, they come up to fight when you get close to the jumping rocks.
+			.kill 15 Marauding Crust Burster##16857|q 9355/1
+			.info They are under the jumping piles of rocks, they come up to fight when you get close to the jumping rocks.
 			.from Marauding Crust Burster##16857
 			.get Eroded Leather Case##23338|q 9373
-			.' Click the Eroded Leather Case|use Eroded Leather Case##23338
+			.use Eroded Leather Case##23338
 			..accept Missing Missive##9373
 		step
 			goto Hellfire Peninsula,52,62.6
@@ -406,10 +412,11 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,25.2,37.2
 			.talk Kuma##18785
-			..fpath Temple of Telhamat,Hellfire Peninsula
+			.fpath Temple of Telhamat, Hellfire Peninsula
 		step
 			goto Hellfire Peninsula,26.9,37.4
-			.' Click Sedai's Corpse|tip Right down the hill from the Temple of Telhamat Flight Path.
+			.' Interact with gameobject: Sedai's Corpse
+			.info Right down the hill from the Temple of Telhamat Flight Path.
 			..turnin In Search of Sedai##9390
 			..accept Return to Obadei##9423
 		step
@@ -482,8 +489,10 @@ startlevel 70
 			..turnin Testing the Antidote##10255
 		step
 			goto Hellfire Peninsula,15.1,55.7
-			.kill 4 Illidari Taskmaster|q 9399/1|tip If you kill the taskmaster first, his friends leave you alone.
-			.get 10 Sha'naar Relic|q 9430/1|tip The Sha'naar Relics look like little blue vases on the ground.
+			.kill 4 Illidari Taskmaster|q 9399/1
+			.info If you kill the taskmaster first, his friends leave you alone.
+			.get 10 Sha'naar Relic|q 9430/1
+			.info The Sha'naar Relics look like little blue vases on the ground.
 		step
 			goto Hellfire Peninsula,15.6,58.8
 			.talk Akoru the Firecaller##20678
@@ -505,15 +514,15 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,15.6,58.8
 			.talk Akoru the Firecaller##20678
-			..' Free Akoru the Firecaller|goal Akoru Freed|q 10368/2
+			.' Free Akoru the Firecaller|goal Akoru Freed|q 10368/2
 		step
 			goto Hellfire Peninsula,13,58.4
 			.talk Aylaan the Waterwaker##20679
-			..' Free Aylaan the Waterwaker|goal Aylaan Freed|q 10368/3
+			.' Free Aylaan the Waterwaker|goal Aylaan Freed|q 10368/3
 		step
 			goto Hellfire Peninsula,13.1,61
 			.talk Morod the Windstirrer##20677
-			..' Free Morod the Windstirrer|goal Morod Freed|q 10368/1
+			.' Free Morod the Windstirrer|goal Morod Freed|q 10368/1
 		step
 			goto Hellfire Peninsula,16.3,65.1
 			.talk Naladu##19361
@@ -542,20 +551,23 @@ startlevel 70
 			goto Hellfire Peninsula,25.6,70.3
 			.kill 4 Haal'eshi Windwalker|q 9417/1
 			.kill 6 Haal'eshi Talonguard|q 9417/2
-			.' Click the Kaliri nests and kill Kaliri birds|tip The nests look like little brown nests with pink eggs in them.
+			.' Click the Kaliri nests and kill Kaliri birds
+			.info The nests look like little brown nests with pink eggs in them.
 			.get 8 Kaliri Feather|q 9420/1
 		step
-			goto 26.1,77.1|n
-			.' The path up to Avruu starts here|goto Hellfire Peninsula,26.1,77.1,0.5|noway|c
+			goto Hellfire Peninsula,26.1,77.1|n
+			.' The path up to Avruu starts here|goto Hellfire Peninsula,26.1,77.1,0.5|noway|q 9418 |future
 		step
 			goto Hellfire Peninsula,25.7,75.1
 			.from Avruu##17084
-			.get Avruu's Orb|n
-			.' Click Avruu's Orb|use Avruu's Orb##23580
+			.collect Avruu's Orb##23580|q 9418 |future
+		step
+			.use Avruu's Orb##23580
 			..accept Avruu's Orb##9418
 		step
 			goto Hellfire Peninsula,29,81.5
-			.' Click the Haal'eshi Altar|tip It looks like an orb sitting in a claw thing, right in front of a big purple hut.
+			.' Click the Haal'eshi Altar
+			.info It looks like an orb sitting in a claw thing, right in front of a big purple hut.
 			.' Fight Aeranas until he's almost dead
 			.talk Aeranas##17085
 			..turnin Avruu's Orb##9418
@@ -578,7 +590,7 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,32.1,59.3
 			.kill 4 Stonescythe Alpha|q 9398/1
-			.' You can find 2 more Stonescythe Alphas at 33.7,62.1|n
+			.' You can find 2 more Stonescythe Alphas|at 33.7,62.1
 		step
 			goto Hellfire Peninsula,49.5,81.8
 			.from Rogue Voidwalker##16974+, Uncontrolled Voidwalker##16975+
@@ -588,10 +600,12 @@ startlevel 70
 			.get Glowing Sanctified Crystal|q 9383/1
 		step
 			goto Hellfire Peninsula,53.6,81.1
-			.kill Arch Mage Xintor|q 10057/1|tip Near a bunch of practice fighting dummies.
+			.kill Arch Mage Xintor|q 10057/1
+			.info Near a bunch of practice fighting dummies.
 		step
 			goto Hellfire Peninsula,54.7,83.7
-			.kill Lieutenant Commander Thalvos|q 10057/2|tip Walking around on a black platform thing. He's a blue ghost dwarf.
+			.kill Lieutenant Commander Thalvos|q 10057/2
+			.info Walking around on a black platform thing. He's a blue ghost dwarf.
 		step
 			goto Hellfire Peninsula,49.2,74.8
 			.talk "Screaming" Screed Luckheed##19367
@@ -655,9 +669,9 @@ startlevel 70
 			..accept Fel Spirits##10909
 			..accept Digging for Prayer Beads##10916
 		step
-			.'Go outside and behind the inn to 54.2,63.3|goto 54.2,63.3
-			.' Click Fei Fei's Cache|tip It's a small mound of dirt behind the inn.
+			.' Go outside and behind the inn to|goto 54.2,63.3
 			.get Draenei Prayer Beads|q 10916/1
+			.info It's a small mound of dirt behind the inn.
 		step
 			goto Hellfire Peninsula,45,75
 			.' Use the Anchorite Relic in your bags|use Anchorite Relic##31772
@@ -673,10 +687,10 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,54.0,63.5
 			.talk Anchorite Barada##22431
-			..'Click 'I am ready...'
-			..'Target the purple skulls and oozes
-			..'Use the Ritual Prayer Beads when enemies are in the room|use Ritual Prayer Beads##31828
-			..'After the exorcism is done, talk Colonel Jules on the bed to save him|goal Colonel Jules Saved|q 10935/1
+			.' Click 'I am ready...'
+			.' Target the purple skulls and oozes
+			.' Use the Ritual Prayer Beads when enemies are in the room|use Ritual Prayer Beads##31828
+			.' After the exorcism is done, talk Colonel Jules on the bed to save him|goal Colonel Jules Saved|q 10935/1
 		step
 			goto Hellfire Peninsula,54.3,63.6
 			.talk Assistant Klatu##22430
@@ -704,7 +718,8 @@ startlevel 70
 			..turnin An Ambitious Plan##9383
 		step
 			goto Hellfire Peninsula,26.9,37.4
-			.' Use the Seer's Relic on Sedai's Corpse|use Seer's Relic##23645|tip Right down the hill from the Temple of Telhamat Flight Path.
+			.' Use the Seer's Relic on Sedai's Corpse|use Seer's Relic##23645
+			.info Right down the hill from the Temple of Telhamat Flight Path.
 			.' See the vision|goal Vision Granted|q 9545/1
 		step
 			goto Hellfire Peninsula,23.4,36.5
@@ -764,7 +779,7 @@ startlevel 70
 			.talk Ysiel Windsinger##17841
 			..turnin The Cenarion Expedition##9912
 		step
-			.' Congratulations! Achievement received!
+			.' Congratulations! +80 quests for achievement "To Hellfire and Back".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Zangarmarsh",[[
@@ -7410,4 +7425,5 @@ startlevel 70
 			.talk David Wayne##21465
 			..turnin Quenching the Blade##10679
 ]])
+
 ZygorGuidesViewer.AllianceInstalled=true

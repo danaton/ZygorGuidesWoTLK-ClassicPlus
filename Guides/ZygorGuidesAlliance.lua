@@ -1,6 +1,5 @@
 local ZygorGuidesViewer=ZygorGuidesViewer
 if not ZygorGuidesViewer then return end
---TRIAL if ZygorGuidesViewer.AllianceInstalled then return end
 if UnitFactionGroup("player")~="Alliance" then return end
 
 ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Human (1-13)",[[
@@ -23765,10 +23764,5 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (78
 	step //305
 		'Congratulations, you are now level 80!
 ]])
---TRIAL ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (13-20)",[[
---TRIAL 	author support@zygorguides.com
---TRIAL 	step //1
---TRIAL 		' Thank you for trying the Zygor Guides Version 2.0 Leveling Guides Demo.  Please visit ZygorGuides.com to purchase the complete in-game Version 2.0 leveling guides.  Take care
---TRIAL 		level 13
---TRIAL ]])
-ZygorGuidesViewer.AllianceInstalled=true --!TRIAL
+
+ZygorGuidesViewer.AllianceInstalled=true
