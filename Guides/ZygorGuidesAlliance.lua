@@ -1646,7 +1646,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	next Zygor's Alliance Leveling Guides\\Main Guide (13-20)
 	startlevel 1
 	step //1
-		  goto Dun Morogh,29.9,71.9
+		 goto Dun Morogh,29.9,71.9
 		.talk Sten Stoutarm##658
 		..accept Dwarven Outfitters##179
 	step //2

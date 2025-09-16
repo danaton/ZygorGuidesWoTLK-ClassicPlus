@@ -533,7 +533,7 @@ startlevel 10
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[20] Westfall",[[
 author danaton
-description This guide contain quest-chain (26 quests + 4 if Human race) for Westfall location.
+description This guide contain quest-chain (26 quests) for Westfall location.
 startlevel 20
 		step
 			.' First you need to complete the Elwynn Forest quest chain.
@@ -556,27 +556,6 @@ startlevel 20
 			..accept Westfall Stew(1)##36
 			..accept Poor Old Blanchy##151
 		step
-			goto Westfall,49.42,19.23
-			.get 1 Furlbrow's Pocket Watch|q 64/1
-			.info Inside the house.
-		step
-			.get 8 Handful of Oats|q 151/1
-			.' You can find more around (1)|at 50.10,19.58
-			.' You can find more around (2)|at 49.34,17.95
-			.' You can find more around (3)|at 48.45,20.31|tip Inside the building.
-			.' You can find more around (4)|at 54.01,24.94
-			.' You can find more around (5)|at 56.67,18.89
-			.' You can find more around (6)|at 57.36,19.45|tip In the cart.
-			.' You can find more around (7)|at 58.33,18.26|tip On the field you can find from 2 to 4 Handful of Oats.
-		step
-			goto Westfall,60,19.4
-			.talk Verna Furlbrow##238
-			..turnin Poor Old Blanchy##151
-		step
-			goto Westfall,60,19.4
-			.talk Farmer Furlbrow##237
-			..turnin The Forgotten Heirloom##64
-		step
 			goto Westfall,56.0,31.2
 			.talk Farmer Saldean##233
 			..accept The Killing Fields##9
@@ -587,15 +566,75 @@ startlevel 20
 			..accept Westfall Stew(2)##38
 			..accept Goretusk Liver Pie##22
 		step
-			goto Westfall,51.1,21.8
-			.kill 20 Harvest Watcher|q 9/1
-			.get 3 Okra##732|q 38/4|tip Do not sell to vendor!
-			.from Harvest Watcher##114+
-			.collect 5 Flask of Oil##814|q 103 |future
-			.' Flask of Oil needed on the future! Do not sell to vendor!
-			.collect 5 Hops##1274|q 117 |future
-			.' You can find more Harvest Watchers|at 53.5,29.4|n
-			.' And a big spot on this field|at 44.87,35.68
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin Report to Gryan Stoutmantle##109
+			..accept The People's Militia (1)##12
+		step
+			goto Westfall,56.4,47.6
+			.talk Captain Danuvin##821
+			..accept Patrolling Westfall##102
+		step
+			goto Westfall,54,53
+			.talk Scout Galiaan##878
+			..accept Red Leather Bandanas##153
+		step
+			goto Westfall,50.97,46.86
+			.kill 15 Defias Trapper##504|q 12/1
+			.kill 15 Defias Smuggler##95|q 12/2
+			.get 15 Red Leather Bandana##829|q 153/1
+			.' You can find more around (1)|at 48.65,46.42
+			.' You can find more around (2)|at 46.42,38.59
+			.' You can find more around (3)|at 50.79,40.61
+		step
+			goto Westfall,54,53
+			.talk Scout Galiaan##878
+			..turnin Red Leather Bandanas##153
+		step
+			goto Westfall,56.3,47.5
+			.talk Gryan Stoutmantle##234
+			..turnin The People's Militia (1)##12
+			..accept The People's Militia (2)##13
+		step
+			.collect 8 Handful of Oats##1528|q 151/1
+			.' You can find more around (1)|at 50.10,19.58
+			.' You can find more around (2)|at 49.34,17.95
+			.' You can find more around (3)|at 48.45,20.31|tip Inside the building.
+			.' You can find more around (4)|at 54.01,24.94
+			.' You can find more around (5)|at 56.67,18.89
+			.' You can find more around (6)|at 57.36,19.45|tip In the cart.
+			.' You can find more around (7)|at 58.33,18.26|tip On the field you can find from 2 to 4 Handful of Oats.
+		step
+			goto Westfall,49.42,19.23
+			.collect Furlbrow's Pocket Watch##841|q 64/1
+			.info Inside the small house on the right, click the wooden wardrobe.
+		step
+			goto Westfall,55.17,9.90
+			.from Murloc Coastrunner##126, Murloc Tidehunter##127, Murloc Warrior##171, Murloc Minor Oracle##456, Murloc Hunter##458, Murloc Raider##515, Murloc Oracle##517
+			.get 3 Murloc Eye##730|q 38/2
+			.' You can find more around (1)|at 44.3,9.07
+			.' You can find more around (2)|at 35.20,21.60
+			.' You can find more around (3)|at 27.6,40.5
+			.' You can find more around (4)|at 27.56,70.08
+		step
+			goto Westfall,55.17,9.90
+			.from Murloc Coastrunner##126, Murloc Tidehunter##127, Murloc Warrior##171, Murloc Minor Oracle##456, Murloc Hunter##458, Murloc Raider##515, Murloc Oracle##517
+			.collect Captain Sanders' Treasure Map##1357|q 136 |future
+			.' You can find more around (1)|at 44.3,9.07
+			.' You can find more around (2)|at 35.20,21.60
+			.' You can find more around (3)|at 27.6,40.5
+			.' You can find more around (4)|at 27.56,70.08
+		step
+			.use Captain Sanders' Treasure Map##1357
+			..accept Captain Sanders' Hidden Treasure (1)##136
+		step
+			goto Westfall,60,19.4
+			.talk Farmer Furlbrow##237
+			..turnin The Forgotten Heirloom##64
+		step
+			goto Westfall,60,19.4
+			.talk Verna Furlbrow##238
+			..turnin Poor Old Blanchy##151
 		step
 			goto Westfall,59.02,33.34
 			.from Young Goretusk##454, Goretusk##157, Great Goretusk##547
@@ -611,6 +650,16 @@ startlevel 20
 			.get 3 Stringy Vulture Meat##729|q 38/1
 			.info Do not sell to vendor!
 		step
+			goto Westfall,51.1,21.8
+			.kill 20 Harvest Watcher##114|q 9/1
+			.get 3 Okra##732|q 38/4
+			.info Do not sell to vendor!
+			.from Harvest Watcher##114+
+			.collect 5 Flask of Oil##814|q 103 |future
+			.info Flask of Oil needed on the future! Do not sell to vendor!
+			.' You can find more Harvest Watchers|at 53.5,29.4
+			.' And a big spot on this field|at 44.87,35.68
+		step
 			goto Westfall,56.0,31.2
 			.talk Farmer Saldean##233
 			..turnin The Killing Fields##9
@@ -618,87 +667,46 @@ startlevel 20
 			goto Westfall,56.4,30.5
 			.talk Salma Saldean##235
 			..turnin Goretusk Liver Pie##22
-		step
-			goto Westfall,56.3,47.5
-			.talk Gryan Stoutmantle##234
-			..turnin Report to Gryan Stoutmantle##109
-			..accept The People's Militia (1)##12
-			.talk Captain Danuvin##821
-			..accept Patrolling Westfall##102
-		step
-			goto Westfall,54,53
-			.talk Scout Galiaan##878
-			..accept Red Leather Bandanas##153
-		step
-			goto Westfall,50.97,46.86
-			.kill 15 Defias Trapper##504|q 12/1
-			.kill 15 Defias Smuggler##95|q 12/2
-			.collect 15 Red Leather Bandana##829|q 153/1
-			.' You can find more around (1)|at 48.65,46.42
-			.' You can find more around (2)|at 46.42,38.59
-			.' You can find more around (3)|at 50.79,40.61
-		step
-			goto Westfall,57.19,13.32
-			.from Riverpaw Gnoll##117, Riverpaw Brute##124, Riverpaw Overseer##125, Riverpaw Bandit##452, Riverpaw Mystic##453, Riverpaw Scout##500, Riverpaw Herbalist##501
-			.get 8 Gnoll Paw##725|q 102/1
-			.' You can find more around (1)|at 52.07,15.41
-			.' You can find more around (2)|at 44.9,15
-		step
-			goto Westfall,55.17,9.90
-			.from Murloc Coastrunner##126, Murloc Tidehunter##127, Murloc Warrior##171, Murloc Minor Oracle##456, Murloc Hunter##458, Murloc Raider##515, Murloc Oracle##517
-			.get 3 Murloc Eye|q 38/2
-			.' You can find more around (1)|at 44.3,9.07
-			.' You can find more around (2)|at 35.20,21.60
-			.' You can find more around (3)|at 27.6,40.5
-			.' You can find more around (4)|at 27.56,70.08
-			.' Wait drop on murloc Sanders' Treasure Map
-			..accept Captain Sanders' Hidden Treasure (1)##136|use Captain Sanders' Treasure Map##1357
-		step
-			goto Westfall,56.4,30.5
-			.talk Salma Saldean##235
 			..turnin Westfall Stew(2)##38
 		step
-			goto Westfall,56.3,47.5
-			.talk Gryan Stoutmantle##234
-			..turnin The People's Militia (1)##12
-			..accept The People's Militia (2)##13
+			goto Westfall,61.95,71.57
+			.from Riverpaw Gnoll##117, Riverpaw Brute##124, Riverpaw Overseer##125, Riverpaw Bandit##452, Riverpaw Mystic##453, Riverpaw Scout##500, Riverpaw Herbalist##501
+			.get 8 Gnoll Paw##725|q 102/1
+			.' You can find more around (1)|at 53,63.1
+			.' You can find more around (2)|at 48.37,61.3
 		step
 			goto Westfall,56.4,47.6
 			.talk Captain Danuvin##821
 			..turnin Patrolling Westfall##102
 		step
-			goto Westfall,54,53
-			.talk Scout Galiaan##878
-			..turnin Red Leather Bandanas##153
-		step
-			goto Westfall,36.4,56.67
-			.' Open chest in destroying home.
-			.collect A Simple Compass##1998|q 399/1
-		step
 			goto Westfall,25.9,47.8
-			.' Click Footlocker
+			.' Interact with gameobject: Footlocker
 			..turnin Captain Sanders' Hidden Treasure (1)##136
 			..accept Captain Sanders' Hidden Treasure (2)##138
 		step
+			goto Westfall,36.24,54.52
+			.' Interact with gameobject: Alexston's Chest
+			.collect A Simple Compass##1998|q 399/1
+		step
 			goto Westfall,40.5,47.8
-			.' Click Broken Barrel
+			.' Interact with gameobject: Broken Barrel
 			..turnin Captain Sanders' Hidden Treasure (2)##138
 			..accept Captain Sanders' Hidden Treasure (3)##139
 		step
+			goto Westfall,31.4,44.5
+			.kill 15 Defias Pillager##589|q 13/1
+			.kill 15 Defias Looter##590|q 13/2
+			.' You can find more around (1)|at 37.1,54.8
+			.' You can find more around (2)|at 43,69
+		step
 			goto Westfall,40.6,17
-			.' Click Old Jug
+			.' Interact with gameobject: Old Jug
 			..turnin Captain Sanders' Hidden Treasure (3)##139
 			..accept Captain Sanders' Hidden Treasure (4)##140
 		step
 			goto Westfall,26,16.9
-			.' Click Locked Chest
+			.' Interact with gameobject: Locked Chest
 			..turnin Captain Sanders' Hidden Treasure (4)##140
-		step
-			goto Westfall,31.4,44.5
-			.kill 15 Defias Looter|q 13/2
-			.kill 15 Defias Pillager|q 13/1
-			.' You can find more around (1)|at 37.1,54.8
-			.' You can find more around (2)|at 43,69
 		step
 			goto Westfall,56.3,47.5
 			.talk Gryan Stoutmantle##234
@@ -706,9 +714,9 @@ startlevel 20
 			..accept The People's Militia (3)##14
 		step
 			goto Westfall,52.6,72.3
-			.kill 15 Defias Highwayman|q 14/1
-			.kill 5 Defias Pathstalker|q 14/2
-			.kill 5 Defias Knuckleduster|q 14/3
+			.kill 15 Defias Highwayman##122|q 14/1
+			.kill 5 Defias Pathstalker##121|q 14/2
+			.kill 5 Defias Knuckleduster##449|q 14/3
 		step
 			goto Westfall,30,86
 			.talk Captain Grayson##392
@@ -719,7 +727,7 @@ startlevel 20
 			goto Westfall,34.7,85.3
 			.from Old Murk-Eye##391
 			.get Scale of Old Murk-Eye##3636|q 104/1
-			.' Waypoint start position|at 26.4,66
+			.' He is spawn here and moves along the beach|at 26.4,66
 		step
 			goto Westfall,34.65,85
 			.kill 7 Murloc Coastrunner##126|q 152/1
@@ -774,6 +782,7 @@ startlevel 20
 			goto Stormwind,57.7,47.9
 			.talk Baros Alexston##1646
 			..turnin Humble Beginnings##399
+			only Human
 		step
 			goto Stormwind,71,72.5
 			.talk Dungar Longdrink##352
@@ -804,6 +813,10 @@ startlevel 20
 			..accept The Defias Brotherhood (4)##141
 			.info Dungeon: Deadmines Quest Chain.
 		step
+			goto Stormwind,57.7,47.9
+			.talk Baros Alexston##1646
+			..turnin Humble Beginnings##399
+		step
 			goto Westfall,56.3,47.5
 			.talk Gryan Stoutmantle##234
 			..turnin The Defias Brotherhood (4)##141
@@ -827,7 +840,6 @@ startlevel 20
 			..accept The Defias Brotherhood##155
 			.info Dungeon: Deadmines Quest Chain.
 		step
-			.'Follow the Defias Traitor.
 			goto Westfall,42.56,71.71
 			.goal Escort The Defias Traitor to discover where VanCleef is hiding|q 155/1
 			.info Dungeon: Deadmines Quest Chain.
@@ -845,92 +857,92 @@ ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[
 author danaton
 description This guide contain quest-chain (40 quests) for Redridge Mountains location.
 startlevel 25
-		step
+		step //1
 			goto Stormwind City,55,54.2
 			.talk Brother Kristoff##1444
 			..accept Speaking of Fortitude##343
-		step
+		step //2
 			goto Stormwind City,77.1,30.2
 			.talk Milton Sheaf##1440
 			..turnin Speaking of Fortitude##343
 			..accept Brother Paxton##344
-		step
+		step //3
 			goto Elwynn Forest,49.6,40.4
 			.talk Brother Paxton##951
 			..turnin Brother Paxton##344
 			..accept Ink Supplies##345
-		step //
+		step //4
 			goto Elwynn Forest,65.2,69.7
 			.talk Theocritus##313
 			..accept A Watchful Eye##94
-		step //
+		step //5
 			goto Redridge Mountains,15.3,71.5
 			.talk Guard Parker##464
 			..accept Encroaching Gnolls##244
-		step //
+		step //6
 			goto Redridge Mountains,30.7,60
 			.talk Deputy Feldon##1070
 			..turnin Encroaching Gnolls##244
 			..accept Assessing the Threat##246
-		step //
+		step //7
 			goto Redridge Mountains,31.5,57.9
 			.talk Guard Howe##903
 			..accept Blackrock Bounty##128
-		step //
+		step //8
 			goto Redridge Mountains,33.5,49
 			.talk Marshal Marris##382
 			..accept Blackrock Menace##20
-		step //
+		step //9
 			goto Redridge Mountains,32.1,48.6
 			.talk Foreman Oslow##341
 			..turnin Ink Supplies##345
 			..accept The Lost Tools##125
 			..accept Rethban Ore##347
-		step //
+		step //10
 			goto Redridge Mountains,31,47.3
 			.talk Verner Osgood##415
 			..accept The Price of Shoes##118
-		step //
+		step //11
 			goto Redridge Mountains,30,44.4
 			.talk Magistrate Solomon##344
 			..accept Messenger to Stormwind (1)##120
-		step //
+		step //12
 			goto Redridge Mountains,27.7,47.4
 			.talk Dockmaster Baren##381
 			..accept Selling Fish##127
 			..accept Murloc Poachers##150
-		step //
+		step //13
 			goto Redridge Mountains,26.6,44.3
 			.talk Darcy##379
 			..accept A Free Lunch##129
-		step //
+		step //14
 			goto Redridge Mountains,26.5,44
 			.talk Barkeep Daniels##346
 			..accept Dry Times##116
-		step //
+		step //15
 			goto Redridge Mountains,22.7,43.8
 			.talk Chef Breanna##343
 			..accept Redridge Goulash##92
-		step //
+		step //16
 			goto Redridge Mountains,21.9,46.3
 			.talk Martie Jainrose##342
 			..accept An Unwelcome Guest##34
-		step //
+		step //17
 			goto Redridge Mountains,16.4,49.2
 			.from Bellygrub##345
 			.get Bellygrub's Tusk##3631|q 34/1
-		step //
+		step //18
 			goto Redridge Mountains,16.81,53.64
 			.from Great Goretusk##547
 			.get 5 Great Goretusk Snout##2296|q 92/1
 			.' You can find more around (1)|at 18.27,72.11
 			.info Don't sell this item!
-		step //
+		step //19
 			goto Redridge Mountains,15.3,71.5
 			.talk Guard Parker##464
 			..turnin A Free Lunch##129
 			..accept Visit the Herbalist##130
-		step //
+		step //20
 			goto Redridge Mountains,10.85,77.32
 			.from Tarantula##442
 			.get 5 Crisp Spider Meat##1081|q 92/3
@@ -938,276 +950,278 @@ startlevel 25
 			.' You can find more around (2)|at 18.26,73.15
 			.' You can find more around (3)|at 25.12,76.83
 			.info Don't sell this item!
-		step //
+		step //21
 			goto Redridge Mountains,15.92,63.47
 			.kill 10 Redridge Mongrel|q 246/1
 			.kill 6 Redridge Poacher|q 246/2
 			.' You can find more around (1)|at 26.8,80.2
 			.' You can find more around (2)|at 43.17,71.24
 			.' You can find more around (3)|at 53.93,74.93
-		step //
+		step //22
 			goto Redridge Mountains,60.77,75.60
 			.from Dire Condor##428
 			.get 5 Tough Condor Meat##1080|q 92/2
 			.' You can find more around (1)|at 48.43,76.16
 			.' You can find more around (2)|at 67.6,75.6
 			.info Don't sell this item!
-		step //
+		step //23
 			goto Redridge Mountains,30.7,60
 			.talk Deputy Feldon##1070
 			..turnin Assessing the Threat##246
-		step //
+		step //24
 			goto Redridge Mountains,22.7,43.8
 			.talk Chef Breanna##343
 			..turnin Redridge Goulash##92
-		step //
+		step //25
 			goto Redridge Mountains,21.9,46.3
 			.talk Martie Jainrose##342
 			..turnin An Unwelcome Guest##34
 			..turnin Visit the Herbalist##130
 			..accept Delivering Daffodils##131
-		step //
+		step //26
 			goto Redridge Mountains,26.6,44.4
 			.talk Darcy##379
 			..turnin Delivering Daffodils##131
-		step //
+		step //27
 			goto Redridge Mountains,29.3,53.6
 			.talk Shawn##8965
 			..accept Hilary's Necklace##3741
-		step //
+		step //28
 			goto Redridge Mountains,29.1,55.1
-			.' Click the Glinting Mud
+			.collect Hilary's Necklace##10958|q 3741/1
 			.info The Glinting Mud spawns in random places around this area, so some searching may be necessary.
-			.get Hilary's Necklace|q 3741/1
-		step //
+		step //29
 			goto Redridge Mountains,41.5,54.6
-			.' Click the Sunken Chest
-			.get Oslow's Toolbox|q 125/1
-		step //
+			.collect Oslow's Toolbox##1309|q 125/1
+			.info Chest at the bottom of the lake.
+		step //30
 			goto Redridge Mountains,48.2,73.3
 			.from Murloc Flesheater##422, Murloc Shorestriker##1083, Murloc Minor Tidecaller##548
-			.get 10 Spotted Sunfish|q 127/1
+			.get 10 Spotted Sunfish##1467|q 127/1
 			.collect 8 Murloc Fin##1468|q 150/1
 			.' You can find more around (1)|at 40.4,46.16
 			.' You can find more around (2)|at 56.9,50.9
 			.' You can find more around (3)|at 57.7,61.5
 			.info Don't sell this item!
-		step //
+		step //31
 			goto Redridge Mountains,32.1,48.6
 			.talk Foreman Oslow##341
 			..turnin The Lost Tools##125
 			..accept The Everstill Bridge##89
-		step //
+		step //32
 			goto Redridge Mountains,29.3,53.6
 			.talk Hilary##8962
 			..turnin Hilary's Necklace##3741
-		step //
+		step //33
 			goto Redridge Mountains,27.7,47.4
 			.talk Dockmaster Baren##381
 			..turnin Selling Fish##127
 			..turnin Murloc Poachers##150
-		step // move
+		step //34
 			goto Stormwind,60,76.9
 			.talk Roberto Pupellyverbos##277
 			.buy Cask of Merlot##1941|q 116/2
-		step // move
+		step //35
 			goto Stormwind,69.2,82.7
 			.talk General Marcus Jonathan##466
 			..turnin Messenger to Stormwind (1)##120
 			..accept Messenger to Stormwind (2)##121
-		step // move
+		step //36
 			goto Elwynn Forest,44,65.7
 			.talk Barkeep Dobbins##465
 			.buy Skin of Sweet Rum##1939|q 116/4
-		step // move
+		step //37
 			goto Elwynn Forest,41.7,65.5
 			.talk Smith Argus##514
 			..turnin The Price of Shoes##118
 			..accept Return to Verner##119
-		step //
+		step //38
 			goto Redridge Mountains,31,47.3
 			.talk Verner Osgood##415
 			..turnin Return to Verner##119
 			..accept Underbelly Scales##122
 			..accept A Baying of Gnolls##124
-		step //
+		step //39
 			goto Redridge Mountains,30,44.4
 			.talk Magistrate Solomon##344
 			..turnin Messenger to Stormwind (2)##121
 			..accept Messenger to Westfall (1)##143
-		step //
+		step //40
 			goto Westfall,56.3,47.5
 			.talk Gryan Stoutmantle##234
 			..turnin Messenger to Westfall (1)##143
 			..accept Messenger to Westfall (2)##144
-		step //
+		step //41
 			goto Westfall,44.6,80.3
 			.talk Grimbooze Thunderbrew##239
 			..accept Thunderbrew Lager##117
-		step //
+		step //42
 			goto Westfall,37.1,52.3
 			.from Harvest Watcher##114, Harvest Reaper##115
 			.get 5 Hops##1274|q 117/1
 			.' You can find more around (1)|at 61.6,62
 			.info Don't sell this item!
-		step //
+		step //43
 			goto Westfall,44.6,80.3
 			.talk Grimbooze Thunderbrew##239
 			..turnin Thunderbrew Lager##117
-		step //
+		step //44
 			goto Redridge Mountains,30,44.5
 			.talk Magistrate Solomon##344
 			..turnin Messenger to Westfall (2)##144
 			..accept Messenger to Darkshire (1)##145
-		step //
+		step //45
 			goto Duskwood,71.9,46.4
 			.talk Lord Ello Ebonlocke##263
 			..turnin Messenger to Darkshire (1)##145
 			..accept Messenger to Darkshire (2)##146
-		step //
+		step //46
 			goto Duskwood,73.7,44
 			.talk Barkeep Hann##274
 			.buy Bottle of Moonshine##1942|q 116/3
-		step //
+		step //47
 			goto Redridge Mountains,30,44.5
 			.talk Magistrate Solomon##344
 			..turnin Messenger to Darkshire (2)##146
-		step //
+		step //48
 			goto Redridge Mountains,26.5,44
 			.talk Barkeep Daniels##346
 			..turnin Dry Times##116
-		step //
+		step //49
 			goto Redridge Mountains,34.2,67.4
 			.from Black Dragon Whelp##441
-			.get 6 Underbelly Whelp Scale|q 122/1
+			.get 6 Underbelly Whelp Scale##1221|q 122/1
 			.' You can find more around (1)|at 44.35,39.58
 			.' You can find more around (2)|at 47.73,33.36
-		step //
+		step //50
 			goto Redridge Mountains,29,37.4
-			.kill 10 Redridge Brute|q 124/1
-			.kill 8 Redridge Mystic|q 124/2
+			.kill 10 Redridge Brute##426|q 124/1
+			.kill 8 Redridge Mystic##430|q 124/2
 			.from Redridge Brute##426, Redridge Mystic##430
-			.get 5 Iron Pike|q 89/1
-			.get 5 Iron Rivet|q 89/2
-		step //
+			.get 5 Iron Pike##2856|q 89/1
+			.get 5 Iron Rivet##1013|q 89/2
+		step //51
 			goto Redridge Mountains,32.1,48.6
 			.talk Foreman Oslow##341
 			..turnin The Everstill Bridge##89
-		step //
+		step //52
 			goto Redridge Mountains,31,47.3
 			.talk Verner Osgood##415
 			..turnin Underbelly Scales##122
 			..turnin A Baying of Gnolls##124
 			..accept Howling in the Hills##126
-		step //
+		step //53
 			goto Redridge Mountains,20.7,28.3
 			.from Redridge Drudger##580
 			.get 5 Rethban Ore##2798|q 347/1
 			.' Enter the cave|at 20.3,35.1
-		step //
+		step //54
 			goto Redridge Mountains,27.4,21.8
 			.from Yowler##518
-			.get Yowler's Paw|q 126/1
-		step //
+			.get Yowler's Paw##3614|q 126/1
+		step //55
 			goto Redridge Mountains,32.9,6.8
-			.kill 15 Blackrock Champion|q 128/1
-			.collect 10 Battleworn Axe##3014|q 20/1
-		step //
+			.kill 15 Blackrock Champion##435|q 128/1
+			.get 10 Battleworn Axe##3014|q 20/1
+		step //56
 			goto Redridge Mountains,28.4,12.6
 			.talk Corporal Keeshan##349
 			..accept Missing In Action##219
+			.info Warning! This is an escort quest!
+		step //57
 			.goal Escort Corporal Keeshan back to Redridge|q 219/1
-		step //
+		step //58
 			goto Redridge Mountains,33.5,49
 			.talk Marshal Marris##382
 			..turnin Blackrock Menace##20
 			..turnin Missing In Action##219
 			..accept Tharil'zun##19
 			..accept Shadow Magic##115
-		step //
+		step //59
 			goto Redridge Mountains,31,47.3
 			.talk Verner Osgood##415
 			..turnin Howling in the Hills##126
-		step //
+		step //60
 			goto Redridge Mountains,30,44.4
 			.talk Bailiff Conacher##900
 			..accept Solomon's Law##91
-		step //
+		step //61
 			goto Redridge Mountains,29.6,46.2
-			.info Interact with gameobject: Wanted: Gath'Ilzogg
+			.' Interact with gameobject: Wanted: Gath'Ilzogg
 			..accept Wanted: Gath'Ilzogg##169
-		step //
+		step //62
 			goto Redridge Mountains,26.8,46.4
-			.info nteract with gameobject: Wanted: Lieutenant Fangore
+			.' Interact with gameobject: Wanted: Lieutenant Fangore
 			..accept Wanted: Lieutenant Fangore##180
-		step //
+		step //63
 			goto Redridge Mountains,31.5,57.9
 			.talk Guard Howe##903
 			..turnin Blackrock Bounty##128
-		step //
+		step //64
 			goto Redridge Mountains,69.3,59.9
 			.from Tharil'zun##486
 			.get Tharil'zun's Head##1260|q 19/1
-		step //
+		step //65
 			goto Redridge Mountains,69.6,55.8
 			.from Gath'Ilzogg##334
 			.get Head of Gath'Ilzogg##3633|q 169/1
-		step //
+		step //66
 			goto Redridge Mountains,68.3,56.3
 			.from Blackrock Shadowcaster##436
 			.get 3 Midnight Orb##1261|q 115/1
-		step //
+		step //67
 			goto Redridge Mountains,84.5,46.8
-			.info Interact with gameobject: Old Lion Statue.
+			.' Interact with gameobject: Old Lion Statue
 			..turnin A Watchful Eye##94
 			..accept Looking Further##248
-		step //
+		step //68
 			goto Redridge Mountains,80.2,37.1
 			.from Lieutenant Fangore##703
 			.get Fangore's Paw##3632|q 180/1
 			.from Shadowhide Slayer##431, Shadowhide Brute##432, Shadowhide Warrior##568
 			.get 10 Shadowhide Pendant##1075|q 91/1
-		step //
+		step //69
 			goto Redridge Mountains,63.2,49.8
+			.' Interact with gameobject: An Empty Jar
 			.info At the very top of the tower.
 			..turnin Looking Further##248
-		step //
+		step //70
 			goto Redridge Mountains,84.5,46.8
-			.info Interact with Old Lion Statue.
+			.' Interact with gameobject: Old Lion Statue
 			..accept Morganth##249
-		step //
+		step //71
 			goto Redridge Mountains,80.1,49.5
 			.from Morganth##397
 			.info At the very top of the tower.
 			.get Pendant of Shadow##3617|q 249/1
-		step //
+		step //72
 			goto Redridge Mountains,33.5,49
 			.talk Marshal Marris##382
 			..turnin Tharil'zun##19
 			..turnin Shadow Magic##115
-		step //
+		step //73
 			goto Redridge Mountains,30,44.4
 			.talk Bailiff Conacher##900
 			..turnin Solomon's Law##91
-		step //
+		step //74
 			goto Redridge Mountains,30,44.4
 			.talk Magistrate Solomon##344
 			..turnin Wanted: Gath'Ilzogg##169
 			..turnin Wanted: Lieutenant Fangore##180
-		step //
+		step //75
 			goto Elwynn Forest,65.2,69.7
 			.talk Theocritus##313
 			..turnin Morganth##249
-		step //
+		step //76
 			goto Elwynn Forest,49.6,40.4
 			.talk Brother Paxton##951
 			..turnin Rethban Ore##347
 			..accept Return to Kristoff##346
-		step //
+		step //77
 			goto Stormwind City,55,54.2
 			.talk Brother Kristoff##1444
 			..turnin Return to Kristoff##346
-		step //
+		step //78
 			.' Congratulations! +40 quests for achievement "Loremaster of Eastern Kingdoms".
 			.' Next, I recommend running Quest-Instance Guides: The Stockade (25).
 ]])
@@ -1311,8 +1325,7 @@ startlevel 30
 			..accept Eight-Legged Menaces##245
 		step
 			goto Duskwood,23.9,72.1
-			.' Open Defias Strongbox
-			.collect 1 Defias Docket##5947|q 1244/1
+			.collect Defias Docket##5947|q 1244/1
 		step
 			goto Duskwood,18.2,56.6
 			.talk Jitters##288
@@ -1325,7 +1338,7 @@ startlevel 30
 			..accept Supplies from Darkshire##148
 		step
 			goto Duskwood,17.7,29
-			.' Click the Weathered Grave
+			.' Interact with gameobject: Weathered Grave
 			.info It's a grave on the hillside all by itself.
 			..accept The Weathered Grave##225
 		step
@@ -1339,7 +1352,7 @@ startlevel 30
 			..accept Wolves at Our Heels##226
 		step
 			goto Westfall,41.5,66.7
-			.' Click the Old Footlocker
+			.' Interact with gameobject: Old Footlocker
 			.info It's a small rectangular wooden box on the floor inside this house.
 			..turnin The Legend of Stalvan (2)##67
 			..accept The Legend of Stalvan (3)##68
@@ -1366,9 +1379,8 @@ startlevel 30
 			..accept The Legend of Stalvan (5)##70
 		step
 			goto Elwynn Forest,44.3,65.8
-			.' Click the Storage Chest
+			.collect An Undelivered Letter##910|q 70/1
 			.info It's a brown chest sitting on the floor in this room, upstairs inside the inn.
-			.collect An Undelivered Letter|q 70/1
 		step
 			goto Stormwind City,42.5,72.4
 			.talk Caretaker Folsom##297
@@ -1376,7 +1388,7 @@ startlevel 30
 			..accept The Legend of Stalvan (6)##72
 		step
 			goto Stormwind City,42.5,72.41
-			.' Click the Sealed Crate
+			.' Interact with gameobject: Sealed Crate
 			.info It's a wooden crate on the side of the road.
 			..turnin The Legend of Stalvan (6)##72
 			..accept The Legend of Stalvan (7)##74
@@ -1387,9 +1399,8 @@ startlevel 30
 			..accept The Legend of Stalvan (8)##75
 		step
 			goto Elwynn Forest,85.7,69.5
-			.' Click Marshal Haggard's Chest
+			.collect A Faded Journal Page##921|q 75/1
 			.info It's a brown chest on the floor next to a bed, upstairs in this house.
-			.collect A Faded Journal Page|q 75/1
 		step
 			goto Elwynn Forest,84.6,69.4
 			.talk Marshal Haggard##294
@@ -1429,7 +1440,7 @@ startlevel 30
 			..accept The Legend of Stalvan (13)##98
 		step
 			goto Duskwood,66,47
-			.kill 6 Nightbane Shadow Weaver|q 173/1
+			.kill 6 Nightbane Shadow Weaver##533|q 173/1
 		step
 			goto Duskwood,75.7,47.6
 			.talk Calor##663
@@ -1437,7 +1448,7 @@ startlevel 30
 			..accept Worgen in the Woods (2)##221
 		step
 			goto Duskwood,63.1,43.9
-			.kill 12 Nightbane Dark Runner|q 221/1
+			.kill 12 Nightbane Dark Runner##205|q 221/1
 			.' You can find more around|at 63.7,72.7
 		step
 			goto Duskwood,75.7,47.6
@@ -1454,15 +1465,15 @@ startlevel 30
 		step
 			goto Duskwood,80.9,71.6
 			.from Insane Ghoul##511
-			.get Mary's Looking Glass|q 177/1
+			.get Mary's Looking Glass##1946|q 177/1
 		step
 			goto Duskwood,79.3,70.3
-			.kill 8 Skeletal Warrior|q 56/1
-			.kill 6 Skeletal Mage|q 56/2
+			.kill 8 Skeletal Warrior##48|q 56/1
+			.kill 6 Skeletal Mage##203|q 56/2
 		step
 			goto Duskwood,72.7,69.7
-			.kill 8 Nightbane Vile Fang|q 222/1
-			.kill 8 Nightbane Tainted One|q 222/2
+			.kill 8 Nightbane Vile Fang##206|q 222/1
+			.kill 8 Nightbane Tainted One##920|q 222/2
 		step
 			goto Duskwood,79.8,48.1
 			.talk Viktori Prism'Antras##276
@@ -1489,7 +1500,7 @@ startlevel 30
 			..accept Deliver the Thread##157
 		step
 			goto 49.9,77.7
-			.' Click the Mound of Loose Dirt
+			.' Interact with gameobject: Mound of Loose Dirt
 			.info It's easiest to work your way around to behind the farm around this spot.
 			..turnin Sven's Revenge##95
 			..accept Sven's Camp##230
@@ -1497,7 +1508,7 @@ startlevel 30
 			goto Duskwood,36.1,80.6
 			.from Zzarc'Vul##300
 			.info He spawns at random points inside of the cave.
-			.get Ogre's Monocle|q 181/1
+			.get Ogre's Monocle##1968|q 181/1
 		step
 			goto Duskwood,28,31.5
 			.talk Abercrombie##289
@@ -1527,7 +1538,7 @@ startlevel 30
 		step
 			goto Duskwood,77.4,36.1
 			.from Stalvan Mistmantle##315
-			.get Mistmantle Family Ring|q 98/1
+			.get Mistmantle Family Ring##3629|q 98/1
 		step
 			goto Duskwood,75.8,45.3
 			.talk Madame Eva##265
@@ -1578,28 +1589,28 @@ startlevel 30
 		step
 			goto Duskwood,17.6,35.9
 			.from Mor'Ladim##522
-			.get 1 Mor'Ladim's Skull##3514|q 228/1
+			.get Mor'Ladim's Skull##3514|q 228/1
 			.info He is elite, move on waypoint.
 		step
 			goto Duskwood,17.6,47.2
-			.kill 15 Skeletal Fiend|q 57/1
-			.kill 15 Skeletal Horror|q 57/2
+			.kill 15 Skeletal Fiend##531|q 57/1
+			.kill 15 Skeletal Horror##202|q 57/2
 			.from Skeletal Horror##202, Skeletal Fiend##531
-			.get 8 Rot Blossom|q 156/1
-			.get 10 Skeleton Finger|q 101/3
+			.get 8 Rot Blossom##1598|q 156/1
+			.get 10 Skeleton Finger##2378|q 101/3
 		step
 			goto Duskwood,27.2,45.9
 			.from Black Widow Hatching##930
-			.get 5 Vial of Spider Venom|q 101/2
+			.get 5 Vial of Spider Venom##1130|q 101/2
 		step
 			goto Duskwood,23.5,39.1
 			.from Flesh Eater##3, Rotted One##948, Bone Chewer##210, Plague Spreader##604
-			.get 10 Ghoul Fang|q 101/1
+			.get 10 Ghoul Fang##1129|q 101/1
 		step
 			goto Duskwood,15.3,37.6
-			.kill 15 Skeletal Raider|q 323/1
-			.kill 3 Skeletal Healer|q 323/2
-			.kill 3 Skeletal Warder|q 323/3
+			.kill 15 Skeletal Raider##1110|q 323/1
+			.kill 3 Skeletal Healer##787|q 323/2
+			.kill 3 Skeletal Warder##785|q 323/3
 		step
 			goto Duskwood,7.8,34.2
 			.talk Sven Yorgen##311
@@ -1637,12 +1648,12 @@ startlevel 30
 			..turnin A Daughter's Love##231
 		step
 			goto Duskwood,24.1,32.7
-			.kill 20 Plague Spreader|q 58/1
+			.kill 20 Plague Spreader##604|q 58/1
 			.collect An Old History Book##2794|q 331 |future
 		step
 			goto Duskwood,25.5,34.6
 			.from Flesh Eater##3, Rotted One##948, Bone Chewer##210, Plague Spreader##604
-			.get 7 Ghoul Rib|q 133/1
+			.get 7 Ghoul Rib##884|q 133/1
 		step
 			.use An Old History Book##2794
 			..accept An Old History Book##337
@@ -1653,9 +1664,8 @@ startlevel 30
 			..accept Ogre Thieves##134
 		step
 			goto Duskwood,33.4,76.4
-			.' Click Abercrombie's Crate
+			.collect Abercrombie's Crate##1349|q 134/1
 			.info It looks like a wooden crate sitting next to a bunch of wooden barrels.
-			.get Abercrombie's Crate|q 134/1
 		step
 			goto Duskwood,28,31.5
 			.talk Abercrombie##289
@@ -1685,10 +1695,10 @@ startlevel 30
 			..accept Bride of the Embalmer##253
 		step
 			goto Duskwood,28.9,30.8
-			.' Interact with Eliza's Grave Dirt
+			.' Interact with gameobject: Eliza's Grave Dirt
 			.info It looks like a single dirt grave.
 			.from Eliza##314
-			.get The Embalmer's Heart|q 253/1
+			.get The Embalmer's Heart##2382|q 253/1
 		step
 			goto Duskwood,71.9,46.4
 			.talk Lord Ello Ebonlocke##263
@@ -1784,16 +1794,16 @@ startlevel 45
 			.talk Corporal Kaleb##770
 			..turnin Return to Corporal Kaleb##622
 		step
-			goto Stranglethorn Vale,38,3
-			.talk Lieutenant Doren##469
-			..turnin Jungle Secrets##215
-			..accept Bookie Herod##200
-		step
 			goto Stranglethorn Vale,40.48,8.10
 			.talk Private Thorsen##738
 			..turnin Supplies to Private Thorsen##198
 			..accept Jungle Secrets##215
 			.info Goes from the Rebel camp to the Kurzen Camp.
+		step
+			goto Stranglethorn Vale,38,3
+			.talk Lieutenant Doren##469
+			..turnin Jungle Secrets##215
+			..accept Bookie Herod##200
 		step
 			goto Stranglethorn Vale,35.7,10.8
 			.goal Locate the hunters' camp|q 201/1
@@ -1817,10 +1827,10 @@ startlevel 45
 		step
 			goto Stranglethorn Vale,40.6,13.3
 			.from River Crocolisk##1150
-			.get 2 Large River Crocolisk Skin|q 575/1
+			.get 2 Large River Crocolisk Skin##4053|q 575/1
 		step
 			goto Stranglethorn Vale,40.8,10.9
-			.kill 10 Young Panther|q 190/1
+			.kill 10 Young Panther##683|q 190/1
 		step
 			goto Stranglethorn Vale,43.7,9.4
 			.' Interact with gameobject: Bookie Herod's Records
@@ -1829,14 +1839,13 @@ startlevel 45
 			..accept The Hidden Key##328
 		step
 			goto Stranglethorn Vale,44.5,9.7
-			.' Collect the Kurzen Supplies
+			.collect Venom Fern Extract##2634|q 204/2
 			.info They look like a pile of brown boxes in the small camp.
-			.collect Venom Fern Extract|q 204/2
 		step
 			goto Stranglethorn Vale,44,11.2
-			.kill 15 Kurzen Jungle Fighter|q 203/1
+			.kill 15 Kurzen Jungle Fighter##937|q 203/1
 			.from Kurzen Medicine Man##940, Kurzen Jungle Fighter##937
-			.get 7 Jungle Remedy|q 204/1
+			.get 7 Jungle Remedy##2633|q 204/1
 		step
 			goto Stranglethorn Vale,38,3.3
 			.talk Sergeant Yohwa##733
@@ -1844,11 +1853,13 @@ startlevel 45
 			..turnin Bad Medicine##204
 			..accept Special Forces##574
 		step
-			goto Stranglethorn Vale,45.5,8.4
-			.info Enter the cave.
+			.' Enter the cave and move forward without turning anywhere|goto 45.5,8.4,0.3|q 328
+		step
+			goto Stranglethorn Vale,49.6,7.6
 			.' Interact with gameobject: Bookie Herod's Strongbox
-			..turnin The Hidden Key##328 |at 49.6,7.6
-			..accept The Spy Revealed!##329 |at 49.6,7.6
+			.info Inside the cave.
+			..turnin The Hidden Key##328
+			..accept The Spy Revealed!##329
 		step
 			goto Stranglethorn Vale,46.4,6.85
 			.kill 10 Kurzen Commando##938|q 574/1
@@ -1878,7 +1889,7 @@ startlevel 45
 		step
 			goto Stranglethorn Vale,49.9,4
 			.from Colonel Kurzen##813
-			.get 1 Kurzen's Head##3615|q 202/3
+			.get Kurzen's Head##3615|q 202/3
 		step
 			goto Stranglethorn Vale,49.35,7.6
 			.kill 6 Kurzen Elite##939|q 202/1
@@ -1897,7 +1908,7 @@ startlevel 45
 			..accept Panther Mastery (2)##191
 		step
 			goto Stranglethorn Vale,33.6,11.5
-			.kill 10 Young Stranglethorn Tiger|q 185/1
+			.kill 10 Young Stranglethorn Tiger##681|q 185/1
 		step
 			goto Stranglethorn Vale,35.6,10.6
 			.talk Ajeck Rouack##717
@@ -1905,11 +1916,11 @@ startlevel 45
 			..accept Tiger Mastery (2)##186
 		step
 			goto Stranglethorn Vale,31,10
-			.kill 10 Panther|q 191/1
-			.kill 10 Stranglethorn Tiger|q 186/1
+			.kill 10 Panther##736|q 191/1
+			.kill 10 Stranglethorn Tiger##682|q 186/1
 		step
 			goto Stranglethorn Vale,27,16.3
-			.kill 10 Stranglethorn Raptor|q 194/1
+			.kill 10 Stranglethorn Raptor##685|q 194/1
 		step
 			goto Stranglethorn Vale,29.5,19.1
 			.collect 1 The First Troll Legend##2005|q 207/1
@@ -1946,10 +1957,10 @@ startlevel 45
 			..accept Raptor Mastery (2)##195
 		step
 			goto Stranglethorn Vale,32.5,18.8
-			.kill 10 Elder Stranglethorn Tiger|q 187/1
+			.kill 10 Elder Stranglethorn Tiger##1085|q 187/1
 		step
 			goto Stranglethorn Vale,37.1,24.4
-			.kill 10 Lashtail Raptor|q 195/1
+			.kill 10 Lashtail Raptor##686|q 195/1
 		step
 			goto Stranglethorn Vale,39.4,34.7
 			.kill 10 Shadowmaw Panther##684|q 192/1
@@ -1976,10 +1987,10 @@ startlevel 45
 		step
 			goto Stranglethorn Vale,32.2,17.3
 			.from Sin'Dall##729
-			.get Paw of Sin'Dall|q 188/1
+			.get Paw of Sin'Dall##3879|q 188/1
 		step
 			goto Stranglethorn Vale,32.6,40.4
-			.kill 10 Jungle Stalker|q 196/1
+			.kill 10 Jungle Stalker##687|q 196/1
 		step
 			goto Stranglethorn Vale,45.35,41.98
 			.from Skullsplitter Witch Doctor##670, Skullsplitter Mystic##780
@@ -1987,7 +1998,7 @@ startlevel 45
 		step
 			goto Stranglethorn Vale,50,24
 			.from Bhag'thera##728
-			.get Fang of Bhag'thera##3876|q 193/1
+			.get Fang of Bhag'thera##3876##3876|q 193/1
 			.' Bhag'thera can also be found (1)|at 47.2,28.6
 			.' Bhag'thera can also be found (2)|at 48.8,20.1
 		step
@@ -2020,11 +2031,11 @@ startlevel 45
 		step
 			goto Stranglethorn Vale,32.1,43.4
 			.from Tethis##730
-			.get Talon of Tethis|q 197/1
+			.get Talon of Tethis##3877|q 197/1
 		step
 			goto Stranglethorn Vale,40.3,50.1
 			.from Crystal Spine Basilisk##689
-			.get 10 Singing Crystal Shard|q 605/1
+			.get 10 Singing Crystal Shard##3918|q 605/1
 			.' You can find more basilisk (1)|at 47.5,6.0
 			.' You can find more basilisk (2)|at 25.1,17.7
 		step
@@ -2089,7 +2100,7 @@ startlevel 45
 			.get 5 Mistvale Giblets##3919|q 606/1
 		step
 			goto Stranglethorn Vale,31.2,68
-			.' Kill gorillas
+			.from Elder Mistvale Gorillas##1557, Silverback Patriarch##1558
 			.collect 1 Gorilla Fang##2799|q 348
 		step
 			goto Stranglethorn Vale,35.3,60.4
@@ -2098,7 +2109,7 @@ startlevel 45
 			.' 3 gorillas will attack you one at a time.
 			.' Mokk the Savage is the final gorilla.
 			.from Mokk the Savage##1514
-			.get 1 Heart of Mokk##2797|q 348/1
+			.get Heart of Mokk##2797|q 348/1
 		step
 			goto Stranglethorn Vale,40,58.24
 			.from Zanzil Zombie##1488, Zanzil Naga##1491
@@ -2107,7 +2118,7 @@ startlevel 45
 		step
 			goto Stranglethorn Vale,37,69.7
 			.from Gorlash##1492
-			.get 1 Smotts' Chest##3932|q 614/1
+			.get Smotts' Chest##3932|q 614/1
 		step
 			goto Stranglethorn Vale,26.9,73.6
 			.talk "Shaky" Phillipe##2502
@@ -2150,16 +2161,16 @@ startlevel 45
 			..accept Keep An Eye Out##576
 		step
 			goto Stranglethorn Vale,29.6,80.9
-			.' Click the Bloodsail Orders
+			.' Interact with gameobject: Bloodsail Orders
 			.info They are scrolls laying on a box and in the tent here.
-			.get Bloodsail Orders|q 604/3
-			.' Click the Bloodsail Charts
+			.get Bloodsail Orders##3921|q 604/3
+			.' Interact with gameobject: Bloodsail Charts
 			.info They are scrolls laying on a box and in the tent here.
-			.get Bloodsail Charts|q 604/2
+			.get Bloodsail Charts##3920|q 604/2
 			.' They can also spawn in the camp to the southwest|at 27.0,82.8
 		step
 			goto Stranglethorn Vale,32.8,76.2
-			.kill 10 Bloodsail Swashbuckler|q 604/1
+			.kill 10 Bloodsail Swashbuckler##1563|q 604/1
 			.' Kill Bloodsail pirates along the beach around this area
 			.get Dizzy's Eye##3897|q 576/1
 			.get 15 Snuff##3910|q 587/1
@@ -2276,9 +2287,10 @@ startlevel 45
 			..turnin Excelsior##628
 		step
 			goto Stranglethorn Vale,35.1,72.9
-			.' Click the Half-Buried Bottles
+			.' Interact with gameobject: Half-Buried Bottles
 			.info They are little blue bottles that can spawn anywhere along this beach close to the water.
-			.collect 1 Carefully Folded Note##4098|q 630 |future
+			.collect 1 Carefully Folded Note##4098|q 594 |future
+		step
 			.use Carefully Folded Note##4098
 			..accept Message in a Bottle (1)##594
 		step
@@ -2297,22 +2309,23 @@ startlevel 45
 		step
 			goto Stranglethorn Vale,29.48,89.21
 			.' While doing the next 3 steps, look for Cortello's Riddle on the ships:
-			.' Click Cortello's Riddle
+			.' Interact with gameobject: Cortello's Riddle
 			.info It's a scroll.
-			..accept Cortello's Riddle (1)##624|use Cortello's Riddle##4056
+			.use Cortello's Riddle##4056
+			..accept Cortello's Riddle (1)##624
 			.' You can find more around (1)|at 30.7,89.66
 			.info Manual skip to the next step of the guide
 		step
 			goto Stranglethorn Vale,32.9,88.2
-			.kill 1 Captain Stillwater|q 608/1
+			.kill 1 Captain Stillwater##2550|q 608/1
 			.info Standing on the middle deck of the ship.
 		step
 			goto Stranglethorn Vale,30.6,90.6
-			.kill 1 Fleet Master Firallon|q 608/3
+			.kill 1 Fleet Master Firallon##2546|q 608/3
 			.info Standing on the middle deck of the ship.
 		step
 			goto Stranglethorn Vale,29.2,88.3
-			.kill 1 Captain Keelhaul|q 608/2
+			.kill 1 Captain Keelhaul##2548|q 608/2
 			.info Standing on the middle deck of the ship.
 		step
 			.' Make sure you have accepted the Cortello's Riddle quest:
