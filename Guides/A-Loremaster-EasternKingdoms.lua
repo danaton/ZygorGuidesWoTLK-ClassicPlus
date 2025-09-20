@@ -2495,7 +2495,7 @@ startlevel 45
 			.goal Escort Galen out of the Fallow Sanctuary|q 1393/1
 		step
 			goto Swamp of Sorrows,47.8,39.8
-			.info Interact with gameobject: Galen's Strongbox
+			.' Interact with gameobject: Galen's Strongbox
 			..turnin Galen's Escape##1393
 		step
 			goto Swamp of Sorrows,26.7,59.8
@@ -2643,7 +2643,7 @@ startlevel 60
 			.kill 3 Servant of Allistarj##7670|q 2681/3
 			.info It is necessary to kill near the floating stone.
 		step
-			.'Follow the Grinding Circle killing boars, hyenas, vultures, basilisks, and scorpions until you:
+			.' Follow the Grinding Circle killing boars, hyenas, vultures, basilisks, and scorpions until you:
 			.collect 6 Blasted Boar Lung##8392
 			.collect 5 Snickerfang Jowl##8391
 			.collect 16 Vulture Gizzard##8396
@@ -2688,8 +2688,9 @@ startlevel 60
 			.talk Fallen Hero of the Horde##7572
 			..accept Kirith##2721
 		step
+			.' Enter the cave and move along the right side|goto Blasted Lands,65.05,32.93,0.3 |q 2721
+		step
 			goto Blasted Lands,69.3,30.8
-			.' Entrance in cave|at 65.05,32.93
 			.kill 1 Kirith the Damned##7728|n
 			.talk Spirit of Kirith##7729
 			..turnin Kirith##2721
@@ -2728,7 +2729,7 @@ startlevel 50
 			.buy 15 Silk Cloth##4306|q 4449 |future
 		step
 			goto Searing Gorge,37.6,26.5
-			.talk Wanted/Missing/Lost & Found##001000
+			.' Interact with gameobject: Wanted/Missing/Lost & Found
 			..accept WANTED: Overseer Maltorius##7701
 			..accept STOLEN: Smithing Tuyere and Lookout's Spyglass##7728
 			..accept JOB OPPORTUNITY: Culling the Competition##7729	
@@ -2750,15 +2751,23 @@ startlevel 50
 			goto Searing Gorge,39.1,39
 			.talk Kalaran Windblade##8479
 			..accept Divine Retribution##3441
-			.info Listen to his story.
+		step
+			goto Searing Gorge,39.1,39
+			.talk Kalaran Windblade##8479
+			.goal Listen as Kalaran Windblade tells his story|q 3441/1
+		step
+			goto Searing Gorge,39.1,39
+			.talk Kalaran Windblade##8479
 			..turnin Divine Retribution##3441
 			..accept The Flawless Flame##3442
 		step
 			goto Searing Gorge,36.8,49.4
 			.from Dark Iron Steamsmith##5840
 			.get Smithing Tuyere##18959|q 7728/1
+		step
 			.from Dark Iron Steamsmith##5840, Dark Iron Slaver##5844, Dark Iron Taskmaster##5846
 			.collect Grimesilt Outhouse Key##11818|q 4451 |future
+		step
 			.use Grimesilt Outhouse Key##11818
 			..accept The Key to Freedom##4451
 		step
@@ -2785,11 +2794,12 @@ startlevel 50
 			goto Searing Gorge,70.7,73.3
 			.from Margol the Rager##5833
 			.collect Margol's Horn##10000|q 3181 |future
+		step
 			.use Margol's Horn##10000
 			..accept The Horn of the Beast##3181
 		step
 			goto Searing Gorge,65.5,62.3
-			.' Interact with gameobject: the Wooden Outhouse.
+			.' Interact with gameobject: Wooden Outhouse.
 			..turnin The Key to Freedom##4451
 			..accept Caught!##4449
 		step
@@ -2797,11 +2807,13 @@ startlevel 50
 			.kill 8 Dark Iron Geologist##5839|q 4449/1
 		step
 			goto Searing Gorge,65.5,62.3
-			.' Click the Wooden Outhouse
+			.' Interact with gameobject: Wooden Outhouse
 			..turnin Caught!##4449
 			..accept Ledger from Tanaris##4450
-			.' Click the book he slides under the door
-			.get Goodsteel Ledger##11727|q 4450/1
+		step
+			goto Searing Gorge,65.5,62.3
+			.collect Goodsteel Ledger##11727|q 4450/1
+			.info Book he slides under the door.
 		step
 			goto Searing Gorge,61.7,72
 			.from Glassweb Spider##5856
@@ -2819,7 +2831,7 @@ startlevel 50
 			.' He drops a note when he dies.
 		step
 			goto Searing Gorge,74.45,19.45
-			.' Interact with gameobject: the Singed Letter.
+			.' Interact with gameobject: Singed Letter
 			..turnin Suntara Stones (1)##3367
 			..accept Suntara Stones (2)##3368
 		step
@@ -2886,20 +2898,19 @@ startlevel 50
 			.get Head of Overseer Maltorius|q 7701/1
 		step
 			goto Searing Gorge,40.5,35.7
-			.' Click the Secret Plans: Fiery Flux
+			.collect Secret Plans: Fiery Flux##18922|q 7722/1
 			.info It's a scroll laying on a bench behind Overseer Maltorius.
-			.get Secret Plans: Fiery Flux|q 7722/1
 		step
 			goto Searing Gorge,45.45,30.5
 			.collect 20 Dark Iron Pillow##18943|q 7702/1
-			.kill 15 Dark Iron Taskmaster|q 7729/1
-			.kill 15 Dark Iron Slaver|q 7729/2
+			.kill 15 Dark Iron Taskmaster##5846|q 7729/1
+			.kill 15 Dark Iron Slaver##5844|q 7729/2
 		step
 			goto Searing Gorge,47.9,42.1|n
 			.' Jump off the bridge at this spot to the path below|goto Searing Gorge,47.9,42.1,0.5|noway|q 7727
 		step
 			goto Searing Gorge,52,37
-			.kill 20 Incendosaur|q 7727/1
+			.kill 20 Incendosaur##9318|q 7727/1
 		step
 			goto Searing Gorge,37.6,26.5
 			.talk Lookout Captain Lolo Longstriker##14634
@@ -2949,10 +2960,22 @@ startlevel 50
 			.talk Kalaran Windblade##8479
 			..turnin The Flame's Casing##3452
 			..accept The Torch of Retribution (1)##3453
+		step
+			goto Searing Gorge,39,38.9
+			.talk Kalaran Windblade##8479
+			.goal Wait for Kalaran Windblade to complete the Torch of Retribution|q 3453/1
+		step
+			goto Searing Gorge,39,38.9
+			.talk Kalaran Windblade##8479
 			..turnin The Torch of Retribution (1)##3453
 			..accept The Torch of Retribution (2)##3454
-			.' Click the green glowing floating Torch of Retribution
+		step
+			goto Searing Gorge,39,39.2
+			.' Interact with gameobject: Torch of Retribution
 			..turnin The Torch of Retribution (2)##3454
+		step
+			goto Searing Gorge,39,38.9
+			.talk Kalaran Windblade##8479
 			..accept Squire Maltrake##3462
 		step
 			goto Searing Gorge,39.2,39
@@ -2960,10 +2983,10 @@ startlevel 50
 			..turnin Squire Maltrake##3462
 			..accept Set Them Ablaze!##3463
 		step
-			.' Go into the Slag Pit|goto Searing Gorge,41.5,54.7,0.5|c |q 3372
+			.' Go into the Slag Pit|goto Searing Gorge,41.5,54.7,0.5 |q 3372
 		step
 			goto Searing Gorge,41.2,25.5
-			.' Interact with gameobject: the Altar of Suntara
+			.' Interact with gameobject: Altar of Suntara
 			.info Inside the Slag Pit laying on the ground.
 			..turnin Release Them##3372
 			.talk the Dying Archeologist##8417
@@ -2976,34 +2999,36 @@ startlevel 50
 			goto Searing Gorge,33.3,54.5
 			.' Equip the Torch of Retribution
 			.use Torch of Retribution##10515
-			.' Click the Sentry Brazier.
+			.' Interact with gameobject: Sentry Brazier
 			.info At the top of the tower, click the little metal blazer on the ground.
 			.goal Northern Tower Ablaze|q 3463/4
 		step
 			goto Searing Gorge,35.7,60.7
-			.' Click the Sentry Brazier.
+			.' Interact with gameobject: Sentry Brazier
 			.info At the top of the tower, click the little metal blazer on the ground.
 			.goal Western Tower Ablaze|q 3463/1
 		step
 			goto Searing Gorge,44,60.9
-			.' Click the Sentry Brazier.
+			.' Interact with gameobject: Sentry Brazier
 			.info At the top of the tower, click the little metal blazer on the ground.
 			.goal Southern Tower Ablaze|q 3463/2
 		step
 			goto Searing Gorge,50.1,54.7
-			.' Click the Sentry Brazier.
+			.' Interact with gameobject: Sentry Brazier
 			.info At the top of the tower, click the little metal blazer on the ground.
 			.goal Eastern Tower Ablaze|q 3463/3
 		step
 			goto Searing Gorge,39.1,39
 			.talk Squire Maltrake##8509
 			..turnin Set Them Ablaze!##3463
-			.' Click the small grey chest on the ground.
+		step
+			goto Searing Gorge,38.8,39
+			.' Interact with gameobject: Hoard of the Black Dragonflight
 			..accept Trinkets...##3481
-			.' Click the chest again.
 			..turnin Trinkets...##3481
+		step
 			.' Open the Hoard of the Black Dragonflight in your bags|use Hoard of the Black Dragonflight##10569
-			.' Make sure to save the Black Dragonflight Molt|collect Black Dragonflight Molt##10575|q 4022/1 |future
+			.' Make sure to save the Black Dragonflight Molt|collect Black Dragonflight Molt##10575|q 4022 |future
 		step
 			goto Ironforge,71.8,16.1
 			.talk Curator Thorius##8256
