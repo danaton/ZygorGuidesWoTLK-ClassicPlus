@@ -3138,12 +3138,12 @@ startlevel 60
 			..turnin A Taste of Flame##4023 |or
 		step
 			goto Burning Steppes,54.09,40.73
-			.info Interact with gameobject: Tablet of the Seven
+			.' Interact with gameobject: Tablet of the Seven
 			.' Choose "Transcribe the tablet."
 			.collect Tablet Transcript##11470|q 4296/1
 		step
 			goto Burning Steppes,68.42,37.33
-			.info Interact with gameobject: Thaurissan Relic
+			.' Interact with gameobject: Thaurissan Relic
 			.info They look like cylindrical grey stones sitting upright on the ground around this area.
 			.' Recover 12 Information|q 3701/1
 			.' You can find more around (1)|at 66.04,44.05
@@ -3158,7 +3158,7 @@ startlevel 60
 			.get Gor'tesh's Lopped Off Head##11080|q 3824/1
 		step
 			goto Burning Steppes,39.31,55.42
-			.' kill Blackrock enemies around this area.
+			.' Kill Blackrock enemies around this area
 			.info They look like orcs and wolves.
 			.info You can find more inside the buildings around this area.
 			.collect 50 Blackrock Medallion##11467|q 4283/1
@@ -3210,7 +3210,7 @@ startlevel 45
 			..accept Hardened Shells##1105
 		step
 			goto Thousand Needles,82.53,55.37
-			.' Kill Sparkleshell enemies around this area.
+			.from Sparkleshell Tortoise##4142, Sparkleshell Snapper##4143, Sparkleshell Borer##4144
 			.info They look like turtles.
 			.collect 9 Hardened Tortoise Shell##5795|q 1105/1
 			.' You can find more around (1)|at 77.41,53.72
@@ -3218,7 +3218,7 @@ startlevel 45
 			.' You can find more around (3)|at 74.82,63.33
 		step
 			goto Thousand Needles,83.06,61.38
-			.' Kill Scorpid enemies around this area.
+			.from Scorpid Terror##4139, Scorpid Reaver##4140
 			.info They look like scorpions.
 			.collect 6 Salty Scorpid Venom##5794|q 1104/1
 			.' You can find more around (1)|at 77.95,53.29
@@ -3337,8 +3337,8 @@ startlevel 45
 			..accept Murdaloc##739
 		step
 			goto Badlands,50.70,67.70
-			.kill 1 Murdaloc|q 739/1
-			.kill 12 Stonevault Bonesnapper|q 739/2
+			.kill 1 Murdaloc##2945|q 739/1
+			.kill 12 Stonevault Bonesnapper##2893|q 739/2
 			.get 10 Indurium Flake##5797|q 1108/1
 		step
 			goto Badlands,46.3,77.2|n

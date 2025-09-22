@@ -175,6 +175,9 @@ startlevel 23
 		step
 			goto Thousand Needles,30.7,24.3
 			.' Interact with gameobject: Lonebrow's Journal
+			.collect Henrig Lonebrow's Journal##5791|q 1100 |future
+		step
+			.use Henrig Lonebrow's Journal##5791
 			..accept Lonebrow's Journal##1100
 		step
 			goto Feralas,89.6,46.6
@@ -186,11 +189,12 @@ startlevel 23
 			.' Go To Instance!
 			.talk Heralath Fallowbrook##4510
 			..accept Mortality Wanes##1142
+			.info To take this quest you must be level 25.
 			.talk Willix the Importer##4508
 			..accept Willix the Importer##1144
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Gnomregan (25)",[[
+ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Gnomeregan (25)",[[
 author danaton
 startlevel 25
 		step //1
@@ -238,6 +242,29 @@ startlevel 25
 			..turnin The Day After##2927
 			..accept Gnogain##2926
 		step //11
+			goto Dun Morogh,22.09,34.15
+			.from Irradiated Invader##6213
+			.' Use Leaden Collection Phial on a living Irradiated Invader|use Empty Leaden Collection Phial##9283
+			.collect Full Leaden Collection Phial##9284|q 2926/1
+		step //12
+			goto Dun Morogh,21.09,31.52
+			.from Caverndeep Looter##6209
+			.collect White Punch Card##9279|q 2930 |future
+		step //13
+			goto Dun Morogh,19.79,31.95
+			.from Techbot##6231
+			.get Techbot's Memory Core##9277|q 2922/1
+		step //14
+			goto Dun Morogh,21.85,32.2
+			.' Interact with gameobject: Matrix Punchograph 3005-A
+			.info May appear in various locations on this platform.
+			.collect Yellow Punch Card##9280|q 2930 |future
+		step //15
+			goto Dun Morogh,45.90,49.40
+			.talk Ozzie Togglevolt##1268
+			..turnin Gnogain##2926
+			..accept The Only Cure is More Green Glow##2962
+		step //16
 			goto Dun Morogh,17.74,39.17
 			.' Go To Instance!
 ]])
@@ -536,7 +563,8 @@ startlevel 45
 			..accept Legends of Maraudon##7044
 		step //18
 			goto Desolace,33.15,65.74
-			.use Coated Cerulean Vial##17693|q 7041/2
+			.use Coated Cerulean Vial##17693
+			.collect Filled Cerulean Vial##17696|q 7041/2
 		step //19
 			goto Desolace,34.6,64.07
 			.' Next to Upper Tunnel|goto Desolace,34.6,64.07,0.5|noway |q 7065
@@ -650,7 +678,7 @@ startlevel 47
 		step //20
 			goto The Hinterlands,57.56,86.76
 			.collect Ancient Egg##12402|q 4787/1
-			.' In Cave
+			.info Inside the cave.
 		step //21
 			goto Stormwind,69.50,40.40
 			.talk Brohann Caskbelly ##5384

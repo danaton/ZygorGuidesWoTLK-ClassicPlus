@@ -4165,7 +4165,7 @@ startlevel 50
 			.kill 6 Saltstone Gazer##4150|q 1175/3
 		step
 			goto Thousand Needles,82.53,55.37
-			.' Kill Sparkleshell enemies around this area.
+			.from Sparkleshell Tortoise##4142, Sparkleshell Snapper##4143, Sparkleshell Borer##4144
 			.info They look like turtles.
 			.collect 9 Hardened Tortoise Shell##5795|q 1105/1
 			.' You can find more around (1)|at 77.41,53.72
@@ -4173,7 +4173,7 @@ startlevel 50
 			.' You can find more around (3)|at 74.82,63.33
 		step
 			goto Thousand Needles,83.06,61.38
-			.' Kill Scorpid enemies around this area.
+			.from Scorpid Terror##4139, Scorpid Reaver##4140
 			.info They look like scorpions.
 			.collect 6 Salty Scorpid Venom##5794|q 1104/1
 			.' You can find more around (1)|at 77.95,53.29
