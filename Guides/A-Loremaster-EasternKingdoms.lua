@@ -3198,7 +3198,7 @@ startlevel 60
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[45] Badlands",[[
 author danaton
-description This guide contain quest-chain (19 quests) for Badlands location.
+description This guide contain quest-chain (20 quests) for Badlands location.
 startlevel 45
 		step
 			goto Thousand Needles,78.1,77.1
@@ -3349,7 +3349,7 @@ startlevel 45
 			.get 3 Large Stone Slab##4627|q 711/1
 		step
 			goto Badlands,9.2,80.05
-			.kill Ogres|n
+			.kill Dustbelcher Ogres|n
 			.get 7 Scrap Metal##4630|q 733/1
 		step
 			goto Badlands,16.05,60.35
@@ -3400,6 +3400,7 @@ startlevel 45
 			goto Badlands,42.2,52.7
 			.talk Martek the Exiled##4618
 			..turnin Indurium##1108
+			.info Watch the dialogue.
 			..accept News for Fizzle##1137
 		step
 			goto Badlands,53.6,43.3
@@ -3412,14 +3413,13 @@ startlevel 45
 			.get 8 An'Alleum Power Stone##8052|q 2418/2
 			.info Dungeon: Uldaman Quest Chain.
 		step
+			goto Badlands,44.63,12.15|n
+			.' Entrance to the Uldaman excavations|goto Badlands,44.63,12.15,0.5|noway|q 721
+		step
 			goto Badlands,37.9,10.58
 			.talk Hammertoe Grez##2909
 			..turnin A Sign of Hope (2)##721
 			.info Dungeon: Uldaman Quest Chain.
-		step
-			goto Badlands,42.4,52.9
-			.talk Rigglefuzz##2817
-			..turnin Power Stones##2418
 		step
 			goto Loch Modan,66.00,65.4
 			.talk Prospector Ironband##1344
@@ -3429,19 +3429,31 @@ startlevel 45
 			goto Loch Modan,37.1,49.4
 			.talk Ghak Healtouch##1470
 			..turnin Badlands Reagent Run##2500
+			..accept Uldaman Reagent Run##17
 		step
 			goto Stranglethorn Vale,26.1,22.9
 			.collect 9 Blue Pearl##4611|q 705/1
 		step
+			goto Badlands,44.63,12.15|n
+			.' Entrance to the Uldaman excavations|goto Badlands,44.63,12.15,0.5|noway|q 17
+		step
+			goto Badlands,35.28,13.7
+			.collect 12 Magenta Fungus Cap##8047|q 17/1
+		step
 			goto Badlands,42.4,52.9
 			.talk Rigglefuzz##2817
 			..turnin Pearl Diving##705
+			..turnin Power Stones##2418
+		step
+			goto Loch Modan,37.1,49.4
+			.talk Ghak Healtouch##1470
+			..turnin Uldaman Reagent Run##17
 		step
 			goto Thousand Needles,78.1,77.1
 			.talk Fizzle Brassbolts##4454
 			..turnin News for Fizzle##1137
 		step
-			.' Congratulations! +19 quests for achievement "Loremaster of Eastern Kingdoms".
+			.' Congratulations! +20 quests for achievement "Loremaster of Eastern Kingdoms".
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[20] Dun Morogh",[[
@@ -3482,7 +3494,7 @@ startlevel 20
 		step
 			goto Dun Morogh,29.8,73.8
 			.from Ragged Young Wolf##705
-			.get 8 Tough Wolf Meat|q 179/1
+			.get 8 Tough Wolf Meat##750|q 179/1
 		step
 			goto Dun Morogh,29.8,71.3
 			.talk Sten Stoutarm##658
@@ -3494,8 +3506,8 @@ startlevel 20
 			..accept A New Threat##170
 		step
 			goto Dun Morogh,30.4,74.8
-			.kill 6 Rockjaw Trogg|q 170/1
-			.kill 6 Burly Rockjaw Trogg|q 170/2
+			.kill 6 Rockjaw Trogg##707|q 170/1
+			.kill 6 Burly Rockjaw Trogg##724|q 170/2
 		step
 			goto Dun Morogh,29.8,71.3
 			.talk Balir Frosthammer##713
@@ -3512,44 +3524,44 @@ startlevel 20
 			..accept The Boar Hunter##183
 		step
 			goto Dun Morogh,22.0,71.3
-			.kill 8 Small Crag Boar|q 183/1
+			.kill 8 Small Crag Boar##708|q 183/1
 		step
 			goto Dun Morogh,22.6,71.4
 			.talk Talin Keeneye##714
 			..turnin The Boar Hunter##183
 		step
 			goto Dun Morogh,20.9,76.1
-			.' Click Felix's Box
+			.collect Felix's Box##10438|q 3361/1
 			.info In the troll camp on the ground, to the right of the campfire.
-			.get Felix's Box|q 3361/1
+		step
+			goto Dun Morogh,22.8,80.0
+			.collect Felix's Chest##16313|q 3361/2
+			.info In the troll camp on the ground, to the left directly next to the campfire.
 		step
 			goto Dun Morogh,25.1,75.7
 			.talk Grelin Whitebeard##786
 			..turnin Coldridge Valley Mail Delivery (2)##234
 			..accept The Troll Cave##182
 		step
-			goto Dun Morogh,22.8,80.0
-			.' Click Felix's Chest
-			.info In the troll camp on the ground, to the left directly next to the campfire.
-			.get Felix's Chest|q 3361/2
-		step
 			goto Dun Morogh,26.3,79.3
-			.' Click Felix's Bucket of Bolts
+			.collect Felix's Bucket of Bolts##16314|q 3361/3
 			.info Outside troll cave entrance on the ground next to the campfire.
-			.get Felix's Bucket of Bolts|q 3361/3
 		step
 			goto Dun Morogh,26.6,79.25
-			.kill 10 Frostmane Troll Whelp|q 182/1
+			.kill 10 Frostmane Troll Whelp##706|q 182/1
 		step
 			goto Dun Morogh,25.1,75.7
 			.talk Grelin Whitebeard##786
 			..turnin The Troll Cave##182
 			..accept The Stolen Journal##218
 		step
-			goto Dun Morogh,26.6,79.45
-			.from Grik'nir the Cold##808|at 30.5,80.2
+			goto Dun Morogh,26.6,79.45|n
+			.' Enter the cave and move along its left side|goto Dun Morogh,26.6,79.45,0.5|noway|q 218
+		step
+			goto Dun Morogh,30.5,80.2
+			.from Grik'nir the Cold##808
 			.info Inside the cave.
-			.get Grelin Whitebeard's Journal|q 218/1
+			.get Grelin Whitebeard's Journal##2004|q 218/1
 		step
 			goto Dun Morogh,25.1,75.7
 			.talk Grelin Whitebeard##786
@@ -3647,18 +3659,17 @@ startlevel 20
 		step
 			goto Dun Morogh,49.7,50.8
 			.from Large Crag Boar##1126, Crag Boar##1125, Young Black Bear##1128, Ice Claw Bear##1196
-			.get 4 Chunk of Boar Meat|q 317/1
-			.get 6 Crag Boar Rib|q 384/1
-			.get 2 Thick Bear Fur|q 317/2
+			.get 4 Chunk of Boar Meat##769|q 317/1
+			.get 6 Crag Boar Rib##2886|q 384/1
+			.get 2 Thick Bear Fur##6952|q 317/2
 		step
 			goto Dun Morogh,44.1,57
-			.' Open the crate.
+			.collect Rumbleshot's Ammo##13850|q 5541/1
 			.info In the small camp next to a tent.
-			.get Rumbleshot's Ammo|q 5541/1
 		step
 			goto Dun Morogh,42.4,54.1
 			.from Young Wendigo##1134, Wendigo##1135
-			.get 8 Wendigo Mane|q 313/1
+			.get 8 Wendigo Mane##2671|q 313/1
 		step
 			goto Dun Morogh,40.7,65.1
 			.talk Hegnar Rumbleshot##1243
@@ -3688,10 +3699,8 @@ startlevel 20
 			..accept Bitter Rivals##310
 		step
 			goto Dun Morogh,41.2,36.4
-			.from Frostmane Seer##1397
-			.' Collect the Shimmerweed Baskets.
+			.collect 6 Shimmerweed##2676|q 315/1
 			.info The Shimmerweed Baskets look like woven wooden baskets on the ground around this area.
-			.get 6 Shimmerweed|q 315/1
 		step
 			goto Dun Morogh,30.2,45.6
 			.talk Rejold Barleybrew##1374
@@ -3703,12 +3712,12 @@ startlevel 20
 			.info By the time you reach this point, you should have seen the "Explore Frostmane Hold" completed message.
 		step
 			goto Dun Morogh,25,51
-			.kill 5 Frostmane Headhunter|q 287/2
+			.kill 5 Frostmane Headhunter##1123|q 287/2
 		step
 			goto Dun Morogh,27.8,48.3
-			.kill 6 Ice Claw Bear|q 319/1
-			.kill 8 Elder Crag Boar|q 319/2
-			.kill 8 Snow Leopard|q 319/3
+			.kill 6 Ice Claw Bear##1196|q 319/1
+			.kill 8 Elder Crag Boar##1127|q 319/2
+			.kill 8 Snow Leopard##1201|q 319/3
 		step
 			goto Dun Morogh,27.1,36.9
 			.from Leper Gnome##1211
@@ -3718,14 +3727,16 @@ startlevel 20
 			.' You can find more around (2)|at 25.6,43.1
 		step
 			goto Dun Morogh,24.4,39.8|n
-			.' Go down and take the elevator.|goto Dun Morogh,24.4,39.8 |q 2926 |future |c
+			.' Go down and take the elevator|goto Dun Morogh,24.4,39.8,0.3|q 2926 |future
 		step
 			goto Dun Morogh,21.97,36.93|n
-			.' Keep moving straight ahead.|goto Dun Morogh,21.97,36.93 |q 2926 |future |c
+			.' Keep moving straight ahead|goto Dun Morogh,21.97,36.93,0.3|q 2926 |future
 		step
 			goto Dun Morogh,22.09,34.15
 			.from Irradiated Invader##6213
-			.use Empty Leaden Collection Phial##9283|q 2926/1
+			.use Empty Leaden Collection Phial##9283
+			.collect Full Leaden Collection Phial##9284|q 2926/1
+			.info Dungeon: Gnomeregan Quest Chain.
 		step
 			goto Dun Morogh,30.2,45.6
 			.talk Rejold Barleybrew##1374
@@ -3737,7 +3748,6 @@ startlevel 20
 			..accept Tundra MacGrann's Stolen Stash##312
 		step
 			goto Dun Morogh,38.5,53.9
-			.' Open MacGrann's Meat Locker.
 			.collect MacGrann's Dried Meats##2667|q 312/1
 		step
 			goto Dun Morogh,34.6,51.7
@@ -3788,7 +3798,7 @@ startlevel 20
 		step
 			goto Dun Morogh,62.6,46.1
 			.from Vagash##1388
-			.get Fang of Vagash|q 314/1
+			.get Fang of Vagash##3627|q 314/1
 		step
 			goto Dun Morogh,63.1,49.9
 			.talk Rudra Amberstill##1265
@@ -3804,8 +3814,8 @@ startlevel 20
 		step
 			goto Dun Morogh,70.7,56.5
 			.info Go inside the cave.
-			.kill 6 Rockjaw Skullthumper|q 432/1
-			.kill 10 Rockjaw Bonesnapper|q 433/1
+			.kill 6 Rockjaw Skullthumper##1115|q 432/1
+			.kill 10 Rockjaw Bonesnapper##1117|q 433/1
 		step
 			goto Dun Morogh,68.7,56.0
 			.talk Senator Mehr Stonehallow##1977
@@ -3825,7 +3835,7 @@ startlevel 20
 			..accept The Lost Pilot##419
 		step
 			goto Dun Morogh,79.7,36.2
-			.' Interact with A Dwarven Corpse.
+			.' Interact with gameobject: A Dwarven Corpse
 			..turnin The Lost Pilot##419
 			..accept A Pilot's Revenge##417
 		step
