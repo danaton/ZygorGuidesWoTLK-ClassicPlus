@@ -1652,7 +1652,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //2
 		goto 29,74
 		.from Ragged Young Wolf##705+
-		.get 8 Tough Wolf Meat|q 179/1
+		.get 8 Tough Wolf Meat##750|q 179/1
 	step //3
 		ding 2
 	step //4
@@ -1693,8 +1693,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		only Gnome Rogue
 	step //8
 		goto 31,75
-		.kill 6 Rockjaw Trogg|q 170/1
-		.kill 6 Burly Rockjaw Trogg|q 170/2
+		.kill 6 Rockjaw Trogg##707|q 170/1
+		.kill 6 Burly Rockjaw Trogg##724|q 170/2
 	step //9
 		goto 29.8,71.3
 		.talk Balir Frosthammer##713
@@ -1702,7 +1702,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //10
 		ding 3
 	step //11
-		'Go inside Anvilmar to 28.5,67.7|goto 28.5,67.7
+		goto 28.5,67.7
+		.info Go inside Anvilmar.
 		.talk Felix Whindlebolt##8416
 		..accept A Refugee's Quandary##3361
 	step //12
@@ -1733,7 +1734,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		..accept The Boar Hunter##183
 	step //17
 		goto 22,70
-		.kill 8 Small Crag Boar|q 183/1
+		.kill 8 Small Crag Boar##708|q 183/1
 	step //18
 		goto 22.6,71.4
 		.talk Talin Keeneye##714
@@ -1745,9 +1746,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		..accept The Troll Cave##182
 	step //20
 		goto 26.3,79.3
-		.' Click Felix's Bucket of Bolts|tip Outside troll cave entrance on the ground next to the campfire.
-		.get Felix's Bucket of Bolts|q 3361/3
-		.kill 10 Frostmane Troll Whelp|q 182/1
+		.' Click Felix's Bucket of Bolts
+		.info Outside troll cave entrance on the ground next to the campfire.
+		.collect Felix's Bucket of Bolts##16314|q 3361/3
+		.kill 10 Frostmane Troll Whelp##706|q 182/1
 	step //21
 		ding 4
 	step //22
@@ -1756,19 +1758,21 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		..turnin The Troll Cave##182
 		..accept The Stolen Journal##218
 	step //23
-		'Enter the troll cave at 26.8,79.8|goto 26.8,79.8|c
+		.' Enter the troll cave|goto 26.8,79.8,0.5|q 218
 	step //24
-		'Follow the path on the left to 30.5,80.2|goto 30.5,80.2
+		.' Follow the path on the left to|at 30.5,80.2
 		.from Grik'nir the Cold##808
-		.get Grelin Whitebeard's Journal|q 218/1
+		.get Grelin Whitebeard's Journal##2004|q 218/1
 	step //25
-		'Go outside to 22.8,79.9|goto 22.8,79.9
-		.' Click Felix's Chest|tip In the troll camp on the ground, to the left directly next to the campfire.
-		.get Felix's Chest|q 3361/2
+		.' Go outside to 22.8,79.9|goto 22.8,79.9
+		.' Click Felix's Chest
+		.info In the troll camp on the ground, to the left directly next to the campfire.
+		.collect Felix's Chest##16313|q 3361/2
 	step //26
 		goto 20.9,76.1
-		.' Click Felix's Box|tip In the troll camp on the ground to the right of the campfire.
-		.get Felix's Box|q 3361/1
+		.' Click Felix's Box
+		.info In the troll camp on the ground to the right of the campfire.
+		.collect Felix's Box##10438|q 3361/1
 	step //27
 		goto 25,76
 		.talk Grelin Whitebeard##786
@@ -1799,7 +1803,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		.talk Hands Springsprocket##6782
 		..accept Supplies to Tannok##2160
 	step //33
-		'Go through the tunnel to the other side|goto Dun Morogh,35.6,65.8,0.3|noway|c
+		.' Go through the tunnel to the other side|goto Dun Morogh,35.6,65.8,0.3|noway|q 420
 	step //34
 		goto 46.7,53.8
 		.talk Senir Whitebeard##1252
@@ -1813,11 +1817,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		.talk Tannok Frosthammer##6806
 		..turnin Supplies to Tannok##2160
 		.talk Innkeeper Belm##1247
-		..buy Rhapsody Malt|goal 1 Rhapsody Malt|q 384/2
+		.buy Rhapsody Malt##2894|q 384/2
 	step //37
 		goto 47.4,52.5
 		.talk Innkeeper Belm##1247
-		home Kharanos
+		home Kharanos|q 400 |future
 	step //38
 		goto 46,51.7
 		.talk Tharek Blackstone##1872
@@ -1839,19 +1843,20 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //42
 		goto 49.7,50.8
 		.from Large Crag Boar##1126+, Crag Boar##1125+, Young Black Bear##1128+, Ice Claw Bear##1196+
-		.get 4 Chunk of Boar Meat|q 317/1
-		.get 6 Crag Boar Rib|q 384/1
-		.get 2 Thick Bear Fur|q 317/2
+		.get 4 Chunk of Boar Meat##769|q 317/1
+		.get 6 Crag Boar Rib##2886|q 384/1
+		.get 2 Thick Bear Fur##6952|q 317/2
 	step //43
 		ding 6
 	step //44
 		goto 44.1,57
-		.' Click the crate|tip In the small camp next to a tent.
-		.get Rumbleshot's Ammo|q 5541/1
+		.' Click the crate
+		.collect Rumbleshot's Ammo##13850|q 5541/1
+		.info In the small camp next to a tent.
 	step //45
 		goto 42.4,54.1
 		.from Young Wendigo##1134+, Wendigo##1135+
-		.get 8 Wendigo Mane|q 313/1
+		.get 8 Wendigo Mane##2671|q 313/1
 	step //46
 		goto 40.7,65.1
 		.talk Hegnar Rumbleshot##1243
@@ -1879,9 +1884,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		..accept Bitter Rivals##310
 	step //51
 		goto 27.8,48.3
-		.kill 6 Ice Claw Bear|q 319/1
-		.kill 8 Elder Crag Boar|q 319/2
-		.kill 8 Snow Leopard|q 319/3
+		.kill 6 Ice Claw Bear##1196|q 319/1
+		.kill 8 Elder Crag Boar##1127|q 319/2
+		.kill 8 Snow Leopard##1201|q 319/3
 	step //52
 		goto 30.2,45.6
 		.talk Rejold Barleybrew##1374
@@ -1889,12 +1894,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		..accept Return to Bellowfiz##320
 	step //53
 		goto 37.9,42.1|n
-		.' The path up to Shimmerweed starts here|goto Dun Morogh,37.9,42.1,0.3|noway|c
+		.' The path up to Shimmerweed starts here|goto Dun Morogh,37.9,42.1,0.3|noway|q 315
 	step //54
 		goto 41.2,36.4
 		.from Frostmane Seer##1397+
-		.' Click the Shimmerweed Baskets|tip The Shimmerweed Baskets look like woven wooden baskets on the ground around this area.
-		.get 6 Shimmerweed|q 315/1
+		.' Click the Shimmerweed Baskets
+		.collect 6 Shimmerweed##2676|q 315/1
+		.info The Shimmerweed Baskets look like woven wooden baskets on the ground around this area.
 	step //55
 		goto 49.6,48.5
 		.talk Pilot Bellowfiz##1378
@@ -1908,7 +1914,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //58
 		goto 47.6,52.7
 		.talk Jarven Thunderbrew##1373
-		..'Give him the Thunder Ale
+		.'Give him the Thunder Ale
 		.' Click the barrel next to him
 		..turnin Bitter Rivals##310
 		..accept Return to Marleth##311
@@ -1934,19 +1940,20 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		..turnin Return to Marleth##311
 	step //62
 		goto 25,51
-		.kill 5 Frostmane Headhunter|q 287/2
+		.kill 5 Frostmane Headhunter##1123|q 287/2
 	step //63
 		goto 21.2,52.3
-		.' Explore Frostmane Hold|goal Fully explore Frostmane Hold|q 287/1|tip By the time you reach this point, you should have seen the "Explore Frostmane Hold" completed message.
+		.' Explore Frostmane Hold|goal Fully explore Frostmane Hold|q 287/1
+		.info By the time you reach this point, you should have seen the "Explore Frostmane Hold" completed message.
 	step //64
 		goto 25.9,43.2
 		.from Leper Gnome##1211+
-		.get 8 Restabilization Cog|q 412/1
-		.get 8 Gyromechanic Gear|q 412/2
+		.get 8 Restabilization Cog##3083|q 412/1
+		.get 8 Gyromechanic Gear##3084|q 412/2
 	step //65
 		ding 9
 	step //66
-		'Hearth to Kharanos|goto Dun Morogh,47.3,52.5,0.5|use Hearthstone##6948|noway|c
+		.' Hearth to Kharanos|goto Dun Morogh,47.3,52.5,0.5|use Hearthstone##6948|noway|q 412
 	step //67
 		goto 45.8,49.4
 		.talk Razzle Sprysprocket##1269
@@ -1966,11 +1973,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		..accept Protecting the Herd##314
 	step //71
 		goto 59.8,50.0|n
-		.' The path up to Protecting the Herd starts here|goto Dun Morogh,59.8,50.0,0.5|noway|c
+		.' The path up to Protecting the Herd starts here|goto Dun Morogh,59.8,50.0,0.5|noway|q 314
 	step //72
 		goto 62.6,46.1
 		.from Vagash##1388
-		.get Fang of Vagash|q 314/1
+		.get Fang of Vagash##3627|q 314/1
 	step //73
 		goto 63.1,49.9
 		.talk Rudra Amberstill##1265
@@ -1984,11 +1991,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		.talk Foreman Stonebrow##1254
 		..accept Those Blasted Troggs!##432
 	step //76
-		'Go inside the cave to 70.7,56.5|goto 70.7,56.5
-		.kill 6 Rockjaw Skullthumper|q 432/1
-		.kill 10 Rockjaw Bonesnapper|q 433/1
+		.' Go inside the cave to 70.7,56.5|goto 70.7,56.5
+		.kill 6 Rockjaw Skullthumper##1115|q 432/1
+		.kill 10 Rockjaw Bonesnapper##1117|q 433/1
 	step //77
-		'Go outside to 68.7,56.0|goto 68.7,56.0
+		.' Go outside to 68.7,56.0|goto 68.7,56.0
 		.talk Senator Mehr Stonehallow##1977
 		..turnin The Public Servant##433
 	step //78
@@ -2003,7 +2010,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		..accept Muren Stormpike##1679
 		only Gnome Warrior
 	step //81
-		'Go northeast to Ironforge|goto Ironforge|noway|c
+		.' Go northeast to Ironforge|goto Ironforge|noway|q 1679
 		only Gnome Warrior
 	step //82
 		goto Ironforge,70.8,90.3
@@ -2012,15 +2019,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		..accept Vejrek##1678
 		only Gnome Warrior
 	step //83
-		'Go outside to Dun Morogh|goto Dun Morogh|noway|c
+		.' Go outside to Dun Morogh|goto Dun Morogh|noway|q 1678
 		only Gnome Warrior
 	step //84
 		goto Dun Morogh,27.8,58
 		.from Vejrek##6113
-		.get Vejrek's Head|q 1678/1
+		.get Vejrek's Head##6799|q 1678/1
 		only Gnome Warrior
 	step //85
-		'Go northeast to Ironforge|goto Ironforge|noway|c
+		.' Go northeast to Ironforge|goto Ironforge|noway|q 1678
 		only Gnome Warrior
 	step //86
 		goto Ironforge,70.8,90.3
@@ -2028,7 +2035,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		..turnin Vejrek##1678
 		only Gnome Warrior
 	step //87
-		'Go outside to Dun Morogh|goto Dun Morogh|noway|c
+		.' Go outside to Dun Morogh|goto Dun Morogh|noway|q 413
 		only Gnome Warrior
 	step //88
 		goto Dun Morogh,86.3,48.8
@@ -2036,13 +2043,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		..turnin Shimmer Stout##413
 		..accept Stout to Kadrell##414
 	step //89
-		'Go southeast to Loch Modan|goto Loch Modan|noway|c
+		.' Go southeast to Loch Modan|goto Loch Modan|noway|q 414
 	step //90
 		goto Loch Modan,33.9,51
 		.talk Thorgrum Borrelson##1572
-		..fpath Thelsamar
+		.fpath Thelsamar
 	step //91
-		'Fly to Ironforge|goto Ironforge|noway|c
+		.' Fly to Ironforge|goto Ironforge|noway|q 1715 |future
 		only Gnome Warlock
 	step //92
 		goto Ironforge,47.6,9.3
@@ -2051,7 +2058,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		only Gnome Warlock
 	step //93
 		goto 76.9,51.2
-		'Ride the tram to Stormwind City|goto Stormwind City|noway|c
+		.' Ride the tram to Stormwind City|goto Stormwind City|noway|q 1715
 		only Gnome Warlock
 	step //94
 		goto Stormwind City,39.2,85.3
@@ -2060,15 +2067,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		..accept Surena Caledon##1688
 		only Gnome Warlock
 	step //95
-		'Go outside to Elwynn Forest|goto Elwynn Forest|noway|c
+		.' Go outside to Elwynn Forest|goto Elwynn Forest|noway|q 1688
 		only Gnome Warlock
 	step //96
 		goto Elwynn Forest,71,80.8
 		.from Surena Caledon##881
-		.get Surena's Choker|q 1688/1
+		.get Surena's Choker##6810|q 1688/1
 		only Gnome Warlock
 	step //97
-		'Go northwest to Stormwind|goto Stormwind City|noway|c
+		.' Go northwest to Stormwind|goto Stormwind City|noway|q 1688
 		only Gnome Warlock
 	step //98
 		goto Stormwind City,39.2,85.3
@@ -2077,21 +2084,21 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		..accept The Binding##1689
 		only Gnome Warlock
 	step //99
-		'Go downstairs into the catacombs to 39.1,84.3|goto 39.1,84.3
+		.' Go downstairs into the catacombs to 39.1,84.3|goto 39.1,84.3
 		.' Use your Bloodstone Choker while standing on the pink Summoning Circle|use Bloodstone Choker##6928
-		.kill Summoned Voidwalker|q 1689/1
+		.kill Summoned Voidwalker##5676|q 1689/1
 		only Gnome Warlock
 	step //100
-		'Go upstairs to 39.2,85.3|goto 39.2,85.3
+		.' Go upstairs to 39.2,85.3|goto 39.2,85.3
 		.talk Gakin the Darkbinder##6122
 		..turnin The Binding##1689
 		only Gnome Warlock
 	step //101
 		goto 69,30.9
-		'Ride the train to Ironforge|goto Ironforge|noway|c
+		.' Ride the train to Ironforge|goto Ironforge|noway|q 414
 		only Gnome Warlock
 	step //102
-		'Fly to Thelsamar|goto Loch Modan,33.9,50.8,0.5|noway|c
+		.' Fly to Thelsamar|goto Loch Modan,33.9,50.8,0.5|noway|q 414
 		only Gnome Warlock
 	step //103
 		goto Loch Modan,34.8,47.1
@@ -2102,7 +2109,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //104
 		goto 35.5,48.4
 		.talk Innkeeper Hearthstove##6732
-		home Thelsamar
+		home Thelsamar|q 418 |future
 	step //105
 		goto 34.8,49.3
 		.talk Vidra Hearthstove##1963
@@ -2110,13 +2117,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //106
 		goto 37.4,38.9
 		.from Mountain Boar##1190+, Elder Black Bear##1186+, Forest Lurker##1195+
-		.get 3 Boar Intestines|q 418/1
-		.get 3 Bear Meat|q 418/2
-		.get 3 Spider Ichor|q 418/3
+		.get 3 Boar Intestines##3172|q 418/1
+		.get 3 Bear Meat##3173|q 418/2
+		.get 3 Spider Ichor##3174|q 418/3
 	step //107
 		goto 24.5,33.6
 		.from Tunnel Rat Scout##1173+, Tunnel Rat Forager##1176+, Tunnel Rat Kobold##1202+, Tunnel Rat Vermin##1172+
-		.get 12 Tunnel Rat Ear|q 416/1
+		.get 12 Tunnel Rat Ear##3110|q 416/1
 	step //108
 		goto 24.8,18.4
 		.talk Mountaineer Stormpike##1343
@@ -2125,7 +2132,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //109
 		ding 11
 	step //110
-		'Hearth to Thelsamar|goto Loch Modan,35.5,48.3,0.5|use Hearthstone##6948|noway|c
+		.' Hearth to Thelsamar|goto Loch Modan,35.5,48.3,0.5|use Hearthstone##6948|noway|q 418
 	step //111
 		goto 34.8,49.3
 		.talk Vidra Hearthstove##1963
@@ -2144,10 +2151,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 		..accept The Trogg Threat##267
 	step //115
 		goto 31.1,70.7
-		.kill 10 Stonesplinter Trogg|q 224/1
-		.kill 10 Stonesplinter Scout|q 224/2
+		.kill 10 Stonesplinter Trogg##1161|q 224/1
+		.kill 10 Stonesplinter Scout##1162|q 224/2
 		.from Stonesplinter Scout##1162+, Stonesplinter Trogg##1161+
-		.get 8 Trogg Stone Tooth|q 267/1
+		.get 8 Trogg Stone Tooth##2536|q 267/1
 	step //116
 		goto 22.1,73.1
 		.talk Mountaineer Cobbleflint##1089
@@ -2159,14 +2166,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //118
 		goto 33.9,51
 		.talk Thorgrum Borrelson##1572
-		..'Fly to Ironforge|goto Ironforge|noway|c
+		.' Fly to Ironforge|goto Ironforge|noway|q 291
 	step //119
 		goto Ironforge,39.5,57.5
 		.talk Senator Barin Redstone##1274
 		..turnin The Reports##291
 	step //120
 		goto 76.9,51.2|n
-		'Ride the train to Stormwind|goto Stormwind City|noway|c
+		.' Ride the train to Stormwind|goto Stormwind City|noway|q 1338
 	step //121
 		goto Stormwind City,64.6,37.2
 		.talk Furen Longbeard##5413
@@ -2174,10 +2181,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //122
 		goto 71,72.5
 		.talk Dungar Longdrink##352
-		..fpath Stormwind City
+		.fpath Stormwind City|q 983 |future
 	step //123
 		goto 22.6,56.1|n
-		'Ride the boat to Auberdine|goto Darkshore,32.4,43.7,1|noway|c
+		.' Ride the boat to Auberdine|goto Darkshore,32.4,43.7,1|noway|q 983 |future
 	step //124
 		goto Darkshore,37,44.1
 		.talk Wizbang Cranktoggle##3666
@@ -2185,11 +2192,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //125
 		goto 37.0,44.1
 		.talk Innkeeper Shaussiy##6737
-		home Auberdine
+		home Auberdine|q 983
 	step //126
 		goto 36.3,45.6
 		.talk Caylais Moonfeather##3841
-		..fpath Auberdine
+		.fpath Auberdine|q 983
 	step //127
 		goto 36.6,45.6
 		.talk Gwennyth Bly'Leggonde##10219
@@ -2205,16 +2212,18 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //130
 		goto 36.1,47.3
 		.from Pygmy Tide Crawler##2231+, Young Reef Crawler##2234+
-		.get 6 Crawler Leg|q 983/1
+		.get 6 Crawler Leg##5385|q 983/1
 	step //131
 		ding 12
 	step //132
 		goto Darkshore,36.4,50.8
-		.' Click the Beached Sea Creature|tip It looks like a big green rotting dinosaur laying on the beach.
-		.get Sea Creature Bones|q 3524/1
+		.' Click the Beached Sea Creature
+		.info It looks like a big green rotting dinosaur laying on the beach.
+		.collect Sea Creature Bones##12242|q 3524/1
 	step //133
 		goto 36.7,46.3
-		.' Click Buzzbox 827|tip It looks like a mechanical box with levers on it sitting in the grass next to a big wooden platform.
+		.' Click Buzzbox 827
+		.info It looks like a mechanical box with levers on it sitting in the grass next to a big wooden platform.
 		..turnin Buzzbox 827##983
 		..accept Buzzbox 411##1001
 	step //134
@@ -2225,11 +2234,12 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //135
 		goto 32.7,47.7
 		.from Darkshore Thresher##2185+
-		.get 3 Thresher Eye|q 1001/1
+		.get 3 Thresher Eye##5412|q 1001/1
 	step //136
 		goto 31.9,46.3
-		.' Click the Skeletal Sea Turtle|tip It looks like a big turtle skull underwater here.
-		.get Sea Turtle Remains|q 4681/1
+		.' Click the Skeletal Sea Turtle
+		.info It looks like a big turtle skull underwater here.
+		.collect Sea Turtle Remains##12289|q 4681/1
 	step //137
 		goto 39.6,52.9
 		.' Find a corrupt furbolg camp at this spot|goal Find a corrupt furbolg camp|q 984/1
@@ -2254,30 +2264,31 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //142
 		goto 44.6,36.9
 		.from Wild Grell##2190+, Vile Sprite##2189+
-		.get 8 Grell Earring|q 955/1
+		.get 8 Grell Earring##5336|q 955/1
 	step //143
 		goto 44.2,36.3
 		.talk Asterion##3650
 		..turnin Bashal'Aran (2)##955
 	step //144
 		goto 42,28.6
-		.' Click the Buzzbox 411|tip It's a metal box with levers on it, sitting on the beach.
+		.' Click the Buzzbox 411
+		.info It's a metal box with levers on it, sitting on the beach.
 		..turnin Buzzbox 411##1001
 	step //145
 		ding 13
 	step //146
-		'Hearth to Auberdine|goto Darkshore,37.0,44.1,0.5|use Hearthstone##6948|noway|c
+		.' Hearth to Auberdine|goto Darkshore,37.0,44.1,0.5|use Hearthstone##6948|noway|q 109 |future
 	step //147
 		goto 32.4,43.8|n
-		'Ride the boat to Stormwind Harbor|goto Stormwind City|noway|c
+		.' Ride the boat to Stormwind Harbor|goto Stormwind City|noway|q 109 |future
 	step //148
-		'Go outside to Elwynn Forest|goto Elwynn Forest|noway|c
+		.' Go outside to Elwynn Forest|goto Elwynn Forest|noway|q 109 |future
 	step //149
 		goto Elwynn Forest,42.1,65.9
 		.talk Marshal Dughan##240
 		..accept Report to Gryan Stoutmantle##109
 	step //150
-		'Go southwest to Westfall|goto Westfall|noway|c
+		.' Go southwest to Westfall|goto Westfall|noway|q 109
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Dwarf (1-13)",[[
 	author support@zygorguides.com
@@ -6363,16 +6374,18 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		.talk Ormer Ironbraid##1078
 		..accept Ormer's Revenge (1)##294
 	step //2
-		goto 38.8,52.3
+		goto 38.9,52.3
 		.talk Merrin Rockweaver##1076
 		..turnin In Search of The Excavation Team (1)##305
 		..accept In Search of The Excavation Team (2)##306
+	step
+		goto 38.8,52.3
 		.talk Prospector Whelgar##1077
 		..accept Uncovering the Past##299
 	step //3
 		goto 29.1,44.8
-		.kill 10 Mottled Raptor|q 294/1
-		.kill 10 Mottled Screecher|q 294/2
+		.kill 10 Mottled Raptor##1020|q 294/1
+		.kill 10 Mottled Screecher##1021|q 294/2
 	step //4
 		goto Wetlands,38.1,51.1
 		.talk Ormer Ironbraid##1078
@@ -6380,13 +6393,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept Ormer's Revenge (2)##295
 	step //5
 		goto 34.8,45.4
-		.kill 10 Mottled Scytheclaw|q 295/1
-		.kill 10 Mottled Razormaw|q 295/2
+		.kill 10 Mottled Scytheclaw##1022|q 295/1
+		.kill 10 Mottled Razormaw##1023|q 295/2
 		.' Get the 4 Relics that spawn randomly in different places around this area. They can spawn up the hill next to Sarltooth also:
-		..'Ados Fragment|get Ados Fragment|q 299/1|tip The Ados Fragment looks like a big stone box.
-		..'Modr Fragment|get Modr Fragment|q 299/2|tip The Modr Fragment looks like a thin, tall red vase with a yellow face on it.
-		..'Golm Fragment|get Golm Fragment|q 299/3|tip The Golm Fragment looks like a wide yellow vase with black silhouettes on it.
-		..'Neru Fragment|get Neru Fragment|q 299/4|tip The Neru Fragment looks like a mound of dirt.
+		.' Ados Fragment|get Ados Fragment|q 299/1|tip The Ados Fragment looks like a big stone box.
+		.' Modr Fragment|get Modr Fragment|q 299/2|tip The Modr Fragment looks like a thin, tall red vase with a yellow face on it.
+		.' Golm Fragment|get Golm Fragment|q 299/3|tip The Golm Fragment looks like a wide yellow vase with black silhouettes on it.
+		.' Neru Fragment|get Neru Fragment|q 299/4|tip The Neru Fragment looks like a mound of dirt.
 	step //6
 		goto 38.1,51.1
 		.talk Ormer Ironbraid##1078
@@ -6399,11 +6412,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 	step //8
 		goto 42.9,41.2
 		.from Dragonmaw Raider##1034+
-		.get 8 Dragonmaw War Banner|q 464/1
+		.get 8 Dragonmaw War Banner##3337|q 464/1
 	step //9
 		goto 52.4,40.3
 		.from Young Wetlands Crocolisk##1417+
-		.get 4 Young Crocolisk Skin|q 484/1
+		.get 4 Young Crocolisk Skin##3397|q 484/1
 	step //10
 		goto 56.3,40.5
 		.talk Rethiel the Greenwarden##1244
@@ -6411,8 +6424,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept Tramping Paws##276
 	step //11
 		goto 63.9,61.8
-		.kill 15 Mosshide Gnoll|q 276/1
-		.kill 10 Mosshide Mongrel|q 276/2
+		.kill 15 Mosshide Gnoll##1007|q 276/1
+		.kill 10 Mosshide Mongrel##1008|q 276/2
 	step //12
 		goto 56.3,40.5
 		.talk Rethiel the Greenwarden##1244
@@ -6420,27 +6433,28 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept Fire Taboo##277
 	step //13
 		goto 46.4,35.3
-		.from Mosshide Trapper##1011+, Mosshide Brute##1012+, Mosshide Fenrunner##1010+, Mosshide Mistweaver##1009+|tip Mosshide Gnolls and Mosshide Mongrels will not drop the Crude Flint.
-		.get 9 Crude Flint|q 277/1
+		.from Mosshide Trapper##1011+, Mosshide Brute##1012+, Mosshide Fenrunner##1010+, Mosshide Mistweaver##1009+
+		.info Mosshide Gnolls and Mosshide Mongrels will not drop the Crude Flint.
+		.get 9 Crude Flint##2611|q 277/1
 	step //14
 		goto 56.3,40.5
 		.talk Rethiel the Greenwarden##1244
 		..turnin Fire Taboo##277
 		..accept Blisters on The Land##275
 	step //15
-		'Hearth to Menethil Harbor|goto Wetlands,10.1,56.7,9|use Hearthstone##6948|noway|c
+		.' Hearth to Menethil Harbor|goto Wetlands,10.1,56.7,9|use Hearthstone##6948|noway|q 484
 	step //16
-		'Fly to Stormwind|goto Stormwind City|noway|c
+		.' Fly to Stormwind|goto Stormwind City|noway|q 9502 |future
 		only Draenei Shaman
 	step //17
 		goto Stormwind City,22.6,56.1
-		'Ride the boat to Auberdine|goto Darkshore,32.4,43.7,1|noway|c
+		.' Ride the boat to Auberdine|goto Darkshore,32.4,43.7,1|noway|q 9502 |future
 		only Draenei Shaman
 	step //18
-		'Ride the boat to Azuremyst Isle|goto Azuremyst Isle|noway|c
+		.' Ride the boat to Azuremyst Isle|goto Azuremyst Isle|noway|q 9502 |future
 		only Draenei Shaman
 	step //19
-		'Go northeast to the Exodar|goto The Exodar|noway|c
+		.' Go northeast to the Exodar|goto The Exodar|noway|q 9502 |future
 		only Draenei Shaman
 	step //20
 		goto The Exodar,32.3,23.9
@@ -6454,10 +6468,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept Call of Water (2)##9501|noobsolete
 		only Draenei Shaman
 	step //22
-		'Go outside to Azuremyst Isle|goto Azuremyst Isle|noway|c
+		.' Go outside to Azuremyst Isle|goto Azuremyst Isle|noway|q 9501
 		only Draenei Shaman
 	step //23
-		'Go northeast to Bloodmyst Isle|goto Bloodmyst Isle|noway|c
+		.' Go northeast to Bloodmyst Isle|goto Bloodmyst Isle|noway|q 9501
 		only Draenei Shaman
 	step //24
 		goto Bloodmyst Isle,32.2,16.3
@@ -6468,7 +6482,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 	step //25
 		goto 32.9,39.3
 		.from Fouled Water Spirit##17358+
-		.get 6 Foul Essence|q 9503/1
+		.get 6 Foul Essence##23744|q 9503/1
 		only Draenei Shaman
 	step //26
 		goto 32.2,16.3
@@ -6477,28 +6491,28 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept Call of Water (4)##9504|noobsolete
 		only Draenei Shaman
 	step //27
-		'Go southest to Azuremyst Isle|goto Azuremyst Isle|noway|c
+		.' Go southest to Azuremyst Isle|goto Azuremyst Isle|noway|q 9504
 		only Draenei Shaman
 	step //28
-		'Go southwest to ride the boat to Auberdine|goto Darkshore,32.8,42.0,9|noway|c
+		.' Go southwest to ride the boat to Auberdine|goto Darkshore,32.8,42.0,9|noway|q 9504
 		only Draenei Shaman
 	step //29
-		'Fly to Astranaar|goto Ashenvale,35.5,50.2,5|noway|c
+		.' Fly to Astranaar|goto Ashenvale,35.5,50.2,5|noway|q 9504
 		only Draenei Shaman
 	step //30
 		goto Ashenvale,33.5,67.4
 		.' Stand next to the Ruins of Stardust Fountain|tip The fountain is in the middle of a black gazebo.
 		.' Click the Empty Bota Bag in your bags|use Empty Bota Bag##23749
-		.get Filled Bota Bag|q 9504/1
+		.get Filled Bota Bag##23750|q 9504/1
 		only Draenei Shaman
 	step //31
-		'Go north to Astranaar and fly to Auberdine|goto Darkshore,36.4,45.6,0.3|noway|c
+		.' Go north to Astranaar and fly to Auberdine|goto Darkshore,36.4,45.6,0.3|noway|q 9504
 		only Draenei Shaman
 	step //32
-		'Ride the boat to Azuremyst Isle|goto Azuremyst Isle|noway|c
+		.' Ride the boat to Azuremyst Isle|goto Azuremyst Isle|noway|q 9504
 		only Draenei Shaman
 	step //33
-		'Go northeast to Bloodmyst Isle|goto Bloodmyst Isle|noway|c
+		.' Go northeast to Bloodmyst Isle|goto Bloodmyst Isle|noway|q 9504
 		only Draenei Shaman
 	step //34
 		goto Bloodmyst Isle,32.2,16.3
@@ -6510,7 +6524,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		goto 25.6,40.8
 		.' Click the Barrel of Filth sitting next to the red river
 		.from Tel'athion the Impure##17359
-		.get Head of Tel'athion|q 9508/1
+		.get Head of Tel'athion##23997|q 9508/1
 		only Draenei Shaman
 	step //36
 		goto 32.2,16.3
@@ -6519,10 +6533,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept Call of Water (6)##9509|noobsolete
 		only Draenei Shaman
 	step //37
-		'Go southeast to Azuremyst Isle|goto Azuremyst Isle|noway|c
+		.' Go southeast to Azuremyst Isle|goto Azuremyst Isle|noway|q 9509
 		only Draenei Shaman
 	step //38
-		'Go southwest to the Exodar|goto The Exodar|noway|c
+		.' Go southwest to the Exodar|goto The Exodar|noway|q 9509
 		only Draenei Shaman
 	step //39
 		goto The Exodar,31.4,27.7
@@ -6530,16 +6544,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..turnin Call of Water (6)##9509|noobsolete
 		only Draenei Shaman
 	step //40
-		'Go outside to Azuremyst Isle|goto Azuremyst Isle|noway|c
+		.' Go outside to Azuremyst Isle|goto Azuremyst Isle|noway|q 484
 		only Draenei Shaman
 	step //41
-		'Go southwest to ride the boat to Auberdine|goto Darkshore,32.8,42.0,9|noway|c
+		.' Go southwest to ride the boat to Auberdine|goto Darkshore,32.8,42.0,9|noway|q 484
 		only Draenei Shaman
 	step //42
-		'Ride the boat to Stormwind Harbor|goto Stormwind City|noway|c
+		.' Ride the boat to Stormwind Harbor|goto Stormwind City|noway|q 484
 		only Draenei Shaman
 	step //43
-		'Fly to Menethil Harbor|goto Wetlands,9.5,59.7,0.5|noway|c
+		.' Fly to Menethil Harbor|goto Wetlands,9.5,59.7,0.5|noway|q 484
 		only Draenei Shaman
 	step //44
 		goto Wetlands,8.3,58.6
@@ -6579,13 +6593,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept Return the Statuette##286
 	step //52
 		goto 18.5,27.3
-		.kill 8 Fen Creeper|q 275/1
+		.kill 8 Fen Creeper##1040|q 275/1
 		.from Giant Wetlands Crocolisks##2089+
-		.get 6 Giant Crocolisk Skin|q 471/1
+		.get 6 Giant Crocolisk Skin##3348|q 471/1
 	step //53
 		goto 44.3,25.5
 		.from Black Ooze##1032+, Crimson Ooze##1031+
-		.get Sida's Bag|q 470/1
+		.get Sida's Bag##3349|q 470/1
 	step //54
 		goto 56.3,40.5
 		.talk Rethiel the Greenwarden##1244
@@ -6603,11 +6617,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		.talk Karl Boran##1242
 		..turnin Return the Statuette##286
 	step //58
-		'Fly to Stormwind|goto Stormwind City|noway|c
+		.' Fly to Stormwind|goto Stormwind City|noway|q 128 |future
 	step //59
-		'Buy a Bronze Tube from the Auction House|buy 1 Bronze Tube|q 174/1
+		.' Buy a Bronze Tube from the Auction House|buy 1 Bronze Tube##4371|q 174 |future
 	step //60
-		'Fly to Lakeshire|goto Redridge Mountains,30.4,59.0,0.5|noway|c
+		.' Fly to Lakeshire|goto Redridge Mountains,30.4,59.0,0.5|noway|q 128 |future
 	step //61
 		goto Redridge Mountains,31.5,57.9
 		.talk Guard Howe##903
@@ -6615,19 +6629,20 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 	step //62
 		goto 15.9,49.5
 		.from Bellygrub##345
-		.get Bellygrub's Tusk|q 34/1
+		.get Bellygrub's Tusk##3631|q 34/1
 	step //63
 		goto 21.9,46.3
 		.talk Martie Jainrose##342
 		..turnin An Unwelcome Guest##34
 	step //64
 		goto 26.8,46.5
-		.' Click the Wanted Poster|tip To the right of the entrance to the inn.
+		.' Click the Wanted Poster
+		.info To the right of the entrance to the inn.
 		..accept Wanted: Lieutenant Fangore##180
 	step //65
 		goto 27.0,44.8
 		.talk Innkeeper Brianna##6727
-		home Lakeshire
+		home Lakeshire|q 115 |future
 	step //66
 		goto 33.5,49
 		.talk Marshal Marris##382
@@ -6635,11 +6650,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 	step //67
 		goto 67,52
 		.from Blackrock Shadowcaster##436+
-		.get 3 Midnight Orb|q 115/1
+		.get 3 Midnight Orb##1261|q 115/1
 	step //68
 		goto 71.7,41.6
 		.from Shadowhide Darkweaver##429+, Shadowhide Slayer##431+, Shadowhide Brute##432+, Shadowhide Gnoll##433+, Rabid Shadowhide Gnoll##434+, Shadowhide Warrior##568+
-		.get 10 Shadowhide Pendant|q 91/1
+		.get 10 Shadowhide Pendant##1075|q 91/1
 	step //69
 		goto 33.5,49
 		.talk Marshal Marris##382
@@ -6655,10 +6670,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 	step //72
 		goto 27.4,21.8
 		.from Yowler##518
-		.get Yowler's Paw|q 126/1
+		.get Yowler's Paw##3614|q 126/1
 	step //73
 		goto 32.9,6.8
-		.kill 15 Blackrock Champion|q 128/1
+		.kill 15 Blackrock Champion##435|q 128/1
 	step //74
 		ding 27
 	step //75
@@ -6681,15 +6696,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 	step //79
 		goto 79.9,37.7
 		.from Lieutenant Fangore##703
-		.get Fangore's Paw|q 180/1
+		.get Fangore's Paw##3632|q 180/1
 	step //80
-		'Hearth to Lakeshire|goto Redridge Mountains,26.9,44.9,0.5|use Hearthstone##6948|noway|c
+		.' Hearth to Lakeshire|goto Redridge Mountains,26.9,44.9,0.5|use Hearthstone##6948|noway|q 180
 	step //81
 		goto 30,44.4
 		.talk Magistrate Solomon##344
 		..turnin Wanted: Lieutenant Fangore##180
 	step //82
-		'Go southwest to Duskwood|goto Duskwood|noway|c
+		.' Go southwest to Duskwood|goto Duskwood|noway|q 101 |future
 	step //83
 		goto Duskwood,75.8,45.3
 		.talk Madame Eva##265
@@ -6698,7 +6713,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 	step //84
 		goto 77.5,44.3
 		.talk Felicia Maline##2409
-		..fpath Darkshire
+		.fpath Darkshire|q 101
 	step //85
 		goto 79.8,48.1
 		.talk Viktori Prism'Antras##276
@@ -6727,36 +6742,38 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 	step //90
 		goto 73.9,44.4
 		.talk Innkeeper Trelayne##6790
-		home Darkshire
+		home Darkshire|q 101
 	step //91
-		'Fly to Sentinel Hill|goto Westfall,56.6,52.7,0.1|noway|c
+		.' Fly to Sentinel Hill|goto Westfall,56.6,52.7,0.1|noway|q 67
 	step //92
 		goto Westfall,41.5,66.7
-		.' Click the Old Footlocker|tip It's a small rectangular wooden box on the floor inside this house.
+		.' Click the Old Footlocker
+		.info It's a small rectangular wooden box on the floor inside this house.
 		..turnin The Legend of Stalvan (2)##67
 		..accept The Legend of Stalvan (3)##68
 	step //93
-		'Go to Sentinel Hill and fly to Darkshire|goto Duskwood,77.6,44.4,0.1|noway|c
+		.' Go to Sentinel Hill and fly to Darkshire|goto Duskwood,77.6,44.4,0.1|noway|q 68
 	step //94
 		goto Duskwood,72.5,46.8
 		.talk Clerk Daltry##267
 		..turnin The Legend of Stalvan (3)##68
 		..accept The Legend of Stalvan (4)##69
 	step //95
-		'Fly to Stormwind|goto Stormwind City|noway|c
+		.' Fly to Stormwind|goto Stormwind City|noway|q 69
 	step //96
-		'Go outside to Elwynn Forest|goto Elwynn Forest|noway|c
+		.' Go outside to Elwynn Forest|goto Elwynn Forest|noway|q 69
 	step //97
 		goto Elwynn Forest,43.8,65.8
 		.talk Innkeeper Farley##295
 		..turnin The Legend of Stalvan (4)##69
 		..accept The Legend of Stalvan (5)##70
 	step //98
-		'Go upstairs in the inn to 44.3,65.8|goto 44.3,65.8
-		.' Click the Storage Chest|tip It's a brown chest sitting on the floor in this room, upstairs inside the inn.
-		.get An Undelivered Letter|q 70/1
+		.' Go upstairs in the inn to 44.3,65.8|goto 44.3,65.8
+		.' Click the Storage Chest
+		.info It's a brown chest sitting on the floor in this room, upstairs inside the inn.
+		.collect An Undelivered Letter##910|q 70/1
 	step //99
-		'Go northwest to Stormwind|goto Stormwind City|noway|c
+		.' Go northwest to Stormwind|goto Stormwind City|noway|q 70
 	step //100
 		goto Stormwind City,42.5,72.4
 		.talk Caretaker Folsom##297
@@ -6764,11 +6781,12 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept The Legend of Stalvan (6)##72
 	step //101
 		goto 42.5,72.41
-		.' Click the Sealed Crate|tip It's a wooden crate on the side of the road.
+		.' Click the Sealed Crate
+		.info It's a wooden crate on the side of the road.
 		..turnin The Legend of Stalvan (6)##72
 		..accept The Legend of Stalvan (7)##74
 	step //102
-		'Go outside to Elwynn Forest|goto Elwynn Forest|noway|c
+		.' Go outside to Elwynn Forest|goto Elwynn Forest|noway|q 74
 	step //103
 		goto Elwynn Forest,84.6,69.4
 		.talk Marshal Haggard##294
@@ -6776,15 +6794,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept The Legend of Stalvan (8)##75
 	step //104
 		goto 85.7,69.5
-		.' Click Marshal Haggard's Chest|tip It's a brown chest on the floor next to a bed, upstairs in this house.
-		.get A Faded Journal Page|q 75/1
+		.' Click Marshal Haggard's Chest
+		.info It's a brown chest on the floor next to a bed, upstairs in this house.
+		.collect A Faded Journal Page##921|q 75/1
 	step //105
 		goto 84.6,69.4
 		.talk Marshal Haggard##294
 		..turnin The Legend of Stalvan (8)##75
 		..accept The Legend of Stalvan (9)##78
 	step //106
-		'Hearth to Darkshire|goto Duskwood,73.9,44.5,0.5|use Hearthstone##6948|noway|c
+		.' Hearth to Darkshire|goto Duskwood,73.9,44.5,0.5|use Hearthstone##6948|noway|q 78
 	step //107
 		goto Duskwood,74.1,44.7
 		.talk Tavernkeep Smitts##273
@@ -6808,10 +6827,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 	step //111
 		goto 70.2,45.1|n
 		.' The path over to Worgen in the Woods starts here
-		.' Run up the hill behind the town hall building|goto Duskwood,70.2,45.1,0.5|noway|c
+		.' Run up the hill behind the town hall building|goto Duskwood,70.2,45.1,0.5|noway|q 173
 	step //112
 		goto 66,47
-		.kill 6 Nightbane Shadow Weaver|q 173/1
+		.kill 6 Nightbane Shadow Weaver##533|q 173/1
 	step //113
 		goto 75.7,47.6
 		.talk Calor##663
@@ -6819,7 +6838,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept Worgen in the Woods (2)##221
 	step //114
 		goto 66,47
-		.kill 12 Nightbane Dark Runner|q 221/1
+		.kill 12 Nightbane Dark Runner##205|q 221/1
 	step //115
 		goto 75.7,47.6
 		.talk Calor##663
@@ -6834,18 +6853,18 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept Look To The Stars (3)##177
 	step //118
 		goto 79.3,70.3
-		.kill 8 Skeletal Warrior|q 56/1
-		.kill 6 Skeletal Mage|q 56/2
+		.kill 8 Skeletal Warrior##48|q 56/1
+		.kill 6 Skeletal Mage##203|q 56/2
 		.from Skeletal Warrior##48+, Skeletal Mage##203+
-		.get 10 Skeleton Finger|q 101/3
+		.get 10 Skeleton Finger##2378|q 101/3
 	step //119
 		goto 80.9,71.6
 		.from Insane Ghoul##511
-		.get Mary's Looking Glass|q 177/1
+		.get Mary's Looking Glass##1946|q 177/1
 	step //120
 		goto 72.7,69.7
-		.kill 8 Nightbane Vile Fang|q 222/1
-		.kill 8 Nightbane Tainted One|q 222/2
+		.kill 8 Nightbane Vile Fang##206|q 222/1
+		.kill 8 Nightbane Tainted One##920|q 222/2
 	step //121
 		goto 73.5,46.8
 		.talk Commander Althea Ebonlocke##264
@@ -6869,24 +6888,24 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		goto 36.1,80.6
 		.from Zzarc'Vul##300
 		.' He spawns at random points inside of the cave.
-		.get Ogre's Monocle|q 181/1
+		.get Ogre's Monocle##1968|q 181/1
 	step //126
-		'Go outside to 18.2,56.6|goto 18.2,56.6
+		.' Go outside to 18.2,56.6|goto 18.2,56.6
 		.talk Jitters##288
 		..turnin Raven Hill##163
 		..accept Jitters' Growling Gut##5
 	step //127
 		goto 17.6,47.2
-		.kill 15 Skeletal Fiend|q 57/1
-		.kill 15 Skeletal Horror|q 57/2
+		.kill 15 Skeletal Fiend##531|q 57/1
+		.kill 15 Skeletal Horror##202|q 57/2
 	step //128
 		goto 27.2,45.9
 		.from Black Widow Hatching##930+
-		.get 5 Vial of Spider Venom|q 101/2
+		.get 5 Vial of Spider Venom##1130|q 101/2
 	step //129
 		goto 23.5,39.1
 		.from Flesh Eater##3+, Rotted One##948+, Bone Chewer##210+, Plague Spreader##604+
-		.get 10 Ghoul Fang|q 101/1
+		.get 10 Ghoul Fang##1129|q 101/1
 	step //130
 		goto 28,31.5
 		.talk Abercrombie##289
@@ -6894,7 +6913,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept Supplies from Darkshire##148
 	step //131
 		goto 17.7,29
-		.' Click the Weathered Grave|tip It's a grave on the hillside all by itself.
+		.' Click the Weathered Grave
+		.info It's a grave on the hillside all by itself.
 		..accept The Weathered Grave##225
 	step //132
 		goto 7.8,34.2
@@ -6902,7 +6922,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..turnin Deliveries to Sven##164
 		..accept Sven's Revenge##95
 	step //133
-		'Hearth to Darkshire|goto Duskwood,73.9,44.5,0.5|use Hearthstone##6948|noway|c
+		.' Hearth to Darkshire|goto Duskwood,73.9,44.5,0.5|use Hearthstone##6948|noway|q 5
 	step //134
 		goto 73.8,43.5
 		.talk Chef Grual##272
@@ -6945,7 +6965,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept Deliver the Thread##157
 	step //143
 		goto 49.9,77.7
-		.' Click the Mound of Loose Dirt|tip It's easiest to work your way around to behind the farm around this spot.
+		.' Click the Mound of Loose Dirt
+		.info It's easiest to work your way around to behind the farm around this spot.
 		..turnin Sven's Revenge##95
 		..accept Sven's Camp##230
 	step //144
@@ -6955,16 +6976,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept Zombie Juice##158
 	step //145
 		goto 24.1,32.7
-		.kill 20 Plague Spreader|q 58/1
+		.kill 20 Plague Spreader##604|q 58/1
 	step //146
 		goto 7.8,34.2
 		.talk Sven Yorgen##311
 		..turnin Sven's Camp##230
 		..accept The Shadowy Figure##262
 	step //147
-		'Go west to Westfall|goto Westfall|noway|c
+		.' Go west to Westfall|goto Westfall|noway|q 262
 	step //148
-		.' Go to Sentinel Hill and fly to Darkshire|goto Duskwood,77.6,44.4,0.5|noway|c
+		.' Go to Sentinel Hill and fly to Darkshire|goto Duskwood,77.6,44.4,0.5|noway|q 262
 	step //149
 		goto Duskwood,75.8,45.3
 		.talk Madame Eva##265
@@ -6998,38 +7019,38 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept Proving Your Worth##323
 	step //155
 		goto 15.3,37.6
-		.kill 15 Skeletal Raider|q 323/1
-		.kill 3 Skeletal Healer|q 323/2
+		.kill 15 Skeletal Raider##1110|q 323/1
+		.kill 3 Skeletal Healer##787|q 323/2
 	step //156
 		goto 15.4,37
-		.kill 3 Skeletal Warder|q 323/3
+		.kill 3 Skeletal Warder##785|q 323/3
 	step //157
 		goto 14.2,42.2
 		.from Skeletal Horror##202+, Skeletal Fiend##531+
-		.get 8 Rot Blossom|q 156/1
+		.get 8 Rot Blossom##1598|q 156/1
 	step //158
 		goto 7.8,34.2
 		.talk Sven Yorgen##311
 		..turnin Proving Your Worth##323
 		..accept Seeking Wisdom##269
 	step //159
-		'Hearth to Darkshire|goto Duskwood,73.9,44.5,0.5|use Hearthstone##6948|noway|c
+		.' Hearth to Darkshire|goto Duskwood,73.9,44.5,0.5|use Hearthstone##6948|noway|q 156
 	step //160
 		goto 74.1,44.7
 		.talk Tavernkeep Smitts##273
 		..turnin Gather Rot Blossoms##156
 		..accept Juice Delivery##159
 	step //161
-		'Fly to Stormwind|goto Stormwind City|noway|c
+		.' Fly to Stormwind|goto Stormwind City|noway|q 269
 	step //162
 		goto Stormwind City,49.9,46
 		.talk Bishop Farthing##1212
 		..turnin Seeking Wisdom##269
 		..accept The Doomed Fleet##270
 	step //163
-		'Fly to Sentinel Hill|goto Westfall,56.6,52.7,0.1|noway|c
+		.' Fly to Sentinel Hill|goto Westfall,56.6,52.7,0.1|noway|q 159
 	step //164
-		'Go east to Duskwood|goto Duskwood|noway|c
+		.' Go east to Duskwood|goto Duskwood|noway|q 159
 	step //165
 		goto Duskwood,28,31.5
 		.talk Abercrombie##289
@@ -7038,7 +7059,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 	step //166
 		goto 25.5,34.6
 		.from Flesh Eater##3+, Rotted One##948+, Bone Chewer##210+, Plague Spreader##604+
-		.get 7 Ghoul Rib|q 133/1
+		.get 7 Ghoul Rib##884|q 133/1
 	step //167
 		goto 28,31.5
 		.talk Abercrombie##289
@@ -7046,15 +7067,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept Ogre Thieves##134
 	step //168
 		goto 33.4,76.4
-		.' Click Abercrombie's Crate|tip It looks like a wooden crate sitting next to a bunch of wooden barrels.
-		.get Abercrombie's Crate|q 134/1
+		.' Click Abercrombie's Crate
+		.info It looks like a wooden crate sitting next to a bunch of wooden barrels.
+		.collect Abercrombie's Crate##1349|q 134/1
 	step //169
 		goto 28,31.5
 		.talk Abercrombie##289
 		..turnin Ogre Thieves##134
 		..accept Note to the Mayor##160
 	step //170
-		'Hearth to Darkshire|goto Duskwood,73.9,44.5,0.5|use Hearthstone##6948|noway|c
+		.' Hearth to Darkshire|goto Duskwood,73.9,44.5,0.5|use Hearthstone##6948|noway|q 160
 	step //171
 		goto 71.9,46.4
 		.talk Lord Ello Ebonlocke##263
@@ -7074,10 +7096,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept Bride of the Embalmer##253
 	step //174
 		goto 28.9,30.8
-		.' Click Eliza's Grave Dirt|tip It looks like a single dirt grave.
+		.' Click Eliza's Grave Dirt
+		.info It looks like a single dirt grave.
 		..accept Digging Through the Dirt##254 |instant
 		.from Eliza##314
-		.get The Embalmer's Heart|q 253/1
+		.get The Embalmer's Heart##2382|q 253/1
 	step //175
 		goto 71.9,46.4
 		.talk Lord Ello Ebonlocke##263
