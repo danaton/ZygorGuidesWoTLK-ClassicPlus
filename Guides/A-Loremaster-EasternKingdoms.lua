@@ -3894,7 +3894,7 @@ startlevel 20
 			..accept Mercenaries##255
 		step
 			goto Loch Modan,37.3,46.5
-			.info Interact with gameobject: WANTED
+			.' Interact with gameobject: WANTED
 			..accept WANTED: Chok'sul##256
 		step
 			goto Loch Modan,37.2,47.4
@@ -3912,7 +3912,7 @@ startlevel 20
 		step
 			goto Loch Modan,68.1,63.2
 			.from Stoneplinter Digger##1167, Stonesplinter Geomancer##1165
-			.get 8 Carved Stone Idol|q 297/1
+			.get 8 Carved Stone Idol##2636|q 297/1
 		step
 			goto Loch Modan,64.9,66.7
 			.talk Magmar Fellhew##1345
@@ -3920,7 +3920,7 @@ startlevel 20
 		step
 			goto Loch Modan,83.5,65.5
 			.talk Daryl the Youngling##1187
-			.' The next quest is timed. Make sure you are ready.
+			.info The next quest is timed. Make sure you are ready.
 			..accept A Hunter's Boast##257
 		step
 			goto Loch Modan,81.8,61.7
@@ -3928,16 +3928,16 @@ startlevel 20
 			..accept Crocolisk Hunting##385
 		step
 			goto Loch Modan,77.4,58.3
-			.kill 6 Mountain Buzzard|q 257/1
+			.kill 6 Mountain Buzzard##1194|q 257/1
 		step
 			goto Loch Modan,83.5,65.5
 			.talk Daryl the Youngling##1187
 			..turnin A Hunter's Boast##257
-			.' The next quest is timed. Make sure you are ready.
+			.info The next quest is timed. Make sure you are ready.
 			..accept A Hunter's Challenge##258
 		step
 			goto Loch Modan,65.3,39.1
-			.kill 5 Elder Mountain Boar|q 258/1
+			.kill 5 Elder Mountain Boar##1192|q 258/1
 		step
 			goto Loch Modan,83.5,65.5
 			.talk Daryl the Youngling##1187
@@ -3949,7 +3949,7 @@ startlevel 20
 		step
 			goto Loch Modan,43,64
 			.from Ol' Sooty##1225
-			.get Ol' Sooty's Head|q 271/1
+			.get Ol' Sooty's Head##2713|q 271/1
 		step
 			goto Loch Modan,37.2,47.4
 			.talk Jern Hornhelm##1105
@@ -3978,8 +3978,8 @@ startlevel 20
 			..turnin Report to Mountaineer Rockgar##468
 		step
 			goto Loch Modan,35.4,18.5
-			.' Click Miners' League Crates inside the cave
-			.get 4 Miners' Gear|q 307/1
+			.collect 4 Miners' Gear##2640|q 307/1
+			.info Click Miners' League Crates inside the cave.
 		step
 			goto Loch Modan,24.8,18.4
 			.talk Mountaineer Stormpike##1343
@@ -3987,14 +3987,14 @@ startlevel 20
 		step
 			goto Loch Modan,24.5,33.6
 			.from Tunnel Rat Scout##1173, Tunnel Rat Forager##1176, Tunnel Rat Kobold##1202, Tunnel Rat Vermin##1172
-			.get 12 Tunnel Rat Ear|q 416/1
+			.get 12 Tunnel Rat Ear##3110|q 416/1
 			.' You can find more around|at 35.3,17.05
 		step
 			goto Loch Modan,37.4,38.9
 			.from Mountain Boar##1190, Elder Black Bear##1186, Forest Lurker##1195
-			.get 3 Boar Intestines|q 418/1
-			.get 3 Bear Meat|q 418/2
-			.get 3 Spider Ichor|q 418/3
+			.get 3 Boar Intestines##3172|q 418/1
+			.get 3 Bear Meat##3173|q 418/2
+			.get 3 Spider Ichor##3174|q 418/3
 		step
 			goto Loch Modan,34.8,47.1
 			.talk Mountaineer Kadrell##1340
@@ -4013,9 +4013,9 @@ startlevel 20
 			..accept The Trogg Threat##267
 		step
 			goto Loch Modan,32.1,73.5
-			.kill 10 Stonesplinter Trogg|q 224/1
-			.kill 10 Stonesplinter Scout|q 224/2
-			.get 8 Trogg Stone Tooth|q 267/1
+			.kill 10 Stonesplinter Trogg##1161|q 224/1
+			.kill 10 Stonesplinter Scout##1162|q 224/2
+			.get 8 Trogg Stone Tooth##2536|q 267/1
 		step
 			goto Loch Modan,22.1,73.1
 			.talk Mountaineer Cobbleflint##1089
@@ -4053,11 +4053,17 @@ startlevel 20
 			.talk Captain Rugelfuss##1092
 			..accept In Defense of the King's Lands(4)##217
 		step
-			goto Loch Modan,35.23,84.07
-			.info Inside the cave.
-			.kill Grawmug##1205|q 217/1|at 34.8,90.5
-			.kill Gnasher##1206|q 217/2|at 34.8,90.5
-			.kill Brawler##1207|q 217/3|at 34.8,90.5
+			goto Loch Modan,35.23,84.07|n
+			.' Enter the cave and move along the right wall|goto 35.23,84.07,0.4|q 217
+		step
+			goto Loch Modan,33.7,88.86|n
+			.' Move along the right tunnel|goto 33.7,88.86,0.4|q 217
+		step
+			goto Loch Modan,34.8,90.5
+			.kill Grawmug##1205|q 217/1
+			.kill Gnasher##1206|q 217/2
+			.kill Brawler##1207|q 217/3
+			.info They are all inside the cave, on a small ledge above.
 		step
 			goto Loch Modan,23.2,73.7
 			.talk Captain Rugelfuss##1092
@@ -4090,28 +4096,24 @@ startlevel 20
 		step
 			goto Loch Modan,55.2,54
 			.from Loch Crocolisk##1693+
-			.get 5 Crocolisk Meat|q 385/1
-			.get 6 Crocolisk Skin|q 385/2
+			.get 5 Crocolisk Meat##2924|q 385/1
+			.get 6 Crocolisk Skin##2925|q 385/2
 		step
 			goto Loch Modan,48.7,30.1
-			.' Click Bingles's Toolbucket
+			.collect Bingles' Wrench##7343|q 2038/1
 			.info It's a little silver bucket on the ground.
-			.get Bingles' Wrench|q 2038/1
 		step
 			goto Loch Modan,54.2,26.6
-			.' Click Bingles' Blastencapper
+			.collect Bingles' Blastencapper##7376|q 2038/4
 			.info It's the little bitty barrel to the right of the hut entrance with a fuse on it.
-			.get Bingles' Blastencapper|q 2038/4
 		step
 			goto Loch Modan,51.8,24.1
-			.' Click Bingles's Toolbucket
+			.collect Bingles' Hammer##7346|q 2038/3
 			.info It's a little silver bucket on the ground.
-			.get Bingles' Hammer|q 2038/3
 		step
 			goto Loch Modan,48.1,21.1
-			.' Click Bingles' Toolbucket
+			.collect Bingles' Screwdriver##7345|q 2038/2
 			.info It's a little silver bucket on the ground.
-			.get Bingles' Screwdriver|q 2038/2
 		step
 			goto Loch Modan,46,13.6
 			.talk Chief Engineer Hinderweir VII##1093
@@ -4138,14 +4140,17 @@ startlevel 20
 			..turnin A Dark Threat Looms (4)##274
 			..accept A Dark Threat Looms (5)##278
 		step
-			goto Loch Modan,74.5,19.8
+			goto Loch Modan,74.5,19.8|n
+			.' Enter the cave|goto 74.5,19.8,0.5|q 256
+		step
+			goto Loch Modan,79.6,14.7
 			.from Chok'sul##1210
-			.get Chok'sul's Head##2561|q 256/1|at 79.6,14.7
+			.get Chok'sul's Head##2561|q 256/1
 		step
 			goto Loch Modan,71.8,23.8
-			.kill 4 Mo'grosh Ogre|q 255/1
-			.kill 4 Mo'grosh Brute|q 255/2
-			.kill 4 Mo'grosh Enforcer|q 255/3
+			.kill 4 Mo'grosh Ogre##1178|q 255/1
+			.kill 4 Mo'grosh Brute##1180|q 255/2
+			.kill 4 Mo'grosh Enforcer##1179|q 255/3
 		step
 			goto Loch Modan,70.5,22.5
 			.from Mo'grosh Ogre##1178, Mo'grosh Enforcer##1179, Mo'grosh Brute##1180, Mo'grosh Shaman##1181, Mo'grosh Mystic##1183
@@ -4169,6 +4174,7 @@ startlevel 20
 		step
 			goto Loch Modan,50.6,14.3
 			.' Interact with gameobject: Explosive Charge
+			.info Barrel, underwater, near the dam.
 			..turnin A Dark Threat Looms (6)##280
 			..accept A Dark Threat Looms (7)##283
 		step

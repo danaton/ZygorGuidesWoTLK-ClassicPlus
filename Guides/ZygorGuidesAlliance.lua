@@ -6396,10 +6396,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		.kill 10 Mottled Scytheclaw##1022|q 295/1
 		.kill 10 Mottled Razormaw##1023|q 295/2
 		.' Get the 4 Relics that spawn randomly in different places around this area. They can spawn up the hill next to Sarltooth also:
-		.' Ados Fragment|get Ados Fragment|q 299/1|tip The Ados Fragment looks like a big stone box.
-		.' Modr Fragment|get Modr Fragment|q 299/2|tip The Modr Fragment looks like a thin, tall red vase with a yellow face on it.
-		.' Golm Fragment|get Golm Fragment|q 299/3|tip The Golm Fragment looks like a wide yellow vase with black silhouettes on it.
-		.' Neru Fragment|get Neru Fragment|q 299/4|tip The Neru Fragment looks like a mound of dirt.
+		.collect Ados Fragment##2658|q 299/1
+		.info The Ados Fragment looks like a big stone box.
+		.collect Modr Fragment##2659|q 299/2
+		.info The Modr Fragment looks like a thin, tall red vase with a yellow face on it.
+		.collect Golm Fragment##2660|q 299/3
+		.info The Golm Fragment looks like a wide yellow vase with black silhouettes on it.
+		.collect Neru Fragment##2661|q 299/4
+		.info The Neru Fragment looks like a mound of dirt.
 	step //6
 		goto 38.1,51.1
 		.talk Ormer Ironbraid##1078
@@ -6617,10 +6621,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		.talk Karl Boran##1242
 		..turnin Return the Statuette##286
 	step //58
+		goto 9.5,59.7|n
+		.talk Shellei Brondir##1571
 		.' Fly to Stormwind|goto Stormwind City|noway|q 128 |future
 	step //59
+		goto Stormwind City,61.2,70.7|n
+		.talk Auctioneer Jaxon##15659
 		.' Buy a Bronze Tube from the Auction House|buy 1 Bronze Tube##4371|q 174 |future
 	step //60
+		goto Stormwind City,71,72.5|n
+		.talk Dungar Longdrink##352
 		.' Fly to Lakeshire|goto Redridge Mountains,30.4,59.0,0.5|noway|q 128 |future
 	step //61
 		goto Redridge Mountains,31.5,57.9
@@ -6680,6 +6690,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		goto 28.4,12.6
 		.talk Corporal Keeshan##349
 		..accept Missing In Action##219
+		.info Get ready! This is an escort quest!
+	step
+		goto 33.4,48.48|n
 		.goal Escort Corporal Keeshan back to Redridge|q 219/1
 	step //76
 		goto 33.5,49
@@ -6711,7 +6724,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..accept The Totem of Infliction##101
 		..accept The Legend of Stalvan (1)##66
 	step //84
-		goto 77.5,44.3
+		goto 77.5,44.3|n
 		.talk Felicia Maline##2409
 		.fpath Darkshire|q 101
 	step //85
@@ -6744,6 +6757,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		.talk Innkeeper Trelayne##6790
 		home Darkshire|q 101
 	step //91
+		goto 77.5,44.3|n
+		.talk Felicia Maline##2409
 		.' Fly to Sentinel Hill|goto Westfall,56.6,52.7,0.1|noway|q 67
 	step //92
 		goto Westfall,41.5,66.7
@@ -6752,13 +6767,17 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..turnin The Legend of Stalvan (2)##67
 		..accept The Legend of Stalvan (3)##68
 	step //93
-		.' Go to Sentinel Hill and fly to Darkshire|goto Duskwood,77.6,44.4,0.1|noway|q 68
+		goto Westfall,56.6,52.6|n
+		.talk Thor##523
+		.' Fly to Darkshire|goto Duskwood,77.6,44.4,1|noway|q 68
 	step //94
 		goto Duskwood,72.5,46.8
 		.talk Clerk Daltry##267
 		..turnin The Legend of Stalvan (3)##68
 		..accept The Legend of Stalvan (4)##69
 	step //95
+		goto Duskwood,77.5,44.3|n
+		.talk Felicia Maline##2409
 		.' Fly to Stormwind|goto Stormwind City|noway|q 69
 	step //96
 		.' Go outside to Elwynn Forest|goto Elwynn Forest|noway|q 69
@@ -6768,7 +6787,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..turnin The Legend of Stalvan (4)##69
 		..accept The Legend of Stalvan (5)##70
 	step //98
-		.' Go upstairs in the inn to 44.3,65.8|goto 44.3,65.8
+		goto Elwynn Forest,44.3,65.8
 		.' Click the Storage Chest
 		.info It's a brown chest sitting on the floor in this room, upstairs inside the inn.
 		.collect An Undelivered Letter##910|q 70/1
@@ -6852,15 +6871,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..turnin Look To The Stars (2)##175
 		..accept Look To The Stars (3)##177
 	step //118
+		goto 80.9,71.6
+		.from Insane Ghoul##511
+		.get Mary's Looking Glass##1946|q 177/1
+	step //119
 		goto 79.3,70.3
 		.kill 8 Skeletal Warrior##48|q 56/1
 		.kill 6 Skeletal Mage##203|q 56/2
 		.from Skeletal Warrior##48+, Skeletal Mage##203+
 		.get 10 Skeleton Finger##2378|q 101/3
-	step //119
-		goto 80.9,71.6
-		.from Insane Ghoul##511
-		.get Mary's Looking Glass##1946|q 177/1
 	step //120
 		goto 72.7,69.7
 		.kill 8 Nightbane Vile Fang##206|q 222/1
@@ -6887,10 +6906,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 	step //125
 		goto 36.1,80.6
 		.from Zzarc'Vul##300
-		.' He spawns at random points inside of the cave.
+		.info He spawns at random points inside of the cave.
 		.get Ogre's Monocle##1968|q 181/1
 	step //126
-		.' Go outside to 18.2,56.6|goto 18.2,56.6
+		goto 18.2,56.6
 		.talk Jitters##288
 		..turnin Raven Hill##163
 		..accept Jitters' Growling Gut##5
@@ -6985,7 +7004,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 	step //147
 		.' Go west to Westfall|goto Westfall|noway|q 262
 	step //148
-		.' Go to Sentinel Hill and fly to Darkshire|goto Duskwood,77.6,44.4,0.5|noway|q 262
+		goto Westfall,56.6,52.6|n
+		.talk Thor##523
+		.' Fly to Darkshire|goto Duskwood,77.6,44.4,0.5|noway|q 262
 	step //149
 		goto Duskwood,75.8,45.3
 		.talk Madame Eva##265
@@ -7041,6 +7062,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..turnin Gather Rot Blossoms##156
 		..accept Juice Delivery##159
 	step //161
+		goto 77.5,44.3|n
+		.talk Felicia Maline##2409
 		.' Fly to Stormwind|goto Stormwind City|noway|q 269
 	step //162
 		goto Stormwind City,49.9,46
@@ -7048,6 +7071,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..turnin Seeking Wisdom##269
 		..accept The Doomed Fleet##270
 	step //163
+		goto Stormwind City,71,72.5|n
+		.talk Dungar Longdrink##352
 		.' Fly to Sentinel Hill|goto Westfall,56.6,52.7,0.1|noway|q 159
 	step //164
 		.' Go east to Duskwood|goto Duskwood|noway|q 159
@@ -7107,6 +7132,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..turnin Bride of the Embalmer##253
 	step //176
 		ding 30
+	step //
+		goto Duskwood,77.4,36.1
+		.from Stalvan Mistmantle##315
+		.get Mistmantle Family Ring##3629|q 98/1
+	step //
+		goto 75.8,45.3
+		.talk Madame Eva##265
+		..turnin The Legend of Stalvan (13)##98
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35)",[[
 	author support@zygorguides.com
@@ -7220,14 +7253,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //27
 		'Fly to Darkshire|goto Duskwood,74.7,46.9,7|noway|c
 		only Draenei Shaman
-	step //28
-		goto Duskwood,77.4,36.1
-		.from Stalvan Mistmantle##315
-		.get Mistmantle Family Ring|q 98/1
-	step //29
-		goto 75.8,45.3
-		.talk Madame Eva##265
-		..turnin The Legend of Stalvan (13)##98
 	step //30
 		'Fly to Stormwind|goto Stormwind City|noway|c
 	step //31
