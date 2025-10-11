@@ -4250,8 +4250,8 @@ startlevel 30
 			..accept The Algaz Gauntlet##455
 		step
 			goto Wetlands,49.7,79.5
-			.kill 8 Dragonmaw Scout|q 455/2
-			.kill 6 Dragonmaw Grunt|q 455/3
+			.kill 8 Dragonmaw Scout##2103|q 455/2
+			.kill 6 Dragonmaw Grunt##2102|q 455/3
 		step
 			goto Wetlands,53.9,70.3
 			.goal Traverse Dun Algaz|q 455/1
@@ -4346,28 +4346,28 @@ startlevel 30
 		step
 			goto Wetlands,18.8,47.7
 			.from Young Wetlands Crocolisk##1417
-			.get 4 Young Crocolisk Skin|q 484/1
+			.get 4 Young Crocolisk Skin##3397|q 484/1
 			.' You can find more around|at 33.15,35.9
 		step
-			goto Wetlands,18.9,40.3
+			goto Wetlands,18.1,39.8
 			.from Gobbler##1259
-			.get Gobbler's Head|q 279/2
+			.get Gobbler's Head##3618|q 279/2
 		step
 			goto Wetlands,13.8,41.9
-			.kill 12 Bluegill Murloc|q 279/1
+			.kill 12 Bluegill Murloc##1024|q 279/1
 		step
 			goto Wetlands,14.1,30.1
 			.from First Mate Snellig##1159
-			.get Snellig's Snuffbox|q 289/3
+			.get Snellig's Snuffbox##3619|q 289/3
 			.info Go downstairs in the ship.
 		step
 			goto Wetlands,14.1,29.3
-			.kill 13 Cursed Sailor|q 289/1
-			.kill 5 Cursed Marine|q 289/2
+			.kill 13 Cursed Sailor##1157|q 289/1
+			.kill 5 Cursed Marine##1158|q 289/2
 		step
 			goto Wetlands,44.3,25.5
 			.from Crimson Ooze##1031, Black Ooze##1032
-			.get Sida's Bag|q 470/1
+			.get Sida's Bag##3349|q 470/1
 		step
 			goto Wetlands,49.8,18.3
 			.talk Longbraid the Grim##1071
@@ -4384,13 +4384,13 @@ startlevel 30
 		step
 			goto Wetlands,62.5,28.4
 			.from Balgaras the Foul##1364
-			.get Ear of Balgaras|q 304/1
+			.get Ear of Balgaras##3639|q 304/1
 		step
 			goto Wetlands,62.2,28.3
-			.kill 10 Dark Iron Dwarf|q 303/1
-			.kill 5 Dark Iron Tunneler|q 303/2
-			.kill 5 Dark Iron Saboteur|q 303/3
-			.kill 5 Dark Iron Demolitionist|q 303/4
+			.kill 10 Dark Iron Dwarf##1051|q 303/1
+			.kill 5 Dark Iron Tunneler##1053|q 303/2
+			.kill 5 Dark Iron Saboteur##1052|q 303/3
+			.kill 5 Dark Iron Demolitionist##1054|q 303/4
 			.' You can find more around|at 47.8,16.9
 		step
 			goto Wetlands,49.8,18.3
@@ -4413,7 +4413,7 @@ startlevel 30
 			..accept The Thandol Span (3)##633
 		step
 			goto Arathi Highlands,48.8,88.1
-			.' Click the Cache of Explosives
+			.' Interact with gameobject: Cache of Explosives
 			.info To the right across the hanging bridge after walking across the big bridge from the Wetlands.
 			.goal Cache of Explosives Destroyed|q 633/1
 		step
@@ -4455,34 +4455,33 @@ startlevel 30
 			..accept Reclaiming Goods##281
 		step
 			goto Wetlands,13.5,41.4
-			.' Click the Damaged Crate on the ground by the murloc huts
+			.' Interact with gameobject: Damaged Crate
 			..turnin Reclaiming Goods##281
 			..accept The Search Continues##284
 		step
 			goto Wetlands,13.6,38.2
-			.' Click the Sealed Barrel on the ground next to the murloc huts
+			.' Interact with gameobject: Sealed Barrel
 			..turnin The Search Continues##284
 			..accept Search More Hovels##285
 		step
 			goto Wetlands,13.9,34.8
-			.' Click the Half-buried Barrel next to the murloc hut
+			.' Interact with gameobject: Half-buried Barrel
 			..turnin Search More Hovels##285
 			..accept Return the Statuette##286
 		step
 			goto Wetlands,15.5,23.5
 			.from Captain Halyndor##1160
-			.get Intrepid Strongbox Key|q 290/1
+			.get Intrepid Strongbox Key##2629|q 290/1
 		step
 			goto Wetlands,14.4,24
-			.info Go underwater to the bottom of the ship.
-			.' Click Intrepid's Locked Strongbox
+			.' Interact with gameobject: Intrepid's Locked Strongbox
 			.info At the very bottom of this sunken ship, underwater. It looks like a small metal chest.
 			..turnin Lifting the Curse##290
 			..accept The Eye of Paleth##292
 		step
 			goto Wetlands,18.5,27.3
 			.from Giant Wetlands Crocolisks##2089
-			.get 6 Giant Crocolisk Skin|q 471/1
+			.get 6 Giant Crocolisk Skin##3348|q 471/1
 		step
 			goto Wetlands,38.1,51.1
 			.talk Ormer Ironbraid##1078
@@ -4498,8 +4497,8 @@ startlevel 30
 			..accept Uncovering the Past##299
 		step
 			goto Wetlands,24.8,50.15
-			.kill 10 Mottled Raptor|q 294/1
-			.kill 10 Mottled Screecher|q 294/2
+			.kill 10 Mottled Raptor##1020|q 294/1
+			.kill 10 Mottled Screecher##1021|q 294/2
 		step
 			goto Wetlands,38.1,51.1
 			.talk Ormer Ironbraid##1078
@@ -4507,16 +4506,16 @@ startlevel 30
 			..accept Ormer's Revenge (2)##295
 		step
 			goto Wetlands,34.8,45.4
-			.kill 10 Mottled Scytheclaw|q 295/1
-			.kill 10 Mottled Razormaw|q 295/2
+			.kill 10 Mottled Scytheclaw##1022|q 295/1
+			.kill 10 Mottled Razormaw##1023|q 295/2
 			.' Get the 4 Relics that spawn randomly in different places around this area. They can spawn up the hill next to Sarltooth also:
-			.get Ados Fragment##2658|q 299/1
+			.collect Ados Fragment##2658|q 299/1
 			.info The Ados Fragment looks like a big stone box.
-			.get Modr Fragment##2659|q 299/2
+			.collect Modr Fragment##2659|q 299/2
 			.info The Modr Fragment looks like a thin, tall red vase with a yellow face on it.
-			.get Golm Fragment##2660|q 299/3
+			.collect Golm Fragment##2660|q 299/3
 			.info The Golm Fragment looks like a wide yellow vase with black silhouettes on it.
-			.get Neru Fragment##2661|q 299/4
+			.collect Neru Fragment##2661|q 299/4
 			.info The Neru Fragment looks like a mound of dirt.
 		step
 			goto Wetlands,38.1,51.1
@@ -4530,7 +4529,7 @@ startlevel 30
 		step
 			goto Wetlands,33.2,51.4
 			.from Sarltooth##1353
-			.get Sarltooth's Talon|q 296/1
+			.get Sarltooth's Talon##3638|q 296/1
 		step
 			goto Wetlands,38.1,51.1
 			.talk Ormer Ironbraid##1078
@@ -4538,7 +4537,7 @@ startlevel 30
 		step
 			goto Wetlands,42.9,41.2
 			.from Dragonmaw Raider##1034
-			.get 8 Dragonmaw War Banner|q 464/1
+			.get 8 Dragonmaw War Banner##3337|q 464/1
 		step
 			goto Wetlands,56.3,40.5
 			.talk Rethiel the Greenwarden##1244
@@ -4546,8 +4545,8 @@ startlevel 30
 			..accept Tramping Paws##276
 		step
 			goto Wetlands,63.9,61.8
-			.kill 15 Mosshide Gnoll|q 276/1
-			.kill 10 Mosshide Mongrel|q 276/2
+			.kill 15 Mosshide Gnoll##1007|q 276/1
+			.kill 10 Mosshide Mongrel##1008|q 276/2
 		step
 			goto Wetlands,56.3,40.5
 			.talk Rethiel the Greenwarden##1244
@@ -4565,7 +4564,7 @@ startlevel 30
 			..accept Blisters on The Land##275
 		step
 			goto Wetlands,47,34.74
-			.kill 8 Fen Creeper|q 275/1
+			.kill 8 Fen Creeper##1040|q 275/1
 			.' You can find more around|at 22.75,28.8
 		step
 			goto Wetlands,11.5,52.2
@@ -4597,7 +4596,7 @@ startlevel 30
 		step
 			goto Wetlands,53.5,54.7
 			.from Chieftain Nek'rosh##2091
-			.get Nek'rosh's Head|q 474/1
+			.get Nek'rosh's Head##3625|q 474/1
 		step
 			goto Wetlands,56.3,40.5
 			.talk Rethiel the Greenwarden##1244
@@ -4642,6 +4641,7 @@ startlevel 35
 			goto Duskwood,23.05,37.6
 			.from Bone Chewer##210, Plague Spreader##604, Rotted One##948
 			.collect An Old History Book##2794|q 337 |future
+		step
 			.use An Old History Book##2794
 			..accept An Old History Book##337
 		step
@@ -4677,9 +4677,10 @@ startlevel 35
 		step
 			goto Arathi Highlands,44.3,92.9
 			.collect Waterlogged Envelope##4433|q 637 |future
+			.info At the bottom, near the dwarf's corpse.
+		step
 			.use Waterlogged Envelope##4433
 			..accept Sully Balloo's Letter##637
-			.info At the bottom, near the dwarf's corpse.
 		step
 			goto Arathi Highlands,53.2,91|n
 			.' Swim here and go up the hill|goto Arathi Highlands,53.2,91,0.5|noway|q 647
@@ -4691,7 +4692,7 @@ startlevel 35
 		step
 			goto Hillsbrad Foothills,49.3,52.3|n
 			.talk Darla Harris##2432
-			.' Fly to Ironforge|goto Ironforge,55.75,47.85,0.5|noway|q 637
+			.' Fly to Ironforge|goto Ironforge|noway|q 637
 		step
 			goto Ironforge,63.5,67.3
 			.talk Sara Balloo##2695
@@ -4763,6 +4764,7 @@ startlevel 35
 		step
 			goto Alterac Mountains,38.4,46.4
 			.collect Worn Leather Book##3659|q 540/2
+			.info A bookcase inside the town hall.
 		step
 			goto Alterac Mountains,35.5,54.5
 			.from Grel'borg the Miser##2417
@@ -4862,7 +4864,7 @@ startlevel 35
 			..turnin Noble Deaths##512
 		step
 			goto Hillsbrad Foothills,46.55,64.38
-			.' Kill Torn Fin enemies around this area.
+			.' Kill Murlocs enemies around this area.
 			.info You can find more in the water along the shore.
 			.get 10 Murloc Head##3716|q 559/1
 			.' You can find more around (1)|at 43.51,67.70
@@ -4952,7 +4954,7 @@ startlevel 35
 		step
 			goto Alterac Mountains,39.2,14.7
 			.collect Ensorcelled Parchment##3706|q 551 |future
-			.info On the second floor in a chest.
+			.info The chest can appear in a random location in the house.
 		step
 			.use Ensorcelled Parchment##3706
 			..accept The Ensorcelled Parchment##551
@@ -5011,8 +5013,8 @@ startlevel 40
 			..accept Worth Its Weight in Gold##691
 		step
 			goto Arathi Highlands,32.45,28.4
-			.kill 10 Syndicate Highwayman|q 681/1
-			.kill 6 Syndicate Mercenary|q 681/2
+			.kill 10 Syndicate Highwayman##2586|q 681/1
+			.kill 6 Syndicate Mercenary##2589|q 681/2
 		step
 			goto Arathi Highlands,45.8,47.6
 			.talk Captain Nials##2700
@@ -5025,7 +5027,7 @@ startlevel 40
 		step
 			goto Arathi Highlands,82.8,36
 			.from Drywhisker Kobold##2572, Drywhisker Surveyor##2573, Drywhisker Digger##2574
-			.get 12 Mote of Myzrael|q 642/1
+			.get 12 Mote of Myzrael##4435|q 642/1
 		step
 			goto Arathi Highlands,84.3,30.9
 			.' Interact with gameobject: Iridescent Shards
@@ -5049,14 +5051,14 @@ startlevel 40
 		step
 			goto Arathi Highlands,71.7,62.9
 			.from Witherbark Troll##2552, Witherbark Shadowcaster##2553, Witherbark Axe Thrower##2554, Witherbark Headhunter##2556, Witherbark Shadow Hunter##2557, Witherbark Berserker##2558
-			.get 10 Witherbark Tusk|q 691/1
+			.get 10 Witherbark Tusk##4503|q 691/1
 			.from Witherbark Witch Doctors##2555
-			.get 4 Witherbark Medicine Pouch|q 691/2
+			.get 4 Witherbark Medicine Pouch##4522|q 691/2
 		step
 			goto Arathi Highlands,68.3,75.1
 			.from Witherbark Shadow Hunters##2557
 			.' They are inside the cave.
-			.get Shadow Hunter Knife|q 691/3
+			.get Shadow Hunter Knife##5040|q 691/3
 		step
 			.' The Forsaken Courier walks the road from the Go'Shek Farm to Tauren Mill in the Hillsbrad Foothills. If you see him while walking around, kill only the Forsaken Courier then run away. If you still have not found him after you're done questing, walk the road until you find him.
 			.from Forsaken Courier##2714
@@ -5128,7 +5130,7 @@ startlevel 40
 			.talk Captain Nials##2700
 			..accept Stromgarde Badges##682
 		step
-			goto Arathi Highlands,36.2,57.3
+			goto Arathi Highlands,36.1,58.1
 			.' Interact with gameobject: Stone of Inner Binding
 			.info In the middle of a circle of stones.
 			..turnin Breaking the Keystone##652
@@ -5136,19 +5138,19 @@ startlevel 40
 		step
 			goto Arathi Highlands,29.6,64.2
 			.from Marez Cowl##2783
-			.get Marez's Head|q 684/1
+			.get Marez's Head##4515|q 684/1
 			.' She can also be|at 29.6,63.0
 			.info She is standing behind a big house, next to a table with a bunch of raw meat on it.
 		step
 			goto Arathi Highlands,26,65.5
 			.from Otto##2599
-			.get Otto's Head|q 685/1
+			.get Otto's Head##4516|q 685/1
 			.from Lord Falconcrest##2597
-			.get Falconcrest's Head|q 685/2
+			.get Falconcrest's Head##4517|q 685/2
 		step
 			goto Arathi Highlands,26.1,59.8
 			.from Syndicate Prowler##2588, Syndicate Conjuror##2590, Syndicate Magus##2591
-			.get 7 Stromgarde Badge|q 682/1
+			.get 7 Stromgarde Badge##4506|q 682/1
 		step
 			.goto Arathi Highlands,24.4,61.2|n
 			.' The path to Trelane's Defenses starts here|goto Arathi Highlands,24.4,61.2,0.5|noway|q 694
@@ -5234,6 +5236,7 @@ startlevel 40
 			goto Arathi Highlands,45.8,47.6
 			.talk Captain Nials##2700
 			..turnin Stromgarde Badges##682
+			.' Watch the dialogue.
 			..turnin Wanted! Marez Cowl##684
 			..turnin Wanted! Otto and Falconcrest##685
 		step
@@ -5293,6 +5296,7 @@ startlevel 40
 			goto Badlands,51.4,76.9
 			.talk Theldurin the Lost##2785
 			..turnin The Lost Fragments##692
+			.' Watch the dialogue.
 			..accept Summoning the Princess##656
 		step
 			goto Arathi Highlands,62.5,33.7
