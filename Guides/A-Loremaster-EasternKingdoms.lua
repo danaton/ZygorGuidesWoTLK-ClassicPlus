@@ -2,7 +2,7 @@ local ZygorGuidesViewer=ZygorGuidesViewer
 if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Alliance" then return end
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[Alpha] Stormwind City",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Eastern Kingdoms\\[Beta] Stormwind City",[[
 author danaton
 description Coming Soon
 startlevel 60
@@ -10,6 +10,13 @@ startlevel 60
 			goto Stormwind City,63.8,73.6
 			.talk Renato Gallina##1432
 			..accept Wine Shop Advert##332
+		step
+			goto Stormwind City,61.2,70.7
+			.talk Auctioneer Jaxon##15659
+			.buy 60 Wool Cloth##2592|q 7791 |future
+			.buy 60 Silk Cloth##4306|q 7793 |future
+			.buy 60 Mageweave Cloth##4338|q 7794 |future
+			.buy 60 Runecloth##14047|q 7795 |future
 		step
 			goto Stormwind City,62.3,67.9
 			.talk Harlan Bagley##1427
@@ -27,6 +34,13 @@ startlevel 60
 			goto Stormwind City,52.6,83.4
 			.talk Thurman Schneider##1429
 			..turnin Package for Thurman##334
+		step
+			goto Stormwind City,53.9,81.7
+			.talk Clavicus Knavingham##14722
+			..accept A Donation of Wool##7791|instant
+			..accept A Donation of Silk##7793|instant
+			..accept A Donation of Mageweave##7794|instant
+			..accept A Donation of Runecloth##7795|instant
 		step // Redridge
 			goto Stormwind City,55,54.2
 			.talk Brother Kristoff##1444
@@ -5348,8 +5362,6 @@ startlevel 50
 			.talk Whiskey Slim##2491
 			..accept Whiskey Slim's Lost Grog##580
 		step
-			.' Ride the boat to Ratchet|goto The Barrens|noway|q 2605 |future
-		step
 			goto Tanaris,51.8,28.7
 			.talk Marin Noggenfogger##7564
 			..accept The Thirsty Goblin##2605
@@ -5408,7 +5420,7 @@ startlevel 50
 			.goal Check Second Cage|q 2988/2
 		step
 			goto The Hinterlands,24.8,55.4
-			.kill Trolls|n
+			.from Witherbark Scalper##2649, Witherbark Zealot##2650
 			.get 5 Troll Tribal Necklace##9259|q 2880/1
 		step
 			goto The Hinterlands,24.6,65.6
@@ -5453,7 +5465,7 @@ startlevel 50
 			.info Little blue bottles.
 		step
 			goto The Hinterlands,37.2,71.5
-			.' Click Featherbeard's Remains at the top of the temple, up the stairs
+			.' Interact with gameobject: Featherbeard's Remains
 			..turnin In Pursuit of Featherbeard##9476
 			..accept Reclaiming the Eggs##9475
 		step
@@ -5505,12 +5517,14 @@ startlevel 50
 			goto Tanaris,51.1,26.9
 			.talk Sprinkle##7583
 			..turnin Sprinkle's Secret Ingredient##2641
+			.' Watch the dialogue.
 			..accept Delivery for Marin##2661
 		step
 			goto Tanaris,51.8,28.7
 			.talk Marin Noggenfogger##7564
 			..turnin Delivery for Marin##2661
 			..accept Noggenfogger Elixir##2662
+			.' Watch the dialogue.
 			..turnin Noggenfogger Elixir##2662
 		step
 			goto Teldrassil,55.5,92
@@ -5587,6 +5601,8 @@ startlevel 60
 			goto Western Plaguelands,37,57.1
 			.from Cauldron Lord Bilemaw##11075
 			.collect Felstone Field Cauldron Key##13194|q 5216 |future
+		step
+			goto Western Plaguelands,37.2,56.8
 			.' Interact with gameobject: Scourge Cauldron
 			..turnin Target: Felstone Field##5216
 			..accept Return to Chillwind Camp##5217
@@ -5628,6 +5644,8 @@ startlevel 60
 			goto Western Plaguelands,46.2,52.4
 			.from Cauldron Lord Malvinious##11077
 			.collect Dalson's Tears Cauldron Key##13195|q 5219 |future
+		step
+			goto Western Plaguelands,46.2,51.9
 			.' Interact with gameobject: Scourge Cauldron
 			..turnin Target: Dalson's Tears##5219
 			..accept Return to Chillwind Camp##5220
@@ -5639,16 +5657,16 @@ startlevel 60
 		step
 			goto Western Plaguelands,48.1,49.7
 			.from Wandering Skeleton##10816
-			.get Dalson Outhouse Key##12738|n
+			.collect Dalson Outhouse Key##12738|n
 			.' Unlock the Outhouse with the Dalson Outhouse Key
 			.info Behind the barn, next to a big tree stump.
 			.from Farmer Dalson##10836
-			.collect 1 Dalson Cabinet Key##12739|q 5060 |future |instant
+			.collect Dalson Cabinet Key##12739|q 5060 |future |instant
 		step
 			goto Western Plaguelands,47.4,49.7
 			.' Unlock the Locked Cabinet with the Dalson Cabinet Key
 			.info In the house, on the second floor in the small room.
-			..accept Locked Away##5060|instant
+			..accept Locked Away##5060|instant |future
 		step
 			goto Western Plaguelands,50.0,30.4|n
 			.' The path down to Kirsta Deepshadow starts here|goto Western Plaguelands,50.0,30.4,0.5|noway|q 6004 |future
@@ -5679,9 +5697,10 @@ startlevel 60
 			goto Western Plaguelands,54.2,24.2
 			.kill 1 Cavalier Durgen##11611|q 6023/2
 			.info Stay in front of the tower. Cavalier Durgen will eventually walk out of the tower down the front.
-			.' Go to the top of the tower
-			.' Click the small brown chest
-			.get Mark of the Lightbringer##23661|q 9474/1
+		step
+			goto Western Plaguelands,55.2,23.5
+			.collect Mark of the Lightbringer##23661|q 9474/1
+			.info A small brown chest at the very top of the tower.
 		step
 			goto Western Plaguelands,52.8,25.2|n
 			.' Jump off the cliff down to Kirsta Deepshadow|goto Western Plaguelands,52.8,25.2,0.5|noway|q 6023
@@ -5757,9 +5776,12 @@ startlevel 60
 			.kill Jabbering Ghoul##10801|n
 			.info If a Jabbering Ghoul is not in this spot, you can find one somewhere in this field.
 			.collect Good Luck Other-Half Charm##12722|q 5051 |future
-			.' Click the Good Luck Other-Half-Charm in your bags|use Good Luck Other-Half-Charm##12722
-			.get Good Luck Charm##12723|q 5051/1
-			.kill Skeletons|n
+		step
+			.use Good Luck Other-Half-Charm##12722
+			.collect Good Luck Charm##12723|q 5051/1
+		step
+			goto Western Plaguelands,36.85,57.4
+			.from Skeletal Flayer##1783, Skeletal Sorcerer##1784
 			.get 15 Skeletal Fragments##14619|q 5537/1
 		step
 			goto Western Plaguelands,38.4,54
@@ -5769,6 +5791,8 @@ startlevel 60
 			goto Western Plaguelands,53,66
 			.from Cauldron Lord Razarch##11076
 			.collect Writhing Haunt Cauldron Key##13197|q 5222 |future
+		step
+			goto Western Plaguelands,53,65.6
 			.' Interact with gameobject: Scourge Cauldron
 			..turnin Target: Writhing Haunt##5222
 			..accept Return to Chillwind Camp##5223
@@ -5809,6 +5833,8 @@ startlevel 60
 			goto Western Plaguelands,62.6,59.9
 			.from Cauldron Lord Soulwrath##11078
 			.collect Gahrron's Withering Cauldron Key##13196|q 5225 |future
+		step
+			goto Western Plaguelands,62.5,58.5
 			.' Interact with gameobject: Scourge Cauldron
 			..turnin Target: Gahrron's Withering##5225
 			..accept Return to Chillwind Camp##5226
@@ -5830,9 +5856,9 @@ startlevel 60
 		step
 			goto Eastern Plaguelands,35.0,84.3
 			.' The doll parts spawn in the house here, except the house Pamela is in
-			.get Pamela's Doll's Head##12886|n
-			.get Pamela's Doll's Left Side##12887|n
-			.get Pamela's Doll's Right Side##12888|n
+			.collect Pamela's Doll's Head##12886|n
+			.collect Pamela's Doll's Left Side##12887|n
+			.collect Pamela's Doll's Right Side##12888|n
 			.' Click Pamela's Doll's Head to put the doll parts together to make Pamela's Doll|q 5149/1|use Pamela's Doll's Head##12886
 		step
 			goto Eastern Plaguelands,32.4,83.7
@@ -5878,6 +5904,7 @@ startlevel 60
 			goto Western Plaguelands,39.5,66.8
 			.talk Chromie##10667
 			..turnin The Annals of Darrowshire##5154
+			.' Watch the dialogue.
 			..turnin A Matter of Time##4971
 			..accept Counting Out Time##4972
 			..accept Brother Carlin##5210
@@ -6010,7 +6037,7 @@ startlevel 60
 			..accept Of Forgotten Memories##5781
 		step
 			goto Eastern Plaguelands,24.66,79.79
-			.' Interact with gameobject: Loose Dirt Mound to summon Mercutio Filthgorger
+			.' Interact with gameobject: Loose Dirt Mound
 			.from Mercutio Filthgorger##11886
 			.get Taelan's Hammer##14613|q 5781/1
 		step
@@ -6221,6 +6248,7 @@ startlevel 60
 		step
 			goto Eastern Plaguelands,24.4,79.2
 			.' Interact with gameobject: Mound of Dirt
+			.info Behind the crypt.
 			..turnin Hameya's Plea##6024
 		step
 			goto Eastern Plaguelands,35.6,68.8
@@ -6250,11 +6278,10 @@ startlevel 60
 		step
 			goto Eastern Plaguelands,70.9,45.2
 			.from Scourge Champion##8529
-			.collect 5 Fetid Skull##13157|q 5206 |future
-			.' You can find more Scourge Champion around|at 78.8,38.5
-		step
+			.collect Fetid Skull##13157|n
 			.use Mystic Crystal##13156
 			.get 5 Resonating Skull##13155|q 5206/1
+			.' You can find more Scourge Champion around|at 78.8,38.5
 		step
 			goto Eastern Plaguelands,75.7,53.8
 			.talk Carlin Redpath##11063
