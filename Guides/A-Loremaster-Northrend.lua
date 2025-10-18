@@ -3283,14 +3283,6 @@ startlevel 72
 			.talk Private Casey##26186
 			..accept The Lost Courier##12157
 		step
-			goto Dragonblight,29.00,55.45
-			.talk Image of Archmage Modera##26673
-			..accept Rifle the Bodies##12000
-		step
-			goto Dragonblight,29.18,55.65
-			.talk Warden Jodi Moonsong##26973
-			..accept The Liquid Fire of Elune##12166
-		step
 			goto Dragonblight,28.83,56.18
 			.talk Courier Lanson##27060
 			..turnin The Lost Courier##12157
@@ -3312,10 +3304,20 @@ startlevel 72
 			goto Dragonblight,77.1,49.8
 			.talk Rodney Wells##26878
 			..turnin A Disturbance In The West##12439
+			..accept To Stars' Rest!##12440
 		step
 			goto Dragonblight,77.1,49.8|n
 			.talk Rodney Wells##26878
-			.' Fly to Stars Rest, Dragonblight|goto 29,55.5,1.0|q 12166
+			.' Fly to Stars Rest, Dragonblight|goto 29,55.5,1.0|noway|q 12440
+		step
+			goto Dragonblight,29.00,55.45
+			.talk Image of Archmage Modera##26673
+			..turnin To Stars' Rest!##12440
+			..accept Rifle the Bodies##12000
+		step
+			goto Dragonblight,29.18,55.65
+			.talk Warden Jodi Moonsong##26973
+			..accept The Liquid Fire of Elune##12166
 		step
 			goto Dragonblight,28.48,49.48
 			.kill Blighted Elk##26616|n
@@ -3367,11 +3369,12 @@ startlevel 72
 			goto Dragonblight,26.17,44.08
 			.from Anub'ar Cultist##26319
 			.collect The Favor of Zangus##36958|q 12168 |future
-			.use The Favor of Zangus##36958
-			..accept The Favor of Zangus##12168
 			.' You can find more around (1)|at 24.97,44.14
 			.' You can find more around (2)|at 23.85,44.25
 			.' You can find more around (3)|at 25.47,46.27
+		step
+			.use The Favor of Zangus##36958
+			..accept The Favor of Zangus##12168
 		step
 			goto Dragonblight,29.18,55.65
 			.talk Warden Jodi Moonsong##26973
@@ -3409,7 +3412,7 @@ startlevel 72
 			goto Dragonblight,26.47,57.22
 			.use Surge Needle Teleporter##36747
 			.info You will be teleported up to a floating platform.
-			.' Teleport to the Surge Needle|goto 19.48,59.59,0.2|q 12060
+			.' Teleport to the Surge Needle|goto 19.48,59.59,0.3|q 12060
 		step
 			goto Dragonblight,19.79,59.82
 			.' Watch the dialogue.
@@ -3418,7 +3421,7 @@ startlevel 72
 		step
 			.use Surge Needle Teleporter##36747
 			.info On the floating platform.
-			.' Return to the Ground|goto 17.64,59,0.2|q 12060
+			.' Return to the Ground|goto 17.64,59,0.3|q 12060
 		step
 			goto Dragonblight,25.9,64.4
 			.from Surge Needle Sorcerer##26257, Dragonblight Mage Hunter##26280, Moonrest Stalker##26281
@@ -3446,10 +3449,8 @@ startlevel 72
 			goto Dragonblight,26.32,64.87
 			.from Captain Emmy Malin##26762
 			.collect Ley Line Focus Control Ring##36751|q 12065
-		step
-			goto Dragonblight,26.32,64.87
-			.from Captain Emmy Malin##26762
 			.collect Captain Malin's Letter##36756|q 12067 |future
+		step
 			.use Captain Malin's Letter##36756
 			..accept A Letter for Home##12067
 		step
