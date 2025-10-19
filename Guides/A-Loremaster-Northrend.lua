@@ -164,7 +164,7 @@ startlevel 68
 			..accept Military? What Military?##11901
 		step
 			goto Borean Tundra,56.81,55.56
-			.' Interact with Plagued Grain
+			.' Interact with gameobject: Plagued Grain
 			.info Inside the mine.
 			..turnin Military? What Military?##11901
 			..accept Pernicious Evidence##11902
@@ -188,8 +188,8 @@ startlevel 68
 			..accept Reference Material##11908
 		step
 			goto Borean Tundra,55.75,58.32
-			.' Interact with book Fields, Factories and Workshops
 			.collect Fields, Factories and Workshops##35481|q 11908/1
+			.info A book lies on the floor of a burnt house.
 		step
 			goto Borean Tundra,55.79,60.83
 			.use Wendy's Torch##35491
@@ -372,13 +372,13 @@ startlevel 68
 			goto Borean Tundra,52.30,44.84
 			.kill 10 Loot Crazed Diver##25836|q 11869/1
 		step
-			goto Borean Tundra,48.38,40.60
-			.kill "Lunchbox"##25968|q 11884/2
-			.info He looks like a gray rhino that walks around this area.
-		step
-			goto Borean Tundra,48.38,40.60
+			goto Borean Tundra,45.1,44.9
 			.kill Nedar, Lord of Rhinos##25801|q 11884/1 
 			.info He rides on a gray rhino that walks around this area.
+			.kill "Lunchbox"##25968|q 11884/2
+			.info He looks like a gray rhino that walks around this area.
+			.' You can find them here (1)|at 46.5,45
+			.' You can find them here (2)|at 48.05,40.3
 		step
 			goto Borean Tundra,56.75,48.66
 			.use Pile of Fake Furs##35127
@@ -423,11 +423,10 @@ startlevel 68
 			goto Borean Tundra,53.7,23.9
 			.kill Kaw the Mammoth Destroyer##25802|n
 			.info Use the abilities on your action bar.
-			.' Collect Kaw's War Halberd
+			.collect Kaw's War Halberd##35234|q 11879/1
 			.info It appears after you	kill Kaw the Mammoth Destroyer.
 			.info You will have to stop riding the mammoth to be able to loot it.
 			.info Click the red arrow on your action bar to stop riding the mammoth.
-			.collect Kaw's War Halberd##35234|q 11879/1
 		step
 			goto Borean Tundra,56.98,18.70
 			.talk Fizzcrank Fullthrottle##25590
@@ -446,8 +445,8 @@ startlevel 68
 		step
 			goto Borean Tundra,57.51,18.61
 			.talk Mordle Cogspinner##25702
-			..accept What's the Matter with the Transmatter?##11710
 			..accept King Mrgl-Mrgl##11704
+			..accept What's the Matter with the Transmatter?##11710
 		step
 			goto Borean Tundra,57.93,18.80
 			.talk Crafty Wobblesprocket##25477
