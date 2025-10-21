@@ -287,8 +287,6 @@ author danaton
 description Contains all the steps to get the "Well Read" achievement.
 startlevel 79
 		step
-			.' The Betrayer Ascendant - Darnas
-		step
 			goto Stormwind City,76.04,32.02
 			.' Read a book: Aftermath of the Second War|achieve 1244/2
 			.' Read a book: The Guardians of Tirisfal|achieve 1244/27
