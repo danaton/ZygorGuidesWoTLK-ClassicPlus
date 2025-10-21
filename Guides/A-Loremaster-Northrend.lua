@@ -556,13 +556,6 @@ startlevel 68
 			.info Use them on Kaskala Craftsmen around this area.
 			.info They look like walrus man spirits around this area.
 			.' Free 3 Kaskala Craftsman Spirits|q 11607/1
-		step
-			goto Borean Tundra,52.12,33.18
-			.from Beryl Hound##25355
-			.collect Core of Malice##34711|n
-			.use Core of Malice##34711
-			.info Use them on Kaskala Shamans around this area.
-			.info They look like walrus man spirits around this area.
 			.' Free 3 Kaskala Shaman Spirits|q 11607/2
 		step
 			goto Borean Tundra,54.62,35.74

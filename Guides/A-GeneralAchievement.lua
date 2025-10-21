@@ -282,4 +282,129 @@ startlevel 79
 			.info Inside the Dungeon: Halls of Lightning
 ]])
 
+ZygorGuidesViewer:RegisterGuide("Alliance General Achievements Guide\\Well Read",[[
+author danaton
+description Contains all the steps to get the "Well Read" achievement.
+startlevel 79
+		step
+			.' The Betrayer Ascendant - Darnas
+		step
+			goto Stormwind City,76.04,32.02
+			.' Read a book: Aftermath of the Second War|achieve 1244/2
+			.' Read a book: The Guardians of Tirisfal|achieve 1244/27
+			.' Read a book: The Alliance of Lordaeron|achieve 1244/21
+		step
+			goto Stormwind City,75.7,32
+			.' Read a book: The New Horde|achieve 1244/32
+			.info On the ledge near the column.
+		step
+			goto Stormwind City,76.3,29
+			.' Read a book: Beyond the Dark Portal|achieve 1244/5
+		step
+			goto Stormwind City,75.3,29.8
+			.' Read a book: The Kaldorei and the Well of Eternity|achieve 1244/29
+		step
+			goto Stormwind City,83.2,33.2
+			.' Read a book: War of the Spider|achieve 1244/40
+		step
+			goto Stormwind City,83,36.3
+			.' Read a book: The Dark Portal and the Fall of Stormwind|achieve 1244/25
+		step
+			goto Elwynn Forest,43.8,65.7
+			.' Read a book: Icecrown and the Frozen Throne|achieve 1244/10
+			.info On the second floor of the tavern.
+		step
+			goto Westfall,56.5,30.2
+			.' Read a book: Aegwynn and the Dragon Hunt|achieve 1244/1
+			.info On the second floor of the house, to the left of the bed.
+		step
+			goto Westfall,56.9,47.5
+			.' Read a book: The Scourge of Lordaeron|achieve 1244/34
+		step
+			goto Westfall,52.6,53
+			.' Read a book: The Last Guardian|achieve 1244/30
+		step
+			goto Stranglethorn Vale,27.1,77.7
+			.' Read a book: Sunwell - The Fall of Quel'Thalas|achieve 1244/20
+			.info On the second floor of the tavern.
+		step
+			goto Stranglethorn Vale,27.9,77.2
+			.' Read a book: The Sentinels and the Long Vigil|achieve 1244/35
+			.info Inside the house next to the bed.
+		step
+			goto Stranglethorn Vale,27.79,77.32
+			.' Read a book: The Twin Empires|achieve 1244/37
+			.' Read a book: Empires' Fall|achieve 1244/8
+			.' Read a book: Wrath of Soulflayer|achieve 1244/42
+			.info On the very bottom floor.
+		step
+			goto Duskwood,72.1,46.4
+			.' Read a book: The Birth of the Lich King|achieve 1244/24
+		step
+			goto Duskwood,73.6,45.1
+			.' Read a book: The Founding of Quel'Thalas|achieve 1244/26
+			.info On the second floor of the tavern.
+		step
+			goto Duskwood,74.1,45.4
+			.' Read a book: Kil'jaeden and the Shadow Pact|achieve 1244/13
+			.info On the second floor of the tavern.
+		step
+			goto Elwynn Forest,85.3,69.8
+			.' Read a book: Lethargy of the Orcs|achieve 1244/14
+			.info On the second floor of the house.
+		step
+			goto Ironforge,74.86,8.95
+			.' Read a book: War of the Three Hammers|achieve 1244/41
+			.' Read a book: Ironforge - the Awakening of the Dwarves|achieve 1244/11
+		step
+			goto Ironforge,77.1,9.1
+			.' Read a book: Arathor and the Troll Wars|achieve 1244/3
+		step
+			goto Ironforge,76.92,12.54
+			.' Read a book: The Alliance of Lordaeron|achieve 1244/21
+			.' Read a book: Rise of the Horde|achieve 1244/18
+			.' Read a book: Civil War in the Plaguelands|achieve 1244/7
+		step
+			goto Ironforge,75.92,10.7
+			.' Read a book: The Battle of Grim Batol|achieve 1244/22
+			.' Read a book: Charge of the Dragonflights|achieve 1244/6
+			.' Read a book: The Old Gods and the Ordering of Azeroth|achieve 1244/33
+		step
+			goto Hillsbrad Foothills,51.6,58.6
+			.' Read a book: Kel'Thuzad and the Forming of the Scourge|achieve 1244/12
+			.info In the bedroom, on the second floor.
+		step
+			goto Darnassus,34.1,26
+			.' Read a book: Exile of the High Elves|achieve 1244/9
+			.info In the cave, on the table just behind the rogue trainer.
+		step
+			goto Darnassus,49.1,16.7
+			.' Read a book: Rise of the Blood Elves|achieve 1244/17
+			.info On the first floor.
+		step
+			goto Darnassus,49.1,16.1
+			.' Read a book: The War of the Ancients|achieve 1244/38
+			.info On the second floor!
+		step
+			goto Darnassus,56.2,4
+			.' Read a book: The World Tree and the Emerald Dream|achieve 1244/39
+		step
+			goto Darnassus,66.5,76.6
+			.' Read a book: The Betrayer Ascendant|achieve 1244/23
+		step
+			goto Ashenvale,34.5,49.5
+			.' Read a book: Sargeras and the Betrayal|achieve 1244/19
+		step
+			goto Tanaris,51,29.4
+			.' Read a book: Old Hatreds - The Colonization of Kalimdor|achieve 1244/16
+		step
+			.info The following books can only be found in dungeons.
+			.' Read a book: The Invasion of Draenor|achieve 1244/28
+			.info Only Scholomance.
+			.' Read a book: The Lich King Triumphant|achieve 1244/31
+			.info In Scholomance and Stratholme.
+			.' Read a book: The Seven Kingdoms|achieve 1244/36
+			.info In Scholomance and Stratholme.
+]])
+
 ZygorGuidesViewer.AllianceInstalled=true
