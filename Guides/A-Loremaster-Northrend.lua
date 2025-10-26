@@ -951,6 +951,7 @@ startlevel 68
 			goto Borean Tundra,63.51,23.81
 			.from Scavenge-bot 004-A8##25752, Sentry-bot 57-K##25753, Defendo-tank 66D##25758, Scavenge-bot 005-B6##25792, 55-D Collect-a-tron##25793
 			.collect The Ultrasonic Screwdriver##34984|q 11729 |future
+		step
 			.use The Ultrasonic Screwdriver##34984
 			..accept The Ultrasonic Screwdriver##11729
 		step
@@ -3629,12 +3630,12 @@ startlevel 72
 			.' Put 15 Indu'le Spirits to Rest|q 12031/1
 		step
 			goto Dragonblight,36.74,65.17
-			.' Interact with gameobject: Elder Mana'loa.
+			.' Interact with gameobject: Elder Mana'loa
 			..turnin Freedom for the Lingering##12031
 			..accept Conversing With the Depths##12032
 		step
 			goto Dragonblight,33.99,83.45
-			.' Interact with gameobject: The Pearl of the Depths.
+			.' Interact with gameobject: The Pearl of the Depths
 			.' Watch the dialogue.
 			.info A huge sea monster, Oacha'noa, will appear in the water nearby.
 			.info You will eventually receive a 30 second buff.
@@ -3715,11 +3716,14 @@ startlevel 72
 			.' Rescue 6 Trapped Wintergarde Villagers|q 12253/1
 			.info Kill the Vengeful Geists next to Trapped Wintergarde Villagers.
 			.info The Trapped Wintergarde Villagers look like humans.
-			.info They can be outside or inside the buildings around this area. |notinsticky
+			.info They can be outside or inside the buildings around this area.
 		step
 			goto Dragonblight,80.03,50.01
 			.kill 15 Vengeful Geist##27370|q 12258/1
 			.' You can find more inside the buildings around this area.
+		step
+			goto Dragonblight,80.16,45.5|n
+			.' Enter the lower part of the mine here|goto 80.16,45.5,0.5|q 12276
 		step
 			goto Dragonblight,81.52,42.21
 			.talk Slinkin the Demo-gnome##27412
@@ -3729,6 +3733,11 @@ startlevel 72
 			goto Dragonblight,80.74,41.32
 			.collect Wintergarde Mine Bomb##37465|q 12277
 			.info Inside the mine.
+		step
+			goto Dragonblight,80.30,41.87
+			.collect 10 Strange Ore##37359|q 12272/1
+			.info They look like dark colored mining nodes with light blue crystals.
+			.info You can find them on the ground all throughout the mine,
 		step
 			goto Dragonblight,80.14,45.35
 			.use Wintergarde Mine Bomb##37465
@@ -3744,11 +3753,6 @@ startlevel 72
 			.info There are still quests to complete inside the mine.
 			.info Don't stand too close to the bomb, it can damage you.
 			.' Destroy the Upper Wintergarde Mine Shaft|q 12277/1
-		step
-			goto Dragonblight,80.30,41.87
-			.collect 10 Strange Ore##37359|q 12272/1
-			.info They look like dark colored mining nodes with light blue crystals.
-			.info You can find them on the ground all throughout the mine.
 		step
 			goto Dragonblight,80.30,41.87
 			.from Risen Wintergarde Miner##27401
@@ -3790,7 +3794,7 @@ startlevel 72
 			.info Inside the crypt, on the bottom floor.
 		step
 			goto Dragonblight,78.62,52.28
-			.' Interact with gameobject: Flesh-bound Tome.
+			.' Interact with gameobject: Flesh-bound Tome
 			.info Inside the crypt, on the bottom floor.
 			..accept Secrets of the Scourge##12312
 		step
@@ -3825,7 +3829,7 @@ startlevel 72
 			.' Borrow the Wintergarde Gryphon |invehicle |q 12325
 		step
 			goto Dragonblight,89.60,46.86
-			.' Fly to Duke August Foehammer |outvehicle |q 12325 |noway
+			.' Fly to Duke August Foehammer |outvehicle |q 12325
 		step
 			goto Dragonblight,89.68,46.37
 			.talk Duke August Foehammer##27157
@@ -4219,10 +4223,16 @@ startlevel 72
 			.' Gain the Burning Depths Necrolyte Disguise |havebuff Spell_Shadow_NetherCloak |q 12263
 		step
 			goto Dragonblight,35.03,31.95|n
-			.' Move along the corridor to the end|goto 34.03,26.37,1 |q 12263
+			.' Move along the corridor to the end|goto 35.03,31.95,1|noway|q 12263
+		step
+			goto Dragonblight,34.03,26.37|n
+			.' Continue moving along the tunnel|goto 34.03,26.37,1|noway|q 12263
 		step
 			goto Dragonblight,31.4,30.9
 			.goal Uncover the Magmawyrm Resurrection Chamber|q 12263/1
+		step
+			goto Dragonblight,33.08,31.02|n
+			.' Take a shortcut here|goto 33.08,31.02,0.3|noway|q 12263
 		step
 			goto Dragonblight,35.21,30.05
 			.talk Serinar##26593
@@ -4303,7 +4313,7 @@ startlevel 72
 			.' Ride the Wyrmrest Vanquisher|invehicle|q 12498
 		step
 			goto Dragonblight,54.3,30.8
-			.' Ride the Wyrmrest Vanquisher |invehicle |q 12498 |use Ruby Beacon of the Dragon Queen##38302
+			.' Ride the Wyrmrest Vanquisher|invehicle |use Ruby Beacon of the Dragon Queen##38302 |q 12498
 			.kill Thiassi the Lightning Bringer##28018|n
 			.info He walks around this small area on top of the hill.
 			.info Use the abilities on your action bar.
@@ -4314,7 +4324,7 @@ startlevel 72
 			.info It appears on the ground after you kill Grand Necrolord Antiok.
 		step
 			goto Dragonblight,56.05,34.4
-			.' Ride the Wyrmrest Vanquisher |invehicle |q 12498 |use Ruby Beacon of the Dragon Queen##38302
+			.' Ride the Wyrmrest Vanquisher|invehicle |use Ruby Beacon of the Dragon Queen##38302 |q 12498
 			.kill 30 Wastes Scavenger##28005|q 12498/1
 		step
 			goto Dragonblight,64.90,73.64
@@ -5046,8 +5056,9 @@ startlevel 74
 			.info Inside the building.
 		step
 			goto Grizzly Hills,36.12,68.64
-			.from Silverbrook Hunter##27546+
-			.collect Mikhail's Journal##36940 |n
+			.from Silverbrook Hunter##27546
+			.collect Mikhail's Journal##36940|q 12105 |future
+		step
 			.use Mikhail's Journal##36940
 			..accept Descent into Darkness##12105
 		step
@@ -5645,7 +5656,7 @@ startlevel 74
 		step
 			goto Grizzly Hills,69.41,19.48
 			.talk Gan'jo##26924
-			.' Tell him _"I am ready to return to the realm of the living."_
+			.' Tell him "I am ready to return to the realm of the living."
 			.' Leave the Spirit Realm |nobuff Ability_Creature_Cursed_02|q 12137
 		step
 			goto Grizzly Hills,70.61,19.84
@@ -6886,7 +6897,8 @@ startlevel 74
 			.' Kill enemies around this area
 			.info They look like blue trolls.
 			.info You can find them all around the Altar of Sseratus area.
-			.collect Strange Mojo##38321 |n
+			.collect Strange Mojo##38321|q 12507 |future
+		step
 			.use Strange Mojo##38321
 			..accept Strange Mojo##12507
 		step
@@ -9207,7 +9219,8 @@ startlevel 77
 			.kill Stormforged War Golem##29380|n
 			.info They look like metal humanoid machines.
 			.info You can find them all around the Nidavelir area.
-			.collect Dark Armor Sample##42203|n
+			.collect Dark Armor Sample##42203|q 12979 |future
+		step
 			.use the Dark Armor Sample##42203
 			..accept Armor of Darkness##12979
 		step

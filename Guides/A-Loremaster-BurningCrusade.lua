@@ -2,20 +2,21 @@ local ZygorGuidesViewer=ZygorGuidesViewer
 if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Alliance" then return end
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Hellfire Peninsula",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\[62] Hellfire Peninsula",[[
 author danaton
 description This guide contain quest-chain (81 quests) for Hellfire Peninsula location.
-startlevel 70
+startlevel 62
 		step
-			.' Go inside Nethergarde Keep at 63.5,17|goto Blasted Lands,63.5,17
+			goto Blasted Lands,63.5,17
 			.talk Bernie Heisten##3546
 			.buy 1 Nethergarde Bitter##23848|q 9563 |future
 		step
-			goto 58.3,55.9
+			goto Blasted Lands,58.3,55.9
 			.talk Watch Commander Relthorn Netherwane##16841
 			..accept Through the Dark Portal##10119
 		step
-			.' Go into the big green portal to the Outlands|goto Hellfire Peninsula|noway|c
+			goto Blasted Lands,58.7,59.85|n
+			.' Go into the big green portal to the Outlands|goto Hellfire Peninsula|noway|q 10119
 		step
 			goto Hellfire Peninsula,87.3,50.7
 			.talk Commander Duron##19229
@@ -27,18 +28,14 @@ startlevel 70
 			..turnin Arrival in Outland##10288
 			..accept Journey to Honor Hold##10140
 		step
-			goto Hellfire Peninsula,87.4,52.4
+			goto Hellfire Peninsula,87.4,52.4|n
 			.talk Amish Wildhammer##18931
-			.' Fly to Honor Hold|goto Hellfire Peninsula,54.6,62.6,0.5|noway|c
+			.' Fly to Honor Hold|goto Hellfire Peninsula,54.6,62.6,1|noway|q 10140
 		step
 			goto Hellfire Peninsula,54.5,62.8
 			.talk Marshal Isildor##19308
 			..turnin Journey to Honor Hold##10140
 			..accept Force Commander Danath##10254
-		step
-			goto Hellfire Peninsula,54.2,63.6
-			.talk Sid Limbardi##16826
-			home Honor Hold
 		step
 			goto Hellfire Peninsula,56.6,66.7
 			.talk Force Commander Danath Trollbane##16819
@@ -61,16 +58,15 @@ startlevel 70
 			..accept The Path of Anguish##10142
 		step
 			goto Hellfire Peninsula,60.4,52.1
-			.collect 8 Salvaged Metal|q 10055/1
-			.collect 8 Salvaged Wood|q 10055/2
+			.collect 8 Salvaged Metal##25912|q 10055/1
+			.collect 8 Salvaged Wood##25911|q 10055/2
 			.info They are scraps on the ground around this area.
 			.kill 20 Bonechewer Orc|q 10482/1
 		step
-			goto Hellfire Peninsula,65.8,54.1
-			.' Be on the lookout for the giant Fel Reaver
-			.kill 1 Dreadcaller|q 10142/1
-			.kill 4 Flamewaker Imp|q 10142/2
-			.kill 6 Infernal Warbringer|q 10142/3
+			goto Hellfire Peninsula,66.95,57.33
+			.kill 1 Dreadcaller##19434|q 10142/1
+			.kill 4 Flamewaker Imp##19136|q 10142/2
+			.kill 6 Infernal Warbringer##19261|q 10142/3
 		step
 			goto Hellfire Peninsula,61.7,60.8
 			.talk Sergeant Altumus##19309
@@ -97,38 +93,42 @@ startlevel 70
 			.collect 4 Demonic Rune Stone##28513|q 10144
 		step
 			goto Hellfire Peninsula,72.7,59
-			.' Stand inside the portal and click it to destroy it|goal Disrupt Portal Kaalez|q 10144/2
+			.goal Disrupt Portal Kaalez|q 10144/2
+			.info Stand inside the portal and click it to destroy it.
 		step
 			goto Hellfire Peninsula,71.7,56.4
 			.from Netherhound##16950+, Wrathguard##18975+, Doomwhisperer##18981+, Fel Handler##19190+
 			.collect 4 Demonic Rune Stone##28513|q 10144
 		step
 			goto Hellfire Peninsula,71.4,55.2
-			.' Stand inside the portal and click it to destroy it|goal Disrupt Portal Grimh|q 10144/1
+			.goal Disrupt Portal Grimh|q 10144/1
+			.info Stand inside the portal and click it to destroy it.
 		step
 			goto Hellfire Peninsula,71.3,62.8
 			.talk Forward Commander Kingston##19310
 			..turnin Disrupt Their Reinforcements##10144
 			..accept Mission: The Murketh and Shaadraz Gateways##10146
 		step
-			goto Hellfire Peninsula,71.3,62.8
+			goto Hellfire Peninsula,71.3,62.8|n
 			.talk Wing Commander Dabir'ee##19409
-			.' Take the flight
-			.' Click the bomb in your bags, bomb Gateway Shaadraz|goal Gateway Shaadraz Destroyed|q 10146/2|use Seaforium PU-36 Explosive Nether Modulator##28038
-			.' Click the bomb in your bags, bomb Gateway Murketh|goal Gateway Murketh Destroyed|q 10146/1|use Seaforium PU-36 Explosive Nether Modulator##28038
+			.' Choose "I need a gryphon destroyer!"|goto 73.75,54.85,5 |q 10146
+		step
+			goto Hellfire Peninsula,77.72,51.83
+			.use Seaforium PU-36 Explosive Nether Modulator##28038
+			.goal Gateway Shaadraz Destroyed|q 10146/2
+		step
+			goto Hellfire Peninsula,78,47.22
+			.use Seaforium PU-36 Explosive Nether Modulator##28038
+			.goal Gateway Murketh Destroyed|q 10146/1
 		step
 			goto Hellfire Peninsula,71.4,62.7
 			.talk Forward Commander Kingston##19310
 			..turnin Mission: The Murketh and Shaadraz Gateways##10146
 			..accept Shatter Point##10340
 		step
-			goto Hellfire Peninsula,71.4,62.5
+			goto Hellfire Peninsula,71.4,62.5|n
 			.talk Wing Commander Dabir'ee##19409
-			.' Fly to Shatter Point|goto Hellfire Peninsula,78.5,35.1,1|noway|c
-		step
-			goto Hellfire Peninsula,78.4,34.9
-			.talk Runetog Wildhammer##20234
-			.fpath Shatter Point, Hellfire Peninsula
+			.' Fly to Shatter Point|goto Hellfire Peninsula,78.5,35.1,1|noway|q 10340
 		step
 			goto Hellfire Peninsula,78.4,34.9
 			.talk Runetog Wildhammer##20234
@@ -140,14 +140,16 @@ startlevel 70
 			..turnin Wing Commander Gryphongar##10344
 			..accept Mission: The Abyssal Shelf##10163
 		step
-			goto Hellfire Peninsula,78.3,34.5
+			goto Hellfire Peninsula,78.3,34.5|n
 			.talk Gryphoneer Windbellow##20235
-			.' Take a flight to the Abyssal Shelf
-			.' Use the Area 52 Special bomb in your bags to bomb the mobs|use Area 52 Special##28132
-			.info If you don't complete this in the first run, you can keep flying until it's done.
-			.kill 20 Gan'arg Peon|q 10163/1
-			.kill 5 Mo'arg Overseer|q 10163/2
+			.' Take a flight to the Abyssal Shelf|goto 72.83,26.04,5|noway|q 10163
+		step
+			goto Hellfire Peninsula,72.8,17.3
+			.use Area 52 Special##28132
+			.kill 20 Gan'arg Peon##19398|q 10163/1
+			.kill 5 Mo'arg Overseer##19397|q 10163/2
 			.' Destroy 5 Fel Cannons|goal 5 Fel Cannon Destroyed|q 10163/3
+			.info If you don't complete this in the first run, you can keep flying until it's done.
 		step
 			goto Hellfire Peninsula,79.3,33.9
 			.talk Wing Commander Gryphongar##20232
@@ -156,7 +158,7 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,78.3,34.5|n
 			.talk Gryphoneer Windbellow##20235
-			.' Fly to Honor Point|goto Hellfire Peninsula,68.7,28.2,1|noway|c
+			.' Fly to Honor Point|goto Hellfire Peninsula,68.7,28.2,1|noway|q 10382
 		step
 			goto Hellfire Peninsula,68.3,28.6
 			.talk Field Marshal Brock##20793
@@ -165,7 +167,7 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,64.8,31.9
 			.kill Razorsaw##20798|q 10394/2
-			.' Wanders, resurrection time 5 minutes
+			.info Wanders, resurrection time ~5 minutes.
 		step
 			goto Hellfire Peninsula,59.14,32.20
 			.kill 10 Gan'arg Servant##16947|q 10394/1
@@ -249,6 +251,8 @@ startlevel 70
 			goto Hellfire Peninsula,54.3,63.4
 			.talk Father Malgor Devidicus##16825
 			..accept An Old Gift##10058
+		step
+			goto Hellfire Peninsula,54.2,63.6
 			.talk Sid Limbardi##16826
 			..accept The Longbeards##9558
 		step
@@ -257,6 +261,8 @@ startlevel 70
 			..turnin The Dark Missive##10395
 			..accept The Heart of Darkness##10399
 			..accept The Path of Glory##10047
+		step
+			goto Hellfire Peninsula,56.6,66.7
 			.talk Force Commander Danath Trollbane##16819
 			..accept Overlord##10400
 		step
@@ -269,19 +275,20 @@ startlevel 70
 			..accept A Job for an Intelligent Man##9355
 			..accept When This Mine's a-Rockin'##10079
 		step
-			.' Go inside the cave to|goto 54.9,62.9
-			.kill 12 Gan'arg Sapper|q 10079/1
+			goto Hellfire Peninsula,54.9,62.9
+			.kill 12 Gan'arg Sapper##18827|q 10079/1
+			.info Inside the cave.
 		step
-			.' Go outside the cave to|goto 52,62.6
+			goto Hellfire Peninsula,52,62.6
 			.talk Foreman Biggums##16837
 			..turnin When This Mine's a-Rockin'##10079
 			..accept The Mastermind##10099
 		step
-			.' Go inside the cave to|goto 56.3,61.4
-			.kill Z'kral|q 10099/1
+			goto Hellfire Peninsula,56.3,61.4
+			.kill Z'kral##18974|q 10099/1
 			.info He is all the way at the bottom of the cave way in the back of the big room.
 		step
-			'Go outside the cave to|goto 52,62.6
+			goto Hellfire Peninsula,52,62.6
 			.talk Foreman Biggums##16837
 			..turnin The Mastermind##10099
 		step
@@ -307,7 +314,7 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,65.8,67.2
 			.from Bleeding Hollow Grunt##16871, Bleeding Hollow Peon##16907, Bleeding Hollow Necrolyte##19422, Bleeding Hollow Tormentor##19424
-			.get Cursed Talisman|q 10483/1
+			.get Cursed Talisman##30157|q 10483/1
 		step
 			goto Hellfire Peninsula,71,63.4
 			.talk Corporal Ironridge##21133
@@ -315,25 +322,26 @@ startlevel 70
 			..accept Cursed Talismans##10484
 		step
 			goto Hellfire Peninsula,55,86.8
-			.get Mysteries of the Light|q 10058/1
+			.collect Mysteries of the Light##25938|q 10058/1
 			.info It's a small white book laying on the steps of the house.
 		step
 			goto Hellfire Peninsula,58,79
-			.kill 10 Unyielding Sorcerer|q 10050/2
-			.kill 5 Unyielding Knight|q 10050/3
-			.kill 12 Unyielding Footman|q 10050/1
+			.kill 12 Unyielding Footman##16904|q 10050/1
+			.kill 10 Unyielding Sorcerer##16905|q 10050/2
+			.kill 5 Unyielding Knight##16906|q 10050/3
 		step
 			goto Hellfire Peninsula,49.2,74.8
 			.talk "Screaming" Screed Luckheed##19367
 			..accept In Case of Emergency...##10161
+		step
+			goto Hellfire Peninsula,49.2,74.8
 			.talk Legassi##19344
 			..accept Ravager Egg Roundup##9349
 		step
 			goto Hellfire Peninsula,41.2,84.4
-			.' Click Ravenger Eggs
-			.info They look like big white eggs on the ground around this area.
 			.from Razorfang Hatchling##16932+, Razorfang Ravager##16933+, Quillfang Skitterer##19189+
-			.get 12 Ravager Egg|q 9349/1
+			.get 12 Ravager Egg##23217|q 9349/1
+			.info They look like big white eggs on the ground around this area.
 		step
 			goto Hellfire Peninsula,49.2,74.8
 			.talk Legassi##19344
@@ -342,10 +350,10 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,50.2,74.8
 			.from Deranged Helboar##16863
-			.get Tainted Helboar Meat|n
+			.collect Tainted Helboar Meat##23270|n
 			.' Use your Purification Mixture on the Tainted Helboar Meat|use Purification Mixture##23268
 			.info The meat won't become purified every time, it can become toxic as well.
-			.get 8 Purified Helboar Meat|q 9361/1
+			.get 8 Purified Helboar Meat##23248|q 9361/1
 		step
 			goto Hellfire Peninsula,49.2,74.8
 			.talk Legassi##19344
@@ -354,22 +362,24 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,58.1,71.3
 			.from Bonestripper Buzzard##16972
-			.get 12 Plump Buzzard Wing|q 9356/1
-			.get 30 Zeppelin Debris|q 10161/1
+			.get 12 Plump Buzzard Wing##23239|q 9356/1
+			.collect 30 Zeppelin Debris##28116|q 10161/1
 			.info They look like scraps of metal all over the ground.
 		step
 			goto Hellfire Peninsula,49.2,74.8
 			.talk "Screaming" Screed Luckheed##19367
 			..turnin In Case of Emergency...##10161
 			..accept Voidwalkers Gone Wild##9351
+		step
+			goto Hellfire Peninsula,49.2,74.8
 			.talk Legassi##19344
 			..turnin Smooth as Butter##9356
 		step
 			goto Hellfire Peninsula,47.8,65.8
 			.kill 15 Marauding Crust Burster##16857|q 9355/1
+			.collect Eroded Leather Case##23338|q 9373 |future
 			.info They are under the jumping piles of rocks, they come up to fight when you get close to the jumping rocks.
-			.from Marauding Crust Burster##16857
-			.get Eroded Leather Case##23338|q 9373
+		step
 			.use Eroded Leather Case##23338
 			..accept Missing Missive##9373
 		step
@@ -398,6 +408,8 @@ startlevel 70
 			goto Hellfire Peninsula,23.1,40.3
 			.talk Anchorite Obadei##16834
 			..accept In Search of Sedai##9390
+		step
+			goto Hellfire Peninsula,23.1,40.2
 			.talk Ikan##16799
 			..accept Cruel Taskmasters##9399
 		step
@@ -410,10 +422,6 @@ startlevel 70
 			..turnin The Temple of Telhamat##10093
 			..accept The Pools of Aggonar##9426
 		step
-			goto Hellfire Peninsula,25.2,37.2
-			.talk Kuma##18785
-			.fpath Temple of Telhamat, Hellfire Peninsula
-		step
 			goto Hellfire Peninsula,26.9,37.4
 			.' Interact with gameobject: Sedai's Corpse
 			.info Right down the hill from the Temple of Telhamat Flight Path.
@@ -423,24 +431,28 @@ startlevel 70
 			goto Hellfire Peninsula,23.1,40.3
 			.talk Anchorite Obadei##16834
 			..turnin Return to Obadei##9423
+		step
+			goto Hellfire Peninsula,23.1,40.2
 			.talk Makuru##16833
 			..accept Makuru's Vengeance##9424
 		step
 			goto Hellfire Peninsula,34.6,34.7
 			.from Mag'har Grunt##16846+, Debilitated Mag'har Grunt##16847+
-			.get 10 Mag'har Ancestral Beads|q 9424/1
+			.get 10 Mag'har Ancestral Beads##23589|q 9424/1
 		step
 			goto Hellfire Peninsula,43.8,31.6
 			.kill Arazzius the Cruel##19191|q 10400/1
 		step
 			goto Hellfire Peninsula,38.9,29.1
-			.kill 6 Terrorfiend|q 9426/1
-			.kill 6 Blistering Rot|q 9426/2
-			.kill 10 Terrorfiend|q 10399/1
+			.kill 6 Terrorfiend##16951|q 9426/1
+			.kill 6 Blistering Rot##16901|q 9426/2
+			.kill 10 Terrorfiend##16951|q 10399/1
 		step
 			goto Hellfire Peninsula,23.1,40.3
 			.talk Makuru##16833
 			..turnin Makuru's Vengeance##9424
+		step
+			goto Hellfire Peninsula,23,40.4
 			.talk Anchorite Obadei##16834
 			..accept Atonement##9543
 		step
@@ -457,8 +469,8 @@ startlevel 70
 			..accept An Ambitious Plan##9383
 		step
 			goto Hellfire Peninsula,40.3,30.9
-			.' Get close to the ribcage of the skeleton and next to the poisoned water
 			.' Empty your Cleansing Vial in this spot|use Cleansing Vial##23361
+			.info Get close to the ribcage of the skeleton and next to the poisoned water.
 			.' Kill Aggonis|goal Aggonar's Presence Cleansed|q 9427/1
 		step
 			goto Hellfire Peninsula,23.4,36.5
@@ -473,7 +485,7 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,18.4,54.7
 			.from Hulking Helboar##16880
-			.get 6 Helboar Blood Sample|q 9372/1
+			.get 6 Helboar Blood Sample##23336|q 9372/1
 		step
 			goto Hellfire Peninsula,15.7,52
 			.talk Thiah Redmane##16991
@@ -489,9 +501,9 @@ startlevel 70
 			..turnin Testing the Antidote##10255
 		step
 			goto Hellfire Peninsula,15.1,55.7
-			.kill 4 Illidari Taskmaster|q 9399/1
+			.kill 4 Illidari Taskmaster##17058|q 9399/1
 			.info If you kill the taskmaster first, his friends leave you alone.
-			.get 10 Sha'naar Relic|q 9430/1
+			.get 10 Sha'naar Relic##23642|q 9430/1
 			.info The Sha'naar Relics look like little blue vases on the ground.
 		step
 			goto Hellfire Peninsula,15.6,58.8
@@ -504,8 +516,8 @@ startlevel 70
 			..accept A Traitor Among Us##10367
 		step
 			goto Hellfire Peninsula,14.3,63.5
-			.' Click the metal coffer on the floor in the big red hut
-			.get Sha'naar Key|q 10367/1
+			.collect Sha'naar Key##29501|q 10367/1
+			.info The metal coffer on the floor in the big red hut.
 		step
 			goto Hellfire Peninsula,16.3,65.1
 			.talk Naladu##19361
@@ -532,7 +544,7 @@ startlevel 70
 			goto Hellfire Peninsula,14.4,62.3
 			.' Wait until Arzeth the Merciless is up top of the stairs by himself
 			.' Use the Staff of the Dreghood Elders on Arzeth the Merciless|use Staff of the Dreghood Elders##29513
-			.kill Arzeth the Powerless|q 10369/1
+			.kill Arzeth the Powerless##20680|q 10369/1
 		step
 			goto Hellfire Peninsula,16.3,65.1
 			.talk Naladu##19361
@@ -543,17 +555,19 @@ startlevel 70
 			..turnin The Longbeards##9558
 			..accept The Arakkoa Threat##9417
 			..accept Rampaging Ravagers##9385
+		step
+			goto Hellfire Peninsula,24,72.3
 			.talk Mirren Longbeard##16851
 			..accept Gaining Mirren's Trust##9563
 			..turnin Gaining Mirren's Trust##9563
 			..accept The Finest Down##9420
 		step
 			goto Hellfire Peninsula,25.6,70.3
-			.kill 4 Haal'eshi Windwalker|q 9417/1
-			.kill 6 Haal'eshi Talonguard|q 9417/2
-			.' Click the Kaliri nests and kill Kaliri birds
+			.kill 4 Haal'eshi Windwalker##16966|q 9417/1
+			.kill 6 Haal'eshi Talonguard##16967|q 9417/2
+			.from Kaliri Matriarch##17035, Kaliri Swooper##17053
+			.get 8 Kaliri Feather##23588|q 9420/1
 			.info The nests look like little brown nests with pink eggs in them.
-			.get 8 Kaliri Feather|q 9420/1
 		step
 			goto Hellfire Peninsula,26.1,77.1|n
 			.' The path up to Avruu starts here|goto Hellfire Peninsula,26.1,77.1,0.5|noway|q 9418 |future
@@ -566,45 +580,47 @@ startlevel 70
 			..accept Avruu's Orb##9418
 		step
 			goto Hellfire Peninsula,29,81.5
-			.' Click the Haal'eshi Altar
+			.' Interact with gameobject: Haal'eshi Altar
 			.info It looks like an orb sitting in a claw thing, right in front of a big purple hut.
-			.' Fight Aeranas until he's almost dead
+			.' Fight Aeranas until he's almost dead.
 			.talk Aeranas##17085
 			..turnin Avruu's Orb##9418
 		step
 			goto Hellfire Peninsula,24,72.1
 			.talk Gremni Longbeard##16850
 			..turnin The Arakkoa Threat##9417
+		step
+			goto Hellfire Peninsula,24,72.3
 			.talk Mirren Longbeard##16851
 			..turnin The Finest Down##9420
 		step
 			goto Hellfire Peninsula,23.7,69.2
-			.kill 10 Quillfang Ravager|q 9385/1
+			.kill 10 Quillfang Ravagers|q 9385/1
 		step
 			goto Hellfire Peninsula,24,72.1
 			.talk Gremni Longbeard##16850
 			..turnin Rampaging Ravagers##9385
 		step
 			goto Hellfire Peninsula,26.9,69.5
-			.kill 8 Stonescythe Whelp|q 9398/2
+			.kill 8 Stonescythe Whelp##16927|q 9398/2
 		step
 			goto Hellfire Peninsula,32.1,59.3
-			.kill 4 Stonescythe Alpha|q 9398/1
+			.kill 4 Stonescythe Alpha##16929|q 9398/1
 			.' You can find 2 more Stonescythe Alphas|at 33.7,62.1
 		step
 			goto Hellfire Peninsula,49.5,81.8
 			.from Rogue Voidwalker##16974+, Uncontrolled Voidwalker##16975+
-			.get 10 Condensed Voidwalker Essence|q 9351/1
+			.get 10 Condensed Voidwalker Essence##23218|q 9351/1
 			.' Use your Sanctified Crystal on an Uncontrolled Voidwalker when it's almost dead|use Sanctified Crystal##23417
-			.' Click the red floating crystal over its corpse
-			.get Glowing Sanctified Crystal|q 9383/1
+			.' Click the red floating crystal over its corpse.
+			.get Glowing Sanctified Crystal##23442|q 9383/1
 		step
 			goto Hellfire Peninsula,53.6,81.1
-			.kill Arch Mage Xintor|q 10057/1
+			.kill Arch Mage Xintor##16977|q 10057/1
 			.info Near a bunch of practice fighting dummies.
 		step
 			goto Hellfire Peninsula,54.7,83.7
-			.kill Lieutenant Commander Thalvos|q 10057/2
+			.kill Lieutenant Commander Thalvos##16978|q 10057/2
 			.info Walking around on a black platform thing. He's a blue ghost dwarf.
 		step
 			goto Hellfire Peninsula,49.2,74.8
@@ -618,12 +634,14 @@ startlevel 70
 			goto Hellfire Peninsula,56.7,66.5
 			.talk Warp-Scryer Kryv##16839
 			..turnin The Heart of Darkness##10399
+		step
+			goto Hellfire Peninsula,56.6,66.7
 			.talk Force Commander Danath Trollbane##16819
 			..turnin Overlord##10400
 		step
 			goto Hellfire Peninsula,64.2,71.8
 			.from Bleeding Hollow Grunt##16871+, Bleeding Hollow Dark Shaman##16873+, Bleeding Hollow Peon##16907+, Bleeding Hollow Necrolyte##19422+
-			.get 12 Cursed Talisman|q 10484/1
+			.get 12 Cursed Talisman##30157|q 10484/1
 		step
 			goto Hellfire Peninsula,71,63.4
 			.talk Corporal Ironridge##21133
@@ -644,7 +662,7 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,70.1,76.9
 			.from Warlord Morkh##16964
-			.get Morkh's Shattered Armor|q 10485/1
+			.get Morkh's Shattered Armor##30158|q 10485/1
 		step
 			goto Hellfire Peninsula,66.4,76.6
 			.' Use your Smoke Beacon under the tower|use Smoke Beacon##31739
@@ -669,14 +687,14 @@ startlevel 70
 			..accept Fel Spirits##10909
 			..accept Digging for Prayer Beads##10916
 		step
-			.' Go outside and behind the inn to|goto 54.2,63.3
-			.get Draenei Prayer Beads|q 10916/1
+			goto Hellfire Peninsula,54.2,63.3
+			.collect Draenei Prayer Beads##31795|q 10916/1
 			.info It's a small mound of dirt behind the inn.
 		step
 			goto Hellfire Peninsula,45,75
 			.' Use the Anchorite Relic in your bags|use Anchorite Relic##31772
-			.' Pull orcs to the relic
-			.' Kill the orcs and a Fel Spirit will spawn
+			.' Pull orcs to the relic.
+			.' Kill the orcs and a Fel Spirit will spawn.
 			.' Kill 10 Fel Spirits|goal 10 Jules Avenged|q 10909/1
 		step
 			goto Hellfire Peninsula,54.3,63.6
@@ -687,8 +705,8 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,54.0,63.5
 			.talk Anchorite Barada##22431
-			.' Click 'I am ready...'
-			.' Target the purple skulls and oozes
+			.' Choose 'I am ready...'
+			.' Target the purple skulls and oozes.
 			.' Use the Ritual Prayer Beads when enemies are in the room|use Ritual Prayer Beads##31828
 			.' After the exorcism is done, talk Colonel Jules on the bed to save him|goal Colonel Jules Saved|q 10935/1
 		step
@@ -714,6 +732,8 @@ startlevel 70
 			.talk Amaan the Wise##16796
 			..turnin Sha'naar Relics##9430
 			..accept The Seer's Relic##9545
+		step
+			goto Hellfire Peninsula,23.2,36.7
 			.talk Elsaana##17006
 			..turnin An Ambitious Plan##9383
 		step
@@ -727,13 +747,15 @@ startlevel 70
 			..turnin The Seer's Relic##9545
 		step
 			goto Hellfire Peninsula,33.4,65.1
-			.' Inside the Cave
 			.from Blacktalon the Savage##17057
-			.get 1 Blacktalon's Claws##23687|q 9490/1
+			.info Inside the Cave.
+			.get Blacktalon's Claws##23687|q 9490/1
 		step
-			goto Hellfire Peninsula,15.7,52
+			goto Hellfire Peninsula,16,52.2
 			.talk Amythiel Mistwalker##16885
 			..accept The Cenarion Expedition##9912
+		step
+			goto Hellfire Peninsula,15.9,52.2
 			.talk Mahuram Stouthoof##16888
 			..accept Keep Thornfang Hill Clear!##10159
 		step
@@ -743,15 +765,18 @@ startlevel 70
 		step
 			goto Hellfire Peninsula,15.7,40.7
 			.kill 5 Raging Colossus##19188|q 10132/1
-			..accept Crimson Crystal Clue##10134|use Crimson Crystal Shard##29476
+			.collect Crimson Crystal Shard##29476|q 10134 |future
+		step
+			.use Crimson Crystal Shard##29476
+			..accept Crimson Crystal Clue##10134
 		step
 			goto Hellfire Peninsula,23.1,40.3
 			.talk Ikan##16799
 			..turnin The Rock Flayer Matriarch##9490
 		step
 			goto Hellfire Peninsula,12.3,49.9
-			.kill 8 Thornfang Ravager|q 10159/1
-			.kill 8 Thornfang Venomspitter|q 10159/2
+			.kill 8 Thornfang Ravager##19349|q 10159/1
+			.kill 8 Thornfang Venomspitter##19350|q 10159/2
 		step
 			goto Hellfire Peninsula,15.6,52
 			.talk Tola'thion##19293
@@ -766,6 +791,7 @@ startlevel 70
 			goto Hellfire Peninsula,16,51.6
 			.talk Earthbinder Galandria Nightbreeze##19294
 			..turnin The Earthbinder##10349
+			.' Watch the dialogue.
 			..accept Natural Remedies##10351
 		step
 			goto Hellfire Peninsula,13.63,39.11
@@ -782,25 +808,28 @@ startlevel 70
 			.' Congratulations! +80 quests for achievement "To Hellfire and Back".
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Zangarmarsh",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\[64] Zangarmarsh",[[
 author danaton
 description This guide contain quest-chain (57 quests) for Zangarmarsh location.
-startlevel 70
+startlevel 64
 		step
-			.' It is recommended that you complete guide first: Hellfire Peninsula|tip Manually skip this step
+			.' It is recommended that you complete guide first: Hellfire Peninsula
+			.info Manually skip this step.
 		step
-			goto Hellfire Peninsula,15.7,52
+			goto Hellfire Peninsula,16,52.2
 			.talk Amythiel Mistwalker##16885
 			..accept The Cenarion Expedition##9912
 		step
 			goto Zangarmarsh,80.4,64.2
 			.talk Ikeyen##17956
 			..accept The Umbrafen Tribe##9747
+		step
+			goto Zangarmarsh,80.3,64.2
 			.talk Lauranna Thar'well##17909
 			..accept Plants of Zangarmarsh##9802
 		step
 			goto Zangarmarsh,79.1,64.9
-			.' Click Wanted Poster
+			.' Interact with gameobject: Wanted Poster
 			..accept Leader of the Darkcrest##9730
 			..accept Leader of the Bloodscale##9817
 		step
@@ -820,7 +849,8 @@ startlevel 70
 			..accept A Warm Welcome##9728
 		step
 			goto Zangarmarsh,82,74.6
-			.kill Boglash|q 9895/1|tip I found Boglash here. He is a tall alien looking thing with really long legs. He walks around in the water, so some searching may be necessary.
+			.kill Boglash|q 9895/1
+			.info He is a tall alien looking thing with really long legs. He walks around in the water, so some searching may be necessary.
 		step // del this step
 			.kill Boglash and Fen Striders|n|tip It's easier if you just run around in the water all around the east part of Zangarmarsh.
 			.collect 6 Fertile Spores##24449|q 9806/1|future
@@ -832,25 +862,29 @@ startlevel 70
 			..turnin Plants of Zangarmarsh##9802
 		step
 			goto Zangarmarsh,85.3,90.9
-			.kill Kataru|q 9747/1|tip In the big building, all the way at the top.
+			.kill Kataru|q 9747/1
+			.info In the big building, all the way at the top.
 		step
 			goto Zangarmarsh,85.4,82
 			.kill 6 Umbrafen Oracle|q 9747/2
 			.kill 8 Umbrafen Seer|q 9747/3
 			.kill 6 Umbrafen Witchdoctor|q 9747/4
-			.' Position 1|at Zangarmarsh,84.4,89.15
-			.' Position 2|at Zangarmarsh,82.85,85.3
+			.' You can find more around (1)|at 84.4,89.15
+			.' You can find more around (2)|at 82.85,85.3
 		step
 			goto Zangarmarsh,83.4,85.5
 			.talk Kayra Longmane##17969
 			..accept Escape from Umbrafen##9752
+		step
 			goto Zangarmarsh,79.84,71.3
-			.'Escort Kayra Longmane|goal Escort Kayra Longmane to safety|q 9752/1
+			.' Escort Kayra Longmane|goal Escort Kayra Longmane to safety|q 9752/1
 		step
 			goto Zangarmarsh,80.4,64.2
 			.talk Ikeyen##17956
 			..turnin The Umbrafen Tribe##9747
 			..accept A Damp, Dark Place##9788
+		step
+			goto Zangarmarsh,80.3,64.2
 			.talk Lauranna Thar'well##17909
 			..accept Saving the Sporeloks##10096
 		step
@@ -868,15 +902,16 @@ startlevel 70
 			..turnin Escape from Umbrafen##9752
 		step
 			goto Zangarmarsh,74.7,91.6
-			.' The path to 'Ikeyen's Belongings' starts here|goto Zangarmarsh,74.7,91.6,0.3|noway|c
+			.' The path to 'Ikeyen's Belongings' starts here|goto Zangarmarsh,74.7,91.6,0.5|noway|q 9788
 		step
-			.'Go southwest inside the cave to 70.5,97.9|goto 70.5,97.9
-			.' Click Ikeyen's Belongings|tip A little tan metal chest sitting on a beg flat rock.
-			.get Ikeyen's Belongings|q 9788/1
+			goto Zangarmarsh,70.5,97.9
+			.collect Ikeyen's Belongings##24411|q 9788/1
+			.info A little tan metal chest sitting on a beg flat rock (inside the cave).
 		step
 			goto Zangarmarsh,72.5,94.0
-			.'Go northeast inside the cave
-			.kill Lord Klaq|q 9894/1|tip On the bottom level of the cave, in the small round room all the way in the back.
+			.' Go northeast inside the cave
+			.kill Lord Klaq|q 9894/1
+			.info On the bottom level of the cave, in the small round room all the way in the back.
 		step
 			goto Zangarmarsh,75.7,90.2
 			.kill 10 Marsh Lurker|q 10096/2
@@ -922,6 +957,8 @@ startlevel 70
 			.talk Lauranna Thar'well##17909
 			..turnin Plants of Zangarmarsh##9802
 			..turnin Saving the Sporeloks##10096
+		step
+			goto Zangarmarsh,80.4,64.2
 			.talk Ikeyen##17956
 			..turnin A Damp, Dark Place##9788
 		step
@@ -942,10 +979,6 @@ startlevel 70
 			.talk Windcaller Blackhoof##18070
 			..turnin Blessings of the Ancients##9785
 		step
-			goto Zangarmarsh,67.8,51.5
-			.talk Munci##18788
-			..fpath Telredor, Zangarmarsh
-		step
 			goto Zangarmarsh,68.3,50.1
 			.talk Vindicator Idaar##18004
 			..accept The Dead Mire##9782
@@ -962,26 +995,29 @@ startlevel 70
 			goto Zangarmarsh,67.7,48
 			.talk Haalrun##18005
 			..accept Too Many Mouths to Feed##9781
+		step
+			goto Zangarmarsh,67.6,47.9
 			.talk Noraani##18006
 			..accept Menacing Marshfangs##9791
 		step
 			goto Zangarmarsh,71.3,46.9
-			.' Click the little green glowing mushrooms around this area
-			.get 6 Fulgor Spore|q 9777/1
-			.' Position 1 (Lift)|at Zangarmarsh,70.06,50.95
-			.' Position 2 (Graveyard)|at Zangarmarsh,65.15,51.3
+			.collect 6 Fulgor Spore##24383|q 9777/1
+			.info Little green glowing mushrooms around this area.
+			.' You can find more around (Lift)|at 70.06,50.95
+			.' You can find more around (Graveyard)|at 65.15,51.3
 		step
 			goto Zangarmarsh,62,40.83
-			.' Use your Ironvine Seeds on the Lagoon Pump Controls|use Ironvine Seeds##24355|tip The pump controls look like a little box with some levers on it.
+			.' Use your Ironvine Seeds on the Lagoon Pump Controls|use Ironvine Seeds##24355
+			.info The pump controls look like a little box with some levers on it.
 			.' Serpent Lake Controls Disabled|q 9720/3
 			.' Kill Steam Pump Overseers, Bloodscale Overseers, and Bloodscale Wavecallers
-			.get Drain Schematics|n
-			.' Click the Drain Schematics in your bags|use Drain Schematics##24330
+			.collect Drain Schematics##24330|q 9731 |future
+		step
+			.use Drain Schematics##24330
 			..accept Drain Schematics##9731
 		step
 			goto Zangarmarsh,80.7,43.4
-			.' Click the Dead Mire Soil mound
-			.get Dead Mire Soil Sample|q 9782/1
+			.collect Dead Mire Soil Sample|q 9782/1
 		step
 			goto Zangarmarsh,85.3,50.35
 			.kill 10 Marshfang Ripper|q 9791/1
@@ -1005,12 +1041,14 @@ startlevel 70
 			..accept Unfinished Business##9901
 		step
 			goto Zangarmarsh,78.44,44.43
-			.kill Sporewing|q 9901/1|tip He looks like a Sporebat.
+			.kill Sporewing|q 9901/1
+			.info He looks like a Sporebat.
 		step
 			goto Zangarmarsh,78.3,45.2
 			.kill 12 Withered Giant|q 9783/1
-			.get Withered Basidium|n
-			.' Click the Withered Basidium|use Withered Basidium##24483
+			.collect Withered Basidium##24483|q 9827 |future
+		step
+			.use Withered Basidium##24483
 			..accept Withered Basidium##9827
 		step
 			goto Zangarmarsh,68.3,50.1
@@ -1039,49 +1077,55 @@ startlevel 70
 		step
 			goto Zangarmarsh,74.2,60.7
 			.kill 10 Mire Hydra|q 9781/1
+		step
 			goto Zangarmarsh,75.75,63.9
 			.from Umbrafen Eel##18138
 			.get 8 Eel Filet|q 9780/1
 		step
 			goto Zangarmarsh,63.13,64.11
-			.' Use your Ironvine Seeds on the Lagoon Pump Controls|use Ironvine Seeds##24355|tip The pump controls look like a little box with some levers on it.
+			.' Use your Ironvine Seeds on the Lagoon Pump Controls|use Ironvine Seeds##24355
+			.info The pump controls look like a little box with some levers on it.
 			.' Lagoon Controls Disabled|q 9720/4
 		step
 			goto Zangarmarsh,70.6,80.3
-			.' Use your Ironvine Seeds on the Lagoon Pump Controls|use Ironvine Seeds##24355|tip The pump controls look like a little box with some levers on it.
+			.' Use your Ironvine Seeds on the Lagoon Pump Controls|use Ironvine Seeds##24355
+			.info The pump controls look like a little box with some levers on it.
 			.' Umbrafen Lake Controls Disabled|q 9720/1
 		step
 			goto Zangarmarsh,67.7,48
 			.talk Haalrun##18005
 			..turnin Too Many Mouths to Feed##9781
 			..accept Diaphanous Wings##9790
+		step
+			goto Zangarmarsh,67.6,47.9
 			.talk Noraani##18006
 			..turnin Umbrafen Eel Filets##9780
 		step
 			goto Zangarmarsh,69.9,60.9
 			.from Umbraglow Stinger##18132, Marshlight Bleeder##18133
 			.get 8 Diaphanous Wing|q 9790/1
-			.' Position 1 (drop-chance 27%)|at Zangarmarsh,72.44,57.48
-			.' Position 2 (drop-chance 27%)|at Zangarmarsh,71.2,67.99
-			.' Position 3 (drop-chance 27%)|at Zangarmarsh,78.2,70.2
-			.' Position 4 (drop-chance 27%)|at Zangarmarsh,78.7,80.2
-			.' Position 5 (drop-chance 27%)|at Zangarmarsh,67.84,76.7
-			.' Position 6 (drop-chance 27%)|at Zangarmarsh,63.5,71.5
-			.' Position 7 (80% drop-chance)|at Zangarmarsh,15.7,38.7
+			.' Position 1 (drop-chance 27%)|at 72.44,57.48
+			.' Position 2 (drop-chance 27%)|at 71.2,67.99
+			.' Position 3 (drop-chance 27%)|at 78.2,70.2
+			.' Position 4 (drop-chance 27%)|at 78.7,80.2
+			.' Position 5 (drop-chance 27%)|at 67.84,76.7
+			.' Position 6 (drop-chance 27%)|at 63.5,71.5
+			.' Position 7 (80% drop-chance)|at 15.7,38.7
 		step
 			goto Zangarmarsh,67.7,48
 			.talk Haalrun##18005
 			..turnin Diaphanous Wings##9790
 		step
 			goto Zangarmarsh,50.4,40.8
-			.' Locate the drain in Serpent Lake|q 9731/1|tip Swim straight down at this spot.
+			.' Locate the drain in Serpent Lake|q 9731/1
+			.info Swim straight down at this spot.
 		step
 			goto Zangarmarsh,49.5,59.2
 			.from Blacksting##18283
 			.get Blacksting's Stinger|q 9896/1
 		step
 			goto Zangarmarsh,44.5,66.1
-			.' The path up to 'The Boha'mu Ruins' starts here|goto Zangarmarsh,44.5,66.1,0.5|noway|c
+			.' The path up to 'The Boha'mu Ruins' starts here|goto Zangarmarsh,44.5,66.1,0.5|noway|q 9786
 		step
 			goto Zangarmarsh,44.1,68.8
 			.' Explore the Boha'mu Ruins|goal Explore the Boha'mu Ruins|q 9786/1
@@ -1089,7 +1133,8 @@ startlevel 70
 			goto Zangarmarsh,32.8,59.1
 			.from "Count" Ungula##18285
 			.get "Count" Ungula's Mandible|n
-			.' Click "Count" Ungula's Mandible|use "Count" Ungula's Mandible##25459
+		step
+			.use "Count" Ungula's Mandible##25459
 			..accept The Count of the Marshes##9911
 		step
 			goto Zangarmarsh,23.3,66.2
@@ -1159,16 +1204,12 @@ startlevel 70
 			.talk Gzhun'tt##17856
 			..turnin Now That We're Friends...##9726
 		step
-			goto Zangarmarsh,41.3,29
-			.talk Halu##22485
-			..fpath Orebor Harborage, Zangarmarsh
-		step
 			goto Zangarmarsh,41.2,28.7
 			.talk Timothy Daniels##18019
 			..accept Secrets of the Daggerfen##9848
 		step
 			goto Zangarmarsh,41.7,27.3
-			.' Click the Wanted Poster
+			.' Interact with gameobject: Wanted Poster
 			.info On a pink crystal post.
 			..accept Wanted: Chieftain Mummaki##10116
 		step
@@ -1179,14 +1220,12 @@ startlevel 70
 			..accept Daggerfen Deviance##10115
 		step
 			goto Zangarmarsh,26.4,22.8
-			.' Click the Daggerfen Poison Vial
+			.collect Daggerfen Poison Vial##24500|q 9848/2
 			.info Little clear bottle with white liquid in it, sitting on the ground next to a hut.
-			.get Daggerfen Poison Vial|q 9848/2
 		step
 			goto Zangarmarsh,24.4,27
-			.' Click the Daggerfen Poison Manual
+			.collect Daggerfen Poison Manual##24499|q 9848/1
 			.info At the top of the big tower, to the right as you reach the top, on the floor.
-			.get Daggerfen Poison Manual|q 9848/1
 		step
 			goto Zangarmarsh,23.8,26.8
 			.from Chieftain Mummaki##19174
@@ -1250,8 +1289,8 @@ startlevel 70
 		step
 			goto Zangarmarsh,17.3,10.2
 			.kill 10 Ango'rosh Mauler|q 9839/2
-			.' Click the brown crates and kill ogres around this area
-			.get 10 Box of Mushrooms|q 9709/1
+			.collect 10 Box of Mushrooms|q 9709/1
+			.info In boxes around the area, or from ogres.
 		step
 			goto Zangarmarsh,18.3,7.7
 			.kill 1 Overlord Gorefist|q 9839/1
@@ -1279,7 +1318,7 @@ startlevel 70
 			goto Zangarmarsh,23.3,66.2
 			.talk Watcher Leesa'oh##17831
 			..turnin Stealing Back the Mushrooms##9709
-			.' Don't follow her when she walks away
+			.info Don't follow her when she walks away.
 		step
 			goto Zangarmarsh,41.6,27.3
 			.talk Maktu##18010
@@ -1338,14 +1377,17 @@ startlevel 70
 			goto Zangarmarsh,78.4,62
 			.talk Ysiel Windsinger##17841
 			..turnin Return to the Marsh##9732
+		step
+			.' Congratulations! +57/54 quests for achievement "Mysteries of the Marsh".	
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Terokkar Forest",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\[64] Terokkar Forest",[[
 author danaton
 description This guide contain quest-chain for Terokkar Forest (64/63 quests) and Skettis location.
-	startlevel 70
+startlevel 64
 		step
-			.' It is recommended that you complete guide first: Zangarmarsh|tip Manually skip this step
+			.' It is recommended that you complete guide first: Zangarmarsh
+			.info Manually skip this step.
 		step
 			goto Zangarmarsh,78.5,63.1
 			.talk Lethyn Moonfire##17834
@@ -1423,10 +1465,12 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			..accept It's Watching You!##9951
 		step
 			goto Terokkar Forest,45.1,21.8
-			.' Examine the Strange Object|goal Strange Object examined|q 9971/1|tip Inside the building, looks like a white ball on the floor next to a dead guy.
+			.' Examine the Strange Object|goal Strange Object examined|q 9971/1
+			.info Inside the building, looks like a white ball on the floor next to a dead guy.
 		step
 			goto Terokkar Forest,43.4,22.1
-			.kill Naphthal'ar|q 9951/1|tip At the top of the big tower.
+			.kill Naphthal'ar|q 9951/1
+			.info At the top of the big tower.
 		step
 			goto Terokkar Forest,45,22.5
 			.talk Warden Treelos##18424
@@ -1456,26 +1500,28 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			..accept Wind Trader Lathrai##9979
 		step
 			goto Terokkar Forest,49.2,20.3
-			.' Click the Eastern Altar
+			.' Interact with gameobject: Eastern Altar
 			.' Purify the Eastern Altar|goal Eastern Altar|q 10021/2
 		step
 			goto Terokkar Forest,49.9,16.5|n
-			.' The path up to the Eye of Veil Reskk starts here|goto Terokkar Forest,49.9,16.5,0.3|noway|c
+			.' The path up to the Eye of Veil Reskk starts here|goto Terokkar Forest,49.9,16.5,0.5|noway|q 10847
 		step
 			goto Terokkar Forest,50.1,19.4
-			.' Click the Eye of Veil Reskk|tip Looks like a big white orb at the top of the tower across the hanging bridge.
+			.' Click the Eye of Veil Reskk
+			.info Looks like a big white orb at the top of the tower across the hanging bridge.
 			.get Eye of Veil Reskk|q 10847/1
 		step
 			goto Terokkar Forest,50.7,16.6
-			.' Click the Northern Altar
+			.' Interact with gameobject: Northern Altar
 			.' Purify the Northern Altar|goal Northern Altar|q 10021/1
 		step
 			goto Terokkar Forest,48.1,14.5
-			.' Click the Western Altar
+			.' Interact with gameobject: Western Altar
 			.' Purify the Western Altar|goal Western Altar|q 10021/3
 		step
 			goto Terokkar Forest,57.9,23.2
-			.' Click the Eye of Veil Shienor|tip Climb the path inside the other tree, run across the bridge, looks like a big white orb on the ground.
+			.' Click the Eye of Veil Shienor
+			.info Climb the path inside the other tree, run across the bridge, looks like a big white orb on the ground.
 			.get Eye of Veil Shienor|q 10847/2
 		step
 			.goto Shattrath City,64.3,42.3
@@ -1523,9 +1569,9 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			..accept The Tomb of Lights##10840
 		step
 			goto Terokkar Forest,35.2,48.8
-			.kill Infested Root-Walker##22095 |n
+			.kill Infested Root-Walker##22095|n
 			.kill 25 Wood Mite|q 10896/1
-			.' You can find more Infested Root-walkers at 39.1,47.0|n
+			.' You can find more Infested Root-walkers|at 39.1,47
 		step
 			goto Terokkar Forest,47.08,56.42
 			.kill 10 Ethereal Nethermancer##21370|q 10840/1
@@ -1537,14 +1583,15 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			..accept Escaping the Tomb##10887
 		step
 			goto Terokkar Forest,34.08,51.72
-			Escort and help Akuno find his way to the Refugee Caravan|q 10887/1
+			.' Escort and help Akuno find his way to the Refugee Caravan|q 10887/1
 		step
 			goto Terokkar Forest,32.2,52.8
 			.kill 8 Cabal Skirmisher|q 10878/1
 			.from Cabal Abjurist##21660, Cabal Skirmisher##21661, Cabal Tomb-Raider##21662
 			.get 10 Mark of Kil'jaeden|q 10325/1
-			.get Cabal Orders|n
-			.' Click the Cabal Orders|use Cabal Orders##31707
+			.collect Cabal Orders##31707|q 10880 |future
+		step
+			.use Cabal Orders##31707
 			..accept Cabal Orders##10880
 		step
 			goto Terokkar Forest,37.5,50.8
@@ -1574,18 +1621,21 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			..turnin Before Darkness Falls##10878
 		step
 			goto Terokkar Forest,31.3,52.65
-			.' Go To Shadow Tomb Entrance|goto Terokkar Forest,31.3,52.65|noway|c|q 10881
+			.' Go To Shadow Tomb Entrance|goto Terokkar Forest,31.3,52.65|noway|q 10881
 		step
 			goto Terokkar Forest,29.7,51.7
-			.' Click the Cabal Chest|tip Inside the Shadow Tomb, inside a Cabal Chest in the back left of the room on the ground.
+			.' Click the Cabal Chest
+			.info Inside the Shadow Tomb, inside a Cabal Chest in the back left of the room on the ground.
 			.get Gavel of K'alen|q 10881/2
 		step
 			goto Terokkar Forest,32.1,51.2
-			.' Click the Cabal Chest|tip Inside the Shadow Tomb, inside a Cabal Chest in the back left of the room on the ground.
+			.' Click the Cabal Chest
+			.info Inside the Shadow Tomb, inside a Cabal Chest in the back left of the room on the ground.
 			.get Drape of Arunen|q 10881/1
 		step
 			goto Terokkar Forest,31.2,46.7
-			.' Click the Cabal Chest|tip Inside the Shadow Tomb, inside a Cabal Chest in the back right of the room on the ground.
+			.' Click the Cabal Chest
+			.info Inside the Shadow Tomb, inside a Cabal Chest in the back right of the room on the ground.
 			.get Scroll of Atalor|q 10881/3
 		step
 			goto Terokkar Forest,37.4,51.2
@@ -1654,6 +1704,8 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			goto Terokkar Forest,31,76.1
 			.talk Commander Ra'vaj##22446
 			..accept An Improper Burial##10913
+		step
+			goto Terokkar Forest,31.1,76.1
 			.talk Chief Archaeologist Letoll##22458
 			..accept Digging Through Bones##10922
 			.' Escort the Archaeologists|goal Protect the Explorers|q 10922/1
@@ -1702,12 +1754,13 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			..accept Skywing##10898
 		step
 			goto Terokkar Forest,55.63,69.55
-			.' Escort Skywing|q 10898/1|tip Follow Skywing and protect him.
+			.' Escort Skywing|q 10898/1
+			.info Follow Skywing and protect him.
 			.kill Luanga the Imprisoner##18533|q 10898/1
 		step
 			goto Terokkar Forest,53.9,58.8
 			.kill 20 Dreadfang Widow##18467|q 10920/1
-			.' Widow-spot 1|at 25.3,65.3
+			.' You can find more around|at 25.3,65.3
 		step
 			goto Terokkar Forest,49.7,76.2
 			.talk Vindicator Haylen##22462
@@ -1723,7 +1776,7 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			..accept Return to Sha'tari Base Camp##10926
 		step
 			goto Terokkar Forest,42.06,76.39
-			.' Use Fumper|use Fumper##31810
+			.use Fumper##31810
 			.from Mature Bone Sifter##22482
 			.get 8 Mature Bone Sifter Carcass##31814|q 10929/1
 		step
@@ -1748,7 +1801,7 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			..accept Evil Draws Near##10923
 		step
 			goto Terokkar Forest,47.17,76.9
-			.kill Decrepit Clefthoof##22105 |n
+			.kill Decrepit Clefthoof##22105|n
 			.' Use Fumper on Clefthoof corpse|use Fumper##31825
 			.from Hai'shulud##22038
 			.get Enormous Bone Worm Organs##31826|q 10930/1
@@ -1761,7 +1814,7 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 		step
 			goto Terokkar Forest,35.9,65.7
 			.' Click the black coffin up the steps
-			.'Kill the Reanimated Exarch|goal Contents of the Auchenai Coffin destroyed|q 10915/1
+			.' Kill the Reanimated Exarch|goal Contents of the Auchenai Coffin destroyed|q 10915/1
 		step
 			goto Terokkar Forest,31,76.1
 			.talk Commander Ra'vaj##22446
@@ -1785,31 +1838,36 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			..turnin Helping the Lost Find Their Way##10031
 		step
 			goto Terokkar Forest,54.9,66.0|n
-			.' The path up to Veil Shalas starts here|goto Terokkar Forest,54.9,66.0,0.5|noway|c
+			.' The path up to Veil Shalas starts here|goto Terokkar Forest,54.9,66.0,0.5|noway|q 10874
 		step
 			goto Terokkar Forest,57.3,65.0|n
-			.' The path up to the Sapphire Signal Fire starts here|goto Terokkar Forest,57.3,65.0,0.3|noway|c
+			.' The path up to the Sapphire Signal Fire starts here|goto Terokkar Forest,57.3,65.0,0.3|noway|q 10874
 		step
 			goto Terokkar Forest,55.2,67.1
-			.' Click the Sapphire Signal Fire|tip Across the hanging bridge and down the spiraling stairs.
+			.' Click the Sapphire Signal Fire
+			.info Across the hanging bridge and down the spiraling stairs.
 			.' Extinguish the Sapphire Signal Fire|goal Sapphire Fire Extinguished|q 10874/1
 		step
 			goto Terokkar Forest,57.0,71.8|n
-			.' The path up to the Emerald Signal Fire starts here|goto Terokkar Forest,57.0,71.8,0.3|noway|c
+			.' The path up to the Emerald Signal Fire starts here|goto Terokkar Forest,57.0,71.8,0.3|noway|q 10874
 		step
 			goto Terokkar Forest,55.5,69.7
-			.' Click the Emerald Signal Fire|tip Over the hanging bridge.
+			.' Click the Emerald Signal Fire
+			.info Over the hanging bridge.
 			.' Extinguish the Emerald Signal Fire|goal Emerald Fire Extinguished|q 10874/2
 		step
 			goto Terokkar Forest,56.0,72.7|n
-			.' The path up to the Bloodstone and Violet Signal Fires starts here|goto Terokkar Forest,56.0,72.7,0.3|noway|c|tip It is a tunnel path inside the tree. The entrance is behind the tree to the right a little.
+			.' The path up to the Bloodstone and Violet Signal Fires starts here|goto Terokkar Forest,56.0,72.7,0.3|noway|q 10874
+			.info It is a tunnel path inside the tree. The entrance is behind the tree to the right a little.
 		step
 			goto Terokkar Forest,56.1,72.4
-			.' Click the Bloodstone Signal Fire|tip Up the path inside the tree, on your left as you reach the top.
+			.' Click the Bloodstone Signal Fire
+			.info Up the path inside the tree, on your left as you reach the top.
 			.' Extinguish the Bloodstone Signal Fire|goal Bloodstone Fire Extinguished|q 10874/4
 		step
 			goto Terokkar Forest,56.7,69.2
-			.' Click the Violet Signal Fire|tip Across the hanging bridge from the Bloodstone Signal Fire.
+			.' Click the Violet Signal Fire
+			.info Across the hanging bridge from the Bloodstone Signal Fire.
 			.' Extinguish the Violet Signal Fire|goal Violet Fire Extinguished|q 10874/3
 		step
 			goto Terokkar Forest,37.4,51.5
@@ -1818,7 +1876,8 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			..accept Return to Shattrath##10889
 		step
 			goto Terokkar Forest,57.6,54.7
-			.' Click the Wanted Poster|tip Right in front of the town hall building, next to light post.
+			.' Interact with gameobject: Wanted Poster
+			.info Right in front of the town hall building, next to light post.
 			..accept Wanted: Bonelashers Dead!##10033
 		step
 			goto Terokkar Forest,57.4,55.4
@@ -1859,9 +1918,9 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 		step
 			goto Shattrath City,52.6,21
 			.' Kill the little birds that come to attack
-			.kill Minion of Terokk##22376 |n
+			.kill Minion of Terokk##22376|n
 			.' Kill the big bird that attacks last
-			.kill Avatar of Terokk##22375 |n
+			.kill Avatar of Terokk##22375|n
 			.' Thwart the Attack|goal Attack thwarted|q 10879/1
 		step
 			goto Shattrath City,52.6,21
@@ -1876,7 +1935,8 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			.kill 20 Bonelasher|q 10033/1
 		step
 			goto Terokkar Forest,34.9,42.8
-			.' Click the Olemba Cones|tip The cones look like little white glowing pine cones on the ground.
+			.' Click the Olemba Cones
+			.info The cones look like little white glowing pine cones on the ground.
 			.get 30 Olemba Seed|q 9992/1
 			.' Spot Olemba 1 (4 pcs)|at 38,14.95
 			.' Spot Olemba 2 (3 pcs)|at 56.5,47
@@ -1887,7 +1947,7 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			.' You can find more Timber Worgs at 36.8,37.5|n
 		step
 			goto Terokkar Forest,30.1,42.5|n
-			.' The path up to Urdak starts here|goto Terokkar Forest,30.1,42.5,0.3|noway|c
+			.' The path up to Urdak starts here|goto Terokkar Forest,30.1,42.5,0.3|noway|q 9986
 		step
 			goto Terokkar Forest,31.4,42.5
 			.kill Urdak##18541|q 9986/3
@@ -1896,7 +1956,7 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			.talk Private Weeks##18715
 			..turnin Speak with Private Weeks##10038
 			..accept Who Are They?##10040
-			.'He puts an orc disguise on you|havebuff Shadowy Disguise|q 10040
+			.' He puts an orc disguise on you|havebuff Shadowy Disguise|q 10040
 			.' Be careful, the hunter in the camp can see through the disguise
 			..'The hunter is the guy walking around the camp with a group of mobs
 		step
@@ -1922,8 +1982,8 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			.kill 10 Shadowy Summoner|q 10042/2
 		step
 			goto Terokkar Forest,54,30
-			.' Click the Sealed Box|tip A green glowing crate inside the hut directly east of you if you are standing on the bridge.
-			.get Sealed Box|q 9990/1
+			.collect Sealed Box##25727|q 9990/1
+			.info A green glowing crate inside the hut directly east of you if you are standing on the bridge.
 		step
 			goto Terokkar Forest,44.3,26.3
 			.talk Earthbinder Tavgren##18446
@@ -1931,7 +1991,7 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			..accept What Are These Things?##9994
 		step
 			goto 49.9,16.5|n
-		.' The path up to Ashkaz starts here|goto Terokkar Forest,49.9,16.5,0.3|noway|c
+			.' The path up to Ashkaz starts here|goto Terokkar Forest,49.9,16.5,0.3|noway|q 9986
 		step
 			goto Terokkar Forest,49.1,16.9
 			.kill Ashkaz##18539|q 9986/1
@@ -1956,7 +2016,8 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			.kill Lisaile Fireweaver##18583|q 10002/1
 		step
 			goto Terokkar Forest,67.9,53.6
-			.' Click the Fel Orc Plans|tip Inside the big building, it's a brown flat scroll laying on the floor next to some big logs.
+			.' Click the Fel Orc Plans
+			.info Inside the big building, it's a brown flat scroll laying on the floor next to some big logs.
 			..accept Fel Orc Plans##10012
 		step
 			goto Terokkar Forest,66.3,55.0
@@ -2032,10 +2093,13 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			goto Terokkar Forest,73.9,35.2
 			.talk Isla Starmane##18760
 			..accept Escape from Firewing Point!##10051
-			..'Escort Isla Starmane to safety|goal Escort Isla Starmane to safety|q 10051/1
+			.info Warning! This is an escort quest.
+		step
+			.' Escort Isla Starmane to safety|goal Escort Isla Starmane to safety|q 10051/1
 		step
 			goto Terokkar Forest,54.1,32.1
-			.' Click the Draenei Vessels on the ground|tip They look like little pink glowing lanterns. Not all of the little lanters give you a Dranei Vessel, some will AoE you. Note: you can reach some of them through the walls.
+			.' Click the Draenei Vessels on the ground
+			.info They look like little pink glowing lanterns. Not all of the little lanters give you a Dranei Vessel, some will AoE you. Note: you can reach some of them through the walls.
 			.get 8 Draenei Vessel|q 10028/1
 		step
 			goto Terokkar Forest,57.4,55.4
@@ -2057,7 +2121,8 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			..accept The Final Code##10446
 		step
 			goto Terokkar Forest,73.3,34.6
-			.' Click the Orb of Translocation|tip Upstairs from Isla Starmane, on the balcony.
+			.' Click the Orb of Translocation
+			.info Upstairs from Isla Starmane, on the balcony.
 			.' It will teleport you to the top of the tower|goto 73.5,35.0,0.2|noway|c
 		step
 			goto Terokkar Forest,73.9,35.8
@@ -2065,7 +2130,8 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			.collect 1 The Final Code##29912|q 10446
 		step
 			goto Terokkar Forest,74.2,36.5
-			.' Click the Orb of Translocation|tip Up the ramp from Sharth Voldoun.
+			.' Click the Orb of Translocation
+			.info Up the ramp from Sharth Voldoun.
 			.' It will teleport you to the bottom of the tower|goto 73.3,36.3,0.2|noway|c
 		step
 			goto Terokkar Forest,71.3,37.4
@@ -2215,10 +2281,10 @@ description This guide contain quest-chain for Terokkar Forest (64/63 quests) an
 			..turnin Terokk's Downfall##11073	
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Nagrand",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\[68] Nagrand",[[
 author danaton
 description This guide contain quest-chain (75 quests) for Nagrand location.
-startlevel 70
+startlevel 68
 		step
 			goto Zangarmarsh,41.21,28.67
 			.talk Timothy Daniels##18019
@@ -3212,10 +3278,10 @@ startlevel 70
 			..turnin The Ring of Blood: The Final Challenge##9977
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Blade's Edge Mountains",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\[68] Blade's Edge Mountains",[[
 author danaton
 description This guide contain quest-chain for Blade's Edge Mountains (86 quests) location.
-	startlevel 70
+startlevel 68
 		step
 			goto Zangarmarsh,41.22,28.67
 			.talk Timothy Daniels##18019
@@ -4480,10 +4546,10 @@ description This guide contain quest-chain for Blade's Edge Mountains (86 quests
 			..turnin A Special Thank You##11091
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Netherstorm",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\[68] Netherstorm",[[
 author danaton
 description This guide contain quest-chain (120 quests) for Netherstorm location.
-	startlevel 70
+startlevel 68
 		step
 			goto Shattrath City,75.8,29.2
 			.talk Arcanist Savan##23272
@@ -6006,10 +6072,10 @@ description This guide contain quest-chain (120 quests) for Netherstorm location
 			only if rep ('The Aldor') >= Neutral
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\Shadowmoon Valley",[[
+ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\[68] Shadowmoon Valley",[[
 author danaton
 description This guide contain quest-chain (90 quests) for Shadowmoon Valley location.
-startlevel 70
+startlevel 68
 		step
 			goto Shattrath City,64.7,70.7
 			.talk Fantei##19678
