@@ -1429,7 +1429,7 @@ startlevel 64
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\[64] Terokkar Forest",[[
 author danaton
-description This guide contain quest-chain for Terokkar Forest (64/63 quests) and Skettis location.
+description This guide contain quest-chain for Terokkar Forest (64/63 quests).
 startlevel 64
 		step
 			.' It is recommended that you complete guide first: Zangarmarsh
@@ -1443,9 +1443,13 @@ startlevel 64
 			.talk Vindicator Idaar##18004
 			..accept The Fate of Tuurem##9793
 		step
-			goto Shattrath City,61.2,12.6
-			.talk the Haggard War Veteran##19684
+			goto Shattrath City,59.66,41.45
+			.talk Haggard War Veteran##19684
 			..accept A'dal##10210
+			.' You can find Haggard here (Bridge)|at 59.5,20.95
+			.' You can find Haggard here (Tunnel)|at 74.3,14.7
+			.' You can find Haggard here (Tunnel)|at 81.9,43.9
+			.' You can find Haggard here (Bridge)|at 70.2,52.7
 		step
 			goto Shattrath City,54,44.8
 			.talk A'dal##18481
@@ -1454,7 +1458,6 @@ startlevel 64
 			goto Shattrath City,54.8,44.3
 			.talk Khadgar##18166
 			..accept City of Light##10211
-			.' Follow the pink voidwalker
 		step
 			.' Follow the pink voidwalker until the tour is over|goal City of Light|q 10211/1
 		step
@@ -1464,24 +1467,18 @@ startlevel 64
 			..accept Allegiance to the Aldor##10551 |instant
 			..accept Ishanah##10554
 		step
-			goto Shattrath City,30.7,34.6
-			.talk Adyen the Lightwarden##18537
-			..accept Marks of Kil'jaeden##10325
-		step
 			goto Shattrath City,24,29.7
 			.talk Ishanah##18538
 			..turnin Ishanah##10554
 			..accept Restoring the Light##10021
 		step
+			goto Shattrath City,58,15.2
+			.talk Oloraak##19045
+			..accept Can't Stay Away##10180
+		step
 			goto Shattrath City,62.8,15.9
 			.talk Seth##18653
 			..accept Rather Be Fishin'##10037
-		step
-			.goto Shattrath City,64.3,42.3
-			.talk Yuula##23449
-			.' Required Riding Skill 225 to accept quest
-			.' This step start Skettis Quest-Chain
-			..accept Threat from Above##11096
 		step
 			goto Terokkar Forest,37.4,51.5
 			.talk Kirrik the Awakened##22272
@@ -1492,13 +1489,9 @@ startlevel 64
 			..turnin Speak with Rilak the Redeemed##10908
 			..accept The Eyes of Skettis##10847
 		step
-			goto Terokkar Forest,22.25,13.8
-			.from Gordunni Back-Breaker##22143, Gordunni Elementalist##22144, Gordunni Head-Splitter##22148
-			.kill 20 Gordunni Ogre|q 11096/1
-		step
 			goto Terokkar Forest,38.6,8.5
 			.from Shimmerscale Eel##18750
-			.get 8 Pristine Shimmerscale Eel|q 10037/1
+			.get 8 Pristine Shimmerscale Eel##25891|q 10037/1
 		step
 			goto Terokkar Forest,44.3,26.3
 			.talk Earthbinder Tavgren##18446
@@ -1515,24 +1508,24 @@ startlevel 64
 			.info Inside the building, looks like a white ball on the floor next to a dead guy.
 		step
 			goto Terokkar Forest,43.4,22.1
-			.kill Naphthal'ar|q 9951/1
+			.kill Naphthal'ar##18438|q 9951/1
 			.info At the top of the big tower.
 		step
 			goto Terokkar Forest,45,22.5
 			.talk Warden Treelos##18424
 			..turnin It's Watching You!##9951
 		step
+			goto Terokkar Forest,44.1,23.8
+			.from Vicious Teromoth##18437
+			.get 4 Vicious Teromoth Sample##24279|q 9968/2
+		step
 			goto Terokkar Forest,44.3,26.3
 			.talk Earthbinder Tavgren##18446
 			..turnin Clues in the Thicket##9971
 		step
-			goto Terokkar Forest,44.1,23.8
-			.from Vicious Teromoth##18437
-			.get 4 Vicious Teromoth Sample|q 9968/2
-		step
 			goto Terokkar Forest,45.8,29.8
 			.from Teromoth##18468
-			.get 4 Teromoth Sample|q 9968/1
+			.get 4 Teromoth Sample##25672|q 9968/1
 		step
 			goto Terokkar Forest,44.3,26.3
 			.talk Earthbinder Tavgren##18446
@@ -1540,10 +1533,13 @@ startlevel 64
 			..accept By Any Means Necessary##9978
 		step
 			goto Terokkar Forest,47.1,27
-			.' Fight Empoor until he's almost dead
 			.talk Empoor##18482
+			.info Fight Empoor until he's almost dead.
 			..turnin By Any Means Necessary##9978
 			..accept Wind Trader Lathrai##9979
+			.' You can find Empoor here (Shattrath City)|at Shattrath City,88.68,44.65
+			.' You can find Empoor here (Shattrath City)|at Shattrath City,83.3,53.43
+			.' You can find Empoor here (Tuurem)|at Terokkar Forest,50.4,29.2
 		step
 			goto Terokkar Forest,49.2,20.3
 			.' Interact with gameobject: Eastern Altar
@@ -1553,9 +1549,8 @@ startlevel 64
 			.' The path up to the Eye of Veil Reskk starts here|goto Terokkar Forest,49.9,16.5,0.5|noway|q 10847
 		step
 			goto Terokkar Forest,50.1,19.4
-			.' Click the Eye of Veil Reskk
+			.collect Eye of Veil Reskk##25638|q 10847/1
 			.info Looks like a big white orb at the top of the tower across the hanging bridge.
-			.get Eye of Veil Reskk|q 10847/1
 		step
 			goto Terokkar Forest,50.7,16.6
 			.' Interact with gameobject: Northern Altar
@@ -1566,14 +1561,8 @@ startlevel 64
 			.' Purify the Western Altar|goal Western Altar|q 10021/3
 		step
 			goto Terokkar Forest,57.9,23.2
-			.' Click the Eye of Veil Shienor
+			.collect Eye of Veil Shienor##25642|q 10847/2
 			.info Climb the path inside the other tree, run across the bridge, looks like a big white orb on the ground.
-			.get Eye of Veil Shienor|q 10847/2
-		step
-			.goto Shattrath City,64.3,42.3
-			.talk Yuula##23449
-			..turnin Threat from Above##11096
-			..accept To Skettis!##11098
 		step
 			goto Shattrath City,72.2,30.7
 			.talk Wind Trader Lathrai##18484
@@ -1614,27 +1603,30 @@ startlevel 64
 			.talk High Priest Orglum##22278
 			..accept The Tomb of Lights##10840
 		step
-			goto Terokkar Forest,35.2,48.8
+			goto Terokkar Forest,52.93,63.67
 			.kill Infested Root-Walker##22095|n
-			.kill 25 Wood Mite|q 10896/1
-			.' You can find more Infested Root-walkers|at 39.1,47
+			.kill 25 Wood Mite##22419|q 10896/1
+			.' You can find more Infested Root-walkers (1)|at 35.2,48.8
+			.' You can find more Infested Root-walkers (2)|at 39.1,47
 		step
 			goto Terokkar Forest,47.08,56.42
 			.kill 10 Ethereal Nethermancer##21370|q 10840/1
 			.kill 10 Ethereal Plunderer##21368|q 10840/2
 		step
-			goto Terokkar Forest,31.27,52.66
-			.' Enter the tunnel and move to the end
-			.talk Akuno##22377|at 30.61,49.06
+			goto Terokkar Forest,31.27,52.66|n
+			.' Enter the tunnel and move to the end|goto 31.27,52.66,0.5|noway|q 10887 |future
+		step
+			goto Terokkar Forest,30.61,49.06
+			.talk Akuno##22377
 			..accept Escaping the Tomb##10887
+			.info Warning! This is an escort quest!
 		step
 			goto Terokkar Forest,34.08,51.72
 			.' Escort and help Akuno find his way to the Refugee Caravan|q 10887/1
 		step
 			goto Terokkar Forest,32.2,52.8
-			.kill 8 Cabal Skirmisher|q 10878/1
+			.kill 8 Cabal Skirmisher##21661|q 10878/1
 			.from Cabal Abjurist##21660, Cabal Skirmisher##21661, Cabal Tomb-Raider##21662
-			.get 10 Mark of Kil'jaeden|q 10325/1
 			.collect Cabal Orders##31707|q 10880 |future
 		step
 			.use Cabal Orders##31707
@@ -1658,45 +1650,42 @@ startlevel 64
 			.talk Soolaveen##18675
 			..accept Recover the Bones##10030
 		step
-			goto Terokkar Forest,39.4,55.1
-			.kill 4 Cabal Spell-weaver|q 10878/2
-			.kill 2 Cabal Initiate|q 10878/3
+			goto Terokkar Forest,39.62,59.05
+			.kill 4 Cabal Spell-weaver##21902|q 10878/2
+			.kill 2 Cabal Initiate##21907|q 10878/3
 		step
 			goto Terokkar Forest,37.4,51.2
 			.talk Mekeda##22370
 			..turnin Before Darkness Falls##10878
 		step
-			goto Terokkar Forest,31.3,52.65
-			.' Go To Shadow Tomb Entrance|goto Terokkar Forest,31.3,52.65|noway|q 10881
+			goto Terokkar Forest,31.3,52.65|n
+			.' Go To Shadow Tomb Entrance|goto 31.3,52.65,0.5|noway|q 10881
 		step
 			goto Terokkar Forest,29.7,51.7
-			.' Click the Cabal Chest
+			.collect Gavel of K'alen##31710|q 10881/2
 			.info Inside the Shadow Tomb, inside a Cabal Chest in the back left of the room on the ground.
-			.get Gavel of K'alen|q 10881/2
 		step
 			goto Terokkar Forest,32.1,51.2
-			.' Click the Cabal Chest
+			.collect Drape of Arunen##31709|q 10881/1
 			.info Inside the Shadow Tomb, inside a Cabal Chest in the back left of the room on the ground.
-			.get Drape of Arunen|q 10881/1
 		step
 			goto Terokkar Forest,31.2,46.7
-			.' Click the Cabal Chest
+			.collect Scroll of Atalor##31708|q 10881/3
 			.info Inside the Shadow Tomb, inside a Cabal Chest in the back right of the room on the ground.
-			.get Scroll of Atalor|q 10881/3
 		step
 			goto Terokkar Forest,37.4,51.2
 			.talk Mekeda##22370
 			..turnin The Shadow Tomb##10881
 		step
 			goto Terokkar Forest,30.8,42.1
-			.' Use the Rod of Purification on the Darkstone of Terokk|use Rod of Purification##31610
+			.use Rod of Purification##31610
 			.' Purify the Darkstone of Terokk|goal Attempt to purify the Darkstone of Terrok|q 10839/1
 		step
 			goto Terokkar Forest,32.3,41.7
 			.from Skithian Dreadhawk##18452,Skithian Windripper##18453
-			.get 5 Lathrai's Stolen Goods|q 10112/1
-			.get Veil Skith Prison Keys|n
-			.' Click the yellow cages around this area
+			.get 5 Lathrai's Stolen Goods##27861|q 10112/1
+			.collect Veil Skith Prison Keys##31655|n
+			.' Interact with gameobject: Veil Skith Cage
 			.' Rescue 12 Children|goal 12 Children Rescued|q 10852/1
 		step
 			goto Terokkar Forest,37.4,51.5
@@ -1709,17 +1698,28 @@ startlevel 64
 			..turnin Missing Friends##10852
 		step
 			goto Terokkar Forest,29.5,51.4
-			.kill 4 Deathtalon Spirit|q 10848/1
-			.kill 4 Screeching Spirit|q 10848/2
-			.kill 2 Spirit Raven|q 10848/3
+			.kill 4 Deathtalon Spirit##21198|q 10848/1
+			.kill 4 Screeching Spirit##21200|q 10848/2
+			.kill 2 Spirit Raven##21324|q 10848/3
 		step
 			goto Terokkar Forest,32.5,56.6
 			.collect 10 Restless Bones##25842|q 10030/1
+			.info There is a characteristic white glow on the ground near the bones.
+		step
+			goto Terokkar Forest,35.1,66.2
+			.talk Ha'lei##19697
+			..accept I See Dead Draenei##10227
 		step
 			goto Terokkar Forest,35.1,66.2
 			.talk Ramdor the Mad##19417
 			..turnin Recover the Bones##10030
+			..turnin I See Dead Draenei##10227
 			..accept Helping the Lost Find Their Way##10031
+			..accept Ezekiel##10228
+		step
+			goto Terokkar Forest,44.1,65
+			.talk Isfar##18933
+			..turnin Can't Stay Away##10180
 		step
 			goto Terokkar Forest,37.4,51.5
 			.talk Kirrik the Awakened##22272
@@ -1730,8 +1730,10 @@ startlevel 64
 			.talk High Priest Orglum##22278
 			..accept Vengeful Souls##10842
 		step
-			goto Terokkar Forest,47,55.4
-			.' Enter the tunnel
+			goto Terokkar Forest,47,55.4|n
+			.' Enter the tunnel|goto 47,55.4,0.5|noway|q 10842
+		step
+			goto Terokkar Forest,47.85,54.82
 			.kill 5 Vengeful Draenei##21636|q 10842/1
 		step
 			goto Terokkar Forest,37.5,50.8
@@ -1739,9 +1741,9 @@ startlevel 64
 			..turnin Vengeful Souls##10842
 		step
 			goto Terokkar Forest,24.2,70.5
-			.' Open the purple glowing, brown eggs on the ground around this area
 			.' Redeem 3 Hatchlings|goal 3 Hatchlings Redeemed|q 10861/1
-			.kill 3 Malevolent Hatchling|q 10861/2
+			.info Open the purple glowing, brown eggs on the ground around this area.
+			.kill 3 Malevolent Hatchling##22337|q 10861/2
 		step
 			goto Terokkar Forest,31.4,75.7
 			.talk Scout Navrin##22364
@@ -1754,6 +1756,9 @@ startlevel 64
 			goto Terokkar Forest,31.1,76.1
 			.talk Chief Archaeologist Letoll##22458
 			..accept Digging Through Bones##10922
+			.info Warning! This is an escort quest!
+		step
+			goto Terokkar Forest,30.1,70.8
 			.' Escort the Archaeologists|goal Protect the Explorers|q 10922/1
 		step
 			goto Terokkar Forest,31,76.1
@@ -1776,13 +1781,13 @@ startlevel 64
 			..accept A Hero Is Needed##10914
 		step
 			goto Terokkar Forest,36.7,74.4
-			.kill 12 Auchenai Initiate|q 10914/1
-			.' Position 1|at 33.6,67.4
-			.kill 5 Auchenai Doomsayer|q 10914/2
-			.' Position 2|at 48.1,67.15
+			.kill 12 Auchenai Initiate##21284|q 10914/1
+			.' You can find more around|at 33.6,67.4
+			.kill 5 Auchenai Doomsayer##21285|q 10914/2
+			.' You can find more around|at 48.1,67.15
 		step
 			goto Terokkar Forest,43.9,76.4
-			.collect 1 Dread Relic##31697|q 10877/1
+			.collect Dread Relic##31697|q 10877/1
 		step
 			goto Terokkar Forest,48.64,73.66
 			.kill 10 Lost Spirit##18460|q 10031/1
@@ -1793,7 +1798,8 @@ startlevel 64
 			..accept For the Fallen##10920
 		step
 			goto Terokkar Forest,52.8,78.15
-			.kill 6 Netherweb Victim##22355|q 10873/1
+			.kill Netherweb Victim##22355|n
+			.' Sha'tar Warrior Freed 6|q 10873/1
 		step
 			goto Terokkar Forest,53.76,72.32
 			.talk Skywing##22424
@@ -1855,11 +1861,13 @@ startlevel 64
 			goto Terokkar Forest,48.9,67.9
 			.from Auchenai Death-Speaker##21242, Auchenai Doomsayer##21285
 			.collect 20 Doom Skull##31812|q 10923
-			.use Dread Relic##31811|at 48.7,67.17
+		step
+			goto Terokkar Forest,48.7,67.17
+			.use Dread Relic##31811
 			.kill Teribus the Cursed##22441|q 10923/1
 		step
 			goto Terokkar Forest,35.9,65.7
-			.' Click the black coffin up the steps
+			.' Interact with gameobject: Auchenai Coffin
 			.' Kill the Reanimated Exarch|goal Contents of the Auchenai Coffin destroyed|q 10915/1
 		step
 			goto Terokkar Forest,31,76.1
@@ -1890,7 +1898,7 @@ startlevel 64
 			.' The path up to the Sapphire Signal Fire starts here|goto Terokkar Forest,57.3,65.0,0.3|noway|q 10874
 		step
 			goto Terokkar Forest,55.2,67.1
-			.' Click the Sapphire Signal Fire
+			.' Interact with gameobject: Sapphire Signal Fire
 			.info Across the hanging bridge and down the spiraling stairs.
 			.' Extinguish the Sapphire Signal Fire|goal Sapphire Fire Extinguished|q 10874/1
 		step
@@ -1898,7 +1906,7 @@ startlevel 64
 			.' The path up to the Emerald Signal Fire starts here|goto Terokkar Forest,57.0,71.8,0.3|noway|q 10874
 		step
 			goto Terokkar Forest,55.5,69.7
-			.' Click the Emerald Signal Fire
+			.' Interact with gameobject: Emerald Signal Fire
 			.info Over the hanging bridge.
 			.' Extinguish the Emerald Signal Fire|goal Emerald Fire Extinguished|q 10874/2
 		step
@@ -1907,12 +1915,12 @@ startlevel 64
 			.info It is a tunnel path inside the tree. The entrance is behind the tree to the right a little.
 		step
 			goto Terokkar Forest,56.1,72.4
-			.' Click the Bloodstone Signal Fire
+			.' Interact with gameobject: Bloodstone Signal Fire
 			.info Up the path inside the tree, on your left as you reach the top.
 			.' Extinguish the Bloodstone Signal Fire|goal Bloodstone Fire Extinguished|q 10874/4
 		step
 			goto Terokkar Forest,56.7,69.2
-			.' Click the Violet Signal Fire
+			.' Interact with gameobject: Violet Signal Fire
 			.info Across the hanging bridge from the Bloodstone Signal Fire.
 			.' Extinguish the Violet Signal Fire|goal Violet Fire Extinguished|q 10874/3
 		step
@@ -1954,18 +1962,23 @@ startlevel 64
 			..turnin A Personal Favor##10112
 			..accept Investigate Tuurem##9990
 		step
+			goto Shattrath City,49.1,35.9
+			.talk Ezekiel##19715
+			..turnin Ezekiel##10228
+			..accept What Book? I Don't See Any Book##10231
+		step
 			goto Shattrath City,52.6,21
 			.talk Rilak the Redeemed##22292
 			..turnin Return to Shattrath##10889
 			..turnin Skywing##10898
-			.' You are about to fight three waves of birds and a bird boss. Make sure you're ready.
+		step
+			goto Shattrath City,51.75,20.8
 			.talk Defender Grashna##22373
 			..accept The Skettis Offensive##10879
+			.info You are about to fight three waves of birds and a bird boss. Make sure you're ready.
 		step
 			goto Shattrath City,52.6,21
-			.' Kill the little birds that come to attack
 			.kill Minion of Terokk##22376|n
-			.' Kill the big bird that attacks last
 			.kill Avatar of Terokk##22375|n
 			.' Thwart the Attack|goal Attack thwarted|q 10879/1
 		step
@@ -1973,24 +1986,38 @@ startlevel 64
 			.talk Rilak the Redeemed##22292
 			..turnin The Skettis Offensive##10879
 		step
-			goto Shattrath City,30.7,34.6
-			.talk Adyen the Lightwarden##18537
-			..turnin Marks of Kil'jaeden##10325
+			goto Shattrath City,43.63,29.77
+			.talk "Dirty" Larry##19720
+			.' Tell him "Ezekiel said that you might have a certain book..."
+			.kill "Dirty" Larry##19720|n
+			.info He will eventually turn friendly.
+			.' Beat Down "Dirty" Larry and Get the Information|q 10231/1
+		step
+			goto Shattrath City,43.63,29.78
+			.talk "Dirty" Larry##19720
+			..turnin What Book? I Don't See Any Book##10231
 		step
 			goto Terokkar Forest,41.6,51.6
-			.kill 20 Bonelasher|q 10033/1
+			.kill 20 Bonelasher##18470|q 10033/1
 		step
-			goto Terokkar Forest,34.9,42.8
-			.' Click the Olemba Cones
+			goto Terokkar Forest,43.75,31.57
+			.collect 30 Olemba Seed##25745|q 9992/1
 			.info The cones look like little white glowing pine cones on the ground.
-			.get 30 Olemba Seed|q 9992/1
-			.' Spot Olemba 1 (4 pcs)|at 38,14.95
-			.' Spot Olemba 2 (3 pcs)|at 56.5,47
-			.' Big-spot area (6 pcs)|at 70,45.5
-			.kill 10 Warp Stalker|q 10026/1
-			.' Kill Timber Worgs
-			.get 12 Timber Worg Tail|q 10016/1
-			.' You can find more Timber Worgs at 36.8,37.5|n
+			.' You can find more Olemba Seed (3 pcs)|at 34.15,41.92
+			.' You can find more Olemba Seed (4 pcs)|at 38,14.95
+			.' You can find more Olemba Seed (3 pcs)|at 56.5,47
+			.' You can find more Olemba Seed (6 pcs)|at 70,45.5
+		step
+			goto Terokkar Forest,34.42,40.43
+			.kill 10 Warp Stalker##18464|q 10026/1
+			.' You can find more Warp Stalker (1)|at 58.6,39.5
+			.' You can find more Warp Stalker (2)|at 63.3,31.3
+			.' You can find more Warp Stalker (3)|at 68.5,41.4
+			.from Timber Worg##18476
+			.get 12 Timber Worg Tail##25807|q 10016/1
+			.' You can find more Worg Tail (1)|at 43.2,32
+			.' You can find more Worg Tail (2)|at 51.1,37
+			.' You can find more Worg Tail (3)|at 46.5,18.8
 		step
 			goto Terokkar Forest,30.1,42.5|n
 			.' The path up to Urdak starts here|goto Terokkar Forest,30.1,42.5,0.3|noway|q 9986
@@ -2002,18 +2029,24 @@ startlevel 64
 			.talk Private Weeks##18715
 			..turnin Speak with Private Weeks##10038
 			..accept Who Are They?##10040
-			.' He puts an orc disguise on you|havebuff Shadowy Disguise|q 10040
-			.' Be careful, the hunter in the camp can see through the disguise
-			..'The hunter is the guy walking around the camp with a group of mobs
+		step
+			goto Terokkar Forest,40.5,36.2
+			.talk Private Weeks##18715
+			.' He puts an orc disguise on you|havebuff Spell_Shadow_NetherCloak|q 10040
+			.' Be careful, the hunter in the camp can see through the disguise.
+			.' The hunter is the guy walking around the camp with a group of mobs.
 		step
 			goto Terokkar Forest,40.3,39.1
 			.talk Shadowy Advisor##18719|goal Shadowy Advisor Spoken To|q 10040/3
+			.info Be careful, the hunter in the camp can see through the disguise.
 		step
 			goto Terokkar Forest,39,39.7
 			.talk Shadowy Initiate##18716|goal Shadowy Initiate Spoken To|q 10040/1
+			.info Be careful, the hunter in the camp can see through the disguise.
 		step
 			goto Terokkar Forest,38.2,41.2
 			.talk Shadowy Laborer##18717|goal Shadowy Laborer Spoken To|q 10040/2
+			.info Be careful, the hunter in the camp can see through the disguise.
 		step
 			goto Terokkar Forest,40.5,36.2
 			.talk Private Weeks##18715
@@ -2024,8 +2057,8 @@ startlevel 64
 			.kill Shadowmaster Grieve##18720|q 10042/3
 		step
 			goto Terokkar Forest,39.8,40.8
-			.kill 10 Shadowy Executioner|q 10042/1
-			.kill 10 Shadowy Summoner|q 10042/2
+			.kill 10 Shadowy Executioner##16519|q 10042/1
+			.kill 10 Shadowy Summoner##17088|q 10042/2
 		step
 			goto Terokkar Forest,54,30
 			.collect Sealed Box##25727|q 9990/1
@@ -2043,14 +2076,14 @@ startlevel 64
 			.kill Ashkaz##18539|q 9986/1
 		step
 			goto Terokkar Forest,48.9,17.3
-			.kill 14 Shienor Talonite|q 10869/1
-			.kill 6 Shienor Sorcerer|q 10869/2
+			.kill 14 Shienor Talonite##18449|q 10869/1
+			.kill 6 Shienor Sorcerer##18450|q 10869/2
 		step
 			goto Terokkar Forest,59.4,23.4
 			.kill Ayit##18540|q 9986/2
 		step
 			goto Terokkar Forest,65.5,50.6
-			.kill 12 Warped Peon|q 9998/1
+			.kill 12 Warped Peon##18595|q 9998/1
 		step
 			goto Terokkar Forest,69.7,44.2
 			.talk Theloria Shadecloak##18565
@@ -2062,13 +2095,13 @@ startlevel 64
 			.kill Lisaile Fireweaver##18583|q 10002/1
 		step
 			goto Terokkar Forest,67.9,53.6
-			.' Click the Fel Orc Plans
+			.' Interact with gameobject: Fel Orc Plans
 			.info Inside the big building, it's a brown flat scroll laying on the floor next to some big logs.
 			..accept Fel Orc Plans##10012
 		step
 			goto Terokkar Forest,66.3,55.0
-			.kill 10 Bonechewer Devastator|q 10007/1
-			.kill 6 Bonechewer Backbreaker|q 10007/2
+			.kill 10 Bonechewer Devastator##16772|q 10007/1
+			.kill 6 Bonechewer Backbreaker##16810|q 10007/2
 		step
 			goto Terokkar Forest,69.7,44.2
 			.talk Theloria Shadecloak##18565
@@ -2096,9 +2129,9 @@ startlevel 64
 		step
 			goto Terokkar Forest,58.3,54.8
 			.talk Bertelm##18387
+			..turnin Fel Orc Plans##10012
 			..turnin Timber Worg Tails##10016
 			..accept The Elusive Ironjaw##10022
-			..turnin Fel Orc Plans##10012
 		step
 			goto Terokkar Forest,58.5,53.6
 			.talk Andarl##18252
@@ -2111,10 +2144,10 @@ startlevel 64
 		step
 			goto Terokkar Forest,43.2,51.6
 			.from Trachela##21515
-			.collect Trachela's Carcass##30618|q 10035|c
+			.collect Trachela's Carcass##30618|q 10035
 		step
 			goto Terokkar Forest,26.9,55.7
-			.' Use Trachela's Carcass|use Trachela's Carcass##30618
+			.use Trachela's Carcass##30618
 			.from Torgos##18707
 			.get Tail Feather of Torgos##25852|q 10035/1
 		step
@@ -2129,24 +2162,24 @@ startlevel 64
 		step
 			goto Terokkar Forest,66.3,34.7
 			.from Ironjaw##18670
-			.get Ironjaw's Pelt|q 10022/1
+			.get Ironjaw's Pelt##25837|q 10022/1
 		step
-			goto Terokkar Forest,68.1,36.5
-			.kill 10 Firewing Defender|q 9996/1
-			.kill 10 Firewing Bloodwarder|q 9996/2
-			.kill 10 Firewing Warlock|q 9996/3
+			goto Terokkar Forest,71.32,37.38
+			.kill 10 Firewing Defender##5355|q 9996/1
+			.kill 10 Firewing Bloodwarder##1410|q 9996/2
+			.kill 10 Firewing Warlock##16769|q 9996/3
 		step
 			goto Terokkar Forest,73.9,35.2
 			.talk Isla Starmane##18760
 			..accept Escape from Firewing Point!##10051
 			.info Warning! This is an escort quest.
 		step
-			.' Escort Isla Starmane to safety|goal Escort Isla Starmane to safety|q 10051/1
+			goto Terokkar Forest,67.48,37.29
+			.goal Escort Isla Starmane to safety|q 10051/1
 		step
 			goto Terokkar Forest,54.1,32.1
-			.' Click the Draenei Vessels on the ground
+			.collect 8 Draenei Vessel##25841|q 10028/1
 			.info They look like little pink glowing lanterns. Not all of the little lanters give you a Dranei Vessel, some will AoE you. Note: you can reach some of them through the walls.
-			.get 8 Draenei Vessel|q 10028/1
 		step
 			goto Terokkar Forest,57.4,55.4
 			.talk Ros'eleth##18390
@@ -2163,25 +2196,24 @@ startlevel 64
 			goto Terokkar Forest,69.7,44.2
 			.talk Lieutenant Meridian##21006
 			..turnin Attack on Firewing Point##9996
-			..accept ##10014
 			..accept The Final Code##10446
 		step
 			goto Terokkar Forest,73.3,34.6
-			.' Click the Orb of Translocation
+			.' Interact with gameobject: Orb of Translocation
 			.info Upstairs from Isla Starmane, on the balcony.
-			.' It will teleport you to the top of the tower|goto 73.5,35.0,0.2|noway|c
+			.' It will teleport you to the top of the tower|goto 73.5,35,0.3|noway|q 10446
 		step
 			goto Terokkar Forest,73.9,35.8
 			.from Sharth Voldoun##18554
-			.collect 1 The Final Code##29912|q 10446
+			.collect The Final Code##29912|q 10446
 		step
 			goto Terokkar Forest,74.2,36.5
-			.' Click the Orb of Translocation
+			.' Interact with gameobject: Orb of Translocation
 			.info Up the ramp from Sharth Voldoun.
-			.' It will teleport you to the bottom of the tower|goto 73.3,36.3,0.2|noway|c
+			.' It will teleport you to the bottom of the tower|goto 73.3,36.3,0.3|noway|q 10446
 		step
 			goto Terokkar Forest,71.3,37.4
-			.' Click the Mana Bomb
+			.' Interact with gameobject: Mana Bomb
 			.' Activate the Mana Bomb using the Final Code|goal Mana Bomb Activated|q 10446/1
 		step
 			goto Terokkar Forest,57,53.5
@@ -2192,139 +2224,8 @@ startlevel 64
 			goto Terokkar Forest,44.3,26.3
 			.talk Earthbinder Tavgren##18446
 			..turnin Letting Earthbinder Tavgren Know##10005
-		step // yuula chain
-			goto Terokkar Forest,64.5,66.7
-			.talk Sky Sergeant Doryn##23048
-			..turnin To Skettis!##11098
-		step // yuula chain
-			goto Terokkar Forest,64.1,66.9
-			.talk Severin##23042
-			..accept World of Shadows##11004
-		step // yuula chain
-			goto Terokkar Forest,63.5,65.8
-			.talk Skyguard Handler Deesak##23415
-			..accept Hungry Nether Rays##11093
-		step // yuula chain
-			goto Terokkar Forest,62.1,75.05
-			.from Skettis Wing Guard##21644, Skettis Windwalker##21649, Skettis Talonite##21650, Skettis Soulcaller##21911
-			.get 6 Shadow Dust##32388|q 11004/1
-		step // yuula chain
-			goto Terokkar Forest,64.5,84.45
-			.use Nether Ray Cage##32834|sticky
-			.from Blackwind Warp Chaser##23219
-			.' Nether Ray Meal|q 11093/1
-		step // yuula chain
-			goto Terokkar Forest,64.1,66.9
-			.talk Severin##23042
-			..turnin World of Shadows##11004
-		step // yuula chain
-			goto Terokkar Forest,63.5,65.8
-			.talk Skyguard Handler Deesak##23415
-			..turnin Hungry Nether Rays##11093
-		step // yuula chain
-			goto Terokkar Forest,64.1,66.9
-			.talk Sky Commander Adaris##23038
-			..accept Secrets of the Talonpriests##11005
-		step // yuula chain
-			goto Terokkar Forest,68.6,74.4
-			.use Elixir of Shadows##32446
-			.kill Talonpriest Zellek##23068|q 11005/3
-		step // yuula chain
-			goto Terokkar Forest,69.3,78.3
-			.use Elixir of Shadows##32446
-			.kill Talonpriest Ishaal##23066|q 11005/1
-			.get Ishaal's Almanac##32523|q 11021/1
-			.use Ishaal's Almanac##32523
-			..accept Ishaal's Almanac##11021
-		step // yuula chain
-			goto Terokkar Forest,69.7,81.8
-			.use Elixir of Shadows##32446
-			.kill Talonpriest Skizzik##23067|q 11005/2
-		step // yuula chain
-			goto Terokkar Forest,64.1,66.9
-			.talk Sky Commander Adaris##23038
-			..turnin Secrets of the Talonpriests##11005
-			..turnin Ishaal's Almanac##11021
-			..accept An Ally in Lower City##11024
-		step // yuula chain
-			goto Shattrath City,52.5,21
-			.talk Rilak the Redeemed##22292
-			..turnin An Ally in Lower City##11024
-			..accept Countdown to Doom##11028
-		step // yuula chain
-			goto Terokkar Forest,64.1,66.9
-			.talk Sky Commander Adaris##23038
-			..turnin Countdown to Doom##11028
-		step // yuula chain
-			goto Terokkar Forest,64.2,67
-			.talk Hazzik##23306
-			..accept Hazzik's Bargain##11056
-		step // yuula chain
-			goto Terokkar Forest,74.73,80.07
-			.collect 1 Hazzik's Package##32687|q 11056/1|tip Container, inside the building.
-		step // yuula chain
-			goto Terokkar Forest,64.2,67
-			.talk Hazzik##23306
-			..turnin Hazzik's Bargain##11056
-			..accept A Shabby Disguise##11029
-		step // yuula chain
-			goto Terokkar Forest,66.77,80.13
-			.use Shabby Arakkoa Disguise##32741|q 11029/1
-			.talk Sahaak##23363
-			.buy Adversarial Bloodlines##32742|q 11029/1
-		step // yuula chain
-			goto Terokkar Forest,64.2,67
-			.talk Hazzik##23306
-			..turnin A Shabby Disguise##11029
-			..accept Adversarial Blood##11885
-		step // yuula chain
-			goto Terokkar Forest,64.1,66.9
-			.talk Severin##23042
-			.' Get Elixir of Shadows|tip Manually skip this step|q 11885/1
-		step // yuula chain
-			goto Terokkar Forest,69.64,74.73
-			.' Drink Elixir of Shadows|havebuff spell_shadow_detectinvisibility
-			.from Time-Lost Skettis Reaver##21651, Time-Lost Skettis High Priest##21787, Time-Lost Skettis Worshipper##21763
-			.collect 10 Time-Lost Scroll##32620|q 11885/1|sticky
-			.' Use Skull Piles and Summon Akkarai
-			.kill Darkscreecher Akkarai##23161|q 11885/1
-		step // yuula chain
-			goto Terokkar Forest,70.05,79.47
-			.' Drink Elixir of Shadows|havebuff spell_shadow_detectinvisibility
-			.from Time-Lost Skettis Reaver##21651, Time-Lost Skettis High Priest##21787, Time-Lost Skettis Worshipper##21763
-			.collect 10 Time-Lost Scroll##32620|q 11885/1|sticky
-			.' Use Skull Piles and Summon Karrog
-			.kill Karrog##23165|q 11885/2
-		step // yuula chain
-			goto Terokkar Forest,70.23,83.32
-			.' Drink Elixir of Shadows|havebuff spell_shadow_detectinvisibility
-			.from Time-Lost Skettis Reaver##21651, Time-Lost Skettis High Priest##21787, Time-Lost Skettis Worshipper##21763
-			.collect 10 Time-Lost Scroll##32620|q 11885/1|sticky
-			.' Use Skull Piles and Summon Gezzarak
-			.kill Gezzarak the Huntress##23163|q 11885/3
-		step // yuula chain
-			goto Terokkar Forest,72.24,88.14
-			.' Drink Elixir of Shadows|havebuff spell_shadow_detectinvisibility
-			.from Time-Lost Skettis Reaver##21651, Time-Lost Skettis High Priest##21787, Time-Lost Skettis Worshipper##21763
-			.collect 10 Time-Lost Scroll##32620|q 11885/1|sticky
-			.' Use Skull Piles and Summon Vakkiz
-			.kill Vakkiz the Windrager##23162|q 11885/4
-		step // yuula chain
-			goto Terokkar Forest,64.2,67
-			.talk Hazzik##23306
-			..turnin Adversarial Blood##11885
-		step // yuula chain
-			goto Terokkar Forest,64.1,66.9
-			.talk Sky Commander Adaris##23038
-			..accept Terokk's Downfall##11073
-		step // yuula chain
-			goto Terokkar Forest,66.22,77.45
-			.' Use Skull Piles and Summon Terokk
-			.kill Terokk##21838|q 11073/1
-		step // yuula chain
-			goto Terokkar Forest,64.1,66.9
-			.talk Sky Commander Adaris##23038
-			..turnin Terokk's Downfall##11073	
+		step
+			.' Congratulations! +64/63 quests for achievement "Terror of Terokkar".	
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\[68] Nagrand",[[
@@ -3028,7 +2929,7 @@ startlevel 68
 			goto Shattrath City,74.07,32.84
 			.talk Sal'salabim##18584
 			.' Tell him "Altruis sent me. He said that you could help me."
-			.kill Sal'salabim##18584 |n
+			.kill Sal'salabim##18584|n
 			.info He will eventually turn friendly.
 			.' Persuade Sal'salabim|q 10004/1 |goto 77.30,34.88
 		step
