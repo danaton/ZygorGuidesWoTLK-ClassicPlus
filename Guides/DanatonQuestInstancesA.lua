@@ -1115,8 +1115,111 @@ startlevel 57
 			.info Right Wing: Eleven Step.
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\[Empty] Scholomance (58)",[[
-	startlevel 58
+ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Scholomance (60) - [Skeleton Key]",[[
+author danaton
+startlevel 60
+		step
+			goto Ironforge,24.05,74.72
+			.talk Auctioneer Redmuse##8720
+			.buy 2 Thorium Bar##12359|q 5801 |future
+			.info Don't sell it by accident! You'll need it later!
+		step
+			goto Ironforge,29.4,22.1
+			.talk Courier Hammerfall##10877
+			..accept A Call to Arms: The Plaguelands!##5090
+		step
+			goto Western Plaguelands,42.7,84
+			.talk Commander Ashlam Valorfist##10838
+			..turnin A Call to Arms: The Plaguelands!##5090
+			..accept Clear the Way##5092
+		step
+			goto Western Plaguelands,48.2,81.2
+			.kill 10 Skeletal Flayer##1783|q 5092/1
+			.kill 10 Slavering Ghoul##1791|q 5092/2
+		step
+			goto Western Plaguelands,42.7,84
+			.talk Commander Ashlam Valorfist##10838
+			..turnin Clear the Way##5092
+			..accept All Along the Watchtowers##5097
+		step
+			goto Western Plaguelands,49.3,73.2|n
+			.' Enter the Ruins of Andorhal from this bridge|goto Western Plaguelands,49.3,73.2,0.5|noway|q 5097
+		step
+			goto Western Plaguelands,46.6,71.1
+			.' Use your Beacon Torch near the tower entrance|use Beacon Torch##12815
+			.goal Tower Four marked|q 5097/4
+		step
+			goto Western Plaguelands,40,71.6
+			.' Use your Beacon Torch near the tower entrance|use Beacon Torch##12815
+			.goal Tower One marked|q 5097/1
+		step
+			goto Western Plaguelands,42.3,66.3
+			.' Use your Beacon Torch near the tower entrance|use Beacon Torch##12815
+			.goal Tower Two marked|q 5097/2
+		step
+			goto Western Plaguelands,44.3,63.3
+			.' Use your Beacon Torch near the tower entrance|use Beacon Torch##12815
+			.goal Tower Three marked|q 5097/3
+		step
+			goto Western Plaguelands,42.7,84
+			.talk Commander Ashlam Valorfist##10838
+			..turnin All Along the Watchtowers##5097
+			..accept Alas, Andorhal##211
+			..accept Scholomance##5533
+		step
+			goto Western Plaguelands,42.7,83.8
+			.talk Alchemist Arbington##11056
+			..turnin Scholomance##5533
+			..accept Skeletal Fragments##5537
+		step
+			goto Western Plaguelands,45.3,69.2
+			.from Araj the Summoner##1852
+			.get Araj's Phylactery Shard##17114|q 211/1
+		step
+			goto Western Plaguelands,36.85,57.4
+			.from Skeletal Flayer##1783, Skeletal Sorcerer##1784
+			.get 15 Skeletal Fragments##14619|q 5537/1
+		step
+			goto Western Plaguelands,42.7,84
+			.talk Alchemist Arbington##11056
+			..turnin Skeletal Fragments##5537
+			..accept Mold Rhymes With...##5538
+		step
+			goto Western Plaguelands,42.7,84
+			.talk Commander Ashlam Valorfist##10838
+			..turnin Alas, Andorhal##211
+		step
+			goto Tanaris,51.5,28.8
+			.talk Krinkle Goodsteel##5411
+			..turnin Mold Rhymes With...##5538
+			..accept Fire Plume Forged##5801
+		step
+			goto Un'Goro Crater,52.76,42.3|n
+			.' Start lifting up here|goto 52.85,44.73,0.5|noway|q 5801
+		step
+			goto Un'Goro Crater,48.6,48.3
+			.use Skeleton Key Mold##14644
+			.collect Unfinished Skeleton Key##14645|q 5801/1
+		step
+			goto Western Plaguelands,42.7,84
+			.talk Alchemist Arbington##11056
+			..turnin Fire Plume Forged##5801
+			..accept Araj's Scarab##5803
+		step
+			goto Western Plaguelands,45.3,69.2
+			.from Araj the Summoner##1852
+			.get Araj's Scarab##14610|q 5803/1
+		step
+			goto Western Plaguelands,42.7,84
+			.talk Alchemist Arbington##11056
+			..turnin Araj's Scarab##5803
+			..accept The Key to Scholomance##5505|instant
+		step
+			.' Excellent! You have the Skeleton Key!
+]])
+
+ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\[Empty] Scholomance (60)",[[
+	startlevel 60
 	step //1
 ]])
 
