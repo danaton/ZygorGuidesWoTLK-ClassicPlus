@@ -3720,7 +3720,7 @@ startlevel 72
 		step
 			goto Dragonblight,80.03,50.01
 			.kill 15 Vengeful Geist##27370|q 12258/1
-			.' You can find more inside the buildings around this area.
+			.info You can find more inside the buildings around this area.
 		step
 			goto Dragonblight,80.16,45.5|n
 			.' Enter the lower part of the mine here|goto 80.16,45.5,0.5|q 12276
