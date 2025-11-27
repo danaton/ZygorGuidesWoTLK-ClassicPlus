@@ -3246,7 +3246,7 @@ startlevel 68
 			..turnin No Time for Curiosity##9794
 		step
 			goto Blade's Edge Mountains,36.6,67.3
-			.' Click Wanted Poster
+			.' Interact with gameobject: Wanted Poster
 			..accept The Den Mother##10690
 		step
 			goto Blade's Edge Mountains,36.2,67.1
@@ -3278,15 +3278,15 @@ startlevel 68
 			.get 18 Plucked Lashh'an Feather##30529|q 10555/1
 		step
 			goto Blade's Edge Mountains,34.30,77.39
-			.' Interact with Lashh'an Tome
+			.' Interact with gameobject: Lashh'an Tome
 			.info Up on the wooden platform.
 			..turnin Malaise##10555
 			..accept Scratches##10556
 		step
 			goto Blade's Edge Mountains,35.22,77.31
-			Use the Fistful of Feathers|use Fistful of Feathers##30530
+			.use Fistful of Feathers##30530
 			.info Use it inside the Lashh'an Summoning Circle.
-			Begin Channeling the Lashh'an|havebuff Ability_Hunter_Pet_DragonHawk|q 10556
+			.' Begin Channeling the Lashh'an|havebuff Ability_Hunter_Pet_DragonHawk|q 10556
 			.info DO NOT MOUNT after receiving the buff, or you will lose the buff.
 		step
 			goto Blade's Edge Mountains,36.22,67.13
@@ -3297,7 +3297,7 @@ startlevel 68
 			goto Blade's Edge Mountains,37.07,65.62
 			.talk Daranelle##21469
 			.info DO NOT MOUNT, or you will lose the buff.
-			Have Daranelle Analyze the Kaliri Aura|q 10556/1
+			.' Have Daranelle Analyze the Kaliri Aura|q 10556/1
 		step
 			goto Blade's Edge Mountains,37.07,65.62
 			.talk Daranelle##21469
@@ -3305,22 +3305,19 @@ startlevel 68
 			..turnin Scratches##10556
 		step
 			goto Blade's Edge Mountains,42.45,83.28
-			.' Collect Draenethyst Mine Crystal
-			.info They look like huge colorful crystals on the ground around this area inside the cave.
-			.info You can mount again now.
 			.collect 5 Draenethyst Mine Crystal##30315|q 10510/1
+			.info They look like huge colorful crystals on the ground around this area inside the cave.
 		step
 			goto Blade's Edge Mountains,46.05,78.13
 			.from Bloodmaul Brewmaster##19957
-			.' Collect Bloodmaul Brew Keg on ground
 			.info They look like brown barrels on the ground and inside buildings around this area.
 			.get 11 Bloodmaul Brutebane Brew##29443|q 10511/1
-			.' You can find more around [43.15,80.63]
+			.' You can find more around|at 43.15,80.63
 		step
 			goto Blade's Edge Mountains,46.05,78.13
 			.' Kill Bloodmaul enemies around this area
 			.kill 30 Bloodmaul Ogres|q 10502/1
-			.' You can find more around [43.15,80.63]
+			.' You can find more around|at 43.15,80.63
 		step
 			goto Blade's Edge Mountains,37.41,65.04
 			.talk Bronwyn Stouthammer##21197
@@ -3353,7 +3350,7 @@ startlevel 68
 			..accept Protecting Our Own##10457
 		step
 			goto Blade's Edge Mountains,38.30,70.10
-			.' Interact with Grove Seedling
+			.' Interact with gameobject: Grove Seedling
 			.info They look like ball plants on the ground around this area.
 			.' Summon 5 Living Grove Defenders|q 10457/1
 		step
@@ -3363,17 +3360,17 @@ startlevel 68
 			..accept A Dire Situation##10506
 		step
 			goto Blade's Edge Mountains,43.06,80.75
-			.' Use Rina's Diminution Powder |use Rina's Diminution Powder##30251
+			.use Rina's Diminution Powder##30251
 			.info Use it on Bloodmaul Dire Wolves around this area.
-			Weaken 5 Bloodmaul Dire Wolves|q 10506/1
-			.' You can find more around [45.01,73.52]
+			.' Weaken 5 Bloodmaul Dire Wolves|q 10506/1
+			.' You can find more around|at 45.01,73.52
 		step
 			goto Blade's Edge Mountains,44.03,51.88
 			.talk Vindicator Vuuleen##21277
 			..accept The Trappings of a Vindicator##10516
 		step
 			goto Blade's Edge Mountains,39.05,52.76
-			.' Use the Bloodmaul Brutebane Keg|use Bloodmaul Brutebane Keg##30353
+			.use Bloodmaul Brutebane Keg##30353
 			.info Pull the 2 non-elite guards one at a time and kill them first.
 			.info Kill any non-elite ogres near the doorway before using the Bloodmaul Brutebane Keg.
 			.info This will pull Droggam outside the building without his elite guards.
@@ -3382,8 +3379,7 @@ startlevel 68
 			.get Vindicator Vuuleen's Blade##30413|q 10516/1
 		step
 			goto Blade's Edge Mountains,42.39,58.74
-			Enter the building|at 41.99,57.33
-			.' Use the Bloodmaul Brutebane Keg|use Bloodmaul Brutebane Keg##30353
+			.use Bloodmaul Brutebane Keg##30353
 			.info Pull the 2 non-elite guards one at a time and kill them first.
 			.info Kill any non-elite ogres near the doorway before using the Bloodmaul Brutebane Keg.
 			.info This will pull Mugdorg outside the building without his elite guards.
@@ -3399,7 +3395,8 @@ startlevel 68
 			.' Get 5 Bladespire Ogres drunk|q 10512/1
 		step
 			goto Blade's Edge Mountains,41.73,54.84
-			.kill 30 Bladespire Ogres|q 10504/1
+			.from Bladespire Brute##19995, Bladespire Shaman##19998
+			.' Slay 30 Bladespire Ogres|q 10504/1
 		step
 			goto Blade's Edge Mountains,44.03,51.88
 			.talk Vindicator Vuuleen##21277
@@ -3407,9 +3404,8 @@ startlevel 68
 			..accept Gorr'Dim, Your Time Has Come...##10517
 		step
 			goto Blade's Edge Mountains,39.46,49.14
-			Enter the building|at 40.12,49.79
-			.' Use the Bloodmaul Brutebane Keg |use Bloodmaul Brutebane Keg##30353
-			.info Pull the 2 non-elite guards one at a time and 			.kill them first.
+			.use Bloodmaul Brutebane Keg##30353
+			.info Pull the 2 non-elite guards one at a time and kill them first.
 			.info Kill any non-elite ogres near the doorway before using the Bloodmaul Brutebane Keg.
 			.info This will pull Gorr'dim outside the building without his elite guards.
 			.info When he starts running to the brew, run outside of the building so that he doesn't start attacking you too early.
@@ -3423,13 +3419,12 @@ startlevel 68
 			..accept Planting the Banner##10518
 		step
 			goto Blade's Edge Mountains,41.29,46.72
-			Enter the building|at 41.36,47.17
 			.from Bladespire Champion##21296
 			.info Inside the building.
 			.get Bladespire Clan Banner##30416|q 10518/1
 		step
 			goto Blade's Edge Mountains,46.56,74.71
-			.' Use the Bladespire Clan Banner|use Bladespire Clan Banner##30416
+			.use Bladespire Clan Banner##30416
 			.info At the top of the tower.
 			.info Don't place the banner if another player's banner is already present, or you will need to restart the quest.
 			.' Kill the enemies that attack in waves
@@ -3483,12 +3478,12 @@ startlevel 68
 			..accept Test Flight: The Singing Ridge##10710
 		step
 			goto Blade's Edge Mountains,57.67,57.77
-			.' Interact with Power Converter
+			.' Interact with gameobject: Power Converter
 			.info They look like small metal objects with electricty inside them on the ground around this area.
-			.' Use the Protovoltaic Magnetocollector|use Protovoltaic Magnetocollector##30656
+			.use Protovoltaic Magnetocollector##30656
 			.info Use it on the Electromentals that spawn.
 			.from Electromental##21729
-			.get 5 Electromentals|q 10584/1
+			.' 5 Electromentals collected|q 10584/1
 		step
 			goto Blade's Edge Mountains,60.53,68.96
 			.talk Toshley##21691
@@ -3504,8 +3499,8 @@ startlevel 68
 			..accept Cutting Your Teeth##10632
 		step
 			goto Blade's Edge Mountains,60.18,68.79
-			.' Use Tally's Waiver (Unsigned) |use Tally's Waiver (Unsigned)##30540
-			.collect Tally's Waiver (Signed)##30539|q 10710
+			.use Tally's Waiver##30540
+			.collect Tally's Waiver##30539|q 10710
 		step
 			goto Blade's Edge Mountains,60.18,68.79
 			.talk Rally Zapnabber##21461
@@ -3517,14 +3512,14 @@ startlevel 68
 			.get 5 Scalewing Lightning Gland##30849|q 10657/2 
 		step
 			goto Blade's Edge Mountains,68.27,69.34
-			.' Use the Repolarized Magneto Sphere |use Repolarized Magneto Sphere##30818
+			.use Repolarized Magneto Sphere##30818
 			.info Use it when fighting Scalewing Serpents around this area.
 			.info Allow them to use their Lightning Strike ability on you.
 			.info Put your pet on passive, if you have one, to make this go faster.
 			.' Absorb 25 Lightning Strikes|q 10657/1
 		step
 			goto Blade's Edge Mountains,66.17,56.94
-			.from Daggermaw Lashtail##20751+
+			.from Daggermaw Lashtail##20751
 			.get 5 Extra Sharp Daggermaw Tooth##30798|q 10632/1
 		step
 			goto Blade's Edge Mountains,66.17,56.94
@@ -3532,33 +3527,17 @@ startlevel 68
 			.info They are usually stealthed near the spikey rocks around this area.
 		step
 			goto Blade's Edge Mountains,66.03,76.18
-			.' Click Nether Drake Egg
+			.' Interact with gameobject: Nether Drake Egg
 			.info They look like big blue eggs with white crystals on them on the ground around this area.
-			.' Use the Temporal Phase Modulator|use Temporal Phase Modulator##30742
+			.use Temporal Phase Modulator##30742
 			.info Use it on the Nether Whelps that spawn.
-			.info You can use the Temporal Phase Modulator repeatedly on the same enemy
+			.info You can use the Temporal Phase Modulator repeatedly on the same enemy.
 			.info This allows you to keep changing the type of drake it is to suit what you need.
 			.from Proto-Nether Drake##21821
 			.get 3 Proto-Nether Drake Essence##30743|q 10609/1 
-		step
-			goto Blade's Edge Mountains,66.03,76.18
-			.' Click Nether Drake Egg
-			.info They look like big blue eggs with white crystals on them on the ground around this area.
-			.' Use the Temporal Phase Modulator|use Temporal Phase Modulator##30742
-			.info Use it on the Nether Whelps that spawn.
-			.info You can use the Temporal Phase Modulator repeatedly on the same enemy
-			.info This allows you to keep changing the type of drake it is to suit what you need.
-			.from Adolescent Nether Drake##21817+
+			.from Adolescent Nether Drake##21817
 			.get 3 Adolescent Nether Drake Essence##30782|q 10609/2
-		step
-			goto Blade's Edge Mountains,66.03,76.18
-			.' Click Nether Drake Egg
-			.info They look like big blue eggs with white crystals on them on the ground around this area.
-			.' Use the Temporal Phase Modulator|use Temporal Phase Modulator##30742
-			.info Use it on the Nether Whelps that spawn.
-			.info You can use the Temporal Phase Modulator repeatedly on the same enemy
-			.info This allows you to keep changing the type of drake it is to suit what you need.
-			.from Mature Nether Drake##21820+
+			.from Mature Nether Drake##21820
 			.get 3 Mature Nether Drake Essence##30783|q 10609/3
 		step
 			goto Blade's Edge Mountains,66.03,76.18
@@ -3596,7 +3575,7 @@ startlevel 68
 			..accept Test Flight: Razaan's Landing##10711
 		step
 			goto Blade's Edge Mountains,61.2,76.1
-			.' Use the Oscillating Frequency Scanners|use Oscillating Frequency Scanners##30701
+			.use Oscillating Frequency Scanners##30701
 			.info Use it multiple times.
 			.info Try to place them a little far apart, and so that the lines overlap each other a lot.
 			.info Stand in the middle of the design you made.
@@ -3612,7 +3591,7 @@ startlevel 68
 			.' Reach the Sky's Limit|q 10711/1
 		step
 			goto Blade's Edge Mountains,65.56,46.50
-			.' Use the Multi-Spectrum Light Trap |use Multi-Spectrum Light Trap##30852
+			.use Multi-Spectrum Light Trap##30852
 			.info Use it at the foot of this pole repeatedly.
 			.' Trap 15 Razaani Light Orbs|q 10674/1
 		step
@@ -3637,15 +3616,14 @@ startlevel 68
 			.talk Rally Zapnabber##21461
 			.' Tell him "I want to fly to an old location!"
 			.' Tell him "Send me to Razaan's Landing!"
-			.' Begin Flying to Razaan's Landing|goto 60.18,68.79 > 50|noway |c |q 10675
+			.' Begin Flying to Razaan's Landing|goto 66.81,49.41,10|noway|q 10675
 		step
 			goto Blade's Edge Mountains,66.40,44.09
 			.from Razaani Raider##20601, Razaani Nexus Stalker##20609, Razaani Spell-Thief##20614
 			.info Kill them near the portal until Nexus-Prince Razaan appears.
 			.from Nexus-Prince Razaan##21057
-			.' Click Collection of Souls
-			.info It appears above Nexus-Prince Razaan's corpse.
 			.get Collection of Souls##30890|q 10675/1
+			.info It appears above Nexus-Prince Razaan's corpse.
 		step
 			goto Blade's Edge Mountains,60.53,68.97
 			.talk Toshley##21691
@@ -3658,11 +3636,11 @@ startlevel 68
 			goto Blade's Edge Mountains,60.18,68.79
 			.talk Rally Zapnabber##21461
 			.' Tell him "Take me to Ruuan."
-			.' Launch to Ruuan Weald|q 10712/2
+			.' Launch to Ruuan Weald|q 10712/1
 		step
 			.' While Flying to Ruuan Weald:
-			.' Use the Nether-Weather Vane|use Nether-Weather Vane##31124
-			.' Spin the Nether-Weather Vane|q 10712/1
+			.use Nether-Weather Vane##31124
+			.' Spin the Nether-Weather Vane|q 10712/2
 		step
 			goto Blade's Edge Mountains,61.98,39.48
 			.talk Tree Warden Chawn##22007
@@ -3694,34 +3672,33 @@ startlevel 68
 			..turnin Test Flight: Ruuan Weald##10712
 		step
 			goto Blade's Edge Mountains,70.94,28.43
-			.kill Fel Corrupter##21300 |n
-			..accept Damaged Mask##10810|use Damaged Mask##31384
-			.' You can find more|at 73.4,28.8
-			.' You can find more|at 74.1,25.7
-			.' You can find more|at 69,33.1
-			.' You can find more|at 69.3,35.8
-			.' You can find more|at 71.8,34.8
-			.' You can find more|at 71.4,42.8
+			.kill Fel Corrupter##21300|n
+			.collect Damaged Mask##31384|q 10810 |future
+			.' You can find more (1)|at 73.4,28.8
+			.' You can find more (2)|at 74.1,25.7
+			.' You can find more (3)|at 69,33.1
+			.' You can find more (4)|at 69.3,35.8
+			.' You can find more (5)|at 71.8,34.8
+			.' You can find more (6)|at 71.4,42.8
+		step
+			.use Damaged Mask##31384
+			..accept Damaged Mask##10810
 		step
 			goto Blade's Edge Mountains,71.02,30.90
-			.kill 4 Felsworn Scalewing##21123 |q 10753/1
-		step
-			goto Blade's Edge Mountains,71.02,30.90
+			.kill 4 Felsworn Scalewing##21123|q 10753/1
 			.kill 4 Felsworn Daggermaw##21124|q 10753/2
-		step
-			goto Blade's Edge Mountains,71.02,30.90
 			.kill 2 Fel Corrupter##21300|q 10753/3
 		step
 			goto Blade's Edge Mountains,71.66,22.39
-			.' Сlick Fertile Volcanic Soil
+			.' Interact with gameobject: Fertile Volcanic Soil
 			.' Plant in the Southern Volcanic Soil|q 10771/1
 		step
 			goto Blade's Edge Mountains,71.60,20.33
-			.' Сlick Fertile Volcanic Soil
+			.' Interact with gameobject: Fertile Volcanic Soil
 			.' Plant in the Central Volcanic Soil|q 10771/2
 		step
 			goto Blade's Edge Mountains,71.59,18.51
-			.' Сlick Fertile Volcanic Soil
+			.' Interact with gameobject: Fertile Volcanic Soil
 			.' Plant in the Northern Volcanic Soil|q 10771/3
 		step
 			goto Blade's Edge Mountains,71.46,20.95
@@ -3732,9 +3709,9 @@ startlevel 68
 			.collect 6 Ruuan'ok Claw##30704|q 10567
 		step
 			goto Blade's Edge Mountains,64.47,33.11
-			.' Use the Ruuan'ok Claws|use Ruuan'ok Claw##30704
+			.use Ruuan'ok Claw##30704
 			.info Use them inside the glowing circle.
-			.' Watch the dialogue
+			.' Watch the dialogue.
 			.info It flies down to you.
 			.from Harbinger of the Raven##21767
 			.get Harbinger's Pendant##30706|q 10567/1
@@ -3781,9 +3758,11 @@ startlevel 68
 		step
 			goto Blade's Edge Mountains,59.37,37.97
 			.from Wyrmcult Poacher##21809, Wyrmcult Hewer##21810
-			.' After looting use Meeting Note|use Meeting Note##31120
-			..accept Did You Get The Note?##10719
+			.collect Meeting Note##31120|q 10719 |future
 			.' You can find more around|at 62.83,27.89
+		step
+			.use Meeting Note##31120
+			..accept Did You Get The Note?##10719
 		step
 			goto Blade's Edge Mountains,59.37,37.97
 			.kill 10 Wyrmcult Hewer##21810|q 10713/1
@@ -3810,64 +3789,58 @@ startlevel 68
 			.' Ask him "The Felsworn Gas Mask was destroyed, do you have another one?"
 			.collect Felsworn Gas Mask##31366|q 10819
 		step
-			goto Blade's Edge Mountains,73.25,40.03
-			.' Equip the Felsworn Gas Mask|q 10819
-			.' Manual skip this step
+			.use Felsworn Gas Mask##31366
+			.' Equip the Felsworn Gas Mask|havebuff INV_Helmet_31|q 10819
 		step
 			goto Blade's Edge Mountains,73.25,40.03
-			.' Interact with Legion Communicator
+			.' Interact with gameobject: Legion Communicator
 			..turnin Felsworn Gas Mask##10819
 			..accept Deceive thy Enemy##10820
 		step
-			.' Equip your Regular Head Armor|q 10820
-			.' Manual skip this step
+			.' Equip your Regular Head Armor|nobuff INV_Helmet_31|q 10820
 		step
 			goto Blade's Edge Mountains,74.92,40.16
 			.kill 4 Doomforge Attendant##19961|q 10820/1
-		step
-			goto Blade's Edge Mountains,74.92,40.16
 			.kill 4 Doomforge Engineer##19960|q 10820/2
 		step
-			goto Blade's Edge Mountains,73.25,40.03
-			.' Equip the Felsworn Gas Mask|q 10820
-			.' Manual skip this step
+			.use Felsworn Gas Mask##31366
+			.' Equip the Felsworn Gas Mask|havebuff INV_Helmet_31|q 10820
 		step
 			goto Blade's Edge Mountains,73.25,40.03
-			.' Interact with Legion Communicator
+			.' Interact with gameobject: Legion Communicator
 			..turnin Deceive thy Enemy##10820
 			..accept You're Fired!##10821
 		step
-			.' Equip your Regular Head Armor|q 10821
-			.' Manual skip this step
+			.' Equip your Regular Head Armor|nobuff INV_Helmet_31|q 10821
 		step
 			goto Blade's Edge Mountains,73.43,41.10
 			.from Anger Guard##16952
 			.collect 5 Camp Anger Key##31536|q 10821
 		step
 			goto Blade's Edge Mountains,73.54,43.42
-			.' Interact with Legion Obelisk
+			.' Interact with gameobject: Legion Obelisk
 			.' Activate the Legion Obelisk|q 10821
-			.' Manual skip this step after activating the Legion Obelisk
+			.info Manual skip this step after activating the Legion Obelisk
 		step
 			goto Blade's Edge Mountains,75.26,41.73
-			.' Interact with Legion Obelisk
+			.' Interact with gameobject: Legion Obelisk
 			.' Activate the Legion Obelisk|q 10821
-			.' Manual skip this step after activating the Legion Obelisk
+			.info Manual skip this step after activating the Legion Obelisk
 		step
 			goto Blade's Edge Mountains,73.90,41.07
-			.' Interact with Legion Obelisk
+			.' Interact with gameobject: Legion Obelisk
 			.' Activate the Legion Obelisk|q 10821
-			.' Manual skip this step after activating the Legion Obelisk
+			.info Manual skip this step after activating the Legion Obelisk
 		step
 			goto Blade's Edge Mountains,75.39,40.52
-			.' Interact with Legion Obelisk
+			.' Interact with gameobject: Legion Obelisk
 			.' Activate the Legion Obelisk|q 10821
-			.' Manual skip this step after activating the Legion Obelisk
+			.info Manual skip this step after activating the Legion Obelisk
 		step
 			goto Blade's Edge Mountains,74.00,39.90
-			.' Interact with Legion Obelisk
+			.' Interact with gameobject: Legion Obelisk
 			.' Activate the Legion Obelisk|q 10821
-			.' Manual skip this step after activating the Legion Obelisk
+			.info Manual skip this step after activating the Legion Obelisk
 		step
 			goto Blade's Edge Mountains,74.31,42.51
 			.kill Doomcryer##19963|q 10821/1
@@ -3880,7 +3853,7 @@ startlevel 68
 			..accept Death's Door##10910
 		step
 			goto Blade's Edge Mountains,65.24,70.65
-			.' Use the Druid Signal|use Druid Signal##31763
+			.use Druid Signal##31763
 			.info Use it in the Death's Door area.
 			.' Next to you:
 			.talk Evergrove Druid##22423
@@ -3892,7 +3865,7 @@ startlevel 68
 			.get 5 Fel Cannonball##31757|q 10904/1
 		step
 			goto Blade's Edge Mountains,65.24,70.65
-			.' Use the Druid Signal|use Druid Signal##31763
+			.use Druid Signal##31763
 			.info Use it in the Death's Door area.
 			.' Next to you:
 			.talk Evergrove Druid##22423.
@@ -3900,7 +3873,7 @@ startlevel 68
 			..accept Fire At Will!##10911
 		step
 			goto Blade's Edge Mountains,64.80,68.32
-			.' Use the Naturalized Ammunition|use Naturalized Ammunition##31807
+			.use Naturalized Ammunition##31807
 			.info Use it next to the Death's Door Fel Cannon.
 			.info Use the Artillery on the Warp-Gate ability on your pet action bar.
 			.info You will have to use the ability 7 times.
@@ -3908,7 +3881,7 @@ startlevel 68
 			.' Destroy the South Warp-Gate|q 10911/1
 		step
 			goto Blade's Edge Mountains,61.97,60.31
-			.' Use the Naturalized Ammunition|use Naturalized Ammunition##31807
+			.use Naturalized Ammunition##31807
 			.info Use it next to the Death's Door Fel Cannon.
 			.info Use the Artillery on the Warp-Gate ability on your pet action bar.
 			.info You will have to use the ability 7 times.
@@ -3916,7 +3889,7 @@ startlevel 68
 			.' Destroy the North Warp-Gate|q 10911/2
 		step
 			goto Blade's Edge Mountains,61.75,59.97
-			.' Use the Druid Signal|use Druid Signal##31763
+			.use Druid Signal##31763
 			.info Use it in the Death's Door area.
 			.' Next to you:
 			.talk Evergrove Druid##22423
@@ -3925,7 +3898,7 @@ startlevel 68
 			..accept The Hound-Master##10912
 		step
 			goto Blade's Edge Mountains,63.60,59.14
-			.' Use the Evergrove Wand|use Evergrove Wand##31809
+			.use Evergrove Wand##31809
 			.info Use it on Baelmon the Hound-Master.
 			.info This will call for allies to help you fight.
 			.kill Baelmon the Hound-Master##19747|q 10912/1
@@ -3933,13 +3906,14 @@ startlevel 68
 		step
 			goto Blade's Edge Mountains,62.54,39.91
 			.talk Wildlord Antelarion##22127
-			.info He walks around this area.
 			..turnin The Hound-Master##10912
 		step
 			goto Blade's Edge Mountains,55.14,24.05
 			.kill Dorgok##20753|q 10795/1
 			.info At the top of the tower.
-			.' Use Gorgrom's Favor|use Gorgrom's Favor##31363
+			.collect Gorgrom's Favor##31363|q 10797 |future
+		step
+			.use Gorgrom's Favor##31363
 			..accept Favor of the Gronn##10797
 			.info You must already have the "A Date with Dorgok" accepted to be able to accept this quest.
 		step
@@ -3954,9 +3928,9 @@ startlevel 68
 		step
 			goto Blade's Edge Mountains,61.99,37.99
 			.talk Commander Haephus Stonewall##22149
+			..turnin A Date with Dorgok##10795
 			..turnin Favor of the Gronn##10797
 			..accept Pay the Baron a Visit##10798
-			..turnin A Date with Dorgok##10795
 		step
 			goto Blade's Edge Mountains,53.25,41.17
 			.talk Baron Sablemane##22103
@@ -3970,15 +3944,13 @@ startlevel 68
 			goto Blade's Edge Mountains,53.25,41.17
 			.talk Baron Sablemane##22103
 			..turnin Into the Churning Gulch##10799
+			.' Watch dialogue.
 			..accept Goodnight, Gronn##10800
 		step
 			goto Blade's Edge Mountains,60.20,47.61
-			.' Use Sablemane's Sleeping Powder|use Sablemane's Sleeping Powder##31403
+			.use Sablemane's Sleeping Powder##31403
 			.info Use it on Grulloc nearby.
-			.' Manual skip this step after putting Grulloc to Sleep|q 10800
-		step
-			goto Blade's Edge Mountains,60.85,47.78
-			.' Collect Grulloc's Sack
+			.' Put the gronn to sleep|q 10800
 			.collect Grulloc's Sack##31349|q 10800/1
 		step
 			goto Blade's Edge Mountains,53.25,41.17
@@ -4013,7 +3985,7 @@ startlevel 68
 			.from Grishna Falconwing##19988, Grishna Harbinger##19989, Grishna Scorncrow##19990
 			.info You must be within melee range of killing an enemy to receive the buff.
 			.info Anytime the buff wears off while in this area, kill Grishna enemies to get it again.
-			.' Gain the Understanding of Ravenspeech|havebuff Ability_Hunter_Pet_Dragonhawk|q 10747 |future
+			.' Gain the Understanding of Ravenspeech|havebuff Ability_Hunter_Pet_DragonHawk|q 10747 |future
 		step
 			goto Blade's Edge Mountains,40.67,18.66
 			.' Receive the Third Prophecy|q 10607/3
@@ -4043,7 +4015,9 @@ startlevel 68
 		step
 			goto Blade's Edge Mountains,41.26,21.01
 			.from Grishna Falconwing##19988, Grishna Harbinger##19989, Grishna Scorncrow##19990
-			.' Use Orb of the Grishna|use Orb of the Grishna##31489
+			.collect Orb of the Grishna##31489|q 10825 |future
+		step
+			.use Orb of the Grishna##31489
 			..accept The Truth Unorbed##10825
 		step
 			goto Blade's Edge Mountains,30.54,23.14
@@ -4055,10 +4029,10 @@ startlevel 68
 			.kill 3 Boulder'mok Shaman##21047|q 10803/2
 		step
 			goto Blade's Edge Mountains,30.59,22.19
-			.' Interact with Gorgrom's Altar
-			.' Watch the dialogue
-			.kill Gorgrom##21514 |n
-			.' Use the Grisly Totems|use Grisly Totem##31754
+			.' Interact with gameobject: Gorgrom's Altar
+			.' Watch the dialogue.
+			.kill Gorgrom##21514|n
+			.use Grisly Totem##31754
 			.info Use them on his corpse.
 			.' Plant 3 Grisly Totems|q 10802/1
 		step
@@ -4067,19 +4041,19 @@ startlevel 68
 			.info Inside and outside the cave.
 			.collect 5 Costume Scraps##31121|q 10722
 		step
-			.' Use the Costume Scraps|use Costume Scraps##31121
-			.collect 1 Overseer Disguise##31122|q 10722
+			.use Costume Scraps##31121
+			.collect Overseer Disguise##31122|q 10722
 		step
 			goto Blade's Edge Mountains,32.92,34.59
-			.' Use the Blackwhelp Net|use Blackwhelp Net##31129
+			.use Blackwhelp Net##31129
 			.info Use it on Wyrmcult Blackwhelps inside the cave.
 			.info Walk next to the brown spiked eggs inside the cave to spawn more Wyrmcult Blackwhelps.
 			.' Capture 10 Wyrmcult Blackwhelps|q 10747/1 
 		step
 			goto Blade's Edge Mountains,32.05,37.36
-			.' Use the Overseer Disguise|use Overseer Disguise##31122
+			.use Overseer Disguise##31122
 			.info Wait to use it at this location.
-			.' Wear the Overseer Disguise|havebuff inv_chest_wolf|q 10722
+			.' Wear the Overseer Disguise|havebuff INV_Chest_Wolf|q 10722
 		step
 			goto Blade's Edge Mountains,32.64,37.49
 			.talk Kolphis Darkscale##22019
@@ -4106,8 +4080,8 @@ startlevel 68
 			goto Blade's Edge Mountains,61.98,39.47
 			.talk Tree Warden Chawn##22007
 			..turnin Meeting at the Blackwing Coven##10722
-			..accept Maxnar Must Die!##10748
 			..turnin The Truth Unorbed##10825
+			..accept Maxnar Must Die!##10748
 			..accept Treebole Must Know##10829
 		step
 			goto Blade's Edge Mountains,53.25,41.17
@@ -4121,22 +4095,21 @@ startlevel 68
 			..accept Exorcising the Trees##10830
 		step
 			goto Blade's Edge Mountains,39.3,20.2
-			.' Collect Grishnath Orb
-			.info They look like metal hook stands with purple balls at the top of them on the ground, inside huts, and up on the wooden platforms around this area.
 			.collect 5 Grishnath Orb##31495|q 10830
+			.info They look like metal hook stands with purple balls at the top of them on the ground, inside huts, and up on the wooden platforms around this area.
 		step
 			goto Blade's Edge Mountains,35.23,24.51
 			.from Dire Raven##21042
 			.collect 5 Dire Pinfeather##31517|q 10830
 		step
-			.' Use the Grishnath Orbs|use Grishnath Orb##31495
+			.use Grishnath Orb##31495
 			.info You will need to use them 5 times.
 			.collect 5 Exorcism Feather##31518|q 10830
 		step
 			goto Blade's Edge Mountains,34.48,28.92
-			.' Use the Exorcism Feathers|use Exorcism Feather##31518
+			.use Exorcism Feather##31518
 			.info Use them on Raven's Wood Leafbeards around this area.
-			.kill Koi-Koi Spirit##22226 |n
+			.kill Koi-Koi Spirit##22226|n
 			.info They spawn after using the Exorcism Feathers.
 			.info Do not kill the Raven's Wood Leafbeards.
 			.' Exorcise 5 Raven's Wood Leafbeards|q 10830/1
@@ -4145,8 +4118,10 @@ startlevel 68
 			.talk Treebole##22215
 			..turnin Exorcising the Trees##10830
 		step
+			goto Blade's Edge Mountains,32.03,33.84|n
+			.' Enter the cave|goto 32.03,33.84,0.5|noway|q 10748
+		step
 			goto Blade's Edge Mountains,33.90,35.33
-			.' Enter the cave|at 32.03,33.84
 			.kill Maxnar the Ashmaw##21389|q 10748/1
 			.info Inside the cave.
 		step
@@ -4160,7 +4135,6 @@ startlevel 68
 		step
 			goto Blade's Edge Mountains,55.48,44.86
 			.talk Mog'dorg the Wizened##22941
-			.info At the top of the tower.
 			..turnin Mog'dorg the Wizened##10989
 			..accept Grulloc Has Two Skulls##10995
 			..accept Maggoc's Treasure Chest##10996
@@ -4168,9 +4142,8 @@ startlevel 68
 		step
 			goto Blade's Edge Mountains,60.98,47.66
 			.from Grulloc##20216
-			.' Collect Grulloc's Dragon Skull
-			.info It appears after you kill Grulloc.
 			.get Grulloc's Dragon Skull##32379|q 10995/1
+			.info It appears after you kill Grulloc.
 		step
 			goto Blade's Edge Mountains,60.16,56.12
 			.from Maggoc##20600
@@ -4186,7 +4159,6 @@ startlevel 68
 		step
 			goto Terokkar Forest,20.44,17.64
 			.from Slaag##22199
-			.' Collect Slaag's Standard
 			.info It appears after you kill Slaag.
 			.get Slaag's Standard##32382|q 10997/1
 		step
@@ -4221,19 +4193,19 @@ startlevel 68
 			..accept Into the Soulgrinder##11000
 		step
 			goto Blade's Edge Mountains,60.00,24.14
-			.' Use Vim'gol's Grimoire|use Vim'gol's Grimoire##32467
+			.use Vim'gol's Grimoire##32467
 			.info Use it while standing on the stone table.
-			.kill Sundered Spirit##22912 |n
+			.kill Sundered Spirit##22912|n
 			.info Protect The Soulgrinder.
 			.info It appears after you use Vim'gol's Grimoire.
-			.kill Skulloc Soulgrinder##22910 |n
+			.kill Skulloc Soulgrinder##22910|n
 			.info It takes a little while for him to spawn.
 			.collect Skulloc's Soul##32383|q 11000/1
 			.info It appears after you kill Skulloc Soulgrinder.
 		step
 			goto Blade's Edge Mountains,64.16,18.49
-			.' Use the Sablemane Signet|use Sablemane's Signet##31808
-			.' Watch the dialogue
+			.use Sablemane's Signet##31808
+			.' Watch the dialogue.
 			.kill Goc##20555|q 10806/1
 		step
 			goto Blade's Edge Mountains,53.25,41.17
@@ -4272,7 +4244,7 @@ startlevel 68
 			.collect 1 Apexis Shard##32569|q 11058
 		step
 			goto Blade's Edge Mountains,27.67,68.09
-			.' Interact Apexis Relic
+			.' Interact with gameobject: Apexis Relic
 			.' Choose "Insert an Apexis Shard, and begin!"
 			.' Repeat the Color Patterns Shown
 			.info Ignore the floating crystal now, focus on the crystals on the ground.
@@ -4294,7 +4266,7 @@ startlevel 68
 			.collect 10 Apexis Shard##32569|q 11030
 		step
 			goto Blade's Edge Mountains,32.81,40.55
-			.' Interact with Fel Crystalforge
+			.' Interact with gameobject: Fel Crystalforge
 			.' Choose "Purchase 1 Unstable Flask of the Beast for the cost of 10 Apexis Shards"
 			.collect Unstable Flask of the Beast##32598|q 11030/1
 		step
@@ -4322,7 +4294,7 @@ startlevel 68
 			only Druid
 		step
 			goto Blade's Edge Mountains,34.80,41.26
-			.' Use the Skyguard Bombs|use Skyguard Bombs##32456
+			.use Skyguard Bombs##32456
 			.info You can use them while flying.
 			.info Use them on Fel Cannonballs Stacks.
 			.info They look like piles of gray stones on the ground next to Legion Flak Cannons around this area.
@@ -4330,7 +4302,7 @@ startlevel 68
 			only !Druid
 		step
 			goto Blade's Edge Mountains,34.80,41.26
-			.' Use the Skyguard Bombs|use Skyguard Bombs##32456
+			.use Skyguard Bombs##32456
 			.info You can use them while flying.
 			.info Use them on Fel Cannonballs Stacks.
 			.info They look like piles of gray stones on the ground next to Legion Flak Cannons around this area.
@@ -4350,6 +4322,7 @@ startlevel 68
 			goto Blade's Edge Mountains,27.57,52.90
 			.talk Sky Sergeant Vanderlip##23120
 			..accept Bomb Them Again!##11023
+			only if not ZGV.completedQuests[11091]
 		step
 			goto Blade's Edge Mountains,27.40,52.69
 			.talk Sky Commander Keller##23334
@@ -4364,20 +4337,20 @@ startlevel 68
 			..accept Wrangle Some Aether Rays!##11065
 		step
 			goto Blade's Edge Mountains,34.80,41.26
-			.' Use the Skyguard Bombs|use Skyguard Bombs##32456
+			.use Skyguard Bombs##32456
 			.info You can use them while flying.
 			.info Use them on Fel Cannonballs Stacks.
 			.info They look like piles of gray stones on the ground next to Legion Flak Cannons around this area.
 			.' Destroy 15 Fel Cannonball Stacks|q 11023/1
-			only !Quest.GetQuestCompleted(11091)
+			only if not ZGV.completedQuests[11091]
 		step
 			goto Blade's Edge Mountains,27.57,52.90
 			.talk Sky Sergeant Vanderlip##23120
 			..turnin Bomb Them Again!##11023
-			only !Quest.GetQuestCompleted(11091)
+			only if not ZGV.completedQuests[11091]
 		step
 			goto Blade's Edge Mountains,29.12,67.87
-			.' Use the Wrangling Rope|use Wrangling Rope##32698
+			.use Wrangling Rope##32698
 			.info Use it on Aether Rays around this area.
 			.' Wrangle 5 Aether Rays|q 11065/1
 		step
@@ -4392,18 +4365,18 @@ startlevel 68
 			goto Blade's Edge Mountains,27.95,51.46
 			.talk Skyguard Khatie##23335
 			..accept Wrangle More Aether Rays!##11066
-			only !Quest.GetQuestCompleted(11091)
+			only if not ZGV.completedQuests[11091]
 		step
 			goto Blade's Edge Mountains,29.12,67.87
-			.' Use the Wrangling Rope|use Wrangling Rope##32698
+			.use Wrangling Rope##32698
 			.info Use it on Aether Rays around this area.
 			.' Wrangle 5 Aether Rays|q 11066/1
-			only !Quest.GetQuestCompleted(11091)
+			only if not ZGV.completedQuests[11091]
 		step
 			goto Blade's Edge Mountains,27.95,51.46
 			.talk Skyguard Khatie##23335
 			..turnin Wrangle More Aether Rays!##11066
-			only !Quest.GetQuestCompleted(11091)
+			only if not ZGV.completedQuests[11091]
 		step
 			goto Blade's Edge Mountains,27.40,52.69
 			.talk Sky Commander Keller##23334
@@ -4411,13 +4384,12 @@ startlevel 68
 		step
 			goto Blade's Edge Mountains,29.2,65.2
 			.from Apexis Flayer##22175, Shard-Hide Boar##22180
-			.' Collect Apexis Shard Formations
+			.collect 35 Apexis Shard##32569|q 11059
 			.info They look like groups of crystals blending in with the bigger clusters of crystals around this area.
 			.info Run your mouse cursor over the groups of crystals around this area to find them easier.
-			.collect 35 Apexis Shard##32569|q 11059
 		step
 			goto Blade's Edge Mountains,31.76,63.79
-			.' Interact with Apexis Monument
+			.' Interact with gameobject: Apexis Monument
 			.' Choose "Insert 35 Apexis Shards, and begin!"
 			.info Don't do anything for the game, fail on purpose.
 			.info This makes the Apexis Guardian appear faster.
@@ -4431,30 +4403,28 @@ startlevel 68
 		step
 			goto Blade's Edge Mountains,29.2,65.2
 			.from Apexis Flayer##22175, Shard-Hide Boar##22180
-			.' Collect Apexis Shard Formations
+			.collect 35 Apexis Shard##32569|q 11078
 			.info They look like groups of crystals blending in with the bigger clusters of crystals around this area.
 			.info Run your mouse cursor over the groups of crystals around this area to find them easier.
-			.collect 35 Apexis Shard##32569|q 11078
 		step
 			goto Blade's Edge Mountains,27.18,64.80
-			.' Interact with Rivendark's Egg
+			.' Interact with gameobject: Rivendark's Egg
 			.' Choose "Place 35 Apexis Shards near the dragon egg to crack it open."
 			.from Rivendark##23061
 			.get Dragon Teeth##32732|q 11078/1
 		step
 			goto Blade's Edge Mountains,29.2,65.2
 			.from Apexis Flayer##22175, Shard-Hide Boar##22180
-			.' Collect Apexis Shard Formations
+			.collect 10 Apexis Shard##32569|q 11061
 			.info They look like groups of crystals blending in with the bigger clusters of crystals around this area.
 			.info Run your mouse cursor over the groups of crystals around this area to find them easier.
-			.collect 10 Apexis Shard##32569|q 11061
 		step
 			goto Blade's Edge Mountains,27.40,52.69
 			.talk Sky Commander Keller##23334
 			..turnin To Rule The Skies##11078
 		step
 			goto Blade's Edge Mountains,54.42,10.80
-			.' Interact with Bash'ir Crystalforge
+			.' Interact with gameobject: Bash'ir Crystalforge
 			.' Choose "Purchase 1 Unstable Flask of the Sorcerer for the cost of 10 Apexis Shards"
 			.collect Unstable Flask of the Sorcerer##32601|q 11061/1
 		step
@@ -4468,10 +4438,9 @@ startlevel 68
 		step
 			goto Blade's Edge Mountains,29.2,65.2
 			.from Apexis Flayer##22175, Shard-Hide Boar##22180
-			.' Collect Apexis Shard Formations
+			.collect 35 Apexis Shard##32569|q 11079
 			.info They look like groups of crystals blending in with the bigger clusters of crystals around this area.
 			.info Run your mouse cursor over the groups of crystals around this area to find them easier.
-			.collect 35 Apexis Shard##32569|q 11079
 		step
 			goto Blade's Edge Mountains,33.87,44.21
 			.' Click Fel Crystal Prism
@@ -4491,6 +4460,8 @@ startlevel 68
 			goto Blade's Edge Mountains,27.97,58.84
 			.talk Jho'nass##23428
 			..turnin A Special Thank You##11091
+		step
+			.' Congratulations! +88/86 quests for achievement "On the Blade's Edge".	
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\[68] Netherstorm",[[
