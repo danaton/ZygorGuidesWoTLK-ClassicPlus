@@ -2230,7 +2230,7 @@ startlevel 64
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\[68] Nagrand",[[
 author danaton
-description This guide contain quest-chain (75 quests) for Nagrand location.
+description This guide contain quest-chain (81 quests) for Nagrand location.
 startlevel 68
 		step
 			goto Zangarmarsh,41.21,28.67
@@ -2238,7 +2238,7 @@ startlevel 68
 			..accept Secrets of the Daggerfen##9848
 		step
 			goto Zangarmarsh,41.74,27.26
-			.' Click Wanted Poster
+			.' Interact with gameobject: Wanted Poster
 			..accept Wanted: Chieftain Mummaki##10116
 		step
 			goto Zangarmarsh,41.95,27.19
@@ -2251,10 +2251,12 @@ startlevel 68
 			.collect Daggerfen Poison Vial##24500|q 9848/2
 		step
 			goto Zangarmarsh,24.40,27.00
-			.collect Daggerfen Poison Manual##24499|q 9848/1|tip At the top of the tower.
+			.collect Daggerfen Poison Manual##24499|q 9848/1
+			.info At the top of the tower.
 		step
 			goto Zangarmarsh,23.78,26.75
-			.from Chieftain Mummaki##19174|tip At the top of the tower.
+			.from Chieftain Mummaki##19174
+			.info At the top of the tower.
 			.get Chieftain Mummaki's Totem##27943|q 10116/1
 		step
 			goto Zangarmarsh,25.20,25.34
@@ -2272,9 +2274,9 @@ startlevel 68
 			goto Zangarmarsh,41.94,27.19
 			.talk Ikuti##18008
 			..turnin Ango'rosh Encroachment##9835
-			..accept Overlord Gorefist##9839
 			..turnin Wanted: Chieftain Mummaki##10116
 			..turnin Daggerfen Deviance##10115
+			..accept Overlord Gorefist##9839
 		step
 			goto Nagrand,71.57,40.52
 			.talk Shado 'Fitz' Farstrider##18200
@@ -2290,24 +2292,29 @@ startlevel 68
 		step
 			goto Nagrand,71.29,47.09
 			.kill 12 Talbuk Stag##17130|q 9857/1
-			.' You can find more around [65.37,47.19]
+			.' You can find more around|at 65.37,47.19
 		step
 			goto Nagrand,71.29,47.09
 			.kill 12 Clefthoof##18205|q 9789/1
-			.' You can find more around [65.37,47.19]
+			.' You can find more around|at 65.37,47.19
 		step
 			goto Nagrand,71.29,47.09
 			.kill 12 Windroc##17128|q 9854/1
-			.' You can find more around [65.37,47.19]
+			.' You can find more around|at 65.37,47.19
 		step
 			goto Nagrand,71.29,47.09
-			.from Wild Elekk##18334+
-			.get 3 Pair of Ivory Tusks##25463|q 9914 |future
-			.' You can find more around [65.37,47.19]
+			.from Wild Elekk##18334
+			.collect 3 Pair of Ivory Tusks##25463|q 9914 |future
+			.' You can find more around (1)|at 65.37,47.19
+			.' You can find more around (2)|at 69.57,54.02
+			.' You can find more around (3)|at 58.55,58.7
 		step
 			goto Nagrand,65.37,47.19
 			.from Dust Howler##17158
-			..accept The Howling Wind##9861|tip You will eventually automatically accept this quest after looting.
+			.collect Howling Wind##24504|q 9861 |future
+		step
+			.use Howling Wind##24504
+			..accept The Howling Wind##9861
 		step
 			goto Nagrand,71.57,40.52
 			.talk Shado 'Fitz' Farstrider##18200
@@ -2343,22 +2350,24 @@ startlevel 68
 			..turnin The Underneath##9818
 			..accept The Tortured Earth##9819
 		step
-			goto Nagrand,55.7,22.0
-			.collect 8 Digested Caracoli##24419|q 9800/1|tip They look like piles of poo on the ground around this area.
+			goto Nagrand,52.5,26.3
+			.collect 8 Digested Caracoli##24419|q 9800/1
+			.info They look like piles of poo on the ground around this area.
 		step
-			goto Nagrand,55.7,22.0
+			goto Nagrand,52.4,28.5
 			.kill 12 Talbuk Thorngrazer##17131|q 9858/1
+			.' You can find more around|at 55.7,22
 		step
 			goto Nagrand,51.6,30.8
 			.kill 12 Clefthoof Bull##17132|q 9850/1
-			.' You can find more around [45.91,30.57]
+			.' You can find more around|at 45.91,30.57
 		step
 			goto Nagrand,51.94,34.78
 			.talk Consortium Recruiter##18335
 			..accept The Consortium Needs You!##9913
 		step
 			goto Nagrand,42.33,39.53
-			.from Muck Spawn##17154+
+			.from Muck Spawn##17154
 			.get 5 Muck-ridden Core##24469|q 9815/1
 		step
 			goto Nagrand,32.20,43.26
@@ -2383,14 +2392,16 @@ startlevel 68
 			..turnin A Head Full of Ivory##9914
 		step
 			goto Nagrand,35.03,65.00
-			.collect 10 Oshu'gun Crystal Fragment##25416|q 9882/1|tip They look like green and white crystals on the ground around this area.
-			.' You can find more around [41.21,70.42]
+			.collect 10 Oshu'gun Crystal Fragment##25416|q 9882/1
+			.info They look like green and white crystals on the ground around this area.
+			.' You can find more around|at 41.21,70.42
 		step
 			goto Nagrand,39.98,74.63
 			.kill 8 Voidspawn##17981|q 9925/1
 		step
 			goto Nagrand,42.40,73.49
-			.kill Gava'xi##18298|q 9900/1|tip He spawns here and walks around this area.
+			.kill Gava'xi##18298|q 9900/1
+			.info He spawns here and walks around this area.
 		step
 			goto Nagrand,48.4,61.5
 			.kill 12 Ravenous Windroc##18220|q 9855/1
@@ -2418,7 +2429,7 @@ startlevel 68
 			..accept The Throne of the Elements##9869
 		step
 			goto Nagrand,54.68,70.73
-			.' Click Telaar Bulletin Board
+			.' Interact with gameobject: Telaar Bulletin Board
 			..accept Wanted: Giselda the Crone##9936
 			..accept Wanted: Zorbo the Advisor##9940
 		step
@@ -2435,14 +2446,6 @@ startlevel 68
 			.talk Poli'lukluk the Wiser##18224
 			..accept Solving the Problem##9878
 		step
-			goto Nagrand,54.17,75.06
-			.talk Furgu##18789
-			.fpath Telaar, Nagrand
-		step
-			goto Nagrand,54.36,74.42
-			.talk Caregiver Isel##18914
-			home Telaar
-		step
 			goto Nagrand,61.68,67.11
 			.talk Wazat##19035
 			..accept I Must Have Them!##10109
@@ -2453,10 +2456,14 @@ startlevel 68
 		step
 			goto Nagrand,64.66,71.01
 			.kill 10 Tortured Earth Spirit##17156|q 9819/1
-			.' You can find more around [57.62,61.64]
+			.' You can find more around|at 57.62,61.64
 		step
 			goto Nagrand,71.16,82.35
-			.kill Giselda the Crone##18391|q 9936/1 
+			.kill Giselda the Crone##18391|q 9936/1
+		step
+			goto Nagrand,70.5,79.8
+			.from Kil'sorrow Spellbinder##17146, Kil'sorrow Cultist##17147, Kil'sorrow Deathsworn##17148
+			.' Slay 15 Kil'sorrow Agent|q 9936/2
 		step
 			goto Nagrand,72.56,70.70
 			.talk Corki##18369
@@ -2464,19 +2471,20 @@ startlevel 68
 		step
 			goto Nagrand,72.98,70.48
 			.from Boulderfist Crusher##17134, Boulderfist Mystic##17135
-			.get Boulderfist Key##25490|q 9923
+			.collect Boulderfist Key##25490|q 9923
 		step
 			goto Nagrand,72.56,70.70
+			.' Interact with gameobject: Corki's Prison
 			.' Free Corki|q 9923/1
 		step
 			goto Nagrand,73.01,68.95
-			.' kill Boulderfist enemies around this area
-			.get 10 Obsidian Warbeads##25433 |q 10476/1
+			.from Boulderfist Crusher##17134, Boulderfist Mystic##17135
+			.get 10 Obsidian Warbeads##25433|q 10476/1
 		step
 			goto Nagrand,65.5,46.9
-			.from Dust Howler##17158+
+			.from Dust Howler##17158
 			.get 3 Air Elemental Gas##27807|q 10109/1
-			.' You can find more around [69.7,44.7]
+			.' You can find more around|at 69.7,44.7
 		step
 			goto Nagrand,71.38,40.62
 			.talk Harold Lane##18218
@@ -2501,8 +2509,8 @@ startlevel 68
 			goto Nagrand,60.80,22.38
 			.talk Elementalist Lo'ap##18073
 			..turnin A Rare Bean##9800
-			..accept Agitated Spirits of Skysong##9804
 			..turnin Muck Diving##9815
+			..accept Agitated Spirits of Skysong##9804
 		step
 			goto Nagrand,60.66,22.10
 			.talk Elementalist Sharvak##18072
@@ -2521,7 +2529,7 @@ startlevel 68
 			..accept Blessing of Incineratus##9805
 		step
 			goto Nagrand,52,20.2
-			.from Enraged Crusher##18062+
+			.from Enraged Crusher##18062
 			.get 10 Enraged Crusher Core##24473|q 9821/1
 		step
 			goto Nagrand,61.8,24.4
@@ -2535,19 +2543,17 @@ startlevel 68
 		step
 			goto Nagrand,45.37,22.12
 			.kill 10 Warmaul Shaman##18064|q 9940/2
-		step
-			goto Nagrand,45.37,22.12
 			.kill 10 Warmaul Reaver##17138|q 9940/3 
 		step
 			goto Nagrand,34.1,26.5
 			.from Gutripper##18257
-			.info He looks like a big black bird that flies around this area.|tip He sometimes flies high in the air.
+			.info He looks like a big black bird that flies around this area.
+			.info He sometimes flies high in the air.
 			.get Eye of Gutripper##24513|q 9856/1
 		step
 			goto Nagrand,25.70,27.61
-			.' Click Telaar Supply Crate
-			.info They look like grey metal boxes on the ground around this area.
 			.collect 10 Telaar Supply Crate##25647|q 9956/1
+			.info They look like grey metal boxes on the ground around this area.
 		step
 			goto Nagrand,26.85,45.95
 			.from Bach'lor##18258
@@ -2568,12 +2574,8 @@ startlevel 68
 		step
 			goto Nagrand,20.05,51.43
 			.kill 2 Felguard Legionnaire##17152|q 9999/1
-		step
-			goto Nagrand,20.05,51.43
 			.kill 3 Mo'arg Engineer##16945|q 9999/2
-		step
-			goto Nagrand,20.05,51.43
-			.kill 8 Gan'arg Tinkerer##17151 |q 9999/3
+			.kill 8 Gan'arg Tinkerer##17151|q 9999/3
 		step
 			goto Nagrand,27.33,43.08
 			.talk Altruis the Sufferer##18417
@@ -2590,7 +2592,7 @@ startlevel 68
 			..accept Patience and Understanding##10004 
 		step
 			goto Nagrand,33.58,48.00
-			.' Use the Torch of Liquid Fire|use Torch of Liquid Fire##24560
+			.use Torch of Liquid Fire##24560
 			.info Use it on Sunspring Villager Corpses underwater around this area.
 			.' Burn 10 Sunspring Villager Corpses|q 9874/1
 		step
@@ -2599,7 +2601,7 @@ startlevel 68
 			.kill 5 Murkblood Raider##18203|q 9878/2
 		step
 			goto Nagrand,29.86,78.76
-			.' Use Gordawg's Boulder|use Gordawg's Boulder##24501
+			.use Gordawg's Boulder##24501
 			.info Use it on Shattered Rumblers around this area.
 			.kill 30 Minion of Gurok##18181|q 9849/1
 			.info They spawn after you.		
@@ -2652,7 +2654,7 @@ startlevel 68
 			..accept Bring Me The Egg!##10111
 		step
 			goto Nagrand,61.34,66.99
-			.' Click Mysterious Egg
+			.' Interact with gameobject: Mysterious Egg
 			.info It looks like a big white egg with light blue spots on it in a nest in the tree.
 			.' Attempt to Steal the Egg|q 10111/1
 		step
@@ -2666,7 +2668,7 @@ startlevel 68
 			..turnin Bring Me The Egg!##10111
 		step
 			goto Nagrand,62.74,71.49
-			.' Kill Lump
+			.kill Lump##18351|n
 			.info He will eventually turn friendly.
 			.talk Lump##18351
 			.' Tell him "I need answers, ogre!"
@@ -2684,29 +2686,26 @@ startlevel 68
 		step
 			goto Nagrand,72.9,69.8
 			.kill 8 Boulderfist Crusher##17134|q 9921/1
-			.' You can find more around [74.82,64.19]
-		step
-			goto Nagrand,72.9,69.8
 			.kill 8 Boulderfist Mystic##17135|q 9921/2
-			.' You can find more around [74.82,64.19]
+			.' You can find more around|at 74.82,64.19
 		step
 			goto Nagrand,72.75,54.70
-			.' Use the Living Fire |use Living Fire##24467
+			.use Living Fire##24467
 			.info Use it inside the hut.
 			.' Destroy the Eastern Hut|q 9805/4
 		step
 			goto Nagrand,71.22,53.26
-			.' Use the Living Fire|use Living Fire##24467
+			.use Living Fire##24467
 			.info Use it inside the hut.
 			.' Destroy the Southern Hut|q 9805/3 
 		step
 			goto Nagrand,70.76,51.13
-			.' Use the Living Fire |use Living Fire##24467
+			.use Living Fire##24467
 			.info Use it inside the hut.
 			.' Destroy the Western Hut|q 9805/2
 		step
 			goto Nagrand,72.40,50.36
-			.' Use the Living Fire |use Living Fire##24467
+			.use Living Fire##24467
 			.info Use it inside the hut.
 			.' Destroy the Large Hut|q 9805/1
 		step
@@ -2751,23 +2750,25 @@ startlevel 68
 			.info Underwater.
 		step
 			goto Nagrand,33.8,48.9
-			.kill 8 Lake Surger##17155 |q 9810/2
+			.kill 8 Lake Surger##17155|q 9810/2
 			.info Underwater around this area.
 		step
 			goto Nagrand,40.95,33.09
 			.from Boulderfist Warrior##17136, Boulderfist Mage##17137
 			.collect Northwind Cleft Key##25509|q 9924
 		step
-			goto Nagrand,40.76,31.44
-			.' Click Corki's Prison
+			goto Nagrand,40.76,31.44|n
+			.' Enter the cave|goto 40.76,31.44,0.5|noway|q 9924
+		step
+			goto Nagrand,39.25,27.42
+			.' Interact with gameobject: Corki's Prison
 			.info Inside the cave.
-			.' Free Corki Again |q 9924/1 |goto 39.26,27.46
+			.' Free Corki Again|q 9924/1
 		step
 			goto Nagrand,40.95,33.09
 			.kill 10 Boulderfist Warrior##17136|q 9922/1
-		step
-			goto Nagrand,40.95,33.09
 			.kill 10 Boulderfist Mage##17137|q 9922/2
+			.' You can find more around|at 48.55,54.8
 		step
 			goto Nagrand,60.80,22.38
 			.talk Elementalist Lo'ap##18073
@@ -2795,63 +2796,68 @@ startlevel 68
 			goto Nagrand,73.81,62.60
 			.talk Lantresor of the Blade##18261
 			..turnin Diplomatic Measures##10108
-			..accept Armaments for Deception##9928
 			..accept Ruthless Cunning##9927
+			..accept Armaments for Deception##9928
 		step
 			goto Nagrand,71.4,79.4
-			.' Kill Kil'sorrow enemies around this area
-			.' Use the Warmaul Ogre Banners|use Warmaul Ogre Banner##25552
+			.from Kil'sorrow Spellbinder##17146, Kil'sorrow Cultist##17147, Kil'sorrow Deathsworn##17148
+			.use Warmaul Ogre Banner##25552
 			.info Use it near Kil'sorrow enemy corpses.
 			.' Plant 10 Warmaul Ogre Banners|q 9927/1
 		step
 			goto Nagrand,71.4,79.4
-			.' Click Kil'sorrow Armament
-			.info They look like boxes with red axes on them on the ground and inside buildings around this area.
 			.collect 10 Kil'sorrow Armaments##25554|q 9928/1
+			.info They look like boxes with red axes on them on the ground and inside buildings around this area.
 		step
 			goto Nagrand,73.81,62.60
 			.talk Lantresor of the Blade##18261
-			..turnin Armaments for Deception##9928
 			..turnin Ruthless Cunning##9927
+			..turnin Armaments for Deception##9928
 			..accept Returning the Favor##9931
 			..accept Body of Evidence##9932
 		step
 			goto Nagrand,46.66,24.32
-			.' Use the Damp Woolen Blanket|use Damp Woolen Blanket##25658
+			.use Damp Woolen Blanket##25658
 			.info Use it next to the Blazing Warmaul Pyre.
 			.' Plant the Kil'sorrow Bodies|q 9932/1
 			.info Protect the 2 Boulderfist Saboteurs as they plant the bodies around this area.
 		step
 			goto Nagrand,46.97,23.51
 			.from Warmaul Reaver##17138, Warmaul Shaman##18064
-			.' Use the Kil'sorrow Banners|use Kil'sorrow Banner##25555
+			.use Kil'sorrow Banner##25555
 			.info Use it near Warmaul enemy corpses.
 			.' Plant 10 Kil'sorrow Banners|q 9931/1
 		step
 			goto Nagrand,46.97,23.51
 			.from Warmaul Reaver##17138, Warmaul Shaman##18064
-			.collect 7 Warmaul Skull##24502|q 9853/1
+			.collect 7 Warmaul Skull##24502|q 9853
 		step
 			goto Nagrand,29.06,25.01
-			.' Use the Warmaul Skulls |use Warmaul Skull##24502
+			.use Warmaul Skull##24502
 			.info Up on the mountain.
 			.from Gurok the Usurper##18182
-			.get Gurok's Earthen Head##24503|q 9853/1 
+			.get Gurok's Earthen Head##24503|q 9853/1
 		step
-			goto Nagrand,26.96,23.61
+			goto Nagrand,26.96,23.61|n
+			.' Enter the cave|goto 26.96,23.61,0.5|noway|q 9954
+		step
+			goto Nagrand,29.55,26.05
 			.talk Corki##18445
-			..turnin Corki's Ransom##9954|goto 29.52,26.02
+			..turnin Corki's Ransom##9954
 			..accept Cho'war the Pillager##9955
 		step
 			goto Nagrand,26.97,12.03
 			.from Cho'war the Pillager##18423
 			.info Inside the cave.
-			.get Cho'war's Key##25648|q 9955/1|goto 25.91,13.72
+			.collect Cho'war's Key##25648|q 9955
 		step
-			goto Nagrand,26.96,23.61
-			.' Click Corki's Prison
+			goto Nagrand,26.95,23.6|n
+			.' Enter the cave|goto 26.95,23.6,0.5|noway|q 9955
+		step
+			goto Nagrand,29.55,26.05
+			.' Interact with gameobject: Corki's Prison
 			.info Inside the cave.
-			.' Free Corki|q 9955/1 |goto 29.52,26.02
+			.' Free Corki|q 9955/1
 		step
 			goto Nagrand,55.48,68.71
 			.talk Arechron##18183
@@ -2869,27 +2875,29 @@ startlevel 68
 		step
 			goto Nagrand,61.8,24.4
 			.talk Gordawg##18099
-			.info He walks around this area.
 			..turnin Gurok the Usurper##9853
 		step
 			goto Nagrand,33.18,42.31
 			.talk Kurenai Captive##18209
 			..accept The Totem of Kar'dash##9879
 		step
-			goto Nagrand,31.57,38.77
-			Free the Kurenai Captive|q 9879/1
+			goto Nagrand,31.78,38.65
+			.' Free the Kurenai Captive|q 9879/1
 			.info Follow Kurenai Captive and protect him as he walks.
 		step
 			goto Nagrand,39.9,57.6
-			.' Kill Murkblood Invader
+			.from Murkblood Invader##18238
 			.info They are a group of 3 riding on elephants along this road.
 			.info They walk on this road back and forth.
+			.collect Murkblood Invasion Plans##24559|q 9871 |future
+		step
+			.use Murkblood Invasion Plans##24559
 			..accept Murkblood Invaders##9871
 		step
 			goto Nagrand,55.48,68.71
 			.talk Arechron##18183
-			..turnin The Totem of Kar'dash##9879
 			..turnin Murkblood Invaders##9871
+			..turnin The Totem of Kar'dash##9879
 			..accept Ortor My Old Friend...##9873
 		step
 			goto Nagrand,30.85,42.36
@@ -2902,7 +2910,7 @@ startlevel 68
 		step
 			goto Terokkar Forest,37.24,65.61 
 			.talk Ha'lei##19697
-			..accept I See Dead Draenei##10227|goto Terokkar Forest,35.09,65.09
+			..accept I See Dead Draenei##10227
 		step
 			goto Terokkar Forest,35.14,66.27
 			.talk Ramdor the Mad##19417
@@ -2926,12 +2934,12 @@ startlevel 68
 			..turnin What Book? I Don't See Any Book.##10231
 			..accept The Master's Grand Design?##10251
 		step
-			goto Shattrath City,74.07,32.84
+			goto Shattrath City,77.30,34.88
 			.talk Sal'salabim##18584
 			.' Tell him "Altruis sent me. He said that you could help me."
 			.kill Sal'salabim##18584|n
 			.info He will eventually turn friendly.
-			.' Persuade Sal'salabim|q 10004/1 |goto 77.30,34.88
+			.' Persuade Sal'salabim|q 10004/1
 		step
 			goto Shattrath City,77.30,34.88
 			.talk Sal'salabim##18584
@@ -2982,24 +2990,24 @@ startlevel 68
 			goto Nagrand,30.9,32.9
 			.from Greater Windroc##17129
 			.get Flawless Greater Windroc Beak##28667|q 10252/2
-			.' You can find more around 1: [33.25,26.30]
-			.' You can find more around 2: [35.91,28.69]
+			.' You can find more around (1)|at 33.25,26.30
+			.' You can find more around (2)|at 35.91,28.69
 		step
 			goto Nagrand,24.99,36.09
 			.from Overseer of Hate##18535
-			.get Fel Cannon Activator##25770|q 10011
+			.collect Fel Cannon Activator##25770|q 10011
 		step
 			goto Nagrand,25.08,35.98
-			.' Use the Fel Cannon Activator|use Fel Cannon Activator##25770
+			.use Fel Cannon Activator##25770
 			.info Use it next to Fel Cannon: Hate.
 			.' Destroy Forge Camp: Hate|q 10011/1
 		step
 			goto Nagrand,19.62,51.09
 			.from Overseer of Fear##18536
-			.get Fel Cannon Activator##25771|q 10011/2
+			.collect Fel Cannon Activator##25771|q 10011
 		step
 			goto Nagrand,19.36,50.78
-			.' Use the Fel Cannon Activator |use Fel Cannon Activator##25771
+			.use Fel Cannon Activator##25771
 			.info Use it next to Fel Cannon: Fear.
 			.' Destroy Forge Camp: Fear|q 10011/2 
 		step
@@ -3039,11 +3047,11 @@ startlevel 68
 			goto Shadowmoon Valley,72.15,50.85
 			.from Sunfury Warlock##21503, Sunfury Summoner##21505
 			.info Only Sunfury Warlocks and Sunfury Summoners will drop the quest item.
-			.get Scroll of Demonic Unbanishing##30811|q 10637|c
+			.collect Scroll of Demonic Unbanishing##30811|q 10637
 			only if rep ('The Aldor') >= Neutral
 		step
 			goto Shadowmoon Valley,69.81,51.41
-			.' Use the Scroll of Demonic Unbanishing |use Scroll of Demonic Unbanishing##30811
+			.use Scroll of Demonic Unbanishing##30811
 			.info Use it on Azaloth.
 			.info If the enemies around him are alive, try to get to him without killing them, if you can.
 			.info They will fight Azaloth for you once you free him.
@@ -3075,11 +3083,11 @@ startlevel 68
 			goto Shadowmoon Valley,72.15,50.85
 			.from Sunfury Warlock##21503, Sunfury Summoner##21505
 			.info Only Sunfury Warlocks and Sunfury Summoners will drop the quest item.
-			.get Scroll of Demonic Unbanishing##30811|q 10688
+			.collect Scroll of Demonic Unbanishing##30811|q 10688
 			only if rep ('The Scryers') >= Neutral
 		step
 			goto Shadowmoon Valley,69.81,51.41
-			.' Use the Scroll of Demonic Unbanishing|use Scroll of Demonic Unbanishing##30811
+			.use Scroll of Demonic Unbanishing##30811
 			.info Use it on Azaloth.
 			.info If the enemies around him are alive, try to get to him without killing them, if you can.
 			.info They will fight Azaloth for you once you free him.
@@ -3109,7 +3117,7 @@ startlevel 68
 			..accept Against All Odds##10669
 		step
 			goto Zangarmarsh,16.22,40.67
-			Use the Imbued Silver Spear|use Imbued Silver Spear##30853
+			.use Imbued Silver Spear##30853
 			.kill Xeleth##21894|q 10669/1
 		step
 			goto Netherstorm,32.73,64.96
@@ -3118,10 +3126,10 @@ startlevel 68
 		step
 			goto Netherstorm,39.61,20.44
 			.from Wrath Priestess##18859
-			.get Freshly Drawn Blood##30850|q 10641
+			.collect Freshly Drawn Blood##30850|q 10641
 		step
 			goto Netherstorm,39.61,20.44
-			.' Use the Freshly Drawn Blood|use Freshly Drawn Blood##30850
+			.use Freshly Drawn Blood##30850
 			.info It only last 1 minute, then it disappears, so use it quickly.
 			.kill Avatar of Sathal##21925|q 10641/1
 		step
@@ -3151,7 +3159,7 @@ startlevel 68
 			.info This is a group quest.
 		step
 			goto Nagrand,43.43,20.57
-			.kill Brokentoe##18398 |n
+			.kill Brokentoe##18398|n
 			.' Defeat Brokentoe|q 9962/1
 		step
 			goto Nagrand,42.78,20.68
@@ -3164,7 +3172,7 @@ startlevel 68
 			.info This is a group quest.
 		step
 			goto Nagrand,43.43,20.57
-			.kill Murkblood Twin##18399 |n
+			.kill Murkblood Twin##18399|n
 			.' Defeat The Blue Brothers|q 9967/1
 		step
 			goto Nagrand,42.78,20.68
@@ -3177,7 +3185,7 @@ startlevel 68
 			.info This is a group quest.
 		step
 			goto Nagrand,43.43,20.57
-			.kill Rokdar the Sundered Lord##18400 |n
+			.kill Rokdar the Sundered Lord##18400|n
 			.' Defeat Rokdar the Sundered Lord|q 9970/1
 		step
 			goto Nagrand,42.78,20.68
@@ -3190,8 +3198,8 @@ startlevel 68
 			.info This is a group quest.
 		step
 			goto Nagrand,43.43,20.57
-			.kill Skra'gath##18401 |n
-			Defeat Skra'gath|q 9972/1
+			.kill Skra'gath##18401|n
+			.' Defeat Skra'gath|q 9972/1
 		step
 			goto Nagrand,42.78,20.68
 			.talk Wodin the Troll-Servant##22893
@@ -3203,8 +3211,8 @@ startlevel 68
 			.info This is a group quest.
 		step
 			goto Nagrand,43.43,20.57
-			.kill Warmaul Champion##18402 |n
-			Defeat the Warmaul Champion|q 9973/1
+			.kill Warmaul Champion##18402|n
+			.' Defeat the Warmaul Champion|q 9973/1
 		step
 			goto Nagrand,42.78,20.68
 			.talk Wodin the Troll-Servant##22893
@@ -3216,13 +3224,15 @@ startlevel 68
 			.info This is a group quest.
 		step
 			goto Nagrand,43.43,20.57
-			.kill Mogor##18069 |n
+			.kill Mogor##18069|n
 			.info You will have to kill him twice.
-			Defeat Mogor, Hero of the Warmaul|q 9977/1
+			.' Defeat Mogor, Hero of the Warmaul|q 9977/1
 		step
 			goto Nagrand,42.78,20.68
 			.talk Wodin the Troll-Servant##22893
 			..turnin The Ring of Blood: The Final Challenge##9977
+		step
+			.' Congratulations! +81/75 quests for achievement "Nagrand Slam".	
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Loremaster Alliance Guides\\Burning Crusade\\[68] Blade's Edge Mountains",[[
@@ -4489,8 +4499,8 @@ startlevel 68
 		step
 			goto Netherstorm,26.5,51.9
 			.from Weaken Phase Hunters##18879
-			.' You will see a message in your chat window saying 'Phase Hunter is very weak'
-			.' Use your Battery Recharging Blaster|use Battery Recharging Blaster##28369
+			.' You will see a message in your chat window saying 'Phase Hunter is very weak'.
+			.use Battery Recharging Blaster##28369
 			.' Battery Charge Level|q 10190/1
 		step
 			goto Netherstorm,31.5,56.6
