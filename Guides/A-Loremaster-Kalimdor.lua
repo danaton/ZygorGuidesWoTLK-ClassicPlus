@@ -1803,7 +1803,7 @@ startlevel 20
 			..accept Bashal'Aran (4)##957
 		step
 			goto Darkshore,41.9,31.5
-			.talk Beached Sea Creature##991008
+			.' Interact with gameobject: Beached Sea Creature
 			..accept Beached Sea Creature##4723
 		step
 			goto Darkshore,42,28.6
@@ -1824,7 +1824,7 @@ startlevel 20
 			.collect Cliffspring River Sample##12349|q 4762/1
 		step
 			goto Darkshore,55.64,36.13
-			.collect 1 Death Cap##5270|q 947/2
+			.collect Death Cap##5270|q 947/2
 			.info Сan be found on the upper level of the cave.
 		step
 			goto Darkshore,55.1,33.6
@@ -1835,6 +1835,8 @@ startlevel 20
 			.kill 20 Rabid Thistle Bear##2164|q 2138/1
 			.from Moonstalker##2069
 			.get 6 Moonstalker Fang##5413|q 1002/1
+			.' You can find more around (1)|at 53.15,27.35
+			.' You can find more around (2)|at 45.35,26.6
 		step
 			goto Darkshore,51.3,24.6
 			.talk Buzzbox 323##991004
@@ -1842,7 +1844,7 @@ startlevel 20
 			..accept Buzzbox 525##1003
 		step
 			goto Darkshore,44.2,20.6
-			.talk Beached Sea Turtle##991009
+			.' Interact with gameobject: Beached Sea Turtle
 			..accept Beached Sea Turtle##4725
 		step
 			goto Darkshore,35.7,43.7
@@ -1891,7 +1893,8 @@ startlevel 20
 			..accept The Blackwood Corrupted##4763
 		step
 			goto Darkshore,37.8,44
-			.' Use Empty Cleansing Bowl on a Moonwell|use Empty Cleansing Bowl##12346
+			.use Empty Cleansing Bowl##12346
+			.info Use Empty Cleansing Bowl on a Moonwell.
 			.collect Filled Cleansing Bowl##12347|q 4763
 		step
 			goto Darkshore,52.4,35.9|n
@@ -1910,9 +1913,10 @@ startlevel 20
 			.collect Blackwood Fruit Sample##12341|q 4763
 		step
 			goto Darkshore,52.43,33.37
-			.' Use Filled Cleansing Bowl on a Bonfire|use Filled Cleansing Bowl##12347
-			.kill 1 Xabraxxis##10373|n
-			.collect Talisman of Corruption##12355|q 4763/1
+			.use Filled Cleansing Bowl##12347
+			.info Use Filled Cleansing Bowl on a Bonfire.
+			.from Xabraxxis##10373
+			.get Talisman of Corruption##12355|q 4763/1
 		step
 			goto Darkshore,55,24.9
 			.talk Balthule Shadowstrike##3661
@@ -2047,14 +2051,17 @@ startlevel 20
 			..accept The Master's Glaive##944
 		step
 			goto Darkshore,38.5,86.2
-			.' Clear the mobs around the table
-			.' Jump on the table with the remains on it
-			.' Click your Phial of Scrying in your bags|use Phial of Scrying##5251
-			.' Create the Scrying Bowl
+			.' 	Enter the Master's Glaive|q 944
+			.' Clear the mobs around the table.
+			.' Jump on the table with the remains on it.
+			.use Phial of Scrying##5251
+			.info Create the Scrying Bowl.
 			.' Interact with gameobject: Scrying Bowl
 			..turnin The Master's Glaive##944
 			..accept The Twilight Camp##949
-			.' Click the Twilight Tome
+		step
+			goto Darkshore,38.55,86.05
+			.' Interact with gameobject: Twilight Tome
 			..turnin The Twilight Camp##949
 			..accept Return to Onu##950
 		step
@@ -2067,7 +2074,7 @@ startlevel 20
 		step
 			goto Darkshore,38.5,86.2
 			.from Twilight Disciple##2338, Twilight Thug##2339
-			.collect Book: The Powers Below##5352|q 1143/1 |future
+			.collect Book: The Powers Below##5352|q 968 |future
 		step
 			.use Book: The Powers Below##5352
 			..accept The Powers Below##968
@@ -2138,12 +2145,14 @@ startlevel 20
 			.talk Therysil##3585
 			..turnin Therylune's Escape##945
 		step
-			.' Move forward along the road|goto Ashenvale,21.5,58.99,0.5|q 973
+			goto Ashenvale,21.5,58.99|n
+			.' Move forward along the road|goto Ashenvale,21.5,58.99,0.5|noway|q 973
 		step
-			.' Climb up the hill|goto 25.88,63.11,0.3|q 973
+			goto Ashenvale,25.88,63.11|n
+			.' Climb up the hill|goto 25.88,63.11,0.3|noway|q 973
 		step
 			goto Ashenvale,25.3,60.7
-			.from Ilkrud Magthrull##3664+
+			.from Ilkrud Magthrull##3664
 			.get Ilkrud Magthrulls Tome##5533|q 973/1
 		step
 			goto Ashenvale,36.6,49.6
@@ -2159,12 +2168,13 @@ startlevel 20
 			..turnin The Tower of Althalaxx (5)##973
 			..accept The Tower of Althalaxx (6)##1140
 		step
-			.' You need to go up this path|goto 72.21,49.83,0.3|q 1140
+			goto Ashenvale,72.21,49.83|n
+			.' You need to go up this path|goto 72.21,49.83,0.3|noway|q 1140
 		step
 			goto Ashenvale,66.63,56.90|n
 			.' Free the Highborne soul in Night Run|q 1140/1
 		step
-			goto Ashenvale,81.6,48.6
+			goto Ashenvale,81.6,48.6|n
 			.' Free the Highborne soul in Satyrnaar|q 1140/2
 		step
 			goto Ashenvale,85.1,43.4

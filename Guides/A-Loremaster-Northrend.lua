@@ -9822,8 +9822,8 @@ startlevel 77
 			.' You can find more around|at 82.96,64.06
 		step
 			goto Crystalsong Forest,78.19,59.09
-			.' Kill enemies around this area.
-			.collect 8 Crystallized Energy##43225|q 13135/1
+			.from Unbound Dryad##30860, Unbound Ent##30862
+			.get 8 Crystallized Energy##43225|q 13135/1
 			.' You can find more around (1)|at 63.57,66.94
 			.' You can find more around (2)|at 61.01,54.67
 		step
@@ -9838,10 +9838,10 @@ startlevel 77
 			goto Icecrown,77.31,68.19
 			.kill 3 Forgotten Depths High Priest##31037|q 13118/1
 			.info They are usually inside or next to the buildings around the Scourgeholme area.
-			.' You can find more around ()|at 79.21,64.00
-			.' You can find more around ()|at 75.65,61.06
-			.' You can find more around ()|at 79.06,60.42
-			.' You can find more around ()|at 78.79,56.27
+			.' You can find more around (1)|at 79.21,64.00
+			.' You can find more around (2)|at 75.65,61.06
+			.' You can find more around (3)|at 79.06,60.42
+			.' You can find more around (4)|at 78.79,56.27
 		step
 			goto Icecrown,78.00,63.16
 			.kill 3 Forgotten Depths Underking##31039|q 13118/2
@@ -10390,6 +10390,11 @@ startlevel 77
 			..turnin The Story Thus Far...##12807
 			..accept Blood in the Water##12810
 		step
+			goto Icecrown,19.8,47.6
+			.talk Aurochs Grimbane##29456
+			..accept Intelligence Gathering##12838|daily
+			.info It's a daily quest.
+		step
 			goto Icecrown,9.31,40.48
 			.' Kill Onslaught enemies around this area
 			.info They look like humans in red and white armor all around the Onslaught Harbor area.
@@ -10399,6 +10404,7 @@ startlevel 77
 			.info They look like small wooden boxes on the ground.
 			.info You can find them all around the Onslaught Harbor area.
 			.info You may not always find a quest item in the chests.
+			.collect 5 Onslaught Intel Documents##40640|q 12838/1
 			.collect Note from the Grand Admiral##40666|q 12839 |future
 		step
 			.use the Note from the Grand Admiral##40666
@@ -10418,6 +10424,11 @@ startlevel 77
 			..accept You'll Need a Gryphon##12814
 			..turnin The Grand (Admiral's) Plan##12839
 			..accept In Strict Confidence##12840
+		step
+			goto Icecrown,19.8,47.6
+			.talk Aurochs Grimbane##29456
+			..turnin Intelligence Gathering##12838|daily
+			.info It's a daily quest.
 		step
 			goto Icecrown,7.03,41.92
 			.kill Captain Hartford##29490|n
