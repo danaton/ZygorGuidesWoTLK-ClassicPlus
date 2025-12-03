@@ -2,7 +2,7 @@ local ZygorGuidesViewer=ZygorGuidesViewer
 if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Alliance" then return end
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Deadmines (15)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[15] Deadmines",[[
 author danaton
 startlevel 15
 		step //1
@@ -66,7 +66,7 @@ startlevel 15
 		step //14
 			.' Follow the Defias Traitor.
 			goto Westfall,42.56,71.71
-			.goal Escort The Defias Traitor to discover where VanCleef is hiding.|q 155/1
+			.goal Escort The Defias Traitor to discover where VanCleef is hiding|q 155/1
 		step //15
 			goto Westfall,56.32,47.54
 			.talk Marshal Gryan Stoutmantle##234
@@ -78,7 +78,7 @@ startlevel 15
 			..accept Red Silk Bandanas##214
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Wailing Caverns (15)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[15] Wailing Caverns",[[
 author danaton
 startlevel 15
 		step
@@ -111,7 +111,7 @@ startlevel 15
 			.' Go To Instance!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackfathom Deeps (20)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[20] Blackfathom Deeps",[[
 author danaton
 startlevel 20
 		step //1
@@ -138,7 +138,7 @@ startlevel 20
 			.' Go To Instance!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Razorfen Kraul (23)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[23] Razorfen Kraul",[[
 author danaton
 startlevel 23
 		step
@@ -194,7 +194,7 @@ startlevel 23
 			..accept Willix the Importer##1144
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Gnomeregan (25)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[25] Gnomeregan",[[
 author danaton
 startlevel 25
 		step //1
@@ -269,7 +269,7 @@ startlevel 25
 			.' Go To Instance!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\The Stockade (25)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[25] The Stockade",[[
 author danaton
 startlevel 25
 		step
@@ -308,7 +308,7 @@ startlevel 25
 			.' Go To Instance!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Razorfen Downs (32)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[32] Razorfen Downs",[[
 author danaton
 startlevel 32
 		step
@@ -328,7 +328,7 @@ startlevel 32
 			..accept Extinguishing the Idol##3525
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Uldaman (35)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[35] Uldaman",[[
 author danaton
 startlevel 35
 		step
@@ -362,7 +362,7 @@ startlevel 35
 			..accept Murdaloc##739
 		step
 			goto Badlands,50.70,67.70
-			.kill 1 Murdaloc##2945|q 739/1
+			.kill Murdaloc##2945|q 739/1
 			.kill 12 Stonevault Bonesnapper##2893|q 739/2
 		step
 			goto Badlands,51.20,76.60
@@ -384,10 +384,10 @@ startlevel 35
 			..accept Amulet of Secrets##722
 		step 
 			goto Badlands,39.23,18.53
-			.collect 1 Tablet of Ryun'eh##4631|q 709/1
+			.collect Tablet of Ryun'eh##4631|q 709/1
 		step
 			goto Badlands,35.55,23.45
-			.collect 1 Krom Stoutarm's Treasure##8027|q 1360/1
+			.collect Krom Stoutarm's Treasure##8027|q 1360/1
 		step
 			goto Badlands,35.3,13.4
 			.collect 4 Carved Stone Urn##4610|q 704/1
@@ -399,7 +399,7 @@ startlevel 35
 			.' Go To Uldaman Instance!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Zul'Farrak (40)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[40] Zul'Farrak",[[
 author danaton
 startlevel 40
 		step //1
@@ -481,7 +481,7 @@ startlevel 40
 			goto Tanaris,38.74,20.05
 			.' Go To Zul'Farrak Instance!
 ]])
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Maraudon (45)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[45] Maraudon",[[
 author danaton
 description This guide contain all quest-chain for Maraudon Dungeon.
 startlevel 45
@@ -507,7 +507,7 @@ startlevel 45
 			..accept The Pariah's Instructions##7067
 		step //6
 			goto Desolace,29.10,62.57|n
-			.' Go To Entrance|goto Maraudon,38.43,57.97,0.5|noway |q 7065
+			.' Go To Entrance|goto Maraudon,38.43,57.97,0.5|noway|q 7065
 			.info If done, skip manually.
 		step //7
 			goto Desolace,28.1,62.4
@@ -516,15 +516,15 @@ startlevel 45
 			.info If done, skip manually.
 		step //8
 			goto Desolace,28.43,63.98|n
-			.' Go To Down Tunnel|goto Desolace,28.43,63.98,0.5|noway |q 7065
+			.' Go To Down Tunnel|goto Desolace,28.43,63.98,0.5|noway|q 7065
 			.info If done, skip manually.
 		step //9
 			goto Desolace,29.09,61.76|n
-			.' Next to Left Tunnel|goto Desolace,29.09,61.76,0.5|noway |q 7067
+			.' Next to Left Tunnel|goto Desolace,29.09,61.76,0.5|noway|q 7067
 			.info If done, skip manually.
 		step //10
 			goto Desolace,29.05,55.43|n
-			.' Jump off carefully|goto Desolace,29.05,55.43,0.5|noway |q 7067
+			.' Jump off carefully|goto Desolace,29.05,55.43,0.5|noway|q 7067
 			.info If done, skip manually.
 		step //11
 			goto Desolace,29.7,60.5
@@ -533,29 +533,29 @@ startlevel 45
 			.collect Gem of the Second Khan##17762|q 7067
 			.info If done, skip manually.
 		step //12
-			goto Desolace,28.51,55.96
-			.' Next to Bridge|goto Desolace,28.51,55.96,0.5|noway |q 7067
+			goto Desolace,28.51,55.96|n
+			.' Next to Bridge|goto Desolace,28.51,55.96,0.5|noway|q 7067
 			.info If done, skip manually.
 		step //13
 			goto Desolace,27.28,56.93
-			.' Next to other Bridge|goto Desolace,27.28,56.93,0.5|noway |q 7067
+			.' Next to other Bridge|goto Desolace,27.28,56.93,0.5|noway|q 7067
 			.from Shadowshard Smasher##11778
 			.get 10 Shadowshard Fragment##17756|q 7070/1
 			.info If done, skip manually.
 		step //14
-			goto Desolace,29.58,57.50
-			.' Next to Right Tunnel|goto Desolace,29.58,57.50,0.5|noway |q 7067
+			goto Desolace,29.58,57.5|n
+			.' Next to Right Tunnel|goto Desolace,29.58,57.50,0.5|noway|q 7067
 			.info If done, skip manually.
 		step //15
 			goto Desolace,29.7,60.5
-			.' Jump Down
+			.' Jump Down.
 			.' Use Amulet of Spirits on Spirit of Kolk|use Amulet of Spirits##17757|n
 			.from Spirit of Kolk##12240|n
 			.collect Gem of the First Khan##17761|q 7067
 			.info If done, skip manually.
 		step //16
-			goto Desolace,29.3,63.9
-			.' Next to Orange Tunnel|goto Desolace,29.3,63.9,0.5|noway |q 7065
+			goto Desolace,29.3,63.9|n
+			.' Next to Orange Tunnel|goto Desolace,29.3,63.9,0.5|noway|q 7065
 			.info If done, skip manually.
 		step //17
 			goto Desolace,32.1,64
@@ -566,12 +566,12 @@ startlevel 45
 			.use Coated Cerulean Vial##17693
 			.collect Filled Cerulean Vial##17696|q 7041/2
 		step //19
-			goto Desolace,34.6,64.07
-			.' Next to Upper Tunnel|goto Desolace,34.6,64.07,0.5|noway |q 7065
+			goto Desolace,34.6,64.07|n
+			.' Next to Upper Tunnel|goto Desolace,34.6,64.07,0.5|noway|q 7065
 			.info If done, skip manually.
 		step //20
-			goto Desolace,34.3,60.63
-			.' Jump Down|goto Desolace,34.6,60.46,0.5|noway |q 7065
+			goto Desolace,34.3,60.63|n
+			.' Jump Down|goto Desolace,34.6,60.46,0.5|noway|q 7065
 			.info If done, skip manually.
 		step //21
 			goto Desolace,35.8,60.4
@@ -583,7 +583,7 @@ startlevel 45
 			goto Desolace,36,64.2
 			.' Go To Maraudon (Orange Entrance)!
 ]])
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Sunken Temple (47)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[47] Sunken Temple",[[
 author danaton
 startlevel 47
 		step //1
@@ -698,7 +698,7 @@ startlevel 47
 		step //24
 			.' Go To Instance!
 ]])
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackrock Depth (50)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[50] Blackrock Depth",[[
 author danaton
 startlevel 50
 		step //1
@@ -861,7 +861,7 @@ startlevel 50
 			..accept Dark Iron Legacy##3802
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Stratholme (55)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[55] Stratholme",[[
 author danaton
 startlevel 55
 		step //1
@@ -971,7 +971,47 @@ startlevel 55
 			.' Go To Instance!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Blackrock Spire (57)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[56] Dire Maul",[[
+author danaton
+startlevel 56
+		step
+			goto Darnassus,47.8,82
+			.talk Herald Moonstalker##10878
+			..accept Feathermoon Stronghold##7494
+		step
+			goto Moonglade,51.7,45.1
+			.talk Rabine Saturna##11801
+			..accept A Reliquary of Purity##5527
+		step
+			goto Silithus,63.2,55.3
+			.collect Reliquary of Purity##22201|q 5527/1
+		step
+			goto Moonglade,51.7,45.1
+			.talk Rabine Saturna##11801
+			..turnin A Reliquary of Purity##5527
+			..accept Shards of the Felvine##5526
+		step
+			goto Feralas,30.4,46.2
+			.talk Latronicus Moonspear##7877
+			..turnin Feathermoon Stronghold##7494
+			..accept Lethtendris's Web##7488
+		step
+			goto Feralas,31.2,43.9
+			.talk Scholar Runethorn##14374
+			..accept Elven Legends##7482
+		step
+			goto Feralas,76.9,37.4
+			.talk Azj'Tordin##14355
+			..accept Pusillin and the Elder Azj'Tordin##7441
+		step
+			goto Feralas,59.14,45.32|n
+			.' Move towards the entrance to the dungeon|goto 59.14,45.32,0.5|noway|q 7441
+		step
+			goto Feralas,64.85,29.61
+			.' Go To Instance!
+]])
+
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[57] Blackrock Spire",[[
 author danaton
 startlevel 57
 		step
@@ -1115,7 +1155,7 @@ startlevel 57
 			.info Right Wing: Eleven Step.
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Scholomance (60) - [Skeleton Key]",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[60] Scholomance - [Skeleton Key]",[[
 author danaton
 startlevel 60
 		step
@@ -1218,12 +1258,12 @@ startlevel 60
 			.' Excellent! You have the Skeleton Key!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\[Empty] Scholomance (60)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[Empty] Scholomance",[[
 	startlevel 60
 	step //1
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Hellfire Citadel: Hellfire Ramparts (59)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[59] Hellfire Citadel: Hellfire Ramparts",[[
 author danaton
 startlevel 59
 		step
@@ -1284,7 +1324,7 @@ startlevel 59
 			.info Good luck!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Hellfire Citadel: The Blood Furnace (59)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[59] Hellfire Citadel: The Blood Furnace",[[
 author danaton
 startlevel 59
 		step
@@ -1302,7 +1342,7 @@ startlevel 59
 			.info Good luck!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Hellfire Citadel: The Shattered Halls (67)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[67] Hellfire Citadel: The Shattered Halls",[[
 author danaton
 startlevel 67
 		step //1
@@ -1326,11 +1366,12 @@ startlevel 67
 			.' Go To Instance!|tip Good luck!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Heroic Instance Keys\\Hellfire Citadel (70)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\Heroic Instance Keys\\[70] Hellfire Citadel",[[
 author danaton
 startlevel 70
 		step //1
-			.' Need rep|tip Manually skip this step
+			.' Need rep
+			.info Manually skip this step.
 		step //2
 			goto Hellfire Peninsula,56.7,62.6
 			.' Need friendly rep from Honor Hold |rep Honor Hold,Friendly
@@ -1338,11 +1379,12 @@ startlevel 70
 			.buy Flamewrought Key##30622
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\Heroic Instance Keys\\Auchindoun (70)",[[
+ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\Heroic Instance Keys\\[70] Auchindoun",[[
 author danaton
 startlevel 70
 		step //1
-			.' Need rep|tip Manually skip this step
+			.' Need rep
+			.info Manually skip this step.
 		step //2
 			goto Shattrath City,62.0,68.8
 			//.' Need honored rep from Lower City |rep Lower City,Honored

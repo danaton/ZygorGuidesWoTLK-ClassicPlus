@@ -18,8 +18,8 @@
 	<Script file="ZygorGoldAllianceTrial.lua"/>
 	<Script file="ZygorGoldHordeTrial.lua"/>
 
-	<Script file="DanatonQuestInstancesA.lua"/>
-	<Script file="DanatonQuestInstancesH.lua"/>
+	<Script file="A-DungeonQuestsGuides.lua"/>
+	<Script file="H-DungeonQuestsGuides.lua"/>
 	<Script file="A-Loremaster-Kalimdor.lua"/>
 	<Script file="A-Loremaster-EasternKingdoms.lua"/>
 	<Script file="A-Loremaster-BurningCrusade.lua"/>
