@@ -4648,15 +4648,8 @@ startlevel 74
 			.talk Gryphon Commander Urik##27317
 			..accept The Hills Have Us##12511
 		step
-			goto Grizzly Hills,31.80,59.55
-			.' Interact with gameobject: Amberseed
-			.info Inside the building.
-			..accept Mmm... Amberseeds!##12225
-		step
 			goto Grizzly Hills,32.10,59.96
 			.talk Master Woodsman Anderhol##27277
-			..turnin Mmm... Amberseeds!##12225
-			..accept Just Passing Through##12226
 			..accept Replenishing the Storehouse##12212
 			..accept Them or Us!##12215
 		step
@@ -4665,18 +4658,13 @@ startlevel 74
 			..turnin The Hills Have Us##12511
 			..accept Local Support##12292
 		step
-			goto Grizzly Hills,29.49,52.64
-			.collect 5 Blackroot Stalk##37246|q 12226/1
-			.info They look like tall grass plants on the ground around this area.
-			.' You can find more around|at 29.18,57.09
-		step
 			goto Grizzly Hills,15.87,65.27
 			.collect Cedar Chest##37572|q 12292/1
 			.info Inside the building.
 			.info Avoid Conquest Hold as you travel here.
 		step
 			goto Grizzly Hills,20.72,55.17
-			.from Tallhorn Stag##26363+
+			.from Tallhorn Stag##26363
 			.info They look like brown deer bucks.
 			.get 8 Succulent Venison##37185|q 12212/1
 			.info These may have a low drop rate.
@@ -4691,11 +4679,9 @@ startlevel 74
 		step
 			goto Grizzly Hills,32.10,59.96
 			.talk Master Woodsman Anderhol##27277
-			..turnin Just Passing Through##12226
-			..accept Doing Your Duty##12227
 			..turnin Replenishing the Storehouse##12212
-			..accept Take Their Rear!##12216
 			..turnin Them or Us!##12215
+			..accept Take Their Rear!##12216
 			..accept Eagle Eyes##12217
 		step
 			goto Grizzly Hills,31.83,60.17
@@ -4703,12 +4689,6 @@ startlevel 74
 			..turnin Local Support##12292
 			..accept Close the Deal##12293
 			..accept Troll Season!##12210
-		step
-			goto Grizzly Hills,32.22,58.92
-			.' Interact with gameobject: Amberpine Outhouse
-			.' Choose "Use the outhouse."
-			.' Watch the dialogue.
-			.collect Partially Processed Amberseeds##37250|q 12227/1
 		step
 			goto Grizzly Hills,34.45,58.30
 			.kill 5 Imperial Eagle##26369|q 12217/1
@@ -4745,7 +4725,6 @@ startlevel 74
 		step
 			goto Grizzly Hills,32.10,59.96
 			.talk Master Woodsman Anderhol##27277
-			..turnin Doing Your Duty##12227
 			..turnin Take Their Rear!##12216
 			..turnin Eagle Eyes##12217
 		step
@@ -4777,6 +4756,36 @@ startlevel 74
 			..turnin Secrets of the Flamebinders##12222
 			..accept The Thane of Voldrune##12255
 		step
+			goto Grizzly Hills,31.80,59.55
+			.' Interact with gameobject: Amberseed
+			.info Inside the building.
+			..accept Mmm... Amberseeds!##12225
+		step
+			goto Grizzly Hills,32.10,59.96
+			.talk Master Woodsman Anderhol##27277
+			..turnin Mmm... Amberseeds!##12225
+			..accept Just Passing Through##12226
+		step
+			goto Grizzly Hills,29.49,52.64
+			.collect 5 Blackroot Stalk##37246|q 12226/1
+			.info They look like tall grass plants on the ground around this area.
+			.' You can find more around|at 29.18,57.09
+		step
+			goto Grizzly Hills,32.10,59.96
+			.talk Master Woodsman Anderhol##27277
+			..turnin Just Passing Through##12226
+			..accept Doing Your Duty##12227
+		step
+			goto Grizzly Hills,32.22,58.92
+			.' Interact with gameobject: Amberpine Outhouse
+			.' Choose "Use the outhouse."
+			.' Watch the dialogue.
+			.collect Partially Processed Amberseeds##37250|q 12227/1
+		step
+			goto Grizzly Hills,32.10,59.96
+			.talk Master Woodsman Anderhol##27277
+			..turnin Doing Your Duty##12227
+		step
 			goto Grizzly Hills,23.02,80.16
 			.talk Barblefink##27495
 			..accept Seeking Solvent##12443
@@ -4803,11 +4812,10 @@ startlevel 74
 			.info You can kill NPCs or players.
 		step
 			goto Grizzly Hills,16.44,80.32
-			.' Click Element 115
+			.collect Element 115##37664|q 12443/1
 			.info It looks like a red canister inside the ship, on the main deck level.
 			.info HURRY after picking this up, it only lasts for 4 minutes.
 			.info In the next step, get back to the questgivers as fast as you can.
-			.collect Element 115##37664|q 12443/1
 		step
 			goto Grizzly Hills,21.99,80.72
 			.talk Sergeant Downey##27602
@@ -5597,7 +5605,7 @@ startlevel 74
 			.' Allow Harrison to Escort You to Safety|q 12082/1 |noway
 		step
 			goto Grizzly Hills,71.51,26.99
-			.' Kill Drakkari enemies around this area
+			.from Drakkari Oracle##26795, Drakkari Protector##26797
 			.info They look like trolls.
 			.info You can find them all around the Drakil'jin Ruins area.
 			.collect 5 Sacred Mojo##36758|q 12068
@@ -5612,6 +5620,8 @@ startlevel 74
 			.info Use it next to the brazier.
 			.talk Image of Drakuru##26787
 			..turnin Voices From the Dust##12068
+			.' If you want to get the "Guru of Drakuru" achievement, then take the next quest and complete it yourself.
+			..accept Cleansing Drak'Tharon##12238
 		step
 			goto Grizzly Hills,73.76,34.02
 			.talk Harkor##26884
@@ -5681,7 +5691,7 @@ startlevel 74
 		step
 			goto Grizzly Hills,71.53,24.65
 			.use Infused Drakkari Offering##37063
-			.' Watch the dialogue
+			.' Watch the dialogue.
 			.' Destroy Warlord Jin'arrak|q 12152/1
 		step
 			goto Grizzly Hills,73.91,34.12
@@ -5715,7 +5725,7 @@ startlevel 74
 		step
 			goto Grizzly Hills,76.30,58.54
 			.' Interact with gameobject: Dun Argol Cage
-			.' Watch the dialogue
+			.' Watch the dialogue.
 			.' Rescue Prospector Torgan|q 12180/2
 		step
 			goto Grizzly Hills,76.22,57.58
@@ -5725,7 +5735,7 @@ startlevel 74
 		step
 			goto Grizzly Hills,76.01,61.03
 			.' Interact with gameobject: Dun Argol Cage
-			.' Watch the dialogue
+			.' Watch the dialogue.
 			.' Rescue Prospector Varana|q 12180/3
 		step
 			goto Grizzly Hills,76.22,57.58
@@ -5782,17 +5792,18 @@ startlevel 74
 			.get Kathorn's Power Cell##36858|q 12131/2
 		step
 			goto Grizzly Hills,76.22,57.58
-			.' Kill enemies around this area
+			.from Iron Rune-Smith##26408, Runic Lightning Gunner##26414, Iron Rune Overseer##27177
 			.info Only the enemies that look like dwarves will count for this quest goal.
 			.info You can find them all around the Dun Argol area.
 			.use Kilian's Camera##37045
 			.info Use it on their corpses.
 			.' Capture 8 Iron Dwarf Images|q 12184/1
+			.' You can find more around|at 79.5,60.45
 		step
 			goto Grizzly Hills,77.09,48.65
 			.talk Raegar Breakbrow##26883
 			..turnin We Have the Power##12131
-			..accept ... Or Maybe We Don't##12138
+			..accept Or Maybe We Don't##12138
 		step
 			goto Grizzly Hills,76.97,48.44
 			.talk Mountaineer Kilian##26885
@@ -5807,7 +5818,7 @@ startlevel 74
 			.info They look like air elementals.
 			.info Kill them with the golem next to you.
 			.info Make sure you're close to them when you kill them, or the golem won't collect the charge level.
-			.collect 10 Charge Levels|q 12138/1
+			.' Charge your War Golem Level 10|q 12138/1
 			.' You can find more around (1)|at 75.62,51.49
 			.' You can find more around (2)|at 73.54,54.76
 			.' You can find more around (3)|at 72.64,59.96
@@ -5819,7 +5830,7 @@ startlevel 74
 			.info If you are already mounted when you use the item, it will let you ride your mount while disguised, so you can run faster.
 			.use Overseer Disguise Kit##37071
 			.info It can be used anywhere in the Dun Argol subzone.
-			.' Wear the Disguise |havebuff INV_Mask_01 |q 12185
+			.' Wear the Disguise|havebuff INV_Mask_01|q 12185
 		step
 			goto Grizzly Hills,81.54,60.30
 			.' Interact with gameobject: Loken's Pedestal
@@ -5830,13 +5841,13 @@ startlevel 74
 			.info The quest goal will complete as you are running down the mountain.
 			.' Receive the Message from Loken|q 12185/1
 		step
-			.' Remove the Iron Rune Overseer Disguise |nobuff INV_Mask_01 |q 12185
+			.' Remove the Iron Rune Overseer Disguise|nobuff INV_Mask_01|q 12185
 			.info Right-click the "Iron Rune Overseer Disguise" buff near your minimap.
 			.info Make sure you're in a safe spot before removing the disguise.
 		step
 			goto Grizzly Hills,77.09,48.65
 			.talk Raegar Breakbrow##26883
-			..turnin ... Or Maybe We Don't##12138
+			..turnin Or Maybe We Don't##12138
 			..accept The Iron Thane and His Anvil##12153
 			..accept Blackout##12154
 		step
