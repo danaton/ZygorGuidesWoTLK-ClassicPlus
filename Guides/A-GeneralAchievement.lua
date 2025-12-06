@@ -308,6 +308,12 @@ startlevel 79
 			goto Stormwind City,83,36.3
 			.' Read a book: The Dark Portal and the Fall of Stormwind|achieve 1244/25
 		step
+			goto Stormwind City,51.9,74.7
+			.' Read a book: Mount Hyjal and Illidan's Gift|achieve 1244/15
+		step
+			goto Stormwind City,51.9,74.6
+			.' Read a book: Archimonde's Return and the Flight to Kalimdor|achieve 1244/4
+		step
 			goto Elwynn Forest,43.8,65.7
 			.' Read a book: Icecrown and the Frozen Throne|achieve 1244/10
 			.info On the second floor of the tavern.
