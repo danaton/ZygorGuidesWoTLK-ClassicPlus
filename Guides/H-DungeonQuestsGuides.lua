@@ -2,7 +2,7 @@ local ZygorGuidesViewer=ZygorGuidesViewer
 if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Horde" then return end
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[9] Ragefire Chasm",[[
+ZygorGuidesViewer:RegisterGuide("Horde Dungeon Quests Guides\\[9] Ragefire Chasm",[[
 author danaton
 startlevel 9
 		step
@@ -43,7 +43,7 @@ startlevel 9
 			.info Good luck!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[15] Wailing Caverns",[[
+ZygorGuidesViewer:RegisterGuide("Horde Dungeon Quests Guides\\[15] Wailing Caverns",[[
 author danaton
 startlevel 15
 		step
@@ -127,7 +127,7 @@ startlevel 15
 			.' Go To Instance!|tip Good luck!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[18] Blackfathom Deeps",[[
+ZygorGuidesViewer:RegisterGuide("Horde Dungeon Quests Guides\\[18] Blackfathom Deeps",[[
 author danaton
 startlevel 18
 	step
@@ -152,7 +152,7 @@ startlevel 18
 			.' Go To Instance!|tip Good luck!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[23] Razorfen Kraul",[[
+ZygorGuidesViewer:RegisterGuide("Horde Dungeon Quests Guides\\[23] Razorfen Kraul",[[
 author danaton
 startlevel 23
 		step
@@ -169,222 +169,247 @@ startlevel 23
 			..accept Blueleaf Tubers##1221
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Danaton Quest Instance Guides\\[69] The Nexus",[[
-	author eTzmNcbkrng/GiatEMINaGOR
-	startlevel 69
-	step
-		goto Borean Tundra,41.3,53.6
-		.talk High Overlord Saurfang##25256
-		..accept The Defense of Warsong Hold##11596|tip If you are a Scarab Lord or turned in Nefarian's Head, this quest will have a different ID
-	step
-		'Go outside to 43.2,55|goto 43.2,55
-		.talk Overlord Razgor##25279
-		..turnin The Defense of Warsong Hold##11596
-		..accept Taking Back Mightstone Quarry##11598
-	step
-		goto 43.3,57.9
-		.kill 15 Nerub'ar|q 11598/1
-	step
-		goto 43.2,55
-		.talk Overlord Razgor##25279
-		..turnin Taking Back Mightstone Quarry##11598
-	step
-		goto 41.7,54.7
-		.talk Endorah##25247
-		..accept Too Close For Comfort##11574
-	step
-		goto 45.3,33.3
-		.talk Librarian Donathan##25262
-		..turnin Too Close For Comfort##11574
-		..accept Prison Break##11587
-	step
-		goto 40.5,39.2
-		.kill Beryl Mage Hunters|n
-		.get Beryl Prison Key|n
-		.' Click an Arcane Prison
-		.' Free an Arcane Prisoner|goal Arcane Prisoners Rescued|q 11587/1
-	step
-		goto 45.3,33.3
-		.talk Librarian Donathan##25262
-		..turnin Prison Break##11587
-		..accept Abduction##11590
-	step
-		goto 43.5,37.4
-		.' Fight a Beryl Sorcerer
-		.' Use your Arcane Binder on him when you see the "Beryl Sorcerer can now be captured" message in your chat window|use Arcane Binder##34691
-		.' Capture a Beryl Sorcerer|goal Captured Beryl Sorcerer|q 11590/1
-	step
-		goto 45.3,33.3
-		.talk Librarian Donathan##25262
-		..turnin Abduction##11590
-		..accept The Borean Inquisition##11646
-	step
-		'Go inside the tall tower to 46.3,32.8|goto 46.3,32.8
-		.talk Librarian Normantis##25480
-		..turnin The Borean Inquisition##11646
-		..accept The Art of Persuasion##11648
-	step
-		'Use your Neural Needler on the Imprisoned Beryl Sorcerer repeatedly to Interrogate the Prisoner|use Neural Needler##34811
-		.' Interrogate the Prisoner|goal Prisoner Interrogated|q 11648/1
-	step
-		goto 46.3,32.8
-		.talk Librarian Normantis##25480
-		..turnin The Art of Persuasion##11648
-		..accept Sharing Intelligence##11663
-	step
-		'Go outside the tower to 45.3,33.3|goto 45.3,33.3
-		.talk Librarian Donathan##25262
-		..turnin Sharing Intelligence##11663
-		..accept A Race Against Time##11671
-	step
-		goto 42.1,39.5
-		.' Use your Beryl Shield Detonator inside the big blue glowing circle|use Beryl Shield Detonator##34897|tip If it won't let you, wait until Inquisitor Salrand appears again.
-		.kill Inquisitor Salrand|n
-		.' Click Salrand's Lockbox
-		.get Salrand's Broken Key|q 11671/1
-	step
-		goto 45.3,33.3
-		.talk Librarian Donathan##25262
-		..turnin A Race Against Time##11671
-		..accept Reforging the Key##11679
-	step
-		goto 45.3,34.5
-		.talk Surristrasz##24795
-		..turnin Reforging the Key##11679
-		..accept Taking Wing##11680
-	step
-		goto 46.4,37.3
-		.talk Warmage Anzim##25356
-		..turnin Taking Wing##11680
-		..accept Rescuing Evanor##11681
-		'Watch the cutscene, then you'll get teleported back to Amber Ledge|goto 46.4,32.6,0.3|noway|q 11681
-	step
-		goto 46.4,32.4
-		.talk Archmage Evanor##25785
-		..turnin Rescuing Evanor##11681
-		..accept Dragonspeak##11682
-	step
-		'Go outside the tower to 45.3,34.5|goto 45.3,34.5
-		.talk Surristrasz##24795
-		..turnin Dragonspeak##11682
-		..accept Traversing the Rift##11733
-		.' Fly to Transitus Shield|goto 33.1,34.4,0.3|noway|q 11733
-	step
-		goto 32.9,34.4
-		.talk Archmage Berinand##25314
-		..turnin Traversing the Rift##11733
-		..accept Reading the Meters##11900
-		..accept Secrets of the Ancients##11910
-	step
-		goto 32.7,29
-		.kill Coldarra Spellbinders|n
-		.get Scintillating Fragment|n
-		.' Click the Scintillating Fragment in your bags|use Scintillating Fragment##35648
-		..accept Puzzling...##11941
-	step
-		goto 28.3,28.5
-		.' Click the Coldarra Geological Monitor|tip It looks like a blue sphere on the ground at the base of the building.
-		.' Take the Nexus Geological Reading|goal Nexus Geological Reading|q 11900/1
-		.' As you go, kill Glacial Ancients|tip Need 3 Glacial Splinters
-		.' As you go, kill Magic-Bound Ancients|tip Need 3 Magic-Bound Splinters
-	step
-		goto 31.7,20.6
-		.' Click the Coldarra Geological Monitor|tip It looks like a blue sphere on the ground in the entrance of the building.
-		.' Take the Northern Coldarra Reading|goal Northern Coldarra Reading|q 11900/3
-		.' As you go, kill Glacial Ancients|tip Need 3 Glacial Splinters
-		.' As you go, kill Magic-Bound Ancients|tip Need 3 Magic-Bound Splinters
-	step
-		goto 22.6,23.5
-		.' Click the Coldarra Geological Monitor|tip It looks like a blue sphere on the ground in the entrance of the building.
-		.' Take the Western Coldarra Reading|goal Western Coldarra Reading|q 11900/4
-		.' As you go, kill Glacial Ancients|tip Need 3 Glacial Splinters
-		.' As you go, kill Magic-Bound Ancients|tip Need 3 Magic-Bound Splinters
-	step
-		goto 28.3,35
-		.' Click the Coldarra Geological Monitor|tip It looks like a blue sphere on the ground in the entrance of the building.
-		.' Take the Southern Coldarra Reading|goal Southern Coldarra Reading|q 11900/2
-		.' As you go, kill Glacial Ancients|tip Need 3 Glacial Splinters
-		.' As you go, kill Magic-Bound Ancients|tip Need 3 Magic-Bound Splinters
-	step
-		'Make sure you have:
-		.' 3 Glacial Splinters|goal 3 Glacial Splinter|q 11910/1
-		.' 3 Magic-Bound Splinters|goal 3 Magic-Bound Splinter|q 11910/2
-	step
-		goto 32.9,34.4
-		.talk Archmage Berninand##25314
-		..turnin Reading the Meters##11900
-		..accept Postponing the Inevitable##11905
-		..turnin Secrets of the Ancients##11910
-		..accept Quickening##11911
-	step
-		goto 33.3,34.5
-		.talk Raelorasz##26117
-		..turnin Puzzling...##11941
-		..accept The Cell##11943
-	step
-		goto 24.1,29.6
-		.from Warbringer Goredrak##25712
-		.get Energy Core|q 11943/1
-	step
-		goto 27.3,20.5
-		.from General Cerulean##25716
-		.get Prison Casing|q 11943/2
-	step
-		goto 33.3,34.5
-		.talk Raelorasz##26117
-		..turnin The Cell##11943
-	step
-		'Use the Augmented Arcane Prison in your bags|use Augmented Arcane Prison##35671
-		.talk Keristrasza##26237
-		..accept Keristrasza##11946
-		..turnin Keristrasza##11946
-		..accept Bait and Switch##11951
-	step
-		'Wander all around and do the following:
-		.' Click Crystallized Mana on the ground|tip They look like pink crystals.
-		.get 10 Crystallized Mana Shard|q 11951/1
-	step
-		'Use the Augmented Arcane Prison in your bags|use Augmented Arcane Prison##35671
-		.talk Keristrasza##26237
-		..turnin Bait and Switch##11951
-		..accept Saragosa's End##11957
-	step
-		'Use the Augmented Arcane Prison in your bags|use Augmented Arcane Prison##35671
-		.talk Keristrasza##26206
-		.'Tell her you are ready to face Saragosa|goto 21.2,22.5,0.5|noway|q 11957
-	step
-		'She teleports you to a platform
-		.' Click the Arcane Power Focus in your bags|use Arcane Power Focus##35690
-		.from Saragosa##26231
-		.get Saragosa's Corpse|q 11957/1
-	step
-		'Use the Augmented Arcane Prison in your bags|use Augmented Arcane Prison##35671
-		.talk Keristrasza##26206
-		..turnin Saragosa's End##11957
-		..accept Mustering the Reds##11967
-	step
-		'Use the Augmented Arcane Prison in your bags|use Augmented Arcane Prison##35671
-		.talk Keristrasza##26206
-		.' Tell her to return you to Transitus Shield|goto 33.3,34.4,0.5|noway|q 11967
-	step
-		goto 33.3,34.5
-		.talk Raelorasz##26117
-		..turnin Mustering the Reds##11967
-		..accept Springing the Trap##11969
-	step
-		goto 25.4,21.7
-		.' Use Raelorasz' Spark next to the Signal Fire|use Raelorasz' Spark##44950|tip The Signal Fire looks like an unlit bonfire.
-		.' Watch the cutscene
-		.' Lure Malygos|goal Malygos Lured|q 11969/1
-	step
-		goto 33.3,34.5
-		.talk Raelorasz##26117
-		..turnin Springing the Trap##11969
-		..accept Prisoner of War##11973	
-	step
-		goto 33.5,34.4
-		.talk Librarian Serrah##26110
-		..accept Have They No Shame?##13095
+ZygorGuidesViewer:RegisterGuide("Horde Dungeon Quests Guides\\[69] The Nexus",[[
+author eTzmNcbkrng/GiatEMINaGOR
+startlevel 69
+		step
+			goto Borean Tundra,41.3,53.6
+			.talk High Overlord Saurfang##25256
+			..accept The Defense of Warsong Hold##11595 |or
+			..accept The Defense of Warsong Hold##11596 |or
+			..accept The Defense of Warsong Hold##11597 |or
+			.info If you are a Scarab Lord or turned in Nefarian's Head, this quest will have a different ID.
+		step
+			goto Borean Tundra,43.2,55
+			.talk Overlord Razgor##25279
+			..turnin The Defense of Warsong Hold##11595 |or
+			..turnin The Defense of Warsong Hold##11596 |or
+			..turnin The Defense of Warsong Hold##11597 |or
+			..accept Taking Back Mightstone Quarry##11598
+		step
+			goto Borean Tundra,43.3,57.9
+			.kill 15 Nerub'ar|q 11598/1
+		step
+			goto Borean Tundra,43.2,55
+			.talk Overlord Razgor##25279
+			..turnin Taking Back Mightstone Quarry##11598
+		step
+			goto Borean Tundra,41.7,54.7
+			.talk Endorah##25247
+			..accept Too Close For Comfort##11574
+		step
+			goto Borean Tundra,45.3,33.3
+			.talk Librarian Donathan##25262
+			..turnin Too Close For Comfort##11574
+			..accept Prison Break##11587
+		step
+			goto Borean Tundra,40.5,39.2
+			.kill Beryl Mage Hunter##25585|n
+			.collect Beryl Prison Key##34688|n
+			.' Interact with gameobject: Arcane Prison
+			.' Free an Arcane Prisoner|goal Arcane Prisoners Rescued|q 11587/1
+		step
+			goto Borean Tundra,45.3,33.3
+			.talk Librarian Donathan##25262
+			..turnin Prison Break##11587
+			..accept Abduction##11590
+		step
+			goto Borean Tundra,43.5,37.4
+			.' Fight a Beryl Sorcerer.
+			.' Use your Arcane Binder on him when you see the "Beryl Sorcerer can now be captured" message in your chat window|use Arcane Binder##34691
+			.' Capture a Beryl Sorcerer|goal Captured Beryl Sorcerer|q 11590/1
+		step
+			goto Borean Tundra,45.3,33.3
+			.talk Librarian Donathan##25262
+			..turnin Abduction##11590
+			..accept The Borean Inquisition##11646
+		step
+			goto Borean Tundra,46.3,32.8
+			.talk Librarian Normantis##25480
+			..turnin The Borean Inquisition##11646
+			..accept The Art of Persuasion##11648
+		step
+			'Use your Neural Needler on the Imprisoned Beryl Sorcerer repeatedly to Interrogate the Prisoner|use Neural Needler##34811
+			.' Interrogate the Prisoner|goal Prisoner Interrogated|q 11648/1
+		step
+			goto Borean Tundra,46.3,32.8
+			.talk Librarian Normantis##25480
+			..turnin The Art of Persuasion##11648
+			..accept Sharing Intelligence##11663
+		step
+			goto Borean Tundra,45.3,33.3
+			.talk Librarian Donathan##25262
+			..turnin Sharing Intelligence##11663
+			..accept A Race Against Time##11671
+		step
+			goto Borean Tundra,42.1,39.5
+			.' Use your Beryl Shield Detonator inside the big blue glowing circle|use Beryl Shield Detonator##34897
+			.info If it won't let you, wait until Inquisitor Salrand appears again.
+			.kill Inquisitor Salrand##25584|n
+			.' Click Salrand's Lockbox
+			.collect Salrand's Broken Key##34909|q 11671/1
+		step
+			goto Borean Tundra,45.3,33.3
+			.talk Librarian Donathan##25262
+			..turnin A Race Against Time##11671
+			..accept Reforging the Key##11679
+		step
+			goto Borean Tundra,45.3,34.5
+			.talk Surristrasz##24795
+			..turnin Reforging the Key##11679
+			..accept Taking Wing##11680
+		step
+			goto Borean Tundra,46.4,37.3
+			.talk Warmage Anzim##25356
+			..turnin Taking Wing##11680
+			..accept Rescuing Evanor##11681
+			.' Watch the cutscene, then you'll get teleported back to Amber Ledge|goto 46.4,32.6,0.3|noway|q 11681
+		step
+			goto Borean Tundra,46.4,32.4
+			.talk Archmage Evanor##25785
+			..turnin Rescuing Evanor##11681
+			..accept Dragonspeak##11682
+		step
+			goto Borean Tundra,45.3,34.5
+			.talk Surristrasz##24795
+			..turnin Dragonspeak##11682
+			..accept Traversing the Rift##11733
+			.' Fly to Transitus Shield|goto 33.1,34.4,0.3|noway|q 11733
+		step
+			goto Borean Tundra,32.9,34.4
+			.talk Archmage Berinand##25314
+			..turnin Traversing the Rift##11733
+			..accept Reading the Meters##11900
+			..accept Secrets of the Ancients##11910
+		step
+			goto Borean Tundra,32.7,29
+			.kill Coldarra Spellbinders##25719|n
+			.collect Scintillating Fragment##35648|q 11941 |future
+		step
+			.use Scintillating Fragment##35648
+			..accept Puzzling...##11941
+		step
+			goto Borean Tundra,28.3,28.5
+			.' Interact with gameobject: Coldarra Geological Monitor
+			.info It looks like a blue sphere on the ground at the base of the building.
+			.' Take the Nexus Geological Reading|goal Nexus Geological Reading|q 11900/1
+			.' As you go, kill Glacial Ancients.
+			.info Need 3 Glacial Splinters.
+			.' As you go, kill Magic-Bound Ancients.
+			.info Need 3 Magic-Bound Splinters
+		step
+			goto Borean Tundra,31.7,20.6
+			.' Interact with gameobject: Coldarra Geological Monitor
+			.info It looks like a blue sphere on the ground in the entrance of the building.
+			.' Take the Northern Coldarra Reading|goal Northern Coldarra Reading|q 11900/3
+			.' As you go, kill Glacial Ancients.
+			.info Need 3 Glacial Splinters.
+			.' As you go, kill Magic-Bound Ancients.
+			.info Need 3 Magic-Bound Splinters
+		step
+			goto Borean Tundra,22.6,23.5
+			.' Interact with gameobject: Coldarra Geological Monitor
+			.info It looks like a blue sphere on the ground in the entrance of the building.
+			.' Take the Western Coldarra Reading|goal Western Coldarra Reading|q 11900/4
+			.' As you go, kill Glacial Ancients.
+			.info Need 3 Glacial Splinters.
+			.' As you go, kill Magic-Bound Ancients.
+			.info Need 3 Magic-Bound Splinters.
+		step
+			goto Borean Tundra,28.3,35
+			.' Interact with gameobject: Coldarra Geological Monitor
+			.info It looks like a blue sphere on the ground in the entrance of the building.
+			.' Take the Southern Coldarra Reading|goal Southern Coldarra Reading|q 11900/2
+			.' As you go, kill Glacial Ancients.
+			.info Need 3 Glacial Splinters.
+			.' As you go, kill Magic-Bound Ancients.
+			.info Need 3 Magic-Bound Splinters.
+		step
+			.' Make sure you have:
+			.from Glacial Ancient##25709
+			.get 3 Glacial Splinter##35483|q 11910/1
+			.from Magic-bound Ancient##25707
+			.get 3 Scintillating Fragment##35648|q 11910/2
+		step
+			goto Borean Tundra,32.9,34.4
+			.talk Archmage Berninand##25314
+			..turnin Reading the Meters##11900
+			..turnin Secrets of the Ancients##11910
+			..accept Postponing the Inevitable##11905
+			..accept Quickening##11911
+		step
+			goto Borean Tundra,33.3,34.5
+			.talk Raelorasz##26117
+			..turnin Puzzling...##11941
+			..accept The Cell##11943
+		step
+			goto Borean Tundra,24.1,29.6
+			.from Warbringer Goredrak##25712
+			.get Energy Core##35669|q 11943/1
+		step
+			goto Borean Tundra,27.3,20.5
+			.from General Cerulean##25716
+			.get Prison Casing##35668|q 11943/2
+		step
+			goto Borean Tundra,33.3,34.5
+			.talk Raelorasz##26117
+			..turnin The Cell##11943
+		step
+			.use Augmented Arcane Prison##35671
+			.talk Keristrasza##26237
+			..accept Keristrasza##11946
+			..turnin Keristrasza##11946
+			..accept Bait and Switch##11951
+		step
+			goto Borean Tundra,28.87,32.05
+			.collect 10 Crystallized Mana Shard##35685|q 11951/1
+			.info They look like pink crystals.
+			.' You can find more around (1)|at 24.7,24.25
+			.' You can find more around (2)|at 27.8,21.35
+			.' You can find more around (3)|at 32.9,26.6
+		step
+			.use Augmented Arcane Prison##35671
+			.talk Keristrasza##26237
+			..turnin Bait and Switch##11951
+			..accept Saragosa's End##11957
+		step
+			.use Augmented Arcane Prison##35671
+			.talk Keristrasza##26206
+			.' Tell her you are ready to face Saragosa|goto 21.2,22.5,1|noway|q 11957
+		step
+			.' She teleports you to a platform:
+			.use Arcane Power Focus##35690
+			.from Saragosa##26231
+			.get Saragosa's Corpse##35709|q 11957/1
+		step
+			.use Augmented Arcane Prison##35671
+			.talk Keristrasza##26206
+			..turnin Saragosa's End##11957
+			..accept Mustering the Reds##11967
+		step
+			.use Augmented Arcane Prison##35671
+			.talk Keristrasza##26206
+			.' Tell her to return you to Transitus Shield|goto 33.3,34.4,0.5|noway|q 11967
+		step
+			goto Borean Tundra,33.3,34.5
+			.talk Raelorasz##26117
+			..turnin Mustering the Reds##11967
+			..accept Springing the Trap##11969
+		step
+			goto Borean Tundra,25.4,21.7
+			.use Raelorasz' Spark##44950
+			.info The Signal Fire looks like an unlit bonfire.
+			.' Watch the cutscene.
+			.' Lure Malygos|goal Malygos Lured|q 11969/1
+		step
+			goto Borean Tundra,33.3,34.5
+			.talk Raelorasz##26117
+			..turnin Springing the Trap##11969
+			..accept Prisoner of War##11973	
+		step
+			goto Borean Tundra,33.5,34.4
+			.talk Librarian Serrah##26110
+			..accept Have They No Shame?##13095
 ]])
 
 ZygorGuidesViewer.HordeInstalled=true

@@ -2,7 +2,7 @@ local ZygorGuidesViewer=ZygorGuidesViewer
 if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Alliance" then return end
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[15] Deadmines",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[15] Deadmines",[[
 author danaton
 startlevel 15
 		step //1
@@ -78,7 +78,7 @@ startlevel 15
 			..accept Red Silk Bandanas##214
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[15] Wailing Caverns",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[15] Wailing Caverns",[[
 author danaton
 startlevel 15
 		step
@@ -111,7 +111,7 @@ startlevel 15
 			.' Go To Instance!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[20] Blackfathom Deeps",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[20] Blackfathom Deeps",[[
 author danaton
 startlevel 20
 		step //1
@@ -138,7 +138,7 @@ startlevel 20
 			.' Go To Instance!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[23] Razorfen Kraul",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[23] Razorfen Kraul",[[
 author danaton
 startlevel 23
 		step
@@ -194,7 +194,7 @@ startlevel 23
 			..accept Willix the Importer##1144
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[25] Gnomeregan",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[25] Gnomeregan",[[
 author danaton
 startlevel 25
 		step //1
@@ -269,7 +269,7 @@ startlevel 25
 			.' Go To Instance!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[25] The Stockade",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[25] The Stockade",[[
 author danaton
 startlevel 25
 		step
@@ -308,7 +308,7 @@ startlevel 25
 			.' Go To Instance!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[32] Razorfen Downs",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[32] Razorfen Downs",[[
 author danaton
 startlevel 32
 		step
@@ -328,7 +328,7 @@ startlevel 32
 			..accept Extinguishing the Idol##3525
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[35] Uldaman",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[35] Uldaman",[[
 author danaton
 startlevel 35
 		step
@@ -399,7 +399,7 @@ startlevel 35
 			.' Go To Uldaman Instance!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[40] Zul'Farrak",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[40] Zul'Farrak",[[
 author danaton
 startlevel 40
 		step //1
@@ -481,7 +481,7 @@ startlevel 40
 			goto Tanaris,38.74,20.05
 			.' Go To Zul'Farrak Instance!
 ]])
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[45] Maraudon",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[45] Maraudon",[[
 author danaton
 description This guide contain all quest-chain for Maraudon Dungeon.
 startlevel 45
@@ -583,7 +583,7 @@ startlevel 45
 			goto Desolace,36,64.2
 			.' Go To Maraudon (Orange Entrance)!
 ]])
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[47] Sunken Temple",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[47] Sunken Temple",[[
 author danaton
 startlevel 47
 		step //1
@@ -698,7 +698,7 @@ startlevel 47
 		step //24
 			.' Go To Instance!
 ]])
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[50] Blackrock Depth",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[50] Blackrock Depth",[[
 author danaton
 startlevel 50
 		step //1
@@ -861,7 +861,7 @@ startlevel 50
 			..accept Dark Iron Legacy##3802
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[55] Stratholme",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[55] Stratholme",[[
 author danaton
 startlevel 55
 		step //1
@@ -971,7 +971,7 @@ startlevel 55
 			.' Go To Instance!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[56] Dire Maul",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[56] Dire Maul",[[
 author danaton
 startlevel 56
 		step
@@ -1011,7 +1011,7 @@ startlevel 56
 			.' Go To Instance!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[57] Blackrock Spire",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[57] Blackrock Spire",[[
 author danaton
 startlevel 57
 		step
@@ -1155,7 +1155,7 @@ startlevel 57
 			.info Right Wing: Eleven Step.
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[60] Scholomance - [Skeleton Key]",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[60] Scholomance - [Skeleton Key]",[[
 author danaton
 startlevel 60
 		step
@@ -1258,12 +1258,12 @@ startlevel 60
 			.' Excellent! You have the Skeleton Key!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[Empty] Scholomance",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[Empty] Scholomance",[[
 	startlevel 60
 	step //1
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[59] Hellfire Citadel: Hellfire Ramparts",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[59] Hellfire Citadel: Hellfire Ramparts",[[
 author danaton
 startlevel 59
 		step
@@ -1324,7 +1324,7 @@ startlevel 59
 			.info Good luck!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[59] Hellfire Citadel: The Blood Furnace",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[59] Hellfire Citadel: The Blood Furnace",[[
 author danaton
 startlevel 59
 		step
@@ -1342,7 +1342,7 @@ startlevel 59
 			.info Good luck!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\[67] Hellfire Citadel: The Shattered Halls",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\[67] Hellfire Citadel: The Shattered Halls",[[
 author danaton
 startlevel 67
 		step //1
@@ -1366,7 +1366,7 @@ startlevel 67
 			.' Go To Instance!|tip Good luck!
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\Heroic Instance Keys\\[70] Hellfire Citadel",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\Heroic Instance Keys\\[70] Hellfire Citadel",[[
 author danaton
 startlevel 70
 		step //1
@@ -1379,7 +1379,7 @@ startlevel 70
 			.buy Flamewrought Key##30622
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Dungeon Quests Guides\\Heroic Instance Keys\\[70] Auchindoun",[[
+ZygorGuidesViewer:RegisterGuide("Alliance Dungeon Quests Guides\\Heroic Instance Keys\\[70] Auchindoun",[[
 author danaton
 startlevel 70
 		step //1
