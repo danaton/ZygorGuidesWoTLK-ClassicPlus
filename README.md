@@ -1,9 +1,9 @@
 ![Logo](wotlk-logo.png)
 # Zygor Guides WoTLK - Classic Plus
 ---
-The repository contains the original **ZygorGuidesViewer** 3.3.5a addon and many author's improvements.
+This repository contains the original **ZygorGuidesViewer** 3.3.5a addon and many author's improvements.
 
 **Main focus:**
 
-* Corrections and improvements to the original to make it more readable and understandable.
-* Creating your own guides (mainly **"Loremaster"**).
+* Making corrections and improvements to the original to make it more readable and understandable.
+* Creating custom guides (primarily for the **"Loremaster"** achievement).
