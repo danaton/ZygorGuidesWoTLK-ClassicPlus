@@ -320,7 +320,7 @@ startlevel 32
 			.talk Myriam Moonsinger##12866
 			..accept A Host of Evil##6626
 		step
-			goto The Barrens,48.60,90.95
+			goto The Barrens,50.85,92.85
 			.' Go To Instance!
 			.talk Belnistrasz##8516
 			..accept Scourge of the Downs##3523
