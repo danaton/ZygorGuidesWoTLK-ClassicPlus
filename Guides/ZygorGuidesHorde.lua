@@ -3,10 +3,10 @@ if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Horde" then return end
 
 ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[[
-	author support@zygorguides.com
-	defaultfor Scourge
-	next Zygor's Horde Leveling Guides\\Main Guide (13-20)
-	startlevel 1
+author support@zygorguides.com
+defaultfor Scourge
+next Zygor's Horde Leveling Guides\\Main Guide (13-20)
+startlevel 1
 	step //1
 		goto Tirisfal Glades,29.99,71.76
 		.talk Undertaker Mordo##1568
@@ -18,8 +18,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		..accept The Mindless Ones##364
 	step //3
 		goto 31.8,63.7
-		.kill 5 Wretched Ghoul|q 364/2
-		.kill 5 Mindless Zombie|q 364/1
+		.kill 5 Mindless Zombie##1501|q 364/1
+		.kill 5 Wretched Ghoul##1502|q 364/2
 	step //4
 		ding 2
 	step //5
@@ -28,8 +28,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		..turnin The Mindless Ones##364
 		..accept Rattling the Rattlecages##3901
 		..accept Simple Scroll##3095
-		.talk Novice Elreth##1661
-		..accept The Damned##376
 		only Scourge Warrior
 	step //6
 		goto 30.8,66.2
@@ -37,8 +35,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		..turnin The Mindless Ones##364
 		..accept Rattling the Rattlecages##3901
 		..accept Tainted Scroll##3099
-		.talk Novice Elreth##1661
-		..accept The Damned##376
 		only Scourge Warlock
 	step //7
 		goto 30.8,66.2
@@ -46,8 +42,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		..turnin The Mindless Ones##364
 		..accept Rattling the Rattlecages##3901
 		..accept Encrypted Scroll##3096
-		.talk Novice Elreth##1661
-		..accept The Damned##376
 		only Scourge Rogue
 	step //8
 		goto 30.9,66.3
@@ -60,8 +54,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		..turnin The Mindless Ones##364
 		..accept Rattling the Rattlecages##3901
 		..accept Hallowed Scroll##3097
-		.talk Novice Elreth##1661
-		..accept The Damned##376
 		only Scourge Priest
 	step //10
 		goto 30.8,66.2
@@ -69,27 +61,30 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		..turnin The Mindless Ones##364
 		..accept Rattling the Rattlecages##3901
 		.talk Novice Elreth##1661
-		..accept The Damned##376
 		..accept Glyphic Scroll##3098
 		only Scourge Mage
+	step
+		goto 30.9,66.1
+		.talk Novice Elreth##1661
+		..accept The Damned##376
 	step //11
 		goto 32.7,65.6
 		.talk Dannal Stern##2119
 		..turnin Simple Scroll##3095
 		only Scourge Warrior
-		info2 He is the Warrior Class Trainer
+		.info He is the Warrior Class Trainer.
 	step //12
 		goto 32.5,65.7
 		.talk David Trias##2122
 		..turnin Encrypted Scroll##3096
 		only Scourge Rogue
-		info2 He is the Rogue Class Trainer
+		.info He is the Rogue Class Trainer.
 	step //13
 		goto 31.1,66
 		.talk Dark Cleric Duesten##2123
 		..turnin Hallowed Scroll##3097
 		only Scourge Priest
-		info2 He is the Priest Class Trainer
+		.info He is the Priest Class Trainer.
 	step //14
 		goto 30.9,66.1
 		.talk Isabella##2124
@@ -97,20 +92,22 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		only Scourge Mage
 	step //15
 		goto 32.5,61.3
-		.kill 8 Rattlecage Skeleton|q 3901/1
+		.kill 8 Rattlecage Skeleton##1890|q 3901/1
 	step //16
 		goto 31.7,58.7
 		.from Young Scavenger##1508, Ragged Scavenger##1509
-		.get 6 Scavenger Paw|q 376/1
+		.get 6 Scavenger Paw##3265|q 376/1
 		.from Duskbat##1512, Mangy Duskbat##1513
-		.get 6 Duskbat Wing|q 376/2
+		.get 6 Duskbat Wing##3264|q 376/2
 	step //17
 		ding 3
 	step //18
-		goto 30.8,66.2
+		goto 30.9,66.1
 		.talk Novice Elreth##1661
 		..turnin The Damned##376
 		..accept Marla's Last Wish##6395
+	step
+		goto 30.8,66.2
 		.talk Shadow Priest Sarvis##1569
 		..turnin Rattling the Rattlecages##3901
 	step //19
@@ -123,23 +120,25 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		..accept Scavenging Deathknell##3902
 	step //21
 		goto 33.2,63.7
-		.' Click the Equipment Boxes |tip They look like piles of brown boxes around this area.
-		.get 6 Scavenged Goods|q 3902/1
+		.collect 6 Scavenged Goods##11127|q 3902/1
+		.info They look like piles of brown boxes around this area.
 	step //22
 		goto 29.4,58.6
-		.kill 8 Young Night Web Spider|q 380/1
+		.kill 8 Young Night Web Spider##1504|q 380/1
 	step //23
 		ding 4
 	step //24
-		'Go inside the cave to 26.9,59.4|goto 26.9,59.4
-		.kill 5 Night Web Spider|q 380/2
+		goto 26.9,59.4
+		.kill 5 Night Web Spider##1505|q 380/2
+		.info Inside the cave.
 	step //25
 		goto 36.7,61.5
 		.from Samuel Fipps##1919
-		.collect 1 Samuel's Remains##16333|q 6395
+		.collect Samuel's Remains##16333|q 6395
 	step //26
 		goto 31.2,65.1
-		.' Click Marla's Grave |tip It's the only light brown pile of dirt in the cemetary.
+		.' Interact with gameobject: Marla's Grave
+		.info It's the only light brown pile of dirt in the cemetary.
 		.' Bury Samuel's Remains|goal Samuel's Remains Buried|q 6395/1
 	step //27
 		goto 31.6,65.6
@@ -157,7 +156,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 	step //30
 		goto 36.1,67.1
 		.from Scarlet Convert##1506, Scarlet Initiate##1507
-		.get 12 Scarlet Armband|q 381/1
+		.get 12 Scarlet Armband##3266|q 381/1
 	step //31
 		ding 5
 	step //32
@@ -168,7 +167,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 	step //33
 		goto 36.5,68.8
 		.from Meven Korgal##1667
-		.get Scarlet Crusade Documents|q 382/1
+		.get Scarlet Crusade Documents##2885|q 382/1
 	step //34
 		goto 32.2,66
 		.talk Executor Arren##1570
@@ -188,8 +187,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		..accept Gordo's Task##5481
 	step //38
 		goto 52.9,52.1
-		.' Click the Gloom Weeds |tip They look like little dark wilted plants around this area.
-		.get 3 Gloom Weed|q 5481/1
+		.collect 3 Gloom Weed##12737|q 5481/1
+		.info They look like little dark wilted plants around this area.
 	step //39
 		goto 58.2,51.4
 		.talk Deathguard Dillinger##1496
@@ -201,9 +200,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		..accept At War With The Scarlet Crusade (1)##427
 	step //41
 		goto 60.7,51.5
-		.' Click the Wanted Poster
+		.' Interact with gameobject: Wanted Poster
 		..accept Wanted: Maggot Eye##398
-		info Next to the steps of the big building
+		.info Next to the steps of the big building.
 	step //42
 		goto 61.3,50.8
 		.talk Magistrate Sevren##1499
@@ -215,7 +214,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 	step //44
 		goto 61.7,52
 		.talk Innkeeper Renee##5688
-		home Brill
+		home Brill|q 5481
 	step //45
 		goto 57.6,48.7
 		.talk Junior Apothecary Holland##10665
@@ -224,7 +223,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 	step //46
 		goto 55.2,51.1
 		.from Ravaged Corpse##1526, Rotting Dead##1525
-		.get 7 Putrid Claw|q 404/1
+		.get 7 Putrid Claw##2855|q 404/1
 	step //47
 		goto 58.2,51.4
 		.talk Deathguard Dillinger##1496
@@ -239,22 +238,22 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 	step //50
 		goto 55.7,61.3
 		.from Decrepit Darkhound##1547, Cursed Darkhound##1548
-		.get 5 Darkhound Blood|q 367/1
+		.get 5 Darkhound Blood##2858|q 367/1
 	step //51
 		goto 38.2,56.8
 		.talk Calvin Montague##6784
 		..accept A Rogue's Deal (2)##590
-		..'Fight him until he gives up
+		.' Fight him until he gives up.
 		..turnin A Rogue's Deal (2)##590
 	step //52
 		goto 37.2,52.2
-		.' Click Tirisfal Pumpkins |tip They look like big pumpkins in this field around this area.
-		.get 10 Tirisfal Pumpkin|q 365/1
+		.collect 10 Tirisfal Pumpkin##2846|q 365/1
+		.info They look like big pumpkins in this field around this area.
 	step //53
-		goto 33,50.4
-		.kill 10 Scarlet Warrior|q 427/1
+		goto 32.4,48
+		.kill 10 Scarlet Warrior##1535|q 427/1
 	step //54
-		'Hearth to Brill|goto 61.8,52.1,0.1|use hearthstone##6948|noway|c
+		.' Hearth to Brill|goto 61.8,52.1,0.1|use hearthstone##6948|noway|q 427
 	step //55
 		goto 60.6,51.8
 		.talk Executor Zygand##1515
@@ -279,44 +278,45 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		goto 59.4,52.4
 		.talk Apothecary Johaan##1518
 		..turnin Fields of Grief (1)##365
-		..accept Fields of Grief (2)##407
 		..turnin A New Plague (1)##367
 		..accept A New Plague (2)##368
+		..accept Fields of Grief (2)##407
 	step //61
-		'Go inside the inn
-		.' Go to the basement|goto 61.6,51.6,0.2|c
+		.' Go inside the inn.
+		.' Go to the basement|goto 61.6,51.6,0.3|q 407
 	step //62
 		goto 62,51.3
 		.talk Captured Scarlet Zealot##1931
 		..turnin Fields of Grief (2)##407
 	step //63
-		goto 57.5,41.1
-		.kill 8 Rot Hide Graverobber |q 358/1
-		.' Click the Doom Weeds |tip The Doom Weeds look like little purple plants on the ground around this area.
-		.get 10 Doom Weed |q 5482/1
+		goto 56.5,38.8
+		.collect 10 Doom Weed##13702|q 5482/1
+		.info The Doom Weeds look like little purple plants on the ground around this area.
+	step
+		goto 55.2,42.1
+		.kill 8 Rot Hide Graverobber##1941|q 358/1
 	step //64
 		goto 58.3,35.3
-		.kill 5 Rot Hide Mongrel|q 358/2
-		.from Rot Hide Graverobber##1941, Rot Hide Gnoll##1674, Rot Hide Mongrel##1675
-		.get 8 Embalming Ichor|q 358/3
+		.kill 5 Rot Hide Mongrel##1675|q 358/2
+		.get 8 Embalming Ichor##2834|q 358/3
 	step //65
-		goto 60.2,29.9
+		goto 60.2,28.6
 		.from Vile Fin Puddlejumper##1543, Vile Fin Minor Oracle##1544, Vile Fine Muckdweller##1545
-		.get 5 Vile Fin Scale|q 368/1
+		.get 5 Vile Fin Scale##2859|q 368/1
 	step //66
 		goto 64.7,33.7
 		.from Greater Duskbat##1553, Vampiric Duskbat##1554
-		.get 5 Duskbat Pelt|q 375/1
+		.get 5 Duskbat Pelt##2876|q 375/1
 	step //67
 		goto 58.7,30.7
 		.from Maggot Eye##1753
-		.get Maggot Eye's Paw|q 398/1
+		.get Maggot Eye's Paw##3635|q 398/1
 	step //68
 		ding 8
 	step //69
 		goto 61,52.4
 		.talk Abigail Shiel##2118
-		..buy 1 Coarse Thread|q 375/2
+		.buy 1 Coarse Thread##2320|q 375/2
 	step //70
 		goto 60.6,51.8
 		.talk Executor Zygand##1515
@@ -342,29 +342,29 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 	step //75
 		goto 47.5,42
 		.from Devlin Agamand##1657
-		.get Devlin's Remains|q 362/1
+		.get Devlin's Remains##2831|q 362/1
 	step //76
 		goto 48.4,42.1
 		.from Rattlecage Soldier##1520, Cracked Skull Soldier##1523
-		..get 5 Notched Rib|q 426/1
+		.get 5 Notched Rib##3162|q 426/1
 		.from Darkeye Bonecaster##1522
-		..get 3 Blackened Skull|q 426/2
+		.get 3 Blackened Skull##3163|q 426/2
 	step //77
 		ding 9
 	step //78
 		goto 49.5,36.1
 		.from Nissa Agamand##1655
-		.get Nissa's Remains|q 354/2
+		.get Nissa's Remains##2828|q 354/2
 	step //79
 		goto 46,31.8
 		.from Gregor Agamand##1654
-		.get Gregor's Remains|q 354/1
+		.get Gregor's Remains##2829|q 354/1
 	step //80
-		goto 43.9,36
+		goto 44,33.6
 		.from Thurman Agamand##1656
-		.get Thurman's Remains|q 354/3
+		.get Thurman's Remains##2830|q 354/3
 	step //81
-		'Hearth to Brill|goto 61.8,52.1,0.5|use hearthstone##6948|noway|c
+		.' Hearth to Brill|goto 61.8,52.1,0.5|use hearthstone##6948|noway|q 362
 	step //82
 		goto 61.7,52.3
 		.talk Coleman Farthing##1500
@@ -387,8 +387,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		..accept Rear Guard Patrol##356
 	step //86
 		goto 74.7,61.5
-		.kill 8 Bleeding Horror|q 356/1
-		.kill 8 Wandering Spirit|q 356/2
+		.kill 8 Bleeding Horror##1529|q 356/1
+		.kill 8 Wandering Spirit##1532|q 356/2
 	step //87
 		ding 10
 	step //88
@@ -412,10 +412,10 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		only Scourge Warrior
 	step //92
 		goto 59.2,48.5
-		.' Click the Mausoleum Trigger on the ground
-		.kill 1 Ulag the Cleaver|q 1819/1
+		.' Interact with gameobject: Mausoleum Trigger
+		.kill Ulag the Cleaver##6390|q 1819/1
+		.info It's a small square on the ground with a skull painted on it.
 		only Scourge Warrior
-		info It's a small square on the ground with a skull painted on it.
 	step //93
 		goto 58.2,51.4
 		.talk Deathguard Dillinger##1496
@@ -427,7 +427,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		..accept Halgar's Summons##1478
 		only Scourge Warlock
 	step //95
-		'Go south to Undercity|goto Undercity
+		.' Go south to Undercity|goto Undercity|q 1478
 		only Scourge Warlock
 	step //96
 		goto Undercity,85.1,26
@@ -436,16 +436,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		..accept Creature of the Void##1473
 		only Scourge Warlock
 	step //97
-		'Go outside to Tirisfal Glades|goto Tirisfal Glades
+		.' Go outside to Tirisfal Glades|goto Tirisfal Glades|q 1473
 		only Scourge Warlock
 	step //98
 		goto Tirisfal Glades,51.1,67.6
 		.' Click Perrine's Chest inside the tower
-		.get Egalin's Grimoire|q 1473/1
-		only Scourge Warlock
+		.get Egalin's Grimoire##6285|q 1473/1
 		info It's a gray chest sitting on the ground.
+		only Scourge Warlock
 	step //99
-		'Go to Undercity|goto Undercity
+		.' Go to Undercity|goto Undercity|q 1473
 		only Scourge Warlock
 	step //100
 		goto Undercity,85.1,26
@@ -456,26 +456,27 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 	step //101
 		goto 86.6,27.1
 		.' Use your Runes of Summoning whil standing on the pink Summoning Circle|use Runes of Summoning##6284
-		.kill Summoned Voidwalker|q 1471/1
+		.kill Summoned Voidwalker##5676|q 1471/1
+		.info It's a pink rune looking circle on the ground.
 		only Scourge Warlock
-		info It's a pink rune looking circle on the ground.
 	step //102
 		goto 85.1,26
 		.talk Carendin Halgar##5675
 		..turnin The Binding##1471
 		only Scourge Warlock
 	step //103
-		'Go outside to Tirisfal Glades|goto Tirisfal Glades
+		.' Go outside to Tirisfal Glades|goto Tirisfal Glades|q 370
 		only Scourge Warlock
 	step //104
 		goto 51.1,67.9
-		.kill Captain Perrine|q 370/1 |tip He's standing inside this tower.
+		.kill Captain Perrine##1662|q 370/1
+		.info He's standing inside this tower.
 	step //105
 		goto 53.1,65.8
-		.kill 3 Scarlet Zealot|q 370/2
-		.kill 3 Scarlet Missionary|q 370/3
+		.kill 3 Scarlet Zealot##1537|q 370/2
+		.kill 3 Scarlet Missionary##1536|q 370/3
 		.from Scarlet Missionary##1536, Scarlet Zealot##1537
-		.get 10 Scarlet Insignia Ring|q 374/1
+		.get 10 Scarlet Insignia Ring##2875|q 374/1
 	step //106
 		goto 60.6,51.8
 		.talk Executor Zygand##1515
@@ -486,18 +487,18 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		.talk Deathguard Burgess##1652
 		..turnin Proof of Demise##374
 	step //108
-		goto 76.2,54.3
-		.kill 5 Scarlet Friar|q 371/2
-	step //109
 		goto 78.8,56
-		.kill 1 Captain Vachon|q 371/1
-		info He's standing inside this tower
+		.kill Captain Vachon##1664|q 371/1
+		.info He's standing inside this tower.
+	step //109
+		goto 76.2,54.3
+		.kill 5 Scarlet Friar##1538|q 371/2
 	step //110
 		goto 82.3,54.3
 		.from Vicious Night Web Spider##1555
-		.get 4 Vicious Night Web Spider Venom|q 369/1
+		.get 4 Vicious Night Web Spider Venom##2872|q 369/1
 	step //111
-		'Hearth to Brill|goto 61.8,52.1,0.5|use hearthstone##6948|noway|c
+		.' Hearth to Brill|goto 61.8,52.1,0.5|use Hearthstone##6948|noway|q 371
 	step //112
 		goto 60.6,51.8
 		.talk Executor Zygand##1515
@@ -521,37 +522,36 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 	step //116
 		ding 11
 	step //117
-		'Go to the Undercity|goto Undercity
+		.' Go to the Undercity|goto Undercity|q 405
 	step //118
 		goto Undercity,84,18
 		.talk Bethor Iceshard##1498
 		..turnin The Prodigal Lich##405
 		..accept The Lich's Identity##357
 	step //119
-		'Go outside of the Undercity|goto Tirisfal Glades
+		.' Go outside of the Undercity|goto Tirisfal Glades|q 408
 	step //120
-		goto Tirisfal Glades,52,29.3
-		.kill 8 Wailing Ancestor|q 408/1
-		.kill 8 Rotting Ancestor|q 408/2
-	step //121
-		'Go inside the crypt to 52.8,26.4|goto 52.8,26.4
-		.from Captain Dargol##1658
+		goto 52.8,26.4
+		.kill Captain Dargol##1658|n
 		.'Get Captain Dargol's Skull|goal Dargol's Skull|q 408/3
+	step //121
+		goto Tirisfal Glades,52,29.3
+		.kill 8 Wailing Ancestor##1534|q 408/1
+		.kill 8 Rotting Ancestor##1530|q 408/2
 	step //122
-		'Go outside the crypt to 68,42.1|goto 68,42.1
-		.' Click Gunther's Books
-		.get 1 The Lich's Spellbook|q 357/1
-		info They look like a stack of books laying on a wooden table.
+		goto 68,42.1
+		.collect The Lich's Spellbook##2833|q 357/1
+		.info They look like a stack of books laying on a wooden table.
 	step //123
 		goto 79.3,46.5|n
-		.' The path to At War With The Scarlet Crusade starts here|goto 79.3,46.5,0.5|noway|c
+		.' The path to At War With The Scarlet Crusade starts here|goto 79.3,46.5,0.5|noway|q 372
 	step //124
 		goto 79.5,25.2
-		.kill 2 Scarlet Bodyguard|q 372/2
-		.kill 1 Captain Melrache|q 372/1
-		info Standing inside this tower
+		.kill Captain Melrache##1665|q 372/1
+		.kill 2 Scarlet Bodyguard##1660|q 372/2
+		.info Standing inside this tower.
 	step //125
-		'Hearth to Brill|goto 61.8,52.1,0.5|use hearthstone##6948|noway|c
+		.' Hearth to Brill|goto 61.8,52.1,0.5|use hearthstone##6948|noway|q 372
 	step //126
 		goto 60.6,51.8
 		.talk Executor Zygand##1515
@@ -561,14 +561,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		.talk Magistrate Sevren##1499
 		..turnin The Family Crypt##408
 	step //128
-		'Go to the Undercity|goto Undercity
+		.' Go to the Undercity|goto Undercity|q 357
 	step //129
 		goto Undercity,84.1,17.5
 		.talk Bethor Iceshard##1498
 		..turnin The Lich's Identity##357
 		..accept Return the Book##366
 	step //130
-		'Go outside of the Undercity|goto Tirisfal Glades
+		.' Go outside of the Undercity|goto Tirisfal Glades|q 366
 	step //131
 		goto Tirisfal Glades,68.2,41.9
 		.talk Gunther Arcanus##1497
@@ -576,22 +576,21 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		..accept Proving Allegiance##409
 	step //132
 		goto 68.21,41.9
-		.' Click the Crate of Candles
-		.collect 1 Candle of Beckoning##3080|q 410
-		info Looks like a wooden crate filled with candles next to a blue jar
+		.' Interact with gameobject: Crate of Candles
+		.collect Candle of Beckoning##3080|q 409
+		.info Looks like a wooden crate filled with candles next to a blue jar.
 	step //133
 		goto 66.6,44.9
-		.' Click Lillith's Dinner Table
-		..turnin The Dormant Shade##410
-		.kill 1 Lillith Nefara|q 409/1
-		info It's a wooden table with bloody meat all over it.
+		.' Interact with gameobject: Lillith's Dinner Table
+		.kill Lillith Nefara##1946|q 409/1
+		.info It's a wooden table with bloody meat all over it.
 	step //134
 		goto 68.2,41.9
 		.talk Gunther Arcanus##1497
 		..turnin Proving Allegiance##409
 		..accept The Prodigal Lich Returns##411
 	step //135
-		'Go to the Undercity|goto Undercity
+		.' Go to the Undercity|goto Undercity|q 411
 	step //136
 		goto Undercity,84.1,17.5
 		.talk Bethor Iceshard##1498
@@ -599,25 +598,25 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 	step //137
 		ding 12
 	step //138
-		'Go outside of the Undercity|goto Tirisfal Glades
+		.' Go outside of the Undercity|goto Tirisfal Glades|q 445
 	step //139
-		'Go southwest to Silverpine Forest|goto Silverpine Forest
+		.' Go southwest to Silverpine Forest|goto Silverpine Forest|q 445
 	step //140
 		goto Silverpine Forest,45.6,42.6
 		.talk Karos Razok##2226
-		..fpath Sepulcher
+		.fpath Sepulcher|q 445
 	step //141
 		goto 42.8,40.9
 		.talk Apothecary Renferrel##1937
 		..turnin Delivery to Silverpine Forest##445
 		..accept A Recipe For Death##447
 	step //142
-		'Go inside the crypt to 43.4,40.9|goto 43.4,40.9
+		goto 43.4,40.9
 		.talk High Executor Hadrec##1952
 		..accept Lost Deathstalkers##428
 		..accept The Dead Fields##437
 	step //143
-		'Go outside the crypt to 43.4,41.7|goto 43.4,41.7
+		goto 43.4,41.7
 		.talk Deathguard Podrig##6389
 		..accept Supplying the Sepulcher##6321
 		only Scourge
@@ -632,7 +631,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		..accept Ride to the Undercity##6323
 		only Scourge
 	step //146
-		'Fly to the Undercity|goto Undercity
+		goto 45.6,42.6|n
+		.talk Karos Razok##2226
+		.' Fly to the Undercity|goto Undercity|q 6323
 		only Scourge
 	step //147
 		goto Undercity,61.5,41.8
@@ -647,7 +648,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		..accept Return to Podrig##6324
 		only Scourge
 	step //149
-		'Fly to The Sepulcher|goto Silverpine Forest,45.6,42.4,0.1|noway|c
+		goto 63.3,48.5|n
+		.talk Michael Garrett##4551
+		.' Fly to The Sepulcher|goto Silverpine Forest,45.6,42.4,1|noway|q 6324
 		only Scourge
 	step //150
 		goto Silverpine Forest,43.4,41.7
@@ -656,20 +659,20 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		only Scourge
 	step //151
 		goto 49.2,39.6
-		.kill 5 Moonrage Whitescalp|q 421/1
+		.kill 5 Moonrage Whitescalp##1769|q 421/1
 	step //152
 		goto 46,21
 		.' Enter the Dead Fields|goal Enter the Dead Fields|q 437/1
 		.from Nightlash##1983
-		.get Essence of Nightlash|q 437/2
+		.get Essence of Nightlash##3622|q 437/2
 	step //153
 		goto 41.4,18.2
-		.from Ferocious Grizzled Bear##1778
-		.get 6 Grizzled Bear Heart|q 447/1
+		.from Ferocious Grizzled Bear##1778, Giant Grizzled Bear##1797
+		.get 6 Grizzled Bear Heart##3253|q 447/1
 	step //154
 		goto 35.7,15
 		.from Moss Stalker##1780, Mist Creeper##1781
-		.get 6 Skittering Blood|q 447/2
+		.get 6 Skittering Blood##3254|q 447/2
 	step //155
 		goto 53.5,13.4
 		.talk Rane Yorick##1950
@@ -678,13 +681,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 	step //156
 		goto 57.5,15.9
 		.from Mottled Worg##1766, Worg##1765
-		.get 6 Discolored Worg Heart|q 429/1
+		.get 6 Discolored Worg Heart##3164|q 429/1
 	step //157
-		'Go inside the crypt to 43.4,40.9|goto 43.4,40.9
+		goto 43.4,40.9
 		.talk High Executor Hadrec##1952
 		..turnin The Dead Fields##437
 	step //158
-		'Go outside the crypt to 42.8,40.9|goto 42.8,40.9
+		goto 42.8,40.9
 		.talk Apothecary Renferrel##1937
 		..turnin Wild Hearts##429
 	step //159
@@ -692,7 +695,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 		.talk Dalar Dawnweaver##1938
 		..turnin Prove Your Worth##421
 	step //160
-		'Fly to the Undercity|goto Undercity
+		goto 45.6,42.6|n
+		.talk Karos Razok##2226
+		.' Fly to the Undercity|goto Undercity|q 447
 	step //161
 		goto Undercity,48.8,69.3
 		.talk Master Apothecary Faranell##2055
@@ -700,25 +705,25 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Undead (1-13)",[
 	step //162
 		ding 13
 	step //163
-		'Go outside of the Undercity|goto Tirisfal Glades
+		.' Go outside of the Undercity|goto Tirisfal Glades|q 840 |future
 	step //164
 		goto Tirisfal Glades,60.8,58.8|n
-		.' Ride the zeppelin to Orgrimmar|goto Durotar,50.8,13.2,1|noway|c
-		info You can ride this zeppelin to Orgrimmar or Grom'Gol Base Camp
+		.' Ride the zeppelin to Orgrimmar|goto Durotar|noway|q 840 |future
+		.info You can ride this zeppelin to Orgrimmar or Grom'Gol Base Camp.
 	step //165
-		'Go northwest to Orgrimmar|goto Orgrimmar
+		.' Go northwest to Orgrimmar|goto Orgrimmar|q 840 |future
 	step //166
 		goto Orgrimmar,45.1,63.9
 		.talk Doras##3310
-		..fpath Orgrimmar
+		.fpath Orgrimmar|q 840 |future
 	step //167
-		'Go outside of Orgrimmar|goto Durotar
+		.' Go outside of Orgrimmar|goto Durotar|q 840 |future
 	step //168
 		goto Durotar,50.8,43.6
 		.talk Takrin Pathseeker##3336
 		..accept Conscript of the Horde##840
 	step //169
-		'Go west to the Barrens|goto The Barrens
+		.' Go west to the Barrens|goto The Barrens|q 840
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Tauren (1-13)",[[
 	author support@zygorguides.com
@@ -3212,17 +3217,17 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Troll (1-13)",[[
 		'Go west to the Barrens|goto The Barrens
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)",[[
-	author support@zygorguides.com
-	defaultfor BloodElf
-	next Zygor's Horde Leveling Guides\\Main Guide (13-20)
-	startlevel 1
+author support@zygorguides.com
+defaultfor BloodElf
+next Zygor's Horde Leveling Guides\\Main Guide (13-20)
+startlevel 1
 	step //1
 		goto Eversong Woods,38.0,21.0
 		.talk Magistrix Erona##15278
 		..accept Reclaiming Sunstrider Isle##8325
 	step //2
 		goto 36.2,20.5
-		.kill 8 Mana Wyrm|q 8325/1
+		.kill 8 Mana Wyrm##15274|q 8325/1
 	step //3
 		ding 2
 	step //4
@@ -3247,45 +3252,45 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		.talk Summoner Teli'Larien##15283
 		..turnin Warlock Training##8563
 		..accept Well Watcher Solanian##10073
+		.info He is the Warlock Class Trainer.
 		only BloodElf Warlock
-		info2 He is the Warlock Class Trainer
 	step //7
 		goto 38.9,20
 		.talk Pathstalker Kariel##15285
 		..turnin Rogue Training##9392
 		..accept Well Watcher Solanian##10071
+		.info He is the Rogue Class Trainer.
 		only BloodElf Rogue
-		info2 He is the Rogue Class Trainer
 	step //8
 		goto 39.4,20.4
 		.talk Matron Arena##15284
 		..turnin Priest Training##8564
 		..accept Well Watcher Solanian##10072
+		.info She is the Priest Class Trainer.
 		only BloodElf Priest
-		info2 She is the Priest Class Trainer
 	step //9
 		goto 39.5,20.6
 		.talk Jesthenis Sunstriker##15280
 		..turnin Paladin Training##9676
 		..accept Well Watcher Solanian##10069
+		.info. He is the Paladin Class Trainer.
 		only BloodElf Paladin
-		info2 He is the Paladin Class Trainer
 	step //10
 		goto 39,20
 		.talk Ranger Sallina##15513
 		..turnin Hunter Training##9393
 		..accept Well Watcher Solanian##10070
+		.info She is the Hunter Class Trainer.
 		only BloodElf Hunter
-		info2 She is the Hunter Class Trainer
 	step //11
 		goto 38.8,19.4
 		.talk Well Watcher Solanian##15295
 		..turnin Well Watcher Solanian##10068 |only Mage
 		..turnin Well Watcher Solanian##10073 |only Warlock
 		..turnin Well Watcher Solanian##10071 |only Rogue
-		..turnin Well Watcher Solanian##10069 |only Priest
+		..turnin Well Watcher Solanian##10072 |only Priest
 		..turnin Well Watcher Solanian##10069 |only Paladin
-		..turnin Well Watcher Solanian##10069 |only Hunter
+		..turnin Well Watcher Solanian##10070 |only Hunter
 		..accept Solanian's Belongings##8330
 		..accept The Shrine of Dath'Remar##8345
 	step //12
@@ -3305,14 +3310,19 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		only BloodElf
 	step //15
 		goto 34.8,20.1
-		.' Use your Arcane Torrent ability on a Mana Wyrm|q 8346/1|cast Arcane Torrent
+		.kill Mana Wyrm##15274|n
+		.' Use your Arcane Torrent ability on a Mana Wyrm|q 8346/1|cast Arcane Torrent##25046 |only Rogue
+		.' Use your Arcane Torrent ability on a Mana Wyrm|q 8346/1|cast Arcane Torrent##28730 |only Paladin,Hunter,Mage,Warlock,Priest
+		.' Use your Arcane Torrent ability on a Mana Wyrm|q 8346/1|cast Arcane Torrent##50613 |only DeathKnight
+		.info You must be very close for your Arcane Torrent ability to work.
+	step
+		goto 34.8,20.1
 		.from Mana Wyrm##15274
-		.get 6 Arcane Sliver|q 8336/1
-		info You must be very close for your Arcane Torrent ability to work.
+		.get 6 Arcane Sliver##20482|q 8336/1
 	step //16
 		goto 33.6,22.5
 		.from Springpaw Cub##15366, Springpaw Lynx##15372
-		.get 8 Lynx Collar|q 8326/1
+		.get 8 Lynx Collar##20797|q 8326/1
 	step //17
 		ding 3
 	step //18
@@ -3335,29 +3345,26 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept Aggression##8334
 	step //22
 		goto 33.5,24.2
-		.kill 7 Tender|q 8334/1
-		.kill 7 Feral Tender|q 8334/2
+		.kill 7 Tender##15271|q 8334/1
+		.kill 7 Feral Tender##15294|q 8334/2
 	step //23
 		ding 4
 	step //24
 		goto 29.6,19.4
-		.' Click the shiny plaque on the side of the huge statue
+		.' Interact with gameobject: Shrine of Dath'Remar
 		.' Read the Shrine of Dath'Remar|goal Shrine of Dath'Remar Read|q 8345/1
 	step //25
 		goto 31.3,22.7
-		.' Click the Scroll of Scourge Magic
-		.get Scroll of Scourge Magic|q 8330/2
-		info It's a green glowing scroll laying flat on the ground on this platform.
+		.collect Scroll of Scourge Magic##20471|q 8330/2
+		.info It's a green glowing scroll laying flat on the ground on this platform.
 	step //26
 		goto 35.1,28.9
-		.' Click Solanian's Scrying Orb
-		.get Solanian's Scrying Orb|q 8330/1
-		info It's a red crystal ball sitting in a glowing gold stand on a little hanging platform.
+		.collect Solanian's Scrying Orb##20470|q 8330/1
+		.info It's a red crystal ball sitting in a glowing gold stand on a little hanging platform.
 	step //27
 		goto 37.7,24.9
-		.' Click Solanian's Journal
-		.get Solanian's Journal|q 8330/3
-		info It's a blue glowing book laying on the ground under a huge green floating crystal.
+		.collect Solanian's Journal##20472|q 8330/3
+		.info It's a blue glowing book laying on the ground under a huge green floating crystal.
 	step //28
 		goto 38.8,19.4
 		.talk Well Watcher Solanian##15295
@@ -3370,16 +3377,20 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept Felendren the Banished##8335
 	step //30
 		goto 32.2,25.9
-		.kill 8 Arcane Wraith|q 8335/1
-		.kill 2 Tainted Arcane Wraith|q 8335/2
+		.kill 8 Arcane Wraith##15273|q 8335/1
+		.kill 2 Tainted Arcane Wraith##15298|q 8335/2
+	step
+		goto 32.2,25.9
 		.from Tainted Arcane Wraith##15298
-		.get Tainted Arcane Sliver|n
-		.' Click the Tainted Arcane Sliver|use Tainted Arcane Sliver##20483
+		.collect Tainted Arcane Sliver##20483|q 8338 |future
+	step
+		.use Tainted Arcane Sliver##20483
 		..accept Tainted Arcane Sliver##8338
 	step //31
-		'Follow the ramps all the way to the top to 30.8,27.1|goto 30.8,27.1
+		goto 30.8,27.1
+		.' Follow the ramps all the way to the top.
 		.from Felendren the Banished##15367
-		.get Felendren's Head|q 8335/3
+		.get Felendren's Head##20799|q 8335/3
 	step //32
 		goto 35.4,22.5
 		.talk Lanthan Perilon##15281
@@ -3392,7 +3403,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		.talk Arcanist Helion##15297
 		..turnin Tainted Arcane Sliver##8338
 	step //35
-		'Go southeast over the bridge|goto Eversong Woods,40.0,31.4,0.5
+		.' Go southeast over the bridge|goto Eversong Woods,40.0,31.4,0.5|q 8347
 	step //36
 		goto 40.4,32.2
 		.talk Outrunner Alarion##15301
@@ -3419,27 +3430,26 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 	step //41
 		goto 48.1,47.7
 		.talk Innkeeper Delaniel##15433 
-		home Falconwing Square
+		home Falconwing Square|q 8463 |future
 	step //42
 		goto 48.2,46
 		.talk Aeldon Sunbrand##15403
 		..accept Unstable Mana Crystals##8463
 	step //43
 		goto 48.2,46.3
-		.' Click the Wanted Poster
+		.' Interact with gameobject: Wanted Poster
 		..accept Wanted: Thaelis the Hungerer##8468
-		info Standing to the right of the entrance to the big building
+		.info Standing to the right of the entrance to the big building.
 	step //44
-		goto 45.9,43.7
-		.' Click the Unstable Mana Crystal Crates
-		.get 6 Unstable Mana Crystal|q 8463/1
+		goto 45.4,41.2
+		.collect 6 Unstable Mana Crystal##20743|q 8463/1
+		.info The Unstable Mana Crystal Crates look like small glowing circle objects on the ground around this area.
 		.from Arcane Patroller##15638
-		.get 6 Arcane Core|q 8472/1
-		info The Unstable Mana Crystal Crates look like small glowing circle objects on the ground around this area.
+		.get 6 Arcane Core##21808|q 8472/1
 	step //45
 		goto 45,37.8
-		.from Thaelis the Hungerer##15949
-		.get Thaelis's Head|q 8468/1
+		.kill Thaelis the Hungerer##15949|n
+		.get Thaelis's Head##21781|q 8468/1
 	step //46
 		goto 47.3,46.3
 		.talk Magister Jaronis##15418
@@ -3472,16 +3482,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept Arcane Instability##8486
 	step //53
 		goto 35.4,57.4
-		.kill 5 Manawraith|q 8486/1
-		.kill 5 Mana Stalker|q 8486/2
+		.kill 5 Manawraith##15648|q 8486/1
+		.kill 5 Mana Stalker##15647|q 8486/2
 	step //54
 		goto 33.9,58.4
-		.' Kill a Darnassian Scout to defeat an Intruder|goal Intruder Defeated|q 9352/1
-		.from Darnassian Scout##15968
-		.get the Incriminating Documents|n
-		.' Click the Incriminating Documents|use Incriminating Documents##20765
+		.kill Darnassian Scout##15968|q 9352/1
+		.info The Darnassian Scouts are all around the outskirts of the West Sanctum.
+		.collect Incriminating Documents##20765|q 8482 |future
+	step
+		.use Incriminating Documents##20765
 		..accept Incriminating Documents##8482
-		info The Darnassian Scouts are all around the outskirts of the West Sanctum.
 	step //55
 		goto 36.7,57.4
 		.talk Ley-Keeper Velania##15401
@@ -3496,35 +3506,38 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 	step //58
 		goto 27.3,57.2
 		.from Grimscale Forager##15670, Grimscale Seer##15950
-		.get 8 Grimscale Murloc Head|q 8884/1
-		.get Captain Kelisendra's Lost Rutters|n
-		.' Click Captain Kelisendra's Lost Rutters|use Captain Kelisendra's Lost Rutters##21776
+		.get 8 Grimscale Murloc Head##21757|q 8884/1
+		.collect Captain Kelisendra's Lost Rutters##21776|q 8887 |future
+	step
+		.use Captain Kelisendra's Lost Rutters##21776
 		..accept Captain Kelisendra's Lost Rutters##8887
 	step //59
 		goto 30.2,58.3
 		.talk Hathvelion Sungaze##15920
 		..turnin Fish Heads, Fish Heads...##8884
 	step //60
-		goto 36.4,66.7
+		goto 36.4,66.6
 		.talk Captain Kelisendra##15921
 		..turnin Captain Kelisendra's Lost Rutters##8887
 		..accept Grimscale Pirates!##8886
+	step
+		goto 36.4,66.8
 		.talk Velendris Whitemorn##15404
 		..accept Lost Armaments##8480
 	step //61
 		goto 31.7,69.1
-		.' Click the Weapon Containers
-		.get 8 Sin'dorei Armaments|q 8480/1
-		info They look like wooden boxes on the ground all around this area.
+		.collect 8 Sin'dorei Armaments##22413|q 8480/1
+		.info They look like wooden boxes on the ground all around this area.
 	step //62
-		goto 25.6,70.8
-		.' Kill murlocs and click Captain Kelisendra's Cargo barrels on the beach
-		.get 6 Captain Kelisendra's Cargo|q 8886/1
-		info The Captain Kelisendra's Cargo barrels look like wooden barrels sitting upright next to the murloc huts.
+		goto 24.6,69.45
+		.collect 6 Captain Kelisendra's Cargo##21771|q 8886/1
+		.info The Captain Kelisendra's Cargo barrels look like wooden barrels sitting upright next to the murloc huts.
 	step //63
-		goto 36.4,66.7
+		goto 36.4,66.6
 		.talk Captain Kelisendra##15921
 		..turnin Grimscale Pirates!##8886
+	step
+		goto 36.4,66.8
 		.talk Velendris Whitemorn##15404
 		..turnin Lost Armaments##8480
 		..accept Wretched Ringleader##9076
@@ -3532,9 +3545,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		ding 8
 	step //65
 		goto 32.8,69.6
-		.' Go all the way to the top of the big building
-		.from Aldaron the Reckless##16294
-		.get Aldaron's Head|q 9076/1
+		.kill Aldaron the Reckless##16294|n
+		.get Aldaron's Head##22487|q 9076/1
 	step //66
 		goto 36.4,66.7
 		.talk Velendris Whitemorn##15404
@@ -3555,7 +3567,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 	step //70
 		goto 43.7,71.2
 		.talk Marniel Amberlight##15397
-		home Fairbreeze Village
+		home Fairbreeze Village|q 8892 |future
 	step //71
 		goto 43.3,70.8
 		.talk Ranger Degolien##15939
@@ -3567,9 +3579,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept Soaked Pages##9062
 	step //73
 		goto 44.3,62
-		.' Click the Soaked Tome
-		.get Antheol's Elemental Grimoire|q 9062/1
-		info It's a little black book underwater here under the bridge.
+		.collect Antheol's Elemental Grimoire##22414|q 9062/1
+		.info It's a little black book underwater here under the bridge.
 	step //74
 		goto 44.9,61
 		.talk Apprentice Meledor##15945
@@ -3583,9 +3594,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 	step //76
 		goto 44.6,53.1
 		.talk Prospector Anvilward##15420
-		..'Lure him away
-		..from Prospector Anvilward##15420
-		.get Prospector Anvilward's Head|q 8483/1
+		.' Lure him away.
+		.from Prospector Anvilward##15420
+		.get Prospector Anvilward's Head##20764|q 8483/1
 	step //77
 		goto 48.2,46
 		.talk Aeldon Sunbrand##15403
@@ -3596,7 +3607,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept The Dead Scar##8475
 	step //79
 		goto 50,52.8
-		.kill 8 Plaguebone Pillager|q 8475/1
+		.kill 8 Plaguebone Pillager##15654|q 8475/1
 	step //80
 		goto 50.3,50.8
 		.talk Ranger Jaela##15416
@@ -3613,21 +3624,20 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept Corrupted Soil##8487
 	step //83
 		goto 52.6,70.9
-		.' Click the Corrupted Soil Samples
-		.get 8 Tainted Soil Sample##20771|q 8487/1
-		info They look like green glowing piles of dirt around this area.
+		.collect 8 Tainted Soil Sample##20771|q 8487/1
+		.info They look like green glowing piles of dirt around this area.
 	step //84
 		goto 54.3,71
 		.talk Apprentice Mirveda##15402
 		..turnin Corrupted Soil##8487
-		..'Prepare to fight
+		.' Prepare to fight
 		..accept Unexpected Results##8488
 	step //85
 		goto 54.3,71
-		'Protect Apprentice Mirveda from the ambushers
-		.turnin Unexpected Results##8488
-		.accept Research Notes##9255
-		info Standing at the top of some white steps
+		.' Protect Apprentice Mirveda from the ambushers|q 8488/1
+		..turnin Unexpected Results##8488
+		..accept Research Notes##9255
+		.info Standing at the top of some white steps.
 	step //86
 		ding 9
 	step //87
@@ -3636,9 +3646,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..turnin Ranger Sareyn##9358
 		..accept Defending Fairbreeze Village##9252
 	step //88
-		goto 50.7,75.5
-		.kill 4 Rotlimb Marauder|q 9252/1
-		.kill 4 Darkwraith|q 9252/2
+		goto 50.4,83.1
+		.kill 4 Rotlimb Marauder##15658|q 9252/1
+		.kill 4 Darkwraith##15657|q 9252/2
 	step //89
 		goto 46.9,71.8
 		.talk Ranger Sareyn##15942
@@ -3654,12 +3664,12 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept The Party Never Ends##9067
 	step //92
 		goto 33.5,71.6
-		.kill 5 Wretched Thug|q 8892/1
-		.kill 5 Wretched Hooligan|q 8892/2
+		.kill 5 Wretched Thug##15645|q 8892/1
+		.kill 5 Wretched Hooligan##16162|q 8892/2
 	step //93
 		goto 40.1,66.2
 		.from Springpaw Stalker##15651
-		.get 6 Springpaw Pelt|q 8491/1
+		.get 6 Springpaw Pelt##20772|q 8491/1
 	step //94
 		goto 44.7,69.6
 		.talk Velan Brightoak##15417
@@ -3667,7 +3677,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 	step //95
 		goto 44.1,70.3
 		.talk Halis Dawnstrider##16444
-		..buy 1 Bundle of Fireworks|q 9067/3
+		.buy 1 Bundle of Fireworks##22777|q 9067/3
 	step //96
 		goto 43.3,70.8
 		.talk Ranger Degolien##15939
@@ -3675,14 +3685,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept Farstrider Retreat##9359
 	step //97
 		goto 44.9,61
-		.' Use Antheol's Disciplinary Rod on Apprentice Meledor|use Antheol's Disciplinary Rod##22473
+		.from Apprentice Meledor##15945
+		.use Antheol's Disciplinary Rod##22473
 		.' Discipline Apprentice Meledor|goal Apprentice Meledor Disciplined|q 9066/1
-		info Standing on the water bank, near the bridge
+		.info Standing on the water bank, near the bridge
 	step //98
 		goto 45.2,56.4
-		.' Use Antheol's Disciplinary Rod on Apprentice Ralen|use Antheol's Disciplinary Rod##22473
+		.from Apprentice Ralen##15941
+		.use Antheol's Disciplinary Rod##22473
 		.' Discipline Apprentice Ralen|goal Apprentice Ralen Disciplined|q 9066/2
-		info Standing next to a broken down red wagon
+		.info Standing next to a broken down red wagon
 	step //99
 		goto 55.7,54.5
 		.talk Instructor Antheol##15970
@@ -3690,7 +3702,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 	step //100
 		ding 10
 	step //101
-		'Go to Silvermoon City|goto Silvermoon City
+		.' Go to Silvermoon City|goto Silvermoon City
 		only BloodElf Warlock
 	step //102
 		goto Silvermoon City,74.4,47.1
@@ -3698,29 +3710,29 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept The Stone##9529 |noobsolete
 		only BloodElf Warlock
 	step //103
-		'Go outside to Eversong Woods|goto Eversong Woods
+		.' Go outside to Eversong Woods|goto Eversong Woods|q 9529
 		only BloodElf Warlock
 	step //104
-		'Go southwest to the Ghostlands|goto Ghostlands
+		.' Go southwest to the Ghostlands|goto Ghostlands|q 9529
 		only BloodElf Warlock
 	step //105
 		goto Ghostlands,43.8,15.6
 		.' Click a Voidstone on the ground
 		..turnin The Stone##9529
 		..accept The Rune of Summoning##9619 |noobsolete
+		.info They are blue crystals laying on the ground
 		only BloodElf Warlock
-		info They are blue crystals laying on the ground
 	step //106
 		goto 27,15.2
 		.' Go to the third top floor of this building
 		.' Use your Voidstone while standing on the pink Summoning Circle|use Voidstone##23732
-		.kill Summoned Voidwalker|q 9619/1
+		.kill Summoned Voidwalker##5676|q 9619/1
 		only BloodElf Warlock
 	step //107
-		'Go northeast to Eversong Woods|goto Eversong Woods
+		.' Go northeast to Eversong Woods|goto Eversong Woods|q 9619
 		only BloodElf Warlock
 	step //108
-		'Go northeast to Silvermoon City|goto Silvermoon City
+		.' Go northeast to Silvermoon City|goto Silvermoon City|q 9619
 		only BloodElf Warlock
 	step //109
 		goto Silvermoon City,74.4,47.1
@@ -3734,6 +3746,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		only BloodElf Hunter
 	step //111
 		goto 61.2,65.5
+		.from Crazed Dragonhawk##15650
 		.' Use your Taming Rod on a Crazed Dragonhawk around this area|use Taming Rod##23697
 		.' Tame a Crazed Dragonhawk|goal Tame a Crazed Dragonhawk|q 9484/1
 		only BloodElf Hunter
@@ -3745,6 +3758,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		only BloodElf Hunter
 	step //113
 		goto 64.7,60.9
+		.from Elder Springpaw##15652
 		.' Use your Taming Rod on an Elder Springpaw around this area|use Taming Rod##23702
 		.' Tame an Elder Springpaw|goal Tame an Elder Springpaw|q 9486/1
 		only BloodElf Hunter
@@ -3755,15 +3769,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept Taming the Beast (3)##9485
 		only BloodElf Hunter
 	step //115
-		'Go southwest to the Ghostlands|goto Ghostlands
+		.' Go southwest to the Ghostlands|goto Ghostlands|q 9485
 		only BloodElf Hunter
 	step //116
 		goto Ghostlands,51,15.2
+		.from Mistbat##16353
 		.' Use your Taming Rod on a Mistbat around this area|use Taming Rod##23703
 		.' Tame a Mistbat|goal Tame a Mistbat|q 9485/1
 		only BloodElf Hunter
 	step //117
-		'Go northwest to Eversong Woods|goto Eversong Woods
+		.' Go northwest to Eversong Woods|goto Eversong Woods|q 9485
 		only BloodElf Hunter
 	step //118
 		goto Eversong Woods,60.3,62.8
@@ -3772,22 +3787,22 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept Beast Training##9673
 		only BloodElf Hunter
 	step //119
-		'Go northwest to Silvermoon City|goto Silvermoon City
+		.' Go northwest to Silvermoon City|goto Silvermoon City|q 9673
 		only BloodElf Hunter
 	step //120
 		goto Silvermoon City,82.2,28.1
 		.talk Halthenis##16675
 		..turnin Beast Training##9673
+		.info He is the Pet Trainer.
 		only BloodElf Hunter
-		info2 He is the Pet Trainer
 	step //121
-		'Go to Silvermoon City|goto Silvermoon City
+		.' Go to Silvermoon City|goto Silvermoon City|q 9067
 	step //122
 		goto 79.5,58.5
 		.talk Vinemaster Suntouched##16442
-		..buy Suntouched Special Reserve|get 1 Suntouched Special Reserve|q 9067/1
+		.buy Suntouched Special Reserve##22775|q 9067/1
 	step //123
-		'Leave Silvermoon City|goto Eversong Woods
+		.' Leave Silvermoon City|goto Eversong Woods|q 9359
 	step //124
 		goto Eversong Woods,60.3,62.8
 		.talk Lieutenant Dawnrunner##15399
@@ -3808,27 +3823,31 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept Deactivating the Spire##8889
 		..accept Where's Wyllithen?##9394
 	step //128
-		goto 68.9,52.0 |n
-		.' Click the orb of Translocation
-		..'It will teleport you up to the building |goto 67.5,52.1,0.3 |noway |c
+		goto 68.9,52|n
+		.' Interact with gameobject: Orb of Translocation
+		.' It will teleport you up to the building|goto 67.5,52.1,0.3|noway|q 8889
 	step //129
 		goto 68.9,51.9
-		.' Click the Duskwither Spire Power Sources |tip The Power Sources are huge green floating crystals in this building.
-		..' Deactivate the First Power Source|goal First Power Source Deactivated|q 8889/1
+		.' Interact with gameobject: Duskwither Spire Power Sources
+		.info The Power Sources are huge green floating crystals in this building.
+		.' Deactivate the First Power Source|goal First Power Source Deactivated|q 8889/1
 	step //130
-		'Go upstairs to 68.9,51.9
-		.' Click the Duskwither Spire Power Source |tip The Second Power Source is on the second floor. 
+		.' Go upstairs to 68.9,51.9
+		.' Interact with gameobject: Duskwither Spire Power Source
+		.info The Second Power Source is on the second floor. 
 		.' Deactivate the Second Power Source|goal Second Power Source Deactivated|q 8889/2
 	step //131
 		goto 69.2,52.1
-		.' Click Magister Duskwither's Journal |tip Magister Duskwither's Journal is a blue book sitting on a small stoll next to the Second Power Source crystal.
+		.' Interact with gameobject: Magister Duskwither's Journal
+		.info Magister Duskwither's Journal is a blue book sitting on a small stoll next to the Second Power Source crystal.
 		..accept Abandoned Investigations##8891
 	step //132
-		'Go up the big staircase to 69.7,53.3|goto 69.7,53.3
-		.' Click the Duskwither Spire Power Source |tip It's a huge green crystal all the way at the top of this building, up a huge staircase.
+		.' Go up the big staircase to 69.7,53.3|goto 69.7,53.3
+		.' Interact with gameobject: Duskwither Spire Power Source
+		.info It's a huge green crystal all the way at the top of this building, up a huge staircase.
 		.' Deactivate the Third Power Source|goal Third Power Source Deactivated|q 8889/3
-		.' Click the Orb of Translocation
-		..'It will teleport you back down|goto 68.9,52.0,0.1|noway|c
+		.' Interact with gameobject: Orb of Translocation
+		.' It will teleport you back down|goto 68.9,52.0,0.1|noway|q 9394
 	step //133
 		goto 68.7,46.9
 		.talk Groundskeeper Wyllithen##15969
@@ -3836,8 +3855,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept Cleaning up the Grounds##8894
 	step //134
 		goto 69.5,48.1
-		.kill 6 Mana Serpent|q 8894/1
-		.kill 6 Ether Fiend|q 8894/2
+		.kill 6 Mana Serpent##15966|q 8894/1
+		.kill 6 Ether Fiend##15967|q 8894/2
 	step //135
 		goto 68.7,46.9
 		.talk Groundskeeper Wyllithen##15969
@@ -3850,7 +3869,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 	step //137
 		goto 60.4,62.5
 		.talk Zalene Firstlight##16443
-		..buy Springpaw Appetizers|get 1 Springpaw Appetizers|q 9067/2
+		.buy Springpaw Appetizers##22776|q 9067/2
 	step //138
 		goto 60.3,61.4
 		.talk Magister Duskwither##15951
@@ -3859,23 +3878,24 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 	step //139
 		ding 11
 	step //140
-		goto 68.3,71.9
-		.kill 5 Amani Berserker|q 8476/1
-		.kill 5 Amani Axe Thrower|q 8476/2
-	step //141
 		goto 70,72.3
 		.from Spearcrafter Otembe##15408
-		.get Otembe's Hammer|q 8477/1
-	step //142
+		.get Otembe's Hammer##20759|q 8477/1
+	step //141
 		goto 70.5,72.3
 		.talk Ven'jashi##15406
 		..accept Zul'Marosh##8479
+	step //142
+		goto 69.65,75.7
+		.kill 5 Amani Berserker##15643|q 8476/1
+		.kill 5 Amani Axe Thrower##15641|q 8476/2
 	step //143
 		goto 62.6,79.7
-		.from Chieftain Zul'Marosh##15407
-		.get Chieftain Zul'Marosh's Head|q 8479/1
-		.' Get the Amani Invasion Plans
-		.' Click the Amani Invasion Plans|use Amani Invasion Plans##23249
+		.kill Chieftain Zul'Marosh##15407|n
+		.get Chieftain Zul'Marosh's Head##20760|q 8479/1
+		.collect Amani Invasion Plans##23249|q 9360 |future
+	step
+		.use Amani Invasion Plans##23249
 		..accept Amani Invasion##9360
 	step //144
 		goto 70.5,72.3
@@ -3892,7 +3912,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		.talk Arathel Sunforge##15400
 		..turnin The Spearcrafter's Hammer##8477
 	step //147
-		'Hearth to Fairbreeze Village|goto 43.7,71.2,0.5|use hearthstone##6948|noway|c
+		.' Hearth to Fairbreeze Village|goto 43.7,71.2,0.5|use hearthstone##6948|noway|q 9363
 	step //148
 		goto 43.3,70.8
 		.talk Ranger Degolien##15939
@@ -3902,30 +3922,30 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		.talk Lord Saltheril##16144
 		..turnin The Party Never Ends##9067
 	step //150
-		'Go northeast to Silvermoon City|goto Silvermoon City
+		.' Go northeast to Silvermoon City|goto Silvermoon City|q 447 |future
 	step //151
 		goto Silvermoon City,49.5,14.8
-		.' Click the Orb of Translocation
-		..'It will teleport you to Undercity|goto Undercity|noway|c
-		info It's a glowing red crystal ball all the way in the back room of this big building, up a ramp
+		.' Interact with gameobject: Orb of Translocation
+		.' It will teleport you to Undercity|goto Undercity|noway|q 447 |future
+		.info It's a glowing red crystal ball all the way in the back room of this big building, up a ramp.
 	step //152
 		goto Undercity,63.2,48.6
 		.talk Michael Garrett##4551
-		..fpath Undercity
+		.fpath Undercity|q 447 |future
 	step //153
-		'Go outside of the Undercity|goto Tirisfal Glades
+		.' Go outside of the Undercity|goto Tirisfal Glades|q 447 |future
 	step //154
-		'Go southwest to Silverpine Forest|goto Silverpine Forest
+		.' Go southwest to Silverpine Forest|goto Silverpine Forest|q 447 |future
 	step //155
 		goto Silverpine Forest,45.6,42.6
 		.talk Karos Razok##2226
-		..fpath The Sepulcher
+		.fpath The Sepulcher|q 447 |future
 	step //156
 		goto 42.8,40.9
 		.talk Apothecary Renferrel##1937
 		..accept A Recipe For Death##447
 	step //157
-		'Go inside the crypt to 43.4,40.9|goto 43.4,40.9
+		goto 43.4,40.9
 		.talk High Executor Hadrec##1952
 		..accept Lost Deathstalkers##428
 		..accept The Dead Fields##437
@@ -3935,7 +3955,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept Prove Your Worth##421
 	step //159
 		goto 49.2,39.6
-		.kill 5 Moonrage Whitescalp|q 421/1
+		.kill 5 Moonrage Whitescalp##1769|q 421/1
 	step //160
 		ding 12
 	step //161
@@ -3945,21 +3965,21 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		..accept Arugal's Folly (1)##422
 	step //162
 		goto 52.82,28.46
-		.' Go inside the house and click the Dusty Spellbooks on the second floor
-		.get Remedy of Arugal##3155|q 422/1
+		.collect Remedy of Arugal##3155|q 422/1
+		.info A stack of books in the back room on the second floor.
 	step //163
 		goto 45.5,21.3
 		.' Enter the Dead Fields|goal Enter the Dead Fields|q 437/1
 		.from Nightlash##1983
-		.get Essence of Nightlash|q 437/2
+		.get Essence of Nightlash##3622|q 437/2
 	step //164
 		goto 48.3,19.4
 		.from Ferocious Grizzled Bear##1778
-		.get 6 Grizzled Bear Heart|q 447/1
+		.get 6 Grizzled Bear Heart##3253|q 447/1
 	step //165
 		goto 35.7,15
 		.from Moss Stalker##1780, Mist Creeper##1781
-		.get 6 Skittering Blood|q 447/2
+		.get 6 Skittering Blood##3254|q 447/2
 	step //166
 		goto 53.5,13.4
 		.talk Rane Yorick##1950
@@ -3968,12 +3988,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 	step //167
 		goto 57.5,15.9
 		.from Worg##1765, Mottled Worg##1766
-		.get 6 Discolored Worg Heart|q 429/1
+		.get 6 Discolored Worg Heart##3164|q 429/1
 	step //168
 		goto 56.2,9.2
 		.talk Deathstalker Erland##1978
 		..accept Escorting Erland##435
-		.' Escort Deathstalker Erland|goal Erland must reach Rane Yorick##1950|q 435/1
+		.info Get ready! This is an escort quest.
+	step //
+		goto 53.54,13.45
+		.goal Erland must reach Rane Yorick|q 435/1
 	step //169
 		goto 53.5,13.4
 		.talk Rane Yorick##1950
@@ -3983,7 +4006,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		.talk Dalar Dawnweaver##1938
 		..turnin Arugal's Folly (1)##422
 	step //171
-		'Go inside the crypt to 43.4,40.9|goto 43.4,40.9
+		goto 43.4,40.9
 		.talk High Executor Hadrec##1952
 		..turnin The Dead Fields##437
 	step //172
@@ -3991,7 +4014,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 		.talk Apothecary Renferrel##1937
 		..turnin Wild Hearts##429
 	step //173
-		'Fly to the Undercity|goto Undercity
+		goto 45.6,42.6
+		.talk Karos Razok##2226
+		.' Fly to the Undercity|goto Undercity|q 447
 	step //174
 		goto Undercity,48.8,69.3
 		.talk Master Apothecary Faranell##2055
@@ -3999,25 +4024,25 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)
 	step //175
 		ding 13
 	step //176
-		'Go outside of Undercity|goto Tirisfal Glades
+		.' Go outside of Undercity|goto Tirisfal Glades|q 840 |future
 	step //177
 		goto Tirisfal Glades,60.8,58.8|n
-		.' Ride the zeppelin to Orgrimmar|goto Durotar,50.8,13.2,1|noway|c
-		info You can ride this zeppelin to Orgrimmar or Grom'Gol Base Camp
+		.' Ride the zeppelin to Orgrimmar|goto Durotar|noway|q 840 |future
+		.info You can ride this zeppelin to Orgrimmar or Grom'Gol Base Camp.
 	step //178
-		'Go northwest to Orgrimmar|goto Orgrimmar
+		.' Go northwest to Orgrimmar|goto Orgrimmar|q 840 |future
 	step //179
 		goto Orgrimmar,45.1,63.9
 		.talk Doras##3310
-		..fpath Orgrimmar
+		.fpath Orgrimmar|q 840 |future
 	step //180
-		'Go outside of Orgrimmar|goto Durotar
+		.' Go outside of Orgrimmar|goto Durotar|q 840 |future
 	step //181
 		goto Durotar,50.8,43.6
 		.talk Takrin Pathseeker##3336
 		..accept Conscript of the Horde##840
 	step //182
-		'Go west to the Barrens|goto The Barrens
+		.' Go west to the Barrens|goto The Barrens|q 840 |future
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Death Knight (55-60)",[[
 	author support@zygorguides.com
