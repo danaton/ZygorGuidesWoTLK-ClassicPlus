@@ -244,6 +244,12 @@ ZygorGuidesViewer_L("Main", "deDE", function() return {
 	["completion_ding"] = "(%s%%)",
 	--["completion_(done)"] = "(done)",
 
+	["learn"] = "Learn",
+	
+	["fishing"] = "Fish until your skill reaches",
+	["until_skill"] = "%s",
+	["completion_fishing"] = "(%d/%d)",
+
 --[[
 	["stepgoalshort_complete"] = "done",
 	["stepgoalshort_incomplete"] = "pending",

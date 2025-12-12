@@ -417,4 +417,460 @@ startlevel 80
 			.' Get "Torch Juggler"|achieve 272
 ]])
 
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Feast of Winter Veil\\Introduction",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Feast of Winter Veil\\On Metzen!
+description Contains a guide for obtaining the "Feast of Winter Veil" achievements.
+startlevel 80
+		step
+			goto Ironforge,30.5,69.3
+			.talk Goli Krumn##1365
+			..accept The Reason for the Season##7062
+		step
+			goto Ironforge,33.6,67.67
+			.talk Macey Jinglepocket##13434
+			..accept Stolen Winter Veil Treats##7042
+		step
+			goto Ironforge,33.7,67.2
+			.talk Wulmort Jinglepocket##13433
+			..accept Greatfather Winter is Here!##7022
+			..accept Metzen the Reindeer##8762
+		step
+			.use Smokywood Satchel##21315
+			.collect Pouch of Reindeer Dust##21211|q 8762/2
+		step
+			goto Ironforge,33.2,65.4
+			.talk Greatfather Winter##13444
+			..turnin Greatfather Winter is Here!##7022
+			..accept Treats for Greatfather Winter##7025
+		step
+			goto Ironforge,33.7,67.2
+			.talk Wulmort Jinglepocket##13433
+			.buy 5 Holiday Spices##17194|q 7025
+			.buy Recipe: Gingerbread Cookie##17200|q 7025
+			.info You need a cooking skill of 1.
+			.buy Snowball##17202|achieve 1255
+		step
+			.learn Gingerbread Cookie##21143|use Recipe: Gingerbread Cookie##17200
+			.info Learn the recipe for Cooking.
+		step
+			goto Ironforge,24.2,74.7
+			.talk Auctioneer Redmuse##8720
+			.buy 5 Small Egg##6889|q 7025
+		step
+			goto Ironforge,18.6,51.8
+			.talk Gwenna Firebrew##5112
+			.buy Ice Cold Milk##1179|q 7025
+		step
+			.' Use Cooking|cast Cooking##2550
+			.collect 5 Gingerbread Cookie##17197|q 7025/1
+		step
+			goto Ironforge,20.06,53.78
+			.talk Winter Reveler##15760
+			.info Use the in-game emote "/kiss".
+			.' Gain Buff "Mistletoe"|havebuff INV_Misc_Branch_01|achieve 1686
+		step
+			goto Ironforge,33.2,65.4
+			.talk Greatfather Winter##13444
+			..turnin Treats for Greatfather Winter##7025
+		step
+			goto Ironforge,77.5,11.8
+			.talk Historian Karnik##2916
+			..turnin The Reason for the Season##7062
+			..accept The Feast of Winter Veil##7063
+		step
+			goto Ironforge,39.1,56.2
+			.talk King Magni Bronzebeard##2784
+			..turnin The Feast of Winter Veil##7063
+		step
+			goto Ironforge,39.1,56.2
+			.talk King Magni Bronzebeard##2784
+			.use Snowball##17202
+			.' Get "Scrooge" Achievement|achieve 1255
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Feast of Winter Veil\\On Metzen!",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Feast of Winter Veil\\Simply Abominable
+description Contains a guide for obtaining the "On Metzen!" achievements.
+startlevel 80
+		step
+			goto Ironforge,33.7,67.2
+			.talk Wulmort Jinglepocket##13433
+			..accept Metzen the Reindeer##8762
+		step
+			.use Smokywood Satchel##21315
+			.collect Pouch of Reindeer Dust##21211|q 8762/2
+		step
+			goto Searing Gorge,68.8,34.2
+			.kill Dark Iron Kidnapper##15692|n
+			.talk Metzen the Reindeer##15664
+			.' Find Metzen the Reindeer and rescue him|q 8762/1
+		step
+			goto Ironforge,33.7,67.2
+			.talk Wulmort Jinglepocket##13433
+			..turnin Metzen the Reindeer##8762
+		step
+			.' Get "On Metzen!" Achievement|achieve 273
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Feast of Winter Veil\\Simply Abominable",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Feast of Winter Veil\\The Winter Veil Gourmet
+description Contains a guide for obtaining the "Simply Abominable" achievements.
+startlevel 80
+		step
+			goto Ironforge,33.6,67.67
+			.talk Macey Jinglepocket##13434
+			..accept Stolen Winter Veil Treats##7042
+		step
+			goto Alterac Mountains,35.4,72.5
+			.talk Strange Snowman##13636
+			..turnin Stolen Winter Veil Treats##7042
+			..accept You're a Mean One...##7043
+		step
+			goto Alterac Mountains,36.6,70.09
+			.kill The Abominable Greench##13602|n
+			.get Stolen Treats##17662|q 7043/1
+			.' Spawn-Point (2)|at 39.7,69.18
+			.' Spawn-Point (3)|at 41.1,62.76
+			.' Spawn-Point (4)|at 46.5,63.17
+			.' Spawn-Point (5)|at 31.9,52
+			.' Spawn-Point (6)|at 29.6,63
+		step
+			goto Ironforge,33.7,67.2
+			.talk Wulmort Jinglepocket##13433
+			..turnin You're a Mean One...##7043
+			..accept A Smokywood Pastures' Thank You!##7045
+		step
+			goto Ironforge,33.2,65.4
+			.talk Greatfather Winter##13444
+			..turnin A Smokywood Pastures' Thank You!##7045
+		step
+			.' Get "Simply Abominable" Achievement|achieve 279
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Feast of Winter Veil\\The Winter Veil Gourmet",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Feast of Winter Veil\\Fa-la-la-la-Ogri'la
+description Contains a guide for obtaining the "The Winter Veil Gourmet" achievements.
+startlevel 80
+		step
+			goto Ironforge,33.7,67.2
+			.talk Wulmort Jinglepocket##13433
+			.buy Recipe: Gingerbread Cookie##17200|achieve 1688/1
+			.info You need a cooking skill of 1.
+			.buy Recipe: Egg Nog##17201|achieve 1688/2
+			.info You need a cooking skill of 35.
+			.buy Recipe: Hot Apple Cider##34413|achieve 1688/3
+			.info You need a cooking skill of 325.
+			.buy 5 Holiday Spices##17194|achieve 1688
+			.buy 2 Holiday Spirits##17196|achieve 1688/3
+		step
+			goto Ironforge,33.6,67.67
+			.talk Macey Jinglepocket##13434
+			.buy 5 Sparkling Apple Cider##34412|achieve 1688/3
+		step
+			.learn Gingerbread Cookie##21143|use Recipe: Gingerbread Cookie##17200
+			.learn Egg Nog##21144|use Recipe: Egg Nog##17201
+			.learn Hot Apple Cider##45022|use Recipe: Hot Apple Cider##34413
+			.info Learn the recipe for Cooking.
+		step
+			goto Ironforge,24.2,74.7
+			.talk Auctioneer Redmuse##8720
+			.buy 5 Small Egg##6889|achieve 1688
+		step
+			goto Ironforge,18.6,51.8
+			.talk Gwenna Firebrew##5112
+			.buy 5 Ice Cold Milk##1179|achieve 1688
+		step
+			.' Use Cooking|cast Cooking##2550
+			.collect Gingerbread Cookie##17197|achieve 1688/1
+			.collect Egg Nog##17198|achieve 1688/2
+			.collect Hot Apple Cider##34413|achieve 1688/3
+		step
+			.' Get "The Winter Veil Gourmet" Achievement|achieve 1688
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Feast of Winter Veil\\Fa-la-la-la-Ogri'la",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Feast of Winter Veil\\Bros. Before Ho Ho Ho's
+description Contains a guide for obtaining the "Fa-la-la-la-Ogri'la" achievements.
+startlevel 80
+		step
+			goto Blade's Edge Mountains,28.38,57.64
+			.talk Torkus##23316
+			..accept Our Boy Wants To Be A Skyguard Ranger##11030
+		step
+			goto Blade's Edge Mountains,28.8,57.4
+			.talk Chu'a'lor##23233
+			..accept The Crystals##11025
+		step
+			goto Blade's Edge Mountains,29.2,65.2
+			.from Apexis Flayer##22175, Shard-Hide Boar##22180
+			.info They look like groups of crystals blending in with the bigger clusters of crystals around this area.
+			.info Run your mouse cursor over the groups of crystals around this area to find them easier.
+			.collect 15 Apexis Shard##32569|q 11030
+		step
+			goto Blade's Edge Mountains,32.81,40.55
+			.' Interact with gameobject: Fel Crystalforge
+			.' Choose "Purchase 1 Unstable Flask of the Beast for the cost of 10 Apexis Shards"
+			.collect Unstable Flask of the Beast##32598|q 11030/1
+		step
+			goto Blade's Edge Mountains,28.75,57.37
+			.talk Chu'a'lor##23233
+			..turnin The Crystals##11025
+			..accept An Apexis Relic##11058
+		step
+			goto Blade's Edge Mountains,28.38,57.64
+			.talk Torkus##23316
+			..turnin Our Boy Wants To Be A Skyguard Ranger##11030
+		step
+			goto Blade's Edge Mountains,29.2,65.2
+			.from Apexis Flayer##22175, Shard-Hide Boar##22180
+			.info They look like groups of crystals blending in with the bigger clusters of crystals around this area.
+			.info Run your mouse cursor over the groups of crystals around this area to find them easier.
+			.collect 1 Apexis Shard##32569|q 11058
+		step
+			goto Blade's Edge Mountains,27.67,68.09
+			.' Interact with gameobject: Apexis Relic
+			.' Choose "Insert an Apexis Shard, and begin!"
+			.' Repeat the Color Patterns Shown
+			.info Ignore the floating crystal now, focus on the crystals on the ground.
+			.info You will be shown a color sequence.
+			.info Once the sequence is done, you have to click the stones on the ground in the same order.
+			.info It's random every time, and you'll have to repeat 6 sequences.
+			.info It helps to stand directly under the floating crystal and move your camera up so you are looking down at the top of your head.
+			.' Attain the Apexis Vibrations|q 11058/1
+			.info If you fail, you will need to collect another Apexis Shard around this area and try again.
+		step
+			goto Blade's Edge Mountains,28.75,57.37
+			.talk Chu'a'lor##23233
+			..turnin An Apexis Relic##11058
+			..accept The Skyguard Outpost##11062
+		step
+			goto Blade's Edge Mountains,27.40,52.69
+			.talk Sky Commander Keller##23334
+			..turnin The Skyguard Outpost##11062
+		step
+			goto Blade's Edge Mountains,27.57,52.90
+			.talk Sky Sergeant Vanderlip##23120
+			..accept Bombing Run##11010
+			only !Druid
+		step
+			goto Blade's Edge Mountains,27.57,52.90
+			.talk Sky Sergeant Vanderlip##23120
+			..accept Bombing Run##11102
+			only Druid
+		step
+			goto Blade's Edge Mountains,34.80,41.26
+			.use Skyguard Bombs##32456
+			.info You can use them while flying.
+			.info Use them on Fel Cannonballs Stacks.
+			.info They look like piles of gray stones on the ground next to Legion Flak Cannons around this area.
+			.' Destroy 15 Fel Cannonball Stacks|q 11010/1
+			only !Druid
+		step
+			goto Blade's Edge Mountains,34.80,41.26
+			.use Skyguard Bombs##32456
+			.info You can use them while flying.
+			.info Use them on Fel Cannonballs Stacks.
+			.info They look like piles of gray stones on the ground next to Legion Flak Cannons around this area.
+			.' Destroy 15 Fel Cannonball Stacks|q 11102/1
+			only Druid
+		step
+			goto Blade's Edge Mountains,27.57,52.90
+			.talk Sky Sergeant Vanderlip##23120
+			..turnin Bombing Run##11010
+			only !Druid
+		step
+			goto Blade's Edge Mountains,27.57,52.90
+			.talk Sky Sergeant Vanderlip##23120
+			..turnin Bombing Run##11102
+			only Druid
+		step
+			goto Blade's Edge Mountains,27.57,52.90
+			.talk Sky Sergeant Vanderlip##23120
+			..accept Bomb Them Again!##11023 |daily
+		step
+			.' Use your fly-mount.
+			.use Fresh Holly##21212
+			.' Transforms your mount into something more festive|havebuff INV_Misc_Branch_01|q 11023
+		step
+			goto Blade's Edge Mountains,34.80,41.26
+			.use Skyguard Bombs##32456
+			.info You can use them while flying.
+			.info Use them on Fel Cannonballs Stacks.
+			.info They look like piles of gray stones on the ground next to Legion Flak Cannons around this area.
+			.' Destroy 15 Fel Cannonball Stacks|q 11023/1
+		step
+			goto Blade's Edge Mountains,27.57,52.90
+			.talk Sky Sergeant Vanderlip##23120
+			..turnin Bomb Them Again!##11023
+		step
+			.' Get "Fa-la-la-la-Ogri'la" Achievement|achieve 1282
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Feast of Winter Veil\\Bros. Before Ho Ho Ho's",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Feast of Winter Veil\\Let It Snow
+description Contains a guide for obtaining the "Bros. Before Ho Ho Ho's" achievements.
+startlevel 80
+		step
+			goto Stormwind City,60.23,75.17
+			.talk Winter Reveler##15760
+			.info Use the in-game emote "/kiss".
+			.' Gain Buff "Mistletoe"|havebuff INV_Misc_Branch_01|achieve 1686
+			.info You can only interact with them once per hour.
+			.collect 9 Mistletoe##21519|achieve 1686
+		step
+			goto Elwynn Forest,41.1,66
+			.talk Brother Wilhelm##927
+			.use Mistletoe##21519
+			.' Touch the Brother Wilhelm under the mistletoe|achieve 1686/3
+		step
+			goto Stormwind City,55,54.2
+			.talk Brother Kristoff##1444
+			.use Mistletoe##21519
+			.' Touch the Brother Kristoff under the mistletoe|achieve 1686/5
+		step
+			goto Stormwind City,53.2,45.2
+			.talk Brother Cassius##1351
+			.use Mistletoe##21519
+			.' Touch the Brother Cassius under the mistletoe|achieve 1686/8
+		step
+			goto Stormwind City,51.55,46.3
+			.talk Brother Benjamin##5484
+			.use Mistletoe##21519
+			.' Touch the Brother Benjamin under the mistletoe|achieve 1686/9
+		step
+			goto Stormwind City,52.6,43.4
+			.talk Brother Crowley##12336
+			.use Mistletoe##21519
+			.' Touch the Brother Crowley under the mistletoe|achieve 1686/7
+		step
+			goto Stormwind City,49.5,45.2
+			.talk Brother Joshua##5489
+			.use Mistletoe##21519
+			.' Touch the Brother Joshua under the mistletoe|achieve 1686/6
+		step
+			goto Stranglethorn Vale,37.8,3.6
+			.talk Brother Nimetz##739
+			.use Mistletoe##21519
+			.' Touch the Brother Nimetz under the mistletoe|achieve 1686/1
+		step
+			goto Dustwallow Marsh,67.4,47.4
+			.talk Brother Karman##8140
+			.use Mistletoe##21519
+			.' Touch the Brother Karman under the mistletoe|achieve 1686/4
+		step
+			goto Desolace,66.5,7.9
+			.talk Brother Anton##1182
+			.use Mistletoe##21519
+			.' Touch the Brother Anton under the mistletoe|achieve 1686/2
+		step
+			.' Get "Bros. Before Ho Ho Ho's" Achievement|achieve 1686
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Feast of Winter Veil\\Let It Snow",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Feast of Winter Veil\\With a Little Helper from My Friends 
+description Contains a guide for obtaining the "Let It Snow" achievements.
+startlevel 80
+		step
+			goto Stormwind City,60.23,75.17
+			.talk Winter Reveler##15760
+			.info Use the in-game emote "/kiss".
+			.' Gain Buff "Mistletoe"|havebuff INV_Misc_Branch_01|achieve 1686
+			.info You can only interact with them once per hour.
+			.collect 10 Handful of Snowflakes##34191|achieve 1687
+		step
+			goto Dalaran
+			.use Handful of Snowflakes##34191
+			.' Throw a handful of snowflakes into Human Warrior|achieve 1687/2
+			.' Throw a handful of snowflakes into Dwarf Paladin|achieve 1687/8
+			.' Throw a handful of snowflakes into Gnome Mage|achieve 1687/7
+			.' Throw a handful of snowflakes into Night Elf Druid|achieve 1687/4
+			.' Throw a handful of snowflakes into Draenei Priest|achieve 1687/10
+			.' Throw a handful of snowflakes into Orc Death Knight|achieve 1687/1
+			.' Throw a handful of snowflakes into Undead Rogue|achieve 1687/5
+			.' Throw a handful of snowflakes into Tauren Shaman|achieve 1687/3
+			.' Throw a handful of snowflakes into Troll Hunter|achieve 1687/6
+			.' Throw a handful of snowflakes into Blood Elf Warlock|achieve 1687/9
+		step
+			.' Get "Let It Snow" Achievement|achieve 1687
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Feast of Winter Veil\\With a Little Helper from My Friends",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Feast of Winter Veil\\Tis the Season
+description Contains a guide for obtaining the "With a Little Helper from My Friends" achievements.
+startlevel 80
+		step
+			goto Stormwind City,68.06,71.4
+			.' Gain Buff: "PX-238 Winter Wondervolt"|havebuff Spell_Frost_FrostShock|achieve 252
+			.info Use the PvP system to find a random battleground. You need to earn honorable victories on the battleground in Winter Wondervolt form to make progress in the achievement.
+			.' Get "With a Little Helper from My Friends" Achievement|achieve 252/1
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Feast of Winter Veil\\Tis the Season",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Feast of Winter Veil\\A Frosty Shake
+description Contains a guide for obtaining the "Tis the Season" achievements.
+startlevel 80
+		step
+			goto Stormwind City,61.2,70.7
+			.talk Auctioneer Jaxon##15659
+			.buy Red Winter Clothes##34085|achieve 277
+			.buy Winter Boots##34086|achieve 277
+		step
+			goto Borean Tundra,27.5,26.05
+			.kill Grand Magus Telestra##26731|n
+			.info This is the first boss of the dungeon Nexus.
+			.collect Red Winter Hat##21524|achieve 277
+			.info It can be obtained both on normal and heroic difficulty. If you are well-equipped, you can try to obtain it solo on normal difficulty.
+		step
+			goto Dalaran
+			.info After you treat Greatfather Winter, he will send you a parcel in the mail the next day. What we need is in that parcel.
+			.collect Graccu's Mince Meat Fruitcake##21215|achieve 277
+		step
+			.' Equip Red Winter Hat|use Red Winter Hat##21524|achieve 277
+			.' Equip Red Winter Clothes|use Red Winter Clothes##34085|achieve 277
+			.' Equip Winter Boots|use Winter Boots##34086|achieve 277
+			.' Eat Graccu's Mince Meat Fruitcake|use Graccu's Mince Meat Fruitcake##21215|achieve 277
+		step
+			.' Get "Tis the Season" Achievement|achieve 277
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Feast of Winter Veil\\A Frosty Shake",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Feast of Winter Veil\\He Knows If You've Been Naughty
+description Contains a guide for obtaining the "A Frosty Shake" achievements.
+startlevel 80
+		step
+			goto Ironforge,33.7,67.2
+			.talk Wulmort Jinglepocket##13433
+			.buy Snowball##17202|achieve 1690
+		step
+			goto Dalaran
+			.info After you treat Greatfather Winter, he will send you a parcel in the mail the next day. What we need is in that parcel.
+			.collect Winter Veil Disguise Kit##17712|achieve 1690
+		step
+			goto Dalaran
+			.info To earn this achievement, you will need another player who also has item "Winter Veil Disguise Kit". 
+			.info Using the "Winter Veil Disguise Kit" transform into snowmen strictly in Dalaran and use the in-game "/dance" emote.
+			.' Get "A Frosty Shake" Achievement|achieve 1690
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Feast of Winter Veil\\He Knows If You've Been Naughty",[[
+author danaton
+description Contains a guide for obtaining the "He Knows If You've Been Naughty" achievements.
+startlevel 80
+		step
+			goto Ironforge,33.53,65.93
+			.' Interact with gameobject: Gaily Wrapped Present
+			.info The gift will appear under the Christmas tree on December 25th and will remain there until the end of the holiday. It is not possible to open it and receive the achievement before this time.
+			.' Get "He Knows If You've Been Naughty" Achievement|achieve 1689	
+]])
+
 ZygorGuidesViewer.AllianceInstalled=true

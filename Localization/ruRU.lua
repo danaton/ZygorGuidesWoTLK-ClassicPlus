@@ -93,7 +93,13 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	["waypointaddon_connecting"] = "Connecting to waypointing addon: %s",
 	["waypointaddon_connected"] = "Successfully connected to %s.",
 	["waypointaddon_fail"] = "Failed to connect to %s.",
-	['waypoint_step'] = "Этап %s",
+	["waypoint_step"] = "Этап %s",
+	
+	["pointer_corpselabel1"] = "Ex you",
+	["pointer_corpselabel2"] = "He who learns to run away...",
+	["pointer_corpselabel3"] = "Bitten off more than you could chew, eh.",
+	["pointer_corpselabel4"] = "Bucket Kicker - this way",
+	["pointer_corpselabel5"] = "Try not to think about the repair bill.",
 
 	["checkmap"] = "Check your map.",
 
@@ -175,6 +181,12 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	--["completion_(done)"] = "(done)",
 
 	['quest_part'] = " (часть %s)",
+	
+	["learn"] = "Изучите",
+	
+	["fishing"] = "Рыбачьте пока ваш навык не будет",
+	["until_skill"] = "%s",
+	["completion_fishing"] = "(%d/%d)",
 
 --[[
 	["stepgoalshort_complete"] = "done",
