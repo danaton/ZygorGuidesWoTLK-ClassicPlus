@@ -30,7 +30,7 @@ function Step:IsComplete()
 
 	local status
 	for i,goal in ipairs(self.goals) do
-		goal:UpdateStatus()
+		goal.status = goal:GetStatus()
 		status = goal.status
 		if status~="hidden" then
 			if goal.orlogic then

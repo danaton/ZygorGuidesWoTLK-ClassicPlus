@@ -35,6 +35,10 @@ local SKINDIR = ""
 
 ZYGORGUIDESVIEWER_COMMAND = "zygor"
 
+-- Add new command constants near existing ones
+ZYGORGUIDESVIEWER_RECIPES_COMMAND = "zygorrecipes"
+ZYGORGUIDESVIEWER_CHECKRECIPE_COMMAND = "zrecipe"
+
 ZYGORGUIDESVIEWERFRAME_TITLE = "ZygorGuidesViewer"
 
 BINDING_HEADER_ZYGORGUIDES = L["name_plain"]
@@ -42,9 +46,9 @@ BINDING_NAME_ZYGORGUIDES_OPENGUIDE = L["binding_togglewindow"]
 BINDING_NAME_ZYGORGUIDES_PREV = L["binding_prev"]
 BINDING_NAME_ZYGORGUIDES_NEXT = L["binding_next"]
 
-local ver = select(4,GetBuildInfo())
-ZGV.WotLK = (ver>=30000)
-ZGV.Cata = (ver>=40000)
+local _,_,_,ver = GetBuildInfo()
+local WotLK = (ver>=30000)
+
 
 local BZ = LibStub("LibBabble-Zone-3.0")
 local BZL = BZ:GetUnstrictLookupTable()
@@ -93,11 +97,6 @@ ZGV.MIN_STEP_HEIGHT=15
 local FONT = STANDARD_TEXT_FONT
 --ZGV.BUTTONS_INLINE=true
 
-
-local math_modf=math.modf
-math.round=function(n) local x,y=math_modf(n) return n>0 and (y>=0.5 and x+1 or x) or (y<=-0.5 and x-1 or x) end
-local round=math.round
-
 function me:OnInitialize() 
 
 --	if not ZygorGuidesViewerMiniFrame then error("Zygor Guide Viewer step frame not loaded.") end
@@ -133,7 +132,15 @@ function me:OnInitialize()
 		self.db.char.maint_fetchitemdata = true
 	end
 
+	if self.RecipeTracker then
+		self.RecipeTracker:Initialize()
+	end
+	
 	self.db.char.completedQuests=nil --wipe and flush
+	
+    -- Initialize recipe tracking structures
+    self.db.char.RecipesKnown = self.db.char.RecipesKnown or {}
+    self.recentlyLearnedRecipes = self.recentlyLearnedRecipes or {}
 
 	self.CurrentStepNum = self.db.char.step
 	self.CurrentGuideName = self.db.char.guidename
@@ -180,6 +187,10 @@ function me:OnInitialize()
 
 	self:Options_SetupConfig()
 	self:Options_SetupBlizConfig()
+	
+    -- Register recipe commands
+    self:RegisterChatCommand(ZYGORGUIDESVIEWER_RECIPES_COMMAND, "RecipeCommand")
+    self:RegisterChatCommand(ZYGORGUIDESVIEWER_CHECKRECIPE_COMMAND, "CheckRecipeCommand")
 
 --	self:Echo(L["initialized"])
 	self:Debug ("Initialized.")
@@ -226,6 +237,60 @@ function me:OnEnable()
 	self:AddEvent("SPELL_UPDATE_COOLDOWN")
 
 	self:AddEvent("PLAYER_CONTROL_GAINED")  -- try to force current zone updates; should prevent GoTo lines from locking up after a taxi flight
+	
+	-- Add skill change event for fishing tracking
+self:AddEvent("SKILL_LINES_CHANGED", function()
+    self:Debug("SKILL_LINES_CHANGED triggered - forcing skill cache update")
+    self:CacheSkills()
+    
+    if self.CurrentStep then
+        local hasFishing = false
+        for _, goal in ipairs(self.CurrentStep.goals) do
+            if goal.action == "fishing" then
+                hasFishing = true
+                break
+            end
+        end
+        
+        if hasFishing then
+            self:Debug("Current step has fishing goal, forcing update")
+            self:TryToCompleteStep(true)
+            self:UpdateFrame(true)
+        end
+    end
+end)
+	
+	    -- Automatic recipe tracking
+    self:AddEvent("CHAT_MSG_SKILL", function(event, message)
+        -- Check for recipe learning messages
+        if message and (message:find("has learned") or message:find("изучает")) then
+            self:Print("Recipe learned! Scanning...")
+            -- Small delay to let the game update profession data
+            self:ScheduleTimer(function()
+                if GetTradeSkillLine() ~= "" then
+                    -- Profession window is open, scan it
+                    if self.RecipeTracker and self.RecipeTracker.ScanProfession then
+                        self.RecipeTracker:ScanProfession()
+                    elseif self.SimpleRecipeScan then
+                        self:SimpleRecipeScan()
+                    end
+                end
+            end, 1)
+        end
+    end)
+    
+    self:AddEvent("TRADE_SKILL_SHOW", function()
+        -- Scan when profession window opens
+        self:ScheduleTimer(function()
+            if self.RecipeTracker and self.RecipeTracker.ScanProfession then
+                self.RecipeTracker:ScanProfession()
+            elseif self.SimpleRecipeScan then
+                self:SimpleRecipeScan()
+            end
+        end, 0.5)
+    end)
+    
+    self:Print("Automatic recipe tracking enabled")
 
 	--self.startuptimer = self:ScheduleRepeatingTimer("StartupTimer", 0.1)
 
@@ -247,6 +312,24 @@ function me:OnEnable()
 	--self:QueryQuests()
 
 	if ZGV_DEV then ZGV_DEV() end
+	
+	-- Add periodic fishing skill check
+	self.fishingCheckTimer = self:ScheduleRepeatingTimer(function()
+		if not self.CurrentStep then return end
+		
+		local hasFishing = false
+		for _, goal in ipairs(self.CurrentStep.goals) do
+			if goal.action == "fishing" then
+				hasFishing = true
+				break
+			end
+		end
+		
+		if hasFishing then
+			-- Force a check every 5 seconds when fishing goal is active
+			self:TryToCompleteStep(true)
+		end
+	end, 5)
 end
 
 function me:OnDisable()
@@ -283,7 +366,113 @@ function me:EventHandler(event,...)
 	end
 end
 
+-- Helper function to get skill level for fishing
+	function me:GetSkillLevel(skillName)
+    if string.lower(skillName) == "fishing" then
+        -- Special handling for fishing
+        local level = self:GetFishingSkillDirectly()
+        self:Debug("GetFishingSkillDirectly: " .. level)
+        return level
+    end
+    
+    -- Force scan skills
+    self:CacheSkills()
+    
+    -- For WoW 3.3.5, use GetSkillLineInfo API to scan all skill lines
+    local foundLevel = 0
+    for i = 1, GetNumSkillLines() do
+        local name, header, _, skillRank = GetSkillLineInfo(i)
+        if not header and name and string.lower(name) == string.lower(skillName) then
+            self:Debug("GetSkillLineInfo found: " .. name .. " = " .. skillRank)
+            foundLevel = skillRank
+        end
+    end
+    
+    if foundLevel == 0 then
+        -- Try alternative method - scan through skills cache
+        if self.skills and self.skills[skillName] then
+            foundLevel = self.skills[skillName].level or 0
+            self:Debug("GetSkillLevel from cache: " .. foundLevel)
+        else
+            self:Debug("GetSkillLevel(" .. skillName .. ") not found anywhere")
+        end
+    end
+    
+    return foundLevel
+end
 
+-- Add a function to force cache skills
+function me:CacheSkills()
+    self:Debug("Caching skills...")
+    
+    if not self.skills then
+        self.skills = {}
+    end
+    
+    -- Clear existing fishing skill
+    self.skills["Fishing"] = nil
+    
+    for i = 1, GetNumSkillLines() do
+        local name, header, _, skillRank, _, _, skillMaxRank = GetSkillLineInfo(i)
+        if not header and name then 
+            self.skills[name] = self.skills[name] or {}
+            self.skills[name].level = skillRank
+            self.skills[name].max = skillMaxRank
+            self.skills[name].active = true
+            
+            if name == "Fishing" then
+                self:Debug("Cached Fishing: " .. skillRank .. "/" .. skillMaxRank)
+            end
+        end
+    end
+end
+
+-- Event handler for skill changes
+function me:UpdateSkills()
+    -- Force update of current step when skills change (for fishing tracking)
+    if self.CurrentStep then
+        self:Debug("Skills updated, forcing step refresh")
+        self:TryToCompleteStep(true)
+        self:UpdateFrame(true)  -- Force full update
+    end
+    
+    -- Also update all fishing goals specifically
+    if self.CurrentStep and self.CurrentStep.goals then
+        for _, goal in ipairs(self.CurrentStep.goals) do
+            if goal.action == "fishing" then
+                -- Clear completion cache for fishing goals
+                ZGV.recentlyCompletedGoals[goal] = nil
+                ZGV.recentGoalProgress[goal] = nil
+            end
+        end
+    end
+end
+
+-- Alternative method to get fishing skill
+function me:GetFishingSkillDirectly()
+    -- Method 1: Scan all skill lines
+    for i = 1, GetNumSkillLines() do
+        local name, header, _, skillRank = GetSkillLineInfo(i)
+        if name and not header and (name:find("Fishing") or name:find("Рыбная ловля") or name:find("Angeln") or name:find("Pêche")) then
+            return skillRank
+        end
+    end
+    
+    -- Method 2: Check through profession API
+    local prof1, prof2 = GetProfessions()
+    
+    local function CheckProfession(index)
+        if index then
+            local name, _, _, _, _, _, skillRank = GetProfessionInfo(index)
+            if name and (name:find("Fishing") or name:find("Рыбная ловля")) then
+                return skillRank
+            end
+        end
+        return 0
+    end
+    
+    return CheckProfession(prof1) or CheckProfession(prof2) or 0
+end
 
 function me:OnFirstQuestLogUpdate()
 	if not self.guidesloaded then return end -- let the OnGuidesLoaded func call us.
@@ -790,27 +979,6 @@ function me:SetDisplayMode(mode)
 	self:UpdateFrame(true)
 end
 
-local Tpi=6.2832
-local cardinals = {"N","NW","W","SW","S","SE","E","NE","N"}
-local function GetCardinalDirName(angle)
-	for i=1,9 do
-		if Tpi*((i*2)-1)/16>angle then return cardinals[i] end
-	end
-end
-function GetCardinalDirNum(angle)
-	while angle<0 do angle=angle+Tpi end
-	while angle>Tpi do angle=angle-Tpi end
-	local ret=1
-	for i=1,16 do
-		if Tpi*((i*2)-1)/32>angle then ret=i break end
-	end
-	return ret
-end
-
-local itemsources={"vendor","drop","ore","herb","skin"}
-
-local gold_ox,gold_oy=0,0
-
 function me:UpdateFrame(full,onupdate)
 	if full then self.stepchanged=true end
 
@@ -838,6 +1006,7 @@ function me:UpdateFrame(full,onupdate)
 		ZygorGuidesViewerFrame_MissingText:SetText(L['miniframe_loading']:format((self.loadprogress or 0)*100))
 
 	elseif self.db.profile.displaymode=="guide" then
+	
 		if self.CurrentGuide and self.CurrentGuide.steps then
 
 			-- hide spot frames, if visible
@@ -874,6 +1043,7 @@ function me:UpdateFrame(full,onupdate)
 			if firststep<1 then firststep=1 end
 			local laststep = self.db.profile.showallsteps and #self.CurrentGuide.steps or self.CurrentStepNum+self.db.profile.showcountsteps-1
 
+			--self:Debug("first step "..firststep..", last step "..last
 			--self:Debug("first step "..firststep..", last step "..laststep)
 			-- run through buttons and assign steps for them
 
@@ -939,7 +1109,7 @@ function me:UpdateFrame(full,onupdate)
 						frame.lines[line].label:SetText((numbertext or "")..(leveltext or "")..(reqtext or ""))
 						--frame.lines[line].label:SetMultilineIndent(1)
 						frame.lines[line].goal = nil
-						frame.lines[line].label:SetFont(FONT,round(self.db.profile.fontsecsize))
+						frame.lines[line].label:SetFont(FONT,math.round(self.db.profile.fontsecsize))
 						line=line+1
 					else
 						frame.lines[line].label:SetPoint("TOPLEFT",ZGV.ICON_INDENT,0)
@@ -959,7 +1129,7 @@ function me:UpdateFrame(full,onupdate)
 								local goaltxt = goal:GetText(true)
 								if goaltxt~="?" or (goal.action=="info") then
 									if goal.action=="info" then
-										frame.lines[line].label:SetFont(FONT,round(self.db.profile.fontsecsize))
+										frame.lines[line].label:SetFont(FONT,math.round(self.db.profile.fontsecsize))
 										frame.lines[line].label:SetText(indent.."|cffeeeecc"..goal.info.."|r")
 										frame.lines[line].goal = nil
 									else
@@ -973,7 +1143,7 @@ function me:UpdateFrame(full,onupdate)
 									--frame.lines[line].label:SetMultilineIndent(1)
 
 									if self.db.profile.tooltipsbelow and goal.tooltip then
-										frame.lines[line].label:SetFont(FONT,round(self.db.profile.fontsecsize))
+										frame.lines[line].label:SetFont(FONT,math.round(self.db.profile.fontsecsize))
 										frame.lines[line].label:SetText(indent.."|cffeeeecc"..goal.tooltip.."|r")
 										--frame.lines[line].label:SetMultilineIndent(1)
 										frame.lines[line].goal = nil
@@ -985,7 +1155,7 @@ function me:UpdateFrame(full,onupdate)
 								-- not anymore
 								--[[
 								if goal.orlogic and i<#stepdata.goals and stepdata.goals[i+1].orlogic then
-									frame.lines[line].label:SetFont(FONT,round(self.db.profile.fontsecsize))
+									frame.lines[line].label:SetFont(FONT,math.round(self.db.profile.fontsecsize))
 									frame.lines[line].label:SetText(indent.."|cffeeeecc"..L['stepgoal_or'].."|r")
 									--frame.lines[line].label:SetMultilineIndent(1)
 									frame.lines[line].goal = nil
@@ -1236,14 +1406,6 @@ function me:UpdateFrame(full,onupdate)
 
 	elseif self.db.profile.displaymode=="gold" then
 
-		local x,y = GetPlayerMapPosition("player")
-		local d = GetPlayerFacing()
-		if x==gold_ox and y==gold_oy and d==gold_od and not full then return end
-		gold_ox,gold_oy,gold_od = x,y,d
-
-		-- get rid of tooltips, before they get messed up
-		if ZGV.hasTooltipOverSpotLink then GameTooltip:Hide() ZGV.hasTooltipOverSpotLink=nil end
-
 		-- hide step frames, if visible
 		if self.stepframes[1]:IsVisible() then for i,stepframe in ipairs(self.stepframes) do stepframe:Hide() end end
 
@@ -1292,7 +1454,6 @@ function me:UpdateFrame(full,onupdate)
 		for spotbuttonnum = 1,self.StepLimit do repeat
 			--frame = _G['ZygorGuidesViewerFrame_Step'..stepbuttonnum]
 			frame = self.spotframes[spotbuttonnum]
-			assert(frame,"Out of spot frames at "..spotbuttonnum)
 			
 			spotnum = firstspot + spotbuttonnum - 1
 			
@@ -1333,106 +1494,39 @@ function me:UpdateFrame(full,onupdate)
 
 				local line=1
 
-				assert(frame.lines[line],"Out of lines ("..line..") in spot frame "..spotbuttonnum)
-
-				frame.lines[line].label:SetFont(FONT,round(self.db.profile.fontsize))
-				
-				-- cardinal names
-				--frame.lines[line].label:SetText(("|cffffbb00%s|r (%s %s)"):format(spotdata.title or "?",ZGV.FormatDistance(spotdata.waypoint.minimapFrame.dist),GetCardinalDirName(Astrolabe:GetDirectionToIcon(spotdata.waypoint.minimapFrame))))
-
-				-- icons
-				local dirnum=GetCardinalDirNum(-Astrolabe:GetDirectionToIcon(spotdata.waypoint.minimapFrame) + GetPlayerFacing())-1 --:30:30:0:0:32:32:0:0:0:0
-				local dirnum2=dirnum>8 and 16-dirnum or dirnum
-				local arrow = ("|Tinterface\\addons\\ZygorGuidesViewer\\skin\\arrow-mini-multi:20:20:0:0:32:512:%d:%d:%d:%d|t"):format(dirnum>8 and 32 or 0,dirnum>8 and 0 or 32,dirnum2*32,(dirnum2+1)*32)
-				frame.lines[line].label:SetText(("%s |cffffbb00%s|r (%s)"):format(arrow, spotdata.title or "?",ZGV.FormatDistance(spotdata.waypoint.minimapFrame.dist)))
-				
+				frame.lines[line].label:SetFont(FONT,math.round(self.db.profile.fontsize))
+				frame.lines[line].label:SetText(("|cffffbb00%s|r"):format(spotdata.title))
 				line=line+1
 
-				--[[
-				frame.lines[line].label:SetFont(FONT,round(self.db.profile.fontsize))
+				frame.lines[line].label:SetFont(FONT,math.round(self.db.profile.fontsize))
 				frame.lines[line].label:SetText(("|cffffff00%s %s,%s|r"):format(spotdata.map,spotdata.x,spotdata.y))
 				line=line+1
-				--]]
 
 				if (spotdata.desc) then
-					frame.lines[line].label:SetFont(FONT,round(self.db.profile.fontsize))
+					frame.lines[line].label:SetFont(FONT,math.round(self.db.profile.fontsize))
 					frame.lines[line].label:SetText(("%s"):format(spotdata.desc))
 					line=line+1
 				end
 
-
 				if spotdata.objects then
-					for s,source in ipairs(itemsources) do
-						local objs = spotdata:GetObjectsOfType(source,true)
-						if objs then
-							local mobs = source=="drop" and spotdata.mobs
-							local mobtext
-							if mobs then
-								mobtext = ""
-								for i,mob in ipairs(spotdata.mobs) do
-									if #mobtext>0 then mobtext = mobtext .. ", " end
-									mobtext = mobtext .. mob.name
-								end
-							elseif spotdata.vendorid then
-								mobtext = spotdata.vendor
-							end
-							
-							--[[
-							-- all in one line; tidy but impractical
-							local header = L['gold_header_'..source]:format(mobtext or "mob")
-							local str=""
-							for o,obj in ipairs(objs) do
-								if not obj.hidden then
-									if obj.item.id then
-										str = str .. "|Hitem:"..obj.item.id.."|h"..(obj.icon or "item").."|h "
-									else
-										str = str .. " ["..obj.item.name.."]"
-									end
-								end
-							end
-
-							if #str>0 then
-								frame.lines[line].label:SetFont(FONT,round(self.db.profile.fontsize))
-								--frame.lines[line].label:SetText("<html><body><p>"..("|cffdddd66%s |r%s"):format(header,str).."</p></body></html>")
-								frame.lines[line].label:SetText(("|cffdddd66%s |r%s"):format(header,str))
-								line=line+1
-							end
-							--]]
-
-							local goodobjs = {}
-							for o,obj in ipairs(objs) do
-								if not obj.hidden then
-									tinsert(goodobjs,obj)
-								end
-							end
-
-							if #goodobjs then
-								frame.lines[line].label:SetFont(FONT,round(self.db.profile.fontsize))
-								--frame.lines[line].label:SetText("<html><body><p>"..("|cffdddd66%s |r%s"):format(header,str).."</p></body></html>")
-								frame.lines[line].label:SetText(("|cffdddd66%s|r"):format(L['gold_header_'..source]:format(mobtext or "mob")))
-								line=line+1
-
-								for o,obj in ipairs(goodobjs) do
-									local str
-									if obj.item.id then
-										str = "|Hitem:"..obj.item.id.."|h"..(obj.icon or "item").." "..(obj.string or "?").."|h "
-									else
-										str = obj.item.name
-									end
-
-									if obj.toohard then str = "|cffff0000"..str.."|r" end
-
-									frame.lines[line].label:SetFont(FONT,round(self.db.profile.fontsize*1.0))
-									frame.lines[line].label:SetText(str)
-									frame.lines[line].label:SetHyperlinksEnabled(false)
-									frame.lines[line].label.reenableHyperlinks=true
-									line=line+1
-
-								end
+					local str=""
+					for i,obj in ipairs(spotdata.objects) do
+						if not obj.hidden then
+							if #str>0 then str=str..", " end
+							if obj.toohard then
+								str = str .. ("|cffff0000%s|r"):format(obj.string)
+							else
+								str = str .. ("|cff00ff00%s|r"):format(obj.string)
 							end
 						end
 					end
+					if #str>0 then
+						frame.lines[line].label:SetFont(FONT,math.round(self.db.profile.fontsecsize))
+						frame.lines[line].label:SetText(str)
+						line=line+1
+					end
 				end
+
 
 				local TMP_TRUNCATE = true
 				local heightleft = 400
@@ -1467,12 +1561,7 @@ function me:UpdateFrame(full,onupdate)
 					local text = lineframe.label
 					if l<line and not frame.truncated then
 						text:SetWidth(frame:GetWidth()-ICON_INDENT-2*ZGV.STEPMARGIN_X)
-						
-						-- old non-HTML stuff
-						--textheight = text:GetHeight()
-						textheight = text:GetRegions():GetHeight()
-						text:SetHeight(textheight)
-
+						textheight = text:GetHeight()
 						height = height + (height>0 and STEP_LINE_SPACING or 0) + textheight
 						--text:SetWidth(ZygorGuidesViewerFrameScroll:GetWidth()-30)
 
@@ -3195,6 +3284,217 @@ function me:OnGuidesLoaded()
 	self:OnFirstQuestLogUpdate()
 end
 
+-- Recipe management commands implementation
+function ZygorGuidesViewer:RecipeCommand(input)
+    local cmd = input and input:trim():lower() or ""
+    
+    -- Debug: Show what we found
+    self:Debug("RecipeCommand called: cmd='" .. cmd .. "'")
+    self:Debug("self.RecipeTracker exists: " .. tostring(not not self.RecipeTracker))
+    
+    if cmd == "" or cmd == "scan" then
+        -- Method 1: Try RecipeTracker first
+        if self.RecipeTracker and type(self.RecipeTracker.ScanProfession) == "function" then
+            self:Print("Using RecipeTracker...")
+            return self.RecipeTracker:ScanProfession()
+        
+        -- Method 2: Try direct scan function
+        elseif self.ScanRecipes and type(self.ScanRecipes) == "function" then
+            self:Print("Using ScanRecipes...")
+            return self:ScanRecipes()
+        
+        -- Method 3: Try Professions module
+        elseif self.Professions and type(self.Professions.CheckRecipesLearned) == "function" then
+            self:Print("Using Professions.CheckRecipesLearned...")
+            return self.Professions:CheckRecipesLearned()
+        
+        -- Method 4: Simple inline scan
+        else
+            self:Print("Scanning profession (simple method)...")
+            return self:SimpleRecipeScan()
+        end
+        
+    elseif cmd == "list" then
+        self:ListRecipes()
+        
+    elseif cmd == "count" then
+        self:CountRecipes()
+        
+    elseif cmd:match("^check ") then
+        local search = cmd:match("^check (.+)$")
+        if search then
+            self:CheckRecipe(search)
+        end
+        
+    elseif cmd == "clear" then
+        self.db.char.RecipesKnown = {}
+        self:Print("All recipes cleared.")
+        
+    elseif cmd == "debug" then
+        self:DebugRecipeTracker()
+        
+    else
+        self:ShowRecipeHelp()
+    end
+end
+
+-- Helper function for simple scanning
+function ZygorGuidesViewer:SimpleRecipeScan()
+    if not self.db.char.RecipesKnown then
+        self.db.char.RecipesKnown = {}
+    end
+    
+    local profession = GetTradeSkillLine()
+    if not profession or profession == "" then
+        self:Print("Open a profession window first!")
+        self:Print("|cffff0000Error: |rNo profession window detected.")
+        return false
+    end
+    
+    self:Print("Scanning " .. profession .. "...")
+    local countBefore = self:CountRecipes(true) -- silent count
+    
+    for i = 1, GetNumTradeSkills() do
+        local skillName, skillType = GetTradeSkillInfo(i)
+        if skillName and skillType ~= "header" and skillType ~= "subheader" then
+            local link = GetTradeSkillItemLink(i)
+            if link then
+                local itemId = link:match("item:(%d+)")
+                if itemId then
+                    itemId = tonumber(itemId)
+                    if not self.db.char.RecipesKnown[itemId] then
+                        self.db.char.RecipesKnown[itemId] = true
+                    end
+                end
+            end
+        end
+    end
+    
+    local countAfter = self:CountRecipes(true)
+    local newRecipes = countAfter - countBefore
+    
+    self:Print("Scan complete. " .. newRecipes .. " new recipes added.")
+    self:Print("Total known recipes: " .. countAfter)
+    return true
+end
+
+-- List all recipes
+function ZygorGuidesViewer:ListRecipes()
+    if not self.db.char.RecipesKnown or not next(self.db.char.RecipesKnown) then
+        self:Print("No recipes recorded. Use |cff00ff00/zygorrecipes scan|r first.")
+        return
+    end
+    
+    local count = 0
+    for id, _ in pairs(self.db.char.RecipesKnown) do
+        count = count + 1
+    end
+    
+    self:Print("Known recipes (" .. count .. "):")
+    for id, _ in pairs(self.db.char.RecipesKnown) do
+        local name = GetItemInfo(id)
+        self:Print(format("  |cff00ff00%d|r - %s", id, name or "|cffff0000Unknown|r"))
+    end
+end
+
+-- Count recipes (silent mode available)
+function ZygorGuidesViewer:CountRecipes(silent)
+    local count = 0
+    if self.db.char.RecipesKnown then
+        for _ in pairs(self.db.char.RecipesKnown) do
+            count = count + 1
+        end
+    end
+    
+    if not silent then
+        self:Print("Total known recipes: " .. count)
+    end
+    
+    return count
+end
+
+-- Check specific recipe
+function ZygorGuidesViewer:CheckRecipe(search)
+    if not search then return end
+    
+    local id = tonumber(search)
+    if id then
+        -- Check by ID
+        local known = self.db.char.RecipesKnown and self.db.char.RecipesKnown[id]
+        local name = GetItemInfo(id) or "Unknown"
+        
+        if known then
+            self:Print(format("|cff00ff00✓ KNOWN|r: %s (ID: %d)", name, id))
+        else
+            self:Print(format("|cffff0000✗ NOT KNOWN|r: %s (ID: %d)", name, id))
+        end
+    else
+        -- Search by name
+        self:Print("Searching for: |cff00ff00" .. search .. "|r")
+        local found = false
+        
+        if self.db.char.RecipesKnown then
+            for recipeId, _ in pairs(self.db.char.RecipesKnown) do
+                local name = GetItemInfo(recipeId)
+                if name and name:lower():find(search:lower(), 1, true) then
+                    self:Print(format("  |cff00ff00%s|r (ID: %d)", name, recipeId))
+                    found = true
+                end
+            end
+        end
+        
+        if not found then
+            self:Print("|cffff0000No matching recipes found.|r")
+        end
+    end
+end
+
+-- Debug function
+function ZygorGuidesViewer:DebugRecipeTracker()
+    self:Print("=== Recipe Tracker Debug ===")
+    self:Print("self.RecipeTracker: " .. tostring(not not self.RecipeTracker))
+    
+    if self.RecipeTracker then
+        for key, value in pairs(self.RecipeTracker) do
+            if type(value) == "function" then
+                self:Print("  Function: " .. key)
+            else
+                self:Print("  Property: " .. key .. " = " .. tostring(value))
+            end
+        end
+    end
+    
+    self:Print("self.db.char.RecipesKnown exists: " .. tostring(not not self.db.char.RecipesKnown))
+    if self.db.char.RecipesKnown then
+        local count = 0
+        for _ in pairs(self.db.char.RecipesKnown) do count = count + 1 end
+        self:Print("Recipes in DB: " .. count)
+    end
+    
+    self:Print("=== End Debug ===")
+end
+
+-- Help function
+function ZygorGuidesViewer:ShowRecipeHelp()
+    self:Print("|cff00ff00Recipe Tracking Commands:|r")
+    self:Print("  |cff00ff00/zygorrecipes|r or |cff00ff00/zygorrecipes scan|r - Scan open profession")
+    self:Print("  |cff00ff00/zygorrecipes list|r - List all known recipes")
+    self:Print("  |cff00ff00/zygorrecipes count|r - Show recipe count")
+    self:Print("  |cff00ff00/zygorrecipes check <id|name>|r - Check specific recipe")
+    self:Print("  |cff00ff00/zygorrecipes clear|r - Clear all recipes")
+    self:Print("  |cff00ff00/zygorrecipes debug|r - Debug information")
+    self:Print("  |cff00ff00/zrecipe <id|name>|r - Quick check")
+end
+
+-- Keep your existing CheckRecipeCommand
+function ZygorGuidesViewer:CheckRecipeCommand(input)
+    if input and input:trim() ~= "" then
+        self:CheckRecipe(input:trim())
+    else
+        self:ShowRecipeHelp()
+    end
+end
+
 function me:ParseGuides()
 	if not self.db.char.maint_startguides then return true end
 	self.loading=true
@@ -3715,6 +4015,9 @@ function me:GetItemData(itemid,n)
 end
 
 -- HACKS
+local math_modf=math.modf
+math.round=function(n) local x,y=math_modf(n) return n>0 and (y>=0.5 and x+1 or x) or (y<=-0.5 and x-1 or x) end
+
 function me:ListQuests(from,to)
 	local CQI=Cartographer_QuestInfo
 	local qlog = ""
@@ -3799,3 +4102,47 @@ end
 --hooksecurefunc("QuestInfo_Display",function() if not InCombatLockdown() then shownFrame=nil bottomShownFrame=nil end end)
 
 
+function me:GetMapSpotsInRange()
+	local ret={}
+	local tinsert=tinsert
+	for i,set in ipairs(self.registeredmapspotsets) do
+		for s,spot in ipairs(set.spots) do
+			if spot.waypoint and not spot.waypoint.hideminimap then
+				if not spot.hidden then tinsert(ret,spot) end
+			end
+		end
+	end
+	return ret
+end
+
+function me:GetMapSpotsInZone()
+	local ret={}
+	local tinsert=tinsert
+	for i,set in ipairs(self.registeredmapspotsets) do
+		for s,spot in ipairs(set.spots) do
+			if spot.waypoint and not spot.hidden and spot.map==GetRealZoneText() then
+				tinsert(ret,spot)
+			end
+		end
+	end
+	return ret
+end
+
+function me:GetAllMapSpots()
+	local ret={}
+	local tinsert=tinsert
+	for i,set in ipairs(self.registeredmapspotsets) do
+		for s,spot in ipairs(set.spots) do
+			tinsert(ret,spot)
+		end
+	end
+	return ret
+end
+
+function me:UpdateMapSpots()
+	for i,set in ipairs(self.registeredmapspotsets) do
+		for s,spot in ipairs(set.spots) do
+			spot:UpdateVisibility()
+		end
+	end
+end

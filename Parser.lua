@@ -207,8 +207,6 @@ function me:ParseEntry(text)
 		local indent
 		indent,line = line:match("^(%.*)(.*)")
 
-		line = line:gsub("^%* *","")
-
 		line = line .. "|"
 		local goal={}
 
@@ -380,6 +378,7 @@ function me:ParseEntry(text)
 				if not goal.level then return nil,"'ding': invalid level value",linecount,chunk end
 				prevlevel = tonumber(params)
 			elseif cmd=="equipped" then
+				-- Handle 'equipped' command to check if an item is equipped
 				goal.action = goal.action or cmd
 				local slot,item = params:match("^([a-zA-Z]+) (.*)")
 				slot,_ = GetInventorySlotInfo(slot)
@@ -387,6 +386,66 @@ function me:ParseEntry(text)
 				if not item then return nil,"equipped needs item" end
 				goal.slot=slot
 				goal.item=item
+			
+			elseif cmd=="learn" then
+				-- Use standard Zygor ## format
+				-- Format: learn [DisplayText]##[RecipeID]
+				-- Example: learn GingerbreadCookie##21143
+				goal.action = goal.action or cmd
+				
+				local recipeParam = params
+				
+				-- Use existing ParseID function (same as other commands)
+				local displayText, recipeId = self:ParseID(recipeParam)
+				
+				if recipeId then
+					-- Store the numeric recipe ID
+					goal.recipeid = recipeId
+					
+					-- Use display text (text before ##) or default
+					goal.displaytext = displayText or "Recipe"
+					
+					-- ЛОКАЛИЗОВАННОЕ ОТОБРАЖЕНИЕ
+					if L and L["learn"] then
+						-- Используем локализацию если доступна
+						goal.text = L["learn"] .. " " .. goal.displaytext
+					else
+						-- Fallback на английский
+						goal.text = "Learn " .. goal.displaytext
+					end
+					
+					-- Clear unnecessary fields
+					goal.recipe = nil
+					goal.autotitle = nil
+					
+					-- Debug (optional)
+					self:Debug("Parsed learn goal: " .. goal.displaytext .. "##" .. goal.recipeid)
+				else
+					-- Invalid format - no ID found
+					return nil, "'learn' command requires '[text]##[ID]' format (e.g., 'learn GingerbreadCookie##21143')", linecount, chunk
+				end
+				
+			elseif cmd=="fishing" then
+				-- Add fishing skill goal
+				goal.action = goal.action or cmd
+				local skillLevel = tonumber(params)
+				if not skillLevel then
+					return nil, "'fishing' command requires skill level (e.g., '.fishing 75')", linecount, chunk
+				end
+				
+				goal.skill = "Fishing"
+				goal.skillLevel = skillLevel
+				goal.type = "fishing"
+				
+				-- Set fishing icon texture
+				goal.texture = "Interface\\Icons\\Trade_Fishing"
+				
+				-- Set initial text based on skill level
+				goal.text = L["fishing"] .. " " .. L["until_skill"]:format(skillLevel)
+				
+				-- Mark as skill-based goal
+				goal.isSkillGoal = true
+			
 			elseif cmd=="hearth" then
 				goal.action = goal.action or cmd
 				goal.useitem = "Hearthstone"
@@ -406,11 +465,6 @@ function me:ParseEntry(text)
 				goal.skill,goal.skilllevel = params:match("^(.+),([0-9]+)$")
 				goal.skilllevel = tonumber(goal.skilllevel)
 				if not goal.skill then return nil,"'skill*': no skill found",linecount,chunk end
-			elseif cmd=="learn" then
-				goal.action = goal.action or cmd
-				goal.recipe,goal.recipeid = self:ParseID(params)
-				if not goal.recipeid then return nil,"'learn': no recipe found",linecount,chunk end
-				
 			elseif cmd=="fpath" or cmd=="home" then
 				goal.action = goal.action or cmd
 				goal.param = params
@@ -464,21 +518,54 @@ function me:ParseEntry(text)
 				if cond then
 					-- condition match
 					local subject = goal  if chunkcount==1 then subject=step end
+					
+					-- SPECIAL CASE: Handle "if learn" and "if not learn" conditions for recipes
+					local learnPattern = cond:match("^learn%s+(.+)$")
+					local notLearnPattern = cond:match("^not%s+learn%s+(.+)$")
+					
+					if learnPattern or notLearnPattern then
+						-- This is a recipe learning condition
+						local recipeParam = learnPattern or notLearnPattern
+						local recipeName, recipeId = self:ParseID(recipeParam)
+						
+						if recipeId then
+							-- Create a condition function based on whether it's "learn" or "not learn"
+							local conditionFunc
+							if learnPattern then
+								-- "only if learn Recipe##ID" - show only if recipe IS known
+								conditionFunc = function()
+									return ZGV.db.char.RecipesKnown and ZGV.db.char.RecipesKnown[recipeId]
+								end
+							else
+								-- "only if not learn Recipe##ID" - show only if recipe is NOT known
+								conditionFunc = function()
+									return not (ZGV.db.char.RecipesKnown and ZGV.db.char.RecipesKnown[recipeId])
+								end
+							end
+							
+							subject.condition_visible_raw = cond
+							subject.condition_visible = conditionFunc
+						else
+							-- Invalid recipe format
+							return nil, "invalid recipe format in 'only if' condition", linecount, chunk
+						end
+					else
+						-- Regular condition - use existing MakeCondition
+						local fun,err = MakeCondition(cond,true)
+						if not fun then return nil,err,linecount,chunk end
 
-					local fun,err = MakeCondition(cond,true)
-					if not fun then return nil,err,linecount,chunk end
-
-					subject.condition_visible_raw=cond
-					subject.condition_visible=fun
+						subject.condition_visible_raw = cond
+						subject.condition_visible = fun
+					end
 				else
 					-- race/class match
 					if goal.action or goal.text or chunkcount>1 then
 						if not ZGV:RaceClassMatch(split(params,",")) then
-							goal={}
+							goal = {}
 							break
 						end -- skip goal line altogether
 					else
-						step.requirement=split(params,",")
+						step.requirement = split(params,",")
 					end
 				end
 
@@ -584,4 +671,3 @@ function me:ParseEntry(text)
 	end
 	return guide
 end
-

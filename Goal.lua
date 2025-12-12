@@ -63,6 +63,7 @@ function Goal:IsCompleteable()
 	or self.action=="skill"
 	or self.action=="skillmax"
 	or self.action=="learn"
+	or self.action=="fishing"
 	 then return true end
 	if self.action=="goto" then
 		-- this one is tricky.
@@ -92,39 +93,18 @@ function Goal:IsComplete()
 	if self.force_nocomplete then return end
 
 	if self.action=="accept" then
-		--[[
-		-- Check for "turn in, accept" pair of the same quest - a workaround for "turn in part 1, accept part 2" steps
-		--  Deprecated by introduction of questacceptedid
-		if ZGV.questIndicesByTitle[self.questaccepted] and goalIndex>1 then
-			local i
-			for i = goalIndex-1, 1, -1 do
-				if ZGV.StepCompletion[i].questturnedin==self.questaccepted and not ZGV:IsStepGoalComplete(i) then return false,true end
-			end
-		end
-		--]]
 		local possible=true
-		--local possible = (not self.parentStep.level  or  self.parentStep.level-UnitLevel("player")<=5)
 		if self.questid and not ZGV:IsQuestPossible(self.questid) then possible=false end
 
 		local complete = ZGV.completedQuests[self.questid]
 		    or ZGV.questsbyid[self.questid]
 		    or (ZGV.instantQuests[self.questid] and ZGV.completedQuestTitles[self.quest])
 		    or (not ZGV.CurrentGuide.daily and ZGV.db.char.permaCompletedDailies[self.questid])
-		return complete, complete or possible     --[[or ZGV.recentlyAcceptedQuests[id] --]]
+		return complete, complete or possible
 
 	elseif self.action=="turnin" then
 		local inlog = ZGV.questsbyid[self.questid]
-			--[[ Completion sequence:
-									ZGV.completedQuests[id]		ZGV.questsbyid[id]
-			 1. CHAT_MSG_SYSTEM "<quest> completed."	nil				{...}
-			     - ZGV.completedQuests[id] = true		true				{...}
-			 2. QUEST_LOG_UPDATE, quest gone from log.	true				nil
 
-			--]]
-
-			-- Completed if it's in the completed bin, but NOT in the log.
-			-- If it's in the log, it couldn't be completed; this fixes some weird multiple-completion quests, like #348 Stranglethorn Fever.
-			-- completeable if it's in the log and complete or non-goaled.
 		local turned = (
 			ZGV.completedQuests[self.questid]
 			or (not ZGV.CurrentGuide.daily and ZGV.db.char.permaCompletedDailies[self.questid])
@@ -134,7 +114,6 @@ function Goal:IsComplete()
 
 	
 	if self.achieveid then
-		-- oh gods. The below, redux.
 		local completed
 		if self.achievesub then
 			local description, ctype
@@ -154,17 +133,10 @@ function Goal:IsComplete()
 
 	if self.questid then
 
-		-- NEW: if it's a goddamn instant daily, try to reset it.
-		--if ZGV.instantQuests[self.questid] and ZGV.dailyQuests[self.questid] then ZGV:QuestTracking_ResetDailyByTitle(self.quest) end
-
-		-- if the quest was done, the goal is done and over with. Bye.
+		-- if the quest was done, the goal is done and over with.
 		if ZGV.completedQuests[self.questid]
 		or (ZGV.instantQuests[self.questid] and self.quest and ZGV.completedQuestTitles[self.quest]) then return true,true end
 
-		-- if the quest cannot be completed, and we're not a futureproof goal, bail.
-		--if not ZGV:IsQuestPossible(self.questid) and not self.future then return false,false end
-
-		-- okay, so the quest may yet be possible. Is it in the log?
 		local questInLog = ZGV.questsbyid[self.questid]
 		if questInLog then
 		
@@ -181,12 +153,10 @@ function Goal:IsComplete()
 						if questGoalData.num>=count then
 							return true, true
 						else
-							--ZGV:Debug("Not yet completed: "..questself.num.."/"..questgoal.needed)
 							return false, true, questGoalData.num/count
 						end
 					end
 				else
-					--ZGV:Debug("No goal "..goal)
 					ZGV:Print("WARNING: quest has no such goal! Step "..self.parentStep.num..", line "..(self.num)..", quest "..(self.questid or self.quest)..", goal "..(self.objnum or -1))
 					return false, true
 				end
@@ -195,16 +165,6 @@ function Goal:IsComplete()
 					-- okay, this is a simple "complete the quest" check
 					return questInLog.complete,true
 				end
-				-- pure questbound? complete if the whole quest is complete...
-				-- or not. Just drop.
-				
-				--[[
-				if questInLog.complete or #questInLog.goals==0 then
-					return true,true
-				else
-					-- otherwise drop through, let it complete on its own.
-				end
-				--]]
 			end
 		else
 			-- if quest is not in log, then it usually means screw its links as well.
@@ -249,10 +209,9 @@ function Goal:IsComplete()
 	elseif self.action=="hearth" then
 		return GetZoneText()==self.param or GetMinimapZoneText()==self.param or GetSubZoneText()==self.param, true
 	elseif self.action=="home" then
-		--return GetBindLocation("player")==self.home, true  -- didn't work well
 		return ZGV.recentlyHomeChanged, true
 	elseif self.action=="fpath" then
-		return (ZGV.db.char.taxis[ZGV.LibTaxi.TaxiNames_English[self.param]] --[[or ZGV.recentlyDiscoveredFlightpath--]]), true
+		return (ZGV.db.char.taxis[ZGV.LibTaxi.TaxiNames_English[self.param]]), true
 	elseif self.action=="collect" or self.action=="buy" then
 		local got = GetItemCount(self.target)
 		local progress = got/self.count
@@ -327,7 +286,23 @@ function Goal:IsComplete()
 	elseif self.action=="skillmax" then
 		return ZGV:GetSkill(self.skill).max>=self.skilllevel,true
 	elseif self.action=="learn" then
-		return ZGV.db.char.RecipesKnown[self.recipeid] or (self.recipe and ZGV.recentlyLearnedRecipes[self.recipe]), true
+    -- Recipe checking - ID ONLY version
+    -- Check if recipe ID exists in known recipes database
+    if self.recipeid and ZGV.db.char.RecipesKnown then
+        return ZGV.db.char.RecipesKnown[self.recipeid], true
+    end
+    -- If no recipeid or not found, return false
+    return false, true
+	elseif self.action=="fishing" then
+		-- Check fishing skill level
+		local currentFishing = ZGV:GetSkillLevel("Fishing") or 0
+		local targetLevel = self.skillLevel or 0
+		local progress = currentFishing / targetLevel
+		if progress > 1 then progress = 1 end
+		
+		ZGV:Debug("Fishing goal check: current=" .. currentFishing .. ", target=" .. targetLevel .. ", progress=" .. progress)
+		
+		return currentFishing >= targetLevel, true, progress
 	elseif self.action=="kill" and self.usekillcount then --killcount version
 		local count = ZGV.recentKills[self.target]
 		return count and count>=self.count, true
@@ -359,11 +334,10 @@ function Goal:IsFitting()
 	if self.wrong then return nil end
 	if not self.requirement then return true end
 	self.wrong = not ZygorGuidesViewer:RaceClassMatch(self.requirement)
-	return not wrong
+	return not self.wrong
 end
 
 function Goal:NeedsTranslation()
-	--return GetLocale()~="enUS" and not self.L
 	return not self.L
 end
 
@@ -410,7 +384,6 @@ function Goal:AutoTranslate()
 			end
 
 			-- translated a quest - if it's an instant-daily, put it in a special bag
-			-- it's used to remove titles from ZGV.db.char.completedQuests if removing the daily ID from completedDailies
 			if ZGV.instantQuests[self.questid] and ZGV.dailyQuests[self.questid] then
 				ZGV.db.global.instantDailies[self.questid] = qt
 			end
@@ -419,12 +392,6 @@ function Goal:AutoTranslate()
 		end
 	end
 	if self.targetid then
-		--[[if QuestInfo_Name then
-			local target=QuestInfo_Name[self.targetid]
-			if target then
-				self.target=target
-			end
-		--]]
 		if self.action=="kill" then
 			if ZygorGuidesNPCs then
 				local target,tooltip=ZGV:GetTranslatedNPC(self.targetid)
@@ -436,9 +403,7 @@ function Goal:AutoTranslate()
 		elseif self.action=="collect" or self.action=="get" or self.action=="buy" or self.action=="use" then
 			local item = ZGV:GetItemData(self.targetid)
 			if item then
-				--if GetLocale()~="enUS" then
 				self.target=item
-				--end
 				self.L=true
 			else
 				self.L=retry --RETRY
@@ -469,8 +434,6 @@ function Goal:AutoTranslate()
 		self.L=true
 	end
 
-	--if self.map and ZGV.BZL[self.map] then self.map=ZGV.BZL[self.map] end
-
 	if self.L==true and self.countL and self.countL>0 then
 		ZGV:Debug(("Translated step %d goal %d at try %d"):format(self.parentStep.num,self.num,self.countL))
 	end
@@ -499,10 +462,9 @@ local function COLOR_QUEST(s) return "|cffbb99ff"..s.."|r" end
 local function COLOR_NPC(s) return "|cffaaffaa"..s.."|r" end
 local function COLOR_MONSTER(s) return "|cffffaaaa"..s.."|r" end
 local function COLOR_GOAL(s) return "|cffffcccc"..s.."|r" end
+local function COLOR_SKILL(s) return "|cff77ff77"..s.."|r" end
 
 function Goal:GetText(showcompleteness)
-	--if type(goal)=="number" then goal=self.CurrentStep.goals[goal] end
-	
 	local text="?"
 	if self.text then text = self.text
 	elseif self.action=='accept' then text = L["stepgoal_accept"]:format(COLOR_QUEST((self.questpart and L['questtitle_part'] or L['questtitle']):format(self.quest,self.questpart)))
@@ -565,7 +527,6 @@ function Goal:GetText(showcompleteness)
 	elseif self.action=='hearth' then text = L["stepgoal_hearth to"]:format(COLOR_LOC(self.param))
 	elseif self.action=='rep' then text = L["stepgoal_rep"]:format(ZGV.StandingNames[self.rep],self.faction)
 	elseif self.action=='goto' then
-		--if self.CurrentGuide.steps[self.CurrentStepNum-1] and self.CurrentGuide.steps[self.CurrentStepNum-1].map~=goal.map then
 		if self.map and GetRealZoneText() ~= self.map then
 		-- different map
 			if self.x then
@@ -588,11 +549,18 @@ function Goal:GetText(showcompleteness)
 			text = L["stepgoal_achieve"]:format(COLOR_ITEM(name))
 		end
 	elseif self.action=="skill" then
-		text = L["stepgoal_skill"]:format(COLOR_ITEM(self.skill),self.skilllevel)
+		text = L["stepgoal_skill"]:format(COLOR_SKILL(self.skill),self.skilllevel)
 	elseif self.action=="skillmax" then
-		text = L["stepgoal_skillmax"]:format(COLOR_ITEM(self.skill),self.skilllevel)
+		text = L["stepgoal_skillmax"]:format(COLOR_SKILL(self.skill),self.skilllevel)
 	elseif self.action=="learn" then
-		text = L["stepgoal_learn"]:format(COLOR_ITEM(self.recipe))
+		text = L["stepgoal_learn"]:format(COLOR_ITEM(self.displaytext or "Recipe"))
+	elseif self.action=="fishing" then
+		-- Fishing goal text with fallback for missing localization
+		local fishingText = L["stepgoal_fishing"]
+		if not fishingText then
+			fishingText = "Fish until your skill reaches %s"
+		end
+		text = fishingText:format(COLOR_SKILL(self.skillLevel or 0))
 	end
 
 	-- trickiness.
@@ -607,12 +575,9 @@ function Goal:GetText(showcompleteness)
 
 	if showcompleteness then
 		local desc = ""
-		--self:Debug("GetTextualCompletionGoal goalindex "..goalIndex)
 
 		-- quest-goal completion display; lame 0/5
 		if self.questid then
-			--if not self.count then error("Step "..ZGV.CurrentStepNum.." section "..ZGV.CurrentGuideName.." has bad questgoal.") end
-
 			local questdata = ZGV.questsbyid[self.questid]
 			if questdata then
 				-- quest in log? yay.
@@ -623,17 +588,6 @@ function Goal:GetText(showcompleteness)
 						local count = self.count or questgoal.needed
 						desc = L["completion_goal"]:format(questgoal.num,count)
 					end
-				else
-					-- quest-bound, bugger
-					--desc = questdata.complete and L["completion_done"] or ""
-				end
-			else
-				-- not in log...
-				if ZGV.completedQuests[self.questid] then
-					--  if complete, then complete. Simple.
-					--desc = L["completion_done"]
-				else
-					-- drop through! let it complete on its own.
 				end
 			end
 		end
@@ -643,30 +597,15 @@ function Goal:GetText(showcompleteness)
 			local level = UnitLevel("player")
 			percent = (level<self.level-1) and 0 or (level>=self.level) and 100 or floor(UnitXP("player")/UnitXPMax("player") * 100)
 			desc = L["completion_ding"]:format(percent)
-		elseif self.action=="home" then
-			--desc = self:IsComplete() and L["completion_(done)"] --L["stepgoal_home"]:format(self.param)
-		elseif self.action=="fpath" then
-			--desc = self:IsComplete() and L["completion_(done)"] --L["stepgoal_flightpath"]:format(self.param)
-		elseif self.action=="goto" then
-			--desc = ""
-			--[[
-			if goal.gox then
-				desc = L["stepgoal_location"]:format(goal.gozone, goal.gox, goal.goy)
-			else
-				desc = L["stepgoal_location_onlyzone"]:format(goal.gozone or "?")
-			end
-			--]]
 		elseif self.action=="collect" or self.action=="buy" then
 			desc = L["completion_collect"]:format(GetItemCount(self.target),self.count)
 		elseif self.action=="rep" then
 			desc = L["completion_rep"]:format(ZGV:GetReputation(self.faction):Going())
 		elseif self.action=="achieve" then
 			if self.achievesub then
-				-- partial achievement
 				local desc,ctype,completed,quantity,required = GetAchievementCriteriaInfo(self.achieveid,self.achievesub)
 				desc = L["completion_goal"]:format(quantity,required)
 			else
-				-- full achievement
 				local id, name, points, completed = GetAchievementInfo(self.achieveid)
 				local numcrit = GetAchievementNumCriteria(self.achieveid)
 				local completenum = 0
@@ -676,6 +615,21 @@ function Goal:GetText(showcompleteness)
 				end
 				desc = L["completion_goal"]:format(completenum,numcrit)
 			end
+		elseif self.action=="fishing" then
+			-- Show fishing skill progress
+			local currentFishing = ZGV:GetSkillLevel("Fishing") or 0
+			local targetLevel = self.skillLevel or 0
+			local progressText = L["completion_fishing"]
+			if not progressText then
+				progressText = "(%d/%d)"
+			end
+			desc = progressText:format(currentFishing, targetLevel)
+		elseif self.action=="skill" then
+			local skill = ZGV:GetSkill(self.skill)
+			desc = L["completion_skill"]:format(skill.level,self.skilllevel)
+		elseif self.action=="skillmax" then
+			local skill = ZGV:GetSkill(self.skill)
+			desc = L["completion_skillmax"]:format(skill.max,self.skilllevel)
 		elseif self.action=="kill" and self.usekillcount then --kill, killcount version
 			local count = ZGV.recentKills[self.target]
 			desc = L["completion_goal"]:format(count,self.count)
@@ -707,7 +661,6 @@ function Goal:GetString()
 	elseif self.action=="goal" then
 		return self.target
 	elseif self.action=="kill" then
-		--return goalstring_slain:format(self.target)
 		return self.target
 	end
 end
@@ -735,17 +688,6 @@ function Goal:Prepare()
 		end
 	end
 
-	-- wipe completed quests by title, if they're instant
-	--[[ moved to core code, to be done on ClearRecentActivities
-	if self.action=="accept" or self.action=="turnin" then
-		if self.questid then
-			if ZGV.instantQuests[self.questid] and ZGV.completedQuestTitles[self.quest] then
-				ZGV.completedQuestTitles[self.quest] = nil
-			end
-		end
-	end
-	--]]
-
 	if not InCombatLockdown() then
 		if self.script then
 			local macroname = "ZygorGuidesMacro" .. self.num
@@ -764,23 +706,15 @@ function Goal:Prepare()
 end
 
 --- Is this goal obsolete?
--- A goal is obsolete when it belongs below the player's level and doesn't lead to any non-obsolete follow-ups.
--- For example, for a level 31 player, most quests belonging in the guide levels 1-30 are obsolete and can safely be omitted.
 function Goal:IsObsolete()
-	if not self.questid then return end  -- not belonging to any quest
+	if not self.questid then return end
 	if self.noobsolete then return end
 	if self.parentStep.parentGuide.daily or not self.parentStep.level or self.parentStep.level==0 then return nil end
 
-	--local fups = ZGV:GetMentionedFollowups(self.questid)
 	local maxlevel = ZGV.maxQuestLevels[self.questid] or 99
-	--assert(#fups>0,"Quest mentioned in guide "..ZGV.CurrentGuideName.." step "..ZGV.CurrentStepNum.." but nowhere else..?")
 	local level = UnitLevel("player")
 	if ZGV.db.char.fakelevel and ZGV.db.char.fakelevel>0 then level=ZGV.db.char.fakelevel end
 
-	--local maxlevel=0
-	--for i=1,#fups do if fups[i][2]>maxlevel then maxlevel=fups[i][2] end end
-
-	--if #fups>0 and maxlevel<level-ZGV.db.profile.levelsahead and not ZGV.questsbyid[self.questid] then
 	if maxlevel<level-ZGV.db.profile.levelsahead and not ZGV.questsbyid[self.questid] then
 		return true
 	end
@@ -793,14 +727,13 @@ function Goal:IsAuxiliary()
 	or self.action=="kill"
 	or self.action=="get"
 	or self.action=="goal"
-	or self.action=="ding") and not self.force_nocomplete
+	or self.action=="ding"
+	or self.action=="fishing") and not self.force_nocomplete
 	then
 		return false
 	elseif self.action=="fpath" then
 		local isc = self:IsComplete()
-		-- it's true or false if LibTaxi is sure of its data.
 		if isc~=nil then return isc end
-		-- if it's not... guess.
 		local step=self.parentStep
 		for i=1,5 do
 			step=step:GetNextStep()
@@ -809,11 +742,21 @@ function Goal:IsAuxiliary()
 				step=step:GetNextStep()
 				if not step then return false end
 			end
-			--print("complete? "..tostring(step:IsComplete()))
 			if step:IsComplete() then return true end
 		end
 		return false
 	else
 		return true
 	end
+end
+
+-- Update the goal's status and cache it
+function Goal:UpdateStatus()
+    self.status = self:GetStatus()
+    return self.status
+end
+
+-- Check if goal needs translation
+function Goal:NeedsTranslation()
+    return not self.L
 end
