@@ -749,14 +749,3 @@ function Goal:IsAuxiliary()
 		return true
 	end
 end
-
--- Update the goal's status and cache it
-function Goal:UpdateStatus()
-    self.status = self:GetStatus()
-    return self.status
-end
-
--- Check if goal needs translation
-function Goal:NeedsTranslation()
-    return not self.L
-end
