@@ -2,10 +2,444 @@ local ZygorGuidesViewer=ZygorGuidesViewer
 if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Alliance" then return end
 
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Lunar Festival\\Introduction",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Lunar Festival\\The Rockets Red Glare
+description Contains a guide for obtaining the "Lunar Festival" achievements.
+startlevel 80
+		step
+			goto Stormwind City,37.63,64.94
+			.talk Lunar Festival Emissary##15892
+			..accept The Lunar Festival##8871
+		step
+			goto Stormwind City,37.65,65.63
+			.talk Lunar Festival Harbinger##15895
+			..turnin The Lunar Festival##8871
+			..accept Lunar Fireworks##8867
+		step
+			goto Stormwind City,37.3,64
+			.talk Lunar Festival Vendor##15898
+			.buy 8 Small Red Rocket##21557|q 8867
+			.buy 2 Green Rocket Cluster##21574|q 8867
+		step
+			goto Stormwind City,37.3,65
+			.use Small Red Rocket##21557|q 8867/1
+			.use Green Rocket Cluster##21574|q 8867/2
+		step
+			goto Stormwind City,37.65,65.63
+			.talk Lunar Festival Harbinger##15895
+			..turnin Lunar Fireworks##8867
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Lunar Festival\\The Rockets Red Glare",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Lunar Festival\\Frenzied Firecracker
+description Contains a route for achievements: "The Rockets Red Glare"
+startlevel 80
+		step
+			goto Stormwind City,37.3,64
+			.talk Lunar Festival Vendor##15898
+			.buy 10 Red Rocket Cluster##21576|achieve 1281
+		step
+			goto Stormwind City,37.3,65
+			.use Red Rocket Cluster##21576
+			.' Get The Rockets Red Glare Achievement|achieve 1281
+			.info You have 25 seconds to complete this achievement.
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Lunar Festival\\Frenzied Firecracker",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Lunar Festival\\Elders of Eastern Kingdoms
+description Contains a route for achievements: "Frenzied Firecracker"
+startlevel 80
+		step
+			goto Stormwind City,37.3,64
+			.talk Lunar Festival Vendor##15898
+			.buy 10 Festival Firecracker##21747|achieve 1552
+		step
+			goto Stormwind City,38.2,66.37
+			.use Festival Firecracker##21747
+			.' Get the Frenzied Firecracker Achievement|achieve 1552
+			.info You have 30 seconds to complete this achievement.
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Lunar Festival\\Elders of Eastern Kingdoms",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Lunar Festival\\Elders of Kalimdor
+description Contains a route for achievements: "Elders of Eastern Kingdoms"
+startlevel 80
+		step
+			goto Stormwind City,36.3,66.1
+			.talk Elder Hammershout##15562
+			.' Honor the Elder Hammershout in Stormwind|achieve 915/3
+		step
+			goto Elwynn Forest,40.1,62.7
+			.talk Elder Stormbrow##15565
+			.' Honor the Elder Stormbrow in Goldshire|achieve 912/3
+		step
+			goto Westfall,56.7,47.1
+			.talk Elder Skychaser##15577
+			.' Honor the Elder Skychaser in Sentinel Hill|achieve 912/8
+		step
+			goto Stranglethorn Vale,26.5,76.5
+			.talk Elder Winterhoof##15576
+			.' Honor the Elder Winterhoof in Booty Bay|achieve 912/6
+		step
+			goto Stranglethorn Vale,53.1,18.4
+			.talk Elder Starglade##15596
+			.' Honor the Elder Starglade in Zul'Gurub|achieve 912/5
+		step
+			goto Blasted Lands,57.9,54.9
+			.talk Elder Bellowrage##15563
+			.' Honor the Elder Bellowrage in Blasted Lands|achieve 912/2
+		step
+			goto Burning Steppes,83.1,47.4
+			.talk Elder Rumblerock##15557
+			.' Honor the Elder Rumblerock in Burning Steppes|achieve 912/9
+		step
+			goto Burning Steppes,64.5,24
+			.talk Elder Dawnstrider##15585
+			.' Honor the Elder Dawnstrider in Flame Crest|achieve 912/10
+		step
+			goto Searing Gorge,21.5,79
+			.talk Elder Ironband##15567
+			.' Honor the Elder Ironband in Searing Gorge|achieve 912/12
+		step
+			goto Ironforge,29.2,17.1
+			.talk Elder Bronzebeard##15871
+			.' Honor the Elder Bronzebeard in Ironforge|achieve 915/2
+		step
+			goto Dun Morogh,46.7,51.6
+			.talk Elder Goldwell##15569
+			.' Honor the Elder Goldwell in Kharanos|achieve 912/1
+		step
+			goto Loch Modan,32.9,46.3
+			.talk Elder Silvervein##15558
+			.' Honor the Elder Silvervein in Thelsamar|achieve 912/7
+		step
+			goto The Hinterlands,50,48
+			.talk Elder Highpeak##15559
+			.' Honor the Elder Highpeak in The Hinterlands|achieve 912/11
+		step
+			goto Western Plaguelands,69.2,73.4
+			.talk Elder Moonstrike##15594
+			.' Honor the Elder Moonstrike in Scholomance|achieve 912/17
+		step
+			goto Western Plaguelands,66,47.8
+			.talk Elder Meadowrun##15602
+			.' Honor the Elder Meadowrun in Western Plaguelands|achieve 912/4
+		step
+			goto Eastern Plaguelands,35.6,68.8
+			.talk Elder Windrun##15592
+			.' Honor the Elder Windrun in Eastern Plaguelands|achieve 912/15
+		step
+			goto Eastern Plaguelands,75.7,54.6
+			.talk Elder Snowcrown##15566
+			.' Honor the Elder Snowcrown in Light's Hope Chapel|achieve 912/16
+		step
+			goto Tirisfal Glades,61.9,53.8
+			.talk Elder Graveborn##15568
+			.' Honor the Elder Graveborn in Brill|achieve 912/13
+		step
+			goto Undercity,66.6,38.2
+			.talk Elder Darkcore##15564
+			.' Honor the Elder Darkcore in Undercity|achieve 914/3
+		step
+			goto Silverpine Forest,45,41.1
+			.talk Elder Obsidian##15561
+			.' Honor the Elder Obsidian in The Sepulcher|achieve 912/14
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Lunar Festival\\Elders of Kalimdor",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Lunar Festival\\Elders of Northrend
+description Contains a route for achievements: "Elders of Kalimdor"
+startlevel 80
+		step
+			goto Darnassus,33.6,14.5
+			.talk Elder Bladeswift##15598
+			.' Honor the Elder Bladeswift in Darnassus|achieve 915/1
+		step
+			goto Teldrassil,57.3,60.8
+			.talk Elder Bladeleaf##15595
+			.' Honor the Elder Bladeleaf in Dolanaar|achieve 911/6
+		step
+			goto Darkshore,36.8,46.8
+			.talk Elder Starweave##15601
+			.' Honor the Elder Starweave in Auberdine|achieve 911/7
+		step
+			goto Ashenvale,35.6,48.9
+			.talk Elder Riversong##15605
+			.' Honor the Elder Riversong in Astranaar|achieve 911/9
+		step
+			goto Felwood,37.6,53
+			.talk Elder Nightwind##15603
+			.' Honor the Elder Nightwind in Felwood|achieve 911/12
+		step
+			goto Winterspring,61.5,37.8
+			.talk Elder Stonespire##15574
+			.' Honor the Elder Stonespire in Everlook|achieve 911/19
+		step
+			goto Winterspring,55.6,43.7
+			.talk Elder Brightspear##15606
+			.' Honor the Elder Brightspear in Winterspring|achieve 911/18
+		step
+			goto Azshara,72.6,85.2
+			.talk Elder Skygleam##15600
+			.' Honor the Elder Skygleam in Azshara|achieve 911/2
+		step
+			goto The Barrens,62.7,36.7
+			.talk Elder Windtotem##15582
+			.' Honor the Elder Windtotem in Ratchet|achieve 911/5
+		step
+			goto Orgrimmar,41.1,33.8
+			.talk Elder Darkhorn##15579
+			.' Honor the Elder Darkhorn in Orgrimmar|achieve 914/1
+		step
+			goto Durotar,53.2,43.7
+			.talk Elder Runetotem##15572
+			.' Honor the Elder Runetotem in Razor Hill|achieve 911/1
+		step
+			goto The Barrens,51.4,30.7
+			.talk Elder Moonwarden##15597
+			.' Honor the Elder Moonwarden in The Crossroads|achieve 911/3
+		step
+			goto The Barrens,45.1,57.9
+			.talk Elder High Mountain##15588
+			.' Honor the Elder High Mountain in Camp Taurajo|achieve 911/4
+		step
+			goto Mulgore,48.5,53.5
+			.talk Elder Bloodhoof##15575
+			.' Honor the Elder Bloodhoof in Bloodhoof Village|achieve 911/8
+		step
+			goto Thunder Bluff,73,23.4
+			.talk Elder Ezra Wheathoof##15580
+			.' Honor the Elder Wheathoof in Thunder Bluff|achieve 914/2
+		step
+			goto Thousand Needles,45.3,50
+			.talk Elder Skyseer##15584
+			.' Honor the Elder Skyseer in Freewind Post|achieve 911/13
+		step
+			goto Thousand Needles,79.7,77.3
+			.talk Elder Morningdew##15604
+			.' Honor the Elder Morningdew in Mirage Raceway|achieve 911/14
+		step
+			goto Tanaris,51.5,27.8
+			.talk Elder Dreamseer##15586
+			.' Honor the Elder Dreamseer in Gadgetzan|achieve 911/16
+		step
+			goto Tanaris,36,80.1
+			.talk Elder Ragetotem##15573
+			.' Honor the Elder Ragetotem in Tanaris|achieve 911/15
+		step
+			goto Un'Goro Crater,50.4,76.1
+			.talk Elder Thunderhorn##15583
+			.' Honor the Elder Thunderhorn in Un'Goro|achieve 911/17
+		step
+			goto Silithus,21.1,10.5
+			.talk Elder Primestone##15570
+			.' Honor the Elder Primestone in Silithus|achieve 911/20
+		step
+			goto Silithus,49,37.7
+			.talk Elder Bladesing##15599
+			.' Honor the Elder Bladesing in Cenarion Hold|achieve 911/21
+		step
+			goto Feralas,62.6,31
+			.talk Elder Mistwalker##15587
+			.' Honor the Elder Mistwalker in Dire Maul|achieve 911/11
+		step
+			goto Feralas,76.7,37.9
+			.talk Elder Grimtotem##15581
+			.' Honor the Elder Grimtotem in Feralas|achieve 911/10
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Lunar Festival\\Elders of Northrend",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Lunar Festival\\Lunar Festival Finery
+description Contains a route for achievements: "Elders of Northrend"
+startlevel 80
+		step
+			goto Borean Tundra,59.1,65.6
+			.talk Elder Sardis##30348
+			.' Honor the Elder Sardis in Valiance Keep|achieve 1396/1
+		step
+			goto Borean Tundra,42.9,49.6
+			.talk Elder Pamuya##30371
+			.' Honor the Elder Pamuya in Warsong Hold|achieve 1396/15
+		step
+			goto Borean Tundra,57.4,43.7
+			.talk Elder Arp##30364
+			.' Honor the Elder Arp in D.E.H.T.A|achieve 1396/5
+		step
+			goto Borean Tundra,33.8,34.4
+			.talk Elder Northal##30360
+			.' Honor the Elder Northal in Transitus Shield|achieve 1396/6
+		step
+			goto Sholazar Basin,49.8,63.7
+			.talk Elder Sandrene##30362
+			.' Honor the Elder Sandrene in Lakeside Landing|achieve 1396/7
+		step
+			goto Sholazar Basin,63.8,49
+			.talk Elder Wanikaya##30365
+			.' Honor the Elder Wanikaya in Rainspeaker Rapids|achieve 1396/8
+		step
+			goto Wintergrasp,48.9,14.6
+			.talk Elder Bluewolf##30368
+			.' Honor the Elder Bluewolf in Wintergrasp|achieve 1396/10
+		step
+			goto Dragonblight,35.1,48.3
+			.talk Elder Skywarden##30373
+			.' Honor the Elder Skywarden in Agmar's Hammer|achieve 1396/17
+		step
+			goto Dragonblight,29.7,55.9
+			.talk Elder Morthie##30358
+			.' Honor the Elder Morthie in Star's Rest|achieve 1396/3
+		step
+			goto Dragonblight,48.8,78.2
+			.talk Elder Thoim##30363
+			.' Honor the Elder Thoim in Moa'ki Harbor|achieve 1396/12
+		step
+			goto Grizzly Hills,64.2,47
+			.talk Elder Whurain##30372
+			.' Honor the Elder Whurain in Camp Oneqwah|achieve 1396/16
+		step
+			goto Grizzly Hills,80.6,37.1
+			.talk Elder Lunaro##30367
+			.' Honor the Elder Lunaro in Ruins of Tethys|achieve 1396/9
+		step
+			goto Grizzly Hills,60.6,27.1
+			.talk Elder Beldak##30357
+			.' Honor the Elder Beldak in Westfall Brigade|achieve 1396/2
+		step
+			goto Zul'Drak,58.9,56
+			.talk Elder Tauros##30369
+			.' Honor the Elder Tauros in Zim'Torga|achieve 1396/11
+		step
+			goto The Storm Peaks,64.6,51.3
+			.talk Elder Muraco##30374
+			.' Honor the Elder Muraco in Camp Tunka'lo|achieve 1396/18
+		step
+			goto The Storm Peaks,31.3,37.7
+			.talk Elder Stonebeard##30375
+			.' Honor the Elder Stonebeard in Bouldercrag's Refuge|achieve 1396/14
+		step
+			goto The Storm Peaks,28.9,73.7
+			.talk Elder Fargal##30359
+			.' Honor the Elder Fargal in Frosthold|achieve 1396/4
+		step
+			goto The Storm Peaks,41.2,84.7
+			.talk Elder Graymane##30370
+			.' Honor the Elder Graymane in K3|achieve 1396/13
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Lunar Festival\\Lunar Festival Finery",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Lunar Festival\\Elune's Blessing
+description Contains a route for achievements: "Lunar Festival Finery"
+startlevel 80
+		step
+			goto Stormwind City,37.6,65.6
+			.talk Lunar Festival Harbinger##15895
+			..accept Valadar Starsong##8883
+		step
+			goto Stormwind City,37.6,65.6
+			.talk Lunar Festival Harbinger##15895
+			.' Choose "I'd like a new invitation to the Lunar Festival"
+			.collect Lunar Festival Invitation##21711|achieve 626
+		step
+			goto Stormwind City,37.3,65
+			.use Lunar Festival Invitation##21711
+			.' Teleport to Moonglade|goto Moonglade|q 8883
+		step
+			goto Moonglade,53.7,35.3
+			.talk Valadar Starsong##15864
+			..turnin Valadar Starsong##8883
+		step
+			goto Moonglade,53.7,35.3
+			.talk Valadar Starsong##15864
+			.' Purchase a festive pant suit or festive dress with Coins of Ancestry.
+			.buy Festive Black Pant Suit##21541|achieve 626
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Lunar Festival\\Elune's Blessing",[[
+author danaton
+next Alliance Holidays Guide Achievements\\Lunar Festival\\Elders of the Dungeons
+description Contains a route for achievements: "Elune's Blessing"
+startlevel 80
+		step
+			goto Moonglade,53.7,35.3
+			.talk Valadar Starsong##15864
+			..accept Elune's Blessing##8868
+		step
+			goto Moonglade,53.7,35.3
+			.talk Valadar Starsong##15864
+			.buy Elune's Candle##21713|q 8868
+			.buy Lunar Festival Fireworks Pack##21640|q 8868
+		step
+			.use Lunar Festival Fireworks Pack##21640
+			.collect Large Red Rocket##21592|q 8868
+			.collect Large White Rocket##21593|q 8868
+			.collect Large Yellow Rocket##21595|q 8868
+		step
+			goto Moonglade,63.7,62.37
+			.info First, check whether Omen is alive or dead. If he is lying dead, you just need to step into the white glow above his body, and the quest will be completed. If he is standing alive, attack him immediately.
+			.info If Omen is not present, then to summon him, you need to do ONE of the following actions: 
+			.info 1) Launch the fireworks you bought earlier using special launchers in this area.
+			.use Large Red Rocket##21592
+			.use Large White Rocket##21593
+			.use Large Yellow Rocket##21595
+			.info 2) Use the candle you bought earlier on Minion of Omen (they look like ghostly wolves);
+			.kill Minion of Omen##15466|n
+			.use Elune's Candle##21713
+			.kill Omen##15467|q 8868/1
+		step
+			goto Moonglade,53.7,35.3
+			.talk Valadar Starsong##15864
+			..turnin Elune's Blessing##8868
+		step
+			.' Earn the achievement "Elune's Blessing"|achieve 937
+]])
+
+ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Lunar Festival\\Elders of the Dungeons",[[
+author danaton
+description Contains a route for achievements: "Elders of the Dungeons"
+startlevel 80
+		step
+			goto Desolace,30.22,62.36
+			.info You need to complete the next achievement on your own.
+			.' Honor the Elder Splitrock in Maraudon|achieve 910/3
+		step
+			goto Tanaris,38.73,20.03
+			.info You need to complete the next achievement on your own.
+			.' Honor the Elder Wildmane in Zul'Farrak|achieve 910/1
+		step
+			goto Swamp of Sorrows,69.8,54.2
+			.info You need to complete the next achievement on your own.
+			.' Honor the Elder Starsong in the Sunken Temple|achieve 910/2
+		step
+			goto Burning Steppes,29.6,39.4
+			.info You need to complete the next achievement on your own.
+			.' Honor the Elder Morndeep in Blackrock Depths|achieve 910/5
+			.' Honor the Elder Stonefort in Blackrock Spire|achieve 910/4
+		step
+			goto Eastern Plaguelands,27.05,13.3
+			.info You need to complete the next achievement on your own.
+			.' Honor the Elder Farwhisper in Stratholme|achieve 910/6
+		step
+			.info You can use the dungeon finder system to complete this achievement.
+			.' Honor the Elder Igasho in The Nexus|achieve 910/8
+			.' Honor the Elder Nurgen in Azjol-Nerub|achieve 910/9
+			.' Honor the Elder Jarten in Utgarde Keep|achieve 910/7
+			.' Honor the Elder Chogan'gada in Utgarde Pinnacle|achieve 910/13
+			.' Honor the Elder Kilias in Drak'Tharon Keep|achieve 910/10
+			.' Honor the Elder Yurauk in the Halls of Stone|achieve 910/12
+			.' Honor the Elder Ohanzee in Gundrak|achieve 910/11
+]])
+
 ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Midsummer Fire Festival\\Introduction",[[
 author danaton
 next Alliance Holidays Guide Achievements\\Midsummer Fire Festival\\Extinguishing and Flame Warden of Eastern Kingdoms
-description Empty
+description Contains a guide for obtaining the "Midsummer Fire" achievements.
 startlevel 80
 		step
 			goto Stormwind City,67.3,72.7
