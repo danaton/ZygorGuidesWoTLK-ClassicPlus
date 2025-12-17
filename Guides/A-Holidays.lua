@@ -892,8 +892,8 @@ startlevel 80
 			.talk Auctioneer Redmuse##8720
 			.buy 5 Small Egg##6889|q 7025
 		step
-			goto Ironforge,18.6,51.8
-			.talk Gwenna Firebrew##5112
+			goto Ironforge,18.1,51.3
+			.talk Innkeeper Firebrew##5111
 			.buy Ice Cold Milk##1179|q 7025
 		step
 			.' Use Cooking|cast Cooking##2550
@@ -1014,14 +1014,14 @@ startlevel 80
 			.talk Auctioneer Redmuse##8720
 			.buy 5 Small Egg##6889|achieve 1688
 		step
-			goto Ironforge,18.6,51.8
-			.talk Gwenna Firebrew##5112
+			goto Ironforge,18.1,51.3
+			.talk Innkeeper Firebrew##5111
 			.buy 5 Ice Cold Milk##1179|achieve 1688
 		step
 			.' Use Cooking|cast Cooking##2550
 			.collect Gingerbread Cookie##17197|achieve 1688/1
 			.collect Egg Nog##17198|achieve 1688/2
-			.collect Hot Apple Cider##34413|achieve 1688/3
+			.collect Hot Apple Cider##34411|achieve 1688/3
 		step
 			.' Get "The Winter Veil Gourmet" Achievement|achieve 1688
 ]])
@@ -1128,8 +1128,10 @@ startlevel 80
 			..accept Bomb Them Again!##11023 |daily
 		step
 			.' Use your fly-mount.
+			.info Use Fresh Holly or Preserved Holly.
 			.use Fresh Holly##21212
-			.' Transforms your mount into something more festive|havebuff INV_Misc_Branch_01|q 11023
+			.use Preserved Holly##21213
+			.' Transforms your mount into something more festive|havebuff INV_Misc_Plant_03|q 11023
 		step
 			goto Blade's Edge Mountains,34.80,41.26
 			.use Skyguard Bombs##32456
@@ -1272,7 +1274,6 @@ startlevel 80
 			.' Equip Red Winter Clothes|use Red Winter Clothes##34085|achieve 277
 			.' Equip Winter Boots|use Winter Boots##34086|achieve 277
 			.' Eat Graccu's Mince Meat Fruitcake|use Graccu's Mince Meat Fruitcake##21215|achieve 277
-		step
 			.' Get "Tis the Season" Achievement|achieve 277
 ]])
 
