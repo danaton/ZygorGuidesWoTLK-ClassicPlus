@@ -6825,27 +6825,29 @@ startlevel 25
 		.talk Zangen Stonehoof##4721
 		..accept The Sacred Flame (1)##1195
 	step //3
-		'Fly to Sun Rock Retreat|goto Stonetalon Mountains,45.2,59.9,0.1|noway|c
+		goto Thunder Bluff,47,49.8|n
+		.talk Tal##2995
+		.' Fly to Sun Rock Retreat|goto Stonetalon Mountains,45.2,59.9,0.1|noway|q 6381
 	step //4
-		'Go up the path to the right of the Flight Path
-		.' Follow it over to the Charred Vale|goto Stonetalon Mountains,44.6,61.8,0.3|c
+		.' Go up the path to the right of the Flight Path
+		.' Follow it over to the Charred Vale|goto Stonetalon Mountains,44.6,61.8,0.3|q 6381
 	step //5
 		goto 37.8,66.2
-		.' They look like dirt mounds around this area
-		.' Click the Gaea Dirt Mounds
+		.' Interact with gameobject: Gaea Dirt Mounds
+		.info They look like dirt mounds around this area.
 		.' Plant 10 Gaea Seeds|goal 10 Gaea seed planted|q 6381/1
 	step //6
 		goto 35.9,65.3
 		.from Rogue Flame Spirit##4036, Burning Ravager##4037, Burning Destroyer##4038
-		.get 10 Incendrites|q 6393/1
+		.get 10 Incendrites##16312|q 6393/1
 	step //7
 		goto 35.7,68.7
-		.kill 7 Bloodfury Slayer|q 6282/3
-		.kill 7 Bloodfury Roguefeather|q 6282/4
+		.kill 7 Bloodfury Slayer##4024|q 6282/3
+		.kill 7 Bloodfury Roguefeather##4023|q 6282/4
 	step //8
 		goto 32.6,67.2
-		.kill 7 Bloodfury Ambusher|q 6282/2
-		.kill 7 Bloodfury Harpy|q 6282/1
+		.kill 7 Bloodfury Ambusher##4025|q 6282/2
+		.kill 7 Bloodfury Harpy##4022|q 6282/1
 	step //9
 		goto 47.2,64.2
 		.talk Tsunaman##11862
@@ -6861,22 +6863,25 @@ startlevel 25
 		..turnin New Life##6381
 	step //12
 		goto 68.7,39.1|n
-		.' The path up to 'Gerenzo Wrenchwhistle' starts here|goto Stonetalon Mountains,68.7,39.1,0.5|noway|c
+		.' The path up to 'Gerenzo Wrenchwhistle' starts here|goto Stonetalon Mountains,68.7,39.1,0.5|noway|q 1096
 	step //13
 		goto 64.1,38.9
-		.' He spawns in different places on this dock high rise thing
-		.' Kill Gerenzo Wrenchwhistle
-		.get Gerenzo's Mechanical Arm|q 1096/1
+		.kill Gerenzo Wrenchwhistle##4202|n
+		.get Gerenzo's Mechanical Arm##5736|q 1096/1
 	step //14
 		goto 59,62.6
 		.talk Ziz Fizziks##4201
 		..turnin Gerenzo Wrenchwhistle##1096
 	step //15
-		'Go to Sun Rock Retreat|goto Stonetalon Mountains,46.5,60.1
+		.' Go to Sun Rock Retreat|goto Stonetalon Mountains,49.15,61.05,0.3|q 25 |future
 	step //16
-		'Fly to Splintertree Post|goto Ashenvale,73.3,61.7,0.1|noway|c
+		goto 45.1,59.8|n
+		.talk Tharm##4312
+		.' Fly to Splintertree Post|goto Ashenvale,73.3,61.7,0.1|noway|q 25 |future
 	step //17
-		home Splintertree Post
+		goto Ashenvale,74,60.6
+		.talk Innkeeper Kaylisk##12196
+		home Splintertree Post|q 25 |future
 	step //18
 		goto 73.7,60
 		.talk Mastok Wrilehiss##12737
@@ -6896,29 +6901,41 @@ startlevel 25
 	step //22
 		goto 68.3,75.3
 		.talk Torek##12858
-		..'Make sure the 3 Splintertree Raiders are there.  If they aren't, wait until they spawn
+		.' Make sure the 3 Splintertree Raiders are there. If they aren't, wait until they spawn.
 		..accept Torek's Assault##6544
 		.' Escort Torek
-		.' Take Silverwing Outpost|goal Take Silverwing Outpost.|q 6544/1
+		.' Take Silverwing Outpost|goal Take Silverwing Outpost|q 6544/1
 	step //23
 		goto 48.9,69.6
-		.goal Scout the gazebo on Mystral Lake that overlooks the nearby Alliance outpost.|q 25/1 |future
+		.goal Scout the gazebo on Mystral Lake that overlooks the nearby Alliance outpost|q 25/1 |future
 		.info Stand in the glowing gazebo.
 	step //24
 		goto 47.7,69.7
-		.kill 12 Befouled Water Elemental|q 25/2
 		.kill Tideress##12759|n
 		.info Tideress walks around this area.
-		.get Befouled Water Globe##16408|n
+		.collect Befouled Water Globe##16408|q 1918 |future
+	step
 		.use Befouled Water Globe##16408
 		..accept The Befouled Element##1918
+	step
+		goto 47.7,69.7
+		.kill 12 Befouled Water Elemental##3917|q 25/2
 	step //25
 		goto 42.3,65.6
 		.kill Ursangous##12678|n
 		.info Ursangous wanders around this area.
-		.get Ursangous's Paw##16303|n
+		.collect Ursangous's Paw##16303|q 23 |future
+	step
 		.use Ursangous's Paw##16303
 		..accept Ursangous's Paw##23
+	step
+		goto 58.7,56.1
+		.kill Shadumbra##12677|n
+		.info Shadumbra walks around this area.
+		.collect Shadumbra's Head##16304|q 24 |future
+	step
+		.use Shadumbra's Head##16304
+		..accept Shadumbra's Head##24
 	step //26
 		goto 57.9,56.2
 		.kill Laughing Sister##4054|n
@@ -6937,6 +6954,7 @@ startlevel 25
 		goto 73.8,61.5
 		.talk Senani Thunderheart##12696
 		..turnin Ursangous's Paw##23
+		..turnin Shadumbra's Head##24
 	step //31
 		goto 73,62.5
 		.talk Ertog Ragetusk##12877
@@ -6947,21 +6965,15 @@ startlevel 25
 		..turnin Ashenvale Outrunners##6503
 	step //33
 		goto 60.2,72.9
-		.' Use your Etched Phial while standing in the moonwell water|use Etched Phial##5867
-		.get Filled Etched Phial|q 1195/1
-	step //34
-		goto 58.7,56.1
-		.kill Shadumbra##12677|n
-		.info Shadumbra walks around this area.
-		.get Shadumbra's Head##16304|n
-		.use Shadumbra's Head##16304
-		..accept Shadumbra's Head##24
+		.use Etched Phial##5867
+		.info Use your Etched Phial while standing in the moonwell water.
+		.collect Filled Etched Phial##5868|q 1195/1
 	step //35
-		.'Hearth to Splintertree Post|goto Ashenvale,73.9,60.7,0.1|use hearthstone##6948|noway|q 824
+		.' Hearth to Splintertree Post|goto Ashenvale,73.9,60.7,0.1|use Hearthstone##6948|noway|q 824
 	step //36
 		goto 73.2,61.6|n
 		.talk Vhulgra##12616
-		.'Fly to Zoram'gar Outpost|goto Ashenvale,12.2,33.8,0.1|noway|q 824
+		.' Fly to Zoram'gar Outpost|goto Ashenvale,12.2,33.8,0.1|noway|q 824
 	step //37
 		goto 11.6,34.3
 		.talk Je'neu Sancrea##12736
@@ -6991,8 +7003,8 @@ startlevel 25
 		.' The path to 'Between a Rock and a Thistlefur' starts here|goto Ashenvale,31.3,46.6,0.5|noway|q 216
 	step //43
 		goto 31.3,44.8
-		.kill 8 Thistlefur Avenger|q 216/1
-		.kill 8 Thistlefur Shaman|q 216/2
+		.kill 8 Thistlefur Avenger##3925|q 216/1
+		.kill 8 Thistlefur Shaman##3924|q 216/2
 	step //44
 		goto 37.5,32.4|n
 		.' The path up to 'Troll Charm' starts here|goto Ashenvale,37.5,32.4,0.3|noway|q 216
@@ -7000,8 +7012,7 @@ startlevel 25
 		.' Go into the cave|goto Ashenvale,38.4,30.6,0.5|q 216
 	step //46
 		goto 40,32.5
-		.' Click the Troll Chests inside the cave
-		.get 8 Troll Charm|q 6462/1
+		.collect 8 Troll Charm##16602|q 6462/1
 		.info They look looke like little brown bamboo chests inside the cave.
 	step //47
 		goto 41.5,34.5
@@ -7017,26 +7028,24 @@ startlevel 25
 		.talk Mitsuwa##12721
 		..turnin Troll Charm##6462
 	step //50
-		.'Hearth to Splintertree Post|goto Ashenvale,73.9,60.7,0.1|use hearthstone##6948|noway|q 6482
+		.' Hearth to Splintertree Post|goto Ashenvale,73.9,60.7,0.1|use Hearthstone##6948|noway|q 6482
 	step //51
 		goto 74,61
 		.talk Yama Snowhoof##12837
 		..turnin Freedom to Ruul##6482
-	step //52
-		goto 73.8,61.5
-		.talk Senani Thunderheart##12696
-		..turnin Shadumbra's Head##24
 	step //53
 		ding 27
 	step //54
 		goto 81.8,52
-		.kill Satyrs|n
-		.get 16 Satyr Horns|q 6441/1
+		.from Bleakheart Satyr##3765, Bleakheart Trickster##3767, Bleakheart Shadowstalker##3770, Bleakheart Hellcaller##3771
+		.get 16 Satyr Horns##5481|q 6441/1
 	step //55
 		goto 73.1,61.5
 		.talk Pixel##12724
 		..turnin Satyr Horns##6441
 	step //56
+		goto 73.2,61.6|n
+		.talk Vhulgra##12616
 		.' Fly to Sun Rock Retreat|goto Stonetalon Mountains,45.2,59.9,5.0|noway|q 6283
 	step //57
 		.' Follow the path to the right of the Flight Path over to the Charred Vale|goto Stonetalon Mountains,44.6,61.8,0.3|q 6283
@@ -7102,8 +7111,7 @@ startlevel 25
 		..accept Sacred Fire##5062
 	step //72
 		goto 33.6,34.1
-		.' Click the Incendia Agave in the water
-		.get 10 Incendia Agave|q 5062/1
+		.collect 10 Incendia Agave##12732|q 5062/1
 		.info They look like aloe plants around the lake and inside the water.
 	step //73
 		goto 14.5,32.5|n
@@ -7125,11 +7133,11 @@ startlevel 25
 		.from Thundering Boulderkin##4120
 		.get 2 Purifying Earth##23643|q 9431/1
 	step //78
-		.' Hearth to Sun Rock Retreat|goto Stonetalon Mountains,47.5,62.1,1|use hearthstone##6948|noway|q 5062
+		.' Hearth to Sun Rock Retreat|goto Stonetalon Mountains,47.5,62.1,1|use Hearthstone##6948|noway|q 5062
 	step //79
 		goto Stonetalon Mountains,45.1,59.8|n
 		.talk Tharm##4312
-		.' Fly to Thunder Bluff|goto Thunder Bluff |q 5062
+		.' Fly to Thunder Bluff|goto Thunder Bluff|q 5062
 	step //80
 		goto Thunder Bluff,69.9,30.9
 		.talk Magatha Grimtotem##4046
@@ -7146,7 +7154,7 @@ startlevel 25
 	step //83
 		goto 46.1,51.5
 		.talk Innkeeper Abeqwa##11116
-		home Freewind Post |q 5064
+		home Freewind Post|q 5064
 	step //84
 		goto 31.2,36.9|n
 		.' The path up to 'Grimtotem Spying' starts here|goto Thousand Needles,31.2,36.9,0.3|noway|q 5064
@@ -7164,8 +7172,8 @@ startlevel 25
 		.info It's a grey chest inside the teepee house.
 	step //88
 		goto 38,35.3
-		.' Click the Sacred Fire of Life
-		.' Light the Sacred Fire of Life to summon Arikara|goal Light the Sacred Fire of Life|q 5088/1
+		.' Interact with gameobject: Sacred Fire of Life
+		.goal Light the Sacred Fire of Life|q 5088/1
 		.from Arikara##10882
 		.get Arikara Serpent Skin##12925|q 5088/2
 	step //89
@@ -7179,12 +7187,14 @@ startlevel 25
 		goto 37.7,26.7
 		.talk Lakota Windsong##10646
 		..accept Free at Last##4904
-		.' Escort Lakota Windsong from the Darkcloud Pinnacle|goal Escort Lakota Windsong from the Darkcloud Pinnacle.|q 4904/1
+		.goal Escort Lakota Windsong from the Darkcloud Pinnacle|q 4904/1
 	step //92
-		goto 21.5,32.4
+		goto 21.5,32.3
 		.talk Motega Firemane##10428
 		..turnin Homeward Bound##4770
 		..turnin Arikara##5088
+	step
+		goto 21.4,32.6
 		.talk Wizlo Bearingshiner##10941
 		..turnin A Different Approach##9431
 		..accept A Dip in the Moonwell##9433
@@ -7203,7 +7213,7 @@ startlevel 25
 		.info Steelsnap wanders around this area.
 		.get Steelsnap's Rib##5837|q 1131/1
 	step //96
-		.' Hearth to Freewind Post|goto Thousand Needles,46.0,51.4,2.0|use hearthstone##6948|noway|q 1197
+		.' Hearth to Freewind Post|goto Thousand Needles,46.0,51.4,2.0|use Hearthstone##6948|noway|q 1197
 	step //97
 		goto 46.1,51.7
 		.talk Rau Cliffrunner##4722
@@ -7220,7 +7230,7 @@ startlevel 25
 	step //100
 		goto 45.1,49.1|n
 		.talk Nyse##4317
-		.' Fly to Thunder Bluff|goto Thunder Bluff |q 1131
+		.' Fly to Thunder Bluff|goto Thunder Bluff|q 1131
 	step //101
 		goto Thunder Bluff,61.5,80.9
 		.talk Melor Stonehoof##3441
@@ -7233,33 +7243,39 @@ startlevel 25
 	step //103
 		goto Thousand Needles,22.1,31
 		.' Find the Galak Messenger.
-		.kill the Galak Messenger##10617|n
-		.collect the Assassination Note##12564|n
+		.from the Galak Messenger##10617
+		.collect the Assassination Note##12564|q 4881 |future
+		.info Walk this road east to west from this point to the fork in the road to the east until you find the Galak Messenger running along the road.
+	step
 		.use Assassination Note##12564
 		..accept Assassination Plot##4881
-		.info Walk this road east to west from this point to the fork in the road to the east until you find the Galak Messenger running along the road.
 	step //104
 		goto 21.3,32.1
 		.talk Kanati Greycloud##10638
 		..turnin Assassination Plot##4881
 		..accept Protect Kanati Greycloud##4966
-		.' Protect Kanati Greycloud from the centaur attack
+		.info Get ready, after accepting the quest, you will have to fight off waves of enemies.
+	step
+		goto 21.42,31.73
+		.goal Protect Kanati Greycloud from the centaur attack|q 4966/1
+	step
+		goto 21.3,32.1
 		.talk Kanati Greycloud##10638
 		..turnin Protect Kanati Greycloud##4966
 	step //105
 		goto 12,18.8|n
 		.' The path to 'A Dip in the Moonwell' starts here.
-		..'You can get up on the ledge at this spot|goto Thousand Needles,9.85,18.25,0.3|noway|q 9433
+		.' You can get up on the ledge at this spot|goto Thousand Needles,9.85,18.25,0.3|noway|q 9433
 	step //106
 		goto 9.5,18.7
 		.' Stand next to the Concealed Control Panel
 		.' Dismiss your pet if you have one
 		.' Use your Robotron Control Unit|use Robotron Control Unit##23675
 		.' While in control of the Robotron 3000:
-		..'Walk west to the moonwell
-		..'Use the Gather Water ability on the Roboton 3000 pet toolbar while standing in the moonwell water
-		.get Thalanaar Moonwell Water|q 9433/1
-		.Cancel the "Summon Robot" buff to dismiss the robot|nobuff INV_Gizmo_07
+		.' Walk west to the moonwell
+		.' Use the Gather Water ability on the Roboton 3000 pet toolbar while standing in the moonwell water
+		.collect Thalanaar Moonwell Water##23670|q 9433/1
+		.' Cancel the "Summon Robot" buff to dismiss the robot|nobuff INV_Gizmo_07
 	step //107
 		goto 21.5,32.4
 		.talk Wizlo Bearingshiner##10941
@@ -7268,18 +7284,18 @@ startlevel 25
 	step //108
 		ding 29
 	step //109
-		.' The path up to 'Test of Endurance' starts here|goto 27.5,49.8,0.5|c
+		.' The path up to 'Test of Endurance' starts here|goto 27.5,49.8,0.5|q 1150
 	step //110
-		.' Go inside the cave|goto 27.4,51.0,0.5 |q 1150
+		.' Go inside the cave|goto 27.4,51.0,0.5|q 1150
 	step //111
 		goto 26,55
-		.Click the Harpy Foodstuffs
+		.' Interact with gameobject: Harpy Foodstuffs
 		.from Grenka Bloodscreech##4490
-		.get Grenka's Claw|q 1150/1
+		.get Grenka's Claw##5843|q 1150/1
 	step //112
-		Go outside the cave|goto 27.4,51.0,0.5
+		.' Go outside the cave|goto 27.4,51.0,0.5|q 1150
 	step //113
-		'Go to Freewind Post|goto Thousand Needles,45.8,50.0,0.1|c
+		.' Go to Freewind Post|goto Thousand Needles,45.8,50.0,0.1|q 9434
 	step //114
 		goto 46.2,50.4
 		.talk Magistrix Elosai##17093
@@ -7292,35 +7308,39 @@ startlevel 25
 	step //116
 		goto 20.6,39.5
 		.from Rok'Alim the Pounder##4499
-		.get Fragments of Rok'Alim|q 1151/1
+		.get Fragments of Rok'Alim##5844|q 1151/1
 	step //117
-		.'Hearth to Freewind Post|goto Thousand Needles,45.0,49.1,0.3|use hearthstone##6948|noway|c
+		.' Hearth to Freewind Post|goto Thousand Needles,45.0,49.1,0.3|use Hearthstone##6948|noway|q 1151
 	step //118
 		goto 54,41
 		.talk Dorn Plainstalker##2986
 		..turnin Test of Strength##1151
 	step //119
-		'Go to Freewind Post|goto Thousand Needles,45.8,50.0,0.1|c
+		.' Go to Freewind Post|goto Thousand Needles,45.8,50.0,0.1|q 1088 |future
 	step //120
-		'Fly to Sun Rock Retreat|goto Stonetalon Mountains,45.2,59.9,0.1|noway|c
+		goto 45.1,49.1|n
+		.talk Nyse##4317
+		.' Fly to Sun Rock Retreat|goto Stonetalon Mountains,45.2,59.9,0.1|noway|q 1088 |future
 	step //121
 		goto 45.9,60.4
 		.talk Braelyn Firehand##4198
 		..accept Ordanus##1088
 	step //122
-		'Fly to Splintertree Post|goto Ashenvale,73.3,61.7,0.1|noway|c
+		goto 45.1,59.8|n
+		.talk Tharm##4312
+		.' Fly to Splintertree Post|goto Ashenvale,73.3,61.7,0.1|noway|q 1088
 	step //123
 		goto Ashenvale,73.2,60.4
 		.talk Valusha##17355
 		..accept Destroy the Legion##9534
 	step //124
 		goto 80,68
-		.kill 6 Mannoroc Lasher|q 9534/1
-		.kill 6 Roaming Felguard|q 9534/2
-		.kill 6 Searing Infernal|q 9534/3
-		. Kill Legion mobs
-		. Get the Diabolical Plans
-		. Click the Diabolical Plans|use Diabolical Plans##23797
+		.kill 6 Mannoroc Lasher##11697|q 9534/1
+		.kill 6 Roaming Felguard##6115|q 9534/2
+		.kill 6 Searing Infernal##6073|q 9534/3
+		.collect Diabolical Plans##23797|q 9535 |future
+	step
+		.use Diabolical Plans##23797
 		..accept Diabolical Plans##9535
 	step //125
 		goto 73.2,60.4
@@ -7330,30 +7350,26 @@ startlevel 25
 	step //126
 		goto 74,70
 		.from Sharptalon##12676
-		. Get Sharptalon's Claw
-		. Click Sharptalon's Claw|use Sharptalon's Claw##16305
+		.collect Sharptalon's Claw##16305|q 2 |future
+	step
+		.use Sharptalon's Claw##16305
 		..accept Sharptalon's Claw##2
 	step //127
 		goto 62.1,51.2
 		.from Keeper Ordanus##4273
-		.get Ordanus' Head|q 1088/1
-		info He is at the top of this tree tower
+		.get Ordanus' Head##5686|q 1088/1
+		.info He is at the top of this tree tower.
 	step //128
-		'Go to Splintertree Post|goto Ashenvale,73.3,61.7,0.1|c
+		.' Go to Splintertree Post|goto Ashenvale,73.3,61.7,0.1|q 2
 	step //129
 		goto 73.8,61.5
 		.talk Senani Thunderheart##12696
 		..turnin Sharptalon's Claw##2
 		..accept The Hunt Completed##247
-	//step //130.1
-	//	'If you have a full set of "Shredder Operating Manual" pages, bind them into 3 Chapters and do the following quest.
-	//	'Otherwise either fly to Orgrimmar to buy the remaining pages and complete the quest, or skip this step.
-	//	goto 70.0,71.1
-	//	.talk Gurda Ragescar##12718
-	//	..accept The Lost Pages##6504
-	//	..turnin The Lost Pages##6504
 	step //130
-		'Fly to Sun Rock Retreat|goto Stonetalon Mountains,45.2,59.9,0.1|noway|c
+		goto 73.2,61.6|n
+		.talk Vhulgra##12616
+		.' Fly to Sun Rock Retreat|goto Stonetalon Mountains,45.2,59.9,0.1|noway|q 1088
 	step //131
 		goto Stonetalon Mountains,45.9,60.4
 		.talk Braelyn Firehand##4198
@@ -7362,27 +7378,25 @@ startlevel 25
 	step //132
 		goto Stonetalon Mountains,47.5,62.1
 		.talk Innkeeper Jayka##7731
-		home Sun Rock Retreat
+		home Sun Rock Retreat|q 1089
 	step //133
 		goto 29.9,15.2
-		.Click the Gatekeeper's Hold
+		.' Interact with gameobject: Gatekeeper's Hold
 		.collect Gatekeeper's Key##5687|q 1089
 	step //134
 		goto 29.5,15.8
-		.Click the Druids' Cache
-		.get Claw Key|q 1089/2
+		.collect Claw Key##5690|q 1089/2
+		.info It looks like a bowl.
 	step //135
 		goto 28.0,13.8
-		.Click the Barrow Cache
-		.get Barrow Key|q 1089/3
-		info It's on the ledge of the uppermost level across a bridge
+		.collect Barrow Key##5691|q 1089/3
+		.info It's on the ledge of the uppermost level across a bridge.
 	step //136
 		goto 25.6,11.4
-		.Click the Sleepers' Cache
-		.get Sleepers' Key|q 1089/1
+		.collect Sleepers' Key##5689|q 1089/1
 	step //137
 		goto 26.6,10.8
-		. Click the Talon Den Hoard
+		.' Interact with gameobject: Talon Den Hoard
 		..turnin The Den##1089
 	step //138
 		ding 30
