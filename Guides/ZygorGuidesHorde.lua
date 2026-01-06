@@ -7402,34 +7402,36 @@ startlevel 25
 		ding 30
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",[[
-	author support@zygorguides.com
-	next Zygor's Horde Leveling Guides\\Levels (35-40)
-	startlevel 30
+author support@zygorguides.com
+next Zygor's Horde Leveling Guides\\Levels (35-40)
+startlevel 30
 	step //1
-		'Hearth to Sun Rock Retreat|goto Stonetalon Mountains,47.5,62.1,0.5|use hearthstone##6948|noway|c
+		.' Hearth to Sun Rock Retreat|goto Stonetalon Mountains,47.5,62.1,0.5|use Hearthstone##6948|noway|q 494 |future
 	step //2
-		'Fly to Orgrimmar|goto Orgrimmar
+		goto 45.1,59.8|n
+		.talk Tharm##4312
+		.' Fly to Orgrimmar|goto Orgrimmar|q 494 |future
 	step //3
 		goto Orgrimmar,80.4,32.4
 		.talk Sorek##3354
 		..accept The Islander##1718
+		.info He is the Warrior Class Trainer.
 		only Warrior
-		info2 He is the Warrior Class Trainer
 	step //4
-		'Fly to Ratchet|goto The Barrens,63.1,37.1,0.1|noway|c
+		.' Fly to Ratchet|goto The Barrens,63.1,37.1,0.1|noway|q 1718
 		only Warrior
 	step //5
 		goto The Barrens,68.6,49.2
 		.talk Klannoc Macleod##6236
 		..turnin The Islander##1718
 		..accept The Affray##1719
+		.info He's hold a samurai sword.
 		only Warrior
-		info2 He's hold a samurai sword
 	step //6
 		goto 68.6,48.7
 		.' Step on the grate to begin the Affray
 		.' Kill the challengers as they come
-		.kill 1 Big Will|q 1719/2
+		.kill 1 Big Will##6238|q 1719/2
 		only Warrior
 	step //7
 		goto 68.6,49.2
@@ -7437,7 +7439,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		..turnin The Affray##1719
 		only Warrior
 	step //8
-		'Go to Ratchet and fly to Orgrimmar|goto Orgrimmar
+		.' Go to Ratchet and fly to Orgrimmar|goto Orgrimmar|q 494 |future
 		only Warrior
 	step //9
 		goto Orgrimmar,38,38
@@ -7445,65 +7447,38 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		..accept Call of Air (1)##1531
 		only Shaman
 	step //10
-		'Fly to Freewind Post|goto Thousand Needles,45.0,49.1,0.1|noway|c
+		.' Fly to Freewind Post|goto Thousand Needles,45.0,49.1,0.1|noway|q 1531
 		only Shaman
 	step //11
 		goto Thousand Needles,54.6,44.7|n
-		.' The path up Prate Cloudseer starts here|goto Thousand Needles,54.6,44.7,0.3|noway|c
+		.' The path up Prate Cloudseer starts here|goto Thousand Needles,54.6,44.7,0.3|noway|q 1531
 		only Shaman
 	step //12
-		'Go up to the path to 53.6,42.7|goto 53.6,42.7
+		.' Go up to the path to 53.6,42.7|goto 53.6,42.7
 		.talk Prate Cloudseer##5905
 		..turnin Call of Air (1)##1531
 		only Shaman
 	step //13
-		'Go southwest to Freewind Post and fly to Orgrimmar|goto Orgrimmar
+		.' Go southwest to Freewind Post and fly to Orgrimmar|goto Orgrimmar|q 494 |future
 		only Shaman
 	step //14
-		home Orgrimmar
-
-// warlock quest missing?
-//	step
-//		goto Orgrimmar,48.2,45.3
-//		.talk Gan'rul Bloodeye##5875
-//		..accept Seeking Strahad##2996 |noobsolete
-//		only Warlock
-//	step
-//		'Fly to Ratchet|goto The Barrens,63.1,37.1,0.5|noway|c
-//		only Warlock
-//	step
-//		goto The Barrens,62.6,35.5
-//		.talk Strahad Farsan##6251
-//		..turnin Seeking Strahad##2996
-//		..accept Tome of the Cabal (1)##1801 |noobsolete
-//		only Warlock
-//	step
-//		'Fly to Orgrimmar|goto Orgrimmar
-//		only Warlock
-// ---
-
+		goto Orgrimmar,54.1,68.4
+		.talk Innkeeper Gryshka##6929
+		home Orgrimmar|q 494 |future
 	step //15
-		'Go outside to Durotar|goto Durotar
+		.' Go outside to Durotar|goto Durotar|q 494 |future
 	step //16
 		goto Durotar,50.82,13.52|n
-		.' Ride the zeppelin to Undercity|goto Tirisfal Glades|noway|c
-		info You can ride zeppelins to either Undercity or the Grom'Gol Base Camp here
+		.' Ride the zeppelin to Undercity|goto Tirisfal Glades|noway|q 494 |future
+		.info You can ride zeppelins to either Undercity or the Grom'Gol Base Camp here.
 	step //17
-		'Go to the Undercity|goto Undercity
-
-// Warlock cont'd
-//	step
-//		goto Undercity,76.0,37.7
-//		.talk Jorah Annison##6293
-//		..turnin Tome of the Cabal (1)##1801
-//		..accept Tome of the Cabal (2)##1803
-//		only Warlock
-// ---
-
+		.' Go to the Undercity|goto Undercity|q 494 |future
 	step //18
-		'Fly to The Sepulcher|goto Silverpine Forest,45.6,42.4,0.1|noway|c
+		goto Undercity,63.3,48.6|n
+		.talk Michael Garrett##4551
+		.' Fly to The Sepulcher|goto Silverpine Forest,45.6,42.4,0.1|noway|q 494 |future
 	step //19
-		'Go south to Hillsbrad Foothills|goto Hillsbrad Foothills,13.8,45.8,0.5
+		.' Go south to Hillsbrad Foothills|goto Hillsbrad Foothills,13.8,45.8,0.5|noway|q 494 |future
 	step //20
 		goto Hillsbrad Foothills,20.8,47.4
 		.talk Deathstalker Lesh##2214
@@ -7511,7 +7486,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 	step //21
 		goto Hillsbrad Foothills,60.1,18.6
 		.talk Zarise##2389
-		.fpath Tarren Mill
+		.fpath Tarren Mill|q 494
 	step //22
 		goto 61.4,19.1
 		.talk Apothecary Lydon##2216
@@ -7535,13 +7510,12 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		..accept Helcular's Revenge (1)##552
 	step //27
 		goto 48.1,31.4
-		.' Kill yetis inside and around the cave
-		.get Helcular's Rod|q 552/1
+		.from Cave Yeti##2248, Ferocious Yeti##2249, Mountain Yeti##2250
+		.get Helcular's Rod##3708|q 552/1
 	step //28
-		//goto Alterac Mountains,48.5,75.2
 		goto Hillsbrad Foothills,52.3,33.0
-		.' Kill Mountain Lions
-		.get 10 Mountain Lion Blood|q 501/1
+		.from Starving Mountain Lion##2384
+		.get 10 Mountain Lion Blood##3496|q 501/1
 	step //29
 		goto Hillsbrad Foothills,61.4,19.1
 		.talk Apothecary Lydon##2216
@@ -7552,11 +7526,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		..turnin Helcular's Revenge (1)##552
 		..accept Helcular's Revenge (2)##553
 	step //31
-		'Go southeast to Arathi Highlands|goto Arathi Highlands,20.0,29.3,0.2
+		.' Go southeast to Arathi Highlands|goto Arathi Highlands,20.0,29.3,0.2|q 655 |future
 	step //32
 		goto Arathi Highlands,73,32.7
 		.talk Urda##2851
-		.fpath Hammerfall
+		.fpath Hammerfall|q 655 |future
 	step //33
 		goto 72.6,33.9
 		.talk Gor'mul##2792
@@ -7568,8 +7542,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		..accept Raising Spirits (1)##672
 	step //35
 		goto 69.9,36.2
-		.' Kill raptors
-		.get 10 Highland Raptor Eye|q 672/1
+		.from Highland Strider##2559, Highland Thrasher##2560
+		.get 10 Highland Raptor Eye##4512|q 672/1
 	step //36
 		goto 74.7,36.3
 		.talk Tor'gan##2706
@@ -7586,66 +7560,72 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		..turnin Raising Spirits (3)##675
 		..accept Foul Magics (1)##671
 	step //39
-		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
+		.' Hearth to Orgrimmar|goto Orgrimmar|use Hearthstone##6948|noway|q 583 |future
 	step //40
-		'Go outside to Durotar|goto Durotar
+		.' Go outside to Durotar|goto Durotar|q 583 |future
 	step //41
 		goto Durotar,50.8,13.3|n
-		.' Ride the zeppelin to Grom'Gol Base Camp|goto Stranglethorn Vale|noway|c
-		info You can ride zeppelins to either Undercity or the Grom'Gol Base Camp here
+		.' Ride the zeppelin to Grom'Gol Base Camp|goto Stranglethorn Vale|noway|q 583 |future
+		.info You can ride zeppelins to either Undercity or the Grom'Gol Base Camp here.
 	step //42
 		goto Stranglethorn Vale,32.5,29.4
 		.talk Thysta##1387
-		..fpath Grom'gol Base Camp
+		.fpath Grom'gol Base Camp|q 583 |future
 	step //43
-		goto 35.6,10.6
+		goto 35.7,10.5
 		.talk Barnil Stonepot##716
 		..accept Welcome to the Jungle##583
+	step
+		goto 35.7,10.8
 		.talk Hemet Nesingwary Jr.##715
 		..turnin Welcome to the Jungle##583
 		..accept Raptor Mastery (1)##194
+	step
+		goto 35.6,10.6
 		.talk Ajeck Rouack##717
 		..accept Tiger Mastery (1)##185
+	step
+		goto 35.6,10.5
 		.talk Sir S. J. Erlgadin##718
 		..accept Panther Mastery (1)##190
-		info2 Go here to Locate the hunters' camp
 	step //44
 		goto 41.2,12
-		.kill 10 Young Panther|q 190/1
+		.kill 10 Young Panther##683|q 190/1
 	step //45
-		goto 35.6,10.6
+		goto 35.6,10.5
 		.talk Sir S. J. Erlgadin##718
 		..turnin Panther Mastery (1)##190
 		..accept Panther Mastery (2)##191
-		info2 Go here to Locate the hunters' camp
 	step //46
 		goto 35.4,12.1
-		.kill 10 Young Stranglethorn Tiger|q 185/1
+		.kill 10 Young Stranglethorn Tiger##681|q 185/1
 	step //47
 		goto 35.6,10.6
 		.talk Ajeck Rouack##717
 		..turnin Tiger Mastery (1)##185
 		..accept Tiger Mastery (2)##186
-		info2 Go here to Locate the hunters' camp
 	step //48
 		goto 29.6,10.7
-		.kill 10 Stranglethorn Tiger|q 186/1
-		.kill 10 Panther|q 191/1
+		.kill 10 Stranglethorn Tiger##682|q 186/1
+		.kill 10 Panther##736|q 191/1
 	step //49
 		goto 35.6,10.6
 		.talk Ajeck Rouack##717
 		..turnin Tiger Mastery (2)##186
 		..accept Tiger Mastery (3)##187
+	step
+		goto 35.6,10.5
 		.talk Sir S. J. Erlgadin##718
 		..turnin Panther Mastery (2)##191
 		..accept Panther Mastery (3)##192
-		info2 Go here to Locate the hunters' camp
 	step //50
 		ding 31
 	step //51
-		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
+		.' Hearth to Orgrimmar|goto Orgrimmar|use Hearthstone##6948|noway|q 1361
 	step //52
-		'Fly to the Crossroads|goto The Barrens,51.5,30.4,0.1|noway|c
+		goto Orgrimmar,45.1,63.9|n
+		.talk Doras##3310
+		.' Fly to the Crossroads|goto The Barrens,53.43,53.97,0.5|noway|q 1361
 	step //53
 		goto The Barrens,51.1,29.6
 		.talk Korran##3428
@@ -7656,19 +7636,23 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		..turnin Regthar Deathgate##1361
 		..accept The Kolkar of Desolace##1362
 	step //55
-		'Go east to the Crossroads and fly to Freewind Post|goto Thousand Needles,45.0,49.1,0.1|noway|c
+		goto 51.5,30.3|n
+		.talk Devrak##3615
+		.' Fly to Freewind Post|goto Thousand Needles,45.0,49.1,0.1|noway|q 1105 |future
 	step //56
 		goto Thousand Needles,78.1,77.1
 		.talk Wizzle Brassbolts##4453
 		..accept Hardened Shells##1105
+	step
+		goto Thousand Needles,78.1,77.1
 		.talk Fizzle Brassbolts##4454
 		..accept Salt Flat Venom##1104
 	step //57
 		goto 77.8,77.3
 		.talk Kravel Koalbeard##4452
 		..accept Rocket Car Parts##1110
-		..accept Hemet Nesingwary Jr.##5762
 		..accept Wharfmaster Dizzywig##1111
+		..accept Hemet Nesingwary Jr.##5762
 	step //58
 		goto 80.2,75.9
 		.talk Pozzik##4630
@@ -7678,23 +7662,46 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		.talk Trackmaster Zherin##4629
 		..accept A Bump in the Road##1175
 	step //60
-		'Get Rocket Car Parts as you quest around Shimmering Flats
+		goto Thousand Needles,87.45,65.73
+		.from Salt Flats Scavenger##4154, Salt Flats Vulture##4158
+		.get 10 Hollow Vulture Bone##5848|q 1176/1
+		.' You can find more around (1)|at 75.28,53.62
+		.' You can find more around (2)|at 73.95,58.5
+		.' You can find more around (3)|at 70.24,62.23
+		.' You can find more around (4)|at 71.5,67.5
+		.' You can find more around (5)|at 71.6,73.99
 	step //61
-		goto 87.8,65.5
-		.' Kill vultures
-		.get 10 Hollow Vulture Bone|q 1176/1
+		goto Thousand Needles,82.53,55.37
+		.from Sparkleshell Tortoise##4142, Sparkleshell Snapper##4143, Sparkleshell Borer##4144
+		.info They look like turtles.
+		.collect 9 Hardened Tortoise Shell##5795|q 1105/1
+		.' You can find more around (1)|at 77.41,53.72
+		.' You can find more around (2)|at 73.05,56.51
+		.' You can find more around (3)|at 74.82,63.33
 	step //62
-		goto 83.2,55.5
-		.' Kill turtles
-		.get 9 Hardened Tortoise Shell|q 1105/1
+		goto Thousand Needles,77.73,59.22
+		.kill 10 Saltstone Basilisk##4147|q 1175/1
+		.' You can find more around (1)|at 73.41,57.27
+		.' You can find more around (2)|at 70.97,66.69
+		.' You can find more around (3)|at 77.48,52.40
 	step //63
-		goto 75.5,54.9
-		.kill 10 Saltstone Basilisk|q 1175/1
-		.' Finish getting the 30 Rocket Car Parts you need|goal 30 Rocket Car Parts|q 1110/1
+		goto Thousand Needles,83.06,61.38
+		.from Scorpid Terror##4139, Scorpid Reaver##4140
+		.info They look like scorpions.
+		.collect 6 Salty Scorpid Venom##5794|q 1104/1
+		.' You can find more around (1)|at 77.95,53.29
+		.' You can find more around (2)|at 73.56,56.98
+		.' You can find more around (3)|at 71.30,66.70
+		.' You can find more around (4)|at 77.61,68.70
 	step //64
-		goto 71.7,72.6
-		.' Kill scorpions
-		.get 6 Salty Scorpid Venom|q 1104/1
+		goto Thousand Needles,83.06,61.38
+		.collect 30 Rocket Car Parts##5798|q 1110/1
+		.info They look like various machine parts scattered on the ground.
+		.info You can find them all throughout the Shimmering Flats.
+		.' You can find more around (1)|at 77.95,53.29
+		.' You can find more around (2)|at 73.56,56.98
+		.' You can find more around (3)|at 71.30,66.70
+		.' You can find more around (4)|at 77.61,68.70
 	step //65
 		goto 77.8,77.3
 		.talk Kravel Koalbeard##4452
@@ -7703,8 +7710,12 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		goto 78.1,77.1
 		.talk Fizzle Brassbolts##4454
 		..turnin Salt Flat Venom##1104
+	step
+		goto 78.1,77.1
 		.talk Wizzle Brassbolts##4453
 		..turnin Hardened Shells##1105
+	step
+		goto 78.1,77.1
 		.talk Fizzle Brassbolts##4454
 		..accept Martek the Exiled##1106
 	step //67
@@ -7713,13 +7724,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		..turnin Load Lightening##1176
 		..accept Goblin Sponsorship (1)##1178
 	step //68
-		'Go southwest to Tanaris|goto Tanaris
+		.' Go southwest to Tanaris|goto Tanaris|q 1145
 	step //69
 		goto Tanaris,51.6,25.4
 		.talk Bulkrek Ragefist##7824
-		..fpath Gadgetzan
+		.fpath Gadgetzan|q 1145
 	step //70
-		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
+		.' Hearth to Orgrimmar|goto Orgrimmar|use Hearthstone##6948|noway|q 1145
 	step //71
 		goto Orgrimmar,75.2,34.2
 		.talk Belgrom Rockmaul##4485
@@ -7728,47 +7739,45 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		goto 45.3,51.6
 		.talk Craven Drok##5639
 		..accept Alliance Relations (1)##1431
-// and maybe somewhere here...
-//  goto 48.5,45.5
-//  .talk Zevrost##3326
-//  ..accept In Search of Menara Voidrender##4737
-//  only Warlock
 	step //73
 		goto 22.3,53.8
 		.talk Keldran##5640
 		..turnin Alliance Relations (1)##1431
 		..accept Alliance Relations (2)##1432
 	step //74
-		'Go outside to Durotar|goto Durotar
+		.' Go outside to Durotar|goto Durotar|q 676
 	step //75
 		goto Durotar,51,14|n
-		. Ride the zeppelin to Undercity|goto Tirisfal Glades,60.7,58.8,2|noway|c
+		. Ride the zeppelin to Undercity|goto Tirisfal Glades,60.7,58.8,2|noway|q 676
 	step //76
-		'Go to the Undercity|goto Undercity
+		.' Go to the Undercity|goto Undercity|q 676
 	step //77
-		'Fly to Tarren Mill|goto Hillsbrad Foothills,61.4,23.0,4
+		goto Undercity,63.3,48.6|n
+		.talk Michael Garrett##4551
+		.' Fly to Tarren Mill|goto Hillsbrad Foothills,61.4,23.0,4|noway|q 676
 	step //78
 		goto Arathi Highlands,30.9,48.4
-		.kill 8 Boulderfist Ogre|q 676/1
-		info Kill 8 Boulderfist Ogres around this area
+		.kill 8 Boulderfist Ogre##2562|q 676/1
 	step //79
 		goto 35.1,44.3
-		'Inside the cave,
-		.kill 10 Boulderfist Enforcer|q 676/2
+		.kill 10 Boulderfist Enforcer##2564|q 676/2
+		.info Inside the cave.
 	step //80
 		goto 74.2,33.9
 		.talk Drum Fel##2771
 		..turnin The Hammer May Fall##676
 	step //81
-		'Fly to Undercity|goto Undercity
+		goto 73.1,32.7|n
+		.talk Urda##2851
+		.' Fly to Undercity|goto Undercity|q 194
 	step //82
-		'Go outside of Undercity|goto Tirisfal Glades
+		.' Go outside of Undercity|goto Tirisfal Glades|q 194
 	step //83
-		goto Tirisfal Glades,62.0,59.1|n
-		.Ride the zeppelin to Grom'Gol Base Camp|goto Stranglethorn Vale,31.9,28.4,3
+		goto Tirisfal Glades,62,59.1|n
+		.' Ride the zeppelin to Grom'Gol Base Camp|goto Stranglethorn Vale,31.9,28.4,3|noway|q 194
 	step //84
 		goto Stranglethorn Vale,28,15.5
-		.kill 10 Stranglethorn Raptor|q 194/1
+		.kill 10 Stranglethorn Raptor##685|q 194/1
 	step //85
 		ding 32
 	step //86
@@ -7778,21 +7787,24 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		..accept Raptor Mastery (2)##195
 		..turnin Hemet Nesingwary Jr.##5762
 	step //87
-		.Go to Grom'Gol Base Camp|goto Stranglethorn Vale,31.9,28.4,3
+		.' Go to Grom'Gol Base Camp|goto Stranglethorn Vale,31.9,28.4,3|q 5561 |future
 	step //88
-		goto 31.4,30.1
-		.Ride the zeppelin to Orgrimmar|goto Durotar,50.8,13.2,1|noway|c
+		goto 31.4,30.1|n
+		.' Ride the zeppelin to Orgrimmar|goto Durotar,50.8,13.2,1|noway|q 5561 |future
 	step //89
-		.Go to Orgrimmar|goto Orgrimmar|noway
+		.' Go to Orgrimmar|goto Orgrimmar|noway|q 5561 |future
 	step //90
-		'Fly to Sun Rock Retreat|goto Stonetalon Mountains,45.2,59.9,0.1|noway|c
+		goto Orgrimmar,45.1,63.9|n
+		.talk Doras##3310
+		.' Fly to Sun Rock Retreat|goto Stonetalon Mountains,45.2,59.9,0.1|noway|q 5561 |future
 	step //91
-		'Go southwest to Desolace|goto Desolace
+		.' Go southwest to Desolace|goto Desolace|q 5561 |future
 	step //92
 		goto Desolace,57.8,21.7
-		.' Kill Burning Blade mobs
-		.get a Flayed Demon Skin|n
-		.' Click the Flayed Demon Skin|use Flayed Demon Skin##20310
+		.from Burning Blade Reaver##4664, Burning Blade Adept##4665, Burning Blade Felsworn##4666
+		.collect Flayed Demon Skin##20310|q 1480 |future
+	step
+		.use Flayed Demon Skin##20310
 		..accept The Corrupter (1)##1480
 	step //93
 		goto 60.9,61.9
@@ -7814,6 +7826,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		.talk Felgur Twocuts##5395
 		..turnin The Kolkar of Desolace##1362
 		..accept Khan Dez'hepah##1365
+	step
+		goto 56.3,59.7
 		.talk Gurda Wildmane##5412
 		..accept Gelkis Alliance##1368
 	step //97
@@ -7826,21 +7840,20 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		goto 52.2,53.4
 		.talk Maurin Bonesplitter##4498
 		..turnin Alliance Relations (3)##1433
-		..accept The Burning of Spirits##1435
 		..turnin The Corrupter (1)##1480
+		..accept The Burning of Spirits##1435
 		..accept The Corrupter (2)##1481
 	step //99
 		goto 72.3,23.6
-		.kill 7 Hatefury Rogue|q 1434/1
-		.kill 7 Hatefury Felsworn|q 1434/2
-		.kill 7 Hatefury Betrayer|q 1434/3
-		.kill 7 Hatefury Hellcaller|q 1434/4
-		.' Kill Hatefury Shadowstalkers
-		.get Shadowstalker Scalp|q 1481/1
+		.kill 7 Hatefury Rogue##4670|q 1434/1
+		.kill 7 Hatefury Felsworn##4672|q 1434/2
+		.kill 7 Hatefury Betrayer##4673|q 1434/3
+		.kill 7 Hatefury Hellcaller##4675|q 1434/4
+		.from Hatefury Shadowstalker##4674
+		.get Shadowstalker Scalp##6441|q 1481/1
 	step //100
 		goto 73.8,67
-		//.' Kill Magram centaurs until you are friendly with the Gelkis Clan Centaur|goal Gelkis Clan Centaur: Friendly / Friendly|q 1368/1
-		.' Kill Magram centaurs until you are friendly with the Gelkis Clan Centaur |rep Gelkis Clan Centaur,Friendly |q 1368
+		.' Kill Magram centaurs until you are friendly with the Gelkis Clan Centaur |rep Gelkis Clan Centaur,Friendly|q 1368
 		.' It takes about 50 kills
 	step //101
 		goto 55.4,55.8
@@ -7861,20 +7874,19 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		..accept Bone Collector##5501
 	step //105
 		goto 54.4,60.5
-		.' Click the Kodo Bones
-		.' Run away if a Kodo Apparition spawns, if you cannot kill them
-		.get 10 Kodo Bone|q 5501/1
-		info They look like small bone kodo heads on the ground around this area.
+		.' Run away if a Kodo Apparition spawns, if you cannot kill them.
+		.collect 10 Kodo Bone##13703|q 5501/1
+		.info They look like small bone kodo heads on the ground around this area.
 	step //106
 		goto 62.3,39
 		.talk Bibbly F'utzbuckle##11438
 		..turnin Bone Collector##5501
 	step //107
-		goto 74.6,48.8
-		.' Kill Khan Dez'hepah
-		.get Khan Dez'hepah's Head|q 1365/1
-		info He spawns at different spots all around where these centaurs are.
-		info I found him in this tent, but you may need to search for him around this area
+		goto 73.4,41.6
+		.from Khan Dez'hepah##5600
+		.get Khan Dez'hepah's Head##6066|q 1365/1
+		.info He spawns at different spots all around where these centaurs are.
+		.info I found him in this tent, but you may need to search for him around this area.
 	step //108
 		goto 56.2,59.6
 		.talk Felgur Twocuts##5395
@@ -7898,7 +7910,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 	step //113
 		goto Desolace,24.1,68.2
 		.talk Innkeeper Sikewa##11106
-		home Shadowprey Village
+		home Shadowprey Village|q 5763
 	step //114
 		goto 23.3,72.9
 		.talk Drulzegar Skraghook##12340
@@ -7910,39 +7922,37 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 	step //116
 		goto 21.6,74.1
 		.talk Thalon##6726
-		..fpath Shadowprey Village
+		.fpath Shadowprey Village|q 6142
 	step //117
 		goto 19.5,75.9
-		.' Click the Shellfish Traps underwater
-		.collect 10 Shellfish##13545|q 5386 //actually it's for 5421, but we need it for 5386. go figure.
-		info They look like yellow cages underwater around this area.
+		.' Interact with gameobject: Shellfish Trap
+		.collect 10 Shellfish##13545|q 5386
+		.info They look like yellow cages underwater around this area.
 	step //118
 		goto 22.5,73.1
 		.talk Jinar'Zillen##11317
-		..'Turn in 'Fish in a Bucket' twice
-		..turnin Fish in a Bucket##5421
-		..get 2 Bloodbelly Fish|q 5386/1
+		.' Turn in 'Fish in a Bucket' twice.
+		.collect 2 Bloodbelly Fish##13546|q 5386/1
 	step //119
 		goto 25,40
-		.' Click the Giant Softshell Clams and kill Enraged Reef Crawlers underwater
-		.' Open the Soft-shelled Clams you get
-		.get 10 Soft-shelled Clam Meat|q 6142/1
-		info They look like giant clams underwater.
+		.collect Soft-shelled Clam##15874|n
+		.info They look like giant clams underwater.
+		.' Open the Clam in your bags|use Soft-shelled Clam##15874
+		.collect 10 Soft-shelled Clam Meat##15924|q 6142/1
 	step //120
 		goto 36.1,30.4
-		.' Click Rackmore's Log
+		.' Interact with gameobject: Rackmore's Log
 		..accept Claim Rackmore's Treasure!##6161
-		info It's a little black book sitting on a barrel in a small boatwreck on the shore
+		.info It's a little black book sitting on a barrel in a small boatwreck on the shore.
 	step //121
 		goto 33.8,30
-		.' Kill Drysnaps underwater
-		.get Rackmore's Silver Key|q 6161/1
+		.from Drysnap Crawler##11562, Drysnap Pincer##11563
+		.get Rackmore's Silver Key##15878|q 6161/1
 	step //122
 		goto 35.6,25.7
-		.' Kill nagas underwater
-		.get Rackmore's Golden Key|q 6161/2
-		.kill 7 Slitherblade Naga|q 6143/2
-		.kill 5 Slitherblade Sorceress|q 6143/3
+		.kill 7 Slitherblade Naga##4711|q 6143/2
+		.kill 5 Slitherblade Sorceress##4712|q 6143/3
+		.get Rackmore's Golden Key##15881|q 6161/2
 	step //123
 		goto 38.9,27.2
 		.talk Azore Aldamort##11863
@@ -7951,11 +7961,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		goto 56.4,30.8
 		.' Kill Burning Blade mobs
 		.' When they are almost dead, use you Burning Gem on them|use Burning Gem##6436
-		.get 15 Infused Burning Gem|q 1435/1
+		.get 15 Infused Burning Gem##6435|q 1435/1
 	step //125
 		goto 55.2,30.1
-		.' Kill the Burning Blade Seer at the top of the tower
-		.get Sceptre of Light|q 5741/1
+		.from Burning Blade Seer##13019
+		.get Sceptre of Light##15750|q 5741/1
 	step //126
 		goto 38.9,27.2
 		.talk Azore Aldamort##11863
@@ -7963,16 +7973,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		..accept Book of the Ancients##6027
 	step //127
 		goto 37.3,18.1
-		.' Kill Slitherblade Oracles
-		.get Oracle Crystal|q 1482/1
+		.from Slitherblade Oracle##4718
+		.get Oracle Crystal##6442|q 1482/1
 	step //128
 		goto 32.8,14.9
-		.kill 7 Slitherblade Myrmidon|q 6143/1
+		.kill 7 Slitherblade Myrmidon##4714|q 6143/1
 	step //129
 		goto 30,8.7
-		.' Click Rackmore's Chest
+		.' Interact with gameobject: Rackmore's Chest
 		..turnin Claim Rackmore's Treasure!##6161
-		info Looks like a brown chest sitting between 2 trees.
+		.info Looks like a brown chest sitting between 2 trees.
 	step //130
 		goto 55.4,55.8
 		.talk Nataka Longhorn##11259
@@ -7990,12 +8000,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 	step //133
 		goto 69.8,70.1
 		.' Kill Magram centaurs
-		.get 15 Centaur Ear|q 1366/1
+		.get 15 Centaur Ear##6067|q 1366/1
 	step //134
 		goto 70.9,75.4
-		.' Click the Sacks of Meat
-		.get 6 Crudely Dried Meat|q 1370/1
-		info They look like bright tan sacks sitting on the ground next to huts around this area.
+		.collect 6 Crudely Dried Meat##6069|q 1370/1
+		.info They look like bright tan sacks sitting on the ground next to huts around this area.
 	step //135
 		ding 34
 	step //136
@@ -8007,19 +8016,19 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		.' Go inside the big building
 		.' Kill all mobs inside this room
 		.' Click the big red crystal in the middle of the room|goal Hand of Iruxos Crystal broken|n
-		.' Kill the Demon Spirit that spawns
-		.get Demon Box|q 5381/1
+		.from Demon Spirit##11876
+		.get Demon Box##13542|q 5381/1
 	step //138
 		goto 28.2,6.6
-		.' Click the Serpent Statue
-		.' Kill Lord Kragaru that spawns
-		.get Book of the Ancients|q 6027/1
+		.' Interact with gameobject: Serpent Statue
+		.from Lord Kragaru##12369
+		.get Book of the Ancients##15803|q 6027/1
 	step //139
 		goto 38.9,27.2
 		.talk Azore Aldamort##11863
 		..turnin Book of the Ancients##6027
 	step //140
-		'Hearth to Shadowprey Village|goto 24.1,68.2,0.1|use hearthstone##6948|noway|c
+		.' Hearth to Shadowprey Village|goto 24.1,68.2,0.1|use Hearthstone##6948|noway|q 5381
 	step //141
 		goto 25.8,68.2
 		.talk Taiga Wisemane##11624
@@ -8036,28 +8045,28 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		goto 36.2,79.3
 		.talk Uthek the Wise##5397
 		..turnin Stealing Supplies##1370
-	step //145
-		'Go northwest to Shadowprey Village|goto 21.6,74.1,0.5
 	step //146
-		'Fly to Freewind Post|goto Thousand Needles,45.0,49.1,0.3|noway|c
+		goto Desolace,21.6,74.1|n
+		.talk Thalon##6726
+		.' Fly to Freewind Post|goto Thousand Needles,45.0,49.1,0.3|noway|q 1175
 	step //147
 		goto Thousand Needles,45.6,50.8
 		.talk Cliffwatcher Longhorn##10537
 		..accept Family Tree##5361
 	step //148
 		goto 78.6,84.7
-		.kill 10 Saltstone Crystalhide|q 1175/2
-		.kill 6 Saltstone Gazer|q 1175/3
+		.kill 10 Saltstone Crystalhide##4151|q 1175/2
+		.kill 6 Saltstone Gazer##4150|q 1175/3
 	step //149
 		goto 81.6,78
 		.talk Trackmaster Zherin##4629
 		..turnin A Bump in the Road##1175
-	step //150
-		'Go to Freewind Post|goto Thousand Needles,45.0,49.1,0.1|noway|c
 	step //151
-		'Fly to Camp Taurajo|goto The Barrens,44.5,59.1,0.1|noway|c
+		goto Tanaris,51.6,25.4|n
+		.talk Bulkrek Ragefist##7824
+		.' Fly to Camp Taurajo|goto The Barrens,44.5,59.1,0.1|noway|q 11124 |future
 	step //152
-		'Go to Dustwallow Marsh|goto Dustwallow Marsh
+		.' Go to Dustwallow Marsh|goto Dustwallow Marsh|q 11124 |future
 	step
 		goto Dustwallow Marsh,36.4,31.9
 		.talk Krog##4926
@@ -8068,25 +8077,25 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		..turnin Inspecting the Ruins##11124
 	step //153
 		goto Dustwallow Marsh,29.7,47.6
-		.' Click the Hoofprints
+		.' Interact with gameobject: Hoofprints
 		..accept Suspicious Hoofprints##1268
-		info They look like a set of 3 toed tan muddy footprints on the ground next to the path. Click the Hoofprints.
+		.info They look like a set of 3 toed tan muddy footprints on the ground next to the path. Click the Hoofprints.
 	step //154
 		goto 29.8,48.2
-		.' Click the Theramore Guard Badge
+		.' Interact with gameobject: Theramore Guard Badge
 		..accept Lieutenant Paval Reethe##1269
-		info It looks like a very small grey badge laying on a log inside the burned down inn
+		.info It looks like a very small grey badge laying on a log inside the burned down inn.
 	step //155
 		goto 29.6,48.6
-		.' Click the Black Shield
+		.' Interact with gameobject: Black Shield
 		..accept The Black Shield (1)##1251
-		info Hanging on the brick chimney wall
+		.info Hanging on the brick chimney wall.
 	step //156
 		goto 36.4,31.9
 		.talk Krog##4926
+		..turnin The Black Shield (1)##1251
 		..turnin Suspicious Hoofprints##1268
 		..turnin Lieutenant Paval Reethe##1269
-		..turnin The Black Shield (1)##1251
 		..accept The Black Shield (2)##1321
 	step //157
 		goto 36.5,30.8
@@ -8095,9 +8104,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 	step //158
 		goto 35.6,31.9
 		.talk Shardi##11899
-		..fpath Brackenwall Village
+		.fpath Brackenwall Village|q 1178
 	step //159
-		'Fly to Ratchet|goto The Barrens,63.1,37.1,0.1|noway|c
+		goto 35.6,31.9|n
+		.talk Shardi##11899
+		.' Fly to Ratchet|goto The Barrens,63.1,37.1,0.1|noway|q 1178
 	step //160
 		goto The Barrens,62.7,36.2
 		.talk Gazlowe##3391
@@ -8109,7 +8120,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		..turnin Wharfmaster Dizzywig##1111
 		..accept Parts for Kravel##1112
 	step //162
-		'Ride the boat to Booty Bay|goto Stranglethorn Vale|noway|c
+		.' Ride the boat to Booty Bay|goto Stranglethorn Vale|noway|q 1180
 	step //163
 		goto Stranglethorn Vale,26.4,73.6
 		.talk Wharfmaster Lozgil##4631
@@ -8130,12 +8141,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 	step //167
 		goto Stranglethorn Vale,27.0,77.3
 		.talk Innkeeper Skindle##6807
-		home Booty Bay
+		home Booty Bay|q 605
 	step //168
-		goto 27,77.2
+		goto 27,77.1
 		.talk Kebok##737
 		..accept Bloodscalp Ears##189
 		..accept Hostile Takeover##213
+	step
+		goto 26.9,77.2
 		.talk Krazek##773
 		..accept Investigate the Camp##201
 	step //169
@@ -8146,9 +8159,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 	step //170
 		goto 26.9,77.1
 		.talk Gringer##2858
-		..fpath Booty Bay
+		.fpath Booty Bay|q 605
 	step //171
-		'Fly to Grom'gol Base Camp|goto Stranglethorn Vale,32.5,29.3,0.1|noway|c
+		goto 26.9,77.1|n
+		.talk Gringer##2858
+		.' Fly to Grom'gol Base Camp|goto Stranglethorn Vale,32.5,29.3,0.1|noway|q 605
 	step //172
 		goto 32.1,29.2
 		.talk Far Seer Mok'thardin##2465
@@ -8165,21 +8180,23 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (30-35)",
 		goto 32.2,27.7
 		.talk Nimboya##2497
 		..accept Hunt for Yenniku##581
+	step
+		goto 32.3,27.7
 		.talk Kin'weelay##2519
 		..accept Bloody Bone Necklaces##596
 		..accept The Vile Reef##629
 	step //176
 		goto 26.7,18.5
-		.' Kill basilisks
-		.get 10 Singing Crystal Shard|q 605/1
+		.from Crystal Spine Basilisk##689
+		.get 10 Singing Crystal Shard##3918|q 605/1
 	step //177
 		goto 28.8,19.7
-		.' Kill trolls
-		.get 9 Bloodscalp Tusk|q 581/1
-		.get 15 Bloodscalp Ear|q 189/1
-		.get 25 Bloody Bone Necklace|q 596/1
-		.' Kill Bloodscalp Shamans
-		.get Bloodscalp Totem|q 9436/1
+		.' Kill Trolls|n
+		.get 9 Bloodscalp Tusk##3901|q 581/1
+		.get 15 Bloodscalp Ear##1519|q 189/1
+		.get 25 Bloody Bone Necklace##3915|q 596/1
+		.from Bloodscalp Shaman##697
+		.get Bloodscalp Totem##23679|q 9436/1
 	step //178
 		ding 35
 ]])
