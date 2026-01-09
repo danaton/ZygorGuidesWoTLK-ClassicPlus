@@ -2404,13 +2404,13 @@ startlevel 1
 		.talk Kaltunk##10176
 		..accept Your Place In The World##4641
 	step //2
-		'Go inside the cave to 42,68|goto 42.1,68.3
+		goto 42.1,68.3
 		.talk Gornek##3143
 		..turnin Your Place In The World##4641
 		..accept Cutting Teeth##788
 	step //3
 		goto 43.8,70
-		.kill 10 Mottled Boar|q 788/1
+		.kill 10 Mottled Boar##3098|q 788/1
 	step //4
 		ding 2
 	step //5
@@ -2418,47 +2418,16 @@ startlevel 1
 		.talk Zureetha Fargaze##3145
 		..accept Vile Familiars (1)##792
 	step //6
-		'Go into the cave to 42.1,68.3|goto 42.1,68.3
+		goto 42.1,68.3
 		.talk Gornek##3143
 		..turnin Cutting Teeth##788
 		..accept Sting of the Scorpid##789
-		..accept Glyphic Tablet##3086
-		only Troll Mage
-	step //7
-		'Go into the cave to 42.1,68.3|goto 42.1,68.3
-		.talk Gornek##3143
-		..turnin Cutting Teeth##788
-		..accept Sting of the Scorpid##789
-		..accept Simple Tablet##3065
-		only Troll Warrior
-	step //8
-		'Go into the cave to 42.1,68.3|goto 42.1,68.3
-		.talk Gornek##3143
-		..turnin Cutting Teeth##788
-		..accept Sting of the Scorpid##789
-		..accept Rune-Inscribed Tablet##3084
-		only Troll Shaman
-	step //9
-		'Go into the cave to 42.1,68.3|goto 42.1,68.3
-		.talk Gornek##3143
-		..turnin Cutting Teeth##788
-		..accept Sting of the Scorpid##789
-		..accept Encrypted Tablet##3083
-		only Troll Rogue
-	step //10
-		'Go into the cave to 42.1,68.3|goto 42.1,68.3
-		.talk Gornek##3143
-		..turnin Cutting Teeth##788
-		..accept Sting of the Scorpid##789
-		..accept Hallowed Tablet##3085
-		only Troll Priest
-	step //11
-		'Go into the cave to 42.1,68.3|goto 42.1,68.3
-		.talk Gornek##3143
-		..turnin Cutting Teeth##788
-		..accept Sting of the Scorpid##789
-		..accept Etched Tablet##3082
-		only Troll Hunter
+		..accept Glyphic Tablet##3086 |only Troll Mage
+		..accept Simple Tablet##3065 |only Troll Warrior
+		..accept Rune-Inscribed Tablet##3084 |only Troll Shaman
+		..accept Encrypted Tablet##3083 |only Troll Rogue
+		..accept Hallowed Tablet##3085 |only Troll Priest
+		..accept Etched Tablet##3082 |only Troll Hunter
 	step //12
 		goto 42.5,69.0
 		.talk Mai'ah##5884
@@ -2468,26 +2437,26 @@ startlevel 1
 		goto 42.9,69.4
 		.talk Frang##3153
 		..turnin Simple Tablet##3065
+		.info He is the Warrior Class Trainer
 		only Troll Warrior
-		info2 He is the Warrior Class Trainer
 	step //14
 		goto 42.4,69
 		.talk Shikrik##3157
 		..turnin Rune-Inscribed Tablet##3084
+		.info She is the Shaman Class Trainer
 		only Troll Shaman
-		info2 She is the Shaman Class Trainer
 	step //15
 		goto 41.3,68
 		.talk Rwag##3155
 		..turnin Encrypted Tablet##3083
+		.info He is the Rogue Class Trainer
 		only Troll Rogue
-		info2 He is the Rogue Class Trainer
 	step //16
 		goto 42.4,68.8
 		.talk Ken'jai##3707
 		..turnin Hallowed Tablet##3085
+		.info He is the Priest Class Trainer
 		only Troll Priest
-		info2 He is the Priest Class Trainer
 	step //17
 		goto 42.7,67.2
 		.talk Galgar##9796
@@ -2496,16 +2465,16 @@ startlevel 1
 		goto 42.8,69.3
 		.talk Jen'shan##3154
 		..turnin Etched Tablet##3082
+		.info She is the Hunter Class Trainer
 		only Troll Hunter
-		info2 She is the Hunter Class Trainer
 	step //19
 		goto 41.3,63.3
 		.from Scorpid Worker##3124
-		.get 10 Scorpid Worker Tail|q 789/1
+		.get 10 Scorpid Worker Tail##4862|q 789/1
 	step //20
 		ding 3
 	step //21
-		'Go into the cave to 42,68|goto 42.1,68.3
+		goto 42.1,68.3
 		.talk Gornek##3143
 		..turnin Sting of the Scorpid##789
 	step //22
@@ -2514,11 +2483,11 @@ startlevel 1
 		..accept Lazy Peons##5441
 	step //23
 		goto 45.3,69.9
-		.' Start here and head south along the Cliffside
-		.' Use your Foreman's Blackjack on Lazy Peons|use Foreman's Blackjack##16114
-		..'They are sleeping under the trees
+		.' Start here and head south along the Cliffside.
+		.use Foreman's Blackjack##16114
+		.info Use your Foreman's Blackjack on Lazy Peons.
 		.' Awaken 5 Peons|goal 5 Peons Awoken|q 5441/1
-		info Look for Lazy Peons sleeping under the trees along the cliffside here, and to the south.
+		.info Look for Lazy Peons sleeping under the trees along the cliffside here, and to the south.
 	step //24
 		goto 44.6,68.6
 		.talk Foreman Thazz'ril##11378
@@ -2526,12 +2495,11 @@ startlevel 1
 		..accept Thazz'ril's Pick##6394
 	step //25
 		goto 44.1,65.4
-		.' They look liked small cactuses with little pink apples on them
-		.' Click the Cactus Apples
-		.get 10 Cactus Apple|q 4402/1
+		.collect 6 Cactus Apple##11583|q 4402/1
+		.info They look liked small cactuses with little pink apples on them.
 	step //26
 		goto 45.8,59.3
-		.kill 12 Vile Familiar|q 792/1
+		.kill 8 Vile Familiar##3101|q 792/1
 	step //27
 		ding 4
 	step //28
@@ -2541,20 +2509,19 @@ startlevel 1
 		only Troll Shaman
 	step //29
 		goto 45.5,56.4|n
-		'Go inside the cave
-		.' Follow the path to the left|goto 45.5,56.4,0.5|noway|c
+		.info Go inside the cave.
+		.' Follow the path to the left|goto 45.5,56.4,0.5|noway|q 6394
 	step //30
 		goto 43.8,53.8
-		.' Click Thazz'ril's Pick
-		.get Thazz'ril's Pick|q 6394/1
-		info It looks like a glowing mining pick standing next to the wall inside the cave.
+		.collect Thazz'ril's Pick##16332|q 6394/1
+		.info It looks like a glowing mining pick standing next to the wall inside the cave.
 	step //31
 		goto 45.3,55.7
 		.from Felstalker##3102
-		.get 2 Felstalker Hoof|q 1516/1
+		.get 2 Felstalker Hoof##6640|q 1516/1
 		only Troll Shaman
 	step //32
-		'Leave the cave|goto 45.3,56.7,0.5|c
+		.' Leave the cave|goto 45.3,56.7,0.5|q 6394
 	step //33
 		goto 40.6,62.6
 		.talk Hana'zua##3287
@@ -2562,8 +2529,8 @@ startlevel 1
 	step //34
 		goto 40.6,66.6
 		.from Sarkoth##3281
-		.get Sarkoth's Mangled Claw|q 790/1
-		info Sarkoth is a dark colored scorpion.
+		.get Sarkoth's Mangled Claw##4905|q 790/1
+		.info Sarkoth is a dark colored scorpion.
 	step //35
 		goto 40.6,62.6
 		.talk Hana'zua##3287
@@ -2585,12 +2552,13 @@ startlevel 1
 		only Troll Shaman
 	step //39
 		goto 41.5,73.4|n
-		.' The path up to Call of Earth (2) starts here|goto 41.5,73.4,0.3|noway|c
+		.' The path up to Call of Earth (2) starts here|goto 41.5,73.4,0.3|noway|q 1517
 		only Troll Shaman
 	step //40
-		'Go up the path to 44.1,76.1|goto 44.1,76.1
-		.' Drink the Earth Sapta in your bags|use Earth Sapta##6635
-		.talk the Minor Manifestation of Earth##5891
+		goto 44.1,76.1
+		.info Go up the path.
+		.use Earth Sapta##6635
+		.talk Minor Manifestation of Earth##5891
 		..turnin Call of Earth (2)##1517
 		..accept Call of Earth (3)##1518
 		only Troll Shaman
@@ -2613,21 +2581,21 @@ startlevel 1
 	step //45
 		goto 45.5,56.4|n
 		.' Go inside the cave
-		.' Follow the path to the right|goto 45.3,56.7,0.5|noway|c
+		.' Follow the path to the right|goto 45.3,56.7,0.5|noway|q 794
 	step //46
 		goto 42.7,53
 		.from Yarrog Boneshadow##3183
-		.get Burning Blade Medallion|q 794/1
-		info Follow the path to the right inside the cave.
+		.get Burning Blade Medallion##4859|q 794/1
+		.info Follow the path to the right inside the cave.
 	step //47
-		'Hearth to the Valley of Trials|goto 43.3,68.8,0.1|use hearthstone##6948|noway|c
+		.' Hearth to the Valley of Trials|goto 43.3,68.8,0.1|use Hearthstone##6948|noway|q 794
 	step //48
 		goto 42.8,69.1
 		.talk Zureetha Fargaze##3145
 		..turnin Burning Blade Medallion##794
 		..accept Report to Sen'jin Village##805
 	step //49
-		'Go east along the road through the big gate|goto 49.8,68.4,0.3
+		.' Go east along the road through the big gate|goto 49.8,68.4,0.3|q 2161 |future
 	step //50
 		goto 52.1,68.3
 		.talk Ukor##6786
@@ -2637,12 +2605,14 @@ startlevel 1
 		.talk Lar Prowltusk##3140
 		..accept Thwarting Kolkar Aggression##786
 	step //52
-		goto 55.9,74.5
+		goto 55.9,74.7
 		.talk Master Gadrin##3188
 		..turnin Report to Sen'jin Village##805
 		..accept Minshina's Skull##808
 		..accept Zalazane##826
 		..accept Report to Orgnil##823
+	step
+		goto 55.9,74.4
 		.talk Master Vornal##3304
 		..accept A Solvent Spirit##818
 	step //53
@@ -2663,38 +2633,41 @@ startlevel 1
 		.talk Innkeeper Grosk##6928
 		..turnin A Peon's Burden##2161
 	step //57
-		home Razor Hill
+		goto 51.5,41.6
+		.talk Innkeeper Grosk##6928
+		home Razor Hill|q 784
 	step //58
 		goto 49.9,40.4
 		.talk Furl Scornbrow##3147
 		..accept Carry Your Weight##791
 	step //59
-		goto 55.5,51.2
-		.kill 10 Kul Tiras Sailor|q 784/1
-		.kill 8 Kul Tiras Marine|q 784/2
+		goto 58.05,56.7
+		.kill 10 Kul Tiras Sailor##3128|q 784/1
+		.kill 8 Kul Tiras Marine##3129|q 784/2
 		.from Kul Tiras Sailor##3128, Kul Tiras Marine##3129
-		.get 8 Canvas Scraps|q 791/1
+		.get 8 Canvas Scraps##4870|q 791/1
 	step //60
 		ding 6
 	step //61
 		goto 59.7,58.3
 		.kill Lieutenant Benedict##3192|q 784/3
-		.collect 1 Benedict's Key##4882|q 830
+		.collect Benedict's Key##4882|q 830 |future
 	step //62
-		'Leave the room and run across the hall and up the wooden steps|goto 60.0,57.6,0.3
+		.' Leave the room and run across the hall and up the wooden steps|goto 60.0,57.6,0.3|q 830 |future
 	step //63
 		goto 59.3,57.7
-		.' Use Benedict's Key to open Benedict's Chest
-		.collect 1 Aged Envelope##4881|q 830
-		.' Click the Aged Envelope|use Aged Envelope##4881
+		.' Interact with gameobject: Benedict's Chest
+		.collect Aged Envelope##4881|q 830 |future
+		.info Down the hall and then up the wooden staircase from Lord Benedict.
+	step
+		.use Aged Envelope##4881
 		..accept The Admiral's Orders (1)##830
-		info Down the hall and then up the wooden staircase from Lord Benedict.
 	step //64
 		goto 51.9,43.5
 		.talk Gar'Thok##3139
 		..turnin Vanquish the Betrayers##784
-		..accept From The Wreckage....##825
 		..turnin The Admiral's Orders (1)##830
+		..accept From The Wreckage....##825
 		..accept The Admiral's Orders (2)##831
 		..accept Encroachment##837
 	step //65
@@ -2710,39 +2683,39 @@ startlevel 1
 	step //68
 		goto 60.8,46.9
 		.from Pygmy Surf Crawler##3106, Surf Crawler##3107
-		.get 8 Crawler Mucus|q 818/2
+		.get 8 Crawler Mucus##4888|q 818/2
 		.from Makrura Shellhide##3104, Makrura Clacker##3103
-		.get 4 Intact Makrura Eye|q 818/1
-		.' Click the Gnomish Toolboxes
-		.get 3 Gnomish Tools|q 825/1
-		info The Gnomish Toolboxes look like grey metal chests underwater around this area.
+		.get 4 Intact Makrura Eye##4887|q 818/1
+		.' Interact with gameobject: Gnomish Toolboxes
+		.collect 3 Gnomish Tools##4863|q 825/1
+		.info The Gnomish Toolboxes look like grey metal chests underwater around this area.
 	step //69
 		goto 51.9,43.5
 		.talk Gar'Thok##3139
 		..turnin From The Wreckage....##825
 	step //70
-		goto 44.6,48.6
+		goto 46.9,47.8
 		.' Be careful of Captain Flat Tusk. He's a level 11 elite that walks around this area.
-		.kill 4 Razormane Quilboar|q 837/1
-		.kill 4 Razormane Scout|q 837/2
+		.kill 4 Razormane Quilboar##3111|q 837/1
+		.kill 4 Razormane Scout##3112|q 837/2
 	step //71
 		goto 51.3,79.1|n
-		.' The path to 'Thwarting Kolkar Aggression' starts here|goto 51.3,79.1,0.3|noway|c
+		.' The path to 'Thwarting Kolkar Aggression' starts here|goto 51.3,79.1,0.3|noway|q 786
 	step //72
 		goto 49.8,81.3
-		.' Click the Attack Plan: Valley of Trials
+		.' Interact with gameobject: Attack Plan: Valley of Trials
 		.' Destroy the Attack Plan: Valley of Trials|goal Attack Plan: Valley of Trials destroyed|q 786/1
-		info It's a small white scroll laying flat on the floor in a big tent.
+		.info It's a small white scroll laying flat on the floor in a big tent.
 	step //73
 		goto 47.7,77.3
-		.' Click the Attack Plan: Sen'jin Village
+		.' Interact with gameobject: Attack Plan: Sen'jin Village
 		.' Destroy the Attack Plan: Sen'jin Village|goal Attack Plan: Sen'jin Village destroyed|q 786/2
-		info It's a small white scroll laying on the floor under a brown canopy in a small camp.
+		.info It's a small white scroll laying on the floor under a brown canopy in a small camp.
 	step //74
 		goto 46.2,78.9
-		.' Click the Attack Plan: Orgrimmar
+		.' Interact with gameobject: Attack Plan: Orgrimmar
 		.' Destroy the Attack Plan: Orgrimmar|goal Attack Plan: Orgrimmar destroyed|q 786/3
-		info It's a small white scroll laying under a canopy in a small camp.
+		.info It's a small white scroll laying under a canopy in a small camp.
 	step //75
 		goto 54.2,73.3
 		.talk Lar Prowltusk##3140
@@ -2755,23 +2728,23 @@ startlevel 1
 		ding 8
 	step //78
 		goto 60.3,82.9
-		.' Click the purple Taillasher Eggs
-		.get 3 Taillasher Egg|q 815/1
+		.' Interact with gameobject: Taillasher Eggs
+		.collect 3 Taillasher Egg##4890|q 815/1
 		.from Durotar Tiger##3121
-		.get 4 Durotar Tiger Fur|q 817/1
+		.get 4 Durotar Tiger Fur##4892|q 817/1
 	step //79
 		goto 65.4,83.3
-		.kill 8 Hexed Troll|q 826/1
-		.kill 8 Voodoo Troll|q 826/2
+		.kill 8 Hexed Troll##3207|q 826/1
+		.kill 8 Voodoo Troll##3206|q 826/2
 	step //80
 		goto 67.6,86.5
 		.from Zalazane##3205
-		.get Zalazane's Head|q 826/3
+		.get Zalazane's Head##4866|q 826/3
 	step //81
 		goto 67.5,87.8
-		.' They look like little skulls inside a round demonic symbol up on the hill
-		.' Click an Imprisoned Darkspear
-		.get Minshina's Skull|q 808/1
+		.' Interact with gameobject: Imprisoned Darkspear
+		.info They look like little skulls inside a round demonic symbol up on the hill.
+		.collect Minshina's Skull##4864|q 808/1
 	step //82
 		goto 55.9,74.5
 		.talk Master Gadrin##3188
@@ -2784,15 +2757,15 @@ startlevel 1
 	step //84
 		ding 9
 	step //85
-		'Hearth to Razor Hill|goto 51.5,41.7,0.1|use hearthstone##6948|noway|c
+		.' Hearth to Razor Hill|goto 51.5,41.7,0.1|use Hearthstone##6948|noway|q 815
 	step //86
 		goto 51.1,42.4
 		.talk Cook Torka##3191
 		..turnin Break a Few Eggs##815
 	step //87
 		goto 44.5,41
-		.kill 4 Razormane Dustrunner|q 837/3
-		.kill 4 Razormane Battleguard|q 837/4
+		.kill 4 Razormane Dustrunner##3113|q 837/3
+		.kill 4 Razormane Battleguard##3114|q 837/4
 	step //88
 		goto 43.1,30.2
 		.talk Misha Tor'kren##3193
@@ -2803,12 +2776,11 @@ startlevel 1
 		..accept Winds in the Desert##834
 	step //90
 		goto 50.8,31.6|n
-		.' The path to 'Winds in the Desert' starts here|goto 50.8,31.6,0.3|noway|c
+		.' The path to 'Winds in the Desert' starts here|goto 50.8,31.6,0.3|noway|q 834
 	step //91
 		goto 48.6,33.5
-		.' They look like small tan bags
-		.' Click the Stolen Supply Sacks
-		.get 5 Sack of Supplies|q 834/1
+		.collect 5 Sack of Supplies##4918|q 834/1
+		.info They look like small tan bags.
 	step //92
 		goto 46.4,22.9
 		.talk Rezlak##3293
@@ -2816,11 +2788,11 @@ startlevel 1
 		..accept Securing the Lines##835
 	step //93
 		goto 51.7,27.4|n
-		.' The path to 'Securing the Lines' starts here|goto 51.7,27.43,0.3|noway|c
+		.' The path to 'Securing the Lines' starts here|goto 51.7,27.43,0.3|noway|q 835
 	step //94
 		goto 54.1,26.9
-		.kill 12 Dustwind Savage|q 835/1
-		.kill 8 Dustwind Storm Witch|q 835/2
+		.kill 12 Dustwind Savage##3117|q 835/1
+		.kill 8 Dustwind Storm Witch##3118|q 835/2
 	step //95
 		goto 46.4,22.9
 		.talk Rezlak##3293
@@ -2835,10 +2807,10 @@ startlevel 1
 		goto 54.2,42.4
 		.talk Tarshaw Jaggedscar##3169
 		..accept Veteran Uzzek##1505
+		.info He is the Warrior Class Trainer
 		only Troll Warrior
-		info2 He is the Warrior Class Trainer
 	step //99
-		'Go west to the Barrens|goto The Barrens
+		.' Go west to the Barrens|goto The Barrens|q 1505
 		only Troll Warrior
 	step //100
 		goto The Barrens,61.4,21.1
@@ -2847,15 +2819,15 @@ startlevel 1
 		..accept Path of Defense##1498
 		only Troll Warrior
 	step //101
-		'Go east to Durotar|goto Durotar
+		.' Go east to Durotar|goto Durotar|q 1498
 		only Troll Warrior
 	step //102
 		goto Durotar,39,32
 		.from Thunder Lizard##3130, Lightning Hide##3131
-		.get 5 Singed Scale|q 1498/1
+		.get 5 Singed Scale##6486|q 1498/1
 		only Troll Warrior
 	step //103
-		'Go southwest to the Barrens|goto The Barrens
+		.' Go southwest to the Barrens|goto The Barrens|q 1498
 		only Troll Warrior
 	step //104
 		goto The Barrens,61.4,21.1
@@ -2863,16 +2835,16 @@ startlevel 1
 		..turnin Path of Defense##1498
 		only Troll Warrior
 	step //105
-		'Go east to Durotar|goto Durotar
+		.' Go east to Durotar|goto Durotar|q 812 |future
 		only Troll Warrior
 	step //106
 		goto Durotar,54.4,42.6
 		.talk Swart##3173
 		..accept Call of Fire (1)##2983
+		.info He is the Shaman Class Trainer
 		only Troll Shaman
-		info2 He is the Shaman Class Trainer
 	step //107
-		'Go west to the Barrens|goto The Barrens
+		.' Go west to the Barrens|goto The Barrens|q 2983
 		only Troll Shaman
 	step //108
 		goto The Barrens,55.8,19.8
@@ -2881,51 +2853,59 @@ startlevel 1
 		..accept Call of Fire (2)##1524
 		only Troll Shaman
 	step //109
-		'Go east to Durotar|goto Durotar
+		.' Go east to Durotar|goto Durotar|q 1524
 		only Troll Shaman
 	step //110
 		goto Durotar,36.6,57.1|n
-		.' The path up to Telf Joolam starts here|goto Durotar,36.6,57.1,0.5|noway|c
+		.' The path up to Telf Joolam starts here|goto Durotar,36.6,57.1,0.5|noway|q 1524
 		only Troll Shaman
 	step //111
-		'Go up the path to 38,59|goto 38,59
+		goto 38,59
 		.talk Telf Joolam##5900
 		..turnin Call of Fire (2)##1524
 		..accept Call of Fire (3)##1525
 		only Troll Shaman
 	step //112
-		'Go northwest to the Barrens|goto The Barrens
+		.' Go northwest to the Barrens|goto The Barrens|q 1525
 		only Troll Shaman
 	step //113
 		goto The Barrens,53.8,25.6
 		.from Razormane Thornweaver##3268, Razormane Water Seeker##3267
-		.get Fire Tar|q 1525/1
+		.get Fire Tar##5026|q 1525/1
 		only Troll Shaman
 	step //114
-		'Go northeast to Durotar|goto Durotar
+		.' Go northeast to Durotar|goto Durotar|q 1525
 		only Troll Shaman
 	step //115
 		goto Durotar,52.8,28.9
 		.from Burning Blade Cultist##3199
-		.get Reagent Pouch|q 1525/2
+		.get Reagent Pouch##6652|q 1525/2
 		only Troll Shaman
 	step //116
 		goto 38.6,58.9
 		.talk Telf Joolam##5900
 		..turnin Call of Fire (3)##1525
 		..accept Call of Fire (4)##1526
-		.' Drink the Fire Sapta in your bags next to the huge rock to your right
+		only Troll Shaman
+	step
+		goto 38.17,58.52
+		.use Fire Sapta##6636
+		.' Drink the Fire Sapta in your bags|havebuff Ability_CheapShot|q 1526
 		only Troll Shaman
 	step //117
-		'Run up the big hill next to you to 39,58|goto 38.9,58.3
+		goto 38.9,58.3
+		.info Run up the big hill next to you.
 		.from Minor Manifestation of Fire##5893
-		.get Glowing Ember|q 1526/1
-		.' Click the silver Brazier of the Dormant Flame on the ground
+		.get Glowing Ember##6655|q 1526/1
+		only Troll Shaman
+	step
+		goto 39,58.2
+		.' Interact with gameobject: Brazier of the Dormant Flame
 		..turnin Call of Fire (4)##1526
 		..accept Call of Fire (5)##1527
 		only Troll Shaman
 	step //118
-		'Go northwest to the Barrens|goto The Barrens
+		.' Go northwest to the Barrens|goto The Barrens|q 1527
 		only Troll Shaman
 	step //119
 		goto The Barrens,55.8,19.8
@@ -2933,14 +2913,14 @@ startlevel 1
 		..turnin Call of Fire (5)##1527
 		only Troll Shaman
 	step //120
-		'Go northeast to Durotar|goto Durotar
+		.' Go northeast to Durotar|goto Durotar|q 812 |future
 		only Troll Shaman
 	step //121
 		goto Durotar,51.9,43.5
 		.talk Thotar##3171
 		..accept Taming the Beast (1)##6062
+		.info He is the Hunter Class Trainer.
 		only Troll Hunter
-		info2 He is the Hunter Class Trainer
 	step //122
 		goto 52.1,46.2
 		.' Use your Taming Rod on a Dire Mottled Boar around this area|use Taming Rod##15917
@@ -2951,8 +2931,8 @@ startlevel 1
 		.talk Thotar##3171
 		..turnin Taming the Beast (1)##6062
 		..accept Taming the Beast (2)##6083
+		.info He is the Hunter Class Trainer.
 		only Troll Hunter
-		info2 He is the Hunter Class Trainer
 	step //124
 		goto 59,26.5
 		.' Use your Taming Rod on a Surf Crawler around this area|use Taming Rod##15919
@@ -2963,8 +2943,8 @@ startlevel 1
 		.talk Thotar##3171
 		..turnin Taming the Beast (2)##6083
 		..accept Taming the Beast (3)##6082
+		.info He is the Hunter Class Trainer.
 		only Troll Hunter
-		info2 He is the Hunter Class Trainer
 	step //126
 		goto 48,39.3
 		.' Use your Taming Rod on an Armored Scorpid around this area|use Taming Rod##15920
@@ -2975,73 +2955,69 @@ startlevel 1
 		.talk Thotar##3171
 		..turnin Taming the Beast (3)##6082
 		..accept Training the Beast##6081
+		.info He is the Hunter Class Trainer.
 		only Troll Hunter
-		info2 He is the Hunter Class Trainer
 	step //128
-		'Go north to Orgrimmar|goto Orgrimmar
+		.' Go north to Orgrimmar|goto Orgrimmar|q 6081
 		only Troll Hunter
 	step //129
 		goto Orgrimmar,65.8,18.3
 		.talk Ormak Grimshot##3352
 		..turnin Training the Beast##6081
+		.info He is the Hunter Class Trainer.
 		only Troll Hunter
-		info2 He is the Hunter Class Trainer
 	step //130
-		'Go outside of Orgrimmar to Durotar|goto Durotar
+		.' Go outside of Orgrimmar to Durotar|goto Durotar|q 812 |future
 		only Troll Hunter
 	step //131
 		goto Durotar,42.1,15.0
 		.talk Rhinag##3190
 		..accept Need for a Cure##812
 	step //132
-		'Go to Orgrimmar|goto Orgrimmar
+		.' Go to Orgrimmar|goto Orgrimmar|q 813 |future
 	step //133
 		goto Orgrimmar,43.1,50.2
 		.talk Kor'ghan##3189
 		..accept Finding the Antidote##813
 	step //134
-		'Go outside of Orgrimmar to Durotar|goto Durotar
+		.' Go outside of Orgrimmar to Durotar|goto Durotar|q 813
 	step //135
 		goto Durotar,39.9,20.9
 		.from Venomtail Scorpid##3127
-		.get 4 Venomtail Poison Sac|q 813/1
+		.get 4 Venomtail Poison Sac##4886|q 813/1
 	step //136
-		'Go northeast to Orgrimmar|goto Orgrimmar
+		.' Go northeast to Orgrimmar|goto Orgrimmar|q 813
 	step //137
-		goto Orgrimmar,43.1,50.2
+		goto Orgrimmar,47.2,53.6
 		.talk Kor'ghan##3189
 		..turnin Finding the Antidote##813
 	step //138
 		goto 34.3,36.3
-		.talk Vol'jin
-		..turnin The Admiral's Orders##831
-	step //139
-		goto 34.3,36.3
 		.talk Vol'jin##10540
-		..turnin The Admiral's Orders##830
+		..turnin The Admiral's Orders##831
 	step //140
 		goto 31.8,37.8
 		.talk Thrall##4949
 		..accept Hidden Enemies (1)##5726
 	step //141
-		'Go outside of Orgrimmar to Durotar|goto Durotar
+		.' Go outside of Orgrimmar to Durotar|goto Durotar|q 812
 	step //142
 		goto Durotar,42.1,15.0
 		.talk Rhinag##3190
 		..turnin Need for a Cure##812
 	step //143
 		goto 37.2,17.4
-		.from Corrupted Dreadmaw Crocolisk##3231, Dreadmaw Crocolisk##3110
-		.get Kron's Amulet|q 816/1
+		.from Dreadmaw Crocolisk##3110, Corrupted Dreadmaw Crocolisk##3231
+		.get Kron's Amulet##4891|q 816/1
 	step //144
 		goto 39.2,32.5|n
-		.' The path to 'Dark Storms' and 'Hidden Enemies' starts here|goto 39.2,32.5,0.5|noway|c
+		.' The path to 'Dark Storms' and 'Hidden Enemies' starts here|goto 39.2,32.5,0.5|noway|q 806
 	step //145
 		goto 42.1,26.6
 		.from Fizzle Darkstorm##3203
-		.get Fizzle's Claw|q 806/1
+		.get Fizzle's Claw##4869|q 806/1
 	step //146
-		'Hearth to Razor Hill|goto 51.5,41.7,0.1|use hearthstone##6948|noway|c
+		.' Hearth to Razor Hill|goto 51.5,41.7,0.1|use Hearthstone##6948|noway|q 806
 	step //147
 		goto 50.8,43.6
 		.talk Takrin Pathseeker##3336
@@ -3063,8 +3039,8 @@ startlevel 1
 	step //151
 		goto 55.1,10.1
 		.from Burning Blade Fanatic##3197, Burning Blade Apprentice##3198
-		.get 6 Searing Collar|q 827/1
-		.get Lieutenant's Insignia|q 5726/1
+		.get 6 Searing Collar##4871|q 827/1
+		.get Lieutenant's Insignia##14544|q 5726/1
 	step //152
 		goto 56.4,20
 		.talk Margoz##3208
@@ -3073,7 +3049,7 @@ startlevel 1
 	step //153
 		ding 11
 	step //154
-		'Go to Orgrimmar|goto Orgrimmar
+		.' Go to Orgrimmar|goto Orgrimmar|q 829
 	step //155
 		goto Orgrimmar,49.5,50.6
 		.talk Neeru Fireblade##3216
@@ -3095,30 +3071,31 @@ startlevel 1
 		.talk Thrall##4949
 		..turnin Hidden Enemies (2)##5727
 	step //159
-		'Go outside of Orgrimmar|goto Durotar
-	'Go east to 50.8,13.3|goto Durotar,50.8,13.3|n
-		.' Ride the zeppelin to Undercity|goto Tirisfal Glades|noway|c
-		info You can ride zeppelins to either Undercity or the Grom'Gol Base Camp here
+		.' Go outside of Orgrimmar|goto Durotar|q 447 |future
+	step
+		goto Durotar,50.8,13.3|n
+		.' Ride the zeppelin to Undercity|goto Tirisfal Glades|noway|q 447 |future
+		.info You can ride zeppelins to either Undercity or the Grom'Gol Base Camp here.
 	step //160
-		'Go to the Undercity|goto Undercity
+		.' Go to the Undercity|goto Undercity|q 447 |future
 	step //161
 		goto Undercity,63.2,48.6
 		.talk Michael Garrett##4551
-		..fpath Undercity
+		.fpath Undercity|q 447 |future
 	step //162
-		'Go outside of the Undercity|goto Tirisfal Glades
+		.' Go outside of the Undercity|goto Tirisfal Glades|q 447 |future
 	step //163
-		'Go southwest to Silverpine Forest|goto Silverpine Forest
+		.' Go southwest to Silverpine Forest|goto Silverpine Forest|q 447 |future
 	step //164
 		goto Silverpine Forest,45.6,42.6
 		.talk Karos Razok##2226
-		..fpath Sepulcher
+		.fpath Sepulcher|q 447 |future
 	step //165
 		goto 42.8,40.9
 		.talk Apothecary Renferrel##1937
 		..accept A Recipe For Death##447
 	step //166
-		'Go inside the crypt to 43.4,40.9|goto 43.4,40.9
+		goto 43.4,40.9
 		.talk High Executor Hadrec##1952
 		..accept Lost Deathstalkers##428
 		..accept The Dead Fields##437
@@ -3128,20 +3105,20 @@ startlevel 1
 		..accept Prove Your Worth##421
 	step //168
 		goto 49.2,39.6
-		.kill 5 Moonrage Whitescalp|q 421/1
+		.kill 5 Moonrage Whitescalp##1769|q 421/1
 	step //169
 		goto 45.5,21.3
 		.' Enter the Dead Fields|goal Enter the Dead Fields|q 437/1
 		.from Nightlash##1983
-		.get Essence of Nightlash|q 437/2
+		.get Essence of Nightlash##3622|q 437/2
 	step //170
 		goto 48.3,19.4
 		.from Ferocious Grizzled Bear##1778
-		.get 6 Grizzled Bear Heart|q 447/1
+		.get 6 Grizzled Bear Heart##3253|q 447/1
 	step //171
 		goto 35.7,15
 		.from Moss Stalker##1780, Mist Creeper##1781
-		.get 6 Skittering Blood|q 447/2
+		.get 6 Skittering Blood##3254|q 447/2
 	step //172
 		goto 53.5,13.4
 		.talk Rane Yorick##1950
@@ -3152,7 +3129,7 @@ startlevel 1
 	step //174
 		goto 57.5,15.9
 		.from Mottled Worg##1766, Worg##1765
-		.get 6 Discolored Worg Heart|q 429/1
+		.get 6 Discolored Worg Heart##3164|q 429/1
 	step //175
 		goto 56.2,9.2
 		.talk Deathstalker Erland##1978
@@ -3169,7 +3146,7 @@ startlevel 1
 		..turnin Prove Your Worth##421
 		..accept Arugal's Folly##422
 	step //178
-		'Go inside the crypt to 43.4,40.9|goto 43.4,40.9
+		goto 43.4,40.9
 		.talk High Executor Hadrec##1952
 		..turnin The Dead Fields##437
 		..turnin The Deathstalkers' Report##449
@@ -3182,8 +3159,8 @@ startlevel 1
 		..accept Return to Quinn##430
 	step //180
 		goto 52.8,28.5
-		.' Go inside of the house and up the stairs and click on the Dusty Spellbooks.
-		.get Remedy of Arugal##3155|q 422/1
+		.collect Remedy of Arugal##3155|q 422/1
+		.info Go inside of the house and up the stairs and click on the Dusty Spellbooks.
 	step //181
 		goto 53.4,12.6
 		.talk Deathstalker Quinn##1951
@@ -3193,7 +3170,9 @@ startlevel 1
 		.talk Dalar Dawnweaver##1938
 		..turnin Arugal's Folly##422
 	step //183
-		'Fly to the Undercity|goto Undercity
+		goto 45.6,42.6|n
+		.talk Karos Razok##2226
+		.' Fly to the Undercity|goto Undercity|q 447
 	step //184
 		goto Undercity,48.8,69.3
 		.talk Master Apothecary Faranell##2055
@@ -3201,9 +3180,9 @@ startlevel 1
 	step //185
 		ding 13
 	step //186
-		'Hearth to Razor Hill|goto 51.5,41.7,0.1|use hearthstone##6948|noway|c
+		.' Hearth to Razor Hill|goto 51.5,41.7,0.1|use Hearthstone##6948|noway|q 840
 	step //187
-		'Go west to the Barrens|goto The Barrens
+		.' Go west to the Barrens|goto The Barrens|q 840
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Blood Elf (1-13)",[[
 author support@zygorguides.com
@@ -4990,7 +4969,7 @@ startlevel 13
 	step
 		goto 51.5,30.3
 		.talk Devrak##3615
-		.fpath Crossroads|q 842
+		.fpath Crossroads
 	step
 		goto 52.2,31
 		.talk Sergra Darkthorn##3338
@@ -4998,7 +4977,7 @@ startlevel 13
 	step
 		goto The Barrens,44.4,59.2
 		.talk Omusa Thunderhorn##10378
-		.fpath Camp Taurajo|q 861 |future
+		.fpath Camp Taurajo
 	step
 		goto Mulgore,46.8,60.2
 		.talk Skorn Whitecloud##3052
@@ -5019,7 +4998,7 @@ startlevel 13
 	step
 		goto Thunder Bluff,47,49.9
 		.talk Tal##2995
-		.fpath Thunder Bluff|q 886
+		.fpath Thunder Bluff
 	step
 		goto Thunder Bluff,47,49.9
 		.talk Tal##2995
@@ -5037,8 +5016,8 @@ startlevel 13
 	step //8
 		goto 51.4,30.2
 		.talk Apothecary Helbrim##3390
-		..accept Wharfmaster Dizzywig##1492
 		..accept Fungal Spores##848
+		..accept Wharfmaster Dizzywig##1492
 	step //9
 		goto 51.5,30.3
 		.talk Devrak##3615
@@ -5108,6 +5087,8 @@ startlevel 13
 	step //23
 		.' Hearth to the Crossroads|goto The Barrens,52.0,29.9,0.1|use Hearthstone##6948|noway|q 869
 	step //24
+		goto 51.5,30.3|n
+		.talk Devrak##3615
 		.' Fly to Thunder Bluff|goto Thunder Bluff|q 6126 |future
 		only Tauren Druid
 	step //25
@@ -5132,10 +5113,10 @@ startlevel 13
 		only Tauren Druid
 	step //29
 		.' Buy the following from the Auction House:
-		.buy 5 Earthroot|q 6128/1
+		.buy 5 Earthroot##2449|q 6128/1
 		only Tauren Druid
 	step //30
-		'Fly to the Crossroads|goto The Barrens,51.5,30.4,0.1|noway|c
+		.' Fly to the Crossroads|goto The Barrens,51.5,30.4,0.1|noway|c
 		only Tauren Druid
 	step //31
 		goto The Barrens,47.4,16.1|n
@@ -5243,7 +5224,7 @@ startlevel 13
 		.from Witchwing Harpy##3276, Witchwing Roguefeather##3277, Witchwing Windcaller##3280
 		.get 8 Witchwing Talon##5064|q 867/1
 	step //52
-		.' Hearth to the Crossroads|goto The Barrens,52.0,29.9,0.1|use hearthstone##6948|noway|q 848
+		.' Hearth to the Crossroads|goto The Barrens,52.0,29.9,0.1|use Hearthstone##6948|noway|q 848
 	step //53
 		goto 51.4,30.2
 		.talk Apothecary Helbrim##3390
@@ -5281,7 +5262,7 @@ startlevel 13
 	step //61
 		goto 63.1,37.2
 		.talk Bragok##16227
-		.fpath Ratchet|q 1061 |future
+		.fpath Ratchet
 	step
 		goto 63.1,37.2|n
 		.talk Bragok##16227
@@ -6038,7 +6019,7 @@ startlevel 20
 	step
 		goto Hillsbrad Foothills,60.1,18.6
 		.talk Zarise##2389
-		.fpath Tarren Mill, Hillsbrad Foothills|q 1476
+		.fpath Tarren Mill
 		only Scourge Warlock,BloodElf Warlock
 	step
 		goto Wetlands,49.9,12.6
@@ -6048,7 +6029,7 @@ startlevel 20
 	step
 		goto Arathi Highlands,73,32.7
 		.talk Urda##2851
-		.fpath Hammerfall, Arathi Highlands|q 1476
+		.fpath Hammerfall
 		only Scourge Warlock,BloodElf Warlock
 	step
 		goto Arathi Highlands,73,32.7|n
@@ -6378,7 +6359,7 @@ startlevel 20
 	step //97
 		goto 45.1,59.8
 		.talk Tharm##4312
-		.fpath Sun Rock Retreat, Stonetalon Mountains|q 1087
+		.fpath Sun Rock Retreat
 	step //98
 		.' To Tharm's right, there is a path up the hill
 		.' Follow the path up and take the first left|goto Stonetalon Mountains,45.1,63.5,0.3|q 6421 |future
@@ -6477,14 +6458,14 @@ startlevel 20
 	step //121
 		goto 73.2,61.6
 		.talk Vhulgra##12616
-		.fpath Splintertree Post, Ashenvale|q 6562 |future
+		.fpath Splintertree Post
 	step //122
 		goto 36.6,57.1|n
 		.' The path to bypass Astranaar starts here|goto Ashenvale,36.6,57.2,0.3|noway|q 6562 |future
 	step //123
 		goto 12.2,33.8
 		.talk Andruk##11901
-		.fpath Zoram'gar Outpost, Ashenvale|q 6562 |future
+		.fpath Zoram'gar Outpost
 	step //124
 		goto 11.7,34.9
 		.talk Marukai##12719
@@ -6758,7 +6739,7 @@ startlevel 20
 	step //187
 		goto 45.1,49.1
 		.talk Nyse##4317
-		.fpath Freewind Post|q 4821 |future
+		.fpath Freewind Post
 	step //188
 		goto 44.6,50.3
 		.talk Hagar Lightninghoof##10539
@@ -7486,7 +7467,7 @@ startlevel 30
 	step //21
 		goto Hillsbrad Foothills,60.1,18.6
 		.talk Zarise##2389
-		.fpath Tarren Mill|q 494
+		.fpath Tarren Mill
 	step //22
 		goto 61.4,19.1
 		.talk Apothecary Lydon##2216
@@ -7530,7 +7511,7 @@ startlevel 30
 	step //32
 		goto Arathi Highlands,73,32.7
 		.talk Urda##2851
-		.fpath Hammerfall|q 655 |future
+		.fpath Hammerfall
 	step //33
 		goto 72.6,33.9
 		.talk Gor'mul##2792
@@ -7570,7 +7551,7 @@ startlevel 30
 	step //42
 		goto Stranglethorn Vale,32.5,29.4
 		.talk Thysta##1387
-		.fpath Grom'gol Base Camp|q 583 |future
+		.fpath Grom'gol Base Camp
 	step //43
 		goto 35.7,10.5
 		.talk Barnil Stonepot##716
@@ -7728,7 +7709,7 @@ startlevel 30
 	step //69
 		goto Tanaris,51.6,25.4
 		.talk Bulkrek Ragefist##7824
-		.fpath Gadgetzan|q 1145
+		.fpath Gadgetzan
 	step //70
 		.' Hearth to Orgrimmar|goto Orgrimmar|use Hearthstone##6948|noway|q 1145
 	step //71
@@ -7922,7 +7903,7 @@ startlevel 30
 	step //116
 		goto 21.6,74.1
 		.talk Thalon##6726
-		.fpath Shadowprey Village|q 6142
+		.fpath Shadowprey Village
 	step //117
 		goto 19.5,75.9
 		.' Interact with gameobject: Shellfish Trap
@@ -8104,7 +8085,7 @@ startlevel 30
 	step //158
 		goto 35.6,31.9
 		.talk Shardi##11899
-		.fpath Brackenwall Village|q 1178
+		.fpath Brackenwall Village
 	step //159
 		goto 35.6,31.9|n
 		.talk Shardi##11899
@@ -8159,7 +8140,7 @@ startlevel 30
 	step //170
 		goto 26.9,77.1
 		.talk Gringer##2858
-		.fpath Booty Bay|q 605
+		.fpath Booty Bay
 	step //171
 		goto 26.9,77.1|n
 		.talk Gringer##2858
@@ -8793,7 +8774,7 @@ startlevel 35
 	step //130
 		goto 42.8,72.4
 		.talk Dyslix Silvergrub##23612
-		.fpath Mudsprocket|q 11158 |future
+		.fpath Mudsprocket
 	step //131
 		goto 41.8,73.1
 		.' Interact with gameobject: Wanted Poster
@@ -9005,33 +8986,37 @@ startlevel 35
 		ding 40
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (40-45)",[[
-	author support@zygorguides.com
-	next Zygor's Horde Leveling Guides\\Levels (45-50)
-	startlevel 40
+author support@zygorguides.com
+next Zygor's Horde Leveling Guides\\Levels (45-50)
+startlevel 40
 	step //1
 		goto Stranglethorn Vale,33.7,37.3
-		.kill 10 Jungle Stalker|q 196/1
-		.' Kill Jungle Stalkers
-		.get 10 Jungle Stalker Feather|q 572/1
+		.kill 10 Jungle Stalker##687|q 196/1
+		.from Jungle Stalker##687
+		.get 10 Jungle Stalker Feather##3863|q 572/1
 	step //2
 		goto 41.1,43.6
-		.' Kill goblins
-		.get 10 Singing Blue Crystal|q 600/1
+		.from Venture Co. Strip Miner##674, Venture Co. Tinkerer##677
+		.get 10 Singing Blue Crystal##3917|q 600/1
 	step //3
 		goto 39.9,27.6
-		.' Kill Snapjaw Crocolisks around this area along the river
-		.get 5 Snapjaw Crocolisk Skin|q 577/1
+		.from Snapjaw Crocolisk##1152
+		.get 5 Snapjaw Crocolisk Skin##4104|q 577/1
 	step //4
 		goto 32.2,17.4
-		.' Kill Sin'Dall|tip On top of a big hill
-		.get Paw of Sin'Dall|q 188/1
+		.kill Sin'Dall##729|n
+		.get Paw of Sin'Dall##3879|q 188/1
 	step //5
-		goto 35.6,10.6
+		goto 35.7,10.8
 		.talk Hemet Nesingwary Jr.##715
 		..turnin Raptor Mastery (3)##196
 		..accept Raptor Mastery (4)##197
+	step
+		goto 35.6,10.6
 		.talk Ajeck Rouack##717
 		..turnin Tiger Mastery (4)##188
+	step
+		goto 35.6,10.5
 		.talk Sir S. J. Erlgadin##718
 		..turnin Panther Mastery (3)##192
 		..accept Panther Mastery (4)##193
@@ -9042,16 +9027,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (40-45)",
 		..accept Mok'thardin's Enchantment (3)##571
 	step //7
 		goto 50,24
-		.' Kill Bhag'thera
-		.get Fang of Bhag'thera|q 193/1
-		.'Bhag'thera can also be found at 47.2,28.6|goto 47.2,28.6|n
-		info Bhag'thera is a non-stealth panther
+		.kill Bhag'thera##728|n
+		.get Fang of Bhag'thera##3876|q 193/1
+		.' Bhag'thera can also be found|at 47.2,28.6
 	step //8
 		goto 35.6,10.6
 		.talk Sir S. J. Erlgadin##718
 		..turnin Panther Mastery (4)##193
 	step //9
-		'Hearth to Booty Bay|goto 27.1,77.3,0.1|use hearthstone##6948|noway|c
+		.' Hearth to Booty Bay|goto 27.1,77.3,0.1|use Hearthstone##6948|noway|q 600
 	step //10
 		goto 27.1,77.2
 		.talk Crank Fizzlebub##2498
@@ -9062,19 +9046,18 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (40-45)",
 		..turnin Some Assembly Required##577
 		..accept Excelsior##628
 	step //12
-
 		goto 27.3,69.5
-		.' Click the Bloodsail Correspondence
+		.' Interact with gameobject: Bloodsail Correspondence
+		.info It's a piece of paper sitting on top of a barrel.
 		..turnin The Bloodsail Buccaneers (1)##595
 		..accept The Bloodsail Buccaneers (2)##597
-		info It's a piece of paper sitting on top of a barrel
 	step //13
 		goto 31.6,67.3
-		.' Kill gorillas
-		.get 5 Mistvale Giblets|q 606/1
-		.get 1 Aged Gorilla Sinew|q 571/1
+		.from Elder Mistvale Gorilla##1557
+		.get 5 Mistvale Giblets##3919|q 606/1
+		.get Aged Gorilla Sinew##3862|q 571/1
 	step //14
-		'Go inside Booty Bay to 26.9,73.6|goto 26.9,73.6
+		goto 26.9,73.6
 		.talk "Shaky" Phillipe##2502
 		..turnin Scaring Shaky##606
 		..accept Return to MacKinley##607
@@ -9092,15 +9075,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (40-45)",
 		.talk Fleet Master Seahorn##2487
 		..turnin The Bloodsail Buccaneers (3)##599
 	step //18
-		'Fly to Grom'gol Base Camp|goto Stranglethorn Vale,32.5,29.3,0.1|noway|c
+		.' Fly to Grom'gol Base Camp|goto Stranglethorn Vale,32.5,29.3,0.1|noway|c
 	step //19
 		goto 32.1,29.2
 		.talk Far Seer Mok'thardin##2465
 		..turnin Mok'thardin's Enchantment (3)##571
 	step //20
 		goto 30,26
-		.kill 1 Elder Saltwater Crocolisk|n
-		.get 1 Elder Crocolisk Skin|q 628/1
+		.from Elder Saltwater Crocolisk##2635
+		.get Elder Crocolisk Skin##4105|q 628/1
 	step //21
 		'Go to Grom'gol Base Camp and fly to Booty Bay|goto Stranglethorn Vale,26.8,77.0,0.1|noway|c
 	step //22
@@ -9114,13 +9097,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (40-45)",
 	step //25
 		'Go south to Undercity|goto Undercity
 	step //26
-		'Buy the following items from the Auction House:
-		.buy 1 Healing Potion|q 715/1
-		.buy 1 Lesser Invisibility Potion|q 715/2
-		.buy 1 Gyrochronatom|q 714/1
-		.buy 1 Frost Oil|q 713/1
-		info If you cannot buy some of these, ask people to make them for you in General and Trade chat.
-		info2 Offer to pay well and you will usually get someone to do it for you.
+		.' Buy the following items from the Auction House:
+		.buy 1 Healing Potion##929|q 715/1
+		.buy 1 Lesser Invisibility Potion##3823|q 715/2
+		.buy 1 Gyrochronatom##4389|q 714/1
+		.buy 1 Frost Oil##3829|q 713/1
+		.info If you cannot buy some of these, ask people to make them for you in General and Trade chat.
+		.info Offer to pay well and you will usually get someone to do it for you.
 	step //27
 		'Fly to Hammerfall|goto Arathi Highlands,73.1,32.6,0.1|noway|c
 	step //28
@@ -9145,7 +9128,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (40-45)",
 		.talk Lucien Tosselwrench##2920
 		..accept Liquid Stone##715
 		..turnin Liquid Stone##715
-		info2 A little mechanical robot walks around this little area also.
+		.info A little mechanical robot walks around this little area also.
 	step //33
 		ding 41
 	step //34
@@ -9162,7 +9145,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (40-45)",
 	step //36
 		goto 4,44.8
 		.talk Gorrik##2861
-		..fpath Kargath
+		.fpath Kargath
 	step //37
 		goto 2.4,46.1
 		.talk Jarkal Mossmeld##6868
@@ -9285,7 +9268,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (40-45)",
 	step //66
 		goto 46.1,54.8
 		.talk Breyk##6026
-		..fpath Stonard
+		.fpath Stonard
 	step //67
 		goto 47.9,55
 		.talk Helgrum the Swift##1442
@@ -9886,7 +9869,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Levels (45-50)",
 	step //16
 		goto 75.4,44.4
 		.talk Shyn##8020
-		..fpath Camp Mojache
+		.fpath Camp Mojache
 	step //17
 		goto 74.9,42.5
 		.talk Hadoken Swiftstrider##7875
