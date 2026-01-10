@@ -21,7 +21,7 @@ startlevel 9
 		step
 			goto Durotar,41.67,25.86
 			.from Burning Blade Fanatic##3197, Burning Blade Apprentice##3198
-			.get 1 Lieutenant's Insignia##14544|q 5726/1
+			.get Lieutenant's Insignia##14544|q 5726/1
 		step
 			goto Orgrimmar,31.6,37.8
 			.talk Thrall##4949
@@ -70,7 +70,7 @@ startlevel 15
 			..accept The Stagnant Oasis##877
 		step
 			goto The Barrens,55.6,42.8
-			.' Click the Bubbling Fissure
+			.' Interact with gameobject: Bubbling Fissure
 			.info Swim underwater towards the bubbles to this spot
 			.' Test the Dried Seeds|goal Test the Dried Seeds|q 877/1
 		step
@@ -84,7 +84,7 @@ startlevel 15
 		step
 			goto The Barrens,45.5,13.9
 			.from Sunscale Scytheclaw##3256
-			.get 5 Intact Raptor Horn|q 865/1
+			.get 5 Intact Raptor Horn##5055|q 865/1
 			.' You can find more around (1)|at 59.7,8.3
 			.' You can find more around (2)|at 61,31.58
 		step
@@ -100,7 +100,7 @@ startlevel 15
 		step
 			goto The Barrens,55.4,43.5
 			.from Oasis Snapjaw##3461
-			.get 8 Altered Snapjaw Shell|q 880/1
+			.get 8 Altered Snapjaw Shell##5098|q 880/1
 		step
 			goto The Barrens,52.3,31.9
 			.talk Tonga Runetotem##3448
@@ -124,7 +124,8 @@ startlevel 15
 			..accept Deviate Hides##1486
 		step
 			goto The Barrens,47.73,34.82
-			.' Go To Instance!|tip Good luck!
+			.' Go To Instance!
+			.info Good luck!
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Horde Dungeon Quests Guides\\[18] Blackfathom Deeps",[[
@@ -137,7 +138,9 @@ startlevel 18
 		step
 			goto Ashenvale,13.50,13.35
 			.from Blackfathom Tide Priestess##4802
-			.collect 1 Damp Note##16790|sticky
+			.collect Damp Note##16790|q 6564 |future
+		step
+			.use Damp Note##16790
 			..accept Allegiance to the Old Gods(1)##6564
 		step
 			goto Ashenvale,11.6,34.3
@@ -149,7 +152,8 @@ startlevel 18
 			..accept Allegiance to the Old Gods(2)##6565
 		step
 			goto Ashenvale,16.56,11.05
-			.' Go To Instance!|tip Good luck!
+			.' Go To Instance!
+			.info Good luck!
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Horde Dungeon Quests Guides\\[23] Razorfen Kraul",[[
@@ -167,6 +171,88 @@ startlevel 23
 			goto The Barrens,62.4,37.6
 			.talk Mebok Mizzyrix##3446
 			..accept Blueleaf Tubers##1221
+]])
+
+ZygorGuidesViewer:RegisterGuide("Horde Dungeon Quests Guides\\[37] Uldaman",[[
+author danaton
+startlevel 37
+		step
+			goto Undercity,62.3,48.6
+			.talk Patrick Garrett##5651
+			..accept Reclaimed Treasures##2342
+		step
+			goto Orgrimmar,59.5,36.6
+			.talk Dran Droffers##6986
+			..accept Necklace Recovery##2283
+		step
+			goto Badlands,51.4,76.9
+			.talk Theldurin the Lost##2785
+			..accept Solution to Doom##709
+		step
+			goto Badlands,42.4,52.9
+			.talk Rigglefuzz##2817
+			..accept Power Stones##2418
+		step
+			goto Badlands,2.4,46.1
+			.talk Jarkal Mossmeld##6868
+			..accept Badlands Reagent Run##2258
+		step
+			goto Badlands,20,49.4
+			.from Rock Elemental##92, Lesser Rock Elemental##2735
+			.get 5 Rock Elemental Shard##7848|q 2258/3
+		step
+			goto Badlands,21.7,53.1
+			.from Crag Coyote##2727, Elder Crag Coyote##2729
+			.get 10 Crag Coyote Fang##7846|q 2258/2
+		step
+			goto 17.4,60.1
+			.from Starving Buzzard##2829, Buzzard##2830, Giant Buzzard##2831
+			.get 5 Buzzard Gizzard##7847|q 2258/1
+			.' You can find more Starving Buzzard around (1)|at 53.83,27.32
+			.' You can find more Starving Buzzard around (2)|at 53.4,18.57
+		step
+			goto Badlands,2.4,46.1
+			.talk Jarkal Mossmeld##6868
+			..turnin Badlands Reagent Run##2258
+			..accept Uldaman Reagent Run##2202
+		step
+			goto Badlands,46.15,11.53
+			.from Shadowforge Surveyor##4844, Shadowforge Ruffian##4845, Shadowforge Digger##4846
+			.get 8 Dentrium Power Stone##8009|q 2418/1
+			.get 8 An'Alleum Power Stone##8052|q 2418/2
+			.get Shattered Necklace##7666|q 2283/1
+		step
+			goto Badlands,39.32,18.79
+			.collect Tablet of Ryun'eh##4631|q 709/1
+			.info It looks like a huge chest.
+		step
+			goto Badlands,34.2,18.63
+			.collect Garrett Family Treasure##8026|q 2342/1
+			.info A small chest in the back room with troggs.
+		step
+			goto Badlands,35.32,14.45
+			.collect 12 Magenta Fungus Cap##8047|q 2202/1
+			.info They look like mushrooms and are scattered around the Uldaman excavations.
+		step
+			goto Badlands,51.4,76.9
+			.talk Theldurin the Lost##2785
+			..turnin Solution to Doom##709
+		step
+			goto Badlands,42.4,52.9
+			.talk Rigglefuzz##2817
+			..turnin Power Stones##2418
+		step
+			goto Badlands,2.4,46.1
+			.talk Jarkal Mossmeld##6868
+			..turnin Uldaman Reagent Run##2202
+		step
+			goto Orgrimmar,59.5,36.6
+			.talk Dran Droffers##6986
+			..turnin Necklace Recovery##2283
+			..accept Necklace Recovery, Take 2##2284
+		step
+			goto Badlands,35.22,10.66
+			.' Go To Uldaman Instance!
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Horde Dungeon Quests Guides\\[69] The Nexus",[[
@@ -229,7 +315,7 @@ startlevel 69
 			..turnin The Borean Inquisition##11646
 			..accept The Art of Persuasion##11648
 		step
-			'Use your Neural Needler on the Imprisoned Beryl Sorcerer repeatedly to Interrogate the Prisoner|use Neural Needler##34811
+			.' Use your Neural Needler on the Imprisoned Beryl Sorcerer repeatedly to Interrogate the Prisoner|use Neural Needler##34811
 			.' Interrogate the Prisoner|goal Prisoner Interrogated|q 11648/1
 		step
 			goto Borean Tundra,46.3,32.8
