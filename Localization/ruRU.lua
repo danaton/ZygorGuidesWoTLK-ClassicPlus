@@ -95,11 +95,11 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	["waypointaddon_fail"] = "Failed to connect to %s.",
 	["waypoint_step"] = "Этап %s",
 	
-	["pointer_corpselabel1"] = "Ex you",
-	["pointer_corpselabel2"] = "He who learns to run away...",
-	["pointer_corpselabel3"] = "Bitten off more than you could chew, eh.",
-	["pointer_corpselabel4"] = "Bucket Kicker - this way",
-	["pointer_corpselabel5"] = "Try not to think about the repair bill.",
+	["pointer_corpselabel1"] = "Ваша легенда не будет спета бардами. Её, пожалуй, шепотом перескажут как поучительную историю о том, как не надо делать.",
+	["pointer_corpselabel2"] = "Здесь пал тот, кто не умел бегать...",
+	["pointer_corpselabel3"] = "Решили протестировать игровую механику \"\Смерть\"?",
+	["pointer_corpselabel4"] = "Ваша тактика была... памятной. Как памятник на могиле.",
+	["pointer_corpselabel5"] = "Подумай о том, сколько будет стоить ремонт доспехов!",
 
 	["checkmap"] = "Check your map.",
 
@@ -121,11 +121,11 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	['frame_maximize'] = COLOR_TIP_MOUSE.."ЛКМ|r, чтобы показать все",
 	['frame_minright'] = COLOR_TIP_MOUSE.."ПКМ|r, чтобы установить кол-во этапов",
 	['frame_stepnav_prev'] = "Предыдущий этап",
-	['frame_stepnav_prev_click'] = COLOR_TIP_MOUSE.."ЛКМ|r, чтобы вернуться",
-	['frame_stepnav_prev_right'] = COLOR_TIP_MOUSE.."ПКМ|r, чтобы отмотать назад",
+	['frame_stepnav_prev_click'] = COLOR_TIP_MOUSE.."ЛКМ|r, чтобы вернуться к предыдущему этапу",
+	['frame_stepnav_prev_right'] = COLOR_TIP_MOUSE.."ПКМ|r, чтобы вернуться к незавершенному этапу",
 	['frame_stepnav_next'] = "Следующий этап",
-	['frame_stepnav_next_click'] = COLOR_TIP_MOUSE.."ЛКМ|r, чтобы пропустить",
-	['frame_stepnav_next_right'] = COLOR_TIP_MOUSE.."ПКМ|r, чтобы перемотать вперед",
+	['frame_stepnav_next_click'] = COLOR_TIP_MOUSE.."ЛКМ|r, чтобы перейти к следующему этапу  ",
+	['frame_stepnav_next_right'] = COLOR_TIP_MOUSE.."ПКМ|r, чтобы перейти к следующему незавершенному этапу",
 	['frame_section'] = "Текущий гайд",
 	['frame_section_click'] = COLOR_TIP_MOUSE.."Нажмите|r чтобы выбрать",
 
@@ -184,7 +184,7 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	
 	["learn"] = "Изучите",
 	
-	["fishing"] = "Рыбачьте пока ваш навык не будет",
+	["fishing"] = "Рыбачьте, пока ваш навык не достигнет уровня",
 	["until_skill"] = "%s",
 	["completion_fishing"] = "(%d/%d)",
 
