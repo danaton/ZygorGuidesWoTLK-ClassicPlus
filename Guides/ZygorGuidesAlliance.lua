@@ -488,7 +488,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Human (1-13)"
 	step //111
 		goto Ironforge,55.5,47.7
 		.talk Gryth Thurden##1573
-		.fpath Ironforge|q 433 |future
+		.fpath Ironforge
 	step //112
 		.' Go outside to Dun Morogh|goto Dun Morogh|noway|q 433 |future
 	step //113
@@ -516,7 +516,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Human (1-13)"
 	step //119
 		goto Loch Modan,33.9,51
 		.talk Thorgrum Borrelson##1572
-		.fpath Thelsamar, Loch Modan|q 416 |future
+		.fpath Thelsamar
 	step //120
 		goto 34.8,47.1
 		.talk Mountaineer Kadrell##1340
@@ -605,7 +605,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Human (1-13)"
 	step //141
 		goto 36.3,45.6
 		.talk Caylais Moonfeather##3841
-		.fpath Auberdine, Darkshore
+		.fpath Auberdine
 	step //142
 		goto 36.6,45.6
 		.talk Gwennyth Bly'Leggonde##10219
@@ -1524,14 +1524,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 	step //178
 		goto Stormwind City,71,72.5
 		.talk Dungar Longdrink##352
-		.fpath Stormwind City |q 432 |future
+		.fpath Stormwind City
 	step //179
 		goto 69,30.9|n
 		.' Ride the train to Ironforge|goto Ironforge|noway|q 432 |future
 	step //180
 		goto Ironforge,55.5,47.7
 		.talk Gryth Thurden##1573
-		..fpath Ironforge
+		.fpath Ironforge
 	step //181
 		.' Go outside to Dun Morogh|goto Dun Morogh|noway|q 432 |future
 	step //182
@@ -1559,7 +1559,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 	step //188
 		goto Loch Modan,33.9,51
 		.talk Thorgrum Borrelson##1572
-		.fpath Thelsamar |q 416 |future
+		.fpath Thelsamar
 	step //189
 		goto 34.8,47.1
 		.talk Mountaineer Kadrell##1340
@@ -2181,7 +2181,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //122
 		goto 71,72.5
 		.talk Dungar Longdrink##352
-		.fpath Stormwind City|q 983 |future
+		.fpath Stormwind City
 	step //123
 		goto 22.6,56.1|n
 		.' Ride the boat to Auberdine|goto Darkshore,32.4,43.7,1|noway|q 983 |future
@@ -2196,7 +2196,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //126
 		goto 36.3,45.6
 		.talk Caylais Moonfeather##3841
-		.fpath Auberdine|q 983
+		.fpath Auberdine
 	step //127
 		goto 36.6,45.6
 		.talk Gwennyth Bly'Leggonde##10219
@@ -2761,7 +2761,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Dwarf (1-13)"
 	step //102
 		goto Loch Modan,33.9,51
 		.talk Thorgrum Borrelson##1572
-		.fpath Thelsamar, Loch Modan|q 414
+		.fpath Thelsamar
 	step //103
 		goto 34.8,47.1
 		.talk Mountaineer Kadrell##1340
@@ -2844,7 +2844,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Dwarf (1-13)"
 	step //122
 		goto 71,72.5
 		.talk Dungar Longdrink##352
-		.fpath Stormwind City|q 983 |future
+		.fpath Stormwind City
 	step //123
 		goto Darkshore,22.6,56.1|n
 		.' Ride the boat to Auberdine|goto Darkshore,32.4,43.7,1|noway|q 983 |future
@@ -2859,7 +2859,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Dwarf (1-13)"
 	step //126
 		goto 36.3,45.6
 		.talk Caylais Moonfeather##3841
-		.fpath Auberdine, Darkshore|q 983
+		.fpath Auberdine
 	step //127
 		goto 36.6,45.6
 		.talk Gwennyth Bly'Leggonde##10219
@@ -3714,7 +3714,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Draenei (1-13
 	step //151
 		goto Darkshore,36.3,45.6
 		.talk Caylais Moonfeather##3841
-		..fpath Auberdine
+		.fpath Auberdine
 	step //152
 		goto 36.6,45.6
 		.talk Gwennyth Bly'Leggonde##10219
@@ -3851,14 +3851,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Draenei (1-13
 	step //185
 		goto Stormwind City,71,72.5
 		.talk Dungar Longdrink##352
-		..fpath Stormwind City
+		.fpath Stormwind City
 	step //186
 		goto 69,30.9|n
 		'Ride the train to Ironforge|goto Ironforge|noway|c
 	step //187
 		goto Ironforge,55.5,47.7
 		.talk Gryth Thurden##1573
-		..fpath Ironforge
+		.fpath Ironforge
 	step //188
 		'Go outside to Dun Morogh|goto Dun Morogh|noway|c
 	step //189
@@ -3886,7 +3886,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Draenei (1-13
 	step //195
 		goto Loch Modan,33.9,51
 		.talk Thorgrum Borrelson##1572
-		..fpath Thelsamar
+		.fpath Thelsamar
 	step //196
 		goto 34.8,47.1
 		.talk Mountaineer Kadrell##1340
@@ -4847,7 +4847,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 	step //4
 		goto 56.6,52.6
 		.talk Thor##523
-		fpath Sentinel Hill, Westfall|q 109
+		fpath Sentinel Hill
 	step //5
 		goto 54.0,52.9
 		.talk Scout Galiaan##878
@@ -5552,7 +5552,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 	step //170
 		goto 30.6,59.4
 		.talk Ariena Stormfeather##931
-		fpath Lakeshire|q 246
+		fpath Lakeshire
 	step //171
 		goto 33.5,49
 		.talk Marshal Marris##382
@@ -5995,7 +5995,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (20-25
 	step //65
 		goto 34.4,48
 		.talk Daelyshia##4267
-		fpath Astranaar|q 10752
+		fpath Astranaar
 	step //66
 		goto 34.9,49.8
 		.talk Sentinel Thenysil##4079
@@ -6250,7 +6250,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (20-25
 	step //125
 		goto 36.4,7.2
 		.talk Teloren##4407
-		fpath Stonetalon Peak|q 1134
+		fpath Stonetalon Peak
 	step //126
 		goto 36.4,7.2|n
 		.talk Teloren##4407
@@ -6323,7 +6323,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (20-25
 	step //143
 		goto 9.5,59.7
 		.talk Shellei Brondir##1571
-		fpath Menethil Harbor|q 288 |future
+		fpath Menethil Harbor
 	step //144
 		goto 10.9,59.6
 		.talk First Mate Fitzsimmons##1239
@@ -6726,7 +6726,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 	step //84
 		goto 77.5,44.3|n
 		.talk Felicia Maline##2409
-		.fpath Darkshire|q 101
+		.fpath Darkshire
 	step //85
 		goto 79.8,48.1
 		.talk Viktori Prism'Antras##276
@@ -7146,7 +7146,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	next Zygor's Alliance Leveling Guides\\Levels (35-40)
 	startlevel 30
 	step //1
-		'Fly to Stormwind|goto Stormwind City|noway|c
+		.' Fly to Stormwind|goto Stormwind City|noway|c
 		only Draenei Warrior,Gnome Warrior,NightElf Warrior,Dwarf Warrior,Human Warrior
 	step //2
 		goto Stormwind City,80.6,59.9
@@ -7155,13 +7155,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		only Draenei Warrior,Gnome Warrior,NightElf Warrior,Dwarf Warrior,Human Warrior
 	step //3
 		goto 22.6,56.1|n
-		.'Ride the boat to Auberdine|goto Darkshore,32.4,43.7,1|noway|c
+		.' Ride the boat to Auberdine|goto Darkshore,32.4,43.7,1|noway|c
 		only Draenei Warrior,Gnome Warrior,NightElf Warrior,Dwarf Warrior,Human Warrior
 	step //4
-		'Fly to Astranaar|goto Ashenvale,35.5,50.2,5|noway|c
+		.' Fly to Astranaar|goto Ashenvale,35.5,50.2,5|noway|c
 		only Draenei Warrior,Gnome Warrior,NightElf Warrior,Dwarf Warrior,Human Warrior
 	step //5
-		'Go southeast to The Barrens|goto The Barrens|noway|c
+		.' Go southeast to The Barrens|goto The Barrens|noway|c
 		only Draenei Warrior,Gnome Warrior,NightElf Warrior,Dwarf Warrior,Human Warrior
 	step //6
 		goto The Barrens,68.6,49.2
@@ -7172,7 +7172,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //7
 		goto 68.6,48.7
 		.goal Step on the grate to begin the Affray|q 1719/1
-		.kill 1 Big Will|q 1719/2
+		.kill Big Will|q 1719/2
 		only Draenei Warrior,Gnome Warrior,NightElf Warrior,Dwarf Warrior,Human Warrior
 	step //8
 		goto 68.6,49.2
@@ -7311,7 +7311,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //43
 		goto 85.1,43.4
 		.talk Suralais Farwind##22935
-		..fpath Forest Song, Ashenvale
+		.fpath Forest Song
 	step //44
 		goto 78.3,44.8
 		.talk Anilia##3920
@@ -7415,7 +7415,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //66
 		goto Azshara,11.9,77.6
 		.talk Jarrodenus##12577
-		..fpath Talrendis Point
+		.fpath Talrendis Point
 	step //67
 		'Fly to Astranaar|goto Ashenvale,35.5,50.2,5|noway|c
 	step //68
@@ -7456,7 +7456,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //78
 		goto Teldrassil,58.4,94
 		.talk Vesprystus##3838
-		..fpath Rut'theran Village
+		.fpath Rut'theran Village
 		only Gnome,Human,Dwarf,Draenei
 	step //79
 		'Go through the big pink portal to Darnassus|goto Darnassus|noway|c
@@ -7635,13 +7635,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //119
 		goto 45.8,46.1
 		.talk Cedrik Prose##2835
-		..fpath Refuge Pointe
+		.fpath Refuge Pointe
 	step //120
 		'Go northwest to the Hillsbrad Foothills|goto Hillsbrad Foothills|noway|c
 	step //121
 		goto Hillsbrad Foothills,49.3,52.3
 		.talk Darla Harris##2432
-		..fpath Southshore
+		.fpath Southshore
 	step //122
 		goto 49.5,58.7
 		.talk Marshal Redpath##2263
@@ -7812,7 +7812,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //166
 		goto Stranglethorn Vale,38.2,4
 		.talk Nizzle##24366
-		..fpath Rebel Camp
+		.fpath Rebel Camp
 	step //167
 		goto 38,3.3
 		.talk Sergeant Yohwa##733
@@ -12366,7 +12366,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 	step //223
 		goto 75.9,53.4
 		.talk Khaelyn Steelwing##12617
-		.fpath Light's Hope Chapel, Eastern Plaguelands|q 9446
+		.fpath Light's Hope Chapel
 	step //224
 		goto 75.9,53.4|n
 		.talk Khaelyn Steelwing##12617
@@ -12594,7 +12594,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 	step //27
 		goto 78.4,34.9
 		.talk Runetog Wildhammer##20234
-		..fpath Shatter Point, Hellfire Peninsula
+		.fpath Shatter Point, Hellfire Peninsula
 	step //28
 		goto 78.4,34.9
 		.talk Runetog Wildhammer##20234
@@ -12786,7 +12786,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 	step //69
 		goto 25.2,37.2
 		.talk Kuma##18785
-		..fpath Temple of Telhamat,Hellfire Peninsula
+		.fpath Temple of Telhamat, Hellfire Peninsula
 	step //70
 		goto 26.9,37.4
 		.' Click Sedai's Corpse|tip Right down the hill from the Temple of Telhamat Flight Path.
