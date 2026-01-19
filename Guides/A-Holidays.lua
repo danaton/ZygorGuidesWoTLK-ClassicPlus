@@ -11,24 +11,98 @@ startlevel 80
 			goto Stormwind City,37.63,64.94
 			.talk Lunar Festival Emissary##15892
 			..accept The Lunar Festival##8871
+			only Human,Draenei
 		step
 			goto Stormwind City,37.65,65.63
 			.talk Lunar Festival Harbinger##15895
 			..turnin The Lunar Festival##8871
 			..accept Lunar Fireworks##8867
+			only Human,Draenei
 		step
 			goto Stormwind City,37.3,64
 			.talk Lunar Festival Vendor##15898
 			.buy 8 Small Red Rocket##21557|q 8867
 			.buy 2 Green Rocket Cluster##21574|q 8867
+			only Human,Draenei
 		step
 			goto Stormwind City,37.3,65
 			.use Small Red Rocket##21557|q 8867/1
 			.use Green Rocket Cluster##21574|q 8867/2
+			only Human,Draenei
 		step
 			goto Stormwind City,37.65,65.63
 			.talk Lunar Festival Harbinger##15895
 			..turnin Lunar Fireworks##8867
+			only Human,Draenei
+		step
+			goto Darnassus,31.7,13
+			.talk Lunar Festival Emissary##15892
+			..accept The Lunar Festival##8872
+			only NightElf
+		step
+			goto Darnassus,33.89,13.89
+			.talk Lunar Festival Harbinger##15895
+			..turnin The Lunar Festival##8872
+			..accept Lunar Fireworks##8867
+			only NightElf
+		step
+			goto Darnassus,33.6,14.5
+			.talk Elder Bladeswift##15598
+			.' Honor the Elder Bladeswift in Darnassus|achieve 915/1
+			only NightElf
+		step
+			goto Darnassus,31.56,13.69
+			.talk Lunar Festival Vendor##15898
+			.buy 8 Small Red Rocket##21557|q 8867
+			.buy 2 Green Rocket Cluster##21574|q 8867
+			only NightElf
+		step
+			goto Darnassus,68.52,38.66
+			.use Small Red Rocket##21557|q 8867/1
+			.use Green Rocket Cluster##21574|q 8867/2
+			only NightElf
+		step
+			goto Teldrassil,57.3,60.8
+			.talk Elder Bladeleaf##15595
+			.' Honor the Elder Bladeleaf in Dolanaar|achieve 911/6
+			only NightElf
+		step
+			goto Darnassus,33.89,13.89
+			.talk Lunar Festival Harbinger##15895
+			..turnin Lunar Fireworks##8867
+			only NightElf
+		step
+			goto Ironforge,29.91,17.87
+			.talk Lunar Festival Emissary##15892
+			..accept The Lunar Festival##8870
+			only Dwarf,Gnome
+		step
+			goto Ironforge,29.2,17.1
+			.talk Elder Bronzebeard##15871
+			.' Honor the Elder Bronzebeard in Ironforge|achieve 915/2
+			only Dwarf,Gnome
+		step
+			goto Ironforge,28.8,16.2
+			.talk Lunar Festival Harbinger##15895
+			..turnin The Lunar Festival##8870
+			..accept Lunar Fireworks##8867
+			only Dwarf,Gnome
+		step
+			goto Ironforge,29.9,14.2
+			.talk Lunar Festival Vendor##15898
+			.buy 8 Small Red Rocket##21557|q 8867
+			.buy 2 Green Rocket Cluster##21574|q 8867
+			only Dwarf,Gnome
+		step
+			goto Ironforge,31.41,16.84
+			.use Small Red Rocket##21557|q 8867/1
+			.use Green Rocket Cluster##21574|q 8867/2
+			only Dwarf,Gnome
+		step
+			goto Ironforge,28.8,16.2
+			.talk Lunar Festival Harbinger##15895
+			..turnin Lunar Fireworks##8867
+			only Dwarf,Gnome
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Lunar Festival\\The Rockets Red Glare",[[
@@ -40,11 +114,35 @@ startlevel 80
 			goto Stormwind City,37.3,64
 			.talk Lunar Festival Vendor##15898
 			.buy 10 Red Rocket Cluster##21576|achieve 1281
+			only Human,Draenei
 		step
 			goto Stormwind City,37.3,65
 			.use Red Rocket Cluster##21576
 			.' Get The Rockets Red Glare Achievement|achieve 1281
 			.info You have 25 seconds to complete this achievement.
+			only Human,Draenei
+		step
+			goto Darnassus,31.56,13.69
+			.talk Lunar Festival Vendor##15898
+			.buy 10 Red Rocket Cluster##21576|achieve 1281
+			only NightElf
+		step
+			goto Darnassus,68.52,38.66
+			.use Red Rocket Cluster##21576
+			.' Get The Rockets Red Glare Achievement|achieve 1281
+			.info You have 25 seconds to complete this achievement.
+			only NightElf
+		step
+			goto Ironforge,29.9,14.2
+			.talk Lunar Festival Vendor##15898
+			.buy 10 Red Rocket Cluster##21576|achieve 1281
+			only Dwarf,Gnome
+		step
+			goto Ironforge,31.41,16.84
+			.use Red Rocket Cluster##21576
+			.' Get The Rockets Red Glare Achievement|achieve 1281
+			.info You have 25 seconds to complete this achievement.
+			only Dwarf,Gnome
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Lunar Festival\\Frenzied Firecracker",[[
@@ -56,11 +154,35 @@ startlevel 80
 			goto Stormwind City,37.3,64
 			.talk Lunar Festival Vendor##15898
 			.buy 10 Festival Firecracker##21747|achieve 1552
+			only Human,Draenei
 		step
 			goto Stormwind City,38.2,66.37
 			.use Festival Firecracker##21747
 			.' Get the Frenzied Firecracker Achievement|achieve 1552
 			.info You have 30 seconds to complete this achievement.
+			only Human,Draenei
+		step
+			goto Darnassus,31.56,13.69
+			.talk Lunar Festival Vendor##15898
+			.buy 10 Festival Firecracker##21747|achieve 1552
+			only NightElf
+		step
+			goto Darnassus,35.63,21.45
+			.use Festival Firecracker##21747
+			.' Get the Frenzied Firecracker Achievement|achieve 1552
+			.info You have 30 seconds to complete this achievement.
+			only NightElf
+		step
+			goto Ironforge,29.9,14.2
+			.talk Lunar Festival Vendor##15898
+			.buy 10 Festival Firecracker##21747|achieve 1552
+			only Dwarf,Gnome
+		step
+			goto Ironforge,32.2,10.95
+			.use Festival Firecracker##21747
+			.' Get the Frenzied Firecracker Achievement|achieve 1552
+			.info You have 30 seconds to complete this achievement.
+			only Dwarf,Gnome
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Alliance Holidays Guide Achievements\\Lunar Festival\\Elders of Eastern Kingdoms",[[
@@ -344,7 +466,7 @@ startlevel 80
 		step
 			goto Stormwind City,37.6,65.6
 			.talk Lunar Festival Harbinger##15895
-			.' Choose "I'd like a new invitation to the Lunar Festival"
+			.' Choose "I'd like a new invitation to the Lunar Festival".
 			.collect Lunar Festival Invitation##21711|achieve 626
 		step
 			goto Stormwind City,37.3,65
