@@ -10,6 +10,7 @@
 	<Script file="QuestTracking.lua"/>
 	<Script file="Faction.lua"/>
 	<Script file="Profession.lua"/>
+	<Script file="RecipeTracker.lua"/>
 
 	<Script file="QuestAutoAccept.lua"/>
 
@@ -30,7 +31,7 @@
 	<Script file="MapSpotSet.lua" />
 	<Script file="MapSpotsDetector.lua" />
 
-		<!-- <Script file="ZygorGuidesViewerOptions.lua"/> -->
+	<!-- <Script file="ZygorGuidesViewerOptions.lua"/> -->
 	<Include file="ZygorMapIcon.xml" />
 	<Include file="ZygorGuidesViewerFrame.xml" />
 	<!-- <Include file="ZygorGuidesViewerMiniFrame.xml"/> -->
