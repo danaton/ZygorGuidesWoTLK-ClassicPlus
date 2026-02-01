@@ -4824,9 +4824,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Death Knight 
 		ding 60
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (13-20)",[[
-	author support@zygorguides.com
-	next Zygor's Alliance Leveling Guides\\Levels (20-25)
-	startlevel 13
+author support@zygorguides.com
+next Zygor's Alliance Leveling Guides\\Levels (20-25)
+startlevel 13
 	step //1
 		goto Westfall,60,19.4
 		.talk Farmer Furlbrow##237
@@ -5701,9 +5701,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (1
 		ding 20
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (20-25)",[[
-	author support@zygorguides.com
-	next Zygor's Alliance Leveling Guides\\Levels (25-30)
-	startlevel 20
+author support@zygorguides.com
+next Zygor's Alliance Leveling Guides\\Levels (25-30)
+startlevel 20
 	step //1
 		goto Redridge Mountains,40.35,46.5
 		.from Murloc Flesheater##422, Murloc Shorestriker##1083, Murloc Minor Tidecaller##548
@@ -6366,9 +6366,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (20-25
 		ding 25
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30)",[[
-	author support@zygorguides.com
-	next Zygor's Alliance Leveling Guides\\Levels (30-35)
-	startlevel 25
+author support@zygorguides.com
+next Zygor's Alliance Leveling Guides\\Levels (30-35)
+startlevel 25
 	step //1
 		goto Wetlands,38.1,51.1
 		.talk Ormer Ironbraid##1078
@@ -7142,9 +7142,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30
 		..turnin The Legend of Stalvan (13)##98
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35)",[[
-	author support@zygorguides.com
-	next Zygor's Alliance Leveling Guides\\Levels (35-40)
-	startlevel 30
+author support@zygorguides.com
+next Zygor's Alliance Leveling Guides\\Levels (35-40)
+startlevel 30
 	step //1
 		.' Fly to Stormwind|goto Stormwind City|noway|c
 		only Draenei Warrior,Gnome Warrior,NightElf Warrior,Dwarf Warrior,Human Warrior
@@ -7180,29 +7180,29 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..turnin The Affray##1719
 		only Draenei Warrior,Gnome Warrior,NightElf Warrior,Dwarf Warrior,Human Warrior
 	step //9
-		'Go northwest to Ashenvale|goto Ashenvale|noway|c
+		.' Go northwest to Ashenvale|goto Ashenvale|noway|c
 		only Draenei Warrior,Gnome Warrior,NightElf Warrior,Dwarf Warrior,Human Warrior
 	step //10
-		'Go northwest to Astranaar and fly to Auberdine|goto Darkshore,36.4,45.6,0.3|noway|c
+		.' Go northwest to Astranaar and fly to Auberdine|goto Darkshore,36.4,45.6,0.3|noway|c
 		only Draenei Warrior,Gnome Warrior,NightElf Warrior,Dwarf Warrior,Human Warrior
 	step //11
-		'Ride the boat to Stormwind Harbor|goto Stormwind City|noway|c
+		.' Ride the boat to Stormwind Harbor|goto Stormwind City|noway|c
 		only Draenei Warrior,Gnome Warrior,NightElf Warrior,Dwarf Warrior,Human Warrior
 	step //12
-		'Fly to Darkshire|goto Duskwood,74.7,46.9,7|noway|c
+		.' Fly to Darkshire|goto Duskwood,74.7,46.9,7|noway|c
 		only Draenei Warrior,Gnome Warrior,NightElf Warrior,Dwarf Warrior,Human Warrior
 	step //13
-		'Fly to Stormwind|goto Stormwind City|noway|c
+		.' Fly to Stormwind|goto Stormwind City|noway|c
 		only Draenei Shaman
 	step //14
 		goto Stormwind City,22.6,56.1
-		'Ride the boat to Auberdine|goto Darkshore,32.4,43.7,1|noway|c
+		.' Ride the boat to Auberdine|goto Darkshore,32.4,43.7,1|noway|c
 		only Draenei Shaman
 	step //15
-		'Ride the boat to Azuremyst Isle|goto Azuremyst Isle|noway|c
+		.' Ride the boat to Azuremyst Isle|goto Azuremyst Isle|noway|c
 		only Draenei Shaman
 	step //16
-		'Go northeast to the Exodar|goto The Exodar|noway|c
+		.' Go northeast to the Exodar|goto The Exodar|noway|c
 		only Draenei Shaman
 	step //17
 		goto The Exodar,32.3,23.9
@@ -7216,14 +7216,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..accept Call of Air (2)##9552
 		only Draenei Shaman
 	step //19
-		'Go outside to Azuremyst Isle|goto Azuremyst Isle|noway|c
+		.' Go outside to Azuremyst Isle|goto Azuremyst Isle|noway|c
 		only Draenei Shaman
 	step //20
 		goto Azuremyst Isle,26.8,25.6|n
 		.' The path up to Call of Air (2) starts here|goto Azuremyst Isle,26.8,25.6,1|noway|c
 		only Draenei Shaman
 	step //21
-		'Go up the path to 24.6,35.6|goto 24.6,35.6
+		.' Go up the path to 24.6,35.6|goto 24.6,35.6
 		.talk Velaada##17431
 		..turnin Call of Air (2)##9552
 		..accept Call of Air (3)##9553
@@ -7234,45 +7234,52 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..turnin Call of Air (3)##9553
 		..accept Call of Air (4)##9554
 		..'Click -I am ready-
-		..'He brings you back down the mountain to the Exodar at 78,55|noway|c
+		.' He brings you back down the mountain to the Exodar at 78,55|noway|c
 		only Draenei Shaman
 	step //23
-		'Go inside the Exodar to 31.4,27.7|goto The Exodar,31.4,27.7
+		.' Go inside the Exodar to 31.4,27.7|goto The Exodar,31.4,27.7
 		.talk Farseer Nobundo##17204
 		..turnin Call of Air (4)##9554
 		only Draenei Shaman
 	step //24
-		'Go outside to Azuremyst Isle|goto Azuremyst Isle|noway|c
+		.' Go outside to Azuremyst Isle|goto Azuremyst Isle|noway|c
 		only Draenei Shaman
 	step //25
-		'Go southwest to ride the boat to Auberdine|goto Darkshore,38.1,43.1,9|noway|c
+		.' Go southwest to ride the boat to Auberdine|goto Darkshore,38.1,43.1,9|noway|c
 		only Draenei Shaman
 	step //26
-		'Ride the boat to Stormwind Harbor|goto Stormwind City|noway|c
+		.' Ride the boat to Stormwind Harbor|goto Stormwind City|noway|c
 		only Draenei Shaman
 	step //27
-		'Fly to Darkshire|goto Duskwood,74.7,46.9,7|noway|c
+		.' Fly to Darkshire|goto Duskwood,74.7,46.9,7|noway|c
 		only Draenei Shaman
 	step //30
-		'Fly to Stormwind|goto Stormwind City|noway|c
+		goto 77.5,44.3|n
+		.talk Felicia Maline##2409
+		.' Fly to Stormwind|goto Stormwind City|noway|q 1026
 	step //31
 		goto Stormwind City,22.6,56.1|n
-		'Ride the boat to Auberdine|goto Darkshore,32.4,43.7,1|noway|c
+		.' Ride the boat to Auberdine|goto Darkshore,32.4,43.7,1|noway|q 1026
 	step //32
-		'Fly to Astranaar|goto Ashenvale,35.5,50.2,5|noway|c
+		goto Darkshore,36.3,45.6|n
+		.talk Caylais Moonfeather##3841
+		.' Fly to Astranaar|goto Ashenvale,35.5,50.2,5|noway|q 1026
 	step //33
-		goto 37.0,49.2
+		goto Ashenvale,37.0,49.2
 		.talk Innkeeper Kimlya##6738
-		home Astranaar
+		home Astranaar|q 1026
 	step //34
-		goto 54.4,35.4
+		goto Ashenvale,54.97,33.85
 		.from Withered Ancient##3919+, Crazed Ancient##3834+
-		.collect Wooden Key##5475|q 1026/1|sticky
-		.' Open the small chest here
-		.get Iron Shaft|q 1026/1
+		.collect Wooden Key##5475|q 1026
+		.' You can find more Ancient|at 57.85,33.65
+	step
+		goto Ashenvale,54.4,35.4
+		.collect Iron Shaft##5464|q 1026/1
+		.info A small chest on a stone pedestal.
 	step //35
 		goto 50.1,56.4|n
-		.' The path to Shael'dryn starts here.|goto Ashenvale,50.1,56.4,0.5|noway|c
+		.' The path to Shael'dryn starts here.|goto Ashenvale,50.1,56.4,0.5|noway|q 1026
 	step //36
 		goto 53.5,46.3
 		.talk Shael'dryn##3916
@@ -7320,58 +7327,60 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //45
 		goto 78,42.6
 		.from Geltharis##4619
-		.get Branch of Cenarius|q 1031/1
+		.get Branch of Cenarius##5461|q 1031/1
 	step //46
 		goto 80.3,49.1
-		.' Click the Tainted Wood bundles|tip They look like little bundles of wood on the ground around this area.
-		.get 5 Satyrnaar Fel Wood|q 9517/2
+		.collect 5 Satyrnaar Fel Wood##24081|q 9517/2
+		.info They look like little bundles of wood on the ground around this area.
 	step //47
 		goto 81.3,49.1
-		.' Click the Chalice of Elune|tip It's a blue glowing pedestal sitting ont he right side of the red tower thing.
-		.get Chalice of Elune|q 9519/1
+		.collect Chalice of Elune##23760|q 9519/1
+		.info It's a blue glowing pedestal sitting ont he right side of the red tower thing.
 	step //48
 		goto 86.4,52.9
-		.' Click the Lumber Piles|tip The Lumber Piles look like stacked planks of wood around this area.
-		.get 15 Warsong Lumber|q 9517/1
-		.kill 2 Warsong Shredder|q 9518/2
-		.kill 5 Horde Deforester|q 9518/3
-		.kill 10 Horde Scout|q 9518/4
+		.collect 15 Warsong Lumber##23776|q 9517/1
+		.info The Lumber Piles look like stacked planks of wood around this area.
+		.kill 2 Warsong Shredder##11684|q 9518/2
+		.kill 5 Horde Deforester##11681|q 9518/3
+		.kill 10 Horde Scout##11680|q 9518/4
 	step //49
 		goto 88.8,59.5
 		.kill Overseer Gorthak##17304|q 9518/1
 	step //50
 		goto 83.8,67.7
-		.kill 6 Mannoroc Lasher|q 9516/1
-		.kill 6 Roaming Felguard|q 9516/2
-		.kill 6 Searing Infernal|q 9516/3
-		.' Click the Fertile Dirt Mounds
+		.kill 6 Mannoroc Lasher##11697|q 9516/1
+		.kill 6 Roaming Felguard##6115|q 9516/2
+		.kill 6 Searing Infernal##6073|q 9516/3
+		.collect Diabolical Plans##23777|q 9520 |future
+		.' Interact with gameobject: Fertile Dirt Mounds
 		.' Plant 8 Tree Seedlings|goal 8 Tree Seedling Planted|q 9526/1
-		.get Diabolical Plans|n
-		.' Click the Diabolical Plans|use Diabolical Plans##23777
+	step
+		.use Diabolical Plans##23777
 		..accept Diabolical Plans##9520
 	step //51
 		goto 75.3,72.3
-		.' Click the Bottle of Disease on the table
-		.get Bottle of Disease|q 1011/1
+		.collect Bottle of Disease##5440|q 1011/1
+		.info A bottle lying on the table.
 	step //52
 		goto 74.1,73.6
 		.from Rotting Slime##3928+
-		.' Click the Rusty Chest that spawns
-		.get Iron Pommel|q 1027/1
+		.info A small chest appears near it after death.
+		.collect Iron Pommel##5519|q 1027/1
 	step //53
 		goto 66.7,82.2
 		.from Shadethicket Oracle##3931
-		.get Fallen Moonstone|q 1035/1
+		.get Fallen Moonstone##5508|q 1035/1
 	step //54
 		goto 61.9,83.9
 		.talk Sentinel Farsong##14733
 		..turnin Report from the Northern Front##9521
 	step //55
 		goto 53.4,33.2|n
-		.' The path up to 'The Howling Vale' starts here|goto Ashenvale,53.4,33.2,0.5|noway|c
+		.' The path up to 'The Howling Vale' starts here|goto Ashenvale,53.4,33.2,0.5|noway|q 1022
 	step //56
 		goto 50.5,39.1
-		.' Click the Tome of Mel'Thandris|tip Through the cave, down the path, sitting on a little round table.
+		.' Interact with gameobject: Tome of Mel'Thandris
+		.info Through the cave, down the path, sitting on a little round table.
 		.' View the Tome of Mel'Thandris|goal View the Tome of Mel'Thandris|q 1022/1
 	step //57
 		goto 86.4,46.5
@@ -7399,43 +7408,48 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		goto 85.2,44.7
 		.talk Kayneth Stillwind##3848
 		..turnin Forsaken Diseases##1011
+		.' Watch the dialogue
 		..turnin The Lost Chalice##9519
 	step //62
 		ding 31
 	step //63
 		goto 79,46.2
 		.from Xavian Felsworn##3755+, Xavian Betrayer##3754+, Xavian Rogue##3752+, Xavian Hellcaller##3757+
-		.get 16 Satyr Horns|q 1032/1
+		.get 16 Satyr Horns##5481|q 1032/1
 	step //64
 		goto 87.1,43.5
 		.talk Illiyana##3901
 		..turnin Satyr Slaying!##1032
 	step //65
-		'Go east to Azshara|goto Azshara|noway|c
+		.' Go east to Azshara|goto Azshara|noway|q 1035
 	step //66
 		goto Azshara,11.9,77.6
 		.talk Jarrodenus##12577
 		.fpath Talrendis Point
 	step //67
-		'Fly to Astranaar|goto Ashenvale,35.5,50.2,5|noway|c
+		goto Azshara,11.9,77.6|n
+		.talk Jarrodenus##12577
+		.' Fly to Astranaar|goto Ashenvale,35.5,50.2,5|noway|q 1035
 	step //68
 		goto Ashenvale,37.4,51.8
 		.talk Pelturas Whitemoon##3894
 		..turnin Fallen Sky Lake##1035
 	step //69
 		goto 50.1,56.4|n
-		.' The path to Shael'dryn starts here.|goto Ashenvale,50.1,56.4,0.5|noway|c
+		.' The path to Shael'dryn starts here.|goto Ashenvale,50.1,56.4,0.5|noway|q 1027
 	step //70
 		goto 53.5,46.3
 		.talk Shael'dryn##3916
 		..turnin Raene's Cleansing (5)##1027
+		.' Watch the dialogue
 		..accept Raene's Cleansing (6)##1028
 	step //71
 		goto 56.0,51.4|n
-		.' The path up to 'Raene's Cleansing (6)' starts here|goto Ashenvale,56.0,51.4,0.5|noway|c
+		.' The path up to 'Raene's Cleansing (6)' starts here|goto Ashenvale,56.0,51.4,0.5|noway|q 1028
 	step //72
 		goto 56.4,49.2
-		.' Click the Hidden Shrine|tip Follow the path up the mountain. It's a little stone shrine in a hollowed out tree. The path dead ends into the Hidden Shrine.
+		.' Interact with gameobject: Hidden Shrine
+		.info Follow the path up the mountain. It's a little stone shrine in a hollowed out tree. The path dead ends into the Hidden Shrine.
 		..turnin Raene's Cleansing (6)##1028
 		..accept Raene's Cleansing (7)##1055
 	step //73
@@ -7444,22 +7458,26 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..turnin Raene's Cleansing (7)##1055
 		..accept Raene's Cleansing (8)##1029
 	step //74
-		'Hearth to Astranaar|goto Ashenvale,35.5,50.2,5|use Hearthstone##6948|noway|c
+		.' Hearth to Astranaar|goto Ashenvale,35.5,50.2,5|use Hearthstone##6948|noway|q 1029
 	step //75
 		goto 36.6,49.6
 		.talk Raene Wolfrunner##3691
 		..turnin Raene's Cleansing (8)##1029
 	step //76
-		'Fly to Auberdine|goto Darkshore,36.4,45.6,0.3|noway|c
+		goto 34.4,48|n
+		.talk Daelyshia##4267
+		.' Fly to Auberdine|goto Darkshore,36.4,45.6,0.3|noway|q 1037
 	step //77
-		'Ride the boat to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+		goto Darkshore,33.2,40.05|n
+		.' Ride the boat to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|q 1037
 	step //78
 		goto Teldrassil,58.4,94
 		.talk Vesprystus##3838
 		.fpath Rut'theran Village
 		only Gnome,Human,Dwarf,Draenei
 	step //79
-		'Go through the big pink portal to Darnassus|goto Darnassus|noway|c
+		goto Teldrassil,55.95,89.75|n
+		.' Go through the big pink portal to Darnassus|goto Darnassus|noway|q 1037
 	step //80
 		goto Darnassus,61.8,39.2
 		.talk Thyn'tel Bladeweaver##8026
@@ -7467,27 +7485,31 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..accept Velinde's Effects##1038
 	step //81
 		goto 62.3,83.3
-		.' Click Velinde's Locker|tip Over the bridge on the second floor of the building. It is a chest on the ground.
-		.get Velinde's Journal|q 1038/1
+		.collect Velinde's Journal##5520|q 1038/1
+		.info Over the bridge on the second floor of the building. It is a chest on the ground.
 	step //82
 		goto 61.8,39.2
 		.talk Thyn'tel Bladeweaver##8026
 		..turnin Velinde's Effects##1038
 		..accept The Barrens Port##1039
 	step //83
-		'Go to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+		goto Darnassus,30.55,41.35|n
+		.' Go to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|q 1301 |future
 	step //84
-		'Fly to Auberdine|goto Darkshore,36.4,45.6,0.5|noway|c
+		goto Teldrassil,58.4,94|n
+		.talk Vesprystus##3838
+		.' Fly to Auberdine|goto Darkshore,36.4,45.6,0.5|noway|q 1301 |future
 	step //85
-		'Ride the boat to Stormwind Harbor|goto Stormwind City|noway|c
+		goto Darkshore,32.35,43.95|n
+		.' Ride the boat to Stormwind Harbor|goto Stormwind City|noway|q 1301 |future
 	step //
 		goto Stormwind,51.1,95.5
 		.talk Connor Rivers##5081
 		..accept James Hyal (1)##1301
 	step //86
-		.goto Stormwind,71.0,72.5
+		.goto Stormwind,71,72.5|n
 		.talk Dungar Longdrink##352
-		'Fly to Menethil Harbor|goto Wetlands,9.5,59.7,0.5|noway|c
+		.' Fly to Menethil Harbor|goto Wetlands,9.5,59.7,0.5|noway|q 1301
 	step //87
 		goto Wetlands,8.4,61.8
 		.talk Vincent Hyal##5082
@@ -7505,16 +7527,17 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //90
 		goto 10.7,61.0
 		.talk Innkeeper Helbrek##1464
-		home Menethil Harbor
+		home Menethil Harbor|q 321
 	step //91
 		goto 12.1,64.2
-		.' Click the Waterlogged Chest|tip It's a brown chest sitting on this tiny island between 2 broken ship halves.
+		.' Interact with gameobject: Waterlogged Chest
+		.info It's a brown chest sitting on this tiny island between 2 broken ship halves.
 		..turnin Lightforge Iron##321
 		..accept The Lost Ingots##324
 	step //92
 		goto 12.4,65.7
 		.from Bluegill Raider##1418+
-		.get 5 Lightforge Ingot|q 324/1
+		.get 5 Lightforge Ingot##2702|q 324/1
 	step //93
 		goto 10.6,60.6
 		.talk Glorin Steelbrow##1217
@@ -7526,12 +7549,12 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..accept Fall of Dun Modr##472
 	step //95
 		goto 14.1,29.3
-		.kill 13 Cursed Sailor|q 289/1
-		.kill 5 Cursed Marine|q 289/2
+		.kill 13 Cursed Sailor##1157|q 289/1
+		.kill 5 Cursed Marine##1158|q 289/2
 	step //96
 		goto Wetlands,14.1,30.1
 		.from First Mate Snellig##1159
-		.get Snellig's Snuffbox|q 289/3
+		.get Snellig's Snuffbox##3619|q 289/3
 		.info Go downstairs in the ship.
 	step //97
 		ding 32
@@ -7543,33 +7566,32 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //99
 		goto 15.5,23.5
 		.from Captain Halyndor##1160
-		.get Intrepid Strongbox Key|q 290/1
+		.get Intrepid Strongbox Key##2629|q 290/1
 	step //100
 		goto Wetlands,14.4,24
-		.info Go underwater to the bottom of the ship.
-		.' Click Intrepid's Locked Strongbox
+		.' Interact with gameobject: Intrepid's Locked Strongbox
 		.info At the very bottom of this sunken ship, underwater. It looks like a small metal chest.
 		..turnin Lifting the Curse##290
 		..accept The Eye of Paleth##292
 	step //101
 		goto 33.2,51.4
 		.from Sarltooth##1353
-		.get Sarltooth's Talon|q 296/1
+		.get Sarltooth's Talon##3638|q 296/1
 	step //102
 		goto 38.1,51.1
 		.talk Ormer Ironbraid##1078
 		..turnin Ormer's Revenge (3)##296
 	step //103
 		goto 47.5,46.9
-		.' Click the Dragonmaw Catapult
+		.' Interact with gameobject: Dragonmaw Catapult
 		..turnin Nek'rosh's Gambit##465
 		..accept Defeat Nek'rosh##474
 	step //104
 		goto 53.5,54.7
 		.from Chieftain Nek'rosh##2091
-		.get Nek'rosh's Head|q 474/1
+		.get Nek'rosh's Head##3625|q 474/1
 	step //105
-		'Hearth to Menethil Harbor|goto Wetlands,10.1,56.7,9|use Hearthstone##6948|noway|c
+		.' Hearth to Menethil Harbor|goto Wetlands,10.1,56.7,9|use Hearthstone##6948|noway|q 292
 	step //106
 		goto 10.6,60.6
 		.talk Glorin Steelbrow##1217
@@ -7589,13 +7611,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		.talk Motley Garmason##1074
 		..accept The Dark Iron War##303
 	step //109
-		goto 62.2,28.3
-		.kill 10 Dark Iron Dwarf|q 303/1
-		.kill 5 Dark Iron Tunneler|q 303/2
-		.kill 5 Dark Iron Saboteur|q 303/3
-		.kill 5 Dark Iron Demolitionist|q 303/4
+		goto 62.5,28.4
 		.from Balgaras the Foul##1364
-		.get Ear of Balgaras|q 304/1
+		.get Ear of Balgaras##3639|q 304/1
+	step
+		goto 62.2,28.3
+		.kill 10 Dark Iron Dwarf##1051|q 303/1
+		.kill 5 Dark Iron Tunneler##1053|q 303/2
+		.kill 5 Dark Iron Saboteur##1052|q 303/3
+		.kill 5 Dark Iron Demolitionist##1054|q 303/4
+		.' You can find more around|at 47.2,16.45
 	step //110
 		goto 49.8,18.3
 		.talk Longbraid the Grim##1071
@@ -7604,7 +7629,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..turnin The Dark Iron War##303
 	step //111
 		goto 51.3,8
-		.' Click Ebenezer Rustlocke's Corpse|tip Down the passage to the right in the middle of the bridge, all the way downstairs.
+		.' Interact with gameobject: Ebenezer Rustlocke's Corpse
+		.info Down the passage to the right in the middle of the bridge, all the way downstairs.
 		..turnin The Thandol Span (1)##631
 		..accept The Thandol Span (2)##632
 	step //112
@@ -7613,20 +7639,21 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..turnin The Thandol Span (2)##632
 		..accept The Thandol Span (3)##633
 	step //113
-		'Go north to the Arathi Highlands|goto Arathi Highlands|noway|c
+		.' Go north to the Arathi Highlands|goto Arathi Highlands|noway|q 633
 	step //114
 		goto Arathi Highlands,48.8,88.1
-		.' Click the Cache of Explosives|tip To the right across the hanging bridge after walking across the big bridge from the Wetlands.
+		.' Interact with gameobject: Cache of Explosives
+		.info To the right across the hanging bridge after walking across the big bridge from the Wetlands.
 		.' Destroy the Cache of Explosives|goal Cache of Explosives Destroyed|q 633/1
 	step //115
-		'Go south to the Wetlands|goto Wetlands|noway|c
+		.' Go south to the Wetlands|goto Wetlands|noway|q 633
 	step //116
 		goto Wetlands,49.8,18.3
 		.talk Rhag Garmason##1075
 		..turnin The Thandol Span (3)##633
 		..accept Plea To The Alliance##634
 	step //117
-		'Go north to the Arathi Highlands|goto Arathi Highlands|noway|c
+		.' Go north to the Arathi Highlands|goto Arathi Highlands|noway|q 634
 	step //118
 		goto Arathi Highlands,45.8,47.6
 		.talk Captain Nials##2700
@@ -7637,7 +7664,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		.talk Cedrik Prose##2835
 		.fpath Refuge Pointe
 	step //120
-		'Go northwest to the Hillsbrad Foothills|goto Hillsbrad Foothills|noway|c
+		.' Go northwest to the Hillsbrad Foothills|goto Hillsbrad Foothills|noway|q 555 |future
 	step //121
 		goto Hillsbrad Foothills,49.3,52.3
 		.talk Darla Harris##2432
@@ -7661,7 +7688,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //126
 		goto 51.2,58.9
 		.talk Innkeeper Anderson##2352
-		home Southshore
+		home Southshore|q 555 |future
 	step //127
 		goto 51.5,58.4
 		.talk Lieutenant Farren Orinelle##2228
@@ -7677,15 +7704,15 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //130
 		goto 55.7,57
 		.from Snapjaw##2408
-		.get 10 Turtle Meat|q 555/1
+		.get 10 Turtle Meat##3712|q 555/1
 	step //131
 		goto 51.9,58.7
 		.talk Chef Jessen##2430
 		..turnin Soothing Turtle Bisque##555
 	step //132
 		goto 46.4,64
-		.kill 10 Torn Fin Tidehunter|q 536/1
-		.kill 10 Torn Fin Oracle|q 536/2
+		.kill 10 Torn Fin Tidehunter##2377|q 536/1
+		.kill 10 Torn Fin Oracle##2376|q 536/2
 	step //133
 		goto 51.5,58.4
 		.talk Lieutenant Farren Orinelle##2228
@@ -7694,7 +7721,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //134
 		goto 46.4,64
 		.from Torn Fin Tidehunter##2377+, Torn Fin Oracle##2376+
-		.get 10 Murloc Head|q 559/1
+		.get 10 Murloc Head##3716|q 559/1
 	step //135
 		ding 33
 	step //136
@@ -7714,8 +7741,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..accept Stormwind Ho!##562
 	step //139
 		goto 56.2,65
-		.kill 10 Daggerspine Shorehunter|q 562/1
-		.kill 10 Daggerspine Siren|q 562/2
+		.kill 10 Daggerspine Shorehunter##2369|q 562/1
+		.kill 10 Daggerspine Siren##2371|q 562/2
 	step //140
 		goto 51.5,58.4
 		.talk Lieutenant Farren Orinelle##2228
@@ -7723,26 +7750,27 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..accept Reassignment##563
 	step //141
 		goto 55.6,35.2
-		.' Click the Unopened Crate|tip Inside the crumbled tower, under the broken staircase, on the floor to the right as you enter.
-		.get Shipment of Rare Crystals|q 9435/1
+		.collect Shipment of Rare Crystals##23646|q 9435/1
+		.info Inside the crumbled tower, under the broken staircase, on the floor to the right as you enter.
 	step //142
-		'Go north to the Alterac Mountains|goto Alterac Mountains|noway|c
+		.' Go north to the Alterac Mountains|goto Alterac Mountains|noway|q 564
 	step //143
 		goto Alterac Mountains,44.3,78.5
-		.kill 8 Mountain Lion|q 564/1
-		.kill 10 Hulking Mountain Lion|q 564/2
+		.kill 8 Mountain Lion##2406|q 564/1
+		.kill 10 Hulking Mountain Lion##2407|q 564/2
 	step //144
 		goto 56.9,66.7
-		.kill 12 Syndicate Footpad|q 505/1
-		.kill 8 Syndicate Thief|q 505/2
-		.' You can find more of these around 47.9,79.5|goto 47.9,79.5|n
+		.kill 12 Syndicate Footpad##2240|q 505/1
+		.kill 8 Syndicate Thief##2241|q 505/2
+		.' You can find more of these around|at 47.9,79.5
 	step //145
 		goto 58.3,68
-		.' Click the Syndicate Documents on the little round table in the middle of the small camp
+		.' Interact with gameobject: Syndicate Documents 
+		.info On the little round table in the middle of the small camp.
 		..accept Foreboding Plans##510
 		..accept Encrypted Letter##511
 	step //146
-		'Hearth to Southshore|goto Hillsbrad Foothills,51.2,58.9,0.5|use Hearthstone##6948|noway|c
+		.' Hearth to Southshore|goto Hillsbrad Foothills,51.2,58.9,0.5|use Hearthstone##6948|noway|q 9435
 	step //147
 		goto Hillsbrad Foothills,51,58.7
 		.talk Huraan##17218
@@ -7763,17 +7791,21 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		.talk Darren Malvew##2382
 		..turnin Costly Menace##564
 	step //151
-		'Fly to Refuge Point|goto Arathi Highlands,45.8,46.1,0.5|noway|c
+		goto 49.3,52.3|n
+		.talk Darla Harris##2432
+		.' Fly to Refuge Point|goto Arathi Highlands,45.8,46.1,0.5|noway|q 681
 	step //152
 		goto Arathi Highlands,34.2,29.2
-		.kill 10 Syndicate Highwayman|q 681/1
-		.kill 6 Syndicate Mercenary|q 681/2
+		.kill 10 Syndicate Highwayman##2586|q 681/1
+		.kill 6 Syndicate Mercenary##2589|q 681/2
 	step //153
 		goto 45.8,47.6
 		.talk Captain Nials##2700
 		..turnin Northfold Manor##681
 	step //154
-		'Fly to Ironforge|goto Ironforge|noway|c
+		goto 45.8,46.1|n
+		.talk Cedrik Prose##2835
+		.' Fly to Ironforge|goto Ironforge|noway|q 1179 |future
 	step //155
 		goto Ironforge,72.7,94
 		.talk Pilot Longbeard##2092
@@ -7788,9 +7820,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..turnin Letter to Stormpike##514
 		..accept Further Mysteries##525
 	step //158
-		'Fly to Stormwind|goto Stormwind City|noway|c
+		goto 55.5,47.7|n
+		.talk Gryth Thurden##1573
+		.' Fly to Stormwind|goto Stormwind City|noway|q 563
 	step //159
-		'Buy 4 Lesser Bloodstone Ore from the Auction House|buy 4 Lesser Bloodstone Ore|q 627/1
+		goto Stormwind City,61.2,70.7
+		.talk Auctioneer Jaxon##15659
+		.buy 4 Lesser Bloodstone Ore##4278|q 627/1
 	step //160
 		goto 75.8,36.7
 		.talk Major Samuelson##2439
@@ -7814,9 +7850,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //165
 		ding 34
 	step //166
-		'Fly to Darkshire|goto Duskwood,74.7,46.9,7|noway|c
+		goto 71,72.5|n
+		.talk Dungar Longdrink##352
+		.' Fly to Darkshire|goto Duskwood,74.7,46.9,7|noway|q 583 |future
 	step //167
-		'Go southwest to Stranglethorn Vale|goto Stranglethorn Vale|noway|c
+		.' Go southwest to Stranglethorn Vale|goto Stranglethorn Vale|noway|q 583 |future
 	step //168
 		goto Stranglethorn Vale,38.2,4
 		.talk Nizzle##24366
@@ -7843,41 +7881,41 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..accept Panther Mastery (1)##190
 	step //172
 		goto 40.8,10.9
-		.kill 10 Young Panther|q 190/1
+		.kill 10 Young Panther##683|q 190/1
 	step //173
-		goto 44,11.2
-		.kill 15 Kurzen Jungle Fighter|q 203/1
-		.from Kurzen Medicine Man##940+, Kurzen Jungle Fighter##937+
-		.get 7 Jungle Remedy|q 204/1
-	step //174
 		goto 44.5,9.7
-		.' Click the Kurzen Supplies|tip They look like a pile of brown boxes in the small camp.
-		.get Venom Fern Extract|q 204/2
+		.collect Venom Fern Extract##2634|q 204/2
+		.info They look like a pile of brown boxes in the small camp.
+	step //174
+		goto 44,11.2
+		.kill 15 Kurzen Jungle Fighter##937|q 203/1
+		.from Kurzen Medicine Man##940+, Kurzen Jungle Fighter##937+
+		.get 7 Jungle Remedy##2633|q 204/1
 	step //175
 		goto 38,3.3
 		.talk Sergeant Yohwa##733
 		..turnin The Second Rebellion##203
 		..turnin Bad Medicine##204
 	step //176
-		goto 35.8,10.7
+		goto 35.6,10.5
 		.talk Sir S. J. Erlgadin##718
 		..turnin Panther Mastery (1)##190
 		..accept Panther Mastery (2)##191
 	step //177
 		goto 33.6,11.5
-		.kill 10 Young Stranglethorn Tiger|q 185/1
+		.kill 10 Young Stranglethorn Tiger##681|q 185/1
 	step //178
-		goto 35.8,10.7
+		goto 35.6,10.6
 		.talk Ajeck Rouack##717
 		..turnin Tiger Mastery (1)##185
 		..accept Tiger Mastery (2)##186
 	step //179
 		goto 31,10
-		.kill 10 Panther|q 191/1
-		.kill 10 Stranglethorn Tiger|q 186/1
+		.kill 10 Panther##736|q 191/1
+		.kill 10 Stranglethorn Tiger##682|q 186/1
 	step //180
 		goto 27,16.3
-		.kill 10 Stranglethorn Raptor|q 194/1
+		.kill 10 Stranglethorn Raptor##685|q 194/1
 	step //181
 		goto 35.8,10.7
 		.talk Hemet Nesingwary Jr.##715
@@ -7895,15 +7933,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..turnin Krazek's Cookery##210
 		..accept Favor for Krazek##627
 		..turnin Favor for Krazek##627
-		..accept Return to Corporal Kaleb##622
-		..accept Investigate the Camp##201
 		..accept Supplies to Private Thorsen##198
+		..accept Investigate the Camp##201
+		..accept Return to Corporal Kaleb##622
 	step //183
 		goto 27.5,77.8
 		.talk Gyll##2859
-		..fpath Booty Bay
+		.fpath Booty Bay
 	step //184
-		'Ride the boat to Ratchet|goto The Barrens|noway|c
+		goto 25.8,73.1|n
+		.' Ride the boat to Ratchet|goto The Barrens|noway|q 1039
 	step //185
 		goto The Barrens,63.4,38.5
 		.talk Wharfmaster Dizzywig##3453
@@ -7912,18 +7951,20 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //186
 		goto 63.1,37.2
 		.talk Bragok##16227
-		..fpath Ratchet
+		.fpath Ratchet
 	step //187
-		'Go southwest to Thousand Needles|goto Thousand Needles|noway|c
+		.' Go southwest to Thousand Needles|goto Thousand Needles|noway|q 1100 |future
 	step //188
 		goto Thousand Needles,30.7,24.3
-		.' Click Henrig Lonebrow's Journal|tip In the hand of a corpse laying on the side of the road at the bottom of the Great Lift.
-		.' Click Henrig Lonebrow's Journal in your bags|use Henrig Lonebrow's Journal##5791
+		.collect Henrig Lonebrow's Journal##5791|q 1100 |future
+		.info In the hand of a corpse laying on the side of the road at the bottom of the Great Lift.
+	step
+		.use Henrig Lonebrow's Journal##5791
 		..accept Lonebrow's Journal##1100
 	step //189
 		goto 7.8,17.9
 		.talk Thyssiana##4319
-		..fpath Thalanaar
+		.fpath Thalanaar
 	step //190
 		goto 8.1,19
 		.talk Falfindel Waywarder##4048
@@ -7938,9 +7979,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 	step //192
 		goto 77.8,77.3
 		.talk Kravel Koalbeard##4452
-		..accept Hemet Nesingwary Jr.##5762
 		..accept Rocket Car Parts##1110
 		..accept Wharfmaster Dizzywig##1111
+		..accept Hemet Nesingwary Jr.##5762
 	step //193
 		goto 80.2,75.9
 		.talk Pozzik##4630
@@ -7949,31 +7990,37 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		goto 81.6,77.9
 		.talk Trackmaster Zherin##4629
 		..accept A Bump in the Road##1175
-	step //195
-		'Get Rocket Car Parts as you walk around in the Shimmering Flats|n|tip They look like metal scraps on the ground.
 	step //196
 		goto 79.1,85.2
-		.kill 10 Saltstone Crystalhide|q 1175/2
-		.kill 6 Saltstone Gazer|q 1175/3
+		.kill 10 Saltstone Crystalhide##4151|q 1175/2
+		.kill 6 Saltstone Gazer##4150|q 1175/3
 	step //197
 		goto 87.6,66.7
 		.from Salt Flats Scavenger##4154+
-		.get 10 Hollow Vulture Bone|q 1176/1
+		.get 10 Hollow Vulture Bone##5848|q 1176/1
 	step //198
 		goto 83.2,55.4
 		.from Sparkleshell Snapper##4143+
-		.get 9 Hardened Tortoise Shell|q 1105/1
+		.get 9 Hardened Tortoise Shell##5795|q 1105/1
 	step //199
 		goto 75.4,55
-		.kill 10 Saltstone Basilisk|q 1175/1
-		.' Finish getting the 30 Rocket Car Parts you need|goal 30 Rocket Car Parts|q 1110/1
+		.kill 10 Saltstone Basilisk##4147|q 1175/1
+	step //
+		goto 83.06,61.38
+		.collect 30 Rocket Car Parts##5798|q 1110/1
+		.info They look like various machine parts scattered on the ground.
+		.info You can find them all throughout the Shimmering Flats.
+		.' You can find more around (1)|at 77.95,53.29
+		.' You can find more around (2)|at 73.56,56.98
+		.' You can find more around (3)|at 71.30,66.70
+		.' You can find more around (4)|at 77.61,68.70
 	step //200
 		ding 35
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (35-40)",[[
-	author support@zygorguides.com
-	next Zygor's Alliance Leveling Guides\\Levels (40-45)
-	startlevel 35
+author support@zygorguides.com
+next Zygor's Alliance Leveling Guides\\Levels (40-45)
+startlevel 35
 	step //1
 		goto Thousand Needles,72.4,72.6
 		.from Scorpid Reaver##4140+, Scorpid Terror##4139+
