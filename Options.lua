@@ -45,7 +45,7 @@ function me:Options_RegisterDefaults()
 			-- convenience
 			autoaccept = false,
 			autoturnin = false,
-			fixblizzardautoaccept = false,
+			fixblizzardautoaccept = true,
 			analyzereps = false,
 
 

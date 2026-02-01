@@ -10432,8 +10432,8 @@ startlevel 77
 			goto Icecrown,19.54,48.15
 			.talk Lord-Commander Arete##29344
 			..turnin Blood in the Water##12810
-			..accept You'll Need a Gryphon##12814
 			..turnin The Grand (Admiral's) Plan##12839
+			..accept You'll Need a Gryphon##12814
 			..accept In Strict Confidence##12840
 		step
 			goto Icecrown,19.8,47.6

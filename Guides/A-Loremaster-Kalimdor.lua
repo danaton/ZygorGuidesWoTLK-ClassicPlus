@@ -4851,7 +4851,9 @@ startlevel 50
 		step
 			goto Feralas,46.3,58.14
 			.from Deep Strider##5360, Wave Strider##5361
-			.use Zorbin's Ultra-Shrinker##18904|q 7003/1
+			.use Zorbin's Ultra-Shrinker##18904
+			.info Use Zorbins Ultra-Shrinker on Strider.
+			.get 15 Miniaturization Residue##18956|q 7003/1
 			.' You can find more around (1)|at 37.8,36.3
 		step
 			goto Feralas,47,56.9
