@@ -7804,25 +7804,29 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		.talk Archbishop Benedictus##1284
 		..turnin Cleansing the Eye##293
 	step //163
-		ding 34
+		goto Stormwind City,50.6,87.6
+		.talk Archmage Malin##2708
+		..accept Malin's Request##690
 	step //164
-		'Fly to Darkshire|goto Duskwood,74.7,46.9,7|noway|c
+		ding 34
 	step //165
-		'Go southwest to Stranglethorn Vale|goto Stranglethorn Vale|noway|c
+		'Fly to Darkshire|goto Duskwood,74.7,46.9,7|noway|c
 	step //166
+		'Go southwest to Stranglethorn Vale|goto Stranglethorn Vale|noway|c
+	step //167
 		goto Stranglethorn Vale,38.2,4
 		.talk Nizzle##24366
 		.fpath Rebel Camp
-	step //167
+	step //168
 		goto 38,3.3
 		.talk Sergeant Yohwa##733
 		..accept The Second Rebellion##203
 		..accept Bad Medicine##204
-	step //168
+	step //169
 		goto 37.7,3.3
 		.talk Corporal Kaleb##770
 		..accept Krazek's Cookery##210
-	step //169
+	step //170
 		goto 35.8,10.7
 		.talk Barnil Stonepot##716
 		..accept Welcome to the Jungle##583
@@ -7833,44 +7837,44 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..accept Tiger Mastery (1)##185
 		.talk Sir S. J. Erlgadin##718
 		..accept Panther Mastery (1)##190
-	step //170
+	step //171
 		goto 40.8,10.9
 		.kill 10 Young Panther|q 190/1
-	step //171
+	step //172
 		goto 44,11.2
 		.kill 15 Kurzen Jungle Fighter|q 203/1
 		.from Kurzen Medicine Man##940+, Kurzen Jungle Fighter##937+
 		.get 7 Jungle Remedy|q 204/1
-	step //172
+	step //173
 		goto 44.5,9.7
 		.' Click the Kurzen Supplies|tip They look like a pile of brown boxes in the small camp.
 		.get Venom Fern Extract|q 204/2
-	step //173
+	step //174
 		goto 38,3.3
 		.talk Sergeant Yohwa##733
 		..turnin The Second Rebellion##203
 		..turnin Bad Medicine##204
-	step //174
+	step //175
 		goto 35.8,10.7
 		.talk Sir S. J. Erlgadin##718
 		..turnin Panther Mastery (1)##190
 		..accept Panther Mastery (2)##191
-	step //175
+	step //176
 		goto 33.6,11.5
 		.kill 10 Young Stranglethorn Tiger|q 185/1
-	step //176
+	step //177
 		goto 35.8,10.7
 		.talk Ajeck Rouack##717
 		..turnin Tiger Mastery (1)##185
 		..accept Tiger Mastery (2)##186
-	step //177
+	step //178
 		goto 31,10
 		.kill 10 Panther|q 191/1
 		.kill 10 Stranglethorn Tiger|q 186/1
-	step //178
+	step //179
 		goto 27,16.3
 		.kill 10 Stranglethorn Raptor|q 194/1
-	step //179
+	step //180
 		goto 35.8,10.7
 		.talk Hemet Nesingwary Jr.##715
 		..turnin Raptor Mastery (1)##194
@@ -7881,7 +7885,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		.talk Sir S. J. Erlgadin##718
 		..turnin Panther Mastery (2)##191
 		..accept Panther Mastery (3)##192
-	step //180
+	step //181
 		goto 26.9,77.2
 		.talk Krazek##773
 		..turnin Krazek's Cookery##210
@@ -7890,76 +7894,76 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35
 		..accept Return to Corporal Kaleb##622
 		..accept Investigate the Camp##201
 		..accept Supplies to Private Thorsen##198
-	step //181
+	step //182
 		goto 27.5,77.8
 		.talk Gyll##2859
 		..fpath Booty Bay
-	step //182
-		'Ride the boat to Ratchet|goto The Barrens|noway|c
 	step //183
+		'Ride the boat to Ratchet|goto The Barrens|noway|c
+	step //184
 		goto The Barrens,63.4,38.5
 		.talk Wharfmaster Dizzywig##3453
 		..turnin The Barrens Port##1039
 		..accept Passage to Booty Bay##1040
-	step //184
+	step //185
 		goto 63.1,37.2
 		.talk Bragok##16227
 		..fpath Ratchet
-	step //185
-		'Go southwest to Thousand Needles|goto Thousand Needles|noway|c
 	step //186
+		'Go southwest to Thousand Needles|goto Thousand Needles|noway|c
+	step //187
 		goto Thousand Needles,30.7,24.3
 		.' Click Henrig Lonebrow's Journal|tip In the hand of a corpse laying on the side of the road at the bottom of the Great Lift.
 		.' Click Henrig Lonebrow's Journal in your bags|use Henrig Lonebrow's Journal##5791
 		..accept Lonebrow's Journal##1100
-	step //187
+	step //188
 		goto 7.8,17.9
 		.talk Thyssiana##4319
 		..fpath Thalanaar
-	step //188
+	step //189
 		goto 8.1,19
 		.talk Falfindel Waywarder##4048
 		..turnin Lonebrow's Journal##1100
-	step //189
+	step //190
 		goto 78.1,77.1
 		.talk Wizzle Brassbolts##4453
 		..turnin The Brassbolts Brothers##1179
 		..accept Hardened Shells##1105
 		.talk Fizzle Brassbolts##4454
 		..accept Salt Flat Venom##1104
-	step //190
+	step //191
 		goto 77.8,77.3
 		.talk Kravel Koalbeard##4452
 		..accept Hemet Nesingwary Jr.##5762
 		..accept Rocket Car Parts##1110
 		..accept Wharfmaster Dizzywig##1111
-	step //191
+	step //192
 		goto 80.2,75.9
 		.talk Pozzik##4630
 		..accept Load Lightening##1176
-	step //192
+	step //193
 		goto 81.6,77.9
 		.talk Trackmaster Zherin##4629
 		..accept A Bump in the Road##1175
-	step //193
-		'Get Rocket Car Parts as you walk around in the Shimmering Flats|n|tip They look like metal scraps on the ground.
 	step //194
+		'Get Rocket Car Parts as you walk around in the Shimmering Flats|n|tip They look like metal scraps on the ground.
+	step //195
 		goto 79.1,85.2
 		.kill 10 Saltstone Crystalhide|q 1175/2
 		.kill 6 Saltstone Gazer|q 1175/3
-	step //195
+	step //196
 		goto 87.6,66.7
 		.from Salt Flats Scavenger##4154+
 		.get 10 Hollow Vulture Bone|q 1176/1
-	step //196
+	step //197
 		goto 83.2,55.4
 		.from Sparkleshell Snapper##4143+
 		.get 9 Hardened Tortoise Shell|q 1105/1
-	step //197
+	step //198
 		goto 75.4,55
 		.kill 10 Saltstone Basilisk|q 1175/1
 		.' Finish getting the 30 Rocket Car Parts you need|goal 30 Rocket Car Parts|q 1110/1
-	step //198
+	step //199
 		ding 35
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (35-40)",[[
@@ -8383,6 +8387,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (35-40
 		'Fly to Refuge Point|goto Arathi Highlands,45.8,46.1,0.5|noway|c
 	step //106
 		goto Arathi Highlands,46.2,47.8
+		.talk Skuerto##2789
+		..turnin Malin's Request##690
 		.talk Apprentice Kryten##2788
 		..accept Worth Its Weight in Gold##691
 	step //107
@@ -14719,7 +14725,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (66-68
 		.' Click the Bloodmaul Brew Kegs|tip The Bloodmaul Brew Kegs look like barrels.
 		.get 16 Bloodmaul Brutebane Brew|q 10511/1
 	step //108
-		'Go inside the cave to 42.4,83.4|goto 42.4,83.4 
+		'Go inside the cave to 42.4,83.4|goto 42.4,83.4
 		.' Click Draenethyst Mine Crystals|tip They look like huge crystals growing out of the ground.
 		.get 5 Draenethyst Mine Crystal|q 10510/1
 	step //109
@@ -17469,7 +17475,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (70
 		goto 60.5,61.1
 		.talk Vice Admiral Keller##23546
 		..turnin If Valgarde Falls...##11243
-		..accept Rescuing the Rescuers##11244	
+		..accept Rescuing the Rescuers##11244
 	step //315
 		goto 58.1,57
 		.' Click the Ceremonial Dragonflayer Harpoons|tip They look like poles sticking out of the ground, next to dead dwarf bodies around this area.
