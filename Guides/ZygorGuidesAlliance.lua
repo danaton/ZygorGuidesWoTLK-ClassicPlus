@@ -9335,35 +9335,40 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45
 	step //119
 		'Fly to Ironforge|goto Ironforge|noway|c
 	step //120
+	    goto 74.6,12.0
+	.talk Prospector Stormpike##1356
+	..accept Ironband Wants You!##707
+	step //121
 		'Buy the following items from the Auction House:|tip If you cannot buy some of these, ask people to make them for you in General and Trade chat.  Offer to pay well and you will usually get someone to do it for you.
 		.buy 1 Healing Potion|q 715/1
 		.buy 1 Lesser Invisibility Potion|q 715/2
 		.buy 1 Gyrochronatom|q 714/1
 		.buy 1 Frost Oil|q 713/1
-	step //121
-		'Fly to Thelsamar|goto Loch Modan,33.9,50.8,0.5|noway|c
 	step //122
+		'Fly to Thelsamar|goto Loch Modan,33.9,50.8,0.5|noway|c
+	step //123
 		goto 35.5,48.4
 		.talk Innkeeper Hearthstove##6732
 		home Thelsamar
-	step //123
+	step //124
 		goto 65.9,65.6
 		.talk Prospector Ironband##1344
+		..turnin Ironband Wants You!##707
 		..accept Find Agmond##738
-	step //124
-		'Go southwest to the Badlands|goto Badlands|noway|c
 	step //125
+		'Go southwest to the Badlands|goto Badlands|noway|c
+	step //126
 		goto Badlands,53.6,43.3
 		.talk Prospector Ryedol##2910
 		..accept A Dwarf and His Tools##719
 		.talk Sigrun Ironhew##2860
 		..accept Mirages##718
-	step //126
+	step //127
 		goto 42.2,52.7
 		.talk Martek the Exiled##4618
 		..turnin Martek the Exiled##1106
 		..accept Indurium##1108
-	step //127
+	step //128
 		goto 25.9,44.6
 		.talk Lotwil Veriatus##2921
 		..accept Study of the Elements: Rock (1)##710
@@ -9374,29 +9379,29 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45
 		.talk Lucien Tosselwrench##2920
 		..accept Liquid Stone##715
 		..turnin Liquid Stone##715
-	step //128
+	step //129
 		goto 21.9,44.6
 		.from Lesser Rock Elemental##2735
 		.get 10 Small Stone Shard##4626|q 710/1
-	step //129
+	step //130
 		goto 25.9,44.6
 		.talk Lotwil Veriatus##2921
 		..turnin Study of the Elements: Rock (1)##710
 		..accept Study of the Elements: Rock (2)##711
-	step //130
+	step //131
 		goto 52.3,30.4
 		.from Shadowforge Tunneler##2739, Shadowforge Darkweaver##2740, Shadowforge Chanter##2742, Shadowforge Warrior##2743
 		.get Ryedol's Lucky Pick##4616|q 719/1
-	step //131
+	step //132
 		goto 53,33.9
 		.' Click the Crumpled Map|tip Laying on the ground under a white canopy.
 		..accept A Sign of Hope##720
-	step //132
+	step //133
 		goto 66.6,21.5
 		.collect Supply Crate##4629|q 718/1
 		.info It's a wooden crate, sitting next to a very small tent, canopy thing in the small ogre camp, or sitting on the ground next to a cauldron.
 		.' The crate can also be located|at 66.9,23.4
-	step //133
+	step //134
 		goto 53.6,43.3
 		.talk Prospector Ryedol##2910
 		..turnin A Sign of Hope##720
@@ -9404,42 +9409,42 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45
 		.talk Sigrun Ironhew##2860
 		..turnin Mirages##718
 		..accept Scrounging##733
-	step //134
+	step //135
 		goto 50.9,62.4
 		.' Click the Battered Dwarven Skeleton on the ground
 		..turnin Find Agmond##738
 		..accept Murdaloc##739
-	step //135
+	step //136
 		goto 51.8,65.6
 		.kill 12 Stonevault Bonesnapper|q 739/2
 		.kill Murdaloc|q 739/1
 		.info Murdaloc walks around the trogg camp.
 		.kill Stonevault mobs|n
 		.get 10 Indurium Flake|q 1108/1
-	step //136
+	step //137
 		goto 46.3,77.2|n
 		.' The path up to Study of the Elements: Rock (2) starts here|goto 46.3,77.2,0.5|noway|q 711
-	step //137
+	step //138
 		goto 44.8,80.6
 		.from Rock Elementals##92
 		.get 3 Large Stone Slab##4627|q 711/1
-	step //138
+	step //139
 		goto 13.5,78.3
 		.kill Ogres|n
 		.get 7 Scrap Metal##4630|q 733/1
-	step //139
+	step //140
 		goto 25.9,44.6
 		.talk Lotwil Veriatus##2921
 		..turnin Study of the Elements: Rock (2)##711
 		..accept Study of the Elements: Rock (3)##712
-	step //140
+	step //141
 		goto 7.9,74.1|n
 		.' The path up to 'Study of the Elements: Rock (3)' starts here|goto Badlands,7.9,74.1,0.5|noway|c
-	step //141
+	step //142
 		goto 4.2,81.5
 		.from Greater Rock Elementals##2736
 		.get 5 Bracers of Rock Binding##4628|q 712/1
-	step //142
+	step //143
 		goto 25.9,44.6
 		.talk Lotwil Veriatus##2921
 		..turnin Study of the Elements: Rock (3)##712
@@ -9447,7 +9452,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45
 		.talk Lucien Tosselwrench##2920
 		..turnin This Is Going to Be Hard (1)##734
 		..accept This Is Going to Be Hard (2)##777
-	step //143
+	step //144
 		goto 25.9,44.6
 		.talk Lotwil Veriatus##2921
 		..turnin This Is Going to Be Hard (2)##777
@@ -9456,250 +9461,250 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45
 		.get Lotwil's Shackles of Elemental Binding|n
 		.talk Lotwil Veriatus##2921
 		..turnin This Is Going to Be Hard (3)##778
-	step //144
+	step //145
 		goto 42.2,52.7
 		.talk Martek the Exiled##4618
 		..turnin Indurium##1108
 		..accept News for Fizzle##1137
-	step //145
+	step //146
 		goto 53.6,43.3
 		.talk Sigrun Ironhew##2860
 		..turnin Scrounging##733
-	step //146
-		'Go northwest to Loch Modan|goto Loch Modan|noway|c
 	step //147
+		'Go northwest to Loch Modan|goto Loch Modan|noway|c
+	step //148
 		goto Loch Modan,65.9,65.6
 		.talk Prospector Ironband##1344
 		..turnin Murdaloc##739
-	step //148
-		'Hearth to Thelsamar|goto Loch Modan,35.1,46.9,3|use Hearthstone##6948|noway|c
 	step //149
-		'Fly to Darkshire|goto Duskwood,74.7,46.9,7|noway|c
+		'Hearth to Thelsamar|goto Loch Modan,35.1,46.9,3|use Hearthstone##6948|noway|c
 	step //150
+		'Fly to Darkshire|goto Duskwood,74.7,46.9,7|noway|c
+	step //151
 		goto Duskwood,75.8,46.2
 		.talk Watchmaster Sorigal##5464
 		..accept Supplies for Nethergarde##1395
-	step //151
-		'Go east to Deadwind Pass|goto Deadwind Pass|noway|c
 	step //152
-		'Go east to the Swamp of Sorrows|goto Swamp of Sorrows|noway|c
+		'Go east to Deadwind Pass|goto Deadwind Pass|noway|c
 	step //153
-		'Go southeast to the Blasted Lands|goto Blasted Lands|noway|c
+		'Go east to the Swamp of Sorrows|goto Swamp of Sorrows|noway|c
 	step //154
+		'Go southeast to the Blasted Lands|goto Blasted Lands|noway|c
+	step //155
 		goto Blasted Lands,66.5,21.4
 		.talk Quartermaster Lungertz##5393
 		..turnin Supplies for Nethergarde##1395
-	step //155
+	step //156
 		goto 65.5,24.3
 		.talk Alexandra Constantine##8609
 		..fpath Nethergarde Keep
-	step //156
-		'Fly to Booty Bay|goto Stranglethorn Vale,27.7,74.6,6|noway|c
 	step //157
+		'Fly to Booty Bay|goto Stranglethorn Vale,27.7,74.6,6|noway|c
+	step //158
 		goto Stranglethorn Vale,26.9,77.2
 		.talk Krazek##773
 		..accept Tran'rek##2864
-	step //158
+	step //159
 		goto 27.1,77.2
 		.talk Crank Fizzlebub##2498
 		..accept Zanzil's Secret##621
-	step //159
+	step //160
 		goto 27.1,77.5
 		.talk Whiskey Slim##2491
 		..accept Whiskey Slim's Lost Grog##580
-	step //160
+	step //161
 		goto 27.0,77.3
 		.talk Innkeeper Skindle##6807
 		home Booty Bay
-	step //161
+	step //162
 		goto 26.8,76.4
 		.talk Privateer Bloads##2494
 		..accept Akiris by the Bundle (1)##617
-	step //162
+	step //163
 		goto 27.8,77.1
 		.talk "Sea Wolf" MacKinley##2501
 		..accept Stoley's Debt##2872
-	step //163
+	step //164
 		goto 28.6,75.9
 		.talk Dizzy One-Eye##2493
 		..accept Keep An Eye Out##576
-	step //164
+	step //165
 		goto 32.8,76.2
 		.kill 10 Bloodsail Swashbuckler|q 604/1
 		.' Kill Bloodsail pirates along the beach around this area
 		.get Dizzy's Eye|q 576/1
 		.get 15 Snuff|q 587/1
-	step //165
-		ding 44
 	step //166
+		ding 44
+	step //167
 		goto 29.6,80.9
 		.' Click the Bloodsail Orders|tip They are scrolls laying on a box and in the tent here.
 		.get Bloodsail Orders|q 604/3
 		.' Click the Bloodsail Charts|tip They are scrolls laying on a box and in the tent here.
 		.get Bloodsail Charts|q 604/2
 		.' They can also spawn in the camp to the southwest at 27.0,82.8|goto 27.0,82.8|n
-	step //167
+	step //168
 		'Go north to Booty Bay to 26.9,77.3|goto 26.9,77.3
 		.talk Deeg##2488
 		..turnin Up to Snuff##587
-	step //168
+	step //169
 		goto 27.2,77
 		.talk Fleet Master Seahorn##2487
 		..turnin The Bloodsail Buccaneers (4)##604
 		..accept The Bloodsail Buccaneers (5)##608
-	step //169
+	step //170
 		goto 28.6,75.9
 		.talk Dizzy One-Eye##2493
 		..turnin Keep An Eye Out##576
-	step //170
+	step //171
 		goto 24.7,63.7
 		.kill Naga Explorers|n
 		.get 10 Akiris Reed|q 617/1
 		.' More can be found at 26.1,61.9
-	step //171
+	step //172
 		goto 39.2,57.1
 		.kill Zanzil mobs|n
 		.get 12 Zanzil's Mixture|q 621/1
-	step //172
+	step //173
 		goto 40,58.2
 		.from Chucky "Ten Thumbs"##2537
 		.get Chucky's Huge Ring|q 609/3
-	step //173
+	step //174
 		goto 34.9,51.9
 		.from Jon-Jon the Crow##2536
 		.get Jon-Jon's Golden Spyglass|q 609/2
-	step //174
+	step //175
 		goto 35.1,51.1
 		.from Maury "Club Foot" Wilkins##2535
 		.get Maury's Clubbed Foot|q 609/1
-	step //175
+	step //176
 		goto 32.1,43.4
 		.from Tethis##730
 		.get Talon of Tethis|q 197/1
-	step //176
-		'Hearth to Booty Bay|goto Stranglethorn Vale,27.7,74.6,6|use Hearthstone##6948|noway|c
 	step //177
+		'Hearth to Booty Bay|goto Stranglethorn Vale,27.7,74.6,6|use Hearthstone##6948|noway|c
+	step //178
 		goto 27.1,77.2
 		.talk Crank Fizzlebub##2498
 		..turnin Zanzil's Secret##621
-	step //178
-		'Fly to the Rebel Camp|goto Stranglethorn Vale,38.2,4.1,0.5|noway|c
 	step //179
+		'Fly to the Rebel Camp|goto Stranglethorn Vale,38.2,4.1,0.5|noway|c
+	step //180
 		goto 35.8,10.7
 		.talk Hemet Nesingwary Jr.##715
 		..turnin Raptor Mastery (4)##197
 		..accept Big Game Hunter##208
-	step //180
+	step //181
 		goto 38.2,4|n
 		.talk Nizzle##24366
 		..'Fly to Booty Bay|goto Stranglethorn Vale,27.7,74.6,6|noway|c
-	step //181
+	step //182
 		goto 27.8,77.1
 		.talk "Sea Wolf" MacKinley##2501
 		..turnin Voodoo Dues##609
-	step //182
+	step //183
 		goto 26.8,76.4
 		.talk Privateer Bloads##2494
 		..turnin Akiris by the Bundle (1)##617
 		..accept Akiris by the Bundle (2)##623
-	step //183
-		'Ride the boat to Ratchet|goto The Barrens|noway|c
 	step //184
-		'Fly to Theramore|goto Dustwallow Marsh,67.5,50.3,9|noway|c
+		'Ride the boat to Ratchet|goto The Barrens|noway|c
 	step //185
+		'Fly to Theramore|goto Dustwallow Marsh,67.5,50.3,9|noway|c
+	step //186
 		goto Dustwallow Marsh,67.7,51.7
 		.talk Privateer Groy##2616
 		..turnin Akiris by the Bundle (2)##623
-	step //186
-		'Fly to Gadgetzan|goto Tanaris,51.0,29.3,0.5|noway|c
 	step //187
+		'Fly to Gadgetzan|goto Tanaris,51.0,29.3,0.5|noway|c
+	step //188
 		goto Tanaris,52.5,28.5
 		.talk Chief Engineer Bilgewhizzle##7407
 		..accept Wastewander Justice##1690
 		.talk Spigot Operator Luglunket##7408
 		..accept Water Pouch Bounty##1707
-	step //188
-		home Gadgetzan
 	step //189
+		home Gadgetzan
+	step //190
 		goto 51.8,27
 		.' Click the Wanted Poster|tip Right in front of the huge cage door.
 		..accept WANTED: Andre Firebeard##2875
 		..accept WANTED: Caliph Scorpidsting##2781
-	step //190
+	step //191
 		goto 51.6,26.8
 		.talk Tran'rek##7876
 		..turnin Tran'rek##2864
-	step //191
-		'Go north to Thousand Needles|goto Thousand Needles|noway|c
 	step //192
+		'Go north to Thousand Needles|goto Thousand Needles|noway|c
+	step //193
 		goto Thousand Needles,78.1,77.1
 		.talk Fizzle Brassbolts##4454
 		..turnin News for Fizzle##1137
-	step //193
+	step //194
 		goto 80.2,75.9
 		.talk Pozzik##4630
 		..accept Keeping Pace##1190
-	step //194
+	step //195
 		goto 79.8,77
 		.talk Zamek##4709
 		.' He will create a diversion to distract Rizzle Brassbolts
 		.' After you talk to him, skip to the next step of the guide
-	step //195
+	step //196
 		goto 77.2,77.4
 		.' Click Rizzle's Unguarded Plans|tip Rizzle Brassbolts will run out of the house.  The plans look like a scroll laying on the ground inside a small house.
 		..turnin Keeping Pace##1190
 		..accept Rizzle's Schematics##1194
-	step //196
+	step //197
 		goto 80.2,75.9
 		.talk Pozzik##4630
 		..turnin Rizzle's Schematics##1194
-	step //197
-		'Go south to Tanaris|goto Tanaris|noway|c
 	step //198
+		'Go south to Tanaris|goto Tanaris|noway|c
+	step //199
 		goto 59.8,24.7
 		.kill 10 Wastewander Bandit|q 1690/1
 		.kill 10 Wastewander Thief|q 1690/2
 		.kill Wastewander mobs|n
 		.get 5 Wastewander Water Pouch|q 1707/1
 		.' You can find more Wastewander Bandits and Thieves at 62.8,29.4|n
-	step //199
+	step //200
 		goto 67.1,23.9
 		.talk Stoley##7881
 		..turnin Stoley's Debt##2872
 		..accept Stoley's Shipment##2873
 		.talk Security Chief Bilgewhizzle##7882
 		..accept Southsea Shakedown##8366
-	step //200
+	step //201
 		goto 66.6,22.3
 		.talk Haughty Modiste##15165
 		..accept Pirate Hats Ahoy!##8365
-	step //201
+	step //202
 		goto 67,22.4
 		.talk Yeh'kinya##8579
 		..accept Screecher Spirits##3520
-	step //202
+	step //203
 		goto 64.7,35.3
 		.from Caliph Scorpidsting##7847
 		.get Caliph Scorpidsting's Head|q 2781/1
-	step //203
+	step //204
 		goto 70.4,42.7
 		.kill 10 Southsea Pirate|q 8366/1
 		.kill 10 Southsea Freebooter|q 8366/2
 		.kill Southsea Pirates|n
 		.get 20 Southsea Pirate Hat|q 8365/1
-	step //204
+	step //205
 		goto 72.2,46.8
 		.' Click the Stolen Cargo
 		.get Stoley's Shipment|q 2873/1
-	step //205
+	step //206
 		goto 73.4,47.1
 		.from Andre Firebeard##7883
 		.get Firebeard's Head|q 2875/1
-	step //206
+	step //207
 		goto 74.3,46.4
 		.kill 10 Southsea Dock Worker|q 8366/3
 		.kill 10 Southsea Swashbuckler|q 8366/4
-	step //207
+	step //208
 		ding 45
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (45-50)",[[
