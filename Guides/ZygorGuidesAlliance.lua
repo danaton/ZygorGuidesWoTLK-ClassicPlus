@@ -9479,232 +9479,239 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45
 	step //149
 		'Hearth to Thelsamar|goto Loch Modan,35.1,46.9,3|use Hearthstone##6948|noway|c
 	step //150
-		'Fly to Darkshire|goto Duskwood,74.7,46.9,7|noway|c
+	    'Fly to Stormwind|goto Stormwind City|noway|c
 	step //151
+	    goto Stormwind City,48.7,87.6
+		.talk High Sorcerer Andromath##5694
+		..accept Vital Supplies##1477
+	step //152
+		'Fly to Darkshire|goto Duskwood,74.7,46.9,7|noway|c
+	step //153
 		goto Duskwood,75.8,46.2
 		.talk Watchmaster Sorigal##5464
+		..turnin Vital Supplies##1477
 		..accept Supplies for Nethergarde##1395
-	step //152
-		'Go east to Deadwind Pass|goto Deadwind Pass|noway|c
-	step //153
-		'Go east to the Swamp of Sorrows|goto Swamp of Sorrows|noway|c
 	step //154
-		'Go southeast to the Blasted Lands|goto Blasted Lands|noway|c
+		'Go east to Deadwind Pass|goto Deadwind Pass|noway|c
 	step //155
+		'Go east to the Swamp of Sorrows|goto Swamp of Sorrows|noway|c
+	step //156
+		'Go southeast to the Blasted Lands|goto Blasted Lands|noway|c
+	step //157
 		goto Blasted Lands,66.5,21.4
 		.talk Quartermaster Lungertz##5393
 		..turnin Supplies for Nethergarde##1395
-	step //156
+	step //158
 		goto 65.5,24.3
 		.talk Alexandra Constantine##8609
 		..fpath Nethergarde Keep
-	step //157
+	step //159
 		'Fly to Booty Bay|goto Stranglethorn Vale,27.7,74.6,6|noway|c
-	step //158
+	step //160
 		goto Stranglethorn Vale,26.9,77.2
 		.talk Krazek##773
 		..accept Tran'rek##2864
-	step //159
+	step //161
 		goto 27.1,77.2
 		.talk Crank Fizzlebub##2498
 		..accept Zanzil's Secret##621
-	step //160
+	step //162
 		goto 27.1,77.5
 		.talk Whiskey Slim##2491
 		..accept Whiskey Slim's Lost Grog##580
-	step //161
+	step //163
 		goto 27.0,77.3
 		.talk Innkeeper Skindle##6807
 		home Booty Bay
-	step //162
+	step //164
 		goto 26.8,76.4
 		.talk Privateer Bloads##2494
 		..accept Akiris by the Bundle (1)##617
-	step //163
+	step //165
 		goto 27.8,77.1
 		.talk "Sea Wolf" MacKinley##2501
 		..accept Stoley's Debt##2872
-	step //164
+	step //166
 		goto 28.6,75.9
 		.talk Dizzy One-Eye##2493
 		..accept Keep An Eye Out##576
-	step //165
+	step //167
 		goto 32.8,76.2
 		.kill 10 Bloodsail Swashbuckler|q 604/1
 		.' Kill Bloodsail pirates along the beach around this area
 		.get Dizzy's Eye|q 576/1
 		.get 15 Snuff|q 587/1
-	step //166
+	step //168
 		ding 44
-	step //167
+	step //169
 		goto 29.6,80.9
 		.' Click the Bloodsail Orders|tip They are scrolls laying on a box and in the tent here.
 		.get Bloodsail Orders|q 604/3
 		.' Click the Bloodsail Charts|tip They are scrolls laying on a box and in the tent here.
 		.get Bloodsail Charts|q 604/2
 		.' They can also spawn in the camp to the southwest at 27.0,82.8|goto 27.0,82.8|n
-	step //168
+	step //170
 		'Go north to Booty Bay to 26.9,77.3|goto 26.9,77.3
 		.talk Deeg##2488
 		..turnin Up to Snuff##587
-	step //169
+	step //171
 		goto 27.2,77
 		.talk Fleet Master Seahorn##2487
 		..turnin The Bloodsail Buccaneers (4)##604
 		..accept The Bloodsail Buccaneers (5)##608
-	step //170
+	step //172
 		goto 28.6,75.9
 		.talk Dizzy One-Eye##2493
 		..turnin Keep An Eye Out##576
-	step //171
+	step //173
 		goto 24.7,63.7
 		.kill Naga Explorers|n
 		.get 10 Akiris Reed|q 617/1
 		.' More can be found at 26.1,61.9
-	step //172
+	step //174
 		goto 39.2,57.1
 		.kill Zanzil mobs|n
 		.get 12 Zanzil's Mixture|q 621/1
-	step //173
+	step //175
 		goto 40,58.2
 		.from Chucky "Ten Thumbs"##2537
 		.get Chucky's Huge Ring|q 609/3
-	step //174
+	step //176
 		goto 34.9,51.9
 		.from Jon-Jon the Crow##2536
 		.get Jon-Jon's Golden Spyglass|q 609/2
-	step //175
+	step //177
 		goto 35.1,51.1
 		.from Maury "Club Foot" Wilkins##2535
 		.get Maury's Clubbed Foot|q 609/1
-	step //176
+	step //178
 		goto 32.1,43.4
 		.from Tethis##730
 		.get Talon of Tethis|q 197/1
-	step //177
+	step //179
 		'Hearth to Booty Bay|goto Stranglethorn Vale,27.7,74.6,6|use Hearthstone##6948|noway|c
-	step //178
+	step //180
 		goto 27.1,77.2
 		.talk Crank Fizzlebub##2498
 		..turnin Zanzil's Secret##621
-	step //179
+	step //181
 		'Fly to the Rebel Camp|goto Stranglethorn Vale,38.2,4.1,0.5|noway|c
-	step //180
+	step //182
 		goto 35.8,10.7
 		.talk Hemet Nesingwary Jr.##715
 		..turnin Raptor Mastery (4)##197
 		..accept Big Game Hunter##208
-	step //181
+	step //183
 		goto 38.2,4|n
 		.talk Nizzle##24366
 		..'Fly to Booty Bay|goto Stranglethorn Vale,27.7,74.6,6|noway|c
-	step //182
+	step //184
 		goto 27.8,77.1
 		.talk "Sea Wolf" MacKinley##2501
 		..turnin Voodoo Dues##609
-	step //183
+	step //185
 		goto 26.8,76.4
 		.talk Privateer Bloads##2494
 		..turnin Akiris by the Bundle (1)##617
 		..accept Akiris by the Bundle (2)##623
-	step //184
-		'Ride the boat to Ratchet|goto The Barrens|noway|c
-	step //185
-		'Fly to Theramore|goto Dustwallow Marsh,67.5,50.3,9|noway|c
 	step //186
+		'Ride the boat to Ratchet|goto The Barrens|noway|c
+	step //187
+		'Fly to Theramore|goto Dustwallow Marsh,67.5,50.3,9|noway|c
+	step //188
 		goto Dustwallow Marsh,67.7,51.7
 		.talk Privateer Groy##2616
 		..turnin Akiris by the Bundle (2)##623
-	step //187
+	step //189
 		'Fly to Gadgetzan|goto Tanaris,51.0,29.3,0.5|noway|c
-	step //188
+	step //190
 		goto Tanaris,52.5,28.5
 		.talk Chief Engineer Bilgewhizzle##7407
 		..accept Wastewander Justice##1690
 		.talk Spigot Operator Luglunket##7408
 		..accept Water Pouch Bounty##1707
-	step //189
+	step //191
 		home Gadgetzan
-	step //190
+	step //192
 		goto 51.8,27
 		.' Click the Wanted Poster|tip Right in front of the huge cage door.
 		..accept WANTED: Andre Firebeard##2875
 		..accept WANTED: Caliph Scorpidsting##2781
-	step //191
+	step //193
 		goto 51.6,26.8
 		.talk Tran'rek##7876
 		..turnin Tran'rek##2864
-	step //192
+	step //194
 		'Go north to Thousand Needles|goto Thousand Needles|noway|c
-	step //193
+	step //195
 		goto Thousand Needles,78.1,77.1
 		.talk Fizzle Brassbolts##4454
 		..turnin News for Fizzle##1137
-	step //194
+	step //196
 		goto 80.2,75.9
 		.talk Pozzik##4630
 		..accept Keeping Pace##1190
-	step //195
+	step //197
 		goto 79.8,77
 		.talk Zamek##4709
 		.' He will create a diversion to distract Rizzle Brassbolts
 		.' After you talk to him, skip to the next step of the guide
-	step //196
+	step //198
 		goto 77.2,77.4
 		.' Click Rizzle's Unguarded Plans|tip Rizzle Brassbolts will run out of the house.  The plans look like a scroll laying on the ground inside a small house.
 		..turnin Keeping Pace##1190
 		..accept Rizzle's Schematics##1194
-	step //197
+	step //199
 		goto 80.2,75.9
 		.talk Pozzik##4630
 		..turnin Rizzle's Schematics##1194
-	step //198
+	step //200
 		'Go south to Tanaris|goto Tanaris|noway|c
-	step //199
+	step //201
 		goto 59.8,24.7
 		.kill 10 Wastewander Bandit|q 1690/1
 		.kill 10 Wastewander Thief|q 1690/2
 		.kill Wastewander mobs|n
 		.get 5 Wastewander Water Pouch|q 1707/1
 		.' You can find more Wastewander Bandits and Thieves at 62.8,29.4|n
-	step //200
+	step //202
 		goto 67.1,23.9
 		.talk Stoley##7881
 		..turnin Stoley's Debt##2872
 		..accept Stoley's Shipment##2873
 		.talk Security Chief Bilgewhizzle##7882
 		..accept Southsea Shakedown##8366
-	step //201
+	step //203
 		goto 66.6,22.3
 		.talk Haughty Modiste##15165
 		..accept Pirate Hats Ahoy!##8365
-	step //202
+	step //204
 		goto 67,22.4
 		.talk Yeh'kinya##8579
 		..accept Screecher Spirits##3520
-	step //203
+	step //205
 		goto 64.7,35.3
 		.from Caliph Scorpidsting##7847
 		.get Caliph Scorpidsting's Head|q 2781/1
-	step //204
+	step //206
 		goto 70.4,42.7
 		.kill 10 Southsea Pirate|q 8366/1
 		.kill 10 Southsea Freebooter|q 8366/2
 		.kill Southsea Pirates|n
 		.get 20 Southsea Pirate Hat|q 8365/1
-	step //205
+	step //207
 		goto 72.2,46.8
 		.' Click the Stolen Cargo
 		.get Stoley's Shipment|q 2873/1
-	step //206
+	step //208
 		goto 73.4,47.1
 		.from Andre Firebeard##7883
 		.get Firebeard's Head|q 2875/1
-	step //207
+	step //209
 		goto 74.3,46.4
 		.kill 10 Southsea Dock Worker|q 8366/3
 		.kill 10 Southsea Swashbuckler|q 8366/4
-	step //208
+	step //210
 		ding 45
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (45-50)",[[
