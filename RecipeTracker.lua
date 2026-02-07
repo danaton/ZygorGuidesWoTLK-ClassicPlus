@@ -1,4 +1,6 @@
 local ZGV = ZygorGuidesViewer
+if not ZGV then return end
+local L = ZGV.L
 
 ZGV.RecipeTracker = {}
 
@@ -48,5 +50,5 @@ function ZGV.RecipeTracker:Initialize()
         ZGV.db.char.RecipesKnown = {}
     end
     
-    ZGV:Print("Recipe tracking initialized")
+    ZGV:Print(L["recipe_tracking_init"])
 end

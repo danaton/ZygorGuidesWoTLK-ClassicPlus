@@ -183,6 +183,8 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	['quest_part'] = " (часть %s)",
 	
 	["learn"] = "Изучите",
+	["recipe_tracking_init"] = "Отслеживание рецептов включено",
+	["auto_recipe_track"] = "Автоматическое отслеживание рецептов: включено",
 	
 	["fishing"] = "Рыбачьте, пока ваш навык не достигнет уровня",
 	["until_skill"] = "%s",

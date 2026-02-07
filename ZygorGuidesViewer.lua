@@ -290,7 +290,7 @@ end)
         end, 0.5)
     end)
     
-    self:Print("Automatic recipe tracking enabled")
+    self:Print(L["auto_recipe_track"])
 
 	--self.startuptimer = self:ScheduleRepeatingTimer("StartupTimer", 0.1)
 

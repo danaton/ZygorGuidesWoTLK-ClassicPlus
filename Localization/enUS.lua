@@ -359,6 +359,8 @@ ZygorGuidesViewer_L("Main", "enUS", function() return {
 	["completion_rep"] = "(%s)",
 	
 	["learn"] = "Learn",
+	["recipe_tracking_init"] = "Recipe tracking initialized",
+	["auto_recipe_track"] = "Automatic recipe tracking enabled",
 	
 	["fishing"] = "Fish until your skill reaches",
 	["until_skill"] = "%s",
