@@ -1,8 +1,8 @@
-local ZygorGuidesViewer=ZygorGuidesViewer
+local ZygorGuidesViewer = ZygorGuidesViewer
 if not ZygorGuidesViewer then return end
-if UnitFactionGroup("player")~="Alliance" then return end
+if UnitFactionGroup("player") ~= "Alliance" then return end
 
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Human (1-13)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Human (1-13)", [[
 	author support@zygorguides.com
 	defaultfor Human
 	next Zygor's Alliance Leveling Guides\\Main Guide (13-20)
@@ -776,7 +776,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Human (1-13)"
 	step //180
 		.' Go southwest to Westfall|goto Westfall|noway|q 109
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-13)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-13)", [[
 	author support@zygorguides.com
 	defaultfor NightElf
 	next Zygor's Alliance Leveling Guides\\Main Guide (13-20)
@@ -1640,7 +1640,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Night Elf (1-
 	step //208
 		.' Go southwest to Westfall|goto Westfall|noway|q 109 |future
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)", [[
 	author support@zygorguides.com
 	defaultfor Gnome
 	next Zygor's Alliance Leveling Guides\\Main Guide (13-20)
@@ -2290,7 +2290,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Gnome (1-13)"
 	step //150
 		.' Go southwest to Westfall|goto Westfall|noway|q 109
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Dwarf (1-13)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Dwarf (1-13)", [[
 	author support@zygorguides.com
 	defaultfor Dwarf
 	next Zygor's Alliance Leveling Guides\\Main Guide (13-20)
@@ -3020,7 +3020,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Dwarf (1-13)"
 	step //163
 		.' Go southwest to Westfall|goto Westfall|noway|q 109
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Draenei (1-13)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Draenei (1-13)", [[
 	author support@zygorguides.com
 	defaultfor Draenei
 	next Zygor's Alliance Leveling Guides\\Main Guide (13-20)
@@ -3966,7 +3966,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Draenei (1-13
 	step //215
 		'Go southwest to Westfall|goto Westfall|noway|c
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Death Knight (55-60)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Death Knight (55-60)", [[
 	author support@zygorguides.com
 	defaultfor DeathKnight
 	next Zygor's Alliance Leveling Guides\\Outland (60-62)
@@ -4823,7 +4823,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Death Knight 
 	step //200
 		ding 60
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (13-20)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Main Guide (13-20)", [[
 author support@zygorguides.com
 next Zygor's Alliance Leveling Guides\\Levels (20-25)
 startlevel 13
@@ -5700,7 +5700,7 @@ startlevel 13
 	step //205
 		ding 20
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (20-25)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (20-25)", [[
 author support@zygorguides.com
 next Zygor's Alliance Leveling Guides\\Levels (25-30)
 startlevel 20
@@ -6365,7 +6365,7 @@ startlevel 20
 	step //153
 		ding 25
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (25-30)", [[
 author support@zygorguides.com
 next Zygor's Alliance Leveling Guides\\Levels (30-35)
 startlevel 25
@@ -7141,7 +7141,7 @@ startlevel 25
 		.talk Madame Eva##265
 		..turnin The Legend of Stalvan (13)##98
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (30-35)", [[
 author support@zygorguides.com
 next Zygor's Alliance Leveling Guides\\Levels (35-40)
 startlevel 30
@@ -7765,7 +7765,7 @@ startlevel 30
 		.' You can find more of these around|at 47.9,79.5
 	step //145
 		goto 58.3,68
-		.' Interact with gameobject: Syndicate Documents 
+		.' Interact with gameobject: Syndicate Documents
 		.info On the little round table in the middle of the small camp.
 		..accept Foreboding Plans##510
 		..accept Encrypted Letter##511
@@ -8017,7 +8017,7 @@ startlevel 30
 	step //200
 		ding 35
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (35-40)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (35-40)", [[
 author support@zygorguides.com
 next Zygor's Alliance Leveling Guides\\Levels (40-45)
 startlevel 35
@@ -8808,7 +8808,7 @@ startlevel 35
 	step //190
 		ding 40
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45)", [[
 	author support@zygorguides.com
 	next Zygor's Alliance Leveling Guides\\Levels (45-50)
 	startlevel 40
@@ -9714,7 +9714,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (40-45
 	step //210
 		ding 45
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (45-50)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (45-50)", [[
 	author support@zygorguides.com
 	next Zygor's Alliance Leveling Guides\\Levels (50-55)
 	startlevel 45
@@ -10538,7 +10538,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (45-50
 	step //201
 		ding 50
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55)", [[
 	author support@zygorguides.com
 	next Zygor's Alliance Leveling Guides\\Levels (55-60)
 	startlevel 50
@@ -11531,7 +11531,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 	step //234
 		ding 55
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60)", [[
 	author support@zygorguides.com
 	next Zygor's Alliance Leveling Guides\\Outland (60-62)
 	startlevel 55
@@ -12536,7 +12536,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 	step //249
 		ding 60
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-62)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-62)", [[
 	author support@zygorguides.com
 	next Zygor's Alliance Leveling Guides\\Levels (62-64)
 	startlevel 60
@@ -13070,7 +13070,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 	step //116
 		ding 62
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (62-64)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (62-64)", [[
 	author support@zygorguides.com
 	next Zygor's Alliance Leveling Guides\\Levels (64-66)
 	startlevel 62
@@ -13626,7 +13626,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (62-64
 	step //123
 		ding 64
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (64-66)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (64-66)", [[
 	author support@zygorguides.com
 	next Zygor's Alliance Leveling Guides\\Levels (66-68)
 	startlevel 64
@@ -14296,7 +14296,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (64-66
 	step //159
 		ding 66
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (66-68)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (66-68)", [[
 	author support@zygorguides.com
 	next Zygor's Alliance Leveling Guides\\Levels (68-70)
 	startlevel 66
@@ -14787,7 +14787,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (66-68
 		.' Click the Bloodmaul Brew Kegs|tip The Bloodmaul Brew Kegs look like barrels.
 		.get 16 Bloodmaul Brutebane Brew|q 10511/1
 	step //108
-		'Go inside the cave to 42.4,83.4|goto 42.4,83.4 
+		'Go inside the cave to 42.4,83.4|goto 42.4,83.4
 		.' Click Draenethyst Mine Crystals|tip They look like huge crystals growing out of the ground.
 		.get 5 Draenethyst Mine Crystal|q 10510/1
 	step //109
@@ -15162,7 +15162,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (66-68
 	step //191
 		ding 68
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (68-70)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (68-70)", [[
 	author support@zygorguides.com
 	next Zygor's Alliance Leveling Guides\\Northrend (70-72)
 	startlevel 68
@@ -16130,7 +16130,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (68-70
 	step //196
 		ding 70
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (70-72)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (70-72)", [[
 	author support@zygorguides.com
 	next Zygor's Alliance Leveling Guides\\Northrend (72-74)
 	startlevel 70
@@ -17537,7 +17537,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (70
 		goto 60.5,61.1
 		.talk Vice Admiral Keller##23546
 		..turnin If Valgarde Falls...##11243
-		..accept Rescuing the Rescuers##11244	
+		..accept Rescuing the Rescuers##11244
 	step //315
 		goto 58.1,57
 		.' Click the Ceremonial Dragonflayer Harpoons|tip They look like poles sticking out of the ground, next to dead dwarf bodies around this area.
@@ -17683,7 +17683,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (70
 	step //346
 		ding 72
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (72-74)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (72-74)", [[
 	author support@zygorguides.com
 	next Zygor's Alliance Leveling Guides\\Northrend (74-76)
 	startlevel 72
@@ -19342,7 +19342,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (72
 	step //372
 		ding 74
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (74-76)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (74-76)", [[
 	author support@zygorguides.com
 	next Zygor's Alliance Leveling Guides\\Northrend (76-78)
 	startlevel 74
@@ -20927,7 +20927,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (74
 	step //360
 		ding 76
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (76-78)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (76-78)", [[
 	author support@zygorguides.com
 	next Zygor's Alliance Leveling Guides\\Northrend (78-80)
 	startlevel 76
@@ -22486,7 +22486,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (76
 	step //349
 		ding 78
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (78-80)",[[
+ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (78-80)", [[
 	author support@zygorguides.com
 	startlevel 78
 	step //1
@@ -23881,4 +23881,4 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Northrend (78
 		'Congratulations, you are now level 80!
 ]])
 
-ZygorGuidesViewer.AllianceInstalled=true
+ZygorGuidesViewer.AllianceInstalled = true
