@@ -260,8 +260,8 @@ self:AddEvent("SKILL_LINES_CHANGED", function()
     end
 end)
 	
-	    -- Automatic recipe tracking
-    self:AddEvent("CHAT_MSG_SKILL", function(event, message)
+    -- Automatic recipe tracking
+   --[[ self:AddEvent("CHAT_MSG_SKILL", function(event, message)
         -- Check for recipe learning messages
         if message and (message:find("has learned") or message:find("изучает")) then
             self:Print("Recipe learned! Scanning...")
@@ -288,9 +288,9 @@ end)
                 self:SimpleRecipeScan()
             end
         end, 0.5)
-    end)
+    end) ]]--
     
-    self:Print(L["auto_recipe_track"])
+    --self:Print(L["auto_recipe_track"])
 
 	--self.startuptimer = self:ScheduleRepeatingTimer("StartupTimer", 0.1)
 

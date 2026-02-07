@@ -360,7 +360,8 @@ ZygorGuidesViewer_L("Main", "enUS", function() return {
 	
 	["learn"] = "Learn",
 	["recipe_tracking_init"] = "Recipe tracking initialized",
-	["auto_recipe_track"] = "Automatic recipe tracking enabled",
+	--["auto_recipe_track"] = "Automatic recipe tracking enabled",
+	["scan_precipe"] = "Scanning profession recipes...",
 	
 	["fishing"] = "Fish until your skill reaches",
 	["until_skill"] = "%s",

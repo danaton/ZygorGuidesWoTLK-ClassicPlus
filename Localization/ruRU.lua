@@ -184,7 +184,8 @@ ZygorGuidesViewer_L("Main", "ruRU", function() return {
 	
 	["learn"] = "Изучите",
 	["recipe_tracking_init"] = "Отслеживание рецептов включено",
-	["auto_recipe_track"] = "Автоматическое отслеживание рецептов: включено",
+	--["auto_recipe_track"] = "Автоматическое отслеживание рецептов: включено",
+	["scan_precipe"] = "Сканирую ваши рецепты...",
 	
 	["fishing"] = "Рыбачьте, пока ваш навык не достигнет уровня",
 	["until_skill"] = "%s",
@@ -379,4 +380,3 @@ ZygorGuidesViewer_L("Specials", "ruRU", function() return {
 ZygorGuidesViewer_L("G_string", "ruRU", function() return {
 --	["blabla"] = TRUE,
 } end)
-
