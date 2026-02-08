@@ -10268,7 +10268,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (45-50
 		goto 28.5,65.3
 		.kill 8 Gnarled Thistleshrub|q 3362/1
 		.kill 8 Thistleshrub Rootshaper|q 3362/2
-		.kill Thistleshrub Dew Collectors|n
+		.kill Thistleshrub Dew Collectors##5481|n
 		.get Laden Dew Gland|q 2605/1
 	step //137
 		goto 38.5,72.6
@@ -10392,7 +10392,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (45-50
 		.get Violet Tragan|q 2641/1
 	step //168
 		goto 70,58
-		.kill Silvermane Stalkers|n
+		.kill Silvermane Stalkers##2926|n
 		.get 5 Silvermane Stalker Flank|q 4297/1
 	step //169
 		goto 14.2,43.6
@@ -10468,13 +10468,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (45-50
 		.' Skip to the next step of the guide
 	step //185
 		goto 32.9,88.2
-		.kill 1 Captain Stillwater|q 608/1|tip Standing on the middle deck of the ship.
+		.kill 1 Captain Stillwater##2550|q 608/1
 	step //186
 		goto 30.6,90.6
-		.kill 1 Fleet Master Firallon|q 608/3|tip Standing on the middle deck of the ship.
+		.kill 1 Fleet Master Firallon##2546|q 608/3
 	step //187
 		goto 29.2,88.3
-		.kill 1 Captain Keelhaul|q 608/2|tip Standing on the middle deck of the ship.
+		.kill 1 Captain Keelhaul##2548|q 608/2
 	step //188
 		'Make sure you have accepted the Cortello's Riddle quest:
 		.'Click Cortello's Riddle|use Cortello's Riddle##4056
