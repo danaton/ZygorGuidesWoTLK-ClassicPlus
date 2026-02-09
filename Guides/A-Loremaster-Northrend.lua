@@ -10607,17 +10607,10 @@ startlevel 77
 			goto Icecrown,68.89,65.59
 			.collect 3 Pile of Bones##43609|q 13291
 			.info They look like small groups of white bones on the ground.
-			.info You can find them all around the Broken Front area.
-		step
-			goto Icecrown,68.89,65.59
 			.collect 3 Abandoned Armor##43616|q 13291
 			.info They look like metal armor chest pieces on the ground.
-			.info You can find them all around the Broken Front area.
-		step
-			goto Icecrown,68.89,65.59
 			.collect 3 Abandoned Helm##43610|q 13291
 			.info They look like small metal helmets on the ground.
-			.info You can find them all around the Broken Front area.
 		step
 			goto Icecrown,68.89,65.59
 			.use Smuggled Solution##44048
@@ -10627,14 +10620,8 @@ startlevel 77
 		step
 			goto Icecrown,68.89,65.59
 			.kill 5 Hulking Abomination##31140|q 13287/1
-			.info You can find them all around the Broken Front area.
-		step
-			goto Icecrown,68.89,65.59
 			.kill 5 Malefic Necromancer##31155|q 13287/2
 			.info They look like skeletons wearing brown capes.
-			.info You can find them all around the Broken Front area.
-		step
-			goto Icecrown,68.89,65.59
 			.kill 5 Shadow Adept##31145|q 13287/3
 			.info They look like humans channeling a green spell on objects.
 			.info You can find them all around the Broken Front area.
