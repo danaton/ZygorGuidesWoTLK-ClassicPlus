@@ -11745,6 +11745,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		..accept The Everlook Report##6028
 		..accept Duke Nicholas Zverenhoff##6030
 	step //55
+	    goto 61.4,38.8
+	    .talk Innkeeper Vizzie##11118
 		home Everlook
 	step //56
 		goto 60.9,37.6
