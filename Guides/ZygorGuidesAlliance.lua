@@ -11769,7 +11769,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 	step //60
 		goto 39.4,43.8
 		.kill 8 Winterfall Pathfinder|q 5082/1
-		.kill 8 Winterfall Den Watcher|q 5082/2
+		.kill 8 Winterfall Den Watcher|q 5082/2 |tip You don't need to kill these mobs here. You'll find more of them later.
 		.kill 8 Winterfall Totemic|q 5082/3
 		.kill Winterfall furbolgs|n
 		.get Empty Firewater Flask|n
