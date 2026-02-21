@@ -12049,9 +12049,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 	step //135
 		goto 54.4,30.6
 		.kill 15 Dredge Striker|q 8280/1
-		.kill Stonelash Scorpids|n
+		.kill Stonelash Scorpids##11735 |n
 		.get 8 Stonelash Scorpid Stinger|q 8277/1
-		.kill Sand Skitterers|n
+		.kill Sand Skitterers##11738|n
 		.get 8 Sand Skitterer Fang|q 8277/2
 	step //136
 		goto 81.9,18.9
@@ -12554,7 +12554,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 	step //1
 		'Go inside Nethergarde Keep at 63.5,17|goto Blasted Lands,63.5,17
 		.talk Bernie Heisten##3546
-		..buy 1 Nethergarde Bitter|q 9563/1
+		..buy 1 Nethergarde Bitter##23848|q 9563/1
 	step //2
 		goto 58.3,55.9
 		.talk Watch Commander Relthorn Netherwane##16841
@@ -12794,7 +12794,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 	step //55
 		goto 50.2,74.8
 		.from Deranged Helboar##16863
-		.get Tainted Helboar Meat|n
+		.get Tainted Helboar Meat##23270|n
 		.' Use your Purification Mixture on the Tainted Helboar Meat|use Purification Mixture##23268|tip The meat won't become purified every time, it can become toxic as well.
 		.get 8 Purified Helboar Meat|q 9361/1
 	step //56
@@ -13196,25 +13196,27 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (62-64
 		.talk Ikeyen##17956
 		..accept The Umbrafen Tribe##9747
 	step //26
-		goto 79.1,65.3
-		.talk Warden Hamoot##17858
-		..accept A Warm Welcome##9728
+	    goto 78.4,62
+		.talk Ysiel Windsinger##17841
+		..turnin The Cenarion Expedition##9912
+		..accept Disturbance at Umbrafen Lake##9716
+		..accept Warden Hamoot##9778
 	step //27
 		goto 78.5,63.1
 		.talk Lethyn Moonfire##17834
 		..accept The Dying Balance##9895
 	step //28
-		goto 78.4,62
-		.talk Ysiel Windsinger##17841
-		..turnin The Cenarion Expedition##9912
-		..accept Disturbance at Umbrafen Lake##9716
+	    goto 79.1,65.3
+		.talk Warden Hamoot##17858
+		..turnin Warden Hamoot##9778
+	    ..accept A Warm Welcome##9728
 	step //29
 		goto 80.1,73.3
-		.kill Boglash|q 9895/1|tip I found Boglash here. He is a tall alien looking thing with really long legs. He walks around in the water, so some searching may be necessary.
-		.kill Boglash and Fen Striders|n|tip It's easier if you just run around in the water all around the east part of Zangarmarsh.
-		.collect 6 Fertile Spores##24449|q 9806/1|future
-		.kill all mobs in this area|n
-		.get 10 Unidentified Plant Parts|q 9802/1
+		kill Boglash|q 9895/1|tip I found Boglash here. He is a tall alien looking thing with really long legs. He walks around in the water, so some searching may be necessary.
+		from Boglash##18281+ , Fen Striders##18134+|n|tip It's easier if you just run around in the water all around the east part of Zangarmarsh.
+		collect 6 Fertile Spores##24449|q 9806/1|future
+		kill all mobs in this area|n
+		get 10 Unidentified Plant Parts|q 9802/1
 	step //30
 		goto 80.4,64.2
 		.talk Lauranna Thar'well##17909
