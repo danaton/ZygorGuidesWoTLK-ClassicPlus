@@ -10899,64 +10899,68 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 	step //87
 		'Fly to Stormwind|goto Stormwind City|noway|c
 	step //88
+	    goto 54.3,84
+		.talk Tannysa##5566
+		.accept Jonespyre's Request##3787
+	step //89
 		goto Stormwind City,22.6,56.1|n
 		'Ride the boat to Auberdine|goto Darkshore,32.4,43.7,1|noway|c
-	step //89
-		'Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
 	step //90
-		goto Darnassus
+		'Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
 	step //91
+		goto Darnassus
+	step //92
 		goto Darnassus,38.3,80.9
 		.talk Astarii Starseeker##4090
 		..turnin Prayer to Elune (2)##3378
-	step //92
+	step //93
 		goto 41.8,85.6
 		.talk Gracina Spiritmight##7740
 		..turnin Rise of the Silithid##162
 		..accept March of the Silithid##4493
-	step //93
+	step //94
 		goto 35.1,9.1
 		.talk Arch Druid Fandral Staghelm##3516
 		..turnin Assisting Arch Druid Staghelm##3790
 		..accept Un'Goro Soil##3764
-	step //94
+	step //95
 		goto 31,42|n
 		.' Go into the pink portal to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
-	step //95
-		'Fly to Mudsprocket|goto Dustwallow Marsh,42.9,72.4,0.5|noway|c
 	step //96
+		'Fly to Mudsprocket|goto Dustwallow Marsh,42.9,72.4,0.5|noway|c
+	step //97
 		goto Dustwallow Marsh,54.1,55.9
 		.' Click the Damaged Crate|tip It's a half buried crate with a little fire on it.
 		.get Overdue Package|q 4450/3
-	step //97
+	step //98
 		goto 31.1,66.2
 		.' Click the Musty Scroll|tip A little white scroll on a small rock in the cave.
 		..turnin Cortello's Riddle (2)##625
-	step //98
-		'Go southeast to Mudsprocket and fly to Gadgetzan|goto Tanaris,51.0,29.3,0.5|noway|c
 	step //99
+		'Go southeast to Mudsprocket and fly to Gadgetzan|goto Tanaris,51.0,29.3,0.5|noway|c
+	step //100
 		goto Tanaris,51.5,28.8
 		.talk Krinkle Goodsteel##5411
 		..turnin Ledger from Tanaris##4450
-	step //100
+	step //101
 		goto 51.6,26.8
 		.talk Tran'rek##7876
 		..accept Super Sticky##4504
-	step //101
+	step //102
 		goto 50.9,27
 		.talk Alchemist Pestlezugg##5594
 		..turnin March of the Silithid##4493
 		..accept Bungle in the Jungle##4496
-	step //102
-		'Go southwest to the Un'Goro Crater|goto Un'Goro Crater|noway|c
 	step //103
-		ding 52
+		'Go southwest to the Un'Goro Crater|goto Un'Goro Crater|noway|c
 	step //104
+		ding 52
+	step //105
 		goto 71.6,76
 		.talk Torwa Pathfinder##9619
 		..accept The Apes of Un'Goro##4289
 		..accept The Fare of Lar'korwi##4290
-	step //105
+	step //106
 		'While questing in Un'Goro Crater, look for the following items on the ground:
 		.' Green Power Crystals - get 7 of these
 		.' Red Power Crystals - get 7 of these
@@ -10964,17 +10968,17 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 		.' Yellow Power Crystals - get 7 of these
 		.' Un'Goro Dirt Piles - get 25 of these
 		.' Skip to the next step of the guide
-	step //106
+	step //107
 		goto 68,76
 		.kill Ravasaurs|n
 		.get A Mangled Journal|n
 		.' Click the Mangled Journal|use A Mangled Journal##11116
 		..accept Williden's Journal##3884
-	step //107
+	step //108
 		goto 63,68.5
 		.' Click the Wrecked Raft|tip It's a busted up wooden boat on the shore of this small pond.
 		..accept It's a Secret to Everybody (1)##3844
-	step //108
+	step //109
 		goto 63.1,69.1
 		.' Click the Small Pack|tip It's a big tan sac underwater in this pond.
 		..turnin It's a Secret to Everybody (1)##3844
@@ -10983,27 +10987,27 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 		..get Large Compass|q 3845/1
 		..get Curled Map Parchment|q 3845/2
 		..get Lion-headed Key|q 3845/3
-	step //109
+	step //110
 		goto 68.6,56.7
 		.' Click the Fresh Threshadon Carcass|tip Looks like a big dead dinosaur with a bunch of wounds.
 		.get Piece of Threshadon Carcass|q 4290/1
-	step //110
+	step //111
 		goto 71.6,76
 		.talk Torwa Pathfinder##9619
 		..turnin The Fare of Lar'korwi##4290
 		..accept The Scent of Lar'korwi##4291
-	step //111
+	step //112
 		goto 67.3,73.1
 		.' Kill raptors near the egg nest here
 		.' Kill the Lar'korwi Mate that spawns
 		.' You can find another egg nest at 63.2,77.4|n
 		.get 2 Ravasaur Pheromone Gland|q 4291/1
-	step //112
+	step //113
 		goto 71.6,76
 		.talk Torwa Pathfinder##9619
 		..turnin The Scent of Lar'korwi##4291
 		..accept The Bait for Lar'korwi##4292
-	step //113
+	step //114
 		goto 79.9,49.9
 		.' Stand on the big grey flat rock
 		.' Click Torwa's Pouch in your bags|use Torwa's Pouch##11568
@@ -11011,7 +11015,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 		.' Click the Preserved Pheromone Mixture in your bags|use Preserved Pheromone Mixture##11570
 		.from Lar'korwi##9684
 		.get Lar'korwi's Head|q 4292/1
-	step //114
+	step //115
 		goto 65.7,15.5
 		.' Kill Un'Goro Gorillas inside the cave
 		.get 2 Un'Goro Gorilla Pelt|q 4289/1
@@ -11019,31 +11023,31 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 		.get 2 Un'Goro Stomper Pelt|q 4289/2
 		.' Kill Un'Goro Thunderers inside the cave
 		.get 2 Un'Goro Thunderer Pelt|q 4289/3
-	step //115
+	step //116
 		goto 46.4,13.4
 		.talk Karna Remtravel##9618
 		..accept Chasing A-Me 01 (1)##4243
-	step //116
+	step //117
 		goto 44.7,8.1
 		.talk Linken##8737
 		..turnin It's a Secret to Everybody (2)##3845
 		..accept It's a Secret to Everybody (3)##3908
-	step //117
+	step //118
 		goto 45.2,5.8
 		.talk Gryfe##10583
 		..fpath Marshal's Refuge
-	step //118
+	step //119
 		goto 43.9,7.2
 		.talk Williden Marshal##9270
 		..turnin Williden's Journal##3884
 		..accept Expedition Salvation##3881
 		.talk Hol'anyee Marshal##9271
 		..accept Alien Ecology##3883
-	step //119
+	step //120
 		goto 43.5,7.4
 		.talk Spark Nilminer##9272
 		..accept Roll the Bones##3882
-	step //120
+	step //121
 		goto 41.9,2.7
 		.talk J.D. Collie##9117
 		..accept Crystals of Power##4284
@@ -11051,104 +11055,104 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 		..accept The Northern Pylon##4285
 		..accept The Eastern Pylon##4287
 		..accept The Western Pylon##4288
-	step //121
+	step //122
 		goto 43.6,8.5
 		.' Click the sign|tip Next to a big tree, looks like a sign.
 		..accept Beware of Pterrordax##4501
 		.talk Spraggle Frock##9997
 		..accept Lost!##4492
-	step //122
+	step //123
 		goto 42.9,9.6
 		.talk Muigin##9119
 		..accept Muigin and Larion##4141
-	step //123
+	step //124
 		goto 44.2,11.6
 		.talk Shizzle##9998
 		..accept Shizzle's Flyer##4503
-	step //124
+	step //125
 		goto 47.2,18.7
 		.kill Tar mobs|n
 		.get 12 Super Sticky Tar|q 4504/1
-	step //125
+	step //126
 		goto 56.5,12.4
 		.' Go up the hill
 		.' Click the Northern Pylon|tip It looks like a big machine with a huge crystal spinning on top of it.
 		.' Examine the Northern Pylon|goal Discover and examine the Northern Crystal Pylon|q 4285/1
-	step //126
-		'Go east into the gorilla cave|goto Un'Goro Crater,63.1,17.1,1|c
 	step //127
+		'Go east into the gorilla cave|goto Un'Goro Crater,63.1,17.1,1|c
+	step //128
 		'Go into the gorilla cave to 67.7,16.8|goto 67.7,16.8
 		.talk A-Me 01##9623
 		..turnin Chasing A-Me 01 (1)##4243
-	step //128
+	step //129
 		goto 67.3,32.6
 		.kill Diemetradons|n
 		.get 8 Webbed Diemetradon Scale|q 4503/1
 		.get 8 Dinosaur Bone|q 3882/1
 		.kill Bloodpetals|n
 		.get 15 Bloodpetal|q 4141/1
-	step //129
+	step //130
 		goto 68.5,36.5
 		.' Click the Crate of Foodstuffs|tip In a small camp under a white canopy.
 		.get Crate of Foodstuffs|q 3881/1
-	step //130
+	step //131
 		goto 77.2,50
 		.' Go up the hill
 		.' Click the Eastern Pylon|tip Up the big hill, looks like a structure with a big blue crysal spinning above it.
 		.' Examine the Eastern Pylon|goal Discover and examine the Eastern Crystal Pylon|q 4287/1
-	step //131
+	step //132
 		goto 71.6,76
 		.talk Torwa Pathfinder##9619
 		..turnin The Bait for Lar'korwi##4292
 		..turnin The Apes of Un'Goro##4289
-	step //132
+	step //133
 		goto 50.5,78.4|n
 		.' The path down into the Slithering Scar starts here|goto Un'Goro Crater,50.5,78.4,0.5|noway|c
-	step //133
+	step //134
 		goto 48.7,85.3
 		.' Go down the path
 		.' Go left at the fork into the circular room
 		.' In the middle of the room, use your Unused Scraping Vial|use Unused Scraping Vial##11132
 		.get Hive Wall Sample|q 3883/1
-	step //134
+	step //135
 		'Go out of the hive to 50.5,78.4|goto 50.5,78.4
 		.kill Gorishi insects|n
 		.get Gorishi Scent Gland|q 4496/1
-	step //135
+	step //136
 		goto 38.5,66.1
 		.' Click the Research Equipment|tip It's a pile of boxes.
 		.get Research Equipment|q 3881/2
-	step //136
+	step //137
 		goto 23.8,59.2
 		.' Go up the hill
 		.' Click the Western Pylon|tip It looks like a big machine with a huge crystal spinning on top of it.
 		.' Examine the Western Pylon|goal Discover and examine the Western Crystal Pylon|q 4288/1
-	step //137
+	step //138
 		goto 21.4,59.4
 		.kill 10 Frenzied Pterrordax|q 4501/1
 		.from Frenzied Pterrordax##9167
 		.get 8 Webbed Pterrordax Scale|q 4503/2
 		.' You can find more Frenzied Pterrordax at 23.3,42.3|n
-	step //138
+	step //139
 		goto 30.9,50.4
 		.talk Krakle##10302
 		..accept Finding the Source##974
-	step //139
+	step //140
 		goto 45.8,53.2
 		.kill fire elementals|n
 		.get 9 Un'Goro Ash|q 4502/1
-	step //140
+	step //141
 		'Follow the path up the moutain to 49.7,45.7|goto 49.7,45.7
 		.' Use Krakle's Thermometer on the Fire Plume Ridge Hot Spot|use Krakle's Thermometer##12472|tip It's a big black rock with a bunch of red cracks in it.
 		.' Find the hottest area of Fire Plume Ridge|goal Find the hottest area of Fire Plume Ridge|q 974/1
-	step //141
+	step //142
 		goto 30.9,50.4
 		.talk Krakle##10302
 		..turnin Finding the Source##974
 		..accept The New Springs##980
-	step //142
-		ding 53
 	step //143
+		ding 53
+	step //144
 		goto 51.9,49.9
 		.talk Ringo##9999
 		..turnin Lost!##4492
@@ -11156,22 +11160,22 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 		.goal Escort Ringo to Spraggle Frock at Marshal's Refuge|q 4491/1
 		.' When Ringo faints, use Spraggle's Canteen on him to revive him|use Spraggle's Canteen##11804
 		.' When escorting Ringo, bring him to 43.6,8.5|n
-	step //144
+	step //145
 		goto 43.6,8.5
 		.talk Spraggle Frock##9997
 		..turnin Beware of Pterrordax##4501
 		..turnin A Little Help From My Friends##4491
-	step //145
+	step //146
 		goto 43.9,7.2
 		.talk Williden Marshal##9270
 		..turnin Expedition Salvation##3881
 		.talk Hol'anyee Marshal##9271
 		..turnin Alien Ecology##3883
-	step //146
+	step //147
 		goto 43.5,7.4
 		.talk Spark Nilminer##9272
 		..turnin Roll the Bones##3882
-	step //147
+	step //148
 		goto 41.9,2.7
 		.talk J.D. Collie##9117
 		..turnin The Northern Pylon##4285
@@ -11179,109 +11183,109 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 		..turnin The Western Pylon##4288
 		..accept Making Sense of It##4321
 		..turnin Making Sense of It##4321
-	step //148
+	step //149
 		goto 42.9,9.6
 		.talk Muigin##9119
 		..turnin Muigin and Larion##4141
 		..accept A Visit to Gregan##4142
-	step //149
+	step //150
 		goto 44.2,11.6
 		.talk Shizzle##9998
 		..turnin Shizzle's Flyer##4503
-	step //150
+	step //151
 		goto 29.3,22.2|n
 		.' The path over to Silithus starts here|goto Un'Goro Crater,29.3,22.2,0.5|noway|c
-	step //151
-		'Go to Silithus|goto Silithus|noway|c
 	step //152
+		'Go to Silithus|goto Silithus|noway|c
+	step //153
 		goto Silithus,50.6,34.5
 		.talk Cloud Skydancer##15177
 		..fpath Cenarion Hold
-	step //153
-		'Fly to Gadgetzan|goto Tanaris,51.0,29.3,0.5|noway|c
 	step //154
+		'Fly to Gadgetzan|goto Tanaris,51.0,29.3,0.5|noway|c
+	step //155
 		goto Tanaris,51.6,26.8
 		.talk Tran'rek##7876
 		..turnin Super Sticky##4504
-	step //155
+	step //156
 		goto 50.9,27
 		.talk Alchemist Pestlezugg##5594
 		..turnin Bungle in the Jungle##4496
-	step //156
-		'Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
 	step //157
-		'Go into the pink portal to Darnassus|goto Darnassus|noway|c
+		'Fly to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
 	step //158
+		'Go into the pink portal to Darnassus|goto Darnassus|noway|c
+	step //159
 		goto Darnassus,31.5,8.2
 		.talk Jenal##9047
 		..turnin Un'Goro Soil##3764
-	step //159
+	step //160
 		goto 35.1,9.1
 		.talk Arch Druid Fandral Staghelm##3516
 		..accept Morrowgrain Research (1)##3781
-	step //160
+	step //161
 		goto 35.2,8.1
 		.talk Mathrengyl Bearwalker##4217
 		..turnin Morrowgrain Research (1)##3781
-	step //161
-		'Go to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
 	step //162
+		'Go to Rut'theran Village|goto Teldrassil,56.3,92.4,6|noway|c
+	step //163
 		goto Teldrassil,55.5,92
 		.talk Erelas Ambersky##7916
 		..accept Moontouched Wildkin##978
-	step //163
-		'Fly to Astranaar|goto Ashenvale,35.5,50.2,5|noway|c
 	step //164
+		'Fly to Astranaar|goto Ashenvale,35.5,50.2,5|noway|c
+	step //165
 		goto 37.0,49.2
 		.talk Innkeeper Kimlya##6738
 		home Astranaar
-	step //165
-		'Fly to Talrendis Point in Azshara|goto Azshara,11.9,77.6,1|noway|c
 	step //166
+		'Fly to Talrendis Point in Azshara|goto Azshara,11.9,77.6,1|noway|c
+	step //167
 		goto Azshara,11.4,78.2
 		.talk Loh'atu##11548
 		..accept Spiritual Unrest##5535
 		..accept A Land Filled with Hatred##5536
-	step //167
+	step //168
 		goto 17.3,70.6
 		.kill 6 Highborne Apparition|q 5535/1
 		.kill 6 Highborne Lichling|q 5535/2
-	step //168
+	step //169
 		goto 19.3,62.4
 		.kill 6 Haldarr Satyr|q 5536/1
 		.kill 2 Haldarr Trickster|q 5536/2
 		.kill 2 Haldarr Felsworn|q 5536/3
-	step //169
+	step //170
 		goto 11.4,78.2
 		.talk Loh'atu##11548
 		..turnin Spiritual Unrest##5535
 		..turnin A Land Filled with Hatred##5536
-	step //170
+	step //171
 		goto 42.3,64.1
 		.' Click the Rune of Sael'hai|tip A tall, purple glowing monument looking thing.
 		.get Rubbing: Rune of Sael'hai|q 3449/4
-	step //171
+	step //172
 		goto 39.3,55.5
 		.' Click the Rune of Markri|tip A tall, purple glowing looking monument thing.
 		.get Rubbing: Rune of Markri|q 3449/3
-	step //172
+	step //173
 		goto 39.5,50.2
 		.' Click the Rune of Jin'yael|tip A tall, purple glowing monument looking thing.
 		.get Rubbing: Rune of Jin'yael|q 3449/2
-	step //173
+	step //174
 		goto 36.9,53.2
 		.' Click the Rune of Beth'Amara|tip A tall, purple glowing monument looking thing.
 		.get Rubbing: Rune of Beth'Amara|q 3449/1
-	step //174
-		'Follow the road west out of the canyon|goto Azshara,31.1,57.6,0.5|c
 	step //175
+		'Follow the road west out of the canyon|goto Azshara,31.1,57.6,0.5|c
+	step //176
 		goto 52.9,19.6|n
 		.' The path up to Kim'jael starts here|goto Azshara,52.9,19.6,0.3|noway|c
-	step //176
+	step //177
 		goto 53.5,21.8
 		.talk Kim'jael##8420
 		..accept Kim'jael Indeed!##3601
-	step //177
+	step //178
 		goto 58.5,25
 		.' Click Kim'jael's Equipment box|tip It's a small crate sitting on the ground.
 		.' There are usually more boxes around (1)|at 58.7,29
@@ -11292,176 +11296,176 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 		.get Kim'jael's Scope|q 3601/2
 		.get Kim'jael's Stuffed Chicken|q 3601/3
 		.get Kim'jael's Wizzlegoober|q 3601/4
-	step //178
+	step //179
 		goto 53.5,21.8
 		.talk Kim'jael##8420
 		..turnin Kim'jael Indeed!##3601
 		..accept Kim'jael's "Missing" Equipment##5534
-	step //179
-		ding 54
 	step //180
+		ding 54
+	step //181
 		goto 45.5,37.7|n
 		.' The path down to Some Rune starts here|goto Azshara,45.5,37.7,0.5|noway|c
-	step //181
+	step //182
 		goto 47.2,42.9
 		.from Spitelash Siren##6195, Spitelash Myrmidon##6196, Spitelash Battlemaster##7885, Spitelash Enchantress##7886
 		.get Some Rune|q 5534/1
-	step //182
+	step //183
 		goto 46.1,39.0|n
 		.' The path out of the naga beach starts here|goto Azshara,46.1,39.0,0.5|noway|c
-	step //183
+	step //184
 		goto 53.5,21.8
 		.talk Kim'jael##8420
 		..turnin Kim'jael's "Missing" Equipment##5534
-	step //184
+	step //185
 		goto 77.8,91.3
 		.' Stand on the landing pad on the small island
 		.' Use your Standard Issue Flare Gun|use Standard Issue Flare Gun##10444
 		.talk Pilot Xiggs Fuselighter##8392
 		..turnin Arcane Runes##3449
 		..accept Return to Tymor##3461
-	step //185
-		'Hearth to Astranaar|goto Ashenvale,35.5,50.2,5|use Hearthstone##6948|noway|c
 	step //186
-		'Go northeast to Felwood|goto Felwood|noway|c
+		'Hearth to Astranaar|goto Ashenvale,35.5,50.2,5|use Hearthstone##6948|noway|c
 	step //187
+		'Go northeast to Felwood|goto Felwood|noway|c
+	step //188
 		goto Felwood,54.2,86.8
 		.talk Arathandris Silversky##9528
 		..accept Cleansing Felwood##4101
-	step //188
+	step //189
 		goto 50.9,85
 		.talk Grazle##11554
 		..accept Timbermaw Ally##8460
-	step //189
+	step //190
 		goto 51.2,82.3
 		.talk Greta Mosshoof##10922
 		..accept Forces of Jaedenar##5155
-	step //190
+	step //191
 		goto 51.3,81.5
 		.talk Eridan Bluewind##9116
 		..accept The Corruption of the Jadefire##4421
-	step //191
+	step //192
 		goto 50.9,81.7
 		.talk Taronn Redfeather##10921
 		..accept Verifying the Corruption##5156
 		.talk Ivy Leafrunner##10924
 		..accept To Winterspring!##5249
-	step //192
+	step //193
 		goto 51.5,82.2
 		.talk Gorrim##22931
 		..fpath Emerald Sanctuary
-	step //193
+	step //194
 		goto 49.1,89.1
 		.kill 6 Deadwood Warrior|q 8460/1
 		.kill 6 Deadwood Pathfinder|q 8460/2
 		.kill 6 Deadwood Gardener|q 8460/3
-	step //194
+	step //195
 		goto 50.9,85
 		.talk Grazle##11554
 		..turnin Timbermaw Ally##8460
 		..accept Speak to Nafien##8462
-	step //195
+	step //196
 		'Click the Package of Empty Ooze Containers in your bags|use Package of Empty Ooze Containers##11912
 		.collect 6 Empty Cursed Ooze Jar##11914|q 4512
 		.collect 6 Empty Tainted Ooze Jar##11948|q 4512
-	step //196
+	step //197
 		goto 41.9,68.2
 		.kill Cursed Oozes|n
 		.' Use your Empty Cursed Ooze Jars on their corpses|use Empty Cursed Ooze Jar##11914
 		.get 6 Filled Cursed Ooze Jar|q 4512/1
-	step //197
+	step //198
 		goto 41,59.7
 		.kill Tainted Oozes|n
 		.' Use your Empty Tainted Ooze Jars on their corpses|use Empty Tainted Ooze Jar##11948
 		.get 6 Filled Tainted Ooze Jar|q 4512/2
 		.' You can find more Tainted Oozes at 40.5,55.7|n
-	step //198
+	step //199
 		goto 38.5,59.2
 		.kill 4 Jaedenar Hound|q 5155/1
 		.kill 4 Jaedenar Guardian|q 5155/2
 		.kill 6 Jaedenar Adept|q 5155/3
 		.kill 6 Jaedenar Cultist|q 5155/4
-	step //199
+	step //200
 		goto 37.5,68.4
 		.kill 11 Jadefire Felsworn|q 4421/1
 		.kill 9 Jadefire Shadowstalker|q 4421/2
 		.kill 9 Jadefire Rogue|q 4421/3
-	step //200
+	step //201
 		goto 32.2,67.1
 		.kill Xavathras|q 4421/4|tip To the left of the green bubbling slime pool.
-	step //201
+	step //202
 		goto 51.2,82.3
 		.talk Greta Mosshoof##10922
 		..turnin Forces of Jaedenar##5155
 		..accept Collection of the Corrupt Water##5157
-	step //202
+	step //203
 		goto 51.3,81.5
 		.talk Eridan Bluewind##9116
 		..turnin The Corruption of the Jadefire##4421
 		..accept Further Corruption##4906
-	step //203
+	step //204
 		goto 35.2,59.8
 		.' Use your Empty Canteen near the green moonwell|use Empty Canteen##12922
 		.get Corrupt Moonwell Water|q 5157/1
-	step //204
+	step //205
 		goto 51.2,82.3
 		.talk Greta Mosshoof##10922
 		..turnin Collection of the Corrupt Water##5157
 		..accept Seeking Spiritual Aid##5158
-	step //205
+	step //206
 		goto 41.3,42.4
 		.kill 2 Entropic Beast|q 5156/2
 		.kill 2 Entropic Horror|q 5156/3
 		.' Explore the craters in the Shatter Scar Vale|goal Explore the craters in Shatter Scar Vale|q 5156/1
-	step //206
+	step //207
 		goto 43.1,21.3|n
 		.' The path up to 'Further Corruption' starts here|goto Felwood,43.1,21.3,0.5|noway|c
-	step //207
+	step //208
 		goto 42,19.2
 		.kill 8 Jadefire Hellcaller|q 4906/1
 		.kill 8 Jadefire Betrayer|q 4906/2
 		.kill 8 Jadefire Trickster|q 4906/3
-	step //208
+	step //209
 		goto 39.1,22.3
 		.from Xavaric##10648|q 4906/4
 		.get Flute of Xavaric|n
 		.' Click the Flute of Xavaric|use Flute of Xavaric##11668
 		..accept Flute of Xavaric##939
-	step //209
+	step //210
 		goto 39.3,21.4
 		.kill Jadefire demons|n
 		.get 5 Jadefire Felbind|q 939/1
-	step //210
+	step //211
 		goto 54.3,16.5
 		.kill Warpwood Tree Elementals|n
 		.get 15 Blood Amber|q 4101/1
-	step //211
+	step //212
 		goto 62.5,24.2
 		.talk Mishellena##12578
 		..fpath Talonbranch Glade
-	step //212
+	step //213
 		goto 64.8,8.1
 		.talk Nafien##15395
 		..turnin Speak to Nafien##8462
 		..accept Deadwood of the North##8461
-	step //213
+	step //214
 		goto 63.1,8.9
 		.kill 6 Deadwood Den Watcher|q 8461/1
 		.kill 6 Deadwood Avenger|q 8461/2
 		.kill 6 Deadwood Shaman|q 8461/3
-	step //214
+	step //215
 		goto 64.8,8.1
 		.talk Nafien##15395
 		..turnin Deadwood of the North##8461
 		..accept Speak to Salfa##8465
-	step //215
+	step //216
 		'Go through the tunnel to Winterspring|goto Winterspring|noway|c
 		.' At the fork, the tunnel heading east is the tunnel to Winterspring
-	step //216
+	step //217
 		'Right outside the tunnel at 27.7,34.5|goto Winterspring,27.7,34.5
 		.talk Salfa##11556
 		..turnin Speak to Salfa##8465
-	step //217
+	step //218
 		goto 31.3,45.2
 		.talk Donova Snowden##9298
 		..turnin The New Springs##980
@@ -11469,34 +11473,39 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 		..turnin It's a Secret to Everybody (3)##3908
 		..accept The Videre Elixir##3909
 		..accept Threat of the Winterfall##5082
-	step //218
-		'Go northwest into the tunnel|goto Felwood,68.2,5.6,0.3|c
 	step //219
-		'Go north at the fork into Moonglade|goto Moonglade|noway|c
+		'Go northwest into the tunnel|goto Felwood,68.2,5.6,0.3|c
 	step //220
+		'Go north at the fork into Moonglade|goto Moonglade|noway|c
+	step //221
 		goto Moonglade,48.1,67.4
 		.talk Sindrayl##10897
 		..fpath Moonglade
-	step //221
-		'Hearth to Astranaar|goto Ashenvale,35.5,50.2,5|use Hearthstone##6948|noway|c
 	step //222
-		'Fly to Feathermoon Stronghold|goto Feralas,30.3,43.3,0.5|noway|c
+		'Hearth to Astranaar|goto Ashenvale,35.5,50.2,5|use Hearthstone##6948|noway|c
 	step //223
-		goto Feralas,31,43.5
-		.talk Innkeeper Shyria##7736
-		..accept Jonespyre's Request##3788
+		'Fly to Feathermoon Stronghold|goto Feralas,30.3,43.3,0.5|noway|c
 	step //224
-		goto 32.4,43.8
+	    goto 32.4,43.8
 		.talk Quintis Jonespyre##7879
-		..turnin Jonespyre's Request##3788
+		.turnin Jonespyre's Request(1)##3787
+		.accept The Mystery of Morrowgrain##3791
 	step //225
-		'Ride the boat to the main continent of Feralas|goto Feralas,43.5,42.7,1|noway|c
+	    .collect 10 Un'Goro Soil##11018
+		.collect 5 Packet of Tharlendris Seeds##11022
+	    .use Evergreen Pouch##11020
+	    .collect 5 Evergreen Herb Casing##11024
+		.use Evergreen Herb Casing##11024
+	    .collect 10 Morrowgrain|q 3791/1
+		.turnin The Mystery of Morrowgrain##3791
 	step //226
+		'Ride the boat to the main continent of Feralas|goto Feralas,43.5,42.7,1|noway|c
+	step //227
 		goto 45.1,25.6
 		.talk Gregan Brewspewer##7775
 		..turnin A Visit to Gregan##4142
 		..'Buy 1 Bait from Gregan Brewspewer|collect 1 Bait##11141|q 3909
-	step //227
+	step //228
 		goto 44.9,10.8
 		.' Click the Bait in your bags to place it here|use Bait##11141
 		.' Miblan Snarltooth will run over to the bait and start eating it
@@ -11504,31 +11513,31 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (50-55
 		.' Run into the stone building
 		.' Click the Evoroot on the pedestal
 		.collect 1 Evoroot##11242|q 4041/1 |future
-	step //228
+	step //229
 		goto 45.1,25.6
 		.talk Gregan Brewspewer##7775
 		..'Accept The Videre Elixir from him to give him the Evoroot
 		..collect 3 Videre Elixir##11243|q 3909/1
-	step //229
+	step //230
 		goto 43.5,42.8|n
 		.' Ride the boat to Feathermoon Stronghold|goto Feralas,31.0,39.9,0.5|noway|c
-	step //230
-		'Fly to Emerald Sanctuary|goto Felwood,51.1,81.6,2|noway|c
 	step //231
+		'Fly to Emerald Sanctuary|goto Felwood,51.1,81.6,2|noway|c
+	step //232
 		goto Felwood,51.3,81.5
 		.talk Eridan Bluewind##9116
 		..turnin Flute of Xavaric##939
 		..turnin Further Corruption##4906
 		..accept Felbound Ancients##4441
-	step //232
+	step //233
 		goto 50.9,81.7
 		.talk Taronn Redfeather##10921
 		..turnin Verifying the Corruption##5156
-	step //233
+	step //234
 		goto 54.2,86.8
 		.talk Arathandris Silversky##9528
 		..turnin Cleansing Felwood##4101
-	step //234
+	step //235
 		ding 55
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60)", [[
@@ -11736,6 +11745,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 		..accept The Everlook Report##6028
 		..accept Duke Nicholas Zverenhoff##6030
 	step //55
+	    goto 61.4,38.8
+	    .talk Innkeeper Vizzie##11118
 		home Everlook
 	step //56
 		goto 60.9,37.6
@@ -11758,7 +11769,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 	step //60
 		goto 39.4,43.8
 		.kill 8 Winterfall Pathfinder|q 5082/1
-		.kill 8 Winterfall Den Watcher|q 5082/2
+		.kill 8 Winterfall Den Watcher|q 5082/2 |tip You don't need to kill these mobs here. You'll find more of them later.
 		.kill 8 Winterfall Totemic|q 5082/3
 		.kill Winterfall furbolgs|n
 		.get Empty Firewater Flask|n
@@ -12038,9 +12049,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (55-60
 	step //135
 		goto 54.4,30.6
 		.kill 15 Dredge Striker|q 8280/1
-		.kill Stonelash Scorpids|n
+		.kill Stonelash Scorpids##11735 |n
 		.get 8 Stonelash Scorpid Stinger|q 8277/1
-		.kill Sand Skitterers|n
+		.kill Sand Skitterers##11738|n
 		.get 8 Sand Skitterer Fang|q 8277/2
 	step //136
 		goto 81.9,18.9
@@ -12543,7 +12554,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 	step //1
 		'Go inside Nethergarde Keep at 63.5,17|goto Blasted Lands,63.5,17
 		.talk Bernie Heisten##3546
-		..buy 1 Nethergarde Bitter|q 9563/1
+		..buy 1 Nethergarde Bitter##23848|q 9563/1
 	step //2
 		goto 58.3,55.9
 		.talk Watch Commander Relthorn Netherwane##16841
@@ -12783,7 +12794,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Outland (60-6
 	step //55
 		goto 50.2,74.8
 		.from Deranged Helboar##16863
-		.get Tainted Helboar Meat|n
+		.get Tainted Helboar Meat##23270|n
 		.' Use your Purification Mixture on the Tainted Helboar Meat|use Purification Mixture##23268|tip The meat won't become purified every time, it can become toxic as well.
 		.get 8 Purified Helboar Meat|q 9361/1
 	step //56
@@ -13185,25 +13196,27 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Levels (62-64
 		.talk Ikeyen##17956
 		..accept The Umbrafen Tribe##9747
 	step //26
-		goto 79.1,65.3
-		.talk Warden Hamoot##17858
-		..accept A Warm Welcome##9728
+	    goto 78.4,62
+		.talk Ysiel Windsinger##17841
+		..turnin The Cenarion Expedition##9912
+		..accept Disturbance at Umbrafen Lake##9716
+		..accept Warden Hamoot##9778
 	step //27
 		goto 78.5,63.1
 		.talk Lethyn Moonfire##17834
 		..accept The Dying Balance##9895
 	step //28
-		goto 78.4,62
-		.talk Ysiel Windsinger##17841
-		..turnin The Cenarion Expedition##9912
-		..accept Disturbance at Umbrafen Lake##9716
+	    goto 79.1,65.3
+		.talk Warden Hamoot##17858
+		..turnin Warden Hamoot##9778
+	    ..accept A Warm Welcome##9728
 	step //29
 		goto 80.1,73.3
-		.kill Boglash|q 9895/1|tip I found Boglash here. He is a tall alien looking thing with really long legs. He walks around in the water, so some searching may be necessary.
-		.kill Boglash and Fen Striders|n|tip It's easier if you just run around in the water all around the east part of Zangarmarsh.
-		.collect 6 Fertile Spores##24449|q 9806/1|future
-		.kill all mobs in this area|n
-		.get 10 Unidentified Plant Parts|q 9802/1
+		kill Boglash|q 9895/1|tip I found Boglash here. He is a tall alien looking thing with really long legs. He walks around in the water, so some searching may be necessary.
+		from Boglash##18281+ , Fen Striders##18134+|n|tip It's easier if you just run around in the water all around the east part of Zangarmarsh.
+		collect 6 Fertile Spores##24449|q 9806/1|future
+		kill all mobs in this area|n
+		get 10 Unidentified Plant Parts|q 9802/1
 	step //30
 		goto 80.4,64.2
 		.talk Lauranna Thar'well##17909
