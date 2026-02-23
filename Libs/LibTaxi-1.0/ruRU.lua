@@ -16,8 +16,35 @@ local existingLocal = Lib.TaxiNames_Local or {}
 local existingEnglish = Lib.TaxiNames_English or {}
 
 local russianTranslations = {
-	-- Альянс --
-	-- Восточные Королевства --
+	-- Нейтральные точки, Восточные Королевства --
+	["Thorium Point"] = "Лагерь Братства Тория",
+	["Zul'Aman"] = "Зул'Аман",
+	["Light's Hope Chapel"] = "Часовня Последней Надежды",
+	["Thondoril River"] = "Река Тондрорил",
+	["Booty Bay"] = "Пиратская Бухта",
+	
+	-- Нейтральные точки, Калимдор --
+	["Moonglade"] = "Лунная поляна",
+	["Everlook"] = "Круговзор",
+	["Emerald Sanctuary"] = "Изумрудное святилище",
+	["Ratchet"] = "Кабестан",
+	["Mudsprocket"] = "Шестермуть",
+	["Gadgetzan"] = "Прибамбасск",
+	["Marshal's Refuge"] = "Укрытие Маршалла",
+	["Cenarion Hold"] = "Крепость Кенария",
+	
+	-- Нейтральные точки, Запределье --
+	["Evergrove"] = "Вечная роща",
+	["Area 52"] = "Зона 52",
+	["The Stormspire"] = "Штормовая Вершина",
+	["Cosmowrench"] = "Космоворот",
+	["Shattrath"] = "Шаттрат",
+	["Sanctum of the Stars"] = "Святилище Звезд",
+	["Altar of Sha'tar"] = "Алтарь Ша'тар",
+	
+	-- Нейтральные точки, Нордскол --
+	
+	-- Альянс, Восточные Королевства --
 	["Chillwind Camp"] = "Лагерь Промозглого Ветра",
 	["Aerie Peak"] = "Заоблачный пик",
 	["Southshore"] = "Южнобережье",
@@ -25,7 +52,6 @@ local russianTranslations = {
 	["Menethil Harbor"] = "Гавань Менетилов",
 	["Thelsamar, Loch Modan"] = "Телcамар",
 	["Ironforge"] = "Стальгорн",
-	["Thorium Point"] = "Лагерь Братства Тория", -- neutral
 	["Morgan's Vigil"] = "Дозор Моргана",
 	["Lakeshire"] = "Приозерье",
 	["Stormwind"] = "Штормград",
@@ -34,7 +60,7 @@ local russianTranslations = {
 	["Nethergarde Keep"] = "Крепость Стражей Пустоты",
 	["Rebel Camp"] = "Лагерь повстанцев",
 	
-	-- Калимдор --
+	-- Альняс, Калимдор --
 	["Blood Watch"] = "Кровавая застава",
 	["The Exodar"] = "Экзодар",
 	["Rut'theran Village"] = "Деревня Рут'теран",
@@ -49,40 +75,61 @@ local russianTranslations = {
 	["Thalanaar"] = "Таланаар",
 	["Theramore"] = "Терамор",
 	
-	-- Запределье --
-	-- Нордскол --
+	-- Альянс, Запределье --
+	["Hellfire Peninsula, The Dark Portal, Alliance"] = "Полуостров Адского Пламени, Темный портал - Альянс",
+	["Shatter Point"] = "Парящая застава",
+	["Honor Hold"] = "Оплот Чести",
+	["Temple of Telhamat"] = "Храм Телхамата",
+	["Telredor"] = "Телредор",
+	["Orebor Harborage"] = "Прибежище Оребор",
+	["Sylvanaar"] = "Сильванаар",
+	["Toshley's Station"] = "Станция Тошли",
+	["Telaar"] = "Телаар",
+	["Allerian Stronghold"] = "Бастион Аллерии",
+	["Wildhammer Stronghold"] = "Цитадель Громового Молота",
+		
+	-- Альянс, Нордскол --
 	
-	-- Орда --
-	-- Калимдор --
-	["Moonglade"] = "Лунная поляна", -- neutral
-	["Everlook"] = "Круговзор", -- neutral
+	-- Орда, Калимдор --
 	["Bloodvenom Post"] = "Застава Отравленной Крови",
-	["Emerald Sanctuary"] = "Изумрудное святилище", -- neutral
 	["Splintertree Post"] = "Застава Расщепленного Дерева",
-	
+	["Valormok"] = "Храбростан",
+	["Sun Rock Retreat"] = "Приют у Солнечного Камня",
 	["Crossroads"] = "Перекресток",
 	["Thunder Bluff"] = "Громовой Утес",
-	["Ratchet"] = "Кабестан", -- neutral
+	["Shadowprey Village"] = "Деревня Ночных Охотников",
 	["Camp Taurajo"] = "Лагерь Таурахо",
+	["Brackenwall Village"] = "Деревня Гиблотопь",
+	["Camp Mojache"] = "Лагерь Мохаче",
+	["Freewind Post"] = "Застава Вольный Ветер",
 	
-	
-	
-	["Mudsprocket"] = "Шестермуть", -- neutral
-	["Gadgetzan"] = "Прибамбасск", -- neutral
-	["Marshal's Refuge"] = "Укрытие Маршалла", -- neutral
-	["Cenarion Hold"] = "Крепость Кенария", -- neutral
-	
-	-- Восточные королевства --
-	["Light's Hope Chapel"] = "Часовня Последней Надежды", -- neutral
-	["Thondoril River"] = "Река Тондрорил", -- neutral
-	["The Bulwark"] = "Бастион, Тирисфаль",
+	-- Орда, Восточные королевства --
+	["Silvermoon City"] = "Луносвет",
+	["Tranquillien"] = "Транквиллион",
+	["The Bulwark"] = "Бастион",
 	["Undercity"] = "Подгород",
-	["The Sepulcher"] = "Гробница, Серебряный бор",
+	["The Sepulcher"] = "Гробница",
+	["Tarren Mill"] = "Мельница Таррен",
+	["Revantusk Village"] = "Деревня Сломанного Клыка",
 	["Hammerfall"] = "Павший Молот",
 	["Kargath"] = "Каргат",
+	["Flame Crest"] = "Пламенеющий Стяг",
 	["Stonard"] = "Каменор",
-	["Grom'Gol"] = "Лагерь Гром'Гол",
-	["Booty Bay"] = "Пиратская Бухта", -- neutral
+	["Grom'Gol"] = "Гром'гол",
+	
+	-- Орда, Запределье --
+	["Thrallmar"] = "Траллмар",
+	["Spinebreaker Post"] = "Гребень Хребтолома",
+	["Falcon Watch"] = "Соколиный Дозор",
+	["Swamprat Post"] = "Застава Болотной Крысы",
+	["Zabra'jin"] = "Забра'джин",
+	["Mok'Nathal Village"] = "Деревня Мок'Натал",
+	["Thunderlord Stronghold"] = "Оплот Громоборцев",
+	["Garadar"] = "Гарадар",
+	["Stonebreaker Hold"] = "Форт Камнеломов",
+	["Shadowmoon Village"] = "Деревня Призрачной Луны",
+	
+	-- Орда, Нордскол --
 	
 }
 
