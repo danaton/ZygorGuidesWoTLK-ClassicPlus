@@ -43,6 +43,28 @@ local russianTranslations = {
 	["Altar of Sha'tar"] = "Алтарь Ша'тар",
 	
 	-- Нейтральные точки, Нордскол --
+	["Transitus Shield"] = "Маскировочный щит",
+	["Amber Ledge"] = "Янтарная гряда",
+	["Unu'pe"] = "Уну'пе",
+	["Nesingwary Base Camp"] = "Лагерь Эрнестуэя",
+	["River's Heart"] = "Слияние рек",
+	["Moa'ki Harbor"] = "Гавань Моа'ки",
+	["Wyrmrest Temple"] = "Храм Драконьего Покоя",
+	["Dalaran"] = "Даларан",
+	["K3"] = "К-3",
+	["Bouldercrag's Refuge"] = "Приют Глыбоскала",
+	["Ulduar"] = "Ульдуар",
+	["Argent Tournament Grounds"] = "Ристалище Серебряного турнира",
+	["The Argent Vanguard"] = "Оплот Серебряного Авангарда",
+	["Crusaders' Pinnacle"] = "Вершина Рыцарей",
+	["The Shadow Vault"] = "Мрачный Свод",
+	["Death's Rise"] = "Уступ Смерти",
+	["Ebon Watch"] = "Черная застава",
+	["Light's Breach"] = "Разлом Света",
+	["The Argent Stand"] = "Серебряная застава",
+	["Zim'Torga"] = "Зим'Торга",
+	["Gun'Drak"] = "Гундрак",
+	["Kamagua"] = "Камагуа",
 	
 	-- Альянс, Восточные Королевства --
 	["Chillwind Camp"] = "Лагерь Промозглого Ветра",
@@ -89,9 +111,21 @@ local russianTranslations = {
 	["Wildhammer Stronghold"] = "Цитадель Громового Молота",
 		
 	-- Альянс, Нордскол --
+	["Valiance Keep"] = "Крепость Отваги",
+	["Fizzcrank Airstrip"] = "Взлетная полоса Выкрутеня",
+	["Star's Rest"] = "Покой Звезд",
+	["Fordragon Hold"] = "Крепость Фордрагона",
+	["Wintergarde Keep"] = "Крепость Стражей Зимы",
+	["Frosthold"] = "Ледяная крепость",
+	["Amberpine Lodge"] = "Приют Янтарной Сосны",
+	["Westfall Brigade"] = "Лагерь дружины Западного Края",
+	["Fort Wildervar"] = "Крепость Вилдервар",
+	["Westguard Keep"] = "Крепость Западной Стражи",
+	["Valgarde Port"] = "Валгардский порт",
 	
 	-- Орда, Калимдор --
 	["Bloodvenom Post"] = "Застава Отравленной Крови",
+	["Zoram'gar Outpost"] = "Форт Зорам'гар",
 	["Splintertree Post"] = "Застава Расщепленного Дерева",
 	["Valormok"] = "Храбростан",
 	["Sun Rock Retreat"] = "Приют у Солнечного Камня",
@@ -130,7 +164,20 @@ local russianTranslations = {
 	["Shadowmoon Village"] = "Деревня Призрачной Луны",
 	
 	-- Орда, Нордскол --
-	
+	["Warsong Hold"] = "Крепость Песни Войны",
+	["Bor'gorok Outpost"] = "Застава Бор'горока",
+	["Taunka'le Village"] = "Деревня Таунка'ле",
+	["Agmar's Hammer"] = "Молот Агмара",
+	["Kor'koron Vanguard"] = "Стоянка отряда Кор'крона",
+	["Venomspite"] = "Ядозлобь",
+	["Sunreaver's Command"] = "Лагерь Похитителя Солнца",
+	["Grom'arsh Crash-Site"] = "Место крушения Гром'арша",
+	["Conquest Hold"] = "Крепость Завоевателей",
+	["Camp Oneqwah"] = "Лагерь Уанква",
+	["Camp Winterhoof"] = "Лагерь Заиндевевшего Копыта",
+	["Vengeance Landing"] = "Лагерь Возмездия",
+	["New Agamand"] = "Новый Агамонд",
+	["Apothecary Camp"] = "Аптекарский поселок",
 }
 
 for en, ru in pairs(russianTranslations) do
