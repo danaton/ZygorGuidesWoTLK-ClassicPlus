@@ -92,8 +92,8 @@ function ZGV.RecipeTracker:Initialize()
   ZGV:AddEvent("TRADE_SKILL_SHOW",
     function() DelayedScan(self) end)
 
-  ZGV:AddEvent("TRADE_SKILL_UPDATE",
-    function() DelayedScan(self) end)
+  --ZGV:AddEvent("TRADE_SKILL_UPDATE",
+    --function() DelayedScan(self) end)
 
   ZGV:Print(L["recipe_tracking_init"])
 end
