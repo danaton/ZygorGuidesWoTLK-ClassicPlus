@@ -12696,12 +12696,7 @@ startlevel 55
 		.talk Yugrek##11139
 		.' Fly to Orgrimmar|goto Orgrimmar|q 9407 |future
 	step //213
-		goto Durotar,51,14|n
-		.' Ride the zeppelin to Undercity|goto Tirisfal Glades|noway|q 9407 |future
-	step //214
-		.' Go to Undercity|goto Undercity|q 9407 |future
-	step //215
-		goto Undercity,85.3,17|n
+		goto Orgrimmar,38.2,85.7|n
 		.' Click the Portal to Blasted Lands|goto Blasted Lands|noway|q 9407 |future
 	step //216
 		ding 60
@@ -12711,7 +12706,7 @@ author support@zygorguides.com
 next Zygor's Horde Leveling Guides\\Outland (62-64)
 startlevel 60
 	step //1
-		.' Go to the Blasted Lands|goto Blasted Lands|q 9407
+		.' Go to the Blasted Lands|goto Blasted Lands|q 9407 |future
 	step //2
 		goto Blasted Lands,58.1,56
 		.talk Warlord Dar'toon##19254
@@ -12729,7 +12724,9 @@ startlevel 60
 		..turnin Arrival in Outland##10120
 		..accept Journey to Thrallmar##10289
 	step //6
-		'Fly to Thrallmar|goto Hellfire Peninsula,54.7,38.3,5|noway
+		goto 87.3,48.1|n
+		.talk Vlagga Freyfeather##18930
+		.' Fly to Thrallmar|goto Hellfire Peninsula,54.7,38.3,5|noway|q 10289
 	step //7
 		goto 55.9,36.8
 		.talk General Krakork##19255
@@ -12749,7 +12746,9 @@ startlevel 60
 		.talk Megzeg Nukklebust##21283
 		..accept I Work... For the Horde!##10086
 	step //11
-		home Thrallmar
+		goto 56.7,37.5
+		.talk Floyd Pinkus##16602
+		home Thrallmar|q 10835 |future
 	step //12
 		goto 58,41.3
 		.talk Sergeant Shatterskull##19256
@@ -12757,10 +12756,10 @@ startlevel 60
 		..accept Felspark Ravine##10123
 	step //13
 		goto 60.8,35.9
-		.kill 1 Dreadcaller|q 10123/1
-		.kill 4 Flamewaker Imp|q 10123/2
-		.kill 6 Infernal Warbringer|q 10123/3
-		info Kill 1 Dreadcaller, 4 Flamewalker Imps, and 6 Infernal Warbringers around this area
+		.kill 1 Dreadcaller##19434|q 10123/1
+		.kill 4 Flamewaker Imp##19136|q 10123/2
+		.kill 6 Infernal Warbringer##19261|q 10123/3
+		.info Kill 1 Dreadcaller, 4 Flamewalker Imps, and 6 Infernal Warbringers around this area.
 	step //14
 		goto 58,41.3
 		.talk Sergeant Shatterskull##19256
@@ -12773,19 +12772,24 @@ startlevel 60
 		..accept Disrupt Their Reinforcements##10208
 	step //16
 		goto 70.8,45.4
-		.' Kill demons
+		.from Netherhound##16950, Wrathguard##18975, Doomwhisperer##18981, Fel Handler##19190
 		.collect 4 Demonic Rune Stone##28513|q 10208
-		.' Stand inside the portal
-		.' Click the portal
+		.info You will need 4 runestones to blow up the portal.
+	step
+		goto 70.8,45.4
+		.' Interact with gameobject: Portal Xilus
+		.info Stand inside the portal and click on it.
 		.' Disrupt Port Xilus|goal Disrupt Port Xilus|q 10208/1
-		info2 Stand inside the portal and click it to destroy it
 	step //17
 		goto 74,38.7
-		.' Kill demons
+		.from Netherhound##16950, Wrathguard##18975, Doomwhisperer##18981, Fel Handler##19190
 		.collect 4 Demonic Rune Stone##28513|q 10208
-		.' Click the portal
+		.info You will need 4 runestones to blow up the portal.
+	step
+		goto 74,38.7
+		.' Interact with gameobject: Portal Kruul
 		.' Disrupt Port Kruul|goal Disrupt Port Kruul|q 10208/2
-		info2 Stand inside the portal and click it to destroy it
+		.info Stand inside the portal and click it to destroy it.
 	step //18
 		goto 65.9,43.6
 		.talk Forward Commander To'arch##19273
@@ -12794,10 +12798,10 @@ startlevel 60
 	step //19
 		goto 66.1,43.7
 		.talk Wing Commander Brack##19401
-		..'Take the flight
-		..'Click the bomb in your bags, bomb Gateway Shaadraz|use Seaforium PU-36 Explosive Nether Modulator##28038|goal Gateway Shaadraz Destroyed|q 10129/2
-		..'Click the bomb in your bags, bomb Gateway Murketh|use Seaforium PU-36 Explosive Nether Modulator##28038|goal Gateway Murketh Destroyed|q 10129/1
-		info2 They look like big machines with giant green crystals floating above them.
+		.' Choose: "I'm on a bombing mission for Forward Commander To'arch. I need a wyvern destroyer!"
+		.' Click the bomb in your bags, bomb Gateway Shaadraz|use Seaforium PU-36 Explosive Nether Modulator##28038|goal Gateway Shaadraz Destroyed|q 10129/2
+		.' Click the bomb in your bags, bomb Gateway Murketh|use Seaforium PU-36 Explosive Nether Modulator##28038|goal Gateway Murketh Destroyed|q 10129/1
+		.info They look like big machines with giant green crystals floating above them.
 	step //20
 		goto 65.9,43.6
 		.talk Forward Commander To'arch##19273
@@ -12807,12 +12811,12 @@ startlevel 60
 	step //21
 		goto 66.1,43.7
 		.talk Wing Commander Brack##19401
-		..'Fly to the Abyssal Shelf
-		..'Use the bomb in your bags to bomb the mobs|use Area 52 Special##28132
-		.goal 5 Fel Cannon Destroyed|q 10162/3
-		.kill 5 Mo'arg Overseer|q 10162/2
-		.kill 20 Gan'arg Peon|q 10162/1
-		..'If you don't complete this in the first run, you can keep flying until it's done
+		.' Choose: "Send me to the Abyssal Shelf!"
+		.' Use the bomb in your bags to bomb the mobs|use Area 52 Special##28132
+		.' 5 Fel Cannon Destroyed|goal 5 Fel Cannon Destroyed##19399|q 10162/3
+		.kill 5 Mo'arg Overseer##19397|q 10162/2
+		.kill 20 Gan'arg Peon##19398|q 10162/1
+		.' If you don't complete this in the first run, you can keep flying until it's done.
 	step //22
 		goto 65.9,43.6
 		.talk Forward Commander To'arch##19273
@@ -12830,14 +12834,15 @@ startlevel 60
 		..accept The Assassin##9400
 	step //25
 		goto 64.4,31.9
-		.kill 10 Gan'arg Servant|q 10390/1
-		.' Kill Razorsaw
-		.get Head of Forgefiend Razorsaw|q 10390/2
-		.get the Burning Legion Missive|n
-		.' Click the Burning Legion Missive|use Burning Legion Missive##29590
+		.kill 10 Gan'arg Servant##16947|q 10390/1
+		.kill Razorsaw##20798|n
+		.get Head of Forgefiend Razorsaw##29586|q 10390/2
+		.collect Burning Legion Missive##29590|q 10393 |future
+		.info Kill 10 Gan'arg Servants around this area.
+		.info Razorsaw wanders this area. Kill Razorsaw and get the Head of Forgefiend Razorsaw and the Burning Legion Missive. Click the Burning Legion Missive.
+	step
+		.use Burning Legion Missive##29590
 		..accept Vile Plans##10393
-		info Kill 10 Gan'arg Servants around this area.
-		info2 Razorsaw wanders this area. Kill Razorsaw and get the Head of Forgefiend Razorsaw and the Burning Legion Missive. Click the Burning Legion Missive
 	step //26
 		goto 55,36
 		.talk Nazgrel##3230
@@ -12850,8 +12855,8 @@ startlevel 60
 	step //28
 		goto 57.5,31.2
 		.' Destroy 3 Fel Cannon MKI's
-		.kill 3 Fel Cannon MKI|q 10391/1
-		info Destroy 3 Fel Cannon MKI's around this area
+		.kill 3 Fel Cannon MKI##22461|q 10391/1
+		.info Destroy 3 Fel Cannon MKI's around this area.
 	step //29
 		goto 55,36
 		.talk Nazgrel##3230
@@ -12859,14 +12864,14 @@ startlevel 60
 		..accept Doorway to the Abyss##10392
 	step //30
 		goto 52.8,26.4
-		.kill 1 Warbringer Arix'Amal|q 10392/1
-		.get Burning Legion Gate Key|q 10392/3
+		.kill Warbringer Arix'Amal##19298|q 10392/1
+		.get Burning Legion Gate Key##29795|q 10392/3
 	step //31
 		goto 53.1,27.6
 		.' Go inside the portal
 		.' Click the floating thing inside the portal
 		.' Close the Burning Legion Gate|goal Close Burning Legion Gate|q 10392/2
-		info You might have to stand right underneath it and zoom in your view to be able to click the floating glyph inside the portal, I did.
+		.info You might have to stand right underneath it and zoom in your view to be able to click the floating glyph inside the portal, I did.
 	step //32
 		goto 55,36
 		.talk Nazgrel##3230
@@ -12877,11 +12882,11 @@ startlevel 60
 		..accept The Agony and the Darkness##10389
 	step //34
 		goto 56.6,47.1
-		.get 8 Salvaged Metal|q 10086/1
-		.get 8 Salvaged Wood|q 10086/2
-		.' Kill Bonechewer Orcs
-		..get 12 Bonechewer Blood|q 10450/1
-		info The Salvaged Metal and Salvaged Wood are scraps on the ground around this area.
+		.collect 8 Salvaged Metal##25912|q 10086/1
+		.collect 8 Salvaged Wood##25911|q 10086/2
+		.info The Salvaged Metal and Salvaged Wood are scraps on the ground around this area.
+		.from Bonechewer Scavenger##18952, Bonechewer Evoker##19701
+		.get 12 Bonechewer Blood##30327|q 10450/1
 	step //35
 		goto 55.2,38.8
 		.talk Megzeg Nukklebust##21283
@@ -12900,11 +12905,11 @@ startlevel 60
 	step //38
 		goto 66.1,43.7
 		.talk Wing Commander Brack##19401
-		..'Fly to Spinebreaker Post|goto Hellfire Peninsula,61.4,81.4,1|noway
+		.' Fly to Spinebreaker Post|goto Hellfire Peninsula,61.4,81.4,1|noway|q 10242
 	step //39
 		goto 61.7,81.2
 		.talk Amilya Airheart##19558
-		..fpath Spinebreaker Post
+		.fpath Spinebreaker Post
 	step //40
 		goto 61.9,81.5
 		.talk Ogath the Mad##19683
@@ -12924,22 +12929,21 @@ startlevel 60
 		..accept Preparing the Salve##9345
 	step //44
 		goto 61.2,80.6
-		.' Click the Wanted Poster
+		.' Interact with gameobject: Wanted Poster
 		..accept Wanted: Worg Master Kruush##10809
-		info Next to the fence
+		.info Next to the fence.
 	step //45
 		goto 59.5,66.3
-		.' They look like green plants on the ground
-		.' Click the Hellfire Spineleaves
-		goal 12 Hellfire Spineleaf|q 9345/1
+		.collect 12 Hellfire Spineleaf##23205|q 9345/1
+		.info They look like green plants on the ground.
 	step //46
 		goto 58,79
-		.kill 12 Unyielding Footman|q 10220/1
-		.kill 8 Unyielding Knight|q 10220/2
-		.kill 6 Unyielding Sorcerer|q 10220/3
-		.' Kill Unyielding Mobs
-		.' Get A Mysterious Tome
-		.' Click the Mysterious Tome|use A Mysterious Tome##28552
+		.kill 12 Unyielding Footman##16904|q 10220/1
+		.kill 8 Unyielding Knight##16906|q 10220/2
+		.kill 6 Unyielding Sorcerer##16905|q 10220/3
+		.collect A Mysterious Tome##28552|q 10229 |future
+	step
+		.use A Mysterious Tome##28552
 		..accept Decipher the Tome##10229
 	step //47
 		goto 60.9,81.7
@@ -12947,17 +12951,18 @@ startlevel 60
 		..turnin Preparing the Salve##9345
 		..accept Investigate the Crash##10213
 	step //48
-		goto 61.8,81.7
+		goto 61.7,81.8
 		.talk Althen the Historian##19736
 		..turnin Decipher the Tome##10229
 		..accept The Battle Horn##10230
+	step
+		goto 61.8,81.7
 		.talk Emissary Mordiba##19682
 		..turnin Make Them Listen##10220
 	step //49
 		goto 54.7,83.7
-		.' Kill Lieutenant Commander Thalvos
-		.get Unyielding Battle Horn|q 10230/1
-		info Walking around on a black platform thing. He's a blue ghost dwarf.
+		.kill Lieutenant Commander Thalvos##16978|n
+		.get Unyielding Battle Horn##28562|q 10230/1
 	step //50
 		goto 61.8,81.7
 		.talk Althen the Historian##19736
@@ -12965,8 +12970,9 @@ startlevel 60
 		..accept Bloody Vengeance##10250
 	step //51
 		goto 63.5,77.6
-		.' Click the Unyielding Battle Horn in your bags next to the white flag|use Unyielding Battle Horn##28651
-		.kill 1 Urtrak|q 10250/1
+		.use Unyielding Battle Horn##28651
+		.info Click the Unyielding Battle Horn in your bags next to the white flag.
+		.kill Urtrak##19862|q 10250/1
 	step //52
 		goto 61.8,81.7
 		.talk Althen the Historian##19736
@@ -12978,20 +12984,17 @@ startlevel 60
 		..turnin Honor the Fallen##10258
 	step //54
 		goto 64.6,72.7
-		.' Kill Bleeding Hollow Orcs
+		.from Bleeding Hollow Grunt##16871, Bleeding Hollow Peon##16907, Bleeding Hollow Necrolyte##19422
 		.collect 12 Bleeding Hollow Blood##30425|q 10538
 	step //55
 		goto 65.2,71.2
-		.' Click the big red glowing cauldron 12 times
-		.get 12 Boiled Blood|q 10538/1
-		.' Each time you click the cauldron, scarabs will run out
-		.' Run away and stand away from the cauldron until the scarabs disappear
-		info It's a big red glowing cauldron.
+		.' Interact with gameobject: Cursed Cauldron
+		.collect 12 Boiled Blood##30430|q 10538/1
+		.info Each time you click the cauldron, scarabs will run out.
 	step //56
 		goto 68.4,73.6
-		.' Kill Worg Master Kruush
-		.get Worg Master's Head|q 10809/1
-		info He's standing in the stables.
+		.kill Worg Master Kruush##19442|n
+		.get Worg Master's Head##31374|q 10809/1
 	step //57
 		goto 61.2,81.3
 		.talk Captain Darkhowl##22107
@@ -13008,25 +13011,31 @@ startlevel 60
 		..accept The Eyes of Grillok##10813
 	step //60
 		goto 66.4,74
-		.' Use Zezzak's Shard on an Eye of Grillok to absorb it|use Zezzak's Shard##31463
-		info They look like floating green eyes around this area. It has to channel for 3 seconds and turn your character green.
+		.' Interact with NPC: Eye of Grillok
+		.use Zezzak's Shard##31463
+		.info Use Zezzak's Shard on an Eye of Grillok.
+		.info It has to channel for 3 seconds and turn your character green. They look like a floating green eye
+		.' Absorb an Eye of Grillok|havebuff Spell_Nature_ElementalShields|q 10813
+	step
+		goto 61.7,81.9
+		.' Return the Eye of Grillok|q 10813/1
 	step //61
 		goto 61.7,81.9
-		.' Stand next to the cauldron
-		.' Return the Eye of Grillok
 		.talk Zezzak##22231
 		..turnin The Eyes of Grillok##10813
 		..accept Grillok "Darkeye"##10834
 	step //62
 		goto 66.6,71.4
-		.' Go inside the cave
-		.' Kill Grillok "Darkeye"
-		.get Grillok's Eyepatch|q 10834/1
+		.kill Grillok "Darkeye"##19457|n
+		.get Grillok's Eyepatch##31529|q 10834/1
 	step //63
 		goto 68.7,69.8
-		.kill 4 Bleeding Hollow Peons|n
-		.collect 4 Bleeding Hollow Torch##31347|q 10792 |n
-		.' Click the torches in your bags next to the forge|use Bleeding Hollow Torch##31347
+		.from Bleeding Hollow Peon##16907
+		.collect 4 Bleeding Hollow Torch##31347|q 10792
+	step
+		goto 69.2,69.2
+		.use Bleeding Hollow Torch##31347
+		.info Click the torches in your bags next to the forge.
 		.collect 4 Burning Bleeding Hollow Torch##31346|q 10792
 	step //64
 		goto 69.5,70.2
@@ -13059,16 +13068,18 @@ startlevel 60
 	step //70
 		ding 61
 	step //71
-		goto 49.2,74.8
+		goto 49.2,74.9
 		.talk "Screaming" Screed Luckheed##19367
 		..turnin Investigate the Crash##10213
 		..accept In Case of Emergency...##10161
+	step
+		goto 49.2,74.8
 		.talk Legassi##19344
 		..accept Ravager Egg Roundup##9349
 	step //72
 		goto 58.1,71.3
-		.' Click Zeppelin Debris on the ground around this area
-		.get 30 Zeppelin Debris|q 10161/1
+		.collect 30 Zeppelin Debris##28116|q 10161/1
+		.info These fragments resemble either a sheet of metal or huge gear wheels that are lying on the ground.
 	step //73
 		goto 49.2,74.8
 		.talk "Screaming" Screed Luckheed##19367
@@ -13076,39 +13087,41 @@ startlevel 60
 		..accept Voidwalkers Gone Wild##9351
 	step //74
 		goto 49.5,81.8
-		.kill voidwalkers|n
-		.get 10 Condensed Voidwalker Essence|q 9351/1
+		.from Rogue Voidwalker##16974, Uncontrolled Voidwalker##16975
+		.get 10 Condensed Voidwalker Essence##23218|q 9351/1
 	step //75
 		goto 46.8,83.1
 		.' Use your Unstable Warp Rift Generator under the big black ball of lightning|use Unstable Warp Rift Generator##29027
 		.' Click the Unstable Warp Rift Generator and place the green circle under the big black ball of lightning
-		.kill Unstable Voidwalkers|n
-		.get 3 Warp Nether|q 10278/1
+		.from Unstable Voidwalker##20145|n
+		.get 3 Warp Nether##29051|q 10278/1
 	step //76
 		goto 41.2,84.4
-		.' Click Ravenger Eggs
-		.kill Razorfury Ravagers|n
-		.get 12 Ravager Egg|q 9349/1
+		.from Razorfang Ravager##16933
+		.get 12 Ravager Egg##23217|q 9349/1
 	step //77
-		goto 49.2,74.8
+		goto 49.2,74.9
 		.talk "Screaming" Screed Luckheed##19367
 		..turnin Voidwalkers Gone Wild##9351
+	step
+		goto 49.2,74.8
 		.talk Legassi##19344
 		..turnin Ravager Egg Roundup##9349
 		..accept Helboar, the Other White Meat##9361
 	step //78
 		goto 50.2,74.8
-		.kill Helboars|n
-		.collect Tainted Helboar Meat##23270|q 9361 |n
+		.kill Deranged Helboar##16863|n
+		.collect Tainted Helboar Meat##23270|n
 		.' Use your Purification Mixture on the Tainted Helboar Meat|use Purification Mixture##23268
-		.get 8 Purified Helboar Meat|q 9361/1|tip The meat won't become purified every time, it can become toxic as well.
+		.collect 8 Purified Helboar Meat##23248|q 9361/1
+		.info The meat won't become purified every time, it can become toxic as well.
 	step //79
 		goto 47.8,65.8
-		.' Kill Crust Bursters
-		.' Get an Eroded Leather Case
-		.' Click the Eroded Leather Case|use Eroded Leather Case##23338
+		.kill Crust Burster##16844|n
+		.collect Eroded Leather Case##23338|q 9373 |future
+	step
+		.use Eroded Leather Case##23338
 		..accept Missing Missive##9373
-		info They are under the jumping piles of rocks, they come up to fight when you get close to the jumping rocks
 	step //80
 		goto 49.2,74.8
 		.talk Legassi##19344
@@ -13116,14 +13129,14 @@ startlevel 60
 		..accept Smooth as Butter##9356
 	step //81
 		goto 62.6,67.3
-		.kill vultures|n
-		.get 12 Plump Buzzard Wing|q 9356/1
+		.from Bonestripper Buzzard##16972
+		.get 12 Plump Buzzard Wing##23239|q 9356/1
 	step //82
 		goto 49.2,74.8
 		.talk Legassi##19344
 		..turnin Smooth as Butter##9356
 	step //83
-		'Go southeast to Spinebreaker Ridge|goto Hellfire Peninsula,61.4,81.4,1|c
+		.' Go southeast to Spinebreaker Ridge|goto Hellfire Peninsula,61.4,81.4,1|q 10278
 	step //84
 		goto 61.9,81.5
 		.talk Ogath the Mad##19683
@@ -13131,13 +13144,13 @@ startlevel 60
 		..accept Void Ridge##10294
 	step //85
 		goto 71.3,67.4|n
-		.' The path over to 'Void Ridge' starts here|goto Hellfire Peninsula,71.3,67.4,0.5|noway|c
+		.' The path over to 'Void Ridge' starts here|goto Hellfire Peninsula,71.3,67.4,0.5|noway|q 10294
 	step //86
 		goto 75.4,66.3
-		.' Kill Voidwalkers
-		.get 40 Void Ridge Soul Shard|q 10294/1
+		.from Collapsing Voidwalker##17014, Vacillating Voidcaller##19527
+		.get 40 Void Ridge Soul Shard##29161|q 10294/1
 	step //87
-		'Go southwest to Spinebreaker Ridge|goto Hellfire Peninsula,61.4,81.4,1|c
+		.' Go southwest to Spinebreaker Ridge|goto Hellfire Peninsula,61.4,81.4,1|q 10294
 	step //88
 		goto 61.9,81.5
 		.talk Ogath the Mad##19683
@@ -13145,15 +13158,16 @@ startlevel 60
 		..accept From the Abyss##10295
 	step //89
 		goto 71.3,67.4|n
-		.' The path over to 'Void Ridge' start here|goto Hellfire Peninsula,71.3,67.4,0.5|noway|c
+		.' The path over to 'Void Ridge' start here|goto Hellfire Peninsula,71.3,67.4,0.5|noway|q 10295
 	step //90
 		goto 81.1,78.9
-		.' Stand next to the 2 big pink crystals
-		.' Click the Warp Rift Generator in  your bags|use Warp Rift Generator##29226
-		.' Kill Void Baron Galaxis
-		.get Galaxis Soul Shard|q 10295/1
+		.use Warp Rift Generator##29226
+		.info Stand next to the 2 big pink crystals.
+		.info Click the Warp Rift Generator in your bags.
+		.from Void Baron Galaxis##16939
+		.get Galaxis Soul Shard##29162|q 10295/1
 	step //91
-		'Hearth to Thrallmar|goto Hellfire Peninsula,56.7,37.5,5|use hearthstone##6948|noway|c
+		.' Hearth to Thrallmar|goto Hellfire Peninsula,56.7,37.5,5|use Hearthstone##6948|noway|q 10835
 	step //92
 		goto 52.3,36.5
 		.talk Apothecary Antonivich##16588
@@ -13165,12 +13179,11 @@ startlevel 60
 		..accept Outland Sucks!##10236
 	step //94
 		goto 48.9,35.4
-		.' Click the Shredder Parts boxes
-		.get 6 Shredder Spare Parts|q 10236/1
-		info They look like wooden crates around this area.
+		.collect 6 Shredder Spare Parts##28554|q 10236/1
+		.info They look like wooden crates around this area.
 	step //95
 		goto 45.9,39.8
-		.kill Shattered Hand Orcs|n
+		.from Shattered Hand Berserker##16878, Shattered Hand Guard##19414
 		.' Reap 20 Shattered Hand Souls|goal 20 Shattered Hand Souls Reaped|q 10864/1
 	step //96
 		goto 51.4,30.6
@@ -13199,9 +13212,9 @@ startlevel 60
 		.' Use your Demoniac Scryer in your bags at this spot|use Demoniac Scryer##31606
 		.' Defend the Demoniac Scryer until a bunch of purple things start swirling around it
 		.talk Demoniac Scryer##22258
-		.get Demoniac Scryer Reading|q 10838/1
+		.get Demoniac Scryer Reading##31607|q 10838/1
 	step //102
-		'Hearth to Thrallmar|goto Hellfire Peninsula,54.7,38.3,5|use hearthstone##6948|noway|c
+		.' Hearth to Thrallmar|goto Hellfire Peninsula,54.7,38.3,5|use Hearthstone##6948|noway|q 10838
 	step //103
 		goto 52.3,36.5
 		.talk Apothecary Antonivich##16588
@@ -13217,26 +13230,20 @@ startlevel 60
 		..turnin How to Serve Goblins##10238
 		..accept Shizz Work##10629
 	step //106
-		goto 51.4,30.6
-		'Use the Felhound Whistle while standing next to Forman Razelcraz|use Felhound Whistle##30803
-		info Standing near the entrance to the mine, next to a bunch of fel guard hounds
-	step //107
-		goto 49.9,29.3
-		.' Kill Deranged Helboars
-		.' The Fel Guard Hound will eat the corpses and poop
-		.' Click the Felhound Poo
-		.get Shredder Keys|q 10629/1
+		goto Hellfire Peninsula,49.9,29.3
+		.use Felhound Whistle##30803
+		.info Use the Felhound Whistle while standing next to Forman Razelcraz.
+		.kill Deranged Helboar##16863|n
+		.info The Fel Guard Hound will eat the corpses and poop.
+		.collect Shredder Keys##30794|q 10629/1
 	step //108
 		goto 51.4,30.6
 		.talk Foreman Razelcraz##16915
 		..turnin Shizz Work##10629
 		..accept Beneath Thrallmar##10630
 	step //109
-		'Go to inside the mine to 54.4,31.4|goto 54.4,31.4
-		.kill 1 Urga'zz|q 10630/1
-		info All the way in the bottom of the mine.
-	step //110
-		'Leave the mine|goto Hellfire Peninsula,51.6,31.7,0.3|noway|c
+		goto 54.4,31.4
+		.kill Urga'zz##18976|q 10630/1
 	step //111
 		goto 51.4,30.6
 		.talk Foreman Razelcraz##16915
@@ -13254,17 +13261,21 @@ startlevel 60
 		.talk Ogath the Mad##19683
 		..turnin From the Abyss##10295
 	step //115
-		'Fly to Thrallmar|goto Hellfire Peninsula,54.7,38.3,5|noway|c
+		goto 61.7,81.2|n
+		.talk Amilya Airheart##19558
+		.' Fly to Thrallmar|goto Hellfire Peninsula,54.7,38.3,5|noway|q 10087
 	step //116
 		goto 55.2,38.8
 		.talk Megzeg Nukklebust##21283
 		..turnin Burn It Up... For the Horde!##10087
+	step
+		goto 33.6,43.5
+		.' Find Krun Spinebreaker|q 9400/1
 	step //117
 		goto 33.6,43.5
-		.' Click the Fel Orc Corpse
+		.talk Fel Orc Corpse##17062
 		..turnin The Assassin##9400
 		..accept A Strange Weapon##9401
-		info It's a corpse laying halfway up the hill.
 	step //118
 		goto 26.4,60.3
 		.talk Magistrix Carinda##16793
@@ -13290,11 +13301,7 @@ startlevel 60
 	step //123
 		goto 27.8,60
 		.talk Innalia##18942
-		..fpath Falcon Watch
-	step //124
-		goto 28.5,60.2
-		'Go inside the building next to the Flight Path
-		.' Click the Orb of Translocation to go to the top of the tower
+		.fpath Falcon Watch
 	step //125
 		goto 28.5,60.2
 		.talk Ranger Captain Venn'ren##16789
@@ -13303,8 +13310,6 @@ startlevel 60
 		..accept The Great Fissure##9340
 		..accept Report to Zurai##10103
 	step //126
-		'Click the Orb of Translocation to go to the bottom of the tower
-	step //127
 		ding 62
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)",[[
