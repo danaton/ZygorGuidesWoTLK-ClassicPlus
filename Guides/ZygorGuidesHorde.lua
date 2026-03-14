@@ -13302,6 +13302,10 @@ startlevel 60
 		goto 27.8,60
 		.talk Innalia##18942
 		.fpath Falcon Watch
+	step //124
+		goto 28.4,60.2|n
+		.' Interact with gameobject: Orb of Translocation
+		.' Use the Orb of Translocation to teleport to the top of the tower|goto 28.28,60.14,0.1|noway|q 9340
 	step //125
 		goto 28.5,60.2
 		.talk Ranger Captain Venn'ren##16789
@@ -13313,31 +13317,30 @@ startlevel 60
 		ding 62
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)",[[
-	author support@zygorguides.com
-	next Zygor's Horde Leveling Guides\\Outland (64-66)
-	startlevel 62
+author support@zygorguides.com
+next Zygor's Horde Leveling Guides\\Outland (64-66)
+startlevel 62
 	step //1
 		goto Hellfire Peninsula,30.2,54
-		.' Kill Bonestripper Vultures
-		.get 8 Bonestripper Tail Feather|q 9381/1
-		.' Another spot that you can find Bonestripper Vultures is at 23.8,47.3
+		.from Bonestripper Vulture##16973
+		.get 8 Bonestripper Tail Feather##23387|q 9381/1
+		.' Another spot that you can find Bonestripper Vultures|at 23.8,47.3
 	step //2
 		goto 40.1,37.2
-		.' Click Arelion's Knapsack
-		..'Get Arelion's Knapsack
-		..'Click Arelion's Knapsack in your bags|use Arelion's Knapsack##31955
-		..'Get Arelion's Journal
-		goal Arelion's Journal|q 9374/1
-		info It's a brown bag hanging on the tree vine thing.
+		.' Interact with gameobject: Arelion's Knapsack
+		.info It's a brown bag hanging on the tree vine thing.
+		.collect Arelion's Knapsack##31955|n
+		.use Arelion's Knapsack##31955
+		.collect Arelion's Journal##23339|q 9374/1
 	step //3
 		goto 39.4,36.1
-		.kill 10 Terrorfiend|q 10389/1
-		.' Kill Terrorfiends
-		.get 6 Felblood Sample|q 9366/1
+		.kill 10 Terrorfiend##16951|q 10389/1
+		.from Terrorfiend##16951
+		.get 6 Felblood Sample##23269|q 9366/1
 	step //4
 		goto 35.5,57.4
-		.kill 8 Stonescythe Whelp|q 9340/1
-		.kill 3 Stonescythe Alpha|q 9340/2
+		.kill 8 Stonescythe Whelp##16927|q 9340/1
+		.kill 3 Stonescythe Alpha##16929|q 9340/2
 	step //5
 		goto 26.4,60.3
 		.talk Magistrix Carinda##16793
@@ -13353,47 +13356,48 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		.talk Falconer Drenna Riverwind##16790
 		..turnin Trueflight Arrows##9381
 	step //8
-		goto 28.5,60.2
-		'Go inside the building next to the flight path
-		.' Click the Orb of Translocation to go to the top of the tower
-		info Click the Orb of Translocation at the bottom of the tower to get to the top of the tower
+		goto 28.4,60.2|n
+		.' Interact with gameobject: Orb of Translocation
+		.' Use the Orb of Translocation to teleport to the top of the tower|goto 28.28,60.14,0.1|noway|q 9340
 	step //9
 		goto 28.5,60.2
 		.talk Ranger Captain Venn'ren##16789
 		..turnin The Great Fissure##9340
 		..accept Marking the Path##9391
-		info2 Click the Orb of Translocation at the bottom of the tower to get to the top of the tower
-	step //10
-		'Click the Orb of Translocation to go to the bottom of the tower
+		.info Click the Orb of Translocation at the bottom of the tower to get to the top of the tower.
 	step //11
 		goto 39,40.3
 		.' Stand on the big stone block
-		.' Click the Signaling Gem in your bags|use Signaling Gem##23358
+		.use Signaling Gem##23358
+		.info Click the Signaling Gem in your bags.
 		.' They come walking from the west
-		.kill 1 Draenei Anchorite|q 9370/1
-		info Stand on the big stone block and click the Signaling Gem in your bags.
+		.kill Draenei Anchorite##16994|q 9370/1
+		.info Stand on the big stone block and click the Signaling Gem in your bags.
 	step //12
 		goto 18.1,49.9
-		.' He walks along the road from Falcon Watch to Zangarmarsh
 		.talk Magister Aledis##20159
-		..'Fight him until he's almost dead
+		.' Fight him until he's almost dead
 		..turnin Arelion's Secret##10286
 		..accept The Mistress Revealed##10287
-		info2 You may need to search for him
+		.info You may need to search for him.
 	step //13
-		goto 15.7,52
+		goto 15.7,52.1
 		.talk Thiah Redmane##16991
 		..turnin Missing Missive##9373
 		..turnin Helping the Cenarion Post##10442
 		..accept Demonic Contamination##9372
+	step
+		goto 15.9,52.2
 		.talk Mahuram Stouthoof##16888
 		..accept Keep Thornfang Hill Clear!##10159
+	step
+		goto 16,52.2
 		.talk Amythiel Mistwalker##16885
 		..accept The Cenarion Expedition##9912
 	step //14
 		goto 24.9,54.3
-		.' Kill Hulking Helboars
-		.get 6 Helboar Blood Sample|q 9372/1
+		.from Hulking Helboar##16880
+		.get 6 Helboar Blood Sample##23336|q 9372/1
 	step //15
 		goto 26.4,60.3
 		.talk Magistrix Carinda##16793
@@ -13407,29 +13411,28 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		goto 30,60.5
 		.' Click the Western Beacon
 		.' Light the Western Beacon|goal Western Beacon|q 9391/1
-		info It's a big bowl surrounded by 4 stones. Click the Western Beacon
-		info2 Light the Western Beacon
+		.info It's a big bowl surrounded by 4 stones. Click the Western Beacon.
+		.info Light the Western Beacon.
 	step //18
 		goto 34,60
 		.' Click the Central Beacon
 		.' Light the Central Beacon|goal Central Beacon|q 9391/2
-		info It's a big bowl surrounded by 4 stones. Click the Central Beacon
-		info2 Light the Central Beacon
+		.info It's a big bowl surrounded by 4 stones. Click the Central Beacon.
+		.info Light the Central Beacon.
 	step //19
 		goto 36.1,65.4
 		.' Click the Southern Beacon
 		.' Light the Southern Beacon|goal Southern Beacon|q 9391/3
-		info It's a big bowl surrounded by 4 stones. Click the Southern Beacon
-		info2 Light the Southern Beacon
+		.info It's a big bowl surrounded by 4 stones. Click the Southern Beacon.
+		.info Light the Southern Beacon.
 	step //20
+		goto 28.4,60.2|n
+		.' Interact with gameobject: Orb of Translocation
+		.' Use the Orb of Translocation to teleport to the top of the tower|goto 28.28,60.14,0.1|noway|q 9391
+	step //21
 		goto 28.5,60.2
-		.' Go inside the building next to the flight path
-		.' Click the Orb of Translocation to go to the top of the tower
 		.talk Ranger Captain Venn'ren##16789
 		..turnin Marking the Path##9391
-		info2 Click the Orb of Translocation at the bottom of the tower to get to the top of the tower
-	step //21
-		'Click the Orb of Translocation to go to the bottom of the tower
 	step //22
 		goto 15.7,52
 		.talk Thiah Redmane##16991
@@ -13438,7 +13441,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 	step //23
 		goto 25,54
 		.' Use the Cenarion Antidote on a Hulking Helboar|use Cenarion Antidote##23337
-		.' Kill Dreadtusk
+		.kill Dreadtusk##16992|n
 		.' Administer the Antidote|goal Administer Antidote|q 10255/1
 	step //24
 		goto 15.7,52
@@ -13446,30 +13449,30 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		..turnin Testing the Antidote##10255
 	step //25
 		goto 12.3,49.9
-		.kill 8 Thornfang Ravager|q 10159/1
-		.kill 8 Thornfang Venomspitter|q 10159/2
-		info Kill 8 Thornfang Ravagers and 8 Thornfang Venomspitters around this area
+		.kill 8 Thornfang Ravager##19349|q 10159/1
+		.kill 8 Thornfang Venomspitter##19350|q 10159/2
+		.info Kill 8 Thornfang Ravagers and 8 Thornfang Venomspitters around this area.
 	step //26
-		'Go west to Zangarmash|goto Zangarmarsh
+		.' Go west to Zangarmash|goto Zangarmarsh|q 9483
 	step //27
 		goto Zangarmarsh,78.5,62.9
 		.talk Innkeeper Coryth Stoktron##18907
-		..buy 1 Cenarion Spirits|q 9483/1
+		.buy Cenarion Spirits##29112|q 9483/1
 	step //28
-		'Go east to Hellfire Peninsula|goto Hellfire Peninsula
+		.' Go east to Hellfire Peninsula|goto Hellfire Peninsula|q 10159
 	step //29
 		goto Hellfire Peninsula,15.7,52
 		.talk Mahuram Stouthoof##16888
 		..turnin Keep Thornfang Hill Clear!##10159
 	step //30
 		goto 15.1,55.7
-		.' Kill Illidari Taskmasters
-		.get 5 Demonic Essence|q 9387/1
+		.from Illidari Taskmaster##17058
+		.get 5 Demonic Essence##29113|q 9387/1
 	step //31
 		goto 15.6,58.8
 		.talk Akoru the Firecaller##20678
 		..accept Naladu##10403
-		info2 Talk to him to free him
+		.info Talk to him to free him.
 	step //32
 		goto 16.3,65.1
 		.talk Naladu##19361
@@ -13477,9 +13480,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		..accept A Traitor Among Us##10367
 	step //33
 		goto 14.3,63.5
-		.' Click the metal coffer in the big red hut
-		.get Sha'naar Key|q 10367/1
-		info In the back of the big red hut, on the floor
+		.collect Sha'naar Key##29501|q 10367/1
+		.info In the back of the big red hut, on the floor.
 	step //34
 		goto 16.3,65.1
 		.talk Naladu##19361
@@ -13506,8 +13508,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		goto 14.4,62.3
 		.' Wait until Arzeth the Merciless is up on top of the stairs by himself
 		.' Use the Staff of the Dreghood Elders on Arzeth the Merciless|use Staff of the Dreghood Elders##29513
-		.kill 1 Arzeth the Powerless|q 10369/1
-		info Wait until he's up top of the steps to fight him
+		.kill Arzeth the Powerless##20680|q 10369/1
+		.info Wait until he's up top of the steps to fight him.
 	step //40
 		goto 16.3,65.1
 		.talk Naladu##19361
@@ -13519,7 +13521,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 	step //42
 		goto 27.1,62.1
 		.talk Viera Sunwhisper##17226
-		..turnin Life's Finer Pleasures##9483 |n
+		..turnin Life's Finer Pleasures##9483|n
 		.' Follow Viera Sunwhisper
 		.' When she stops, use Carinda's Scroll of Retribution on her|goal Carinda's Scroll of Retribution used|q 9472/1|use Carinda's Scroll of Retribution##23693
 	step //43
@@ -13528,27 +13530,29 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		..turnin Arelion's Mistress##9472
 	step //44
 		goto 25.6,70.3
-		.kill Haal'eshi arakkoas|n
-		.get 4 Haal'eshi Scroll|q 9396/1
-		info You can find them all around this area, and in the canyon also
+		.from Haal'eshi Windwalker##16966, Haal'eshi Talonguard##16967
+		.get 4 Haal'eshi Scroll##23483|q 9396/1
+		.info You can find them all around this area, and in the canyon also.
 	step //45
 		goto 25.4,71.6
-		.' Click the Kaliri nests|tip They are small, round grey nests with 3 glowing pinkish eggs in them.
+		.' Click the Kaliri nests
+		.info They are small, round grey nests with 3 glowing pinkish eggs in them.
 		.' When a female Kaliri hatchling spawns, use your Empty Birdcage on it|use Empty Birdcage##23485
 		.' Cage the Female Kaliri Hatchling|goal Caged Female Kaliri Hatchling|q 9397/1
 	step //46
 		goto 26.2,77.1|n
-		.' The path up to Avruu starts here|goto Hellfire Peninsula,26.1,77.1,0.3|noway|c
+		.' The path up to Avruu starts here|goto Hellfire Peninsula,26.1,77.1,0.3|noway|q 9418 |future
 	step //47
 		goto 25.7,75.1
-		.' Kill Avruu
-		.get Avruu's Orb|n
-		.' Click Avruu's Orb in your bags|use Avruu's Orb##23580
+		.kill Avruu##17084|n
+		.collect Avruu's Orb##23580|q 9418 |future
+	step
+		.use Avruu's Orb##23580
 		..accept Avruu's Orb##9418
-		info Up the path, and over the bride, to the left.
 	step //48
 		goto 29,81.5
-		.' Click the Haal'eshi Altar|tip It looks like an orb sitting in a claw thing, right in front of a big purple hut.
+		.' Interact with gameobject: Haal'eshi Altar
+		.info It looks like an orb sitting in a claw thing, right in front of a big purple hut.
 		.' Fight Aeranas until he's almost dead
 		.talk Aeranas##17085
 		..turnin Avruu's Orb##9418
@@ -13571,7 +13575,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		.talk Falconer Drenna Riverwind##16790
 		..turnin Birds of a Feather##9397
 	step //53
-		'Fly to Thrallmar|goto Hellfire Peninsula,54.7,38.3,5|noway
+		goto 27.8,60|n
+		.talk Innalia##18942
+		.' Fly to Thrallmar|goto Hellfire Peninsula,54.7,38.3,5|noway|q 10389
 	step //54
 		goto 55.1,36
 		.talk Magister Bloodhawk##21175
@@ -13588,84 +13594,97 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		..accept A Spirit Guide##9410
 	step //57
 		goto 33.6,43.5
-		.' Use your Ancestral Spirit Wolf Totem next to the Fel Orc Corpse|use Ancestral Spirit Wolf Totem##23669
-		info It's a corpse laying halfway up the hill.
+		.use Ancestral Spirit Wolf Totem##23669
+		.' Use your Ancestral Spirit Wolf Totem next to the Fel Orc Corpse|havebuff Ability_Tracking|q 9410
+		.info It's a corpse laying halfway up the hill.
+	step
+		goto 32,27.8|n
+		.' Follow the Ancestral Spirit Wolf|goto 32.15,27.98,0.5|noway|q 9410
+		.info Stay close to the wolf and follow it until it stops, or you will not be able to turn in the quest.
 	step //58
 		goto 32,27.8
 		.talk Gorkan Bloodfist##16845
 		..turnin A Spirit Guide##9410
 		..accept The Mag'har##9406
 	step //59
-		'Hearth to Thrallmar|goto Hellfire Peninsula,54.7,38.3,5|use hearthstone##6948|noway|c
+		.' Hearth to Thrallmar|goto Hellfire Peninsula,54.7,38.3,5|use Hearthstone##6948|noway|q 9406
 	step //60
 		goto 55,36
 		.talk Nazgrel##3230
 		..turnin The Mag'har##9406
 		..accept Messenger to Thrall##9438
 	step //61
-		'Fly to Shattrath City|goto Shattrath City|noway|c
-	step //62
-		goto 52.2,52.8|n
-		'Go through the portal to Orgrimmar|goto Orgrimmar|c
+		goto 88.6,47.7|n
+		.' Interact with gameobject: Portal to Orgrimmar
+		.' Teleport to Orgrimmar|goto Orgrimmar|noway|q 9438
 	step //63
 		goto Orgrimmar,31.8,37.8
 		.talk Thrall##4949
 		..turnin Messenger to Thrall##9438
 		..accept Envoy to the Mag'har##9441
 	step //64
-		goto 38.1,86.7|n
-		'Go through the portal to Blasted Lands|goto Blasted Lands|c
+		goto Orgrimmar,38.2,85.7|n
+		.' Interact with gameobject: Portal to Blasted Lands
+		.' Teleport to Blasted Lands|goto Blasted Lands|noway|q 9441
 	step //65
-		'Go south into The Dark Portal|goto Hellfire Peninsula
+		goto Blasted Lands,58.71,59.88|n
+		.' Go through the huge portal with a green glow|goto Hellfire Peninsula|noway|q 9441
 	step //66
-		'Fly to Falcon Watch|goto Hellfire Peninsula,27.2,61.0,3|noway
+		goto Hellfire Peninsula,87.3,48.1|n
+		.talk Vlagga Freyfeather##18930
+		.' Fly to Falcon Watch|goto Hellfire Peninsula,27.2,61.0,3|noway|q 9441
 	step //67
 		goto 30.3,35.3|n
-		.' The path up to Gorkan Bloodfist start here|goto Hellfire Peninsula,30.3,35.3,0.5|noway|c
+		.' The path up to Gorkan Bloodfist start here|goto Hellfire Peninsula,30.3,35.3,0.5|noway|q 9441
 	step //68
 		goto 32,27.8
 		.talk Gorkan Bloodfist##16845
 		..turnin Envoy to the Mag'har##9441
 	step //69
 		goto 22.1,68.3
-		.' Click the Torn Pilgrim's Pack
-		.get Torn Pilgrim's Pack|q 9376/1
-		info It's a small tan sack laying on a purple rug.
+		.collect Torn Pilgrim's Pack##23343|q 9376/1
+		.info It's a small tan sack laying on a purple rug.
 	step //70
 		goto 27.2,61.9
 		.talk Taleris Dawngazer##17015
 		..turnin A Pilgrim's Plight##9376
 	step //71
-		'Go northwest to Zangarmarsh|goto Zangarmarsh
+		.' Go northwest to Zangarmarsh|goto Zangarmarsh|q 9912
 	step //72
-		goto Zangarmarsh,80.4,64.2
+		goto Zangarmarsh,80.3,64.2
 		.talk Lauranna Thar'well##17909
 		..accept Plants of Zangarmarsh##9802
+	step
+		goto Zangarmarsh,80.4,64.2
 		.talk Ikeyen##17956
 		..accept The Umbrafen Tribe##9747
 	step //73
-		goto 79.1,65.3
-		.talk Warden Hamoot##17858
-		..accept A Warm Welcome##9728
+		goto 78.4,62
+		.talk Ysiel Windsinger##17841
+		..turnin The Cenarion Expedition##9912
+		..accept Disturbance at Umbrafen Lake##9716
+		..accept Warden Hamoot##9778
 	step //74
 		goto 78.5,63.1
 		.talk Lethyn Moonfire##17834
 		..accept The Dying Balance##9895
 	step //75
-		goto 78.4,62
-		.talk Ysiel Windsinger##17841
-		..turnin The Cenarion Expedition##9912
-		..accept Disturbance at Umbrafen Lake##9716
+		goto 79.1,65.3
+		.talk Warden Hamoot##17858
+		..turnin Warden Hamoot##9778
+		..accept A Warm Welcome##9728
 	step //76
 		goto 80.1,73.3
-		.' Kill all mobs in this area
-		.get 10 Unidentified Plant Parts|q 9802/1
+		.from Marshfang Ripper##18130, Umbraglow Stinger##18132, Young Sporebat##20387
+		.get 10 Unidentified Plant Parts##24401|q 9802/1
 	step //77
 		goto 81,72.2
-		.kill 1 Boglash|q 9895/1|tip I found Boglash here. He is a tall alien looking thing with really long legs. Kill him, he's really easy, despite his elite status. He walks around in the water, so some searching may be necessary.
+		.kill Boglash##18281|q 9895/1
+		.info I found Boglash here. He is a tall alien looking thing with really long legs. Kill him, he's really easy, despite his elite status. He walks around in the water, so some searching may be necessary.
 	step //78
 		goto 82.6,72.3
-		.' Kill Boglash and Fen Striders|tip It's easier if you just run around in the water all around the east part of Zangarmarsh
+		.from Fen Strider##18134
+		.info It's easier if you just run around in the water all around the east part of Zangarmarsh.
 		.collect 6 Fertile Spores##24449|q 9806 |future
 	step //79
 		goto 80.4,64.2
@@ -13676,13 +13695,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		.talk Lethyn Moonfire##17834
 		..turnin The Dying Balance##9895
 	step //81
-		goto 84.8,84.4
-		.kill 6 Umbrafen Oracle|q 9747/2
-		.kill 8 Umbrafen Seer|q 9747/3
-		.kill 6 Umbrafen Witchdoctor|q 9747/4
-	step //82
 		goto 85.3,90.9
-		.kill 1 Kataru|q 9747/1|tip In the big building, all the way at the top.
+		.kill Kataru##18080|q 9747/1
+	step //82
+		goto 84.8,84.4
+		.kill 6 Umbrafen Oracle##18077|q 9747/2
+		.kill 8 Umbrafen Seer##18079|q 9747/3
+		.kill 6 Umbrafen Witchdoctor##20115|q 9747/4
 	step //83
 		ding 63
 	step //84
@@ -13695,6 +13714,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		.talk Ikeyen##17956
 		..turnin The Umbrafen Tribe##9747
 		..accept A Damp, Dark Place##9788
+	step
+		goto 80.3,64.2
 		.talk Lauranna Thar'well##17909
 		..accept Saving the Sporeloks##10096
 	step //86
@@ -13707,21 +13728,28 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		..turnin Escape from Umbrafen##9752
 	step //88
 		goto 75.7,90.2
-		.kill 10 Marsh Lurker|q 10096/2
-		.kill 10 Marsh Dredger|q 10096/1
+		.kill 10 Marsh Dredger##18137|q 10096/1
+		.kill 10 Marsh Lurker##18136|q 10096/2
+	step
+		goto 74.65,91.7|n
+		.' Go inside the cave|goto 74.65,91.7,0.5|noway|q 9788
 	step //89
-		'Go southwest inside the cave to 70.5,97.9|goto 70.5,97.9
-		.get Ikeyen's Belongings|q 9788/1
-		info A little tan metal chest sitting on a beg flat rock
+		goto 70.5,97.9
+		.collect Ikeyen's Belongings##24411|q 9788/1
+		.info A little tan metal chest sitting on a beg flat rock.
 	step //90
-		'Go northeast inside the cave to72.5,94|goto 72.5,94
-		.kill 1 Lord Klaq|q 9894/1
-		info On the bottom level of the cave, in the small round room all the way in the back
+		goto 72.5,94
+		.kill Lord Klaq##18282|q 9894/1
+		.info On the bottom level of the cave, in the small round room all the way in the back.
 	step //91
 		goto 70.9,82.1
 		.' Stand here to Investigate Umbrafen Lake|goal Umbrafen Lake Investigated|q 9716/1
-		.' Kill nagas
-		.get 30 Naga Claws|q 9728/1
+	step //
+		goto 62.5,40.9
+		.from Steam Pump Overseer##18340, Darkcrest Slaver##19946, Darkcrest Sorceress##19947
+		.get 30 Naga Claws##24280|q 9728/1
+		.' You can find more around (1)|at 63.6,64.8
+		.' You can find more around (2)|at 71,74.65
 	step //92
 		goto 80.4,64.7
 		.talk Windcaller Blackhoof##18070
@@ -13730,10 +13758,12 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		goto 80.4,64.2
 		.talk Ikeyen##17956
 		..turnin A Damp, Dark Place##9788
+	step
+		goto 80.3,64.2
 		.talk Lauranna Thar'well##17909
 		..turnin Saving the Sporeloks##10096
-		..'Turn in any stacks of 10 Unidentified Plant Parts you have
-		..'If you found an Uncatalogued Species, turn that in also
+		.' Turn in any stacks of 10 Unidentified Plant Parts you have.
+		.' If you found an Uncatalogued Species, turn that in also.
 	step //94
 		goto 79.1,65.3
 		.talk Warden Hamoot##17858
@@ -13752,19 +13782,24 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		.talk Ysiel Windsinger##17841
 		..turnin Disturbance at Umbrafen Lake##9716
 		..accept As the Crow Flies##9718
-		.' Click the Stormcrow Amulet in your bags|use Stormcrow Amulet##25465
-		.' Watch yourself fly as a crow
+	step
+		.use Stormcrow Amulet##25465
+		.info Click the Stormcrow Amulet in your bags.
+		.' Watch yourself fly as a crow|q 9718/1
+	step
+		goto 78.4,62
+		.talk Ysiel Windsinger##17841
 		..turnin As the Crow Flies##9718
 		..accept Balance Must Be Preserved##9720
 	step //98
 		goto 78.1,63.8
 		.talk Keleth##17901
-		..'Get the Mark of War|goal Mark of War|q 9785/2
+		.' Get the Mark of War|goal Mark of War|q 9785/2
 	step //99
 		goto 81.1,63.9
 		.talk Ashyen##17900
-		..'Get the Mark of Lore|goal Mark of Lore|q 9785/1
-		info2 Talk to Ashyen and ask for his blessing
+		.' Get the Mark of Lore|goal Mark of Lore|q 9785/1
+		.info Talk to Ashyen and ask for his blessing.
 	step //100
 		goto 80.4,64.7
 		.talk Windcaller Blackhoof##18070
@@ -13773,23 +13808,23 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		goto 70.6,80.3
 		.' Use your Ironvine Seeds on the Umbrafen Lake Pump Controls|use Ironvine Seeds##24355
 		.' Disable the Umbrafen Lake Pump Controls|goal Umbrafen Lake Controls Disabled|q 9720/1
-		info The pump controls look like a little box with some levers on it
+		.info The pump controls look like a little box with some levers on it
 	step //102
 		goto 63.1,64.1
 		.' Use your Ironvine Seeds on the Lagoon Pump Controls|use Ironvine Seeds##24355
 		.' Disable the Lagoon Pump Controls|goal Lagoon Controls Disabled|q 9720/4
-		tip The pump controls look like a little box with some levers on it
+		.info The pump controls look like a little box with some levers on it.
 	step //103
 		goto 84.8,55.1
 		.talk Gur'zil##20762
-		..fpath Swamprat Post
+		.fpath Swamprat Post
 	step //104
 		goto 85.3,54.8
 		.talk Zurai##18011
 		..turnin Report to Zurai##10103
 		..accept Thick Hydra Scales##9774
-		..accept News from Zangarmarsh##9796
 		..accept Report to Shadow Hunter Denjai##9775
+		..accept News from Zangarmarsh##9796
 	step //105
 		goto 85,54
 		.talk Reavij##18012
@@ -13801,15 +13836,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		..accept No More Mushrooms!##9773
 	step //107
 		goto 74.2,60.7
-		.' Kill Mire Hydras
-		.get 12 Thick Hydra Scale|q 9774/1
-		.' Kill Umbrafen Eels
-		.get 8 Eel Filet|q 9773/1
+		.from Mire Hydra##18213
+		.get 12 Thick Hydra Scale##24375|q 9774/1
+		.from Umbrafen Eel##18138
+		.get 8 Eel Filet##24374|q 9773/1
 	step //108
 		goto 79.7,70.1
-		.' Kill Umbraglow Stingers
-		.get 8 Diaphanous Wing|q 9769/1
-		info Kill Umbraglow Stingers in this area
+		.from Umbraglow Stinger##18132
+		.get 8 Diaphanous Wing##24372|q 9769/1
 	step //109
 		goto 84.4,54.3
 		.talk Magasha##18016
@@ -13825,27 +13859,32 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		goto 62,40.8
 		.' Use your Ironvine Seeds on the Serpent Lake Controls|use Ironvine Seeds##24355
 		.' Disable the Serpent Lake Controls|goal Serpent Lake Controls Disabled|q 9720/3
-		.' Kill Steam Pump Overseers, Bloodscale Overseers, and Bloodscale Wavecallers
-		..'Get a Drain Schematics
-		.' Click the Drain Schematics in your bags|use Drain Schematics##24330
+		.info The pump controls look like a little box with some levers on it.
+		.info Use the Ironvine Seeds when standing in this spot.
+	step
+		goto 62,40.8
+		.from Steam Pump Overseer##18340, Bloodscale Overseer##20088, Bloodscale Wavecaller##20089
+		.collect Drain Schematics##24330|q 9731 |future
+	step
+		.use Drain Schematics##24330
 		..accept Drain Schematics##9731
-		info The pump controls look like a little box with some levers on it
-		info2 Use the Ironvine Seeds when standing in this spot
 	step //112
 		goto 73.2,41.5
-		.kill 10 Marshfang Ripper|q 9770/1
+		.kill 10 Marshfang Ripper##18130|q 9770/1
 	step //113
-		goto 77.2,45.9
-		.kill 1 Sporewing|q 9899/1|tip He looks like a Sporebat.
+		goto 76.8,46
+		.kill Sporewing##18280|q 9899/1
+		.info He looks like a Sporebat.
 	step //114
 		goto 78.3,45.2
-		.' Kill Withered mobs
+		.from Withered Giant##18124, Withered Bog Lord##19402
 		.collect 6 Bog Lord Tendril##24291|q 9743 |future
-		.' Kill Withered Giants
-		.get a Withered Basidium|n
-		.' Click the Withered Basidium|use Withered Basidium##24484
+		.from Withered Giant##18124
+		.collect Withered Basidium##24484|q 9828 |future
+		.info The Bog Lord Tendrils and the Withered Basidium have a very low drop rate so it may take a while.
+	step
+		.use Withered Basidium##24484
 		..accept Withered Basidium##9828
-		info The Bog Lord Tendrils and the Withered Basidium have a very low drop rate so it may take a while.
 	step //115
 		goto 80.8,36.3
 		.talk Scout Jyoba##18035
@@ -13853,9 +13892,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		..accept Jyoba's Report##9772
 	step //116
 		goto 81.6,35
-		.' Kill Withered Giants
-		.get Scout Jyoba's Report|q 9772/1
-		info Kill Withered Giants around this area
+		.from Withered Giant##18124
+		.get Scout Jyoba's Report##24373|q 9772/1
 	step //117
 		goto 84.4,54.3
 		.talk Magasha##18016
@@ -13864,8 +13902,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		goto 85,54
 		.talk Reavij##18012
 		..turnin Menacing Marshfangs##9770
-		..accept Nothin' Says Lovin' Like a Big Stinger##9898
 		..turnin Withered Basidium##9828
+		..accept Nothin' Says Lovin' Like a Big Stinger##9898
 	step //119
 		goto 85.3,54.8
 		.talk Zurai##18011
@@ -13874,18 +13912,20 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		goto 50.4,40.8
 		.' Swim straight down at this spot
 		.' Locate the drain in Serpent Lake|goal Drain Located|q 9731/1
-		info Locate the drain in Serpent Lake here
-		info2 Swim straight down into the big bubbling pipe opening below until you discover the drain
+		.info Locate the drain in Serpent Lake here.
+		.info Swim straight down into the big bubbling pipe opening below until you discover the drain.
 	step //121
 		goto 49.5,59.2
-		.' Kill Blacksting
-		.get Blacksting's Stinger|q 9898/1
-		info He's a red, yellow and black flying wasp-looking bug.
+		.from Blacksting##18283
+		.get Blacksting's Stinger##25448|q 9898/1
+		.info He's a red, yellow and black flying wasp-looking bug.
 	step //122
-		goto 32.8,59.1
-		.' Kill "Count" Ungula|tip He's a huge Marshfang.
-		.' Get "Count" Ungula's Mandible
-		.' Click "Count" Ungula's Mandible|use "Count" Ungula's Mandible##25459
+		goto 32.8,59.5
+		.from "Count" Ungula##18285
+		.info He's a huge Marshfang.
+		.collect "Count" Ungula's Mandible##25459|q 9911 |future
+	step
+		.use "Count" Ungula's Mandible##25459
 		..accept The Count of the Marshes##9911
 	step //123
 		goto 32.9,48.9
@@ -13897,16 +13937,18 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		..accept Angling to Beat the Competition##9845
 	step //125
 		goto 32,49.3
-		.' Click the Wanted Poster
+		.' Interact with gameobject: Wanted Poster
+		.info Next to some boxes.
 		..accept WANTED: Boss Grog'ak##9820
 		..accept Wanted: Chieftain Mummaki##10117
-		info Next to some boxes
 	step //126
 		goto 31.6,49.2
 		.talk Gambarinka##18015
 		..accept Stinging the Stingers##9841
 	step //127
-		home Zabra'jin
+		goto 30.7,50.9
+		.talk Merajit##18245
+		home Zabra'jin|q 9775
 	step //128
 		goto 30.7,50.9
 		.talk Shadow Hunter Denjai##18013
@@ -13918,16 +13960,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 	step //130
 		goto 33.1,51.1
 		.talk Du'ga##18791
-		..fpath Zabra'jin
+		.fpath Zabra'jin
 	step //131
 		goto 46,60.3
-		.' Kill Feralfen mobs
-		.get 10 Feralfen Protection Totem|q 9846/1
-		info Kill Feralfen mobs around this area
+		.from Feralfen Hunter##18113, Feralfen Mystic##18114, Feralfen Druid##20270
+		.get 10 Feralfen Protection Totem##24497|q 9846/1
 	step //132
 		goto 48.1,38.4
-		.kill 10 Fenclaw Thrasher|q 9845/1
-		info Kill 10 Fenclaw Thrashers around this area
+		.kill 10 Fenclaw Thrasher##18214|q 9845/1
 	step //133
 		goto 32.2,49.6
 		.talk Zurjaya##18018
@@ -13941,14 +13981,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		..accept A Spirit Ally?##9847
 	step //135
 		goto 42.2,41.4
-		.kill 1 Mragesh|q 9903/1
-		info He is a big brown hydra underwater
+		.kill Mragesh##18286|q 9903/1
+		.info He is a big brown hydra underwater.
 	step //136
 		goto 44.4,66
 		.' Use your Feralfen Totem at the base of the big stairs|use Feralfen Totem##24498
 		.' Kill the Feralfen Serpent Spirit that spawns|goal Summon Serpent Spirit|q 9847/1
 	step //137
-		'Hearth to Zabra'jin|goto Zangarmarsh,31.7,49.8,4|use hearthstone##6948|noway|c
+		.' Hearth to Zabra'jin|goto Zangarmarsh,31.7,49.8,4|use Hearthstone##6948|noway|q 9903
 	step //138
 		goto 32.2,49.6
 		.talk Zurjaya##18018
@@ -13959,10 +13999,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 		..turnin A Spirit Ally?##9847
 	step //140
 		goto 28.9,52.6
-		.' Click Burstcap Mushrooms
-		.get 6 Burstcap Mushroom|q 9814/1
-		info They look like tall dark mushrooms with a bump on top of them. Click Burstcap Mushrooms around this area
-		info2 Get 6 Burstcap Mushrooms around this area
+		.collect 6 Burstcap Mushroom##24468|q 9814/1
+		.info They look like tall dark mushrooms with a bump on top of them. Click Burstcap Mushrooms around this area.
+		.info Get 6 Burstcap Mushrooms around this area.
 	step //141
 		goto 32.9,48.9
 		.talk Witch Doctor Tor'gash##18014
@@ -13983,17 +14022,19 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (62-64)"
 	step //144
 		goto 14.5,61.6
 		.' Click Mature Spore Sacs
-		.collect 10 Mature Spore Sac##24290|q 9739|tip They look like pink balls tied to a little string bobbing on the ground.
-		.collect 40 Mature Spore Sac##24290|q 9919|tip You need 30 extra for reputation.  You only need 40 total Mature Spore Sacs, not 50. |future
+		.collect 10 Mature Spore Sac##24290|q 9739
+		.info They look like pink balls tied to a little string bobbing on the ground.
+		.collect 40 Mature Spore Sac##24290|q 9919 |future
+		.info You need 30 extra for reputation. You only need 40 total Mature Spore Sacs, not 50.
 	step //145
 		goto 13.6,59.8
 		.goal Investigate the Spawning Glen|q 9701/1
-		info Go to this spot to Investigate the Spawning Glen
+		.info Go to this spot to Investigate the Spawning Glen.
 	step //146
 		goto 19.1,63.9
 		.talk Fahssn##17923
 		..turnin The Sporelings' Plight##9739
-		..'Turn in all the Tendrils and Mature Spore Sacs you have
+		.' Turn in all the Tendrils and Mature Spore Sacs you have
 		..accept Sporeggar##9919
 	step //147
 		goto 23.3,66.2
