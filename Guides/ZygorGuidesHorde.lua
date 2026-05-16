@@ -8101,6 +8101,7 @@ startlevel 30
 		..turnin Wharfmaster Dizzywig##1111
 		..accept Parts for Kravel##1112
 	step //162
+		goto The Barrens,63.65,38.6|n
 		.' Ride the boat to Booty Bay|goto Stranglethorn Vale|noway|q 1180
 	step //163
 		goto Stranglethorn Vale,26.4,73.6
@@ -8120,7 +8121,7 @@ startlevel 30
 		.talk Crank Fizzlebub##2498
 		..accept Singing Blue Shards##605
 	step //167
-		goto Stranglethorn Vale,27.0,77.3
+		goto Stranglethorn Vale,27,77.3
 		.talk Innkeeper Skindle##6807
 		home Booty Bay|q 605
 	step //168
@@ -10785,7 +10786,7 @@ startlevel 50
 		.talk Doras##3310
 		.' Fly to Ratchet|goto The Barrens,63.1,37.1,0.3|noway|q 3441 |future
 	step //30
-		goto The Barrens,63.75,38.7|n
+		goto The Barrens,63.65,38.6|n
 		.' Ride the boat to Booty Bay|goto Stranglethorn Vale|noway|q 3441 |future
 	step //31
 		goto Stranglethorn Vale,26.9,77.1|n
@@ -14011,8 +14012,8 @@ startlevel 62
 		goto 23.3,66.2
 		.talk Watcher Leesa'oh##17831
 		..turnin Watcher Leesa'oh##9697
-		..accept Observing the Sporelings##9701
 		..turnin The Count of the Marshes##9911
+		..accept Observing the Sporelings##9701
 	step //143
 		goto 19,64
 		.talk Fahssn##17923
@@ -14021,7 +14022,6 @@ startlevel 62
 		..turnin Natural Enemies##9743
 	step //144
 		goto 14.5,61.6
-		.' Click Mature Spore Sacs
 		.collect 10 Mature Spore Sac##24290|q 9739
 		.info They look like pink balls tied to a little string bobbing on the ground.
 		.collect 40 Mature Spore Sac##24290|q 9919 |future
@@ -14045,14 +14045,13 @@ startlevel 62
 		ding 64
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)",[[
-	author support@zygorguides.com
-	next Zygor's Horde Leveling Guides\\Outland (66-68)
-	startlevel 64
+author support@zygorguides.com
+next Zygor's Horde Leveling Guides\\Outland (66-68)
+startlevel 64
 	step //1
 		goto Zangarmarsh,27,63.3
-		.' Click Discarded Nutriments
-		.get 10 Discarded Nutriment|q 9702/1
-		info2 They look like green glowing mushroom stalks on the ground
+		.collect 10 Discarded Nutriment##24233|q 9702/1
+		.info They look like green glowing mushroom stalks on the ground.
 	step //2
 		goto 23.3,66.2
 		.talk Watcher Leesa'oh##17831
@@ -14073,31 +14072,31 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..turnin Fertile Spores##9806
 	step //6
 		goto 22.4,46.1
-		.kill Terrorclaw|q 9904/1
-		info On a little island. Kill the little guys first.
+		.kill Terrorclaw##20477|q 9904/1
+		.info On a little island. Kill the little guys first.
 	step //7
 		goto 16.3,39.6
-		.kill 8 Marshlight Bleeder|q 9841/1
-		.' More can be found around 26.3,33.7
+		.kill 8 Marshlight Bleeder##18133|q 9841/1
+		.' More can be found around|at 26.3,33.7
 	step //8
 		goto 25.4,42.9
 		.' Use your ironvine Seeds on the Marshlight Lake Pump Controls|use Ironvine Seeds##24355
 		.' Disable the Marshlight Lake Pump Controls|goal Marshlight Lake Controls Disabled|q 9720/2
-		info The pump controls look like a little box with some levers on it
-		info2 Use the Ironvine Seeds when standing in this spot
+		.info The pump controls look like a little box with some levers on it.
+		.info Use the Ironvine Seeds when standing in this spot.
 	step //9
 		goto 26.8,43
-		.kill 12 Bloodscale Slavedriver|q 9726/1
-		.kill 6 Bloodscale Enchantress|q 9726/2
+		.kill 12 Bloodscale Slavedriver##18089|q 9726/1
+		.kill 6 Bloodscale Enchantress##18088|q 9726/2
 	step //10
 		goto 34.5,34.8
-		.' Kill Boss Grog'ak
-		.get Boss Grog'ak's Head|q 9820/1
-		info Standing on the side of the road.
+		.from Boss Grog'ak##18159
+		.get Boss Grog'ak's Head##24472|q 9820/1
+		.info Standing on the side of the road.
 	step //11
 		goto 29.6,28.3
-		.' Kill ogres
-		.get 15 Mushroom Sample|q 9708/1
+		.from Ango'rosh Ogre##18117, Ango'rosh Shaman##18118
+		.get 15 Mushroom Sample##24238|q 9708/1
 	step //12
 		goto 32.2,49.6
 		.talk Zurjaya##18018
@@ -14114,8 +14113,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..accept Impending Attack##9822
 	step //15
 		goto 35.9,58.6
-		.kill Marshfang Slicers|n
-		.get 10 Marshfang Slicer Blade|q 9842/1
+		.from Marshfang Slicer##18131
+		.get 10 Marshfang Slicer Blade##24493|q 9842/1
 	step //16
 		goto 31.6,49.2
 		.talk Gambarinka##18015
@@ -14131,9 +14130,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..turnin Now That We're Friends...##9726
 	step //19
 		goto 19.9,27.1
-		.' Click the Ango'rosh Attack Plans
-		.get Ango'rosh Attack Plans|q 9822/1
-		info It is a tan scroll laying flat on the ground at the top of the tower.
+		.collect Ango'rosh Attack Plans##24471|q 9822/1
+		.info It is a tan scroll laying flat on the ground at the top of the tower.
 	step //20
 		goto 30.7,50.9
 		.talk Shadow Hunter Denjai##18013
@@ -14142,39 +14140,37 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..accept Message to the Daggerfen##10118
 	step //21
 		goto 23.8,26.8
-		.' Go to the top of the tower
-		.' Kill Chieftain Mummaki
-		.get Chieftain Mummaki's Totem|q 10117/1
-		info At the top of the big tower, straight ahead as you reach the top of the stairs
+		.kill Chieftain Mummaki##19174|n
+		.get Chieftain Mummaki's Totem##27943|q 10117/1
 	step //22
 		goto 23.8,24.5
-		.kill 3 Daggerfen Assassin|q 10118/1
-		.kill 15 Daggerfen Muckdweller|q 10118/2
+		.kill 3 Daggerfen Assassin##18116|q 10118/1
+		.kill 15 Daggerfen Muckdweller##18115|q 10118/2
 	step //23
 		goto 26.8,22.6
 		.' Click the Murloc Cage in your bags|use Murloc Cage##24470
 		.' Release Murlocs at Daggerfen Village|goal Release Murlocs at Daggerfen Village|q 9816/1
-		info Clear this area of all mobs before clicking the cage, or else they will all attack you.
-		info2 Stand on this big flat gray rock and click your Murloc Cage to release the murlocs.
+		.info Clear this area of all mobs before clicking the cage, or else they will all attack you.
+		.info Stand on this big flat gray rock and click your Murloc Cage to release the murlocs.
 	step //24
 		goto 17.3,10.2
-		.kill 10 Ango'rosh Mauler|q 9823/2
-		.kill 10 Ango'rosh Souleater|q 9823/3
-		.' Kill ogres and click the brown crates
-		.get 10 Box of Mushrooms|q 9709/1
-		info There are more ogres and boxes of mushrooms across the mushroom bridge.
+		.kill 10 Ango'rosh Mauler##18120|q 9823/2
+		.kill 10 Ango'rosh Souleater##18121|q 9823/3
+		.info Kill ogres and click the brown crates.
+		.collect 10 Box of Mushrooms##24240|q 9709/1
+		.info There are more ogres and boxes of mushrooms across the mushroom bridge.
 	step //25
 		goto 18.3,7.7
-		.kill 1 Overlord Gorefist|q 9823/1
-		info Follow the path up the hill. Overlord Gorefist is inside the small house on the left
+		.kill Overlord Gorefist##18160|q 9823/1
+		.info Follow the path up the hill. Overlord Gorefist is inside the small house on the left.
 	step //26
-		'Hearth to Zabra'jin|goto Zangarmarsh,31.7,49.8,4|use hearthstone##6948|noway|c
+		.' Hearth to Zabra'jin|goto Zangarmarsh,31.7,49.8,4|use Hearthstone##6948|noway|q 9823
 	step //27
 		goto 30.7,50.9
 		.talk Shadow Hunter Denjai##18013
 		..turnin Us or Them##9823
-		..turnin Message to the Daggerfen##10118
 		..turnin Wanted: Chieftain Mummaki##10117
+		..turnin Message to the Daggerfen##10118
 	step //28
 		goto 32.9,48.9
 		.talk Witch Doctor Tor'gash##18014
@@ -14185,9 +14181,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..turnin Stealing Back the Mushrooms##9709
 		.' Don't follow her when she walks away
 	step //30
-		goto 33.1,51.1
+		goto 33.1,51.1|n
 		.talk Du'ga##18791
-		.'Fly to Swamprat Post|goto Zangarmarsh,85.2,54.2,2|noway|c
+		.' Fly to Swamprat Post|goto Zangarmarsh,85.2,54.2,2|noway|q 9898
 	step //31
 		goto 85,54
 		.talk Reavij##18012
@@ -14199,31 +14195,34 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..turnin Drain Schematics##9731
 		..accept Warning the Cenarion Circle##9724
 	step //33
-		'Go east to Hellfire Peninsula|goto Hellfire Peninsula|noway|c
+		.' Go east to Hellfire Peninsula|goto Hellfire Peninsula|noway|q 9724
 	step //34
 		goto Hellfire Peninsula,15.7,52
 		.talk Amythiel Mistwalker##16885
 		..turnin Warning the Cenarion Circle##9724
 		..accept Return to the Marsh##9732
 	step //35
-		'Go northwest to Zangarmarsh|goto Zangarmarsh|noway|c
+		.' Go northwest to Zangarmarsh|goto Zangarmarsh|noway|q 9732
 	step //36
 		goto Zangarmarsh,78.4,62
 		.talk Ysiel Windsinger##17841
 		..turnin Return to the Marsh##9732
 	step //37
-		'Go southeast to Terokkar Forest|goto Terokkar Forest
+		.' Go southeast to Terokkar Forest|goto Terokkar Forest|q 10210 |future
 	step //38
-		'Go south to Shattrath City|goto Shattrath City|noway|c
+		.' Go south to Shattrath City|goto Shattrath City|noway|q 10210 |future
 	step //39
-		goto Shattrath City,61.2,12.6
+		goto Shattrath City,59.66,41.45
 		.talk Haggard War Veteran##19684
 		..accept A'dal##10210
+		.' You can find Haggard here (Bridge)|at 59.5,20.95
+		.' You can find Haggard here (Tunnel)|at 74.3,14.7
+		.' You can find Haggard here (Tunnel)|at 81.9,43.9
+		.' You can find Haggard here (Bridge)|at 70.2,52.7
 	step //40
 		goto 54,44.8
 		.talk A'dal##18481
 		..turnin A'dal##10210
-		info2 She is the big glowing floating being int he middle of the room
 	step //41
 		goto 54.8,44.3
 		.talk Khadgar##18166
@@ -14231,19 +14230,19 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		.' Follow the pink voidwalker
 	step //42
 		goto 64,15.5
-		'As you follow the pink voidwalker
+		.' As you follow the pink voidwalker
 		.talk Seth##18653
 		..accept Rather Be Fishin'##10037
-		info2 You see him as you follow the pink Voidwalker for City of Light quest
+		.info You see him as you follow the pink Voidwalker for City of Light quest.
 	step //43
 		goto 52.6,21
-		'Also while you follow the pink voidwalker:
+		.' Also while you follow the pink voidwalker:
 		.talk Rilak the Redeemed##22292
 		..accept The Eyes of Skettis##10847
-		.'Finish the City of Light tour|goal City of Light|q 10211/1
-		info2 You see them as you follow the pink Voidwalker for City of Light quest
+		.' Finish the City of Light tour|goal City of Light|q 10211/1
+		.info You see them as you follow the pink Voidwalker for City of Light quest.
 	step //44
-		'Follow the pink voidwalker until the tour is over|goal City of Light|q 10211/1
+		.' Follow the pink voidwalker until the tour is over|goal City of Light|q 10211/1
 	step //45
 		goto 54.8,44.3
 		.talk Khadgar##18166
@@ -14251,19 +14250,21 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..accept Allegiance to the Scryers##10552 |instant
 		..accept Voren'thal the Seer##10553
 	step //46
-		'Ride the elevator up to the Scryer Rise|goto Shattrath City,50.0,62.9,0.3|c
+		.' Ride the elevator up to the Scryer Rise|goto Shattrath City,50.0,62.9,0.3|q 10553
 	step //47
 		goto 42.8,91.7
 		.talk Voren'thal the Seer##18530
 		..turnin Voren'thal the Seer##10553
 	step //48
-		home Shattrath City
+		goto Shattrath City,56.3,81.5
+		.talk Innkeeper Haelthol##19232
+		home Shattrath City|q 9957
 	step //49
-		'Go outside to Terokkar Forest|goto Terokkar Forest|noway|c
+		.' Go outside to Terokkar Forest|goto Terokkar Forest|noway|q 10037
 	step //50
 		goto Terokkar Forest,38.6,8.5
-		.kill Shimmerscale Eels|n
-		.get 8 Pristine Shimmerscale Eel|q 10037/1
+		.from Shimmerscale Eel##18750
+		.get 8 Pristine Shimmerscale Eel##25891|q 10037/1
 	step //51
 		goto 44.3,26.3
 		.talk Earthbinder Tavgren##18446
@@ -14276,30 +14277,28 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..accept It's Watching You!##9951
 	step //53
 		goto 45.1,21.8
-		.' Click the Strange Object
+		.' Interact with gameobject: Strange Object
 		.' Examine the Strange Object|goal Strange Object examined|q 9971/1
-		info Inside the building, looks like a white ball on the floor next to a dead guy
+		.info Inside the building, looks like a white ball on the floor next to a dead guy.
 	step //54
 		goto 44.3,26.3
 		.talk Earthbinder Tavgren##18446
 		..turnin Clues in the Thicket##9971
 	step //55
 		goto 43.4,22.1
-		.kill 1 Naphthal'ar|q 9951/1
-		info At the top of the big tower
-		info2 Kill Naphthal'ar
+		.kill Naphthal'ar##18438|q 9951/1
 	step //56
 		goto 45,22.5
 		.talk Warden Treelos##18424
 		..turnin It's Watching You!##9951
 	step //57
 		goto 44.1,23.8
-		.' Kill Vicious Teromoths
-		.get 4 Vicious Teromoth Sample|q 9968/2
+		.from Vicious Teromoth##18437
+		.get 4 Vicious Teromoth Sample##24279|q 9968/2
 	step //58
 		goto 45.8,29.8
-		.' Kill Teromoths
-		.get 4 Teromoth Sample|q 9968/1
+		.from Teromoth##18468
+		.get 4 Teromoth Sample##25672|q 9968/1
 	step //59
 		goto 44.3,26.3
 		.talk Earthbinder Tavgren##18446
@@ -14313,19 +14312,17 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..accept Wind Trader Lathrai##9979
 	step //61
 		goto 49.9,16.5|n
-		.' The path up to the Eye of Veil Reskk starts here|goto Terokkar Forest,49.9,16.5,0.3|noway|c
+		.' The path up to the Eye of Veil Reskk starts here|goto Terokkar Forest,49.9,16.5,0.3|noway|q 10847
 	step //62
 		goto 50.1,19.4
-		.' Click the Eye of Veil Reskk
-		.get Eye of Veil Reskk|q 10847/1
-		info Looks like a big white orb at the top of the tower across the hanging bridge.
+		.collect Eye of Veil Reskk##25638|q 10847/1
+		.info Looks like a big white orb at the top of the tower across the hanging bridge.
 	step //63
 		goto 57.9,23.2
-		.' Click the Eye of Veil Shienor
-		.get Eye of Veil Shienor|q 10847/2
-		info Climb the path inside the other tree, run across the bridge, looks like a big white orb on the ground.
+		.collect Eye of Veil Shienor##25642|q 10847/2
+		.info Climb the path inside the other tree, run across the bridge, looks like a big white orb on the ground.
 	step //64
-		'Go to Shatrath City|goto Shattrath City|noway|c
+		.' Go to Shatrath City|goto Shattrath City|noway|q 10847
 	step //65
 		goto Shattrath City,52.6,21
 		.talk Rilak the Redeemed##22292
@@ -14341,7 +14338,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..turnin Wind Trader Lathrai##9979
 		..accept A Personal Favor##10112
 	step //68
-		'Go outside to Terokkar Forest|goto Terokkar Forest|noway|c
+		.' Go outside to Terokkar Forest|goto Terokkar Forest|noway|q 10849
 	step //69
 		goto Terokkar Forest,37.4,51.5
 		.talk Kirrik the Awakened##22272
@@ -14363,16 +14360,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		ding 65
 	step //74
 		goto 35.2,48.8
-		.' Kill Infested Root-walkers
-		.' Kill the Wood Mites that come out of their corpses
+		.kill Infested Root-Walker##22095|n
+		.info Kill the Wood Mites that come out of their corpses.
 		.kill 25 Wood Mite|q 10896/1
-		.' You can find more Infested Root-walkers at 39.1,47.0|n
+		.' You can find more Infested Root-walkers|at 39.1,47
 	step //75
 		goto 32.2,52.8
-		.kill 8 Cabal Skirmisher|q 10878/1
-		.kill Cabal orcs|n
-		.get Cabal Orders|n
-		.' Click the Cabal Orders|use Cabal Orders##31707
+		.kill 8 Cabal Skirmisher##21661|q 10878/1
+		.collect Cabal Orders##31707|q 10880 |future
+	step //
+		.use Cabal Orders##31707
 		..accept Cabal Orders##10880
 	step //76
 		goto 37.4,51.2
@@ -14385,40 +14382,38 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..turnin The Infested Protectors##10896
 	step //78
 		goto 39.4,55.1
-		.kill 4 Cabal Spell-weaver|q 10878/2
-		.kill 2 Cabal Initiate|q 10878/3
+		.kill 4 Cabal Spell-weaver##21902|q 10878/2
+		.kill 2 Cabal Initiate##21907|q 10878/3
 	step //79
 		goto 37.4,51.2
 		.talk Mekeda##22370
 		..turnin Before Darkness Falls##10878
 	step //80
 		goto 29.7,51.7
-		.' Click the Cabal Chest
-		.get Gavel of K'alen|q 10881/2
-		info Inside the Shadow Tomb, inside a Cabal Chest in the back left of the room on the ground
+		.collect Gavel of K'alen##31710|q 10881/2
+		.info Inside the Shadow Tomb, inside a Cabal Chest in the back left of the room on the ground.
 	step //81
 		goto 32.1,51.2
-		.' Click the Cabal Chest
-		.get Drape of Arunen|q 10881/1
-		info Inside the Shadow Tomb, inside a Cabal Chest in the back left of the room on the ground
+		.collect Drape of Arunen##31709|q 10881/1
+		.info Inside the Shadow Tomb, inside a Cabal Chest in the back left of the room on the ground.
 	step //82
 		goto 31.2,46.7
-		.' Click the Cabal Chest
-		.get Scroll of Atalor|q 10881/3
-		info Inside the Shadow Tomb, inside a Cabal Chest in the back right of the room on the ground
+		.collect Scroll of Atalor##31708|q 10881/3
+		.info Inside the Shadow Tomb, inside a Cabal Chest in the back right of the room on the ground.
 	step //83
-		'Go outside to 37.4,51.2|goto 37.4,51.2
+		goto 37.4,51.2
 		.talk Mekeda##22370
 		..turnin The Shadow Tomb##10881
 	step //84
 		goto 30.8,42.1
-		.' Use the Rod of Purification on the Darkstone of Terokk|use Rod of Purification##31610|tip It's a big black floating crystal.
+		.' Use the Rod of Purification on the Darkstone of Terokk|use Rod of Purification##31610
+		.info It's a big black floating crystal.
 		.' Purify the Darkstone of Terokk|goal Attempt to purify the Darkstone of Terrok|q 10839/1
 	step //85
 		goto 32.3,41.7
-		.kill arakkoas|n
-		.get 5 Lathrai's Stolen Goods|q 10112/1
-		.get Veil Skith Prison Keys|n
+		.from Skithian Dreadhawk##18452, Skithian Windripper##18453
+		.get 5 Lathrai's Stolen Goods##27861|q 10112/1
+		.collect Veil Skith Prison Keys##31655|n
 		.' Click the yellow cages around this area
 		.' Rescue 12 Children|goal 12 Children Rescued|q 10852/1
 	step //86
@@ -14432,9 +14427,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..turnin Missing Friends##10852
 	step //88
 		goto 30.2,51.1
-		.kill 4 Deathtalon Spirit|q 10848/1
-		.kill 4 Screeching Spirit|q 10848/2
-		.kill 2 Spirit Raven|q 10848/3
+		.kill 4 Deathtalon Spirit##21198|q 10848/1
+		.kill 4 Screeching Spirit##21200|q 10848/2
+		.kill 2 Spirit Raven##21324|q 10848/3
 	step //89
 		goto 37.4,51.5
 		.talk Kirrik the Awakened##22272
@@ -14444,8 +14439,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		goto 24.2,70.5
 		.' Open the eggs on the ground
 		.' Redeem 3 Hatchlings|goal 3 Hatchlings Redeemed|q 10861/1
-		.kill 3 Malevolent Hatchling|q 10861/2
-		info Pink glowing brown Eggs on the ground in nests next to the huts around this area.
+		.kill 3 Malevolent Hatchling##22337|q 10861/2
+		.info Pink glowing brown Eggs on the ground in nests next to the huts around this area.
 	step //91
 		goto 31,76.1
 		.talk Commander Ra'vaj##22446
@@ -14462,7 +14457,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		.' Use your Sha'tari Torch on corpses|use Sha'tari Torch##31769
 		.' Burn 8 Slain Sha'tari Vindicator corpses|goal 8 Slain Sha'tar Vindicator corpse burned|q 10913/1
 		.' Burn 8 Slain Auchenai Warrior corpses|goal 8 Slain Auchenai Warrior corpse burned|q 10913/2
-		info They are corpses laying all over the ground around this area.
+		.info They are corpses laying all over the ground around this area.
 	step //94
 		goto 31,76.1
 		.talk Commander Ra'vaj##22446
@@ -14470,8 +14465,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..accept A Hero Is Needed##10914
 	step //95
 		goto 36.7,74.4
-		.kill 12 Auchenai Initiate|q 10914/1
-		.kill 5 Auchenai Doomsayer|q 10914/2
+		.kill 12 Auchenai Initiate##21284|q 10914/1
+		.kill 5 Auchenai Doomsayer##21285|q 10914/2
 	step //96
 		goto 31,76.1
 		.talk Commander Ra'vaj##22446
@@ -14479,9 +14474,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..accept The Fallen Exarch##10915
 	step //97
 		goto 35.9,65.7
-		.' Click the Auchenai Coffin
+		.' Interact with gameobject: Auchenai Coffin
 		.' Kill the Reanimated Exarch that appears|goal Contents of the Auchenai Coffin destroyed|q 10915/1
-		info Up the steps, click the big stone coffin and defeat the Reanimated Exarch that appears
+		.info Up the steps, click the big stone coffin and defeat the Reanimated Exarch that appears.
 	step //98
 		goto 31,76.1
 		.talk Commander Ra'vaj##22446
@@ -14497,42 +14492,42 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..accept The Tomb of Lights##10840
 	step //101
 		goto 46.3,56.5
-		.kill 10 Ethereal Nethermancer|q 10840/1
-		.kill 10 Ethereal Plunderer|q 10840/2
+		.kill 10 Ethereal Nethermancer##21370|q 10840/1
+		.kill 10 Ethereal Plunderer##21368|q 10840/2
 	step //102
 		goto 54.9,66.1|n
-		.' The path up to Veil Shalas starts here|goto Terokkar Forest,54.9,66.0,0.5|noway|c
+		.' The path up to Veil Shalas starts here|goto Terokkar Forest,54.9,66.0,0.5|noway|q 10874
 	step //103
 		goto 57.3,65|n
-		.' The path up to the Sapphire Signal Fire starts here|goto Terokkar Forest,57.3,65.0,0.3|noway|c
+		.' The path up to the Sapphire Signal Fire starts here|goto Terokkar Forest,57.3,65.0,0.3|noway|q 10874
 	step //104
 		goto 55.2,67.1
 		.' Click the Sapphire Signal Fire
 		.' Extinguish the Sapphire Signal Fire|goal Sapphire Fire Extinguished|q 10874/1
-		info Across the hanging bridge and down the spiraling stairs.
+		.info Across the hanging bridge and down the spiraling stairs.
 	step //105
 		goto 57,71.8|n
-		.' The path up to the Emerald Signal Fire starts here|goto Terokkar Forest,57.0,71.8,0.3|noway|c
+		.' The path up to the Emerald Signal Fire starts here|goto Terokkar Forest,57.0,71.8,0.3|noway|q 10874
 	step //106
 		goto 55.5,69.7
 		.' Click the Emerald Signal Fire
 		.' Extinguish the Emerald Signal Fire|goal Emerald Fire Extinguished|q 10874/2
-		info Over the hanging bridge.
+		.info Over the hanging bridge.
 	step //107
 		goto 56,72.7|n
-		.' The path up to the Bloodstone and Violet Signal Fires starts here|goto Terokkar Forest,56.0,72.7,0.3|noway|c
-		info It is a tunnel path inside the tree. The entrance is behind the tree to the right a little.
+		.' The path up to the Bloodstone and Violet Signal Fires starts here|goto Terokkar Forest,56.0,72.7,0.3|noway|q 10874
+		.info It is a tunnel path inside the tree. The entrance is behind the tree to the right a little.
 	step //108
 		goto 56.1,72.4
 		.' Go up the path
 		.' Click the Bloodstone Signal Fire
 		.' Extinguish the Bloodstone Signal Fire|goal Bloodstone Fire Extinguished|q 10874/4
-		info Up the path inside the tree, on your left as you reach the top.
+		.info Up the path inside the tree, on your left as you reach the top.
 	step //109
 		goto 56.7,69.2
 		.' Click the Violet Signal Fire
 		.' Extinguish the Violet Signal Fire|goal Violet Fire Extinguished|q 10874/3
-		info Across the hanging bridge from the Bloodstone Signal Fire.
+		.info Across the hanging bridge from the Bloodstone Signal Fire.
 	step //110
 		goto 37.4,51.5
 		.talk Kirrik the Awakened##22272
@@ -14544,7 +14539,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..turnin The Tomb of Lights##10840
 	step //112
 		goto 51.1,51.6|n
-		.' The path up to Stonebreaker Hold starts here|goto Terokkar Forest,51.1,51.6,0.5|noway|c
+		.' The path up to Stonebreaker Hold starts here|goto Terokkar Forest,51.1,51.6,0.5|noway|q 10018 |future
 	step //113
 		goto 50.2,46.4
 		.talk Malukaz##18384
@@ -14555,9 +14550,9 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..accept Olemba Seed Oil##9993
 	step //115
 		goto 49.8,45.3
-		.' Click the Wanted Poster
+		.' Interact with gameobject: Wanted Poster
 		..accept Wanted: Bonelashers Dead!##10034
-		info In the center of town, next to a tall stone statue thing
+		.info In the center of town, next to a tall stone statue thing.
 	step //116
 		goto 49.7,43.3
 		.talk Mokasa##18249
@@ -14565,7 +14560,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 	step //117
 		goto 49.2,43.4
 		.talk Kerna##18807
-		..fpath Stonebreaker Hold
+		.fpath Stonebreaker Hold
 	step //118
 		goto 49,44.6
 		.talk Rokag##18386
@@ -14579,9 +14574,13 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..accept An Unwelcome Presence##10000
 		..accept Magical Disturbances##10027
 	step //120
-		home Stonebreaker Hold
+		goto 48.8,45
+		.talk Innkeeper Grilka##18957
+		home Stonebreaker Hold|q 10043 |future
 	step //121
-		'Fly to Shattrath City|goto Shattrath City|noway|c
+		goto 49.2,43.4|n
+		.talk Kerna##18807
+		.' Fly to Shattrath City|goto Shattrath City|noway|q 10112
 	step //122
 		goto Shattrath City,72.2,30.7
 		.talk Wind Trader Lathrai##18484
@@ -14604,46 +14603,47 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		.talk Rilak the Redeemed##22292
 		..turnin The Skettis Offensive##10879
 	step //126
-		'Fly to Stonebreaker Hold|goto Terokkar Forest,49.2,45.3,2.5|noway|c
+		goto 64.1,41.1|n
+		.talk Nutral##18940
+		.' Fly to Stonebreaker Hold|goto Terokkar Forest,49.2,45.3,2.5|noway|q 10034
 	step //127
 		goto Terokkar Forest,41.6,51.6
-		.kill 20 Bonelasher|q 10034/1
+		.kill 20 Bonelasher##18470|q 10034/1
 	step //128
 		goto 34.9,42.8
-		.' Click the Olemba Cones
-		.get 30 Olemba Seed|q 9993/1
-		.kill 10 Warp Stalker|q 10027/1
-		.' Kill Timber Worgs
-		.get 12 Timber Worg Pelt|q 10018/1
-		.' You can find more Timber Worgs at 36.8,37.5|n
-		info The cones look like little white glowing pine cones on the ground.
+		.collect 30 Olemba Seed##25745|q 9993/1
+		.info The cones look like little white glowing pine cones on the ground.
+		.kill 10 Warp Stalker##18464|q 10027/1
+		.from Timber Worg##18476
+		.get 12 Timber Worg Pelt##25812|q 10018/1
+		.' You can find more Timber Worgs|at 36.8,37.5
 	step //129
 		goto 29.9,42.8|n
-		.' The path up to Urdak starts here|goto Terokkar Forest,29.9,42.8,0.3|noway|c
+		.' The path up to Urdak starts here|goto Terokkar Forest,29.9,42.8,0.3|noway|q 9987
 	step //130
 		goto 31.4,42.5
-		.kill 1 Urdak|q 9987/3
-		info Up ramp, across the hanging bridge, then on your left.
+		.kill Urdak##18541|q 9987/3
+		.info Up ramp, across the hanging bridge, then on your left.
 	step //131
 		goto 39,43.7
 		.talk Scout Neftis##18714
 		..turnin Speak with Scout Neftis##10039
 		..accept Who Are They?##10041
-		'She puts an orc disguise on you|havebuff Shadowy Disguise
+		.' She puts an orc disguise on you|havebuff Shadowy Disguise
 		.' Be careful, the hunter in the camp can see through the disguise|n
 		.' The hunter is the guy walking around with a group of people|n
 	step //132
 		goto 40.3,39.1
 		.' Talk the Shadowy Advisor|goal Shadowy Advisor Spoken To|q 10041/3
-		info Inside the big building.
+		.info Inside the big building.
 	step //133
 		goto 39,39.7
 		.' Talk the Shadowy Initiate|goal Shadowy Initiate Spoken To|q 10041/1
-		info On a wooden platform next to a blue glowing symbol.
+		.info On a wooden platform next to a blue glowing symbol.
 	step //134
 		goto 38.4,39.3
 		.' Talk the Shadowy Laborer|goal Shadowy Laborer Spoken To|q 10041/2
-		info The Shadowy Laborer walks around this area hammering at things.  Some searching may be necessary.
+		.info The Shadowy Laborer walks around this area hammering at things.  Some searching may be necessary.
 	step //135
 		goto 39,43.7
 		.talk Scout Neftis##18714
@@ -14651,17 +14651,16 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..accept Kill the Shadow Council!##10043
 	step //136
 		goto 40.3,39.1
-		.kill 1 Shadowmaster Grieve|q 10043/3
-		info Inside the big building.
+		.kill Shadowmaster Grieve##18720|q 10043/3
+		.info Inside the big building.
 	step //137
 		goto 39.8,40.8
-		.kill 10 Shadowy Executioner|q 10043/1
-		.kill 10 Shadowy Summoner|q 10043/2
+		.kill 10 Shadowy Executioner##16519|q 10043/1
+		.kill 10 Shadowy Summoner##17088|q 10043/2
 	step //138
 		goto 54,30
-		.' Click the Sealed Box
-		.get Sealed Box|q 9990/1
-		info A green glowing crate inside the hut directly east of you if you are standing on the bridge.
+		.collect Sealed Box##25727|q 9990/1
+		.info A green glowing crate inside the hut directly east of you if you are standing on the bridge.
 	step //139
 		goto 44.3,26.3
 		.talk Earthbinder Tavgren##18446
@@ -14669,22 +14668,22 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..accept What Are These Things?##9995
 	step //140
 		goto 49.9,16.5|n
-		.' The path up to Ashkaz starts here|goto Terokkar Forest,49.9,16.5,0.3|noway|c
+		.' The path up to Ashkaz starts here|goto Terokkar Forest,49.9,16.5,0.3|noway|q 9987
 	step //141
 		goto 49.1,16.9
-		.kill 1 Ashkaz|q 9987/1
-		info Up the ramp, on the right
+		.kill Ashkaz##18539|q 9987/1
+		.info Up the ramp, on the right
 	step //142
 		goto 48.9,17.3
-		.kill 14 Shienor Talonite|q 10868/1
-		.kill 6 Shienor Sorcerer|q 10868/2
+		.kill 14 Shienor Talonite##18449|q 10868/1
+		.kill 6 Shienor Sorcerer##18450|q 10868/2
 	step //143
 		goto 59.4,23.4
-		.kill 1 Ayit|q 9987/2
-		info Inside a small purple hut
+		.kill Ayit##18540|q 9987/2
+		.info Inside a small purple hut
 	step //144
 		goto 65.5,50.6
-		.kill 12 Warped Peon|q 10000/1
+		.kill 12 Warped Peon##18595|q 10000/1
 	step //145
 		goto 63.4,42.7
 		.talk Shadowstalker Kaide##18566
@@ -14693,24 +14692,24 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 		..accept What Happens in Terokkar Stays in Terokkar##10008
 	step //146
 		goto 68,53.2
-		.kill 1 Lisaile Fireweaver|q 10003/1
-		info Inside the big building
+		.kill Lisaile Fireweaver##18583|q 10003/1
+		.info Inside the big building.
 	step //147
 		goto 67.9,53.6
-		.' Click the Fel Orc Plans
+		.' Interact with gameobject: Fel Orc Plans
 		..accept An Unseen Hand##10013
-		info Inside the big building, it's a brown flat scroll laying on the floor next to some big logs.
+		.info Inside the big building, it's a brown flat scroll laying on the floor next to some big logs.
 	step //148
 		goto 69.1,53
-		.kill 10 Bonechewer Devastator|q 10008/1
-		.kill 6 Bonechewer Backbreaker|q 10008/2
+		.kill 10 Bonechewer Devastator##16772|q 10008/1
+		.kill 6 Bonechewer Backbreaker##16810|q 10008/2
 	step //149
 		goto 63.4,42.7
 		.talk Shadowstalker Kaide##18566
 		..turnin The Firewing Liaison##10003
 		..turnin What Happens in Terokkar Stays in Terokkar##10008
 	step //150
-		'Hearth to Stonebreaker Hold|goto Terokkar Forest,49.2,45.3,2.5|use hearthstone##6948|noway|c
+		.' Hearth to Stonebreaker Hold|goto Terokkar Forest,49.2,45.3,2.5|use Hearthstone##6948|noway|q 10043
 	step //151
 		goto 49,44.6
 		.talk Advisor Faila##18712
@@ -14745,7 +14744,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 	step //157
 		goto 49.8,45.3
 		.talk Grek##19606
-		..'Ask him to try the weapon oil
+		.' Ask him to try the weapon oil
 		.' Have Grek Test Olemba Oil|goal Have Grek Test Olemba Oil|q 10201/1
 	step //158
 		goto 50.1,44.9
@@ -14754,10 +14753,11 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (64-66)"
 	step //159
 		ding 66
 ]])
+
 ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Outland (66-68)",[[
-	author support@zygorguides.com
-	next Zygor's Horde Leveling Guides\\Outland (68-70)
-	startlevel 66
+author support@zygorguides.com
+next Zygor's Horde Leveling Guides\\Outland (68-70)
+startlevel 66
 	step //1
 		goto Terokkar Forest,63.3,42.4
 		.talk Sergeant Chawni##21007
